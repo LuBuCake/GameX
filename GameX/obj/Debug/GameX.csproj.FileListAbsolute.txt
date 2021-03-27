@@ -12,7 +12,6 @@ C:\Users\madne\source\repos\GameX\GameX\obj\Debug\GameX.csprojAssemblyReference.
 C:\Users\madne\Documents\GitHub\CSharp.Trainer\GameX\bin\Debug\GameX.exe.config
 C:\Users\madne\Documents\GitHub\CSharp.Trainer\GameX\bin\Debug\GameX.exe
 C:\Users\madne\Documents\GitHub\CSharp.Trainer\GameX\bin\Debug\GameX.pdb
-C:\Users\madne\Documents\GitHub\CSharp.Trainer\GameX\obj\Debug\GameX.csprojAssemblyReference.cache
 C:\Users\madne\Documents\GitHub\CSharp.Trainer\GameX\obj\Debug\GameX.App.resources
 C:\Users\madne\Documents\GitHub\CSharp.Trainer\GameX\obj\Debug\GameX.Properties.Resources.resources
 C:\Users\madne\Documents\GitHub\CSharp.Trainer\GameX\obj\Debug\GameX.csproj.GenerateResource.cache
@@ -20,3 +19,4 @@ C:\Users\madne\Documents\GitHub\CSharp.Trainer\GameX\obj\Debug\GameX.exe.license
 C:\Users\madne\Documents\GitHub\CSharp.Trainer\GameX\obj\Debug\GameX.csproj.CoreCompileInputs.cache
 C:\Users\madne\Documents\GitHub\CSharp.Trainer\GameX\obj\Debug\GameX.exe
 C:\Users\madne\Documents\GitHub\CSharp.Trainer\GameX\obj\Debug\GameX.pdb
+C:\Users\madne\Documents\GitHub\CSharp.Trainer\GameX\obj\Debug\GameX.csprojAssemblyReference.cache

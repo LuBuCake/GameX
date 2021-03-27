@@ -42,7 +42,7 @@ namespace GameX.Modules
             }
             catch (Win32Exception)
             {
-                MessageBox.Show("You must run this program with raised privileges in order to use DebugMode!");
+                
             }
         }
 
@@ -55,12 +55,10 @@ namespace GameX.Modules
             pBase = IntPtr.Zero;
         }
 
-        /*READ WRITE*/
-
-        public void WriteRawAddress(int Address, byte[] bufffer)
+        public void WriteRawAddress(int Address, byte[] buffer)
         {
             int byteswritten = 0;
-            WriteProcessMemory(pHandle, Address, bufffer, bufffer.Length, ref byteswritten);
+            WriteProcessMemory(pHandle, Address, buffer, buffer.Length, ref byteswritten);
         }
 
         public byte[] ReadRawAddress(int Address, int Size = 4)

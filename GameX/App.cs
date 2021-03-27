@@ -64,6 +64,11 @@ namespace GameX
                         Kernel = new KernelAccess(pProcess);
                         Initialized = true;
                     }
+                    else
+                    {
+                        pProcess.Dispose();
+                        pProcess = null;
+                    }
                 }
             }
 
