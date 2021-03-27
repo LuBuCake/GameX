@@ -13,9 +13,6 @@ namespace GameX.Helpers
     {
         public enum MEMORY_ACCESSES
         {
-            [Description("Grants all permissions.")]
-            PROCESS_ALL_ACCESS = 0x1F0FFF,
-
             [Description("Required to create a process.")]
             PROCESS_CREATE_PROCESS = 0x0080,
 

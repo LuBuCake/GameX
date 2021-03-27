@@ -18,41 +18,47 @@ namespace GameX
 {
     public partial class App : DevExpress.XtraEditors.XtraForm
     {
-        /*App Properties*/
-
-        private bool Initialized { get; set; }
-        private KernelAccess Kernel { get; set; }
-        private Process pProcess { get; set; }
-        private MessagePeaker Peaker { get; set; }
-
-        private string TargetProcess = "";
-        private string TargetVersion = "";
-        private string[] TargetModules = { };
-
         /*App Init*/
+
+        [StructLayout(LayoutKind.Sequential)]
+        public struct NativeMessage
+        {
+            public IntPtr Handle;
+            public uint Message;
+            public IntPtr WParameter;
+            public IntPtr LParameter;
+            public uint Time;
+            public Point Location;
+        }
+
+        [DllImport("user32.dll")]
+        public static extern int PeekMessage(out NativeMessage message, IntPtr window, uint filterMin, uint filterMax, uint remove);
 
         public App()
         {
             InitializeComponent();
-
-            Peaker = new MessagePeaker();
-
             Application.Idle += Application_Idle;
-            Application.ApplicationExit += Application_ApplicationExit;
         }
 
         private void Application_Idle(object sender, EventArgs e)
         {
-            while (Peaker.IsApplicationIdle())
+            while (IsApplicationIdle())
             {
                 Think();
             }
         }
 
-        private void Application_ApplicationExit(object sender, EventArgs e)
+        private bool IsApplicationIdle()
         {
-            Application.Idle += null;
+            NativeMessage result;
+            return PeekMessage(out result, IntPtr.Zero, 0, 0, 0) == 0;
         }
+
+        /*App Properties*/
+
+        private KernelAccess Kernel { get; set; }     
+        private bool Initialized { get; set; }
+        private Process pProcess { get; set; }
 
         /*App Methods*/
 
@@ -60,17 +66,17 @@ namespace GameX
         {
             if (pProcess == null)
             {
-                pProcess = KernelHelper.GetProcessByName(TargetProcess);
+                pProcess = KernelHelper.GetProcessByName("re5dx9");
                 Initialized = false;
             }
             else
             {
                 if (!Initialized)
                 {
-                    if (ValidateTarget(pProcess))
+                    if (KernelHelper.ProcessHasModule(pProcess, "steam_api.dll"))
                     {
                         pProcess.EnableRaisingEvents = true;
-                        pProcess.Exited += ClearAndRestore;
+                        pProcess.Exited += Process_Exited;
                         Kernel = new KernelAccess(pProcess);
                         Initialized = true;
                     }
@@ -80,28 +86,10 @@ namespace GameX
             return Initialized;
         }
 
-        private bool ValidateTarget(Process pProcess)
-        {
-            if (TargetVersion != "" && !pProcess.MainModule.FileVersionInfo.ToString().Contains(TargetVersion))
-                return false;
-
-            if (TargetModules.Length > 0)
-            {
-                foreach (string Module in TargetModules)
-                {
-                    if (!KernelHelper.ProcessHasModule(pProcess, Module))
-                        return false;
-                }
-            }
-
-            return true;
-        }
-
-        private void ClearAndRestore(object sender, EventArgs e)
+        private void Process_Exited(object sender, EventArgs e)
         {
             pProcess.Dispose();
             pProcess = null;
-            Kernel.Dispose();
             Kernel = null;
         }
 
