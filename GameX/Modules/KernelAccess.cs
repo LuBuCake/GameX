@@ -17,32 +17,49 @@ namespace GameX.Modules
         private static extern IntPtr OpenProcess(int dwDesiredAccess, bool bInheritHandle, int dwProcessId);
 
         [DllImport("kernel32.dll")]
+        private static extern bool CloseHandle(IntPtr pHandle);
+
+        [DllImport("kernel32.dll")]
         private static extern bool ReadProcessMemory(IntPtr pHandle, int lpBaseAddress, [Out] byte[] lpBuffer, int dwSize, ref int lpNumberOfBytesRead);
 
         [DllImport("kernel32.dll", SetLastError = true)]
         private static extern bool WriteProcessMemory(IntPtr pHandle, int lpBaseAddress, byte[] lpBuffer, int dwSize, ref int lpNumberOfBytesWritten);
 
-        public Process pProcess;
+        public Process pProcess { get; set; }
+        public IntPtr pHandle { get; set; }
+        public IntPtr pBase { get; set; }
 
-        public IntPtr pHandle;
-
-        public IntPtr pBase;
-
-        public KernelAccess(Process ProcessObject)
+        public KernelAccess(Process ProcessObject, KernelHelper.MEMORY_ACCESSES AccessLevel = KernelHelper.MEMORY_ACCESSES.PROCESS_ALL_ACCESS)
         {
             pProcess = ProcessObject;
-            pHandle = OpenProcess(0x1F0FFF, false, pProcess.Id);
+            pHandle = OpenProcess((int)AccessLevel, false, pProcess.Id);
             pBase = KernelHelper.GetBaseAddressFromModule(pProcess, pProcess.MainModule.ModuleName);
 
+            TryDebugMode();
+        }
+
+        public void TryDebugMode()
+        {
             try
             {
                 Process.EnterDebugMode();
             }
-            catch(Win32Exception)
+            catch (Win32Exception)
             {
                 MessageBox.Show("You must run this program with raised privileges in order to use DebugMode!");
             }
         }
+
+        public void Dispose()
+        {
+            CloseHandle(pHandle);
+            pProcess.Dispose();
+            pProcess = null;
+            pHandle = IntPtr.Zero;
+            pBase = IntPtr.Zero;
+        }
+
+        /*READ WRITE*/
 
         public void WriteRawAddress(int Address, byte[] bufffer)
         {
