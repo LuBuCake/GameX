@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Linq;
 using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GameX.Helpers
 {
@@ -80,7 +76,7 @@ namespace GameX.Helpers
 
         public static bool ProcessHasModule(Process pProcess, string ModuleName)
         {
-            foreach(ProcessModule Module in pProcess.Modules)
+            foreach (ProcessModule Module in pProcess.Modules)
             {
                 if (Module.ModuleName.Equals(ModuleName))
                     return true;

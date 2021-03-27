@@ -1,18 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Security;
-using System.Text;
-using System.Windows.Forms;
+﻿using GameX.Helpers;
 using GameX.Modules;
-using GameX.Helpers;
+using System;
 using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace GameX
 {
@@ -87,7 +77,7 @@ namespace GameX
 
             if (TargetModulesCheck.Length > 0)
             {
-                foreach(string Module in TargetModulesCheck)
+                foreach (string Module in TargetModulesCheck)
                 {
                     if (!KernelHelper.ProcessHasModule(pProcess, Module))
                         return false;

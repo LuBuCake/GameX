@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using GameX.Helpers;
+using System;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using GameX.Helpers;
 
 namespace GameX.Modules
 {
