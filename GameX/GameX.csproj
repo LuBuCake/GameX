@@ -73,14 +73,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helpers\MemoryHelper.cs" />
+    <Compile Include="Helpers\Maths.cs" />
+    <Compile Include="Helpers\Processes.cs" />
     <Compile Include="App.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="App.Designer.cs">
       <DependentUpon>App.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\MessagePeaker.cs" />
+    <Compile Include="Helpers\Messager.cs" />
     <Compile Include="Modules\Memory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

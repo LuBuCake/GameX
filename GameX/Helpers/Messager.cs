@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 namespace GameX.Helpers
 {
-    public class MessagePeaker
+    public class Messager
     {
         [StructLayout(LayoutKind.Sequential)]
         public struct NativeMessage

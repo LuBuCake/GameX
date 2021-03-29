@@ -10,7 +10,7 @@ namespace GameX
     {
         /*App Properties*/
 
-        private MessagePeaker Peaker { get; set; }
+        private Messager Peaker { get; set; }
         private Memory Kernel { get; set; }
         private Process pProcess { get; set; }
         private bool Initialized { get; set; }
@@ -25,7 +25,7 @@ namespace GameX
         {
             InitializeComponent();
 
-            Peaker = new MessagePeaker();
+            Peaker = new Messager();
 
             Application.Idle += Application_Idle;
             Application.ApplicationExit += Application_ApplicationExit;
@@ -53,7 +53,7 @@ namespace GameX
         {
             if (pProcess == null)
             {
-                pProcess = MemoryHelper.GetProcessByName(TargetProcess);
+                pProcess = Processes.GetProcessByName(TargetProcess);
                 Initialized = false;
 
                 Text = "GameX - Waiting";
@@ -95,7 +95,7 @@ namespace GameX
                 {
                     foreach (string Module in TargetModulesCheck)
                     {
-                        if (Module != "" && !MemoryHelper.ProcessHasModule(pProcess, Module))
+                        if (Module != "" && !Processes.ProcessHasModule(pProcess, Module))
                             return false;
                     }
                 }
