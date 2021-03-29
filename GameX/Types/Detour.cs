@@ -73,7 +73,7 @@ namespace GameX.Types
             }
             else if (obj is int)
             {
-                return Address() == (int)obj;
+                return (Address() == (int)obj) || (CallAddress() == (int)obj);
             }
 
             return false;
