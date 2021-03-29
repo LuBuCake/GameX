@@ -14,8 +14,9 @@ namespace GameX.Types
         private byte[] DetourCallInstruction { get; set; }
         private byte[] DetourContent { get; set; }
         private bool DetourJumpBack { get; set; }
+        private int DetourJumpBackAddress { get; set; }
 
-        public Detour(string Name, int Address, int CallAddress, byte[] CallInstruction, byte[] Content, bool JumpBack = false)
+        public Detour(string Name, int Address, int CallAddress, byte[] CallInstruction, byte[] Content, bool JumpBack = false, int JumpBackAddress = 0)
         {
             DetourName = Name;
             DetourAddress = Address;
@@ -23,6 +24,7 @@ namespace GameX.Types
             DetourCallInstruction = CallInstruction;
             DetourContent = Content;
             DetourJumpBack = JumpBack;
+            DetourJumpBackAddress = JumpBackAddress;
         }
 
         public override string ToString()
@@ -58,6 +60,11 @@ namespace GameX.Types
         public bool JumpBack()
         {
             return DetourJumpBack;
+        }
+
+        public int JumpBackAddress()
+        {
+            return DetourJumpBackAddress;
         }
 
         public int Size()

@@ -311,9 +311,7 @@ namespace GameX.Modules
         {
             byte[] JumpInstruction = new byte[JumpInstructionLength];
             JumpInstruction[0] = 0xE9;
-            int JumpLength = LandAddress - JumpAddress - 5;
-            byte[] JumpLengthValue = BitConverter.GetBytes(JumpLength);
-            JumpLengthValue.CopyTo(JumpInstruction, 1);
+            BitConverter.GetBytes(LandAddress - JumpAddress - 5).CopyTo(JumpInstruction, 1);
 
             if (JumpInstructionLength > 5)
                 for (int i = 5; i < JumpInstructionLength; i++)
@@ -348,14 +346,14 @@ namespace GameX.Modules
             return false;
         }
 
-        public int CreateDetour(string DetourName, byte[] DetourContent, int CallAddress, byte[] CallInstruction, bool JumpBack = false, int JumpBackAddress = 0)
+        public Detour CreateDetour(string DetourName, byte[] DetourContent, int CallAddress, byte[] CallInstruction, bool JumpBack = false, int JumpBackAddress = 0)
         {
             if (!DebugMode)
-                return 0;
+                return null;
 
             if (DetourActive(DetourName))
             {
-                return GetDetour(DetourName).Address();
+                return GetDetour(DetourName);
             }
 
             int DetourAddress = VirtualAllocEx(pHandle, 0, DetourContent.Length, (int)MEMORY_INFORMATION.MEM_COMMIT | (int)MEMORY_INFORMATION.MEM_RESERVE, (int)MEMORY_PROTECTION.PAGE_EXECUTE_READ);
@@ -370,13 +368,13 @@ namespace GameX.Modules
                     WriteRawAddress(DetourAddress + DetourContent.Length, DetourJump(DetourAddress + DetourContent.Length, JumpBackAddress, 5));
                 }
 
-                Detour Detour = new Detour(DetourName, DetourAddress, CallAddress, CallInstruction, DetourContent, JumpBack);
+                Detour Detour = new Detour(DetourName, DetourAddress, CallAddress, CallInstruction, DetourContent, JumpBack, JumpBackAddress);
                 Detours.Add(DetourName, Detour);
 
-                return DetourAddress;
+                return Detour;
             }
 
-            return 0;
+            return null;
         }
 
         public bool RemoveDetour(string DetourName)
