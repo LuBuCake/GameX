@@ -1,4 +1,5 @@
 ﻿using GameX.Helpers;
+using GameX.Types;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,10 +18,10 @@ namespace GameX.Modules
         private static extern bool CloseHandle(IntPtr pHandle);
 
         [DllImport("kernel32.dll")]
-        private static extern bool VirtualProtectEx(IntPtr pHandle, int lpBaseAddress, int dwSize, MemoryHelper.MEMORY_PROTECTION flNewProtect, MemoryHelper.MEMORY_PROTECTION lpflOldProtect);
+        private static extern bool VirtualProtectEx(IntPtr pHandle, int lpBaseAddress, int dwSize, int flNewProtect, int lpflOldProtect);
 
         [DllImport("kernel32.dll")]
-        private static extern int VirtualAllocEx(IntPtr pHandle, int lpBaseAddress, int dwSize, int flAllocationType, int flProtect);
+        private static extern int VirtualAllocEx(IntPtr pHandle, int lpBaseAddress, int dwSize, int flAllocType, int flProtect);
 
         [DllImport("kernel32.dll")]
         private static extern int VirtualFreeEx(IntPtr pHandle, int lpBaseAddress, int dwSize, int dwFreeType);
@@ -30,9 +31,6 @@ namespace GameX.Modules
 
         [DllImport("kernel32.dll", SetLastError = true)]
         private static extern bool WriteProcessMemory(IntPtr pHandle, int lpBaseAddress, byte[] lpBuffer, int dwSize, ref int lpNumberOfBytesWritten);
-
-        [DllImport("msvcrt.dll", CallingConvention = CallingConvention.Cdecl)]
-        private static extern int memcmp(byte[] b1, byte[] b2, long count);
 
         public Process pProcess { get; set; }
         public IntPtr pHandle { get; set; }
@@ -170,9 +168,9 @@ namespace GameX.Modules
             WriteRawAddress(Address, BitConverter.GetBytes(Value));
         }
 
-        /*MEM ALLOC*/
+        /*MEMORY DETOUR (REQUIRES DEBUGMODE BECAUSE ITS CODE INJECTION)*/
 
-        public Dictionary<string, MemoryHelper.Allocation> Allocs;
+        public Dictionary<string, Detour> Detours;
 
         public void EnterDebugMode()
         {
@@ -189,8 +187,8 @@ namespace GameX.Modules
 
             DebugMode = true;
 
-            if (Allocs == null)
-                Allocs = new Dictionary<string, MemoryHelper.Allocation>();
+            if (Detours == null)
+                Detours = new Dictionary<string, Detour>();
         }
 
         public void ExitDebugMode()
@@ -201,27 +199,28 @@ namespace GameX.Modules
                 DebugMode = false;
             }
 
-            ClearMemoryAllocs();
+            RemoveDetours();
         }
 
-        public void ClearMemoryAllocs()
+        public void RemoveDetours()
         {
-            if (Allocs == null)
+            if (Detours == null)
                 return;
 
-            if (!pProcess.HasExited && pProcess.Responding)
+            if (!pProcess.HasExited)
             {
-                foreach (KeyValuePair<string, MemoryHelper.Allocation> Allocation in Allocs)
+                foreach (KeyValuePair<string, Detour> Detour in Detours)
                 {
-                    DeallocMemory(Allocation.Key);
+                    if (DetourActive(Detour.Key))
+                        RemoveDetour(Detour.Key);
                 }
             }
 
-            Allocs.Clear();
-            Allocs = null;
+            Detours.Clear();
+            Detours = null;
         }
 
-        public byte[] AllocJump(int JumpAddress, int LandAddress, int JumpInstructionLength)
+        private byte[] DetourJump(int JumpAddress, int LandAddress, int JumpInstructionLength)
         {
             byte[] JumpInstruction = new byte[JumpInstructionLength];
             JumpInstruction[0] = 0xE9;
@@ -230,85 +229,81 @@ namespace GameX.Modules
             JumpLengthValue.CopyTo(JumpInstruction, 1);
 
             if (JumpInstructionLength > 5)
-            {
                 for (int i = 5; i < JumpInstructionLength; i++)
-                {
                     JumpInstruction[i] = 0x90;
-                }
-            }
 
             return JumpInstruction;
         }
 
-        public byte[] AllocJumpBack(int JumpAddress, int LandAddress)
+        public Detour GetDetour(string DetourName)
         {
-            byte[] JumpInstruction = new byte[5];
-            JumpInstruction[0] = 0xE9;
-            int JumpLength = LandAddress - JumpAddress - 5;
-            byte[] JumpLengthValue = BitConverter.GetBytes(JumpLength);
-            JumpLengthValue.CopyTo(JumpInstruction, 1);
-            return JumpInstruction;
-        }
-
-        public int AllocMemory(string AllocName, byte[] AllocContent, int CallAddress, byte[] CallInstruction, bool JumpBack = false, int JumpBackAddress = 0)
-        {
-            if (!DebugMode)
-                return 0;
-
-            if (AllocExists(AllocName))
+            if (DetourActive(DetourName))
             {
-                Allocs.TryGetValue(AllocName, out MemoryHelper.Allocation Allocation);
-                return Allocation.Address();
+                Detours.TryGetValue(DetourName, out Detour Detour);
+                return Detour;
             }
 
-            int AllocAddress = VirtualAllocEx(pHandle, 0, AllocContent.Length, (int)MemoryHelper.MEMORY_INFORMATION.MEM_COMMIT | (int)MemoryHelper.MEMORY_INFORMATION.MEM_RESERVE, (int)MemoryHelper.MEMORY_PROTECTION.PAGE_EXECUTE_READ);
-
-            if (AllocAddress != 0)
-            {
-                WriteRawAddress(CallAddress, AllocJump(CallAddress, AllocAddress, CallInstruction.Length));
-                WriteRawAddress(AllocAddress, AllocContent);
-
-                if (JumpBack && JumpBackAddress != 0)
-                {
-                    WriteRawAddress(AllocAddress + AllocContent.Length, AllocJump(AllocAddress + AllocContent.Length, JumpBackAddress, 5));
-                }
-
-                MemoryHelper.Allocation Alloc = new MemoryHelper.Allocation(AllocName, AllocAddress, CallAddress, CallInstruction, AllocContent, JumpBack);
-                Allocs.Add(AllocName, Alloc);
-
-                return AllocAddress;
-            }
-
-            return 0;
+            return null;
         }
 
-        public bool DeallocMemory(string AllocName)
+        public bool DetourActive(string DetourName)
         {
-            if (!DebugMode)
-                return false;
-
-            if (AllocExists(AllocName))
+            if (Detours != null && Detours.TryGetValue(DetourName, out Detour Detour))
             {
-                Allocs.TryGetValue(AllocName, out MemoryHelper.Allocation Allocation);
-                WriteRawAddress(Allocation.CallAddress(), Allocation.CallInstruction());
-                VirtualFreeEx(pHandle, Allocation.Address(), 0, (int)MemoryHelper.MEMORY_INFORMATION.MEM_RELEASE);
-                Allocs.Remove(AllocName);
-                return true;
+                byte[] RegionReading = ReadRawAddress(Detour.Address(), Detour.Size());
+
+                if (MemoryHelper.CompareByteArray(RegionReading, Detour.Content(), Detour.Size()))
+                    return true;
+
+                Detours.Remove(DetourName);
             }
 
             return false;
         }
 
-        public bool AllocExists(string AllocName)
+        public int CreateDetour(string DetourName, byte[] DetourContent, int CallAddress, byte[] CallInstruction, bool JumpBack = false, int JumpBackAddress = 0)
         {
-            if (Allocs != null && Allocs.TryGetValue(AllocName, out MemoryHelper.Allocation Alloc))
+            if (!DebugMode)
+                return 0;
+
+            if (DetourActive(DetourName))
             {
-                byte[] RegionReading = ReadRawAddress(Alloc.Address(), Alloc.Size());
+                return GetDetour(DetourName).Address();
+            }
 
-                if (memcmp(RegionReading, Alloc.Content(), Alloc.JumpBack() ? (Alloc.Size() - 5) : Alloc.Size()) == 0)
-                    return true;
+            int DetourAddress = VirtualAllocEx(pHandle, 0, DetourContent.Length, (int)MemoryHelper.MEMORY_INFORMATION.MEM_COMMIT | (int)MemoryHelper.MEMORY_INFORMATION.MEM_RESERVE, (int)MemoryHelper.MEMORY_PROTECTION.PAGE_EXECUTE_READ);
 
-                Allocs.Remove(AllocName);
+            if (DetourAddress != 0)
+            {
+                WriteRawAddress(CallAddress, DetourJump(CallAddress, DetourAddress, CallInstruction.Length));
+                WriteRawAddress(DetourAddress, DetourContent);
+
+                if (JumpBack && JumpBackAddress != 0)
+                {
+                    WriteRawAddress(DetourAddress + DetourContent.Length, DetourJump(DetourAddress + DetourContent.Length, JumpBackAddress, 5));
+                }
+
+                Detour Detour = new Detour(DetourName, DetourAddress, CallAddress, CallInstruction, DetourContent, JumpBack);
+                Detours.Add(DetourName, Detour);
+
+                return DetourAddress;
+            }
+
+            return 0;
+        }
+
+        public bool RemoveDetour(string DetourName)
+        {
+            if (!DebugMode)
+                return false;
+
+            if (DetourActive(DetourName))
+            {
+                Detour Detour = GetDetour(DetourName);
+                WriteRawAddress(Detour.CallAddress(), Detour.CallInstruction());
+                VirtualFreeEx(pHandle, Detour.Address(), 0, (int)MemoryHelper.MEMORY_INFORMATION.MEM_RELEASE);
+                Detours.Remove(DetourName);
+                return true;
             }
 
             return false;

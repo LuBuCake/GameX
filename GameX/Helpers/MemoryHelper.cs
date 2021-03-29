@@ -71,13 +71,13 @@ namespace GameX.Helpers
 
         public enum MEMORY_INFORMATION : int
         {
-            [Description("Allocates memory charges (from the overall size of memory and the paging files on disk) for the specified reserved memory pages.")]
+            [Description("Detourates memory charges (from the overall size of memory and the paging files on disk) for the specified reserved memory pages.")]
             MEM_COMMIT = 0x00001000,
 
-            [Description("Indicates free pages not accessible to the calling process and available to be allocated.")]
+            [Description("Indicates free pages not accessible to the calling process and available to be Detourated.")]
             MEM_FREE = 0x10000,
 
-            [Description("Reserves a range of the process's virtual address space without allocating any actual physical storage in memory or in the paging file on disk.")]
+            [Description("Reserves a range of the process's virtual address space without Detourating any actual physical storage in memory or in the paging file on disk.")]
             MEM_RESERVE = 0x00002000,
 
             [Description("Indicates that data in the memory range specified by lpAddress and dwSize is no longer of interest.")]
@@ -89,87 +89,20 @@ namespace GameX.Helpers
             [Description("Decommits the specified region of committed pages. After the operation, the pages are in the reserved state.")]
             MEM_DECOMMIT = 0x00004000,
 
-            [Description("Releases the specified region of pages, or placeholder (for a placeholder, the address space is released and available for other allocations). After this operation, the pages are in the free state.")]
+            [Description("Releases the specified region of pages, or placeholder (for a placeholder, the address space is released and available for other Detours). After this operation, the pages are in the free state.")]
             MEM_RELEASE = 0x00008000
         }
 
-        public class Allocation
+        public static bool CompareByteArray(byte[] Array1, byte[] Array2, int Length)
         {
-            private string AllocationName { get; set; }
-            private int AllocationAddress { get; set; }
-            private int AllocationCallAddress { get; set; }
-            private byte[] AllocCallInstruction { get; set; }
-            private byte[] AllocationContent { get; set; }
-            private bool AllocationJumpBack { get; set; }
-
-            public Allocation(string Name, int Address, int CallAddress, byte[] CallInstruction, byte[] Content, bool JumpBack = false)
-            {
-                AllocationName = Name;
-                AllocationAddress = Address;
-                AllocationCallAddress = CallAddress;
-                AllocCallInstruction = CallInstruction;
-                AllocationContent = Content;
-                AllocationJumpBack = JumpBack;
-            }
-
-            public override string ToString()
-            {
-                return Name();
-            }
-
-            public string Name()
-            {
-                return AllocationName;
-            }
-
-            public int Address()
-            {
-                return AllocationAddress;
-            }
-
-            public int CallAddress()
-            {
-                return AllocationCallAddress;
-            }
-
-            public byte[] Content()
-            {
-                return AllocationContent;
-            }
-
-            public byte[] CallInstruction()
-            {
-                return AllocCallInstruction;
-            }
-
-            public bool JumpBack()
-            {
-                return AllocationJumpBack;
-            }
-
-            public int Size()
-            {
-                return Content().Length;
-            }
-
-            public override bool Equals(object obj)
-            {
-                if (obj is string)
-                {
-                    return Name() == (string)obj;
-                }
-                else if (obj is int)
-                {
-                    return Address() == (int)obj;
-                }
-
+            if (Array1.Length != Array2.Length)
                 return false;
-            }
 
-            public override int GetHashCode()
-            {
-                return Address();
-            }
+            for (int i = 0; i < Length; i++)
+                if (Array1[i] != Array1[i])
+                    return false;
+
+            return true;
         }
 
         public static Process GetProcessByName(string ProcessName)
