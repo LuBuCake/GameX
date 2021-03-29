@@ -31,6 +31,9 @@ namespace GameX.Modules
         [DllImport("kernel32.dll", SetLastError = true)]
         private static extern bool WriteProcessMemory(IntPtr pHandle, int lpBaseAddress, byte[] lpBuffer, int dwSize, ref int lpNumberOfBytesWritten);
 
+        [DllImport("msvcrt.dll", CallingConvention = CallingConvention.Cdecl)]
+        private static extern int memcmp(byte[] b1, byte[] b2, long count);
+
         public Process pProcess { get; set; }
         public IntPtr pHandle { get; set; }
         public IntPtr pBase { get; set; }
@@ -67,10 +70,10 @@ namespace GameX.Modules
             return buffer;
         }
 
-        public bool WriteRawAddress(int Address, byte[] buffer)
+        public bool WriteRawAddress(int Address, byte[] Value)
         {
             int byteswritten = 0;
-            bool write = WriteProcessMemory(pHandle, Address, buffer, buffer.Length, ref byteswritten);
+            bool write = WriteProcessMemory(pHandle, Address, Value, Value.Length, ref byteswritten);
 
             return write && byteswritten > 0;
         }
@@ -167,7 +170,7 @@ namespace GameX.Modules
             WriteRawAddress(Address, BitConverter.GetBytes(Value));
         }
 
-        /*ADVANCED*/
+        /*MEM ALLOC*/
 
         public Dictionary<string, MemoryHelper.Allocation> Allocs;
 
@@ -197,7 +200,7 @@ namespace GameX.Modules
                 Process.LeaveDebugMode();
                 DebugMode = false;
             }
-            
+
             ClearMemoryAllocs();
         }
 
@@ -218,19 +221,65 @@ namespace GameX.Modules
             Allocs = null;
         }
 
-        public int AllocMemory(string AllocationName, byte[] AllocContent)
+        public byte[] AllocJump(int JumpAddress, int LandAddress, int JumpInstructionLength)
+        {
+            byte[] JumpInstruction = new byte[JumpInstructionLength];
+            JumpInstruction[0] = 0xE9;
+            int JumpLength = LandAddress - JumpAddress - 5;
+            byte[] JumpLengthValue = BitConverter.GetBytes(JumpLength);
+            JumpLengthValue.CopyTo(JumpInstruction, 1);
+
+            if (JumpInstructionLength > 5)
+            {
+                int diff = JumpInstructionLength - 5;
+                byte[] NOPs = new byte[diff];
+
+                for (int i = 0; i < (diff); i++)
+                {
+                    NOPs[i] = 0x90;
+                }
+
+                NOPs.CopyTo(JumpInstruction, 5);
+            }
+
+            return JumpInstruction;
+        }
+
+        public byte[] AllocJumpBack(int JumpAddress, int LandAddress)
+        {
+            byte[] JumpInstruction = new byte[5];
+            JumpInstruction[0] = 0xE9;
+            int JumpLength = LandAddress - JumpAddress - 5;
+            byte[] JumpLengthValue = BitConverter.GetBytes(JumpLength);
+            JumpLengthValue.CopyTo(JumpInstruction, 1);
+            return JumpInstruction;
+        }
+
+        public int AllocMemory(string AllocName, byte[] AllocContent, int CallAddress, byte[] CallInstruction, bool JumpBack = false, int JumpBackAddress = 0)
         {
             if (!DebugMode)
                 return 0;
 
-            int AllocAddress = VirtualAllocEx(pHandle, 0, AllocContent.Length, (int)MemoryHelper.MEMORY_INFORMATION.MEM_COMMIT | (int)MemoryHelper.MEMORY_INFORMATION.MEM_RESERVE, (int)MemoryHelper.MEMORY_PROTECTION.PAGE_EXECUTE_READWRITE);
+            if (AllocExists(AllocName))
+            {
+                Allocs.TryGetValue(AllocName, out MemoryHelper.Allocation Allocation);
+                return Allocation.Address();
+            }
+
+            int AllocAddress = VirtualAllocEx(pHandle, 0, AllocContent.Length, (int)MemoryHelper.MEMORY_INFORMATION.MEM_COMMIT | (int)MemoryHelper.MEMORY_INFORMATION.MEM_RESERVE, (int)MemoryHelper.MEMORY_PROTECTION.PAGE_EXECUTE_READ);
 
             if (AllocAddress != 0)
             {
+                WriteRawAddress(CallAddress, AllocJump(CallAddress, AllocAddress, CallInstruction.Length));
                 WriteRawAddress(AllocAddress, AllocContent);
 
-                MemoryHelper.Allocation Alloc = new MemoryHelper.Allocation(AllocationName, AllocAddress, AllocContent);
-                Allocs.Add(AllocationName, Alloc);
+                if (JumpBack && JumpBackAddress != 0)
+                {
+                    WriteRawAddress(AllocAddress + AllocContent.Length, AllocJump(AllocAddress + AllocContent.Length, JumpBackAddress, 5));
+                }
+
+                MemoryHelper.Allocation Alloc = new MemoryHelper.Allocation(AllocName, AllocAddress, CallAddress, CallInstruction, AllocContent, JumpBack);
+                Allocs.Add(AllocName, Alloc);
 
                 return AllocAddress;
             }
@@ -238,16 +287,33 @@ namespace GameX.Modules
             return 0;
         }
 
-        public bool DeallocMemory(string AllocationName)
+        public bool DeallocMemory(string AllocName)
         {
             if (!DebugMode)
                 return false;
 
-            if (Allocs != null && Allocs.TryGetValue(AllocationName, out MemoryHelper.Allocation Allocation))
+            if (AllocExists(AllocName))
             {
+                Allocs.TryGetValue(AllocName, out MemoryHelper.Allocation Allocation);
+                WriteRawAddress(Allocation.CallAddress(), Allocation.CallInstruction());
                 VirtualFreeEx(pHandle, Allocation.Address(), 0, (int)MemoryHelper.MEMORY_INFORMATION.MEM_RELEASE);
-                Allocs.Remove(AllocationName);
+                Allocs.Remove(AllocName);
                 return true;
+            }
+
+            return false;
+        }
+
+        public bool AllocExists(string AllocName)
+        {
+            if (Allocs != null && Allocs.TryGetValue(AllocName, out MemoryHelper.Allocation Alloc))
+            {
+                byte[] RegionReading = ReadRawAddress(Alloc.Address(), Alloc.Size());
+
+                if (memcmp(RegionReading, Alloc.Content(), Alloc.JumpBack() ? (Alloc.Size() - 5) : Alloc.Size()) == 0)
+                    return true;
+
+                Allocs.Remove(AllocName);
             }
 
             return false;

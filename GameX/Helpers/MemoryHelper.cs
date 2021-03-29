@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Security.Principal;
 
 namespace GameX.Helpers
 {
@@ -98,13 +97,19 @@ namespace GameX.Helpers
         {
             private string AllocationName { get; set; }
             private int AllocationAddress { get; set; }
-            private byte[] AllocationBytes { get; set; }
+            private int AllocationCallAddress { get; set; }
+            private byte[] AllocCallInstruction { get; set; }
+            private byte[] AllocationContent { get; set; }
+            private bool AllocationJumpBack { get; set; }
 
-            public Allocation(string Name, int Address, byte[] Content)
+            public Allocation(string Name, int Address, int CallAddress, byte[] CallInstruction, byte[] Content, bool JumpBack = false)
             {
                 AllocationName = Name;
                 AllocationAddress = Address;
-                AllocationBytes = Content;
+                AllocationCallAddress = CallAddress;
+                AllocCallInstruction = CallInstruction;
+                AllocationContent = Content;
+                AllocationJumpBack = JumpBack;
             }
 
             public override string ToString()
@@ -122,9 +127,24 @@ namespace GameX.Helpers
                 return AllocationAddress;
             }
 
+            public int CallAddress()
+            {
+                return AllocationCallAddress;
+            }
+
             public byte[] Content()
             {
-                return AllocationBytes;
+                return AllocationContent;
+            }
+
+            public byte[] CallInstruction()
+            {
+                return AllocCallInstruction;
+            }
+
+            public bool JumpBack()
+            {
+                return AllocationJumpBack;
             }
 
             public int Size()
