@@ -231,15 +231,10 @@ namespace GameX.Modules
 
             if (JumpInstructionLength > 5)
             {
-                int diff = JumpInstructionLength - 5;
-                byte[] NOPs = new byte[diff];
-
-                for (int i = 0; i < (diff); i++)
+                for (int i = 5; i < JumpInstructionLength; i++)
                 {
-                    NOPs[i] = 0x90;
+                    JumpInstruction[i] = 0x90;
                 }
-
-                NOPs.CopyTo(JumpInstruction, 5);
             }
 
             return JumpInstruction;
