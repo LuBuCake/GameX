@@ -18,7 +18,7 @@ namespace GameX.Modules
         private static extern bool CloseHandle(IntPtr pHandle);
 
         [DllImport("kernel32.dll")]
-        private static extern bool VirtualProtectEx(IntPtr pHandle, int lpBaseAddress, int dwSize, int flNewProtect, int lpflOldProtect);
+        private static extern bool VirtualProtectEx(IntPtr pHandle, int lpBaseAddress, int dwSize, int flNewProtect, out int lpflOldProtect);
 
         [DllImport("kernel32.dll")]
         private static extern int VirtualAllocEx(IntPtr pHandle, int lpBaseAddress, int dwSize, int flAllocType, int flProtect);
