@@ -15,7 +15,7 @@ namespace GameX
         private Process pProcess { get; set; }
         private bool Initialized { get; set; }
 
-        private string TargetProcess = "re5dx9";
+        private string TargetProcess = "";
         private string TargetVersion = "";
         private string[] TargetModulesCheck = { };
 
