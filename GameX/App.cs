@@ -11,13 +11,13 @@ namespace GameX
         /*App Properties*/
 
         private MessagePeaker Peaker { get; set; }
-        private KernelAccess Kernel { get; set; }
+        private Memory Kernel { get; set; }
         private Process pProcess { get; set; }
         private bool Initialized { get; set; }
 
-        private string TargetProcess = "";
-        private string TargetVersion = "";
-        private string[] TargetModulesCheck = { };
+        private string TargetProcess = "re5dx9";
+        private string TargetVersion = "1.0.0.129";
+        private string[] TargetModulesCheck = { "maluc.dll", "steam_api.dll" };
 
         /*App Init*/
 
@@ -42,6 +42,9 @@ namespace GameX
         private void Application_ApplicationExit(object sender, EventArgs e)
         {
             Application.Idle += null;
+
+            if (Kernel != null)
+                Kernel.Dispose();
         }
 
         /*App Methods*/
@@ -50,8 +53,10 @@ namespace GameX
         {
             if (pProcess == null)
             {
-                pProcess = KernelHelper.GetProcessByName(TargetProcess);
+                pProcess = MemoryHelper.GetProcessByName(TargetProcess);
                 Initialized = false;
+
+                Text = "GameX - Waiting";
             }
             else
             {
@@ -61,13 +66,17 @@ namespace GameX
                     {
                         pProcess.EnableRaisingEvents = true;
                         pProcess.Exited += ClearRuntime;
-                        Kernel = new KernelAccess(pProcess);
+                        Kernel = new Memory(pProcess);
                         Initialized = true;
+
+                        Text = "GameX - Running";
                     }
                     else
                     {
                         pProcess.Dispose();
                         pProcess = null;
+
+                        Text = "GameX - Incompatible Version";
                     }
                 }
             }
@@ -77,16 +86,23 @@ namespace GameX
 
         private bool ValidateTarget(Process pProcess)
         {
-            if (TargetVersion != "" && !pProcess.MainModule.FileVersionInfo.ToString().Contains(TargetVersion))
-                return false;
-
-            if (TargetModulesCheck.Length > 0)
+            try
             {
-                foreach (string Module in TargetModulesCheck)
+                if (TargetVersion != "" && !pProcess.MainModule.FileVersionInfo.ToString().Contains(TargetVersion))
+                    return false;
+
+                if (TargetModulesCheck.Length > 0)
                 {
-                    if (!KernelHelper.ProcessHasModule(pProcess, Module))
-                        return false;
+                    foreach (string Module in TargetModulesCheck)
+                    {
+                        if (!MemoryHelper.ProcessHasModule(pProcess, Module))
+                            return false;
+                    }
                 }
+            }
+            catch(Exception)
+            {
+                return false;
             }
 
             return true;
@@ -104,7 +120,7 @@ namespace GameX
         {
             if (HandleProcess())
             {
-
+                
             }
         }
 

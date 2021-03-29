@@ -73,7 +73,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helpers\KernelHelper.cs" />
+    <Compile Include="Helpers\MemoryHelper.cs" />
     <Compile Include="App.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,7 +81,7 @@
       <DependentUpon>App.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\MessagePeaker.cs" />
-    <Compile Include="Modules\KernelAccess.cs" />
+    <Compile Include="Modules\Memory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="App.resx">
@@ -118,7 +118,8 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy $(ProjectDir)\Using C:\Users\madne\Desktop\GameX\GameX /e /y
-xcopy $(TargetDir)\ C:\Users\madne\Desktop\GameX /e /y</PostBuildEvent>
+xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\GameX /e /y
+xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\GameX /e /y</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
