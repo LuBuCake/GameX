@@ -2,6 +2,7 @@
 using GameX.Modules;
 using System;
 using System.Diagnostics;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace GameX
@@ -10,20 +11,21 @@ namespace GameX
     {
         /*App Properties*/
 
-        private Messager Peaker { get; set; }
+        private Messager Peaker { get; }
         private Memory Kernel { get; set; }
         private Process pProcess { get; set; }
         private bool Initialized { get; set; }
 
         private string TargetProcess = "";
         private string TargetVersion = "";
-        private string[] TargetModulesCheck = { };
+        private readonly string[] TargetModulesCheck = { };
 
         /*App Init*/
 
         public App()
         {
             InitializeComponent();
+            Keyboard.CreateHook(KeyReader);
 
             Peaker = new Messager();
 
@@ -41,10 +43,14 @@ namespace GameX
 
         private void Application_ApplicationExit(object sender, EventArgs e)
         {
+            Keyboard.RemoveHook();
             Application.Idle += null;
+            Kernel?.Dispose();
+        }
 
-            if (Kernel != null)
-                Kernel.Dispose();
+        private static void KeyReader(int input)
+        {
+
         }
 
         /*App Methods*/
@@ -55,48 +61,50 @@ namespace GameX
             {
                 pProcess = Processes.GetProcessByName(TargetProcess);
                 Initialized = false;
-
                 Text = "GameX - Waiting";
             }
             else
             {
-                if (!Initialized)
+                if (Initialized)
+                    return Initialized;
+
+                if (!pProcess.Responding)
                 {
-                    if (ValidateTarget(pProcess))
-                    {
-                        pProcess.EnableRaisingEvents = true;
-                        pProcess.Exited += ClearRuntime;
-                        Kernel = new Memory(pProcess);
-                        Initialized = true;
+                    Text = "GameX - Checking";
+                    return Initialized;
+                }
 
-                        Text = "GameX - Running";
-                    }
-                    else
-                    {
-                        pProcess.Dispose();
-                        pProcess = null;
-
-                        Text = "GameX - Incompatible Version";
-                    }
+                if (ValidateTarget(pProcess))
+                {
+                    pProcess.EnableRaisingEvents = true;
+                    pProcess.Exited += ClearRuntime;
+                    Kernel = new Memory(pProcess);
+                    Initialized = true;
+                    Text = "GameX - Running";
+                }
+                else
+                {
+                    pProcess.Dispose();
+                    pProcess = null;
+                    Text = "GameX - Incompatible Version";
                 }
             }
 
             return Initialized;
         }
 
-        private bool ValidateTarget(Process pProcess)
+        private bool ValidateTarget(Process process)
         {
             try
             {
-                if (TargetVersion != "" && !pProcess.MainModule.FileVersionInfo.ToString().Contains(TargetVersion))
+                if (TargetVersion != "" && (process.MainModule == null || !process.MainModule.FileVersionInfo.ToString().Contains(TargetVersion)))
                     return false;
 
                 if (TargetModulesCheck.Length > 0)
                 {
-                    foreach (string Module in TargetModulesCheck)
+                    if (TargetModulesCheck.Any(Module => !Processes.ProcessHasModule(process, Module)))
                     {
-                        if (Module != "" && !Processes.ProcessHasModule(pProcess, Module))
-                            return false;
+                        return false;
                     }
                 }
             }
@@ -123,5 +131,7 @@ namespace GameX
 
             }
         }
+
+        /*User Methods*/
     }
 }

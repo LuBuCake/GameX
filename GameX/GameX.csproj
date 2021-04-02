@@ -82,6 +82,7 @@
       <DependentUpon>App.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Messager.cs" />
+    <Compile Include="Modules\Keyboard.cs" />
     <Compile Include="Modules\Memory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

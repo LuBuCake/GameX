@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -32,7 +33,13 @@ namespace GameX.Modules
         [DllImport("kernel32.dll", SetLastError = true)]
         private static extern bool WriteProcessMemory(IntPtr pHandle, int lpBaseAddress, byte[] lpBuffer, int dwSize, ref int lpNumberOfBytesWritten);
 
-        public enum MEMORY_ACCESS : int
+        [DllImport("kernel32")]
+        public static extern bool IsWow64Process(IntPtr hProcess, out bool lpSystemInfo);
+
+        [DllImport("user32.dll")]
+        static extern bool SetForegroundWindow(IntPtr hWnd);
+
+        public enum MEMORY_ACCESS
         {
             [Description("Grants all other accesses.")]
             PROCESS_ALL_ACCESS = 0x1F0FFF,
@@ -62,7 +69,7 @@ namespace GameX.Modules
             SYNCHRONIZE = 0x00100000
         }
 
-        public enum MEMORY_PROTECTION : int
+        public enum MEMORY_PROTECTION
         {
             [Description("Enables execute access to the committed region of pages.")]
             PAGE_EXECUTE = 0x10,
@@ -95,7 +102,7 @@ namespace GameX.Modules
             PAGE_TARGETS_NO_UPDATE = 0x40000000
         }
 
-        public enum MEMORY_INFORMATION : int
+        public enum MEMORY_INFORMATION
         {
             [Description("Detourates memory charges (from the overall size of memory and the paging files on disk) for the specified reserved memory pages.")]
             MEM_COMMIT = 0x00001000,
@@ -128,7 +135,7 @@ namespace GameX.Modules
         {
             pProcess = ProcessObject;
             pHandle = OpenProcess((int)AccessLevel, false, pProcess.Id);
-            pBase = Processes.GetBaseAddressFromModule(pProcess, pProcess.MainModule.ModuleName);
+            pBase = Processes.GetBaseAddressFromModule(pProcess, pProcess.MainModule?.ModuleName);
 
             EnterDebugMode();
         }
@@ -165,7 +172,6 @@ namespace GameX.Modules
 
         public int ReadPointer(string ModuleName, int BaseAddress, params int[] Offsets)
         {
-            byte[] buffer;
             int PointerResult = BaseAddress;
 
             if (ModuleName != "")
@@ -176,11 +182,11 @@ namespace GameX.Modules
                     PointerResult += ModuleBaseAddress.ToInt32();
             }
 
-            for (int i = 0; i < Offsets.Length; i++)
+            foreach (int Offset in Offsets)
             {
-                buffer = ReadRawAddress(PointerResult);
+                var buffer = ReadRawAddress(PointerResult);
                 PointerResult = BitConverter.ToInt32(buffer, 0);
-                PointerResult += Offsets[i];
+                PointerResult += Offset;
             }
 
             return PointerResult;
@@ -203,19 +209,19 @@ namespace GameX.Modules
 
         public int ReadInt32(string ModuleName, int BaseAddress, params int[] Offsets)
         {
-            byte[] result = ReadRawAddress(ReadPointer(ModuleName, BaseAddress, Offsets), 4);
+            byte[] result = ReadRawAddress(ReadPointer(ModuleName, BaseAddress, Offsets));
             return BitConverter.ToInt32(result, 0);
         }
 
         public uint ReadUInt32(string ModuleName, int BaseAddress, params int[] Offsets)
         {
-            byte[] result = ReadRawAddress(ReadPointer(ModuleName, BaseAddress, Offsets), 4);
+            byte[] result = ReadRawAddress(ReadPointer(ModuleName, BaseAddress, Offsets));
             return BitConverter.ToUInt32(result, 0);
         }
 
         public float ReadFloat(string ModuleName, int BaseAddress, params int[] Offsets)
         {
-            byte[] result = ReadRawAddress(ReadPointer(ModuleName, BaseAddress, Offsets), 4);
+            byte[] result = ReadRawAddress(ReadPointer(ModuleName, BaseAddress, Offsets));
             return BitConverter.ToSingle(result, 0);
         }
 
@@ -267,7 +273,7 @@ namespace GameX.Modules
             }
             catch (Win32Exception)
             {
-                MessageBox.Show("Remember to run this program with raised privileges if you want to use code injection!", "Whops!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Remember to run this program with raised privileges if you want to use code injection!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DebugMode = false;
                 return;
             }
@@ -280,7 +286,7 @@ namespace GameX.Modules
 
         public void ExitDebugMode()
         {
-            if (DebugMode == true)
+            if (DebugMode)
             {
                 Process.LeaveDebugMode();
                 DebugMode = false;
@@ -296,10 +302,9 @@ namespace GameX.Modules
 
             if (!pProcess.HasExited)
             {
-                foreach (KeyValuePair<string, Detour> Detour in Detours)
+                foreach (var Detour in Detours.Where(Detour => DetourActive(Detour.Key)))
                 {
-                    if (DetourActive(Detour.Key))
-                        RemoveDetour(Detour.Key);
+                    RemoveDetour(Detour.Key);
                 }
             }
 
@@ -307,41 +312,41 @@ namespace GameX.Modules
             Detours = null;
         }
 
-        private byte[] DetourJump(int JumpAddress, int LandAddress, int JumpInstructionLength)
+        private static byte[] DetourJump(int JumpAddress, int LandAddress, int JumpInstructionLength)
         {
             byte[] JumpInstruction = new byte[JumpInstructionLength];
             JumpInstruction[0] = 0xE9;
             BitConverter.GetBytes(LandAddress - JumpAddress - 5).CopyTo(JumpInstruction, 1);
 
-            if (JumpInstructionLength > 5)
-                for (int i = 5; i < JumpInstructionLength; i++)
-                    JumpInstruction[i] = 0x90;
+            if (JumpInstructionLength <= 5)
+                return JumpInstruction;
+
+            for (int i = 5; i < JumpInstructionLength; i++)
+                JumpInstruction[i] = 0x90;
 
             return JumpInstruction;
         }
 
         public Detour GetDetour(string DetourName)
         {
-            if (DetourActive(DetourName))
-            {
-                Detours.TryGetValue(DetourName, out Detour Detour);
-                return Detour;
-            }
+            if (!DetourActive(DetourName))
+                return null;
 
-            return null;
+            Detours.TryGetValue(DetourName, out Detour Detour);
+            return Detour;
         }
 
         public bool DetourActive(string DetourName)
         {
-            if (Detours != null && Detours.TryGetValue(DetourName, out Detour Detour))
-            {
-                byte[] RegionReading = ReadRawAddress(Detour.Address(), Detour.Size());
+            if (Detours == null || !Detours.TryGetValue(DetourName, out Detour Detour))
+                return false;
 
-                if (Maths.CompareByteArray(RegionReading, Detour.Content(), Detour.Size()))
-                    return true;
+            byte[] RegionReading = ReadRawAddress(Detour.Address(), Detour.Size());
 
-                Detours.Remove(DetourName);
-            }
+            if (Maths.CompareByteArray(RegionReading, Detour.Content(), Detour.Size()))
+                return true;
+
+            Detours.Remove(DetourName);
 
             return false;
         }
@@ -352,29 +357,23 @@ namespace GameX.Modules
                 return null;
 
             if (DetourActive(DetourName))
-            {
                 return GetDetour(DetourName);
-            }
 
             int DetourAddress = VirtualAllocEx(pHandle, 0, DetourContent.Length, (int)MEMORY_INFORMATION.MEM_COMMIT | (int)MEMORY_INFORMATION.MEM_RESERVE, (int)MEMORY_PROTECTION.PAGE_EXECUTE_READ);
 
-            if (DetourAddress != 0)
-            {
-                WriteRawAddress(CallAddress, DetourJump(CallAddress, DetourAddress, CallInstruction.Length));
-                WriteRawAddress(DetourAddress, DetourContent);
+            if (DetourAddress == 0)
+                return null;
 
-                if (JumpBack && JumpBackAddress != 0)
-                {
-                    WriteRawAddress(DetourAddress + DetourContent.Length, DetourJump(DetourAddress + DetourContent.Length, JumpBackAddress, 5));
-                }
+            WriteRawAddress(CallAddress, DetourJump(CallAddress, DetourAddress, CallInstruction.Length));
+            WriteRawAddress(DetourAddress, DetourContent);
 
-                Detour Detour = new Detour(DetourName, DetourAddress, CallAddress, CallInstruction, DetourContent, JumpBack, JumpBackAddress);
-                Detours.Add(DetourName, Detour);
+            if (JumpBack && JumpBackAddress != 0)
+                WriteRawAddress(DetourAddress + DetourContent.Length, DetourJump(DetourAddress + DetourContent.Length, JumpBackAddress, 5));
 
-                return Detour;
-            }
+            Detour Detour = new Detour(DetourName, DetourAddress, CallAddress, CallInstruction, DetourContent, JumpBack, JumpBackAddress);
+            Detours.Add(DetourName, Detour);
 
-            return null;
+            return Detour;
         }
 
         public bool RemoveDetour(string DetourName)
@@ -382,16 +381,14 @@ namespace GameX.Modules
             if (!DebugMode)
                 return false;
 
-            if (DetourActive(DetourName))
-            {
-                Detour Detour = GetDetour(DetourName);
-                WriteRawAddress(Detour.CallAddress(), Detour.CallInstruction());
-                VirtualFreeEx(pHandle, Detour.Address(), 0, (int)MEMORY_INFORMATION.MEM_RELEASE);
-                Detours.Remove(DetourName);
-                return true;
-            }
+            if (!DetourActive(DetourName))
+                return false;
 
-            return false;
+            Detour Detour = GetDetour(DetourName);
+            WriteRawAddress(Detour.CallAddress(), Detour.CallInstruction());
+            VirtualFreeEx(pHandle, Detour.Address(), 0, (int)MEMORY_INFORMATION.MEM_RELEASE);
+            Detours.Remove(DetourName);
+            return true;
         }
     }
 }
