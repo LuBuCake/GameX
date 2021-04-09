@@ -16,9 +16,9 @@ namespace GameX
         private Process pProcess { get; set; }
         private bool Initialized { get; set; }
 
-        private string TargetProcess = "";
-        private string TargetVersion = "";
-        private readonly string[] TargetModulesCheck = { };
+        private string TargetProcess = "re5dx9";
+        private string TargetVersion = "1.0.0.129";
+        private readonly string[] TargetModulesCheck = { "steam_api.dll", "maluc.dll" };
 
         /*App Init*/
 

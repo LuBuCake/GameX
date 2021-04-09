@@ -73,6 +73,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\Cryptography.cs" />
     <Compile Include="Helpers\Maths.cs" />
     <Compile Include="Helpers\Processes.cs" />
     <Compile Include="App.cs">
@@ -120,7 +121,13 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy $(ProjectDir)\Using C:\Users\madne\Desktop\GameX\GameX /e /y
+    <PostBuildEvent>rd /s /q C:\Users\madne\Desktop\GameX\
+
+mkdir C:\Users\madne\Desktop\GameX\
+mkdir C:\Users\madne\Desktop\GameX\GameX\
+
+xcopy $(ProjectDir)\Using C:\Users\madne\Desktop\GameX\GameX /e /y
+xcopy $(ProjectDir)\Resources C:\Users\madne\Desktop\GameX\GameX /e /y
 xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\GameX /e /y
 xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\GameX /e /y</PostBuildEvent>
   </PropertyGroup>
