@@ -21,8 +21,6 @@ namespace GameX.Helpers
 
             if (ProcessName.ToLower().Contains(".exe"))
                 ProcessName = ProcessName.Replace(".exe", "");
-            if (ProcessName.ToLower().Contains(".bin"))
-                ProcessName = ProcessName.Replace(".bin", "");
 
             foreach (Process Process in Processes)
             {

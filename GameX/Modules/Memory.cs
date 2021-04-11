@@ -34,6 +34,9 @@ namespace GameX.Modules
         private static extern bool WriteProcessMemory(IntPtr pHandle, int lpBaseAddress, byte[] lpBuffer, int dwSize, ref int lpNumberOfBytesWritten);
 
         [DllImport("kernel32")]
+        public static extern IntPtr CreateRemoteThread(IntPtr hProcess, IntPtr lpThreadAttributes, uint dwStackSize, IntPtr lpStartAddress, IntPtr lpParameter, uint dwCreationFlags, out IntPtr lpThreadId);
+
+        [DllImport("kernel32")]
         public static extern bool IsWow64Process(IntPtr hProcess, out bool lpSystemInfo);
 
         [DllImport("user32.dll")]
@@ -261,7 +264,7 @@ namespace GameX.Modules
             WriteRawAddress(Address, BitConverter.GetBytes(Value));
         }
 
-        /*MEMORY DETOUR (REQUIRES DEBUGMODE BECAUSE ITS CODE INJECTION)*/
+        /*MEMORY INJECTIONS (REQUIRES DEBUGMODE BECAUSE ITS CODE INJECTION DUH)*/
 
         public Dictionary<string, Detour> Detours;
 
@@ -286,13 +289,18 @@ namespace GameX.Modules
 
         public void ExitDebugMode()
         {
-            if (DebugMode)
-            {
-                Process.LeaveDebugMode();
-                DebugMode = false;
-            }
+            if (!DebugMode)
+                return;
 
             RemoveDetours();
+            Process.LeaveDebugMode();
+            DebugMode = false;
+        }
+
+        public int ChangeProtection(int lpBaseAddress, int dwSize, int flNewProtect)
+        {
+            VirtualProtectEx(pHandle, lpBaseAddress, dwSize, flNewProtect, out int lpflOldProtect);
+            return lpflOldProtect;
         }
 
         public void RemoveDetours()
