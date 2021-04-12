@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -276,7 +275,7 @@ namespace GameX.Modules
             }
             catch (Win32Exception)
             {
-                MessageBox.Show("Remember to run this program with raised privileges if you want to use code injection!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Code injection is only allowed for administrators, expect limitations in user mode.", "Quick Advice!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DebugMode = false;
                 return;
             }
@@ -310,9 +309,16 @@ namespace GameX.Modules
 
             if (!pProcess.HasExited)
             {
-                foreach (var Detour in Detours.Where(Detour => DetourActive(Detour.Key)))
+                List<string> DetourNames = new List<string>();
+
+                foreach (KeyValuePair<string, Detour> detour in Detours)
                 {
-                    RemoveDetour(Detour.Key);
+                    DetourNames.Add(detour.Key);
+                }
+
+                foreach (string detour in DetourNames)
+                {
+                    RemoveDetour(detour);
                 }
             }
 
@@ -320,11 +326,24 @@ namespace GameX.Modules
             Detours = null;
         }
 
-        private static byte[] DetourJump(int JumpAddress, int LandAddress, int JumpInstructionLength)
+        public static byte[] DetourJump(int JumpAddress, int LandAddress, int JumpInstructionLength, int JumpSize = 5, bool AddressOnly = false, string JumpType = "jmp")
         {
+            byte jmp;
+
+            if (JumpType == "je")
+                jmp = 0x74;
+            else if (JumpType == "jne")
+                jmp = 0x75;
+            else
+                jmp = 0xE9;
+
             byte[] JumpInstruction = new byte[JumpInstructionLength];
-            JumpInstruction[0] = 0xE9;
-            BitConverter.GetBytes(LandAddress - JumpAddress - 5).CopyTo(JumpInstruction, 1);
+            JumpInstruction[0] = jmp;
+            byte[] Address = BitConverter.GetBytes(LandAddress - JumpAddress - JumpSize);
+            Address.CopyTo(JumpInstruction, 1);
+
+            if (AddressOnly)
+                return Address;
 
             if (JumpInstructionLength <= 5)
                 return JumpInstruction;
@@ -349,14 +368,7 @@ namespace GameX.Modules
             if (Detours == null || !Detours.TryGetValue(DetourName, out Detour Detour))
                 return false;
 
-            byte[] RegionReading = ReadRawAddress(Detour.Address(), Detour.Size());
-
-            if (Maths.CompareByteArray(RegionReading, Detour.Content(), Detour.Size()))
-                return true;
-
-            Detours.Remove(DetourName);
-
-            return false;
+            return true;
         }
 
         public Detour CreateDetour(string DetourName, byte[] DetourContent, int CallAddress, byte[] CallInstruction, bool JumpBack = false, int JumpBackAddress = 0)

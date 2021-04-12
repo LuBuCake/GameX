@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace GameX
 {
-    public partial class App : DevExpress.XtraEditors.XtraForm
+    public partial class App : XtraForm
     {
         /*App Properties*/
 
@@ -32,7 +32,7 @@ namespace GameX
         public App()
         {
             InitializeComponent();
-            Keyboard.CreateHook(KeyReader);
+            Keyboard.CreateHook(GameX_Keyboard);
 
             Peaker = new Messager();
 
@@ -50,19 +50,16 @@ namespace GameX
 
         private void Application_ApplicationExit(object sender, EventArgs e)
         {
+            pProcess.Exited += null;
+            pProcess.EnableRaisingEvents = false;
+            Kernel?.Dispose();
             Keyboard.RemoveHook();
             Application.Idle += null;
-            Kernel?.Dispose();
         }
 
         private void App_Load(object sender, EventArgs e)
         {
             LoadControls();
-        }
-
-        private static void KeyReader(int input)
-        {
-
         }
 
         /*App Methods*/
@@ -73,7 +70,7 @@ namespace GameX
             {
                 pProcess = Processes.GetProcessByName(TargetProcess);
                 Initialized = false;
-                Text = "GameX - Waiting";
+                Text = "GameX - Resident Evil 5 / Biohazard 5 - Waiting";
             }
             else
             {
@@ -82,7 +79,7 @@ namespace GameX
 
                 if (!pProcess.Responding)
                 {
-                    Text = "GameX - Checking";
+                    Text = "GameX - Resident Evil 5 / Biohazard 5 - Checking";
                     return Initialized;
                 }
 
@@ -92,15 +89,15 @@ namespace GameX
                     pProcess.Exited += ClearRuntime;
                     Kernel = new Memory(pProcess);
                     Initialized = true;
-                    Text = "GameX - Running";
-
+                    Text = "GameX - Resident Evil 5 / Biohazard 5 - " + (Kernel.DebugMode ? "Running in Admin Mode" : "Running in User Mode");
+                    CheckDebugModeControls(Kernel.DebugMode);
                     GameX_Inject();
                 }
                 else
                 {
                     pProcess.Dispose();
                     pProcess = null;
-                    Text = "GameX - Incompatible Version";
+                    Text = "GameX - Resident Evil 5 / Biohazard 5 - Incompatible Version";
                 }
             }
 
@@ -148,7 +145,7 @@ namespace GameX
             }
         }
 
-        /*Event Handlers*/
+        /*Load and Events Field*/
 
         private void LoadControls()
         {
@@ -193,6 +190,25 @@ namespace GameX
                 CostumeCombos[CBEIndex].SelectedIndexChanged += CosComboBox_IndexChanged;
 
                 CharacterCombos[CBEIndex].SelectedIndex = 0;
+            }
+        }
+
+        private void CheckDebugModeControls(bool DebugMode)
+        {
+            if (DebugMode)
+                return;
+
+            CheckButton[] CheckButtons =
+            {
+                P1FreezeCharCosButton,
+                P2FreezeCharCosButton,
+                P3FreezeCharCosButton,
+                P4FreezeCharCosButton
+            };
+
+            foreach (CheckButton CB in CheckButtons)
+            {
+                CB.Enabled = DebugMode;
             }
         }
 
@@ -261,10 +277,6 @@ namespace GameX
                 return;
 
             CheckButton CKBTN = sender as CheckButton;
-
-            if (!CKBTN.Checked)
-                return;
-
             Character_ApplyCharacters(int.Parse(CKBTN.Name[1].ToString()) - 1);
         }
 
@@ -277,6 +289,7 @@ namespace GameX
             RE5 = new RESIDENTEVIL5(Kernel);
 
             Character_Inject();
+            RickFixes_Inject();
         }
 
         private void GameX_Deinject()
@@ -288,13 +301,22 @@ namespace GameX
         {
             Character_Update();
             Character_InstructionUpdate();
+
+            UpdateCharacterPanel();
         }
+
+        private static void GameX_Keyboard(int input)
+        {
+
+        }
+
+        /*Code Injection*/
 
         #region Character
 
         private void Character_Inject()
         {
-            if (!Kernel.DetourActive("MOD_Char"))
+            if (!Kernel.DetourActive("MOD_CHARCOS_Extra"))
             {
                 byte[] DetourClean =
                 {
@@ -338,9 +360,77 @@ namespace GameX
                     0x89, 0x7E, 0x0C
                 };
 
-                Detour Try = Kernel.CreateDetour("MOD_Char", DetourClean, 0x00C91A88, CallInstruction, true, 0x00C91A8E);
+                Detour MOD_CHARCOS_Extra = Kernel.CreateDetour("MOD_CHARCOS_Extra", DetourClean, 0x00C91A88, CallInstruction, true, 0x00C91A8E);
 
-                if (Try == null)
+                if (MOD_CHARCOS_Extra == null)
+                    return;
+            }
+
+            if (!Kernel.DetourActive("MOD_CHAR_Story"))
+            {
+                byte[] DetourClean =
+                {
+                    0x81, 0xFE, 0x00, 0x00, 0x00, 0x00,
+                    0x74, 0x15,
+                    0x0F, 0x1F, 0x40, 0x00,
+                    0x81, 0xFE, 0x00, 0x00, 0x00, 0x00,
+                    0x74, 0x13,
+                    0x0F, 0x1F, 0x40, 0x00,
+                    0xEB, 0x17,
+                    0x0F, 0x1F, 0x00,
+                    0xB9, 0x00, 0x00, 0x00, 0x00,
+                    0xEB, 0x0D,
+                    0x0F, 0x1F, 0x00,
+                    0xB9, 0x00, 0x00, 0x00, 0x00,
+                    0xEB, 0x03,
+                    0x0F, 0x1F, 0x00,
+                    0x89, 0x4E, 0x08,
+                    0x8B, 0x17
+                };
+
+                byte[] CallInstruction =
+                {
+                    0x89, 0x4E, 0x08,
+                    0x8B, 0x17
+                };
+
+                Detour MOD_CHAR_Story = Kernel.CreateDetour("MOD_CHAR_Story", DetourClean, 0x00C9200D, CallInstruction, true, 0x00C92012);
+
+                if (MOD_CHAR_Story == null)
+                    return;
+            }
+
+            if (!Kernel.DetourActive("MOD_COS_Story"))
+            {
+                byte[] DetourClean =
+                {
+                    0x81, 0xFE, 0x00, 0x00, 0x00, 0x00,
+                    0x74, 0x15,
+                    0x0F, 0x1F, 0x40, 0x00,
+                    0x81, 0xFE, 0x00, 0x00, 0x00, 0x00,
+                    0x74, 0x13,
+                    0x0F, 0x1F, 0x40, 0x00,
+                    0xEB, 0x17,
+                    0x0F, 0x1F, 0x00,
+                    0xB9, 0x00, 0x00, 0x00, 0x00,
+                    0xEB, 0x0D,
+                    0x0F, 0x1F, 0x00,
+                    0xB9, 0x00, 0x00, 0x00, 0x00,
+                    0xEB, 0x03,
+                    0x0F, 0x1F, 0x00,
+                    0x89, 0x4E, 0x0C,
+                    0x0F, 0xBF, 0x97, 0x64, 0x13, 0x00, 0x00
+                };
+
+                byte[] CallInstruction =
+                {
+                    0x89, 0x4E, 0x0C,
+                    0x0F, 0xBF, 0X97, 0x64, 0x13, 0x00, 0x00
+                };
+
+                Detour MOD_COS_Story = Kernel.CreateDetour("MOD_COS_Story", DetourClean, 0x00C9201D, CallInstruction, true, 0x00C92027);
+
+                if (MOD_COS_Story == null)
                     return;
             }
 
@@ -375,48 +465,66 @@ namespace GameX
 
             for (int i = 0; i < CheckButtons.Length; i++)
             {
-                if (CheckButtons[i].Checked)
+                if (CheckButtons[i].Checked || CharacterCombos[i].IsPopupOpen || CostumeCombos[i].IsPopupOpen)
                     continue;
 
                 Tuple<int, int> CharCos = RE5.GetCharacter(i);
 
-                if (!CharacterCombos[i].IsPopupOpen)
+                foreach (object Char in CharacterCombos[i].Properties.Items)
                 {
-                    foreach (object Char in CharacterCombos[i].Properties.Items)
-                    {
-                        if ((Char as Character).Value == CharCos.Item1)
-                            CharacterCombos[i].SelectedItem = Char;
-                    }
+                    if ((Char as Character).Value == CharCos.Item1)
+                        CharacterCombos[i].SelectedItem = Char;
                 }
 
-                if (!CostumeCombos[i].IsPopupOpen)
+                foreach (object Cos in CostumeCombos[i].Properties.Items)
                 {
-                    foreach (object Cos in CostumeCombos[i].Properties.Items)
-                    {
-                        if ((Cos as Costume).Value == CharCos.Item2)
-                            CostumeCombos[i].SelectedItem = Cos;
-                    }
+                    if ((Cos as Costume).Value == CharCos.Item2)
+                        CostumeCombos[i].SelectedItem = Cos;
                 }
             }
         }
 
         private void Character_InstructionUpdate()
         {
-            if (!Kernel.DetourActive("MOD_Char"))
+            if (!Kernel.DetourActive("MOD_CHARCOS_Extra") || !Kernel.DetourActive("MOD_CHAR_Story") || !Kernel.DetourActive("MOD_COS_Story"))
                 return;
 
-            Detour MOD_Char_Detour = Kernel.GetDetour("MOD_Char");
-            int Base = MOD_Char_Detour.Address();
+            Detour DetourBase = Kernel.GetDetour("MOD_CHARCOS_Extra");
+            int DetourBase_Address = DetourBase.Address();
 
-            Kernel.WriteRawAddress(Base + 6, !P1FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x28 });
-            Kernel.WriteRawAddress(Base + 18, !P2FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x2B });
-            Kernel.WriteRawAddress(Base + 30, !P3FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x3E });
-            Kernel.WriteRawAddress(Base + 42, !P4FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x31 });
+            Kernel.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x2D });
+            Kernel.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x30 });
+            Kernel.WriteRawAddress(DetourBase_Address + 30, !P3FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x33 });
+            Kernel.WriteRawAddress(DetourBase_Address + 42, !P4FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x36 });
+
+            DetourBase = Kernel.GetDetour("MOD_CHAR_Story");
+            DetourBase_Address = DetourBase.Address();
+
+            Kernel.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x15 });
+            Kernel.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x13 });
+
+            DetourBase = Kernel.GetDetour("MOD_COS_Story");
+            DetourBase_Address = DetourBase.Address();
+
+            Kernel.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x15 });
+            Kernel.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x13 });
+
+            if (P1FreezeCharCosButton.Checked)
+            {
+                Kernel.WriteInt32((P1CharComboBox.SelectedItem as Character).Value, "re5dx9.exe", 0xDA383C, 0x71398);
+                Kernel.WriteInt32((P1CosComboBox.SelectedItem as Costume).Value, "re5dx9.exe", 0xDA383C, 0x7139C);
+            }
+
+            if (P2FreezeCharCosButton.Checked)
+            {
+                Kernel.WriteInt32((P2CharComboBox.SelectedItem as Character).Value, "re5dx9.exe", 0xDA383C, 0x713E8);
+                Kernel.WriteInt32((P2CosComboBox.SelectedItem as Costume).Value, "re5dx9.exe", 0xDA383C, 0x713EC);
+            }
         }
 
         private void Character_InstructionValueUpdate()
         {
-            if (!Kernel.DetourActive("MOD_Char"))
+            if (!Kernel.DetourActive("MOD_CHARCOS_Extra") || !Kernel.DetourActive("MOD_CHAR_Story") || !Kernel.DetourActive("MOD_COS_Story"))
                 return;
 
             int CHAR1A = Kernel.ReadPointer("re5dx9.exe", 0xDA383C, 0x6FE00);
@@ -447,22 +555,40 @@ namespace GameX
             byte[] Character4 = BitConverter.GetBytes(intCharacter4);
             byte[] Costume4 = BitConverter.GetBytes(intCostume4);
 
-            Detour MOD_Char_Detour = Kernel.GetDetour("MOD_Char");
-            int Base = MOD_Char_Detour.Address();
+            Detour DetourBase = Kernel.GetDetour("MOD_CHARCOS_Extra");
+            int DetourBase_Address = DetourBase.Address();
 
-            Kernel.WriteRawAddress(Base + 2, Char1A);
-            Kernel.WriteRawAddress(Base + 14, Char2A);
-            Kernel.WriteRawAddress(Base + 26, Char3A);
-            Kernel.WriteRawAddress(Base + 38, Char4A);
+            Kernel.WriteRawAddress(DetourBase_Address + 2, Char1A);
+            Kernel.WriteRawAddress(DetourBase_Address + 14, Char2A);
+            Kernel.WriteRawAddress(DetourBase_Address + 26, Char3A);
+            Kernel.WriteRawAddress(DetourBase_Address + 38, Char4A);
 
-            Kernel.WriteRawAddress(Base + 54, Character1);
-            Kernel.WriteRawAddress(Base + 59, Costume1);
-            Kernel.WriteRawAddress(Base + 69, Character2);
-            Kernel.WriteRawAddress(Base + 74, Costume2);
-            Kernel.WriteRawAddress(Base + 84, Character3);
-            Kernel.WriteRawAddress(Base + 89, Costume3);
-            Kernel.WriteRawAddress(Base + 99, Character4);
-            Kernel.WriteRawAddress(Base + 104, Costume4);
+            Kernel.WriteRawAddress(DetourBase_Address + 54, Character1);
+            Kernel.WriteRawAddress(DetourBase_Address + 59, Costume1);
+            Kernel.WriteRawAddress(DetourBase_Address + 69, Character2);
+            Kernel.WriteRawAddress(DetourBase_Address + 74, Costume2);
+            Kernel.WriteRawAddress(DetourBase_Address + 84, Character3);
+            Kernel.WriteRawAddress(DetourBase_Address + 89, Costume3);
+            Kernel.WriteRawAddress(DetourBase_Address + 99, Character4);
+            Kernel.WriteRawAddress(DetourBase_Address + 104, Costume4);
+
+            DetourBase = Kernel.GetDetour("MOD_CHAR_Story");
+            DetourBase_Address = DetourBase.Address();
+
+            Kernel.WriteRawAddress(DetourBase_Address + 2, Char1A);
+            Kernel.WriteRawAddress(DetourBase_Address + 14, Char2A);
+
+            Kernel.WriteRawAddress(DetourBase_Address + 30, Character1);
+            Kernel.WriteRawAddress(DetourBase_Address + 40, Character2);
+
+            DetourBase = Kernel.GetDetour("MOD_COS_Story");
+            DetourBase_Address = DetourBase.Address();
+
+            Kernel.WriteRawAddress(DetourBase_Address + 2, Char1A);
+            Kernel.WriteRawAddress(DetourBase_Address + 14, Char2A);
+
+            Kernel.WriteRawAddress(DetourBase_Address + 30, Costume1);
+            Kernel.WriteRawAddress(DetourBase_Address + 40, Costume2);
         }
 
         private void Character_ApplyCharacters(int Index)
@@ -484,6 +610,158 @@ namespace GameX
             };
 
             RE5.SetCharacter(Index, (CharacterCombos[Index].SelectedItem as Character).Value, (CostumeCombos[Index].SelectedItem as Costume).Value);
+        }
+
+        #endregion
+
+        #region Rick Fixes
+
+        private void RickFixes_Inject()
+        {
+            if (!Kernel.DetourActive("RickFixes_Movement_1"))
+            {
+                byte[] Function_A =
+                {
+                    0xF7, 0x84, 0x3A, 0xC8, 0x01, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00,
+                    0x0F, 0x85, 0x00, 0x00, 0x00, 0x00,
+                    0xF7, 0x84, 0x3A, 0xC4, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00
+                };
+
+                byte[] Function_A_Original =
+                {
+                    0xF7, 0x84, 0x17, 0xC4, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00
+                };
+
+                Detour RickFixes_Movement_1 = Kernel.CreateDetour("RickFixes_Movement_1", Function_A, 0x0079F66D, Function_A_Original, true, 0x0079F678);
+
+                if (RickFixes_Movement_1 != null)
+                {
+                    byte[] jne = new byte[6];
+                    jne[0] = 0x0F;
+                    jne[1] = 0x85;
+                    Memory.DetourJump(RickFixes_Movement_1.Address() + 0x0B, 0x0079F67A, 6, 6, true).CopyTo(jne, 2);
+                    Kernel.WriteRawAddress(RickFixes_Movement_1.Address() + 0x0B, jne);
+                }
+            }
+
+            if (!Kernel.DetourActive("RickFixes_Movement_2"))
+            {
+                byte[] Function_A =
+                {
+                    0xF6, 0x84, 0x3A, 0xC8, 0x01, 0x00, 0x00, 0x02,
+                    0x0F, 0x85, 0x00, 0x00, 0x00, 0x00,
+                    0x84, 0x9C, 0x3A, 0xC4, 0x01, 0x00, 0x00
+                };
+
+                byte[] Function_A_Original =
+                {
+                    0x84, 0x9C, 0x17, 0xC4, 0x01, 0x00, 0x00
+                };
+
+                Detour RickFixes_Movement_2 = Kernel.CreateDetour("RickFixes_Movement_2", Function_A, 0x0079F6C1, Function_A_Original, true, 0x0079F6C8);
+
+                if (RickFixes_Movement_2 != null)
+                {
+                    byte[] jne = new byte[6];
+                    jne[0] = 0x0F;
+                    jne[1] = 0x85;
+                    Memory.DetourJump(RickFixes_Movement_2.Address() + 0x08, 0x0079F6CA, 6, 6, true).CopyTo(jne, 2);
+                    Kernel.WriteRawAddress(RickFixes_Movement_2.Address() + 0x08, jne);
+                }
+            }
+
+            if (!Kernel.DetourActive("RickFixes_Movement_3"))
+            {
+                byte[] Function_A =
+                {
+                    0xF7, 0x84, 0x3A, 0xC8, 0x01, 0x00, 0x00, 0x00, 0X00, 0X80, 0X00,
+                    0x0F, 0x85, 0x00, 0x00, 0x00, 0x00,
+                    0xF6, 0x84, 0x3A, 0xC4, 0x01, 0x00, 0x00, 0X40
+                };
+
+                byte[] Function_A_Original =
+                {
+                    0xF6, 0x84, 0x17, 0xC4, 0x01, 0x00, 0x00, 0X40
+                };
+
+                Detour RickFixes_Movement_3 = Kernel.CreateDetour("RickFixes_Movement_3", Function_A, 0x0079F698, Function_A_Original, true, 0x0079F6A0);
+
+                if (RickFixes_Movement_3 != null)
+                {
+                    byte[] jne = new byte[6];
+                    jne[0] = 0x0F;
+                    jne[1] = 0x85;
+                    Memory.DetourJump(RickFixes_Movement_3.Address() + 0x0B, 0x0079F6A2, 6, 6, true).CopyTo(jne, 2);
+                    Kernel.WriteRawAddress(RickFixes_Movement_3.Address() + 0x0B, jne);
+                }
+            }
+
+            if (!Kernel.DetourActive("RickFixes_Movement_4"))
+            {
+                byte[] Function_A =
+                {
+                    0xF6, 0x84, 0x3A, 0xC8, 0x01, 0x00, 0x00, 0x10,
+                    0x0F, 0x85, 0x00, 0x00, 0x00, 0x00,
+                    0xF6, 0x84, 0x3A, 0xC4, 0x01, 0x00, 0x00, 0X80
+                };
+
+                byte[] Function_A_Original =
+                {
+                    0xF6, 0x84, 0x17, 0xC4, 0x01, 0x00, 0x00, 0X80
+                };
+
+                Detour RickFixes_Movement_4 = Kernel.CreateDetour("RickFixes_Movement_4", Function_A, 0x0079F6E9, Function_A_Original, true, 0x0079F6F1);
+
+                if (RickFixes_Movement_4 != null)
+                {
+                    byte[] jne = new byte[6];
+                    jne[0] = 0x0F;
+                    jne[1] = 0x85;
+                    Memory.DetourJump(RickFixes_Movement_4.Address() + 0x08, 0x0079F6F3, 6, 6, true).CopyTo(jne, 2);
+                    Kernel.WriteRawAddress(RickFixes_Movement_4.Address() + 0x08, jne);
+                }
+            }
+        }
+
+        #endregion
+
+        /*Write / Read*/
+
+        #region Character Values
+
+        private void UpdateCharacterPanel()
+        {
+            // Controls
+            ProgressBarControl[] HealthBars =
+            {
+                P1HealthBar,
+                P2HealthBar,
+                P3HealthBar,
+                P4HealthBar
+            };
+
+            GroupControl[] PlayerGroupBoxes =
+            {
+                TabPageCharGPPlayer1,
+                TabPageCharGPPlayer2,
+                TabPageCharGPPlayer3,
+                TabPageCharGPPlayer4
+            };
+
+            // Updates
+
+            int ActivePlayers = RE5.ActivePlayers();
+
+            for (int i = 0; i < 4; i++)
+            {
+                HealthBars[i].Properties.Maximum = (ActivePlayers - 1) >= i ? RE5.GetMaxHealth(i) : 1;
+                HealthBars[i].EditValue = (ActivePlayers - 1) >= i ? RE5.GetHealth(i) : 0;
+
+                if (i != RE5.LocalPlayer())
+                    PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + ((ActivePlayers - 1) >= i ? (RE5.IsAI(i) ? "CPU AI" : "Connected") : "Disconnected");
+                else
+                    PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + RE5.LocalPlayerNick();
+            }
         }
 
         #endregion
