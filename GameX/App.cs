@@ -1,5 +1,4 @@
 ﻿using DevExpress.XtraEditors;
-using GameX.Game.Base;
 using GameX.Game.Content;
 using GameX.Game.Types;
 using GameX.Helpers;
@@ -282,11 +281,11 @@ namespace GameX
 
         /*User Field*/
 
-        private RESIDENTEVIL5 RE5 { get; set; }
+        private Game.Base.Game RE5 { get; set; }
 
         private void GameX_Inject()
         {
-            RE5 = new RESIDENTEVIL5(Kernel);
+            RE5 = new Game.Base.Game(Kernel);
 
             Character_Inject();
             RickFixes_Inject();
@@ -468,7 +467,7 @@ namespace GameX
                 if (CheckButtons[i].Checked || CharacterCombos[i].IsPopupOpen || CostumeCombos[i].IsPopupOpen)
                     continue;
 
-                Tuple<int, int> CharCos = RE5.GetCharacter(i);
+                Tuple<int, int> CharCos = RE5.PLAYER[i].GetCharacter();
 
                 foreach (object Char in CharacterCombos[i].Properties.Items)
                 {
@@ -609,7 +608,7 @@ namespace GameX
                 P4CosComboBox
             };
 
-            RE5.SetCharacter(Index, (CharacterCombos[Index].SelectedItem as Character).Value, (CostumeCombos[Index].SelectedItem as Costume).Value);
+            RE5.PLAYER[Index].SetCharacter((CharacterCombos[Index].SelectedItem as Character).Value, (CostumeCombos[Index].SelectedItem as Costume).Value);
         }
 
         #endregion
@@ -754,11 +753,11 @@ namespace GameX
 
             for (int i = 0; i < 4; i++)
             {
-                HealthBars[i].Properties.Maximum = (ActivePlayers - 1) >= i ? RE5.GetMaxHealth(i) : 1;
-                HealthBars[i].EditValue = (ActivePlayers - 1) >= i ? RE5.GetHealth(i) : 0;
+                HealthBars[i].Properties.Maximum = (ActivePlayers - 1) >= i ? RE5.PLAYER[i].GetMaxHealth() : 1;
+                HealthBars[i].EditValue = (ActivePlayers - 1) >= i ? RE5.PLAYER[i].GetHealth() : 0;
 
                 if (i != RE5.LocalPlayer())
-                    PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + ((ActivePlayers - 1) >= i ? (RE5.IsAI(i) ? "CPU AI" : "Connected") : "Disconnected");
+                    PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + ((ActivePlayers - 1) >= i ? (RE5.PLAYER[i].IsAI() ? "CPU AI" : "Connected") : "Disconnected");
                 else
                     PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + RE5.LocalPlayerNick();
             }

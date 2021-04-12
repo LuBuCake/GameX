@@ -91,7 +91,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Game\Base\RESIDENTEVIL5.cs" />
+    <Compile Include="Game\Base\Game.cs" />
+    <Compile Include="Game\Base\Player.cs" />
     <Compile Include="Game\Content\Characters.cs" />
     <Compile Include="Game\Types\Character.cs" />
     <Compile Include="Helpers\Cryptography.cs" />

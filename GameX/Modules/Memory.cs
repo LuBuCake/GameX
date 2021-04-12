@@ -326,19 +326,10 @@ namespace GameX.Modules
             Detours = null;
         }
 
-        public static byte[] DetourJump(int JumpAddress, int LandAddress, int JumpInstructionLength, int JumpSize = 5, bool AddressOnly = false, string JumpType = "jmp")
+        public static byte[] DetourJump(int JumpAddress, int LandAddress, int JumpInstructionLength, int JumpSize = 5, bool AddressOnly = false)
         {
-            byte jmp;
-
-            if (JumpType == "je")
-                jmp = 0x74;
-            else if (JumpType == "jne")
-                jmp = 0x75;
-            else
-                jmp = 0xE9;
-
             byte[] JumpInstruction = new byte[JumpInstructionLength];
-            JumpInstruction[0] = jmp;
+            JumpInstruction[0] = 0xE9;
             byte[] Address = BitConverter.GetBytes(LandAddress - JumpAddress - JumpSize);
             Address.CopyTo(JumpInstruction, 1);
 
