@@ -260,7 +260,7 @@ mkdir C:\Users\madne\Desktop\GameX\
 mkdir C:\Users\madne\Desktop\GameX\GameX\
 
 xcopy $(ProjectDir)\Resources C:\Users\madne\Desktop\GameX\GameX /e /y
-xcopy $(ProjectDir)\Using C:\Users\madne\Desktop\GameX\GameX\Resources\Binaries /e /y
+xcopy $(ProjectDir)\Using C:\Users\madne\Desktop\GameX\GameX\Binaries /e /y
 
 xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\GameX /e /y
 xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\GameX /e /y

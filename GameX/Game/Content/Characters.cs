@@ -108,7 +108,7 @@ namespace GameX.Game.Content
                 Name = "Irving",
                 Value = 134,
                 Costumes = new List<Costume>() {
-                new Costume { Name = "Merchant of Death", Value = 0 }
+                new Costume { Name = "Story Mode", Value = 0 }
             }
             };
 
@@ -161,7 +161,7 @@ namespace GameX.Game.Content
                 ImageFile.Add("Excella Tricell", @"GameX/Resources/Images/Characters/e0.png");
                 ImageFile.Add("Barry STARS", @"GameX/Resources/Images/Characters/b0.png");
                 ImageFile.Add("Rebecca STARS", @"GameX/Resources/Images/Characters/r0.png");
-                ImageFile.Add("Irving Merchant of Death", @"GameX/Resources/Images/Characters/i0.png");
+                ImageFile.Add("Irving Story Mode", @"GameX/Resources/Images/Characters/i0.png");
 
                 bool Exists = ImageFile.TryGetValue(CharCos, out string Output);
 

@@ -39,6 +39,11 @@ namespace GameX
             Application.ApplicationExit += Application_ApplicationExit;
         }
 
+        private void App_Load(object sender, EventArgs e)
+        {
+            LoadControls();
+        }
+
         private void Application_Idle(object sender, EventArgs e)
         {
             while (Peaker.IsApplicationIdle())
@@ -54,11 +59,6 @@ namespace GameX
             Kernel?.Dispose();
             Keyboard.RemoveHook();
             Application.Idle += null;
-        }
-
-        private void App_Load(object sender, EventArgs e)
-        {
-            LoadControls();
         }
 
         /*App Methods*/
@@ -90,7 +90,7 @@ namespace GameX
                     Initialized = true;
                     Text = "GameX - Resident Evil 5 / Biohazard 5 - " + (Kernel.DebugMode ? "Running in Admin Mode" : "Running in User Mode");
                     CheckDebugModeControls(Kernel.DebugMode);
-                    GameX_Inject();
+                    GameX_Start();
                 }
                 else
                 {
@@ -128,7 +128,7 @@ namespace GameX
 
         private void ClearRuntime(object sender, EventArgs e)
         {
-            GameX_Deinject();
+            GameX_Clear();
 
             Kernel.Dispose();
             Kernel = null;
@@ -172,23 +172,32 @@ namespace GameX
                 P4FreezeCharCosButton
             };
 
-            for (int CBEIndex = 0; CBEIndex < CharacterCombos.Length; CBEIndex++)
+            CheckButton[] InfiniteHP =
+            {
+                P1InfiniteHPButton,
+                P2InfiniteHPButton,
+                P3InfiniteHPButton,
+                P4InfiniteHPButton
+            };
+
+            for (int Index = 0; Index < CharacterCombos.Length; Index++)
             {
                 List<Character> AvailableChars = Characters.GetChars();
-                CharacterCombos[CBEIndex].Properties.Items.Clear();
+                CharacterCombos[Index].Properties.Items.Clear();
 
                 foreach (Character Char in AvailableChars)
                 {
-                    Char.Index = CBEIndex;
-                    CharacterCombos[CBEIndex].Properties.Items.Add(Char);
+                    Char.Index = Index;
+                    CharacterCombos[Index].Properties.Items.Add(Char);
                 }
 
-                CharCosFreezes[CBEIndex].CheckedChanged += CharCosFreeze_CheckedChanged;
+                CharCosFreezes[Index].CheckedChanged += CharCosFreeze_CheckedChanged;
+                InfiniteHP[Index].CheckedChanged += InfiniteHP_CheckedChanged;
 
-                CharacterCombos[CBEIndex].SelectedIndexChanged += CharComboBox_IndexChanged;
-                CostumeCombos[CBEIndex].SelectedIndexChanged += CosComboBox_IndexChanged;
+                CharacterCombos[Index].SelectedIndexChanged += CharComboBox_IndexChanged;
+                CostumeCombos[Index].SelectedIndexChanged += CosComboBox_IndexChanged;
 
-                CharacterCombos[CBEIndex].SelectedIndex = 0;
+                CharacterCombos[Index].SelectedIndex = 0;
             }
         }
 
@@ -266,42 +275,48 @@ namespace GameX
             if (Initialized)
             {
                 Character_ApplyCharacters(CBECos.Index);
-                Character_InstructionValueUpdate();
+                Character_DetourValueUpdate();
             }
         }
 
         private void CharCosFreeze_CheckedChanged(object sender, EventArgs e)
         {
+            CheckButton CKBTN = sender as CheckButton;
+            CKBTN.Text = CKBTN.Checked ? "Frozen" : "Freeze";
+
             if (!Initialized)
                 return;
 
-            CheckButton CKBTN = sender as CheckButton;
             Character_ApplyCharacters(int.Parse(CKBTN.Name[1].ToString()) - 1);
+        }
+
+        private void InfiniteHP_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckButton CKBTN = sender as CheckButton;
+            CKBTN.Text = "Infinite HP: " + (CKBTN.Checked ? "On" : "Off");
         }
 
         /*User Field*/
 
         private Game.Base.Game RE5 { get; set; }
 
-        private void GameX_Inject()
+        private void GameX_Start()
         {
             RE5 = new Game.Base.Game(Kernel);
 
-            Character_Inject();
-            RickFixes_Inject();
+            Character_Detour();
+            RickFixes_Detour();
         }
 
-        private void GameX_Deinject()
+        private void GameX_Clear()
         {
-            RE5 = null;
+            
         }
 
         private void GameX_Update()
         {
-            Character_Update();
-            Character_InstructionUpdate();
-
-            UpdateCharacterPanel();
+            Character_DetourUpdate();
+            CharacterPanel_Update();
         }
 
         private static void GameX_Keyboard(int input)
@@ -309,11 +324,11 @@ namespace GameX
 
         }
 
-        /*Code Injection*/
+        /*Mod Sections*/
 
         #region Character
 
-        private void Character_Inject()
+        private void Character_Detour()
         {
             if (!Kernel.DetourActive("MOD_CHARCOS_Extra"))
             {
@@ -433,57 +448,10 @@ namespace GameX
                     return;
             }
 
-            Character_InstructionValueUpdate();
+            Character_DetourValueUpdate();
         }
 
-        private void Character_Update()
-        {
-            ComboBoxEdit[] CharacterCombos =
-            {
-                P1CharComboBox,
-                P2CharComboBox,
-                P3CharComboBox,
-                P4CharComboBox
-            };
-
-            ComboBoxEdit[] CostumeCombos =
-            {
-                P1CosComboBox,
-                P2CosComboBox,
-                P3CosComboBox,
-                P4CosComboBox
-            };
-
-            CheckButton[] CheckButtons =
-            {
-                P1FreezeCharCosButton,
-                P2FreezeCharCosButton,
-                P3FreezeCharCosButton,
-                P4FreezeCharCosButton
-            };
-
-            for (int i = 0; i < CheckButtons.Length; i++)
-            {
-                if (CheckButtons[i].Checked || CharacterCombos[i].IsPopupOpen || CostumeCombos[i].IsPopupOpen)
-                    continue;
-
-                Tuple<int, int> CharCos = RE5.PLAYER[i].GetCharacter();
-
-                foreach (object Char in CharacterCombos[i].Properties.Items)
-                {
-                    if ((Char as Character).Value == CharCos.Item1)
-                        CharacterCombos[i].SelectedItem = Char;
-                }
-
-                foreach (object Cos in CostumeCombos[i].Properties.Items)
-                {
-                    if ((Cos as Costume).Value == CharCos.Item2)
-                        CostumeCombos[i].SelectedItem = Cos;
-                }
-            }
-        }
-
-        private void Character_InstructionUpdate()
+        private void Character_DetourUpdate()
         {
             if (!Kernel.DetourActive("MOD_CHARCOS_Extra") || !Kernel.DetourActive("MOD_CHAR_Story") || !Kernel.DetourActive("MOD_COS_Story"))
                 return;
@@ -509,19 +477,13 @@ namespace GameX
             Kernel.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x13 });
 
             if (P1FreezeCharCosButton.Checked)
-            {
-                Kernel.WriteInt32((P1CharComboBox.SelectedItem as Character).Value, "re5dx9.exe", 0xDA383C, 0x71398);
-                Kernel.WriteInt32((P1CosComboBox.SelectedItem as Costume).Value, "re5dx9.exe", 0xDA383C, 0x7139C);
-            }
+                RE5.SetStoryModeCharacter(0, (P1CharComboBox.SelectedItem as Character).Value, (P1CosComboBox.SelectedItem as Costume).Value);
 
             if (P2FreezeCharCosButton.Checked)
-            {
-                Kernel.WriteInt32((P2CharComboBox.SelectedItem as Character).Value, "re5dx9.exe", 0xDA383C, 0x713E8);
-                Kernel.WriteInt32((P2CosComboBox.SelectedItem as Costume).Value, "re5dx9.exe", 0xDA383C, 0x713EC);
-            }
+                RE5.SetStoryModeCharacter(1, (P2CharComboBox.SelectedItem as Character).Value, (P2CosComboBox.SelectedItem as Costume).Value);
         }
 
-        private void Character_InstructionValueUpdate()
+        private void Character_DetourValueUpdate()
         {
             if (!Kernel.DetourActive("MOD_CHARCOS_Extra") || !Kernel.DetourActive("MOD_CHAR_Story") || !Kernel.DetourActive("MOD_COS_Story"))
                 return;
@@ -609,13 +571,14 @@ namespace GameX
             };
 
             RE5.PLAYER[Index].SetCharacter((CharacterCombos[Index].SelectedItem as Character).Value, (CostumeCombos[Index].SelectedItem as Costume).Value);
+            RE5.SetStoryModeCharacter(Index, (CharacterCombos[Index].SelectedItem as Character).Value, (CostumeCombos[Index].SelectedItem as Costume).Value);
         }
 
         #endregion
 
         #region Rick Fixes
 
-        private void RickFixes_Inject()
+        private void RickFixes_Detour()
         {
             if (!Kernel.DetourActive("RickFixes_Movement_1"))
             {
@@ -724,13 +687,14 @@ namespace GameX
 
         #endregion
 
-        /*Write / Read*/
+        /*General Read-Write*/
 
-        #region Character Values
+        #region Character Panel
 
-        private void UpdateCharacterPanel()
+        private void CharacterPanel_Update()
         {
-            // Controls
+            #region Controls
+
             ProgressBarControl[] HealthBars =
             {
                 P1HealthBar,
@@ -747,19 +711,75 @@ namespace GameX
                 TabPageCharGPPlayer4
             };
 
-            // Updates
+            ComboBoxEdit[] CharacterCombos =
+            {
+                P1CharComboBox,
+                P2CharComboBox,
+                P3CharComboBox,
+                P4CharComboBox
+            };
+
+            ComboBoxEdit[] CostumeCombos =
+            {
+                P1CosComboBox,
+                P2CosComboBox,
+                P3CosComboBox,
+                P4CosComboBox
+            };
+
+            CheckButton[] CheckButtons =
+            {
+                P1FreezeCharCosButton,
+                P2FreezeCharCosButton,
+                P3FreezeCharCosButton,
+                P4FreezeCharCosButton
+            };
+
+            CheckButton[] InfiniteHP =
+            {
+                P1InfiniteHPButton,
+                P2InfiniteHPButton,
+                P3InfiniteHPButton,
+                P4InfiniteHPButton
+            };
+
+            #endregion
 
             int ActivePlayers = RE5.ActivePlayers();
 
             for (int i = 0; i < 4; i++)
             {
+                // Characters & Costumes //
+                if (!CheckButtons[i].Checked && !CharacterCombos[i].IsPopupOpen && !CostumeCombos[i].IsPopupOpen)
+                {
+                    Tuple<int, int> CharCos = RE5.PLAYER[i].GetCharacter();
+
+                    foreach (object Char in CharacterCombos[i].Properties.Items)
+                    {
+                        if ((Char as Character).Value == CharCos.Item1)
+                            CharacterCombos[i].SelectedItem = Char;
+                    }
+
+                    foreach (object Cos in CostumeCombos[i].Properties.Items)
+                    {
+                        if ((Cos as Costume).Value == CharCos.Item2)
+                            CostumeCombos[i].SelectedItem = Cos;
+                    }
+                }
+
+                // Health Bar //
                 HealthBars[i].Properties.Maximum = (ActivePlayers - 1) >= i ? RE5.PLAYER[i].GetMaxHealth() : 1;
                 HealthBars[i].EditValue = (ActivePlayers - 1) >= i ? RE5.PLAYER[i].GetHealth() : 0;
 
-                if (i != RE5.LocalPlayer())
-                    PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + ((ActivePlayers - 1) >= i ? (RE5.PLAYER[i].IsAI() ? "CPU AI" : "Connected") : "Disconnected");
-                else
-                    PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + RE5.LocalPlayerNick();
+                // Player Name //
+                PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (RE5.InGame() ? ((i == RE5.LocalPlayer()) ? RE5.LocalPlayerNick() : ((ActivePlayers - 1) >= i ? (RE5.PLAYER[i].IsAI() ? "CPU AI" : "Connected") : "Disconnected")) : "Disconnected");
+
+                if (RE5.GetActiveGameMode() == "Versus")
+                    continue;
+
+                // Infinite HP //
+                if (InfiniteHP[i].Checked && (ActivePlayers - 1) >= i)
+                    RE5.PLAYER[i].SetHealth(RE5.PLAYER[i].GetMaxHealth());
             }
         }
 

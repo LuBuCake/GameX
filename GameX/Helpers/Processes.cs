@@ -33,6 +33,9 @@ namespace GameX.Helpers
 
         public static bool ProcessHasModule(Process pProcess, string ModuleName)
         {
+            if (pProcess == null)
+                return false;
+
             foreach (ProcessModule Module in pProcess.Modules)
             {
                 if (Module.ModuleName.Equals(ModuleName))
@@ -44,6 +47,9 @@ namespace GameX.Helpers
 
         public static ProcessModule GetProcessModule(Process pProcess, string ModuleName)
         {
+            if (pProcess == null)
+                return null;
+
             foreach (ProcessModule Module in pProcess.Modules)
             {
                 if (Module.ModuleName.Equals(ModuleName))
@@ -55,6 +61,9 @@ namespace GameX.Helpers
 
         public static IntPtr GetBaseAddressFromModule(Process pProcess, string ModuleName)
         {
+            if (pProcess == null)
+                return IntPtr.Zero;
+
             ProcessModule Module = GetProcessModule(pProcess, ModuleName);
 
             if (Module != null)
