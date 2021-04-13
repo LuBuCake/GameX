@@ -91,7 +91,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Game\Base\Game.cs" />
+    <Compile Include="Game\Base\Master.cs" />
     <Compile Include="Game\Base\Player.cs" />
     <Compile Include="Game\Content\Characters.cs" />
     <Compile Include="Game\Types\Character.cs" />

@@ -37,31 +37,31 @@ namespace GameX
             this.MasterTabControl = new DevExpress.XtraTab.XtraTabControl();
             this.TabPageChar = new DevExpress.XtraTab.XtraTabPage();
             this.TabPageCharGPPlayer4 = new DevExpress.XtraEditors.GroupControl();
+            this.P4InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P4HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.P4CharPictureBox = new DevExpress.XtraEditors.PictureEdit();
             this.P4CosComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P4FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
             this.P4CharComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.TabPageCharGPPlayer3 = new DevExpress.XtraEditors.GroupControl();
+            this.P3InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P3HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.P3CharPictureBox = new DevExpress.XtraEditors.PictureEdit();
             this.P3CosComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P3FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
             this.P3CharComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.TabPageCharGPPlayer2 = new DevExpress.XtraEditors.GroupControl();
+            this.P2InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P2HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.P2CharPictureBox = new DevExpress.XtraEditors.PictureEdit();
             this.P2CosComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P2FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
             this.P2CharComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.TabPageCharGPPlayer1 = new DevExpress.XtraEditors.GroupControl();
+            this.P1InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P1HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.TabPageMelee = new DevExpress.XtraTab.XtraTabPage();
             this.TabPageInventory = new DevExpress.XtraTab.XtraTabPage();
-            this.P1InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
-            this.P2InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
-            this.P3InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
-            this.P4InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -175,6 +175,15 @@ namespace GameX
             this.TabPageCharGPPlayer4.TabIndex = 21;
             this.TabPageCharGPPlayer4.Text = "Player 4";
             // 
+            // P4InfiniteHPButton
+            // 
+            this.P4InfiniteHPButton.AllowFocus = false;
+            this.P4InfiniteHPButton.Location = new System.Drawing.Point(179, 30);
+            this.P4InfiniteHPButton.Name = "P4InfiniteHPButton";
+            this.P4InfiniteHPButton.Size = new System.Drawing.Size(122, 23);
+            this.P4InfiniteHPButton.TabIndex = 8;
+            this.P4InfiniteHPButton.Text = "Infinite HP: Off";
+            // 
             // P4HealthBar
             // 
             this.P4HealthBar.Location = new System.Drawing.Point(161, 30);
@@ -251,6 +260,15 @@ namespace GameX
             this.TabPageCharGPPlayer3.Size = new System.Drawing.Size(308, 204);
             this.TabPageCharGPPlayer3.TabIndex = 20;
             this.TabPageCharGPPlayer3.Text = "Player 3";
+            // 
+            // P3InfiniteHPButton
+            // 
+            this.P3InfiniteHPButton.AllowFocus = false;
+            this.P3InfiniteHPButton.Location = new System.Drawing.Point(179, 30);
+            this.P3InfiniteHPButton.Name = "P3InfiniteHPButton";
+            this.P3InfiniteHPButton.Size = new System.Drawing.Size(122, 23);
+            this.P3InfiniteHPButton.TabIndex = 8;
+            this.P3InfiniteHPButton.Text = "Infinite HP: Off";
             // 
             // P3HealthBar
             // 
@@ -329,6 +347,15 @@ namespace GameX
             this.TabPageCharGPPlayer2.TabIndex = 19;
             this.TabPageCharGPPlayer2.Text = "Player 2";
             // 
+            // P2InfiniteHPButton
+            // 
+            this.P2InfiniteHPButton.AllowFocus = false;
+            this.P2InfiniteHPButton.Location = new System.Drawing.Point(179, 30);
+            this.P2InfiniteHPButton.Name = "P2InfiniteHPButton";
+            this.P2InfiniteHPButton.Size = new System.Drawing.Size(122, 23);
+            this.P2InfiniteHPButton.TabIndex = 8;
+            this.P2InfiniteHPButton.Text = "Infinite HP: Off";
+            // 
             // P2HealthBar
             // 
             this.P2HealthBar.Location = new System.Drawing.Point(161, 30);
@@ -406,6 +433,15 @@ namespace GameX
             this.TabPageCharGPPlayer1.TabIndex = 18;
             this.TabPageCharGPPlayer1.Text = "Player 1";
             // 
+            // P1InfiniteHPButton
+            // 
+            this.P1InfiniteHPButton.AllowFocus = false;
+            this.P1InfiniteHPButton.Location = new System.Drawing.Point(179, 30);
+            this.P1InfiniteHPButton.Name = "P1InfiniteHPButton";
+            this.P1InfiniteHPButton.Size = new System.Drawing.Size(122, 23);
+            this.P1InfiniteHPButton.TabIndex = 7;
+            this.P1InfiniteHPButton.Text = "Infinite HP: Off";
+            // 
             // P1HealthBar
             // 
             this.P1HealthBar.Location = new System.Drawing.Point(161, 30);
@@ -433,42 +469,6 @@ namespace GameX
             this.TabPageInventory.Name = "TabPageInventory";
             this.TabPageInventory.Size = new System.Drawing.Size(638, 438);
             this.TabPageInventory.Text = "Inventory";
-            // 
-            // P1InfiniteHPButton
-            // 
-            this.P1InfiniteHPButton.AllowFocus = false;
-            this.P1InfiniteHPButton.Location = new System.Drawing.Point(179, 30);
-            this.P1InfiniteHPButton.Name = "P1InfiniteHPButton";
-            this.P1InfiniteHPButton.Size = new System.Drawing.Size(122, 23);
-            this.P1InfiniteHPButton.TabIndex = 7;
-            this.P1InfiniteHPButton.Text = "Infinite HP: Off";
-            // 
-            // P2InfiniteHPButton
-            // 
-            this.P2InfiniteHPButton.AllowFocus = false;
-            this.P2InfiniteHPButton.Location = new System.Drawing.Point(179, 30);
-            this.P2InfiniteHPButton.Name = "P2InfiniteHPButton";
-            this.P2InfiniteHPButton.Size = new System.Drawing.Size(122, 23);
-            this.P2InfiniteHPButton.TabIndex = 8;
-            this.P2InfiniteHPButton.Text = "Infinite HP: Off";
-            // 
-            // P3InfiniteHPButton
-            // 
-            this.P3InfiniteHPButton.AllowFocus = false;
-            this.P3InfiniteHPButton.Location = new System.Drawing.Point(179, 30);
-            this.P3InfiniteHPButton.Name = "P3InfiniteHPButton";
-            this.P3InfiniteHPButton.Size = new System.Drawing.Size(122, 23);
-            this.P3InfiniteHPButton.TabIndex = 8;
-            this.P3InfiniteHPButton.Text = "Infinite HP: Off";
-            // 
-            // P4InfiniteHPButton
-            // 
-            this.P4InfiniteHPButton.AllowFocus = false;
-            this.P4InfiniteHPButton.Location = new System.Drawing.Point(179, 30);
-            this.P4InfiniteHPButton.Name = "P4InfiniteHPButton";
-            this.P4InfiniteHPButton.Size = new System.Drawing.Size(122, 23);
-            this.P4InfiniteHPButton.TabIndex = 8;
-            this.P4InfiniteHPButton.Text = "Infinite HP: Off";
             // 
             // App
             // 

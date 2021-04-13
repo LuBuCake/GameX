@@ -2,21 +2,21 @@
 
 namespace GameX.Game.Base
 {
-    public class Game
+    public class Master
     {
-        private Memory Kernel { get; set; }
+        private App Main { get; set; }
 
-        public Player[] PLAYER;
+        public Player[] Players;
 
-        public Game(Memory kernel)
+        public Master(App main)
         {
-            Kernel = kernel;
-            PLAYER = new Player[]
+            Main = main;
+            Players = new Player[]
             {
-                new Player(kernel, 0),
-                new Player(kernel, 1),
-                new Player(kernel, 2),
-                new Player(kernel, 3)
+                new Player(Main, 0),
+                new Player(Main, 1),
+                new Player(Main, 2),
+                new Player(Main, 3)
             };
         }
 
@@ -25,13 +25,13 @@ namespace GameX.Game.Base
             if (Index > 1)
                 return;
 
-            Kernel.WriteInt32(Character, "re5dx9.exe", 0xDA383C, 0x71398 + (0x50 * Index));
-            Kernel.WriteInt32(Costume, "re5dx9.exe", 0xDA383C, 0x7139C + (0x50 * Index));
+            Main.Kernel.WriteInt32(Character, "re5dx9.exe", 0xDA383C, 0x71398 + (0x50 * Index));
+            Main.Kernel.WriteInt32(Costume, "re5dx9.exe", 0xDA383C, 0x7139C + (0x50 * Index));
         }
 
         public string GetActiveGameMode()
         {
-            int gamemode = Kernel.ReadInt32("re5dx9.exe", 0x00DA383C, 0x954, 0x2088);
+            int gamemode = Main.Kernel.ReadInt32("re5dx9.exe", 0x00DA383C, 0x954, 0x2088);
 
             switch (gamemode)
             {
@@ -54,12 +54,12 @@ namespace GameX.Game.Base
 
         public int LocalPlayer()
         {
-            return Kernel.ReadInt32("re5dx9.exe", 0x00DA383C, 0x954, 0x24B0);
+            return Main.Kernel.ReadInt32("re5dx9.exe", 0x00DA383C, 0x954, 0x24B0);
         }
 
         public string LocalPlayerNick()
         {
-            byte[] bytes = Kernel.ReadBytes(10, "re5dx9.exe", 0xDA383C, 0x86200);
+            byte[] bytes = Main.Kernel.ReadBytes(10, "re5dx9.exe", 0xDA383C, 0x86200);
             char[] chars = System.Text.Encoding.UTF8.GetString(bytes).ToCharArray();
 
             return new string(chars);
@@ -67,12 +67,12 @@ namespace GameX.Game.Base
 
         public int ActivePlayers()
         {
-            return Kernel.ReadInt32("re5dx9.exe", 0x00DA383C, 0x34);
+            return Main.Kernel.ReadInt32("re5dx9.exe", 0x00DA383C, 0x34);
         }
 
         public bool InGame()
         {
-            return Kernel.ReadInt32("re5dx9.exe", 0x00E39D44, 0x220) == 1;
+            return Main.Kernel.ReadInt32("re5dx9.exe", 0x00E39D44, 0x220) == 1;
         }
     }
 }

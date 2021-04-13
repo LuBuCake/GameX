@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using GameX.Game.Base;
 using GameX.Game.Content;
 using GameX.Game.Types;
 using GameX.Helpers;
@@ -18,13 +19,18 @@ namespace GameX
         /*App Properties*/
 
         private Messager Peaker { get; }
-        private Memory Kernel { get; set; }
+        public Memory Kernel { get; private set; }
         private Process pProcess { get; set; }
         private bool Initialized { get; set; }
 
         private string TargetProcess = "re5dx9";
         private string TargetVersion = "1.0.0.129";
-        private readonly string[] TargetModulesCheck = { "steam_api.dll", "maluc.dll" };
+        private string[] TargetModulesCheck = { "steam_api.dll", "maluc.dll" };
+
+        private DateTime OpenTime { get; set; }
+        private DateTime FrameDate { get; set; }
+        public double FrameTime { get; private set; }
+        public double CurTime { get; private set; }
 
         /*App Init*/
 
@@ -34,6 +40,7 @@ namespace GameX
             Keyboard.CreateHook(GameX_Keyboard);
 
             Peaker = new Messager();
+            OpenTime = DateTime.Now;
 
             Application.Idle += Application_Idle;
             Application.ApplicationExit += Application_ApplicationExit;
@@ -62,6 +69,13 @@ namespace GameX
         }
 
         /*App Methods*/
+
+        private void HandleTime()
+        {
+            TimeSpan CurTimeSpan = DateTime.Now - OpenTime;
+            FrameTime = CurTimeSpan.TotalSeconds - CurTime;
+            CurTime = CurTimeSpan.TotalSeconds;
+        }
 
         private bool HandleProcess()
         {
@@ -138,6 +152,8 @@ namespace GameX
 
         private void Think()
         {
+            HandleTime();
+
             if (HandleProcess())
             {
                 GameX_Update();
@@ -298,11 +314,11 @@ namespace GameX
 
         /*User Field*/
 
-        private Game.Base.Game RE5 { get; set; }
+        private Master Game { get; set; }
 
         private void GameX_Start()
         {
-            RE5 = new Game.Base.Game(Kernel);
+            Game = new Master(this);
 
             Character_Detour();
             RickFixes_Detour();
@@ -477,10 +493,10 @@ namespace GameX
             Kernel.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x13 });
 
             if (P1FreezeCharCosButton.Checked)
-                RE5.SetStoryModeCharacter(0, (P1CharComboBox.SelectedItem as Character).Value, (P1CosComboBox.SelectedItem as Costume).Value);
+                Game.SetStoryModeCharacter(0, (P1CharComboBox.SelectedItem as Character).Value, (P1CosComboBox.SelectedItem as Costume).Value);
 
             if (P2FreezeCharCosButton.Checked)
-                RE5.SetStoryModeCharacter(1, (P2CharComboBox.SelectedItem as Character).Value, (P2CosComboBox.SelectedItem as Costume).Value);
+                Game.SetStoryModeCharacter(1, (P2CharComboBox.SelectedItem as Character).Value, (P2CosComboBox.SelectedItem as Costume).Value);
         }
 
         private void Character_DetourValueUpdate()
@@ -570,8 +586,8 @@ namespace GameX
                 P4CosComboBox
             };
 
-            RE5.PLAYER[Index].SetCharacter((CharacterCombos[Index].SelectedItem as Character).Value, (CostumeCombos[Index].SelectedItem as Costume).Value);
-            RE5.SetStoryModeCharacter(Index, (CharacterCombos[Index].SelectedItem as Character).Value, (CostumeCombos[Index].SelectedItem as Costume).Value);
+            Game.Players[Index].SetCharacter((CharacterCombos[Index].SelectedItem as Character).Value, (CostumeCombos[Index].SelectedItem as Costume).Value);
+            Game.SetStoryModeCharacter(Index, (CharacterCombos[Index].SelectedItem as Character).Value, (CostumeCombos[Index].SelectedItem as Costume).Value);
         }
 
         #endregion
@@ -745,14 +761,14 @@ namespace GameX
 
             #endregion
 
-            int ActivePlayers = RE5.ActivePlayers();
+            int ActivePlayers = Game.ActivePlayers();
 
             for (int i = 0; i < 4; i++)
             {
                 // Characters & Costumes //
                 if (!CheckButtons[i].Checked && !CharacterCombos[i].IsPopupOpen && !CostumeCombos[i].IsPopupOpen)
                 {
-                    Tuple<int, int> CharCos = RE5.PLAYER[i].GetCharacter();
+                    Tuple<int, int> CharCos = Game.Players[i].GetCharacter();
 
                     foreach (object Char in CharacterCombos[i].Properties.Items)
                     {
@@ -768,18 +784,18 @@ namespace GameX
                 }
 
                 // Health Bar //
-                HealthBars[i].Properties.Maximum = (ActivePlayers - 1) >= i ? RE5.PLAYER[i].GetMaxHealth() : 1;
-                HealthBars[i].EditValue = (ActivePlayers - 1) >= i ? RE5.PLAYER[i].GetHealth() : 0;
+                HealthBars[i].Properties.Maximum = (ActivePlayers - 1) >= i ? Game.Players[i].GetMaxHealth() : 1;
+                HealthBars[i].EditValue = (ActivePlayers - 1) >= i ? Game.Players[i].GetHealth() : 0;
 
                 // Player Name //
-                PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (RE5.InGame() ? ((i == RE5.LocalPlayer()) ? RE5.LocalPlayerNick() : ((ActivePlayers - 1) >= i ? (RE5.PLAYER[i].IsAI() ? "CPU AI" : "Connected") : "Disconnected")) : "Disconnected");
+                PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (Game.InGame() ? ((i == Game.LocalPlayer()) ? Game.LocalPlayerNick() : ((ActivePlayers - 1) >= i ? (Game.Players[i].IsAI() ? "CPU AI" : "Connected") : "Disconnected")) : "Disconnected");
 
-                if (RE5.GetActiveGameMode() == "Versus")
+                if (Game.GetActiveGameMode() == "Versus")
                     continue;
 
                 // Infinite HP //
                 if (InfiniteHP[i].Checked && (ActivePlayers - 1) >= i)
-                    RE5.PLAYER[i].SetHealth(RE5.PLAYER[i].GetMaxHealth());
+                    Game.Players[i].SetHealth(Game.Players[i].GetMaxHealth());
             }
         }
 
