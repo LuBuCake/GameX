@@ -60,8 +60,15 @@ namespace GameX
 
         private void Application_ApplicationExit(object sender, EventArgs e)
         {
-            pProcess.Exited += null;
-            pProcess.EnableRaisingEvents = false;
+            if (pProcess != null)
+            {
+                if (Initialized)
+                    GameX_End();
+
+                pProcess.Exited += null;
+                pProcess.EnableRaisingEvents = false;
+            }
+
             Kernel?.Dispose();
             Keyboard.RemoveHook();
             Application.Idle += null;
@@ -141,8 +148,6 @@ namespace GameX
 
         private void ClearRuntime(object sender, EventArgs e)
         {
-            GameX_Clear();
-
             Kernel.Dispose();
             Kernel = null;
             pProcess.Dispose();
@@ -161,7 +166,7 @@ namespace GameX
             }
         }
 
-        /*Load and Events Field*/
+        /*Load and Events Handlers*/
 
         private void LoadControls()
         {
@@ -321,13 +326,31 @@ namespace GameX
         {
             Game = new Master(this);
 
-            Character_Detour();
-            RickFixes_Detour();
+            try
+            {
+                Character_Detour();
+                RickFixes_Detour();
+
+                Game.NoFileChecking(true);
+                Game.OnlineCharSwapFixes(true);
+            }
+            catch (Exception)
+            {
+                return;
+            }
         }
 
-        private void GameX_Clear()
+        private void GameX_End()
         {
-            
+            try
+            {
+                Game.NoFileChecking(false);
+                Game.OnlineCharSwapFixes(false);
+            }
+            catch (Exception)
+            {
+                return;
+            }
         }
 
         private void GameX_Update()
@@ -337,7 +360,7 @@ namespace GameX
                 Character_DetourUpdate();
                 CharacterPanel_Update();
             }
-            catch(Exception)
+            catch (Exception)
             {
                 return;
             }
@@ -354,7 +377,7 @@ namespace GameX
 
         private void Character_Detour()
         {
-            if (!Kernel.DetourActive("MOD_CHARCOS_Extra"))
+            if (!Kernel.DetourActive("MOD_CHAR_Extra"))
             {
                 byte[] DetourClean =
                 {
@@ -398,13 +421,13 @@ namespace GameX
                     0x89, 0x7E, 0x0C
                 };
 
-                Detour MOD_CHARCOS_Extra = Kernel.CreateDetour("MOD_CHARCOS_Extra", DetourClean, 0x00C91A88, CallInstruction, true, 0x00C91A8E);
+                Detour MOD_CHAR_Extra = Kernel.CreateDetour("MOD_CHAR_Extra", DetourClean, 0x00C91A88, CallInstruction, true, 0x00C91A8E);
 
-                if (MOD_CHARCOS_Extra == null)
+                if (MOD_CHAR_Extra == null)
                     return;
             }
 
-            if (!Kernel.DetourActive("MOD_CHAR_Story"))
+            if (!Kernel.DetourActive("MOD_CHAR_StoryCharFix"))
             {
                 byte[] DetourClean =
                 {
@@ -432,13 +455,13 @@ namespace GameX
                     0x8B, 0x17
                 };
 
-                Detour MOD_CHAR_Story = Kernel.CreateDetour("MOD_CHAR_Story", DetourClean, 0x00C9200D, CallInstruction, true, 0x00C92012);
+                Detour MOD_CHAR_StoryCharFix = Kernel.CreateDetour("MOD_CHAR_StoryCharFix", DetourClean, 0x00C9200D, CallInstruction, true, 0x00C92012);
 
-                if (MOD_CHAR_Story == null)
+                if (MOD_CHAR_StoryCharFix == null)
                     return;
             }
 
-            if (!Kernel.DetourActive("MOD_COS_Story"))
+            if (!Kernel.DetourActive("MOD_CHAR_StoryCosFix"))
             {
                 byte[] DetourClean =
                 {
@@ -466,13 +489,13 @@ namespace GameX
                     0x0F, 0xBF, 0X97, 0x64, 0x13, 0x00, 0x00
                 };
 
-                Detour MOD_COS_Story = Kernel.CreateDetour("MOD_COS_Story", DetourClean, 0x00C9201D, CallInstruction, true, 0x00C92027);
+                Detour MOD_CHAR_StoryCosFix = Kernel.CreateDetour("MOD_CHAR_StoryCosFix", DetourClean, 0x00C9201D, CallInstruction, true, 0x00C92027);
 
-                if (MOD_COS_Story == null)
+                if (MOD_CHAR_StoryCosFix == null)
                     return;
             }
 
-            if (!Kernel.DetourActive("MOD_COS_SaveBypass"))
+            if (!Kernel.DetourActive("MOD_CHAR_SaveBypass"))
             {
                 byte[] DetourClean =
                 {
@@ -502,35 +525,12 @@ namespace GameX
 
                 byte[] CallInstruction =
                 {
-                    0x8D, 0x86, 0x80, 0X00, 0X00, 0X00
+                    0x8D, 0xB6, 0x80, 0X00, 0X00, 0X00
                 };
 
-                 Detour MOD_COS_SaveBypass = Kernel.CreateDetour("MOD_COS_SaveBypass", DetourClean, 0x00E6E0BE, CallInstruction, true, 0x00E6E0C4);
+                Detour MOD_CHAR_SaveBypass = Kernel.CreateDetour("MOD_CHAR_SaveBypass", DetourClean, 0x00E6E0BE, CallInstruction, true, 0x00E6E0C4);
 
-                if (MOD_COS_SaveBypass == null)
-                    return;
-            }
-
-            if (!Kernel.DetourActive("MOD_COS_StoryFirstLoad"))
-            {
-                byte[] DetourClean =
-                {
-                    0x81, 0xFB, 0x00, 0x00, 0x00, 0x00,
-                    0x74, 0x0E,
-                    0x0F, 0x1F, 0x40, 0x00,
-                    0xB9, 0x14, 0x00, 0x00, 0x00,
-                    0xEB, 0x03,
-                    0x0F, 0x1F, 0x00
-                };
-
-                byte[] CallInstruction =
-                {
-                    0xB9, 0x14, 0x00, 0X00, 0X00
-                };
-
-                Detour MOD_COS_StoryFirstLoad = Kernel.CreateDetour("MOD_COS_StoryFirstLoad", DetourClean, 0x00C9186B, CallInstruction, true, 0x00C91870);
-
-                if (MOD_COS_StoryFirstLoad == null)
+                if (MOD_CHAR_SaveBypass == null)
                     return;
             }
 
@@ -539,10 +539,10 @@ namespace GameX
 
         private void Character_DetourUpdate()
         {
-            if (!Kernel.DetourActive("MOD_CHARCOS_Extra") || !Kernel.DetourActive("MOD_CHAR_Story") || !Kernel.DetourActive("MOD_COS_Story") || !Kernel.DetourActive("MOD_COS_SaveBypass") || !Kernel.DetourActive("MOD_COS_StoryFirstLoad"))
+            if (!Kernel.DetourActive("MOD_CHAR_Extra") || !Kernel.DetourActive("MOD_CHAR_StoryCharFix") || !Kernel.DetourActive("MOD_CHAR_StoryCosFix") || !Kernel.DetourActive("MOD_CHAR_SaveBypass"))
                 return;
 
-            Detour DetourBase = Kernel.GetDetour("MOD_CHARCOS_Extra");
+            Detour DetourBase = Kernel.GetDetour("MOD_CHAR_Extra");
             int DetourBase_Address = DetourBase.Address();
 
             Kernel.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x2D });
@@ -550,19 +550,19 @@ namespace GameX
             Kernel.WriteRawAddress(DetourBase_Address + 30, !P3FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x33 });
             Kernel.WriteRawAddress(DetourBase_Address + 42, !P4FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x36 });
 
-            DetourBase = Kernel.GetDetour("MOD_CHAR_Story");
+            DetourBase = Kernel.GetDetour("MOD_CHAR_StoryCharFix");
             DetourBase_Address = DetourBase.Address();
 
             Kernel.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x15 });
             Kernel.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x13 });
 
-            DetourBase = Kernel.GetDetour("MOD_COS_Story");
+            DetourBase = Kernel.GetDetour("MOD_CHAR_StoryCosFix");
             DetourBase_Address = DetourBase.Address();
 
             Kernel.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x15 });
             Kernel.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x13 });
 
-            DetourBase = Kernel.GetDetour("MOD_COS_SaveBypass");
+            DetourBase = Kernel.GetDetour("MOD_CHAR_SaveBypass");
             DetourBase_Address = DetourBase.Address();
 
             Kernel.WriteRawAddress(DetourBase_Address + 20, P1FreezeCharCosButton.Checked ? new byte[] { 0x01 } : new byte[] { 0x00 });
@@ -571,7 +571,7 @@ namespace GameX
 
         private void Character_DetourValueUpdate()
         {
-            if (!Kernel.DetourActive("MOD_CHARCOS_Extra") || !Kernel.DetourActive("MOD_CHAR_Story") || !Kernel.DetourActive("MOD_COS_Story") || !Kernel.DetourActive("MOD_COS_SaveBypass") || !Kernel.DetourActive("MOD_COS_StoryFirstLoad"))
+            if (!Kernel.DetourActive("MOD_CHAR_Extra") || !Kernel.DetourActive("MOD_CHAR_StoryCharFix") || !Kernel.DetourActive("MOD_CHAR_StoryCosFix") || !Kernel.DetourActive("MOD_CHAR_SaveBypass"))
                 return;
 
             int CHAR1A = Kernel.ReadPointer("re5dx9.exe", 0xDA383C, 0x6FE00);
@@ -602,7 +602,7 @@ namespace GameX
             byte[] Character4 = BitConverter.GetBytes(intCharacter4);
             byte[] Costume4 = BitConverter.GetBytes(intCostume4);
 
-            Detour DetourBase = Kernel.GetDetour("MOD_CHARCOS_Extra");
+            Detour DetourBase = Kernel.GetDetour("MOD_CHAR_Extra");
             int DetourBase_Address = DetourBase.Address();
 
             Kernel.WriteRawAddress(DetourBase_Address + 2, Char1A);
@@ -619,7 +619,7 @@ namespace GameX
             Kernel.WriteRawAddress(DetourBase_Address + 99, Character4);
             Kernel.WriteRawAddress(DetourBase_Address + 104, Costume4);
 
-            DetourBase = Kernel.GetDetour("MOD_CHAR_Story");
+            DetourBase = Kernel.GetDetour("MOD_CHAR_StoryCharFix");
             DetourBase_Address = DetourBase.Address();
 
             Kernel.WriteRawAddress(DetourBase_Address + 2, Char1A);
@@ -628,7 +628,7 @@ namespace GameX
             Kernel.WriteRawAddress(DetourBase_Address + 30, Character1);
             Kernel.WriteRawAddress(DetourBase_Address + 40, Character2);
 
-            DetourBase = Kernel.GetDetour("MOD_COS_Story");
+            DetourBase = Kernel.GetDetour("MOD_CHAR_StoryCosFix");
             DetourBase_Address = DetourBase.Address();
 
             Kernel.WriteRawAddress(DetourBase_Address + 2, Char1A);
@@ -637,7 +637,7 @@ namespace GameX
             Kernel.WriteRawAddress(DetourBase_Address + 30, Costume1);
             Kernel.WriteRawAddress(DetourBase_Address + 40, Costume2);
 
-            DetourBase = Kernel.GetDetour("MOD_COS_SaveBypass");
+            DetourBase = Kernel.GetDetour("MOD_CHAR_SaveBypass");
             DetourBase_Address = DetourBase.Address();
 
             Kernel.WriteRawAddress(DetourBase_Address + 2, Char1A);
@@ -646,11 +646,6 @@ namespace GameX
             Kernel.WriteRawAddress(DetourBase_Address + 37, Costume1);
             Kernel.WriteRawAddress(DetourBase_Address + 59, Character2);
             Kernel.WriteRawAddress(DetourBase_Address + 66, Costume2);
-
-            DetourBase = Kernel.GetDetour("MOD_COS_StoryFirstLoad");
-            DetourBase_Address = DetourBase.Address();
-
-            Kernel.WriteRawAddress(DetourBase_Address + 2, Char1A);
         }
 
         private void Character_ApplyCharacters(int Index)
