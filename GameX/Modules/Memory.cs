@@ -380,7 +380,7 @@ namespace GameX.Modules
             if (DetourActive(DetourName))
                 return GetDetour(DetourName);
 
-            Terminal.WriteLine($"Hooking {CallAddress.ToString("X")} - for {DetourName}");
+            Terminal.WriteLine($"Hooking 0x{CallAddress.ToString("X")} - for {DetourName}");
 
             int DetourAddress = VirtualAllocEx(pHandle, 0, DetourContent.Length, (int)MEMORY_INFORMATION.MEM_COMMIT | (int)MEMORY_INFORMATION.MEM_RESERVE, (int)MEMORY_PROTECTION.PAGE_EXECUTE_READ);
 
@@ -390,7 +390,7 @@ namespace GameX.Modules
                 return null;
             }
 
-            Terminal.WriteLine($"{DetourName} hooked! Memory allocated at {DetourAddress.ToString("X")}");
+            Terminal.WriteLine($"{DetourName} hooked! Memory allocated at 0x{DetourAddress.ToString("X")}");
 
             WriteRawAddress(CallAddress, DetourJump(CallAddress, DetourAddress, CallInstruction.Length));
             WriteRawAddress(DetourAddress, DetourContent);

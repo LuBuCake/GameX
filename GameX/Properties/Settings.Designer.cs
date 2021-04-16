@@ -54,5 +54,29 @@ namespace GameX.Properties {
                 this["NickName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("The Bezier")]
+        public string Skin {
+            get {
+                return ((string)(this["Skin"]));
+            }
+            set {
+                this["Skin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("VS Dark")]
+        public string Pallete {
+            get {
+                return ((string)(this["Pallete"]));
+            }
+            set {
+                this["Pallete"] = value;
+            }
+        }
     }
 }

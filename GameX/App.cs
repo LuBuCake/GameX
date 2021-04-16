@@ -1,8 +1,9 @@
-﻿using DevExpress.XtraEditors;
-using GameX.Game.Modules;
-using GameX.Game.Content;
-using GameX.Game.Types;
+﻿using DevExpress.LookAndFeel;
+using DevExpress.XtraEditors;
 using GameX.Content;
+using GameX.Game.Content;
+using GameX.Game.Modules;
+using GameX.Game.Types;
 using GameX.Helpers;
 using GameX.Modules;
 using GameX.Types;
@@ -12,12 +13,13 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using System.Threading;
 
 namespace GameX
 {
     public partial class App : XtraForm
     {
+        /*App Init*/
+
         private Messager Peaker { get; set; }
         private Stopwatch FrameElapser { get; set; }
         private Stopwatch CurTimeElapser { get; set; }
@@ -25,8 +27,6 @@ namespace GameX
         public double CurTime { get; private set; }
         public double UpdateMode { get; set; }
         public double FramesPerSecond { get; private set; }
-
-        /*App Init*/
 
         public App()
         {
@@ -75,7 +75,7 @@ namespace GameX
         }
 
         /*App Handlers*/
-        
+
         private Process TargetProcess { get; set; }
         public Memory Kernel { get; private set; }
         public bool Verified { get; private set; }
@@ -264,9 +264,15 @@ namespace GameX
                 CharacterCombos[Index].SelectedIndex = 0;
             }
 
-            UpdateModeComboBoxEdit.Properties.Items.AddRange(FPSModes.Modes());
+            UpdateModeComboBoxEdit.Properties.Items.AddRange(Rates.Available());
             UpdateModeComboBoxEdit.SelectedIndexChanged += UpdateMode_IndexChanged;
             UpdateModeComboBoxEdit.SelectedIndex = 1;
+
+            SkinComboBoxEdit.Properties.Items.AddRange(Skins.AllSkins());
+            SkinComboBoxEdit.SelectedIndexChanged += Skin_IndexChanged;
+            SkinComboBoxEdit.SelectedIndex = 0;
+
+            PaletteComboBoxEdit.SelectedIndexChanged += Palette_IndexChanged;
 
             SaveSettingsButton.Click += Configuration_Save;
             LoadSettingsButton.Click += Configuration_Load;
@@ -280,6 +286,8 @@ namespace GameX
         {
             Properties.Settings.Default.FPSMode = UpdateModeComboBoxEdit.SelectedIndex;
             Properties.Settings.Default.NickName = NickNameTextEdit.Text;
+            Properties.Settings.Default.Skin = UserLookAndFeel.Default.ActiveSkinName;
+            Properties.Settings.Default.Pallete = UserLookAndFeel.Default.ActiveSvgPaletteName;
             Properties.Settings.Default.Save();
 
             Terminal.WriteLine("Settings saved.");
@@ -289,7 +297,24 @@ namespace GameX
         {
             UpdateModeComboBoxEdit.SelectedIndex = Properties.Settings.Default.FPSMode;
             NickNameTextEdit.Text = Properties.Settings.Default.NickName;
-            
+
+            foreach (ListItem Skin in SkinComboBoxEdit.Properties.Items)
+            {
+                if (Skin.Text == Properties.Settings.Default.Skin)
+                    SkinComboBoxEdit.SelectedItem = Skin;
+            }
+
+            if (PaletteComboBoxEdit.Enabled)
+            {
+                foreach (ListItem Pallete in PaletteComboBoxEdit.Properties.Items)
+                {
+                    if (Pallete.Text == Properties.Settings.Default.Pallete)
+                        PaletteComboBoxEdit.SelectedItem = Pallete;
+                }
+            }
+
+            UserLookAndFeel.Default.SetSkinStyle(Properties.Settings.Default.Skin, Properties.Settings.Default.Pallete);
+
             Terminal.WriteLine("Settings Loaded.");
         }
 
@@ -314,7 +339,38 @@ namespace GameX
 
         private void UpdateMode_IndexChanged(object sender, EventArgs e)
         {
-            UpdateMode = 1.0 / (UpdateModeComboBoxEdit.SelectedItem as FPSMode).FPS;
+            UpdateMode = 1.0 / (UpdateModeComboBoxEdit.SelectedItem as ListItem).Value;
+        }
+
+        private void Skin_IndexChanged(object sender, EventArgs e)
+        {
+            UserLookAndFeel.Default.SetSkinStyle(SkinComboBoxEdit.Text);
+
+            PaletteComboBoxEdit.Properties.Items.Clear();
+
+            string Skin = SkinComboBoxEdit.Text;
+
+            if (Skin == "The Bezier" || Skin == "Basic" || Skin == "Office 2019 Colorful" || Skin == "Office 2019 Black" || Skin == "Office 2019 White")
+            {
+                ListItem[] AllPallets = Skins.AllPaletts(SkinComboBoxEdit.Text);
+
+                PaletteComboBoxEdit.Enabled = true;
+                PaletteComboBoxEdit.Properties.Items.AddRange(AllPallets);
+                PaletteComboBoxEdit.SelectedIndex = 0;
+            }
+            else
+            {
+                PaletteComboBoxEdit.Text = "";
+                PaletteComboBoxEdit.Enabled = false;
+            }
+        }
+
+        private void Palette_IndexChanged(object sender, EventArgs e)
+        {
+            if (PaletteComboBoxEdit.Text == "")
+                return;
+
+            UserLookAndFeel.Default.SetSkinStyle(SkinComboBoxEdit.Text, PaletteComboBoxEdit.Text);
         }
 
         private void CharComboBox_IndexChanged(object sender, EventArgs e)

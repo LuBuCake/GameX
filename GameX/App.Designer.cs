@@ -65,21 +65,26 @@ namespace GameX
             this.P1InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P1HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.TabPageSettings = new DevExpress.XtraTab.XtraTabPage();
+            this.NetworkGP = new DevExpress.XtraEditors.GroupControl();
+            this.NickLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.NickNameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ConsoleGP = new DevExpress.XtraEditors.GroupControl();
             this.ConsoleOutputMemoEdit = new DevExpress.XtraEditors.MemoEdit();
             this.ConsoleInputTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.TabPageSettingsGPApp = new DevExpress.XtraEditors.GroupControl();
             this.AppSettingsGP = new DevExpress.XtraEditors.GroupControl();
             this.MiscSettingsGP = new DevExpress.XtraEditors.GroupControl();
-            this.UpdateRateLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.NickNameTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.PaletteLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.PaletteComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.UpdateModeComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.UpdateRateLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.SkinLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.SkinComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.LoadSaveGP = new DevExpress.XtraEditors.GroupControl();
             this.LoadSettingsButton = new DevExpress.XtraEditors.SimpleButton();
             this.SaveSettingsButton = new DevExpress.XtraEditors.SimpleButton();
             this.AboutGP = new DevExpress.XtraEditors.GroupControl();
             this.AboutMemoEdit = new DevExpress.XtraEditors.MemoEdit();
-            this.NetworkGP = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -108,6 +113,9 @@ namespace GameX
             this.TabPageCharGPPlayer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.P1HealthBar.Properties)).BeginInit();
             this.TabPageSettings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NetworkGP)).BeginInit();
+            this.NetworkGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NickNameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleGP)).BeginInit();
             this.ConsoleGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).BeginInit();
@@ -118,14 +126,14 @@ namespace GameX
             this.AppSettingsGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MiscSettingsGP)).BeginInit();
             this.MiscSettingsGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NickNameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaletteComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpdateModeComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SkinComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoadSaveGP)).BeginInit();
             this.LoadSaveGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AboutGP)).BeginInit();
             this.AboutGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AboutMemoEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NetworkGP)).BeginInit();
             this.SuspendLayout();
             // 
             // P1CosComboBox
@@ -579,6 +587,36 @@ namespace GameX
             this.TabPageSettings.Size = new System.Drawing.Size(638, 438);
             this.TabPageSettings.Text = "Settings";
             // 
+            // NetworkGP
+            // 
+            this.NetworkGP.Controls.Add(this.NickLabelControl);
+            this.NetworkGP.Controls.Add(this.NickNameTextEdit);
+            this.NetworkGP.Location = new System.Drawing.Point(322, 10);
+            this.NetworkGP.Name = "NetworkGP";
+            this.NetworkGP.Size = new System.Drawing.Size(308, 241);
+            this.NetworkGP.TabIndex = 2;
+            this.NetworkGP.Text = "Network";
+            // 
+            // NickLabelControl
+            // 
+            this.NickLabelControl.Location = new System.Drawing.Point(71, 53);
+            this.NickLabelControl.Name = "NickLabelControl";
+            this.NickLabelControl.Size = new System.Drawing.Size(25, 13);
+            this.NickLabelControl.TabIndex = 10;
+            this.NickLabelControl.Text = "Nick:";
+            // 
+            // NickNameTextEdit
+            // 
+            this.NickNameTextEdit.CausesValidation = false;
+            this.NickNameTextEdit.Location = new System.Drawing.Point(102, 50);
+            this.NickNameTextEdit.Name = "NickNameTextEdit";
+            this.NickNameTextEdit.Properties.ValidateOnEnterKey = true;
+            this.NickNameTextEdit.Size = new System.Drawing.Size(121, 20);
+            this.NickNameTextEdit.TabIndex = 2;
+            this.NickNameTextEdit.ToolTip = "Sets the networked NickName for connected peers.";
+            this.NickNameTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.NickNameTextEdit.ToolTipTitle = "NickName";
+            // 
             // ConsoleGP
             // 
             this.ConsoleGP.Controls.Add(this.ConsoleOutputMemoEdit);
@@ -632,37 +670,44 @@ namespace GameX
             // 
             // MiscSettingsGP
             // 
-            this.MiscSettingsGP.Controls.Add(this.UpdateRateLabelControl);
-            this.MiscSettingsGP.Controls.Add(this.NickNameTextEdit);
+            this.MiscSettingsGP.Controls.Add(this.PaletteLabelControl);
+            this.MiscSettingsGP.Controls.Add(this.PaletteComboBoxEdit);
             this.MiscSettingsGP.Controls.Add(this.UpdateModeComboBoxEdit);
+            this.MiscSettingsGP.Controls.Add(this.UpdateRateLabelControl);
+            this.MiscSettingsGP.Controls.Add(this.SkinLabelControl);
+            this.MiscSettingsGP.Controls.Add(this.SkinComboBoxEdit);
             this.MiscSettingsGP.Location = new System.Drawing.Point(5, 30);
             this.MiscSettingsGP.Name = "MiscSettingsGP";
+            this.MiscSettingsGP.ShowCaption = false;
             this.MiscSettingsGP.Size = new System.Drawing.Size(170, 85);
             this.MiscSettingsGP.TabIndex = 1;
             // 
-            // UpdateRateLabelControl
+            // PaletteLabelControl
             // 
-            this.UpdateRateLabelControl.Location = new System.Drawing.Point(10, 37);
-            this.UpdateRateLabelControl.Name = "UpdateRateLabelControl";
-            this.UpdateRateLabelControl.Size = new System.Drawing.Size(67, 13);
-            this.UpdateRateLabelControl.TabIndex = 7;
-            this.UpdateRateLabelControl.Text = "Update Rate:";
+            this.PaletteLabelControl.Location = new System.Drawing.Point(10, 62);
+            this.PaletteLabelControl.Name = "PaletteLabelControl";
+            this.PaletteLabelControl.Size = new System.Drawing.Size(38, 13);
+            this.PaletteLabelControl.TabIndex = 11;
+            this.PaletteLabelControl.Text = "Palette:";
             // 
-            // NickNameTextEdit
+            // PaletteComboBoxEdit
             // 
-            this.NickNameTextEdit.CausesValidation = false;
-            this.NickNameTextEdit.Location = new System.Drawing.Point(5, 60);
-            this.NickNameTextEdit.Name = "NickNameTextEdit";
-            this.NickNameTextEdit.Properties.ValidateOnEnterKey = true;
-            this.NickNameTextEdit.Size = new System.Drawing.Size(160, 20);
-            this.NickNameTextEdit.TabIndex = 2;
-            this.NickNameTextEdit.ToolTip = "Sets the networked NickName for connected peers.";
-            this.NickNameTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.NickNameTextEdit.ToolTipTitle = "NickName";
+            this.PaletteComboBoxEdit.Location = new System.Drawing.Point(54, 59);
+            this.PaletteComboBoxEdit.Name = "PaletteComboBoxEdit";
+            this.PaletteComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.PaletteComboBoxEdit.Properties.AllowFocused = false;
+            this.PaletteComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.PaletteComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.PaletteComboBoxEdit.Size = new System.Drawing.Size(108, 20);
+            this.PaletteComboBoxEdit.TabIndex = 10;
+            this.PaletteComboBoxEdit.ToolTip = "Changes the palette scheme for the skin applied.";
+            this.PaletteComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.PaletteComboBoxEdit.ToolTipTitle = "Palette";
             // 
             // UpdateModeComboBoxEdit
             // 
-            this.UpdateModeComboBoxEdit.Location = new System.Drawing.Point(86, 34);
+            this.UpdateModeComboBoxEdit.Location = new System.Drawing.Point(83, 7);
             this.UpdateModeComboBoxEdit.Name = "UpdateModeComboBoxEdit";
             this.UpdateModeComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
             this.UpdateModeComboBoxEdit.Properties.AllowFocused = false;
@@ -675,6 +720,37 @@ namespace GameX
     "r or equal to your game\'s FPS.";
             this.UpdateModeComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.UpdateModeComboBoxEdit.ToolTipTitle = "Update Rate";
+            // 
+            // UpdateRateLabelControl
+            // 
+            this.UpdateRateLabelControl.Location = new System.Drawing.Point(10, 10);
+            this.UpdateRateLabelControl.Name = "UpdateRateLabelControl";
+            this.UpdateRateLabelControl.Size = new System.Drawing.Size(67, 13);
+            this.UpdateRateLabelControl.TabIndex = 7;
+            this.UpdateRateLabelControl.Text = "Update Rate:";
+            // 
+            // SkinLabelControl
+            // 
+            this.SkinLabelControl.Location = new System.Drawing.Point(10, 36);
+            this.SkinLabelControl.Name = "SkinLabelControl";
+            this.SkinLabelControl.Size = new System.Drawing.Size(25, 13);
+            this.SkinLabelControl.TabIndex = 9;
+            this.SkinLabelControl.Text = "Skin:";
+            // 
+            // SkinComboBoxEdit
+            // 
+            this.SkinComboBoxEdit.Location = new System.Drawing.Point(54, 33);
+            this.SkinComboBoxEdit.Name = "SkinComboBoxEdit";
+            this.SkinComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.SkinComboBoxEdit.Properties.AllowFocused = false;
+            this.SkinComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.SkinComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.SkinComboBoxEdit.Size = new System.Drawing.Size(108, 20);
+            this.SkinComboBoxEdit.TabIndex = 8;
+            this.SkinComboBoxEdit.ToolTip = "Changes the skin scheme for the application.";
+            this.SkinComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.SkinComboBoxEdit.ToolTipTitle = "Skin";
             // 
             // LoadSaveGP
             // 
@@ -707,7 +783,7 @@ namespace GameX
             this.SaveSettingsButton.TabIndex = 0;
             this.SaveSettingsButton.TabStop = false;
             this.SaveSettingsButton.Text = "Save";
-            this.SaveSettingsButton.ToolTip = "Saves current configuration.";
+            this.SaveSettingsButton.ToolTip = "Saves the current configuration.";
             this.SaveSettingsButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.SaveSettingsButton.ToolTipTitle = "Save";
             // 
@@ -722,9 +798,9 @@ namespace GameX
             // 
             // AboutMemoEdit
             // 
-            this.AboutMemoEdit.EditValue = "GameX for Resident Evil 5 - Build 1.0.0.0\r\n\r\nAutor / Programmer: Sr. Wesky (LuBuC" +
-    "ake)\r\nTesting Team: sorryjess and Huskya\r\nDesign: DevExpress (https://www.devexp" +
-    "ress.com/)";
+            this.AboutMemoEdit.EditValue = "GameX for Resident Evil 5 - Build 1.0.0.0\r\n\r\nProgramming: Sr. Wesky (LuBuCake)\r\nT" +
+    "esting: sorryjess and Huskya\r\nDesign Lib: DevExpress (https://www.devexpress.com" +
+    "/)";
             this.AboutMemoEdit.Location = new System.Drawing.Point(5, 5);
             this.AboutMemoEdit.Name = "AboutMemoEdit";
             this.AboutMemoEdit.Properties.AllowFocused = false;
@@ -739,19 +815,11 @@ namespace GameX
             this.AboutMemoEdit.TabIndex = 3;
             this.AboutMemoEdit.TabStop = false;
             // 
-            // NetworkGP
-            // 
-            this.NetworkGP.Location = new System.Drawing.Point(322, 10);
-            this.NetworkGP.Name = "NetworkGP";
-            this.NetworkGP.Size = new System.Drawing.Size(308, 241);
-            this.NetworkGP.TabIndex = 2;
-            this.NetworkGP.Text = "Network";
-            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 491);
+            this.ClientSize = new System.Drawing.Size(671, 493);
             this.Controls.Add(this.MasterTabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("App.IconOptions.Image")));
@@ -788,6 +856,10 @@ namespace GameX
             this.TabPageCharGPPlayer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.P1HealthBar.Properties)).EndInit();
             this.TabPageSettings.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.NetworkGP)).EndInit();
+            this.NetworkGP.ResumeLayout(false);
+            this.NetworkGP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NickNameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleGP)).EndInit();
             this.ConsoleGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).EndInit();
@@ -799,14 +871,14 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.MiscSettingsGP)).EndInit();
             this.MiscSettingsGP.ResumeLayout(false);
             this.MiscSettingsGP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NickNameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaletteComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpdateModeComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SkinComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoadSaveGP)).EndInit();
             this.LoadSaveGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AboutGP)).EndInit();
             this.AboutGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AboutMemoEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NetworkGP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -862,6 +934,11 @@ namespace GameX
         private DevExpress.XtraEditors.CheckButton P2UntargetableButton;
         private DevExpress.XtraEditors.CheckButton P1UntargetableButton;
         private DevExpress.XtraEditors.GroupControl NetworkGP;
+        private DevExpress.XtraEditors.LabelControl NickLabelControl;
+        private DevExpress.XtraEditors.LabelControl SkinLabelControl;
+        private DevExpress.XtraEditors.ComboBoxEdit SkinComboBoxEdit;
+        private DevExpress.XtraEditors.LabelControl PaletteLabelControl;
+        private DevExpress.XtraEditors.ComboBoxEdit PaletteComboBoxEdit;
     }
 }
 

@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using GameX.Helpers;
 using System;
 using System.Windows.Forms;
 
@@ -21,8 +22,7 @@ namespace GameX.Modules
         {
             string[] Commands =
             {
-                "OBS: Commands must be typed without any spaces." + Environment.NewLine,
-                "App Commands: ",
+                Environment.NewLine + "App Commands: ",
                 "Reinject - Clears both App and Game edits and performs a reinject in the Game's process.",
                 "Clear - Clears the console output.",
                 "Help - Shows all available commands.",
@@ -35,7 +35,7 @@ namespace GameX.Modules
                 "SetHealth p1/p2/p3/p4 Value - Sets the health for the respective player, this needs to be set between 0 and 1000."
             };
 
-            foreach(string Command in Commands)
+            foreach (string Command in Commands)
                 WriteLine(Command);
         }
 
@@ -88,7 +88,7 @@ namespace GameX.Modules
                             return true;
                         }
 
-                        Main.Game.Players[Player - 1].SetHealth((short)HP);
+                        Main.Game.Players[Player - 1].SetHealth((short)Utility.Clamp(HP, 0, 1000));
                         WriteLine($"Player {Player} health set to {HP}.");
                     }
                     else
@@ -106,7 +106,7 @@ namespace GameX.Modules
         private static void ProcessCommand(string Command)
         {
             Command = Command.ToLower();
-            Command = Command.Trim();
+            Command = Utility.RemoveWhiteSpace(Command);
 
             WriteLine(Command);
 

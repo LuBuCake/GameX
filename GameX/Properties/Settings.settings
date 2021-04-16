@@ -8,5 +8,11 @@
     <Setting Name="NickName" Description="The networked NickName for the user" Type="System.String" Scope="User">
       <Value Profile="(Default)">NickName</Value>
     </Setting>
+    <Setting Name="Skin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">The Bezier</Value>
+    </Setting>
+    <Setting Name="Pallete" Type="System.String" Scope="User">
+      <Value Profile="(Default)">VS Dark</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
