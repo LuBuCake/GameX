@@ -62,6 +62,20 @@ namespace GameX
             this.P1HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.TabPageMelee = new DevExpress.XtraTab.XtraTabPage();
             this.TabPageInventory = new DevExpress.XtraTab.XtraTabPage();
+            this.TabPageSettings = new DevExpress.XtraTab.XtraTabPage();
+            this.ConsoleGP = new DevExpress.XtraEditors.GroupControl();
+            this.ConsoleOutputMemoEdit = new DevExpress.XtraEditors.MemoEdit();
+            this.ConsoleInputTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.TabPageSettingsGPApp = new DevExpress.XtraEditors.GroupControl();
+            this.AppSettingsGP = new DevExpress.XtraEditors.GroupControl();
+            this.MiscSettingsGP = new DevExpress.XtraEditors.GroupControl();
+            this.UpdateRateLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.NickNameTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.UpdateModeComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.LoadSaveGP = new DevExpress.XtraEditors.GroupControl();
+            this.LoadSettingsButton = new DevExpress.XtraEditors.SimpleButton();
+            this.SaveSettingsButton = new DevExpress.XtraEditors.SimpleButton();
+            this.EngineGP = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -89,6 +103,22 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.TabPageCharGPPlayer1)).BeginInit();
             this.TabPageCharGPPlayer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.P1HealthBar.Properties)).BeginInit();
+            this.TabPageSettings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsoleGP)).BeginInit();
+            this.ConsoleGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TabPageSettingsGPApp)).BeginInit();
+            this.TabPageSettingsGPApp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AppSettingsGP)).BeginInit();
+            this.AppSettingsGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscSettingsGP)).BeginInit();
+            this.MiscSettingsGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NickNameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpdateModeComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadSaveGP)).BeginInit();
+            this.LoadSaveGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EngineGP)).BeginInit();
             this.SuspendLayout();
             // 
             // P1CosComboBox
@@ -148,7 +178,8 @@ namespace GameX
             this.MasterTabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.TabPageChar,
             this.TabPageMelee,
-            this.TabPageInventory});
+            this.TabPageInventory,
+            this.TabPageSettings});
             // 
             // TabPageChar
             // 
@@ -470,6 +501,152 @@ namespace GameX
             this.TabPageInventory.Size = new System.Drawing.Size(638, 438);
             this.TabPageInventory.Text = "Inventory";
             // 
+            // TabPageSettings
+            // 
+            this.TabPageSettings.Controls.Add(this.ConsoleGP);
+            this.TabPageSettings.Controls.Add(this.TabPageSettingsGPApp);
+            this.TabPageSettings.Name = "TabPageSettings";
+            this.TabPageSettings.Size = new System.Drawing.Size(638, 438);
+            this.TabPageSettings.Text = "Settings";
+            // 
+            // ConsoleGP
+            // 
+            this.ConsoleGP.Controls.Add(this.ConsoleOutputMemoEdit);
+            this.ConsoleGP.Controls.Add(this.ConsoleInputTextEdit);
+            this.ConsoleGP.Location = new System.Drawing.Point(8, 261);
+            this.ConsoleGP.Name = "ConsoleGP";
+            this.ConsoleGP.Size = new System.Drawing.Size(621, 165);
+            this.ConsoleGP.TabIndex = 1;
+            this.ConsoleGP.Text = "Console";
+            // 
+            // ConsoleOutputMemoEdit
+            // 
+            this.ConsoleOutputMemoEdit.Location = new System.Drawing.Point(5, 30);
+            this.ConsoleOutputMemoEdit.Name = "ConsoleOutputMemoEdit";
+            this.ConsoleOutputMemoEdit.Properties.AllowFocused = false;
+            this.ConsoleOutputMemoEdit.Properties.ReadOnly = true;
+            this.ConsoleOutputMemoEdit.Properties.UseReadOnlyAppearance = false;
+            this.ConsoleOutputMemoEdit.Properties.WordWrap = false;
+            this.ConsoleOutputMemoEdit.Size = new System.Drawing.Size(611, 104);
+            this.ConsoleOutputMemoEdit.TabIndex = 2;
+            this.ConsoleOutputMemoEdit.TabStop = false;
+            // 
+            // ConsoleInputTextEdit
+            // 
+            this.ConsoleInputTextEdit.CausesValidation = false;
+            this.ConsoleInputTextEdit.Location = new System.Drawing.Point(5, 140);
+            this.ConsoleInputTextEdit.Name = "ConsoleInputTextEdit";
+            this.ConsoleInputTextEdit.Properties.ValidateOnEnterKey = true;
+            this.ConsoleInputTextEdit.Size = new System.Drawing.Size(611, 20);
+            this.ConsoleInputTextEdit.TabIndex = 1;
+            // 
+            // TabPageSettingsGPApp
+            // 
+            this.TabPageSettingsGPApp.Controls.Add(this.AppSettingsGP);
+            this.TabPageSettingsGPApp.Controls.Add(this.EngineGP);
+            this.TabPageSettingsGPApp.Location = new System.Drawing.Point(8, 10);
+            this.TabPageSettingsGPApp.Margin = new System.Windows.Forms.Padding(10);
+            this.TabPageSettingsGPApp.Name = "TabPageSettingsGPApp";
+            this.TabPageSettingsGPApp.Size = new System.Drawing.Size(308, 241);
+            this.TabPageSettingsGPApp.TabIndex = 0;
+            this.TabPageSettingsGPApp.Text = "GameX";
+            // 
+            // AppSettingsGP
+            // 
+            this.AppSettingsGP.Controls.Add(this.MiscSettingsGP);
+            this.AppSettingsGP.Controls.Add(this.LoadSaveGP);
+            this.AppSettingsGP.Location = new System.Drawing.Point(5, 116);
+            this.AppSettingsGP.Name = "AppSettingsGP";
+            this.AppSettingsGP.Size = new System.Drawing.Size(298, 120);
+            this.AppSettingsGP.TabIndex = 1;
+            this.AppSettingsGP.Text = "App Settings";
+            // 
+            // MiscSettingsGP
+            // 
+            this.MiscSettingsGP.Controls.Add(this.UpdateRateLabelControl);
+            this.MiscSettingsGP.Controls.Add(this.NickNameTextEdit);
+            this.MiscSettingsGP.Controls.Add(this.UpdateModeComboBoxEdit);
+            this.MiscSettingsGP.Location = new System.Drawing.Point(5, 30);
+            this.MiscSettingsGP.Name = "MiscSettingsGP";
+            this.MiscSettingsGP.Size = new System.Drawing.Size(170, 85);
+            this.MiscSettingsGP.TabIndex = 1;
+            // 
+            // UpdateRateLabelControl
+            // 
+            this.UpdateRateLabelControl.Location = new System.Drawing.Point(10, 37);
+            this.UpdateRateLabelControl.Name = "UpdateRateLabelControl";
+            this.UpdateRateLabelControl.Size = new System.Drawing.Size(67, 13);
+            this.UpdateRateLabelControl.TabIndex = 7;
+            this.UpdateRateLabelControl.Text = "Update Rate:";
+            // 
+            // NickNameTextEdit
+            // 
+            this.NickNameTextEdit.CausesValidation = false;
+            this.NickNameTextEdit.Location = new System.Drawing.Point(5, 60);
+            this.NickNameTextEdit.Name = "NickNameTextEdit";
+            this.NickNameTextEdit.Properties.ValidateOnEnterKey = true;
+            this.NickNameTextEdit.Size = new System.Drawing.Size(160, 20);
+            this.NickNameTextEdit.TabIndex = 2;
+            // 
+            // UpdateModeComboBoxEdit
+            // 
+            this.UpdateModeComboBoxEdit.Location = new System.Drawing.Point(86, 34);
+            this.UpdateModeComboBoxEdit.Name = "UpdateModeComboBoxEdit";
+            this.UpdateModeComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.UpdateModeComboBoxEdit.Properties.AllowFocused = false;
+            this.UpdateModeComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.UpdateModeComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.UpdateModeComboBoxEdit.Size = new System.Drawing.Size(79, 20);
+            this.UpdateModeComboBoxEdit.TabIndex = 6;
+            this.UpdateModeComboBoxEdit.ToolTip = "Sets the update rate for the main loop system. Aways try to leave the Update Mode" +
+    " greater or equal to your game\'s FPS.";
+            this.UpdateModeComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.UpdateModeComboBoxEdit.ToolTipTitle = "Update Mode";
+            // 
+            // LoadSaveGP
+            // 
+            this.LoadSaveGP.Controls.Add(this.LoadSettingsButton);
+            this.LoadSaveGP.Controls.Add(this.SaveSettingsButton);
+            this.LoadSaveGP.Location = new System.Drawing.Point(181, 30);
+            this.LoadSaveGP.Name = "LoadSaveGP";
+            this.LoadSaveGP.Size = new System.Drawing.Size(112, 85);
+            this.LoadSaveGP.TabIndex = 0;
+            // 
+            // LoadSettingsButton
+            // 
+            this.LoadSettingsButton.AllowFocus = false;
+            this.LoadSettingsButton.Location = new System.Drawing.Point(5, 57);
+            this.LoadSettingsButton.Name = "LoadSettingsButton";
+            this.LoadSettingsButton.Size = new System.Drawing.Size(102, 23);
+            this.LoadSettingsButton.TabIndex = 1;
+            this.LoadSettingsButton.TabStop = false;
+            this.LoadSettingsButton.Text = "Load";
+            this.LoadSettingsButton.ToolTip = "Save current configuration.";
+            this.LoadSettingsButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.LoadSettingsButton.ToolTipTitle = "Save";
+            // 
+            // SaveSettingsButton
+            // 
+            this.SaveSettingsButton.AllowFocus = false;
+            this.SaveSettingsButton.Location = new System.Drawing.Point(5, 30);
+            this.SaveSettingsButton.Name = "SaveSettingsButton";
+            this.SaveSettingsButton.Size = new System.Drawing.Size(102, 23);
+            this.SaveSettingsButton.TabIndex = 0;
+            this.SaveSettingsButton.TabStop = false;
+            this.SaveSettingsButton.Text = "Save";
+            this.SaveSettingsButton.ToolTip = "Save current configuration.";
+            this.SaveSettingsButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.SaveSettingsButton.ToolTipTitle = "Save";
+            // 
+            // EngineGP
+            // 
+            this.EngineGP.Location = new System.Drawing.Point(5, 30);
+            this.EngineGP.Name = "EngineGP";
+            this.EngineGP.Size = new System.Drawing.Size(298, 80);
+            this.EngineGP.TabIndex = 0;
+            this.EngineGP.Text = "Engine Status";
+            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -510,6 +687,23 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.TabPageCharGPPlayer1)).EndInit();
             this.TabPageCharGPPlayer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.P1HealthBar.Properties)).EndInit();
+            this.TabPageSettings.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ConsoleGP)).EndInit();
+            this.ConsoleGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TabPageSettingsGPApp)).EndInit();
+            this.TabPageSettingsGPApp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.AppSettingsGP)).EndInit();
+            this.AppSettingsGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MiscSettingsGP)).EndInit();
+            this.MiscSettingsGP.ResumeLayout(false);
+            this.MiscSettingsGP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NickNameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpdateModeComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadSaveGP)).EndInit();
+            this.LoadSaveGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.EngineGP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -547,6 +741,20 @@ namespace GameX
         private DevExpress.XtraEditors.CheckButton P4InfiniteHPButton;
         private DevExpress.XtraEditors.CheckButton P3InfiniteHPButton;
         private DevExpress.XtraEditors.CheckButton P2InfiniteHPButton;
+        private DevExpress.XtraTab.XtraTabPage TabPageSettings;
+        private DevExpress.XtraEditors.GroupControl TabPageSettingsGPApp;
+        private DevExpress.XtraEditors.GroupControl ConsoleGP;
+        private DevExpress.XtraEditors.MemoEdit ConsoleOutputMemoEdit;
+        private DevExpress.XtraEditors.TextEdit ConsoleInputTextEdit;
+        private DevExpress.XtraEditors.GroupControl EngineGP;
+        private DevExpress.XtraEditors.ComboBoxEdit UpdateModeComboBoxEdit;
+        private DevExpress.XtraEditors.GroupControl AppSettingsGP;
+        private DevExpress.XtraEditors.SimpleButton SaveSettingsButton;
+        private DevExpress.XtraEditors.SimpleButton LoadSettingsButton;
+        private DevExpress.XtraEditors.GroupControl LoadSaveGP;
+        private DevExpress.XtraEditors.GroupControl MiscSettingsGP;
+        private DevExpress.XtraEditors.LabelControl UpdateRateLabelControl;
+        private DevExpress.XtraEditors.TextEdit NickNameTextEdit;
     }
 }
 

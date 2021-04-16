@@ -1,7 +1,8 @@
 ﻿using DevExpress.XtraEditors;
-using GameX.Game.Base;
+using GameX.Game.Modules;
 using GameX.Game.Content;
 using GameX.Game.Types;
+using GameX.Content;
 using GameX.Helpers;
 using GameX.Modules;
 using GameX.Types;
@@ -16,20 +17,13 @@ namespace GameX
 {
     public partial class App : XtraForm
     {
-        /*App Properties*/
-
-        private Messager Peaker { get; }
-        public Memory Kernel { get; private set; }
-        private Process pProcess { get; set; }
-        private bool Initialized { get; set; }
-
-        private string TargetProcess = "re5dx9";
-        private string TargetVersion = "1.0.0.129";
-        private string[] TargetModulesCheck = { "steam_api.dll", "maluc.dll" };
-
         private DateTime OpenTime { get; set; }
+        private Stopwatch FrameElapser { get; set; }
+        private Stopwatch CurTimeElapser { get; set; }
         public double FrameTime { get; private set; }
         public double CurTime { get; private set; }
+        public double UpdateMode { get; set; }
+        public double FramesPerSecond { get; private set; }
 
         /*App Init*/
 
@@ -40,9 +34,14 @@ namespace GameX
 
             Peaker = new Messager();
             OpenTime = DateTime.Now;
+            FrameElapser = new Stopwatch();
+            CurTimeElapser = new Stopwatch();
 
             Application.Idle += Application_Idle;
             Application.ApplicationExit += Application_ApplicationExit;
+
+            Terminal.LoadApp(this, ConsoleOutputMemoEdit, ConsoleInputTextEdit);
+            ConsoleInputTextEdit.Validating += Terminal.ValidateInput;
         }
 
         private void App_Load(object sender, EventArgs e)
@@ -74,54 +73,16 @@ namespace GameX
             Application.Idle += null;
         }
 
-        /*App Methods*/
+        /*App Handlers*/
 
-        private void HandleTime()
-        {
-            TimeSpan CurTimeSpan = DateTime.Now - OpenTime;
-            FrameTime = CurTimeSpan.TotalSeconds - CurTime;
-            CurTime = CurTimeSpan.TotalSeconds;
-        }
+        private Messager Peaker { get; }
+        private Process pProcess { get; set; }
+        public Memory Kernel { get; private set; }
+        private bool Initialized { get; set; }
 
-        private bool HandleProcess()
-        {
-            if (pProcess == null)
-            {
-                pProcess = Processes.GetProcessByName(TargetProcess);
-                Initialized = false;
-                Text = "GameX - Resident Evil 5 / Biohazard 5 - Waiting";
-            }
-            else
-            {
-                if (Initialized)
-                    return Initialized;
-
-                if (!pProcess.Responding)
-                {
-                    Text = "GameX - Resident Evil 5 / Biohazard 5 - Validating process response";
-                    return Initialized;
-                }
-
-                if (ValidateTarget(pProcess))
-                {
-                    pProcess.EnableRaisingEvents = true;
-                    pProcess.Exited += ClearRuntime;
-                    Kernel = new Memory(pProcess);
-                    Initialized = true;
-                    Text = "GameX - Resident Evil 5 / Biohazard 5 - " + (Kernel.DebugMode ? "Running in Admin Mode" : "Running in User Mode");
-                    CheckDebugModeControls(Kernel.DebugMode);
-                    GameX_Start();
-                }
-                else
-                {
-                    pProcess.Dispose();
-                    pProcess = null;
-                    Text = "GameX - Resident Evil 5 / Biohazard 5 - Incompatible Version";
-                }
-            }
-
-            return Initialized;
-        }
+        private string TargetProcess = "re5dx9";
+        private string TargetVersion = "1.0.0.129";
+        private string[] TargetModulesCheck = { "steam_api.dll", "maluc.dll" };
 
         private bool ValidateTarget(Process process)
         {
@@ -146,30 +107,91 @@ namespace GameX
             return true;
         }
 
+        private bool HandleProcess()
+        {
+            if (pProcess == null)
+            {
+                pProcess = Processes.GetProcessByName(TargetProcess);
+                Initialized = false;
+                Text = "GameX - Resident Evil 5 / Biohazard 5 - Waiting";
+            }
+            else
+            {
+                if (Initialized)
+                    return Initialized;
+
+                if (!pProcess.Responding)
+                {
+                    Text = "GameX - Resident Evil 5 / Biohazard 5 - Validating process response";
+                    return Initialized;
+                }
+
+                if (ValidateTarget(pProcess))
+                {
+                    Terminal.WriteLine("Process validated, initializing modules.");
+
+                    pProcess.EnableRaisingEvents = true;
+                    pProcess.Exited += ClearRuntime;
+                    Kernel = new Memory(pProcess);
+                    Initialized = true;
+                    Text = "GameX - Resident Evil 5 / Biohazard 5 - " + (Kernel.DebugMode ? "Running in Admin Mode" : "Running in User Mode");
+                    CheckDebugModeControls(Kernel.DebugMode);
+                    GameX_Start();
+                }
+                else
+                {
+                    pProcess.Dispose();
+                    pProcess = null;
+                    Text = "GameX - Resident Evil 5 / Biohazard 5 - Incompatible Version";
+                }
+            }
+
+            return Initialized;
+        }
+
         private void ClearRuntime(object sender, EventArgs e)
         {
             Kernel.Dispose();
             Kernel = null;
             pProcess.Dispose();
             pProcess = null;
-
             Initialized = false;
+
+            Terminal.WriteLine("Process closed, runtime cleared successfully.");
         }
 
         private void Think()
         {
-            HandleTime();
+            if (!CurTimeElapser.IsRunning)
+                CurTimeElapser.Start();
 
-            if (HandleProcess())
+            if (!FrameElapser.IsRunning)
+                FrameElapser.Start();
+
+            TimeSpan Target = TimeSpan.FromSeconds(UpdateMode);
+            TimeSpan Elapsed = FrameElapser.Elapsed;
+
+            if (Elapsed >= Target)
             {
-                GameX_Update();
+                CurTime = CurTimeElapser.Elapsed.TotalSeconds;
+
+                FrameElapser.Stop();
+                FrameElapser.Reset();
+
+                FramesPerSecond = 1.0 / Elapsed.TotalSeconds;
+                FrameTime = 1.0 / FramesPerSecond;
+
+                if (HandleProcess())
+                    GameX_Update();
             }
         }
 
-        /*Load and Events Handlers*/
+        /*Loading/Saving & Event Handling*/
 
         private void LoadControls()
         {
+            #region Controls
+
             ComboBoxEdit[] CharacterCombos =
             {
                 P1CharComboBox,
@@ -202,6 +224,8 @@ namespace GameX
                 P4InfiniteHPButton
             };
 
+            #endregion
+
             for (int Index = 0; Index < CharacterCombos.Length; Index++)
             {
                 List<Character> AvailableChars = Characters.GetChars();
@@ -221,6 +245,33 @@ namespace GameX
 
                 CharacterCombos[Index].SelectedIndex = 0;
             }
+
+            UpdateModeComboBoxEdit.Properties.Items.AddRange(FPSModes.Modes());
+            UpdateModeComboBoxEdit.SelectedIndexChanged += UpdateMode_IndexChanged;
+            UpdateModeComboBoxEdit.SelectedIndex = 1;
+
+            SaveSettingsButton.Click += Configuration_Save;
+            LoadSettingsButton.Click += Configuration_Load;
+
+            Terminal.WriteLine("App initialized.");
+            Configuration_Load(null, null);
+        }
+
+        private void Configuration_Save(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.FPSMode = UpdateModeComboBoxEdit.SelectedIndex;
+            Properties.Settings.Default.NickName = NickNameTextEdit.Text;
+            Properties.Settings.Default.Save();
+
+            Terminal.WriteLine("Settings saved.");
+        }
+
+        private void Configuration_Load(object sender, EventArgs e)
+        {
+            UpdateModeComboBoxEdit.SelectedIndex = Properties.Settings.Default.FPSMode;
+            NickNameTextEdit.Text = Properties.Settings.Default.NickName;
+
+            Terminal.WriteLine("Settings Loaded.");
         }
 
         private void CheckDebugModeControls(bool DebugMode)
@@ -240,6 +291,11 @@ namespace GameX
             {
                 CB.Enabled = DebugMode;
             }
+        }
+
+        private void UpdateMode_IndexChanged(object sender, EventArgs e)
+        {
+            UpdateMode = 1.0 / (UpdateModeComboBoxEdit.SelectedItem as FPSMode).FPS;
         }
 
         private void CharComboBox_IndexChanged(object sender, EventArgs e)
@@ -309,6 +365,7 @@ namespace GameX
             if (!Initialized)
                 return;
 
+            Character_DetourUpdate();
             Character_ApplyCharacters(int.Parse(CKBTN.Name[1].ToString()) - 1);
         }
 
@@ -318,7 +375,7 @@ namespace GameX
             CKBTN.Text = "Infinite HP: " + (CKBTN.Checked ? "On" : "Off");
         }
 
-        /*User Field*/
+        /*GameX Calls*/
 
         private Master Game { get; set; }
 
@@ -357,7 +414,6 @@ namespace GameX
         {
             try
             {
-                Character_DetourUpdate();
                 CharacterPanel_Update();
             }
             catch (Exception)
@@ -371,13 +427,13 @@ namespace GameX
 
         }
 
-        /*Mod Sections*/
+        /*Mods*/
 
         #region Character
 
         private void Character_Detour()
         {
-            if (!Kernel.DetourActive("MOD_CHAR_Extra"))
+            if (!Kernel.DetourActive("Character_Global"))
             {
                 byte[] DetourClean =
                 {
@@ -421,13 +477,13 @@ namespace GameX
                     0x89, 0x7E, 0x0C
                 };
 
-                Detour MOD_CHAR_Extra = Kernel.CreateDetour("MOD_CHAR_Extra", DetourClean, 0x00C91A88, CallInstruction, true, 0x00C91A8E);
+                Detour Character_Global = Kernel.CreateDetour("Character_Global", DetourClean, 0x00C91A88, CallInstruction, true, 0x00C91A8E);
 
-                if (MOD_CHAR_Extra == null)
+                if (Character_Global == null)
                     return;
             }
 
-            if (!Kernel.DetourActive("MOD_CHAR_StoryCharFix"))
+            if (!Kernel.DetourActive("Character_StoryChar"))
             {
                 byte[] DetourClean =
                 {
@@ -455,13 +511,13 @@ namespace GameX
                     0x8B, 0x17
                 };
 
-                Detour MOD_CHAR_StoryCharFix = Kernel.CreateDetour("MOD_CHAR_StoryCharFix", DetourClean, 0x00C9200D, CallInstruction, true, 0x00C92012);
+                Detour Character_StoryChar = Kernel.CreateDetour("Character_StoryChar", DetourClean, 0x00C9200D, CallInstruction, true, 0x00C92012);
 
-                if (MOD_CHAR_StoryCharFix == null)
+                if (Character_StoryChar == null)
                     return;
             }
 
-            if (!Kernel.DetourActive("MOD_CHAR_StoryCosFix"))
+            if (!Kernel.DetourActive("Character_StoryCos"))
             {
                 byte[] DetourClean =
                 {
@@ -489,13 +545,13 @@ namespace GameX
                     0x0F, 0xBF, 0X97, 0x64, 0x13, 0x00, 0x00
                 };
 
-                Detour MOD_CHAR_StoryCosFix = Kernel.CreateDetour("MOD_CHAR_StoryCosFix", DetourClean, 0x00C9201D, CallInstruction, true, 0x00C92027);
+                Detour Character_StoryCos = Kernel.CreateDetour("Character_StoryCos", DetourClean, 0x00C9201D, CallInstruction, true, 0x00C92027);
 
-                if (MOD_CHAR_StoryCosFix == null)
+                if (Character_StoryCos == null)
                     return;
             }
 
-            if (!Kernel.DetourActive("MOD_CHAR_SaveBypass"))
+            if (!Kernel.DetourActive("Character_StorySave"))
             {
                 byte[] DetourClean =
                 {
@@ -528,9 +584,9 @@ namespace GameX
                     0x8D, 0xB6, 0x80, 0X00, 0X00, 0X00
                 };
 
-                Detour MOD_CHAR_SaveBypass = Kernel.CreateDetour("MOD_CHAR_SaveBypass", DetourClean, 0x00E6E0BE, CallInstruction, true, 0x00E6E0C4);
+                Detour Character_StorySave = Kernel.CreateDetour("Character_StorySave", DetourClean, 0x00E6E0BE, CallInstruction, true, 0x00E6E0C4);
 
-                if (MOD_CHAR_SaveBypass == null)
+                if (Character_StorySave == null)
                     return;
             }
 
@@ -539,10 +595,10 @@ namespace GameX
 
         private void Character_DetourUpdate()
         {
-            if (!Kernel.DetourActive("MOD_CHAR_Extra") || !Kernel.DetourActive("MOD_CHAR_StoryCharFix") || !Kernel.DetourActive("MOD_CHAR_StoryCosFix") || !Kernel.DetourActive("MOD_CHAR_SaveBypass"))
+            if (!Kernel.DetourActive("Character_Global") || !Kernel.DetourActive("Character_StoryChar") || !Kernel.DetourActive("Character_StoryCos") || !Kernel.DetourActive("Character_StorySave"))
                 return;
 
-            Detour DetourBase = Kernel.GetDetour("MOD_CHAR_Extra");
+            Detour DetourBase = Kernel.GetDetour("Character_Global");
             int DetourBase_Address = DetourBase.Address();
 
             Kernel.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x2D });
@@ -550,19 +606,19 @@ namespace GameX
             Kernel.WriteRawAddress(DetourBase_Address + 30, !P3FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x33 });
             Kernel.WriteRawAddress(DetourBase_Address + 42, !P4FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x36 });
 
-            DetourBase = Kernel.GetDetour("MOD_CHAR_StoryCharFix");
+            DetourBase = Kernel.GetDetour("Character_StoryChar");
             DetourBase_Address = DetourBase.Address();
 
             Kernel.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x15 });
             Kernel.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x13 });
 
-            DetourBase = Kernel.GetDetour("MOD_CHAR_StoryCosFix");
+            DetourBase = Kernel.GetDetour("Character_StoryCos");
             DetourBase_Address = DetourBase.Address();
 
             Kernel.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x15 });
             Kernel.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x13 });
 
-            DetourBase = Kernel.GetDetour("MOD_CHAR_SaveBypass");
+            DetourBase = Kernel.GetDetour("Character_StorySave");
             DetourBase_Address = DetourBase.Address();
 
             Kernel.WriteRawAddress(DetourBase_Address + 20, P1FreezeCharCosButton.Checked ? new byte[] { 0x01 } : new byte[] { 0x00 });
@@ -571,7 +627,7 @@ namespace GameX
 
         private void Character_DetourValueUpdate()
         {
-            if (!Kernel.DetourActive("MOD_CHAR_Extra") || !Kernel.DetourActive("MOD_CHAR_StoryCharFix") || !Kernel.DetourActive("MOD_CHAR_StoryCosFix") || !Kernel.DetourActive("MOD_CHAR_SaveBypass"))
+            if (!Kernel.DetourActive("Character_Global") || !Kernel.DetourActive("Character_StoryChar") || !Kernel.DetourActive("Character_StoryCos") || !Kernel.DetourActive("Character_StorySave"))
                 return;
 
             int CHAR1A = Kernel.ReadPointer("re5dx9.exe", 0xDA383C, 0x6FE00);
@@ -602,7 +658,7 @@ namespace GameX
             byte[] Character4 = BitConverter.GetBytes(intCharacter4);
             byte[] Costume4 = BitConverter.GetBytes(intCostume4);
 
-            Detour DetourBase = Kernel.GetDetour("MOD_CHAR_Extra");
+            Detour DetourBase = Kernel.GetDetour("Character_Global");
             int DetourBase_Address = DetourBase.Address();
 
             Kernel.WriteRawAddress(DetourBase_Address + 2, Char1A);
@@ -619,7 +675,7 @@ namespace GameX
             Kernel.WriteRawAddress(DetourBase_Address + 99, Character4);
             Kernel.WriteRawAddress(DetourBase_Address + 104, Costume4);
 
-            DetourBase = Kernel.GetDetour("MOD_CHAR_StoryCharFix");
+            DetourBase = Kernel.GetDetour("Character_StoryChar");
             DetourBase_Address = DetourBase.Address();
 
             Kernel.WriteRawAddress(DetourBase_Address + 2, Char1A);
@@ -628,7 +684,7 @@ namespace GameX
             Kernel.WriteRawAddress(DetourBase_Address + 30, Character1);
             Kernel.WriteRawAddress(DetourBase_Address + 40, Character2);
 
-            DetourBase = Kernel.GetDetour("MOD_CHAR_StoryCosFix");
+            DetourBase = Kernel.GetDetour("Character_StoryCos");
             DetourBase_Address = DetourBase.Address();
 
             Kernel.WriteRawAddress(DetourBase_Address + 2, Char1A);
@@ -637,7 +693,7 @@ namespace GameX
             Kernel.WriteRawAddress(DetourBase_Address + 30, Costume1);
             Kernel.WriteRawAddress(DetourBase_Address + 40, Costume2);
 
-            DetourBase = Kernel.GetDetour("MOD_CHAR_SaveBypass");
+            DetourBase = Kernel.GetDetour("Character_StorySave");
             DetourBase_Address = DetourBase.Address();
 
             Kernel.WriteRawAddress(DetourBase_Address + 2, Char1A);

@@ -64,6 +64,10 @@
     <Reference Include="DevExpress.Data.v20.1">
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.Images.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v20.1">
       <Private>True</Private>
     </Reference>
@@ -79,6 +83,9 @@
     <Reference Include="DevExpress.Printing.v20.1.Core">
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -91,8 +98,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Game\Base\Master.cs" />
-    <Compile Include="Game\Base\Player.cs" />
+    <Compile Include="Content\FPSModes.cs" />
+    <Compile Include="Game\Modules\Master.cs" />
+    <Compile Include="Game\Modules\Player.cs" />
     <Compile Include="Game\Content\Characters.cs" />
     <Compile Include="Game\Types\Character.cs" />
     <Compile Include="Helpers\Cryptography.cs" />
@@ -105,11 +113,15 @@
       <DependentUpon>App.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Messager.cs" />
+    <Compile Include="Modules\Configs.cs" />
+    <Compile Include="Modules\Terminal.cs" />
     <Compile Include="Modules\Keyboard.cs" />
     <Compile Include="Modules\Memory.cs" />
+    <Compile Include="Modules\Network.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Types\Detour.cs" />
+    <Compile Include="Types\FPSMode.cs" />
     <EmbeddedResource Include="App.resx">
       <DependentUpon>App.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,7 +272,7 @@ mkdir C:\Users\madne\Desktop\GameX\
 mkdir C:\Users\madne\Desktop\GameX\GameX\
 
 xcopy $(ProjectDir)\Resources C:\Users\madne\Desktop\GameX\GameX /e /y
-xcopy $(ProjectDir)\Using C:\Users\madne\Desktop\GameX\GameX\Binaries /e /y
+xcopy $(TargetDir)\*.dll C:\Users\madne\Desktop\GameX\GameX\Binaries /e /y
 
 xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\GameX /e /y
 xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\GameX /e /y
@@ -268,7 +280,12 @@ xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\GameX /e /y
 rd /s /q C:\Users\madne\Desktop\GameX\de\
 rd /s /q C:\Users\madne\Desktop\GameX\es\
 rd /s /q C:\Users\madne\Desktop\GameX\ja\
-rd /s /q C:\Users\madne\Desktop\GameX\ru\</PostBuildEvent>
+rd /s /q C:\Users\madne\Desktop\GameX\ru\
+
+rd /s /q C:\Users\madne\Desktop\GameX\GameX\Binaries\de\
+rd /s /q C:\Users\madne\Desktop\GameX\GameX\Binaries\es\
+rd /s /q C:\Users\madne\Desktop\GameX\GameX\Binaries\ja\
+rd /s /q C:\Users\madne\Desktop\GameX\GameX\Binaries\ru\</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using System.Windows.Forms;
 
 namespace GameX.Modules
 {
@@ -275,7 +274,8 @@ namespace GameX.Modules
             }
             catch (Win32Exception)
             {
-                MessageBox.Show("Code injection is only allowed for administrators, expect limitations in user mode.", "Quick Advice!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Terminal.WriteLine("Failed entering debug mode.");
+                Terminal.WriteLine("WARNING: Code injection is only allowed in Admin Mode, expect limitations in User Mode.");
                 DebugMode = false;
                 return;
             }
@@ -284,6 +284,8 @@ namespace GameX.Modules
 
             if (Detours == null)
                 Detours = new Dictionary<string, Detour>();
+
+            Terminal.WriteLine("Entered debug mode.");
         }
 
         public void ExitDebugMode()
@@ -294,11 +296,19 @@ namespace GameX.Modules
             RemoveDetours();
             Process.LeaveDebugMode();
             DebugMode = false;
+
+            Terminal.WriteLine("Exited debug mode.");
         }
 
         public int ChangeProtection(int lpBaseAddress, int dwSize, int flNewProtect)
         {
-            VirtualProtectEx(pHandle, lpBaseAddress, dwSize, flNewProtect, out int lpflOldProtect);
+            bool Changed = VirtualProtectEx(pHandle, lpBaseAddress, dwSize, flNewProtect, out int lpflOldProtect);
+
+            if (Changed)
+                Terminal.WriteLine($"Protection changed at {lpBaseAddress.ToString("X")} successfully.");
+            else
+                Terminal.WriteLine($"Protection change failed at {lpBaseAddress.ToString("X")}.");
+
             return lpflOldProtect;
         }
 
@@ -370,10 +380,17 @@ namespace GameX.Modules
             if (DetourActive(DetourName))
                 return GetDetour(DetourName);
 
+            Terminal.WriteLine($"Hooking {CallAddress.ToString("X")} - for {DetourName}");
+
             int DetourAddress = VirtualAllocEx(pHandle, 0, DetourContent.Length, (int)MEMORY_INFORMATION.MEM_COMMIT | (int)MEMORY_INFORMATION.MEM_RESERVE, (int)MEMORY_PROTECTION.PAGE_EXECUTE_READ);
 
             if (DetourAddress == 0)
+            {
+                Terminal.WriteLine($"WARNING: Memory allocation failed for {DetourName}, skipping.");
                 return null;
+            }
+
+            Terminal.WriteLine($"{DetourName} hooked! Memory allocated at {DetourAddress.ToString("X")}");
 
             WriteRawAddress(CallAddress, DetourJump(CallAddress, DetourAddress, CallInstruction.Length));
             WriteRawAddress(DetourAddress, DetourContent);

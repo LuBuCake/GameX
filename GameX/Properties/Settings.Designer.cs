@@ -22,5 +22,37 @@ namespace GameX.Properties {
                 return defaultInstance;
             }
         }
+        
+        /// <summary>
+        /// Update Mode for the Engine
+        /// </summary>
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsDescriptionAttribute("Update Mode for the Engine")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int FPSMode {
+            get {
+                return ((int)(this["FPSMode"]));
+            }
+            set {
+                this["FPSMode"] = value;
+            }
+        }
+        
+        /// <summary>
+        /// The networked NickName for the user
+        /// </summary>
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsDescriptionAttribute("The networked NickName for the user")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("NickName")]
+        public string NickName {
+            get {
+                return ((string)(this["NickName"]));
+            }
+            set {
+                this["NickName"] = value;
+            }
+        }
     }
 }
