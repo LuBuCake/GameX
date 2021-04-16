@@ -13,6 +13,16 @@ namespace GameX.Game.Modules
             _INDEX = Index;
         }
 
+        public int GetBaseAddress()
+        {
+            return Main.Kernel.ReadInt16("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX));
+        }
+
+        public bool IsActive()
+        {
+            return GetBaseAddress() != 0;
+        }
+
         public Tuple<int, int> GetCharacter()
         {
             int Character = Main.Kernel.ReadInt32("re5dx9.exe", 0xDA383C, 0x6FE08 + (0x50 * _INDEX));

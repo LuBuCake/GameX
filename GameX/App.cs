@@ -990,8 +990,6 @@ namespace GameX
 
             #endregion
 
-            int ActivePlayers = Game.ActivePlayers();
-
             for (int i = 0; i < 4; i++)
             {
                 // Characters & Costumes //
@@ -1012,22 +1010,24 @@ namespace GameX
                     }
                 }
 
+                bool PlayerPresent = Game.Players[i].IsActive();
+
                 // Health Bar //
-                HealthBars[i].Properties.Maximum = (ActivePlayers - 1) >= i ? Game.Players[i].GetMaxHealth() : 1;
-                HealthBars[i].EditValue = (ActivePlayers - 1) >= i ? Game.Players[i].GetHealth() : 0;
+                HealthBars[i].Properties.Maximum = PlayerPresent ? Game.Players[i].GetMaxHealth() : 1;
+                HealthBars[i].EditValue = PlayerPresent ? Game.Players[i].GetHealth() : 0;
 
                 // Player Name //
-                PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (Game.InGame() ? ((i == Game.LocalPlayer()) ? Game.LocalPlayerNick() : ((ActivePlayers - 1) >= i ? (Game.Players[i].IsAI() ? "CPU AI" : "Connected") : "Disconnected")) : "Disconnected");
+                PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (Game.InGame() ? ((i == Game.LocalPlayer()) ? Game.LocalPlayerNick() : (PlayerPresent ? (Game.Players[i].IsAI() ? "CPU AI" : "Connected") : "Disconnected")) : "Disconnected");
 
                 if (Game.GetActiveGameMode() == "Versus")
                     continue;
 
                 // Infinite HP //
-                if (InfiniteHP[i].Checked && (ActivePlayers - 1) >= i)
+                if (InfiniteHP[i].Checked && PlayerPresent)
                     Game.Players[i].SetHealth(Game.Players[i].GetMaxHealth());
 
                 // Untergetable //
-                if (Untargetable[i].Checked && (ActivePlayers - 1) >= i)
+                if (Untargetable[i].Checked && PlayerPresent)
                     Game.Players[i].SetUntargetable(true);
             }
         }

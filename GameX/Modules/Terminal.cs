@@ -51,6 +51,12 @@ namespace GameX.Modules
 
                 if (Command[9] == 'p' && int.TryParse(Command[10].ToString(), out int Player))
                 {
+                    if (!(Player >= 1 && Player <= 4))
+                    {
+                        WriteLine("Please specify a player index between 1 and 4");
+                        return true;
+                    }
+
                     if (!Main.Game.InGame() || Main.Game.ActivePlayers() < Player)
                     {
                         WriteLine("The selected player is not present.");
@@ -76,13 +82,19 @@ namespace GameX.Modules
                 {
                     if (int.TryParse(Command.Substring(11, Command.Length - 11), out int HP))
                     {
+                        if (!(Player >= 1 && Player <= 4))
+                        {
+                            WriteLine("Please specify a player index between 1 and 4");
+                            return true;
+                        }
+
                         if (Main.Game.GetActiveGameMode() == "Versus")
                         {
                             WriteLine("Versus mode detected, operation ignored.");
                             return true;
                         }
 
-                        if (!Main.Game.InGame() || Main.Game.ActivePlayers() < Player)
+                        if (Main.Game.Players[Player - 1].GetBaseAddress() == 0)
                         {
                             WriteLine("The selected player is not present.");
                             return true;
