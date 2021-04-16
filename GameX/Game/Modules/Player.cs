@@ -47,6 +47,11 @@ namespace GameX.Game.Modules
             Main.Kernel.WriteInt16(Value, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1366);
         }
 
+        public void SetUntargetable(bool Invulnerable)
+        {
+            Main.Kernel.WriteInt16(Invulnerable ? 0 : 1, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x135C);
+        }
+
         public bool IsAI()
         {
             return Main.Kernel.ReadInt32("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2DA8) != 0;

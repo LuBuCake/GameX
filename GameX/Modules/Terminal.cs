@@ -19,25 +19,75 @@ namespace GameX.Modules
 
         private static void ShowCommands()
         {
-            string[] Commands = 
+            string[] Commands =
             {
+                "OBS: Commands must be written without any spaces.",
                 "Engine Commands: ",
                 "clear - Clears the console output.",
                 "help - Shows all available commands.",
-                "fps - Shows the current FPS mode.",
+                "fps - Shows the current FPS.",
                 "frametime - Shows the last frametime.",
                 "curtime - Shows the elapsed time in seconds since the program opened",
                 "exit - Closes the App.",
-                "Game Commands: "
+                "Game Commands: ",
+                "gethealth p1/p2/p3/p4 - Gets the current health for the respective player.",
+                "sethealth p1/p2/p3/p4 value - Sets the health for the respective player, this needs to be set between 0 and 1000."
             };
 
             foreach(string Command in Commands)
                 WriteLine(Command);
         }
 
+        private static bool ProcessGameCommand(string Command)
+        {
+            if (Command.Contains("gethealth") && Command.Length == 11)
+            {
+                if (!Main.Initialized || Main.Game == null)
+                {
+                    WriteLine("The game is not running.");
+                    return true;
+                }
+
+                if (Command[9] == 'p' && int.TryParse(Command[10].ToString(), out int Player))
+                    WriteLine($"{Main.Game.Players[Player-1].GetHealth()}");
+                else
+                    return false;
+
+                return true;
+            }
+            else if (Command.Contains("sethealth") && Command.Length >= 12 && Command.Length <= 15)
+            {
+                if (!Main.Initialized || Main.Game == null)
+                {
+                    WriteLine("The game is not running.");
+                    return true;
+                }
+
+                if (Command[9] == 'p' && int.TryParse(Command[10].ToString(), out int Player))
+                {
+                    if (int.TryParse(Command.Substring(11, Command.Length - 11), out int HP))
+                    {
+                        Main.Game.Players[Player - 1].SetHealth((short)HP);
+                        WriteLine($"Player {Player} health set to {HP}.");
+                    }
+                    else
+                        return false;
+                }
+                else
+                    return false;
+
+                return true;
+            }
+
+            return false;
+        }
+
         private static void ProcessCommand(string Command)
         {
+            WriteLine(Command);
+
             Command = Command.ToLower();
+            Command = Command.Trim();
 
             if (Command == "clear")
                 Clear();
@@ -51,8 +101,8 @@ namespace GameX.Modules
                 WriteLine(Main.CurTime.ToString());
             else if (Command == "exit")
                 Application.Exit();
-            else
-                WriteLine($"Unknown command {Command}. Type help to see all available commands.");
+            else if (!ProcessGameCommand(Command))
+                WriteLine($"Unknown or incorrect use of command. Type help to see all available commands and their syntax.");
         }
 
         public static void ValidateInput(object sender, EventArgs e)

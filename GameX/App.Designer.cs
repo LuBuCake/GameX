@@ -41,27 +41,22 @@ namespace GameX
             this.P4HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.P4CharPictureBox = new DevExpress.XtraEditors.PictureEdit();
             this.P4CosComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.P4FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
             this.P4CharComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.TabPageCharGPPlayer3 = new DevExpress.XtraEditors.GroupControl();
             this.P3InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P3HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.P3CharPictureBox = new DevExpress.XtraEditors.PictureEdit();
             this.P3CosComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.P3FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
             this.P3CharComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.TabPageCharGPPlayer2 = new DevExpress.XtraEditors.GroupControl();
             this.P2InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P2HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.P2CharPictureBox = new DevExpress.XtraEditors.PictureEdit();
             this.P2CosComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.P2FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
             this.P2CharComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.TabPageCharGPPlayer1 = new DevExpress.XtraEditors.GroupControl();
             this.P1InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P1HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
-            this.TabPageMelee = new DevExpress.XtraTab.XtraTabPage();
-            this.TabPageInventory = new DevExpress.XtraTab.XtraTabPage();
             this.TabPageSettings = new DevExpress.XtraTab.XtraTabPage();
             this.ConsoleGP = new DevExpress.XtraEditors.GroupControl();
             this.ConsoleOutputMemoEdit = new DevExpress.XtraEditors.MemoEdit();
@@ -75,7 +70,15 @@ namespace GameX
             this.LoadSaveGP = new DevExpress.XtraEditors.GroupControl();
             this.LoadSettingsButton = new DevExpress.XtraEditors.SimpleButton();
             this.SaveSettingsButton = new DevExpress.XtraEditors.SimpleButton();
-            this.EngineGP = new DevExpress.XtraEditors.GroupControl();
+            this.AboutGP = new DevExpress.XtraEditors.GroupControl();
+            this.AboutMemoEdit = new DevExpress.XtraEditors.MemoEdit();
+            this.P2FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
+            this.P3FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
+            this.P4FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
+            this.P1UntargetableButton = new DevExpress.XtraEditors.CheckButton();
+            this.P2UntargetableButton = new DevExpress.XtraEditors.CheckButton();
+            this.P4UntargetableButton = new DevExpress.XtraEditors.CheckButton();
+            this.P3UntargetableButton = new DevExpress.XtraEditors.CheckButton();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -118,7 +121,9 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.UpdateModeComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoadSaveGP)).BeginInit();
             this.LoadSaveGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EngineGP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AboutGP)).BeginInit();
+            this.AboutGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AboutMemoEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // P1CosComboBox
@@ -141,6 +146,9 @@ namespace GameX
             this.P1FreezeCharCosButton.Size = new System.Drawing.Size(53, 23);
             this.P1FreezeCharCosButton.TabIndex = 4;
             this.P1FreezeCharCosButton.Text = "Freeze";
+            this.P1FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
+            this.P1FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P1FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
             // 
             // P1CharComboBox
             // 
@@ -177,8 +185,6 @@ namespace GameX
             this.MasterTabControl.TabIndex = 18;
             this.MasterTabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.TabPageChar,
-            this.TabPageMelee,
-            this.TabPageInventory,
             this.TabPageSettings});
             // 
             // TabPageChar
@@ -193,11 +199,12 @@ namespace GameX
             // 
             // TabPageCharGPPlayer4
             // 
+            this.TabPageCharGPPlayer4.Controls.Add(this.P4UntargetableButton);
+            this.TabPageCharGPPlayer4.Controls.Add(this.P4FreezeCharCosButton);
             this.TabPageCharGPPlayer4.Controls.Add(this.P4InfiniteHPButton);
             this.TabPageCharGPPlayer4.Controls.Add(this.P4HealthBar);
             this.TabPageCharGPPlayer4.Controls.Add(this.P4CharPictureBox);
             this.TabPageCharGPPlayer4.Controls.Add(this.P4CosComboBox);
-            this.TabPageCharGPPlayer4.Controls.Add(this.P4FreezeCharCosButton);
             this.TabPageCharGPPlayer4.Controls.Add(this.P4CharComboBox);
             this.TabPageCharGPPlayer4.Location = new System.Drawing.Point(322, 224);
             this.TabPageCharGPPlayer4.Margin = new System.Windows.Forms.Padding(10);
@@ -213,7 +220,10 @@ namespace GameX
             this.P4InfiniteHPButton.Name = "P4InfiniteHPButton";
             this.P4InfiniteHPButton.Size = new System.Drawing.Size(122, 23);
             this.P4InfiniteHPButton.TabIndex = 8;
-            this.P4InfiniteHPButton.Text = "Infinite HP: Off";
+            this.P4InfiniteHPButton.Text = "Infinite HP: OFF";
+            this.P4InfiniteHPButton.ToolTip = "Keeps the health at its maximun value, usually 1000.";
+            this.P4InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P4InfiniteHPButton.ToolTipTitle = "Infinite HP";
             // 
             // P4HealthBar
             // 
@@ -256,15 +266,6 @@ namespace GameX
             this.P4CosComboBox.Size = new System.Drawing.Size(150, 20);
             this.P4CosComboBox.TabIndex = 5;
             // 
-            // P4FreezeCharCosButton
-            // 
-            this.P4FreezeCharCosButton.AllowFocus = false;
-            this.P4FreezeCharCosButton.Location = new System.Drawing.Point(102, 149);
-            this.P4FreezeCharCosButton.Name = "P4FreezeCharCosButton";
-            this.P4FreezeCharCosButton.Size = new System.Drawing.Size(53, 23);
-            this.P4FreezeCharCosButton.TabIndex = 4;
-            this.P4FreezeCharCosButton.Text = "Freeze";
-            // 
             // P4CharComboBox
             // 
             this.P4CharComboBox.Location = new System.Drawing.Point(5, 151);
@@ -279,11 +280,12 @@ namespace GameX
             // 
             // TabPageCharGPPlayer3
             // 
+            this.TabPageCharGPPlayer3.Controls.Add(this.P3UntargetableButton);
+            this.TabPageCharGPPlayer3.Controls.Add(this.P3FreezeCharCosButton);
             this.TabPageCharGPPlayer3.Controls.Add(this.P3InfiniteHPButton);
             this.TabPageCharGPPlayer3.Controls.Add(this.P3HealthBar);
             this.TabPageCharGPPlayer3.Controls.Add(this.P3CharPictureBox);
             this.TabPageCharGPPlayer3.Controls.Add(this.P3CosComboBox);
-            this.TabPageCharGPPlayer3.Controls.Add(this.P3FreezeCharCosButton);
             this.TabPageCharGPPlayer3.Controls.Add(this.P3CharComboBox);
             this.TabPageCharGPPlayer3.Location = new System.Drawing.Point(8, 224);
             this.TabPageCharGPPlayer3.Margin = new System.Windows.Forms.Padding(10);
@@ -299,7 +301,10 @@ namespace GameX
             this.P3InfiniteHPButton.Name = "P3InfiniteHPButton";
             this.P3InfiniteHPButton.Size = new System.Drawing.Size(122, 23);
             this.P3InfiniteHPButton.TabIndex = 8;
-            this.P3InfiniteHPButton.Text = "Infinite HP: Off";
+            this.P3InfiniteHPButton.Text = "Infinite HP: OFF";
+            this.P3InfiniteHPButton.ToolTip = "Keeps the health at its maximun value, usually 1000.";
+            this.P3InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3InfiniteHPButton.ToolTipTitle = "Infinite HP";
             // 
             // P3HealthBar
             // 
@@ -342,15 +347,6 @@ namespace GameX
             this.P3CosComboBox.Size = new System.Drawing.Size(150, 20);
             this.P3CosComboBox.TabIndex = 5;
             // 
-            // P3FreezeCharCosButton
-            // 
-            this.P3FreezeCharCosButton.AllowFocus = false;
-            this.P3FreezeCharCosButton.Location = new System.Drawing.Point(102, 149);
-            this.P3FreezeCharCosButton.Name = "P3FreezeCharCosButton";
-            this.P3FreezeCharCosButton.Size = new System.Drawing.Size(53, 23);
-            this.P3FreezeCharCosButton.TabIndex = 4;
-            this.P3FreezeCharCosButton.Text = "Freeze";
-            // 
             // P3CharComboBox
             // 
             this.P3CharComboBox.Location = new System.Drawing.Point(5, 151);
@@ -365,11 +361,12 @@ namespace GameX
             // 
             // TabPageCharGPPlayer2
             // 
+            this.TabPageCharGPPlayer2.Controls.Add(this.P2UntargetableButton);
+            this.TabPageCharGPPlayer2.Controls.Add(this.P2FreezeCharCosButton);
             this.TabPageCharGPPlayer2.Controls.Add(this.P2InfiniteHPButton);
             this.TabPageCharGPPlayer2.Controls.Add(this.P2HealthBar);
             this.TabPageCharGPPlayer2.Controls.Add(this.P2CharPictureBox);
             this.TabPageCharGPPlayer2.Controls.Add(this.P2CosComboBox);
-            this.TabPageCharGPPlayer2.Controls.Add(this.P2FreezeCharCosButton);
             this.TabPageCharGPPlayer2.Controls.Add(this.P2CharComboBox);
             this.TabPageCharGPPlayer2.Location = new System.Drawing.Point(322, 10);
             this.TabPageCharGPPlayer2.Margin = new System.Windows.Forms.Padding(10);
@@ -385,7 +382,10 @@ namespace GameX
             this.P2InfiniteHPButton.Name = "P2InfiniteHPButton";
             this.P2InfiniteHPButton.Size = new System.Drawing.Size(122, 23);
             this.P2InfiniteHPButton.TabIndex = 8;
-            this.P2InfiniteHPButton.Text = "Infinite HP: Off";
+            this.P2InfiniteHPButton.Text = "Infinite HP: OFF";
+            this.P2InfiniteHPButton.ToolTip = "Keeps the health at its maximun value, usually 1000.";
+            this.P2InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2InfiniteHPButton.ToolTipTitle = "Infinite HP";
             // 
             // P2HealthBar
             // 
@@ -428,15 +428,6 @@ namespace GameX
             this.P2CosComboBox.Size = new System.Drawing.Size(150, 20);
             this.P2CosComboBox.TabIndex = 5;
             // 
-            // P2FreezeCharCosButton
-            // 
-            this.P2FreezeCharCosButton.AllowFocus = false;
-            this.P2FreezeCharCosButton.Location = new System.Drawing.Point(102, 149);
-            this.P2FreezeCharCosButton.Name = "P2FreezeCharCosButton";
-            this.P2FreezeCharCosButton.Size = new System.Drawing.Size(53, 23);
-            this.P2FreezeCharCosButton.TabIndex = 4;
-            this.P2FreezeCharCosButton.Text = "Freeze";
-            // 
             // P2CharComboBox
             // 
             this.P2CharComboBox.Location = new System.Drawing.Point(5, 151);
@@ -451,6 +442,7 @@ namespace GameX
             // 
             // TabPageCharGPPlayer1
             // 
+            this.TabPageCharGPPlayer1.Controls.Add(this.P1UntargetableButton);
             this.TabPageCharGPPlayer1.Controls.Add(this.P1InfiniteHPButton);
             this.TabPageCharGPPlayer1.Controls.Add(this.P1HealthBar);
             this.TabPageCharGPPlayer1.Controls.Add(this.P1CharPictureBox);
@@ -471,7 +463,10 @@ namespace GameX
             this.P1InfiniteHPButton.Name = "P1InfiniteHPButton";
             this.P1InfiniteHPButton.Size = new System.Drawing.Size(122, 23);
             this.P1InfiniteHPButton.TabIndex = 7;
-            this.P1InfiniteHPButton.Text = "Infinite HP: Off";
+            this.P1InfiniteHPButton.Text = "Infinite HP: OFF";
+            this.P1InfiniteHPButton.ToolTip = "Keeps the health at its maximun value, usually 1000.";
+            this.P1InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P1InfiniteHPButton.ToolTipTitle = "Infinite HP";
             // 
             // P1HealthBar
             // 
@@ -488,18 +483,6 @@ namespace GameX
             this.P1HealthBar.Properties.StartColor = System.Drawing.Color.Lime;
             this.P1HealthBar.Size = new System.Drawing.Size(12, 168);
             this.P1HealthBar.TabIndex = 6;
-            // 
-            // TabPageMelee
-            // 
-            this.TabPageMelee.Name = "TabPageMelee";
-            this.TabPageMelee.Size = new System.Drawing.Size(638, 438);
-            this.TabPageMelee.Text = "Melee";
-            // 
-            // TabPageInventory
-            // 
-            this.TabPageInventory.Name = "TabPageInventory";
-            this.TabPageInventory.Size = new System.Drawing.Size(638, 438);
-            this.TabPageInventory.Text = "Inventory";
             // 
             // TabPageSettings
             // 
@@ -543,7 +526,7 @@ namespace GameX
             // TabPageSettingsGPApp
             // 
             this.TabPageSettingsGPApp.Controls.Add(this.AppSettingsGP);
-            this.TabPageSettingsGPApp.Controls.Add(this.EngineGP);
+            this.TabPageSettingsGPApp.Controls.Add(this.AboutGP);
             this.TabPageSettingsGPApp.Location = new System.Drawing.Point(8, 10);
             this.TabPageSettingsGPApp.Margin = new System.Windows.Forms.Padding(10);
             this.TabPageSettingsGPApp.Name = "TabPageSettingsGPApp";
@@ -587,6 +570,9 @@ namespace GameX
             this.NickNameTextEdit.Properties.ValidateOnEnterKey = true;
             this.NickNameTextEdit.Size = new System.Drawing.Size(160, 20);
             this.NickNameTextEdit.TabIndex = 2;
+            this.NickNameTextEdit.ToolTip = "Sets the networked NickName for connected peers.";
+            this.NickNameTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.NickNameTextEdit.ToolTipTitle = "NickName";
             // 
             // UpdateModeComboBoxEdit
             // 
@@ -599,10 +585,10 @@ namespace GameX
             this.UpdateModeComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.UpdateModeComboBoxEdit.Size = new System.Drawing.Size(79, 20);
             this.UpdateModeComboBoxEdit.TabIndex = 6;
-            this.UpdateModeComboBoxEdit.ToolTip = "Sets the update rate for the main loop system. Aways try to leave the Update Mode" +
-    " greater or equal to your game\'s FPS.";
+            this.UpdateModeComboBoxEdit.ToolTip = "Sets the update rate for the main loop system. Aways leave the Update Rate greate" +
+    "r or equal to your game\'s FPS.";
             this.UpdateModeComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.UpdateModeComboBoxEdit.ToolTipTitle = "Update Mode";
+            this.UpdateModeComboBoxEdit.ToolTipTitle = "Update Rate";
             // 
             // LoadSaveGP
             // 
@@ -622,9 +608,9 @@ namespace GameX
             this.LoadSettingsButton.TabIndex = 1;
             this.LoadSettingsButton.TabStop = false;
             this.LoadSettingsButton.Text = "Load";
-            this.LoadSettingsButton.ToolTip = "Save current configuration.";
+            this.LoadSettingsButton.ToolTip = "Loads the last saved configuration or the default ones.";
             this.LoadSettingsButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.LoadSettingsButton.ToolTipTitle = "Save";
+            this.LoadSettingsButton.ToolTipTitle = "Load";
             // 
             // SaveSettingsButton
             // 
@@ -635,17 +621,121 @@ namespace GameX
             this.SaveSettingsButton.TabIndex = 0;
             this.SaveSettingsButton.TabStop = false;
             this.SaveSettingsButton.Text = "Save";
-            this.SaveSettingsButton.ToolTip = "Save current configuration.";
+            this.SaveSettingsButton.ToolTip = "Saves current configuration.";
             this.SaveSettingsButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.SaveSettingsButton.ToolTipTitle = "Save";
             // 
-            // EngineGP
+            // AboutGP
             // 
-            this.EngineGP.Location = new System.Drawing.Point(5, 30);
-            this.EngineGP.Name = "EngineGP";
-            this.EngineGP.Size = new System.Drawing.Size(298, 80);
-            this.EngineGP.TabIndex = 0;
-            this.EngineGP.Text = "Engine Status";
+            this.AboutGP.Controls.Add(this.AboutMemoEdit);
+            this.AboutGP.Location = new System.Drawing.Point(5, 30);
+            this.AboutGP.Name = "AboutGP";
+            this.AboutGP.ShowCaption = false;
+            this.AboutGP.Size = new System.Drawing.Size(298, 80);
+            this.AboutGP.TabIndex = 0;
+            // 
+            // AboutMemoEdit
+            // 
+            this.AboutMemoEdit.EditValue = "GameX for Resident Evil 5 - Build 1.0.0.0\r\n\r\nAutor / Programmer: Sr. Wesky (LuBuC" +
+    "ake)\r\nTesting / Suport Team: sorryjess and Huskya\r\nDesign: DevExpress (https://w" +
+    "ww.devexpress.com/)";
+            this.AboutMemoEdit.Location = new System.Drawing.Point(5, 5);
+            this.AboutMemoEdit.Name = "AboutMemoEdit";
+            this.AboutMemoEdit.Properties.AllowFocused = false;
+            this.AboutMemoEdit.Properties.AllowMouseWheel = false;
+            this.AboutMemoEdit.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AboutMemoEdit.Properties.Appearance.Options.UseFont = true;
+            this.AboutMemoEdit.Properties.ReadOnly = true;
+            this.AboutMemoEdit.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.AboutMemoEdit.Properties.UseReadOnlyAppearance = false;
+            this.AboutMemoEdit.Properties.WordWrap = false;
+            this.AboutMemoEdit.Size = new System.Drawing.Size(288, 70);
+            this.AboutMemoEdit.TabIndex = 3;
+            this.AboutMemoEdit.TabStop = false;
+            // 
+            // P2FreezeCharCosButton
+            // 
+            this.P2FreezeCharCosButton.AllowFocus = false;
+            this.P2FreezeCharCosButton.Location = new System.Drawing.Point(102, 149);
+            this.P2FreezeCharCosButton.Name = "P2FreezeCharCosButton";
+            this.P2FreezeCharCosButton.Size = new System.Drawing.Size(53, 23);
+            this.P2FreezeCharCosButton.TabIndex = 8;
+            this.P2FreezeCharCosButton.Text = "Freeze";
+            this.P2FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
+            this.P2FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
+            // 
+            // P3FreezeCharCosButton
+            // 
+            this.P3FreezeCharCosButton.AllowFocus = false;
+            this.P3FreezeCharCosButton.Location = new System.Drawing.Point(102, 149);
+            this.P3FreezeCharCosButton.Name = "P3FreezeCharCosButton";
+            this.P3FreezeCharCosButton.Size = new System.Drawing.Size(53, 23);
+            this.P3FreezeCharCosButton.TabIndex = 9;
+            this.P3FreezeCharCosButton.Text = "Freeze";
+            this.P3FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
+            this.P3FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
+            // 
+            // P4FreezeCharCosButton
+            // 
+            this.P4FreezeCharCosButton.AllowFocus = false;
+            this.P4FreezeCharCosButton.Location = new System.Drawing.Point(102, 149);
+            this.P4FreezeCharCosButton.Name = "P4FreezeCharCosButton";
+            this.P4FreezeCharCosButton.Size = new System.Drawing.Size(53, 23);
+            this.P4FreezeCharCosButton.TabIndex = 9;
+            this.P4FreezeCharCosButton.Text = "Freeze";
+            this.P4FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
+            this.P4FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P4FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
+            // 
+            // P1UntargetableButton
+            // 
+            this.P1UntargetableButton.AllowFocus = false;
+            this.P1UntargetableButton.Location = new System.Drawing.Point(179, 59);
+            this.P1UntargetableButton.Name = "P1UntargetableButton";
+            this.P1UntargetableButton.Size = new System.Drawing.Size(122, 23);
+            this.P1UntargetableButton.TabIndex = 8;
+            this.P1UntargetableButton.Text = "Untargetable: OFF";
+            this.P1UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
+            this.P1UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P1UntargetableButton.ToolTipTitle = "Untargetable";
+            // 
+            // P2UntargetableButton
+            // 
+            this.P2UntargetableButton.AllowFocus = false;
+            this.P2UntargetableButton.Location = new System.Drawing.Point(179, 59);
+            this.P2UntargetableButton.Name = "P2UntargetableButton";
+            this.P2UntargetableButton.Size = new System.Drawing.Size(122, 23);
+            this.P2UntargetableButton.TabIndex = 9;
+            this.P2UntargetableButton.Text = "Untargetable: OFF";
+            this.P2UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
+            this.P2UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2UntargetableButton.ToolTipTitle = "Untargetable";
+            // 
+            // P4UntargetableButton
+            // 
+            this.P4UntargetableButton.AllowFocus = false;
+            this.P4UntargetableButton.Location = new System.Drawing.Point(179, 59);
+            this.P4UntargetableButton.Name = "P4UntargetableButton";
+            this.P4UntargetableButton.Size = new System.Drawing.Size(122, 23);
+            this.P4UntargetableButton.TabIndex = 10;
+            this.P4UntargetableButton.Text = "Untargetable: OFF";
+            this.P4UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
+            this.P4UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P4UntargetableButton.ToolTipTitle = "Untargetable";
+            // 
+            // P3UntargetableButton
+            // 
+            this.P3UntargetableButton.AllowFocus = false;
+            this.P3UntargetableButton.Location = new System.Drawing.Point(179, 59);
+            this.P3UntargetableButton.Name = "P3UntargetableButton";
+            this.P3UntargetableButton.Size = new System.Drawing.Size(122, 23);
+            this.P3UntargetableButton.TabIndex = 10;
+            this.P3UntargetableButton.Text = "Untargetable: OFF";
+            this.P3UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
+            this.P3UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3UntargetableButton.ToolTipTitle = "Untargetable";
             // 
             // App
             // 
@@ -703,7 +793,9 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.UpdateModeComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoadSaveGP)).EndInit();
             this.LoadSaveGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.EngineGP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AboutGP)).EndInit();
+            this.AboutGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.AboutMemoEdit.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -717,19 +809,14 @@ namespace GameX
         private DevExpress.XtraTab.XtraTabPage TabPageChar;
         private DevExpress.XtraEditors.GroupControl TabPageCharGPPlayer4;
         private DevExpress.XtraEditors.ComboBoxEdit P4CosComboBox;
-        private DevExpress.XtraEditors.CheckButton P4FreezeCharCosButton;
         private DevExpress.XtraEditors.ComboBoxEdit P4CharComboBox;
         private DevExpress.XtraEditors.GroupControl TabPageCharGPPlayer3;
         private DevExpress.XtraEditors.ComboBoxEdit P3CosComboBox;
-        private DevExpress.XtraEditors.CheckButton P3FreezeCharCosButton;
         private DevExpress.XtraEditors.ComboBoxEdit P3CharComboBox;
         private DevExpress.XtraEditors.GroupControl TabPageCharGPPlayer2;
         private DevExpress.XtraEditors.ComboBoxEdit P2CosComboBox;
-        private DevExpress.XtraEditors.CheckButton P2FreezeCharCosButton;
         private DevExpress.XtraEditors.ComboBoxEdit P2CharComboBox;
         private DevExpress.XtraEditors.GroupControl TabPageCharGPPlayer1;
-        private DevExpress.XtraTab.XtraTabPage TabPageMelee;
-        private DevExpress.XtraTab.XtraTabPage TabPageInventory;
         private DevExpress.XtraEditors.PictureEdit P4CharPictureBox;
         private DevExpress.XtraEditors.PictureEdit P3CharPictureBox;
         private DevExpress.XtraEditors.PictureEdit P2CharPictureBox;
@@ -746,7 +833,7 @@ namespace GameX
         private DevExpress.XtraEditors.GroupControl ConsoleGP;
         private DevExpress.XtraEditors.MemoEdit ConsoleOutputMemoEdit;
         private DevExpress.XtraEditors.TextEdit ConsoleInputTextEdit;
-        private DevExpress.XtraEditors.GroupControl EngineGP;
+        private DevExpress.XtraEditors.GroupControl AboutGP;
         private DevExpress.XtraEditors.ComboBoxEdit UpdateModeComboBoxEdit;
         private DevExpress.XtraEditors.GroupControl AppSettingsGP;
         private DevExpress.XtraEditors.SimpleButton SaveSettingsButton;
@@ -755,6 +842,14 @@ namespace GameX
         private DevExpress.XtraEditors.GroupControl MiscSettingsGP;
         private DevExpress.XtraEditors.LabelControl UpdateRateLabelControl;
         private DevExpress.XtraEditors.TextEdit NickNameTextEdit;
+        private DevExpress.XtraEditors.MemoEdit AboutMemoEdit;
+        private DevExpress.XtraEditors.CheckButton P4FreezeCharCosButton;
+        private DevExpress.XtraEditors.CheckButton P3FreezeCharCosButton;
+        private DevExpress.XtraEditors.CheckButton P2FreezeCharCosButton;
+        private DevExpress.XtraEditors.CheckButton P4UntargetableButton;
+        private DevExpress.XtraEditors.CheckButton P3UntargetableButton;
+        private DevExpress.XtraEditors.CheckButton P2UntargetableButton;
+        private DevExpress.XtraEditors.CheckButton P1UntargetableButton;
     }
 }
 

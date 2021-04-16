@@ -17,7 +17,6 @@ namespace GameX
 {
     public partial class App : XtraForm
     {
-        private DateTime OpenTime { get; set; }
         private Stopwatch FrameElapser { get; set; }
         private Stopwatch CurTimeElapser { get; set; }
         public double FrameTime { get; private set; }
@@ -33,7 +32,6 @@ namespace GameX
             Keyboard.CreateHook(GameX_Keyboard);
 
             Peaker = new Messager();
-            OpenTime = DateTime.Now;
             FrameElapser = new Stopwatch();
             CurTimeElapser = new Stopwatch();
 
@@ -78,7 +76,7 @@ namespace GameX
         private Messager Peaker { get; }
         private Process pProcess { get; set; }
         public Memory Kernel { get; private set; }
-        private bool Initialized { get; set; }
+        public bool Initialized { get; private set; }
 
         private string TargetProcess = "re5dx9";
         private string TargetVersion = "1.0.0.129";
@@ -168,10 +166,9 @@ namespace GameX
             if (!FrameElapser.IsRunning)
                 FrameElapser.Start();
 
-            TimeSpan Target = TimeSpan.FromSeconds(UpdateMode);
             TimeSpan Elapsed = FrameElapser.Elapsed;
 
-            if (Elapsed >= Target)
+            if (Elapsed.TotalSeconds >= UpdateMode)
             {
                 CurTime = CurTimeElapser.Elapsed.TotalSeconds;
 
@@ -224,6 +221,14 @@ namespace GameX
                 P4InfiniteHPButton
             };
 
+            CheckButton[] Untargetable =
+            {
+                P1UntargetableButton,
+                P1UntargetableButton,
+                P1UntargetableButton,
+                P1UntargetableButton
+            };
+
             #endregion
 
             for (int Index = 0; Index < CharacterCombos.Length; Index++)
@@ -238,7 +243,8 @@ namespace GameX
                 }
 
                 CharCosFreezes[Index].CheckedChanged += CharCosFreeze_CheckedChanged;
-                InfiniteHP[Index].CheckedChanged += InfiniteHP_CheckedChanged;
+                InfiniteHP[Index].CheckedChanged += OnOff_CheckedChanged;
+                Untargetable[Index].CheckedChanged += OnOff_CheckedChanged;
 
                 CharacterCombos[Index].SelectedIndexChanged += CharComboBox_IndexChanged;
                 CostumeCombos[Index].SelectedIndexChanged += CosComboBox_IndexChanged;
@@ -270,7 +276,7 @@ namespace GameX
         {
             UpdateModeComboBoxEdit.SelectedIndex = Properties.Settings.Default.FPSMode;
             NickNameTextEdit.Text = Properties.Settings.Default.NickName;
-
+            
             Terminal.WriteLine("Settings Loaded.");
         }
 
@@ -369,15 +375,26 @@ namespace GameX
             Character_ApplyCharacters(int.Parse(CKBTN.Name[1].ToString()) - 1);
         }
 
-        private void InfiniteHP_CheckedChanged(object sender, EventArgs e)
+        private void OnOff_CheckedChanged(object sender, EventArgs e)
         {
-            CheckButton CKBTN = sender as CheckButton;
-            CKBTN.Text = "Infinite HP: " + (CKBTN.Checked ? "On" : "Off");
+            CheckButton CB = sender as CheckButton;
+
+            if (CB.Checked && CB.Text.Contains("OFF"))
+                CB.Text = CB.Text.Replace("OFF", "ON");
+
+            if (!CB.Checked && CB.Text.Contains("ON"))
+                CB.Text = CB.Text.Replace("ON", "OFF");
+
+            if (CB.Name.Contains("Untargetable") && !CB.Checked)
+            {
+                int Player = int.Parse(CB.Name[1].ToString());
+                Game.Players[Player].SetUntargetable(false);
+            }
         }
 
         /*GameX Calls*/
 
-        private Master Game { get; set; }
+        public Master Game { get; private set; }
 
         private void GameX_Start()
         {
@@ -894,6 +911,14 @@ namespace GameX
                 P4InfiniteHPButton
             };
 
+            CheckButton[] Untargetable =
+            {
+                P1UntargetableButton,
+                P1UntargetableButton,
+                P1UntargetableButton,
+                P1UntargetableButton
+            };
+
             #endregion
 
             int ActivePlayers = Game.ActivePlayers();
@@ -931,6 +956,10 @@ namespace GameX
                 // Infinite HP //
                 if (InfiniteHP[i].Checked && (ActivePlayers - 1) >= i)
                     Game.Players[i].SetHealth(Game.Players[i].GetMaxHealth());
+
+                // Untergetable //
+                if (Untargetable[i].Checked && (ActivePlayers - 1) >= i)
+                    Game.Players[i].SetUntargetable(true);
             }
         }
 
