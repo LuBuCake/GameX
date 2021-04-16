@@ -305,9 +305,9 @@ namespace GameX.Modules
             bool Changed = VirtualProtectEx(pHandle, lpBaseAddress, dwSize, flNewProtect, out int lpflOldProtect);
 
             if (Changed)
-                Terminal.WriteLine($"Protection changed at {lpBaseAddress.ToString("X")} successfully.");
+                Terminal.WriteLine($"Protection changed at 0x{lpBaseAddress.ToString("X")} successfully.");
             else
-                Terminal.WriteLine($"Protection change failed at {lpBaseAddress.ToString("X")}.");
+                Terminal.WriteLine($"Protection change failed at 0x{lpBaseAddress.ToString("X")}.");
 
             return lpflOldProtect;
         }

@@ -2,16 +2,16 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GameX.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="FPSMode" Description="Update Mode for the Engine" Type="System.Int32" Scope="User">
+    <Setting Name="UpdateRate" Description="Update Mode for the Engine" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1</Value>
     </Setting>
     <Setting Name="NickName" Description="The networked NickName for the user" Type="System.String" Scope="User">
       <Value Profile="(Default)">NickName</Value>
     </Setting>
-    <Setting Name="Skin" Type="System.String" Scope="User">
+    <Setting Name="Skin" Description="Sets the skin scheme for the application." Type="System.String" Scope="User">
       <Value Profile="(Default)">The Bezier</Value>
     </Setting>
-    <Setting Name="Pallete" Type="System.String" Scope="User">
+    <Setting Name="Pallete" Description="Sets the color scheme for the skin applied." Type="System.String" Scope="User">
       <Value Profile="(Default)">VS Dark</Value>
     </Setting>
   </Settings>

@@ -284,7 +284,7 @@ namespace GameX
 
         private void Configuration_Save(object sender, EventArgs e)
         {
-            Properties.Settings.Default.FPSMode = UpdateModeComboBoxEdit.SelectedIndex;
+            Properties.Settings.Default.UpdateRate = UpdateModeComboBoxEdit.SelectedIndex;
             Properties.Settings.Default.NickName = NickNameTextEdit.Text;
             Properties.Settings.Default.Skin = UserLookAndFeel.Default.ActiveSkinName;
             Properties.Settings.Default.Pallete = UserLookAndFeel.Default.ActiveSvgPaletteName;
@@ -295,7 +295,7 @@ namespace GameX
 
         private void Configuration_Load(object sender, EventArgs e)
         {
-            UpdateModeComboBoxEdit.SelectedIndex = Properties.Settings.Default.FPSMode;
+            UpdateModeComboBoxEdit.SelectedIndex = Properties.Settings.Default.UpdateRate;
             NickNameTextEdit.Text = Properties.Settings.Default.NickName;
 
             foreach (ListItem Skin in SkinComboBoxEdit.Properties.Items)
@@ -312,8 +312,6 @@ namespace GameX
                         PaletteComboBoxEdit.SelectedItem = Pallete;
                 }
             }
-
-            UserLookAndFeel.Default.SetSkinStyle(Properties.Settings.Default.Skin, Properties.Settings.Default.Pallete);
 
             Terminal.WriteLine("Settings Loaded.");
         }

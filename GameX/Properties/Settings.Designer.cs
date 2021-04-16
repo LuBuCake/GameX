@@ -30,12 +30,12 @@ namespace GameX.Properties {
         [global::System.Configuration.SettingsDescriptionAttribute("Update Mode for the Engine")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public int FPSMode {
+        public int UpdateRate {
             get {
-                return ((int)(this["FPSMode"]));
+                return ((int)(this["UpdateRate"]));
             }
             set {
-                this["FPSMode"] = value;
+                this["UpdateRate"] = value;
             }
         }
         
@@ -55,7 +55,11 @@ namespace GameX.Properties {
             }
         }
         
+        /// <summary>
+        /// Sets the skin scheme for the application.
+        /// </summary>
         [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsDescriptionAttribute("Sets the skin scheme for the application.")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("The Bezier")]
         public string Skin {
@@ -67,7 +71,11 @@ namespace GameX.Properties {
             }
         }
         
+        /// <summary>
+        /// Sets the color scheme for the skin applied.
+        /// </summary>
         [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsDescriptionAttribute("Sets the color scheme for the skin applied.")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("VS Dark")]
         public string Pallete {

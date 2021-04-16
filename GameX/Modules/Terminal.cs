@@ -57,7 +57,7 @@ namespace GameX.Modules
                         return true;
                     }
 
-                    if (!Main.Game.InGame() || Main.Game.ActivePlayers() < Player)
+                    if (!Main.Game.Players[Player - 1].IsActive())
                     {
                         WriteLine("The selected player is not present.");
                         return true;
@@ -94,7 +94,7 @@ namespace GameX.Modules
                             return true;
                         }
 
-                        if (Main.Game.Players[Player - 1].GetBaseAddress() == 0)
+                        if (!Main.Game.Players[Player - 1].IsActive())
                         {
                             WriteLine("The selected player is not present.");
                             return true;
@@ -137,7 +137,7 @@ namespace GameX.Modules
             else if (Command == "exit")
                 Application.Exit();
             else if (!ProcessGameCommand(Command))
-                WriteLine($"Unknown or incorrect use of command. Type Help to see all available commands and their syntax.");
+                WriteLine("Unknown or incorrect use of command. Type Help to see all available commands and their syntax.");
         }
 
         public static void ValidateInput(object sender, EventArgs e)
