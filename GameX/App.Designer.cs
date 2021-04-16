@@ -37,24 +37,31 @@ namespace GameX
             this.MasterTabControl = new DevExpress.XtraTab.XtraTabControl();
             this.TabPageChar = new DevExpress.XtraTab.XtraTabPage();
             this.TabPageCharGPPlayer4 = new DevExpress.XtraEditors.GroupControl();
+            this.P4UntargetableButton = new DevExpress.XtraEditors.CheckButton();
+            this.P4FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
             this.P4InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P4HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.P4CharPictureBox = new DevExpress.XtraEditors.PictureEdit();
             this.P4CosComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P4CharComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.TabPageCharGPPlayer3 = new DevExpress.XtraEditors.GroupControl();
+            this.P3UntargetableButton = new DevExpress.XtraEditors.CheckButton();
+            this.P3FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
             this.P3InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P3HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.P3CharPictureBox = new DevExpress.XtraEditors.PictureEdit();
             this.P3CosComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P3CharComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.TabPageCharGPPlayer2 = new DevExpress.XtraEditors.GroupControl();
+            this.P2UntargetableButton = new DevExpress.XtraEditors.CheckButton();
+            this.P2FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
             this.P2InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P2HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.P2CharPictureBox = new DevExpress.XtraEditors.PictureEdit();
             this.P2CosComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P2CharComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.TabPageCharGPPlayer1 = new DevExpress.XtraEditors.GroupControl();
+            this.P1UntargetableButton = new DevExpress.XtraEditors.CheckButton();
             this.P1InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P1HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.TabPageSettings = new DevExpress.XtraTab.XtraTabPage();
@@ -72,13 +79,7 @@ namespace GameX
             this.SaveSettingsButton = new DevExpress.XtraEditors.SimpleButton();
             this.AboutGP = new DevExpress.XtraEditors.GroupControl();
             this.AboutMemoEdit = new DevExpress.XtraEditors.MemoEdit();
-            this.P2FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
-            this.P3FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
-            this.P4FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
-            this.P1UntargetableButton = new DevExpress.XtraEditors.CheckButton();
-            this.P2UntargetableButton = new DevExpress.XtraEditors.CheckButton();
-            this.P4UntargetableButton = new DevExpress.XtraEditors.CheckButton();
-            this.P3UntargetableButton = new DevExpress.XtraEditors.CheckButton();
+            this.NetworkGP = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -124,6 +125,7 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.AboutGP)).BeginInit();
             this.AboutGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AboutMemoEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NetworkGP)).BeginInit();
             this.SuspendLayout();
             // 
             // P1CosComboBox
@@ -213,6 +215,30 @@ namespace GameX
             this.TabPageCharGPPlayer4.TabIndex = 21;
             this.TabPageCharGPPlayer4.Text = "Player 4";
             // 
+            // P4UntargetableButton
+            // 
+            this.P4UntargetableButton.AllowFocus = false;
+            this.P4UntargetableButton.Location = new System.Drawing.Point(179, 59);
+            this.P4UntargetableButton.Name = "P4UntargetableButton";
+            this.P4UntargetableButton.Size = new System.Drawing.Size(122, 23);
+            this.P4UntargetableButton.TabIndex = 10;
+            this.P4UntargetableButton.Text = "Untargetable: OFF";
+            this.P4UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
+            this.P4UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P4UntargetableButton.ToolTipTitle = "Untargetable";
+            // 
+            // P4FreezeCharCosButton
+            // 
+            this.P4FreezeCharCosButton.AllowFocus = false;
+            this.P4FreezeCharCosButton.Location = new System.Drawing.Point(102, 149);
+            this.P4FreezeCharCosButton.Name = "P4FreezeCharCosButton";
+            this.P4FreezeCharCosButton.Size = new System.Drawing.Size(53, 23);
+            this.P4FreezeCharCosButton.TabIndex = 9;
+            this.P4FreezeCharCosButton.Text = "Freeze";
+            this.P4FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
+            this.P4FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P4FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
+            // 
             // P4InfiniteHPButton
             // 
             this.P4InfiniteHPButton.AllowFocus = false;
@@ -293,6 +319,30 @@ namespace GameX
             this.TabPageCharGPPlayer3.Size = new System.Drawing.Size(308, 204);
             this.TabPageCharGPPlayer3.TabIndex = 20;
             this.TabPageCharGPPlayer3.Text = "Player 3";
+            // 
+            // P3UntargetableButton
+            // 
+            this.P3UntargetableButton.AllowFocus = false;
+            this.P3UntargetableButton.Location = new System.Drawing.Point(179, 59);
+            this.P3UntargetableButton.Name = "P3UntargetableButton";
+            this.P3UntargetableButton.Size = new System.Drawing.Size(122, 23);
+            this.P3UntargetableButton.TabIndex = 10;
+            this.P3UntargetableButton.Text = "Untargetable: OFF";
+            this.P3UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
+            this.P3UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3UntargetableButton.ToolTipTitle = "Untargetable";
+            // 
+            // P3FreezeCharCosButton
+            // 
+            this.P3FreezeCharCosButton.AllowFocus = false;
+            this.P3FreezeCharCosButton.Location = new System.Drawing.Point(102, 149);
+            this.P3FreezeCharCosButton.Name = "P3FreezeCharCosButton";
+            this.P3FreezeCharCosButton.Size = new System.Drawing.Size(53, 23);
+            this.P3FreezeCharCosButton.TabIndex = 9;
+            this.P3FreezeCharCosButton.Text = "Freeze";
+            this.P3FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
+            this.P3FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
             // 
             // P3InfiniteHPButton
             // 
@@ -375,6 +425,30 @@ namespace GameX
             this.TabPageCharGPPlayer2.TabIndex = 19;
             this.TabPageCharGPPlayer2.Text = "Player 2";
             // 
+            // P2UntargetableButton
+            // 
+            this.P2UntargetableButton.AllowFocus = false;
+            this.P2UntargetableButton.Location = new System.Drawing.Point(179, 59);
+            this.P2UntargetableButton.Name = "P2UntargetableButton";
+            this.P2UntargetableButton.Size = new System.Drawing.Size(122, 23);
+            this.P2UntargetableButton.TabIndex = 9;
+            this.P2UntargetableButton.Text = "Untargetable: OFF";
+            this.P2UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
+            this.P2UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2UntargetableButton.ToolTipTitle = "Untargetable";
+            // 
+            // P2FreezeCharCosButton
+            // 
+            this.P2FreezeCharCosButton.AllowFocus = false;
+            this.P2FreezeCharCosButton.Location = new System.Drawing.Point(102, 149);
+            this.P2FreezeCharCosButton.Name = "P2FreezeCharCosButton";
+            this.P2FreezeCharCosButton.Size = new System.Drawing.Size(53, 23);
+            this.P2FreezeCharCosButton.TabIndex = 8;
+            this.P2FreezeCharCosButton.Text = "Freeze";
+            this.P2FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
+            this.P2FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
+            // 
             // P2InfiniteHPButton
             // 
             this.P2InfiniteHPButton.AllowFocus = false;
@@ -456,6 +530,18 @@ namespace GameX
             this.TabPageCharGPPlayer1.TabIndex = 18;
             this.TabPageCharGPPlayer1.Text = "Player 1";
             // 
+            // P1UntargetableButton
+            // 
+            this.P1UntargetableButton.AllowFocus = false;
+            this.P1UntargetableButton.Location = new System.Drawing.Point(179, 59);
+            this.P1UntargetableButton.Name = "P1UntargetableButton";
+            this.P1UntargetableButton.Size = new System.Drawing.Size(122, 23);
+            this.P1UntargetableButton.TabIndex = 8;
+            this.P1UntargetableButton.Text = "Untargetable: OFF";
+            this.P1UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
+            this.P1UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P1UntargetableButton.ToolTipTitle = "Untargetable";
+            // 
             // P1InfiniteHPButton
             // 
             this.P1InfiniteHPButton.AllowFocus = false;
@@ -486,6 +572,7 @@ namespace GameX
             // 
             // TabPageSettings
             // 
+            this.TabPageSettings.Controls.Add(this.NetworkGP);
             this.TabPageSettings.Controls.Add(this.ConsoleGP);
             this.TabPageSettings.Controls.Add(this.TabPageSettingsGPApp);
             this.TabPageSettings.Name = "TabPageSettings";
@@ -498,7 +585,7 @@ namespace GameX
             this.ConsoleGP.Controls.Add(this.ConsoleInputTextEdit);
             this.ConsoleGP.Location = new System.Drawing.Point(8, 261);
             this.ConsoleGP.Name = "ConsoleGP";
-            this.ConsoleGP.Size = new System.Drawing.Size(621, 165);
+            this.ConsoleGP.Size = new System.Drawing.Size(622, 167);
             this.ConsoleGP.TabIndex = 1;
             this.ConsoleGP.Text = "Console";
             // 
@@ -509,15 +596,14 @@ namespace GameX
             this.ConsoleOutputMemoEdit.Properties.AllowFocused = false;
             this.ConsoleOutputMemoEdit.Properties.ReadOnly = true;
             this.ConsoleOutputMemoEdit.Properties.UseReadOnlyAppearance = false;
-            this.ConsoleOutputMemoEdit.Properties.WordWrap = false;
-            this.ConsoleOutputMemoEdit.Size = new System.Drawing.Size(611, 104);
+            this.ConsoleOutputMemoEdit.Size = new System.Drawing.Size(611, 106);
             this.ConsoleOutputMemoEdit.TabIndex = 2;
             this.ConsoleOutputMemoEdit.TabStop = false;
             // 
             // ConsoleInputTextEdit
             // 
             this.ConsoleInputTextEdit.CausesValidation = false;
-            this.ConsoleInputTextEdit.Location = new System.Drawing.Point(5, 140);
+            this.ConsoleInputTextEdit.Location = new System.Drawing.Point(5, 142);
             this.ConsoleInputTextEdit.Name = "ConsoleInputTextEdit";
             this.ConsoleInputTextEdit.Properties.ValidateOnEnterKey = true;
             this.ConsoleInputTextEdit.Size = new System.Drawing.Size(611, 20);
@@ -637,8 +723,8 @@ namespace GameX
             // AboutMemoEdit
             // 
             this.AboutMemoEdit.EditValue = "GameX for Resident Evil 5 - Build 1.0.0.0\r\n\r\nAutor / Programmer: Sr. Wesky (LuBuC" +
-    "ake)\r\nTesting / Suport Team: sorryjess and Huskya\r\nDesign: DevExpress (https://w" +
-    "ww.devexpress.com/)";
+    "ake)\r\nTesting Team: sorryjess and Huskya\r\nDesign: DevExpress (https://www.devexp" +
+    "ress.com/)";
             this.AboutMemoEdit.Location = new System.Drawing.Point(5, 5);
             this.AboutMemoEdit.Name = "AboutMemoEdit";
             this.AboutMemoEdit.Properties.AllowFocused = false;
@@ -653,89 +739,13 @@ namespace GameX
             this.AboutMemoEdit.TabIndex = 3;
             this.AboutMemoEdit.TabStop = false;
             // 
-            // P2FreezeCharCosButton
+            // NetworkGP
             // 
-            this.P2FreezeCharCosButton.AllowFocus = false;
-            this.P2FreezeCharCosButton.Location = new System.Drawing.Point(102, 149);
-            this.P2FreezeCharCosButton.Name = "P2FreezeCharCosButton";
-            this.P2FreezeCharCosButton.Size = new System.Drawing.Size(53, 23);
-            this.P2FreezeCharCosButton.TabIndex = 8;
-            this.P2FreezeCharCosButton.Text = "Freeze";
-            this.P2FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
-            this.P2FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
-            // 
-            // P3FreezeCharCosButton
-            // 
-            this.P3FreezeCharCosButton.AllowFocus = false;
-            this.P3FreezeCharCosButton.Location = new System.Drawing.Point(102, 149);
-            this.P3FreezeCharCosButton.Name = "P3FreezeCharCosButton";
-            this.P3FreezeCharCosButton.Size = new System.Drawing.Size(53, 23);
-            this.P3FreezeCharCosButton.TabIndex = 9;
-            this.P3FreezeCharCosButton.Text = "Freeze";
-            this.P3FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
-            this.P3FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
-            // 
-            // P4FreezeCharCosButton
-            // 
-            this.P4FreezeCharCosButton.AllowFocus = false;
-            this.P4FreezeCharCosButton.Location = new System.Drawing.Point(102, 149);
-            this.P4FreezeCharCosButton.Name = "P4FreezeCharCosButton";
-            this.P4FreezeCharCosButton.Size = new System.Drawing.Size(53, 23);
-            this.P4FreezeCharCosButton.TabIndex = 9;
-            this.P4FreezeCharCosButton.Text = "Freeze";
-            this.P4FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
-            this.P4FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P4FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
-            // 
-            // P1UntargetableButton
-            // 
-            this.P1UntargetableButton.AllowFocus = false;
-            this.P1UntargetableButton.Location = new System.Drawing.Point(179, 59);
-            this.P1UntargetableButton.Name = "P1UntargetableButton";
-            this.P1UntargetableButton.Size = new System.Drawing.Size(122, 23);
-            this.P1UntargetableButton.TabIndex = 8;
-            this.P1UntargetableButton.Text = "Untargetable: OFF";
-            this.P1UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
-            this.P1UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P1UntargetableButton.ToolTipTitle = "Untargetable";
-            // 
-            // P2UntargetableButton
-            // 
-            this.P2UntargetableButton.AllowFocus = false;
-            this.P2UntargetableButton.Location = new System.Drawing.Point(179, 59);
-            this.P2UntargetableButton.Name = "P2UntargetableButton";
-            this.P2UntargetableButton.Size = new System.Drawing.Size(122, 23);
-            this.P2UntargetableButton.TabIndex = 9;
-            this.P2UntargetableButton.Text = "Untargetable: OFF";
-            this.P2UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
-            this.P2UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2UntargetableButton.ToolTipTitle = "Untargetable";
-            // 
-            // P4UntargetableButton
-            // 
-            this.P4UntargetableButton.AllowFocus = false;
-            this.P4UntargetableButton.Location = new System.Drawing.Point(179, 59);
-            this.P4UntargetableButton.Name = "P4UntargetableButton";
-            this.P4UntargetableButton.Size = new System.Drawing.Size(122, 23);
-            this.P4UntargetableButton.TabIndex = 10;
-            this.P4UntargetableButton.Text = "Untargetable: OFF";
-            this.P4UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
-            this.P4UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P4UntargetableButton.ToolTipTitle = "Untargetable";
-            // 
-            // P3UntargetableButton
-            // 
-            this.P3UntargetableButton.AllowFocus = false;
-            this.P3UntargetableButton.Location = new System.Drawing.Point(179, 59);
-            this.P3UntargetableButton.Name = "P3UntargetableButton";
-            this.P3UntargetableButton.Size = new System.Drawing.Size(122, 23);
-            this.P3UntargetableButton.TabIndex = 10;
-            this.P3UntargetableButton.Text = "Untargetable: OFF";
-            this.P3UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
-            this.P3UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3UntargetableButton.ToolTipTitle = "Untargetable";
+            this.NetworkGP.Location = new System.Drawing.Point(322, 10);
+            this.NetworkGP.Name = "NetworkGP";
+            this.NetworkGP.Size = new System.Drawing.Size(308, 241);
+            this.NetworkGP.TabIndex = 2;
+            this.NetworkGP.Text = "Network";
             // 
             // App
             // 
@@ -796,6 +806,7 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.AboutGP)).EndInit();
             this.AboutGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AboutMemoEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NetworkGP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -850,6 +861,7 @@ namespace GameX
         private DevExpress.XtraEditors.CheckButton P3UntargetableButton;
         private DevExpress.XtraEditors.CheckButton P2UntargetableButton;
         private DevExpress.XtraEditors.CheckButton P1UntargetableButton;
+        private DevExpress.XtraEditors.GroupControl NetworkGP;
     }
 }
 

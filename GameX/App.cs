@@ -12,11 +12,13 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace GameX
 {
     public partial class App : XtraForm
     {
+        private Messager Peaker { get; set; }
         private Stopwatch FrameElapser { get; set; }
         private Stopwatch CurTimeElapser { get; set; }
         public double FrameTime { get; private set; }
@@ -57,41 +59,42 @@ namespace GameX
 
         private void Application_ApplicationExit(object sender, EventArgs e)
         {
-            if (pProcess != null)
+            if (TargetProcess != null)
             {
                 if (Initialized)
                     GameX_End();
 
-                pProcess.Exited += null;
-                pProcess.EnableRaisingEvents = false;
+                TargetProcess.Exited += null;
+                TargetProcess.EnableRaisingEvents = false;
             }
 
             Kernel?.Dispose();
+            TargetProcess?.Dispose();
             Keyboard.RemoveHook();
             Application.Idle += null;
         }
 
         /*App Handlers*/
-
-        private Messager Peaker { get; }
-        private Process pProcess { get; set; }
+        
+        private Process TargetProcess { get; set; }
         public Memory Kernel { get; private set; }
+        public bool Verified { get; private set; }
         public bool Initialized { get; private set; }
 
-        private string TargetProcess = "re5dx9";
-        private string TargetVersion = "1.0.0.129";
-        private string[] TargetModulesCheck = { "steam_api.dll", "maluc.dll" };
+        private string GameX_Target = "re5dx9";
+        private string GameX_TargetVersion = "1.0.0.129";
+        private string[] GameX_TargetModules = { "steam_api.dll", "maluc.dll" };
 
         private bool ValidateTarget(Process process)
         {
             try
             {
-                if (TargetVersion != "" && (process.MainModule == null || !process.MainModule.FileVersionInfo.ToString().Contains(TargetVersion)))
+                if (GameX_TargetVersion != "" && (process.MainModule == null || !process.MainModule.FileVersionInfo.ToString().Contains(GameX_TargetVersion)))
                     return false;
 
-                if (TargetModulesCheck.Length > 0)
+                if (GameX_TargetModules.Length > 0)
                 {
-                    if (TargetModulesCheck.Any(Module => !Processes.ProcessHasModule(process, Module)))
+                    if (GameX_TargetModules.Any(Module => !Processes.ProcessHasModule(process, Module)))
                     {
                         return false;
                     }
@@ -107,55 +110,64 @@ namespace GameX
 
         private bool HandleProcess()
         {
-            if (pProcess == null)
+            if (TargetProcess == null)
             {
-                pProcess = Processes.GetProcessByName(TargetProcess);
+                TargetProcess = Processes.GetProcessByName(GameX_Target);
+                Verified = false;
                 Initialized = false;
-                Text = "GameX - Resident Evil 5 / Biohazard 5 - Waiting";
+                Text = "GameX - Resident Evil 5 / Biohazard 5 - Waiting game";
+
+                if (TargetProcess != null)
+                {
+                    Terminal.WriteLine("Game found, validating.");
+                    Text = "GameX - Resident Evil 5 / Biohazard 5 - Validanting";
+                }
             }
             else
             {
-                if (Initialized)
-                    return Initialized;
+                if (Verified || !TargetProcess.WaitForInputIdle())
+                    return Verified;
 
-                if (!pProcess.Responding)
+                if (ValidateTarget(TargetProcess))
                 {
-                    Text = "GameX - Resident Evil 5 / Biohazard 5 - Validating process response";
-                    return Initialized;
-                }
+                    Terminal.WriteLine("Game validated.");
 
-                if (ValidateTarget(pProcess))
-                {
-                    Terminal.WriteLine("Process validated, initializing modules.");
-
-                    pProcess.EnableRaisingEvents = true;
-                    pProcess.Exited += ClearRuntime;
-                    Kernel = new Memory(pProcess);
-                    Initialized = true;
-                    Text = "GameX - Resident Evil 5 / Biohazard 5 - " + (Kernel.DebugMode ? "Running in Admin Mode" : "Running in User Mode");
+                    TargetProcess.EnableRaisingEvents = true;
+                    TargetProcess.Exited += Process_Exited;
+                    Kernel = new Memory(TargetProcess);
                     CheckDebugModeControls(Kernel.DebugMode);
                     GameX_Start();
+                    Verified = true;
+                    Initialized = true;
+                    Text = "GameX - Resident Evil 5 / Biohazard 5 - " + (Kernel.DebugMode ? "Running in Admin Mode" : "Running in User Mode");
                 }
                 else
                 {
-                    pProcess.Dispose();
-                    pProcess = null;
-                    Text = "GameX - Resident Evil 5 / Biohazard 5 - Incompatible Version";
+                    Terminal.WriteLine("Failed validating, unsupported version.");
+                    Terminal.WriteLine("Follow the guide on https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
+
+                    TargetProcess.EnableRaisingEvents = true;
+                    TargetProcess.Exited += Process_Exited;
+                    Verified = true;
+                    Initialized = false;
+                    Text = "GameX - Resident Evil 5 / Biohazard 5 - Unsupported Version";
                 }
             }
 
-            return Initialized;
+            return Verified;
         }
 
-        private void ClearRuntime(object sender, EventArgs e)
+        public void Process_Exited(object sender, EventArgs e)
         {
-            Kernel.Dispose();
+            Kernel?.Dispose();
             Kernel = null;
-            pProcess.Dispose();
-            pProcess = null;
+            TargetProcess?.Dispose();
+            TargetProcess = null;
+            Verified = false;
             Initialized = false;
 
-            Terminal.WriteLine("Process closed, runtime cleared successfully.");
+            Terminal.WriteLine("Runtime cleared successfully.");
+            Terminal.WriteLine("Waiting game.");
         }
 
         private void Think()
@@ -178,7 +190,7 @@ namespace GameX
                 FramesPerSecond = 1.0 / Elapsed.TotalSeconds;
                 FrameTime = 1.0 / FramesPerSecond;
 
-                if (HandleProcess())
+                if (HandleProcess() && Initialized)
                     GameX_Update();
             }
         }
@@ -224,9 +236,9 @@ namespace GameX
             CheckButton[] Untargetable =
             {
                 P1UntargetableButton,
-                P1UntargetableButton,
-                P1UntargetableButton,
-                P1UntargetableButton
+                P2UntargetableButton,
+                P3UntargetableButton,
+                P4UntargetableButton
             };
 
             #endregion
@@ -261,6 +273,7 @@ namespace GameX
 
             Terminal.WriteLine("App initialized.");
             Configuration_Load(null, null);
+            Terminal.WriteLine("Waiting game.");
         }
 
         private void Configuration_Save(object sender, EventArgs e)
@@ -385,7 +398,7 @@ namespace GameX
             if (!CB.Checked && CB.Text.Contains("ON"))
                 CB.Text = CB.Text.Replace("ON", "OFF");
 
-            if (CB.Name.Contains("Untargetable") && !CB.Checked)
+            if (Initialized && CB.Name.Contains("Untargetable") && !CB.Checked)
             {
                 int Player = int.Parse(CB.Name[1].ToString());
                 Game.Players[Player].SetUntargetable(false);
@@ -914,9 +927,9 @@ namespace GameX
             CheckButton[] Untargetable =
             {
                 P1UntargetableButton,
-                P1UntargetableButton,
-                P1UntargetableButton,
-                P1UntargetableButton
+                P2UntargetableButton,
+                P3UntargetableButton,
+                P4UntargetableButton
             };
 
             #endregion

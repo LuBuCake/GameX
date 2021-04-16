@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("GameX")]
 [assembly: AssemblyDescription("Hack in new features to play with!")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Singullaritys")]
+[assembly: AssemblyCompany("LuBuCake")]
 [assembly: AssemblyProduct("GameX")]
 [assembly: AssemblyCopyright("Copyright © LuBuCake  2021")]
 [assembly: AssemblyTrademark("")]

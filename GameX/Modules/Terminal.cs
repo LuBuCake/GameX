@@ -21,17 +21,18 @@ namespace GameX.Modules
         {
             string[] Commands =
             {
-                "OBS: Commands must be written without any spaces.",
-                "Engine Commands: ",
-                "clear - Clears the console output.",
-                "help - Shows all available commands.",
-                "fps - Shows the current FPS.",
-                "frametime - Shows the last frametime.",
-                "curtime - Shows the elapsed time in seconds since the program opened",
-                "exit - Closes the App.",
+                "OBS: Commands must be typed without any spaces." + Environment.NewLine,
+                "App Commands: ",
+                "Reinject - Clears both App and Game edits and performs a reinject in the Game's process.",
+                "Clear - Clears the console output.",
+                "Help - Shows all available commands.",
+                "FPS - Shows the current FPS.",
+                "FrameTime - Shows the last frametime.",
+                "CurTime - Shows the elapsed time in seconds since the program opened",
+                "Exit - Closes the App." + Environment.NewLine,
                 "Game Commands: ",
-                "gethealth p1/p2/p3/p4 - Gets the current health for the respective player.",
-                "sethealth p1/p2/p3/p4 value - Sets the health for the respective player, this needs to be set between 0 and 1000."
+                "GetHealth p1/p2/p3/p4 - Gets the current health for the respective player.",
+                "SetHealth p1/p2/p3/p4 Value - Sets the health for the respective player, this needs to be set between 0 and 1000."
             };
 
             foreach(string Command in Commands)
@@ -49,7 +50,15 @@ namespace GameX.Modules
                 }
 
                 if (Command[9] == 'p' && int.TryParse(Command[10].ToString(), out int Player))
-                    WriteLine($"{Main.Game.Players[Player-1].GetHealth()}");
+                {
+                    if (!Main.Game.InGame() || Main.Game.ActivePlayers() < Player)
+                    {
+                        WriteLine("The selected player is not present.");
+                        return true;
+                    }
+
+                    WriteLine($"{Main.Game.Players[Player - 1].GetHealth()}");
+                }
                 else
                     return false;
 
@@ -67,6 +76,18 @@ namespace GameX.Modules
                 {
                     if (int.TryParse(Command.Substring(11, Command.Length - 11), out int HP))
                     {
+                        if (Main.Game.GetActiveGameMode() == "Versus")
+                        {
+                            WriteLine("Versus mode detected, operation ignored.");
+                            return true;
+                        }
+
+                        if (!Main.Game.InGame() || Main.Game.ActivePlayers() < Player)
+                        {
+                            WriteLine("The selected player is not present.");
+                            return true;
+                        }
+
                         Main.Game.Players[Player - 1].SetHealth((short)HP);
                         WriteLine($"Player {Player} health set to {HP}.");
                     }
@@ -84,25 +105,27 @@ namespace GameX.Modules
 
         private static void ProcessCommand(string Command)
         {
-            WriteLine(Command);
-
             Command = Command.ToLower();
             Command = Command.Trim();
 
-            if (Command == "clear")
+            WriteLine(Command);
+
+            if (Command == "reinject")
+                Main.Process_Exited(null, null);
+            else if (Command == "clear")
                 Clear();
             else if (Command == "help")
                 ShowCommands();
             else if (Command == "fps")
-                WriteLine(Main.FramesPerSecond.ToString());
+                WriteLine(Main.FramesPerSecond.ToString().Substring(0, 5));
             else if (Command == "frametime")
-                WriteLine(Main.FrameTime.ToString());
+                WriteLine(Main.FrameTime.ToString().Substring(0, 5));
             else if (Command == "curtime")
-                WriteLine(Main.CurTime.ToString());
+                WriteLine(((int)Main.CurTime).ToString());
             else if (Command == "exit")
                 Application.Exit();
             else if (!ProcessGameCommand(Command))
-                WriteLine($"Unknown or incorrect use of command. Type help to see all available commands and their syntax.");
+                WriteLine($"Unknown or incorrect use of command. Type Help to see all available commands and their syntax.");
         }
 
         public static void ValidateInput(object sender, EventArgs e)
