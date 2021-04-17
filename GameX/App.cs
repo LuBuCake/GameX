@@ -217,6 +217,22 @@ namespace GameX
                 P4CosComboBox
             };
 
+            ComboBoxEdit[] Handness =
+            {
+                P1HandnessComboBox,
+                P2HandnessComboBox,
+                P3HandnessComboBox,
+                P4HandnessComboBox
+            };
+
+            ComboBoxEdit[] WeaponMode =
+            {
+                P1WeaponModeComboBox,
+                P2WeaponModeComboBox,
+                P3WeaponModeComboBox,
+                P4WeaponModeComboBox
+            };
+
             CheckButton[] CharCosFreezes =
             {
                 P1FreezeCharCosButton,
@@ -241,6 +257,22 @@ namespace GameX
                 P4UntargetableButton
             };
 
+            CheckButton[] InfiniteAmmo =
+            {
+                P1InfiniteAmmoButton,
+                P2InfiniteAmmoButton,
+                P3InfiniteAmmoButton,
+                P4InfiniteAmmoButton
+            };
+
+            CheckButton[] Rapidfire =
+            {
+                P1RapidfireButton,
+                P2RapidfireButton,
+                P3RapidfireButton,
+                P4RapidfireButton
+            };
+
             #endregion
 
             for (int Index = 0; Index < CharacterCombos.Length; Index++)
@@ -254,21 +286,30 @@ namespace GameX
                     CharacterCombos[Index].Properties.Items.Add(Char);
                 }
 
+                WeaponMode[Index].Properties.Items.AddRange(Variables.WeaponMode());
+                Handness[Index].Properties.Items.AddRange(Variables.Handness());
+
                 CharCosFreezes[Index].CheckedChanged += CharCosFreeze_CheckedChanged;
                 InfiniteHP[Index].CheckedChanged += OnOff_CheckedChanged;
                 Untargetable[Index].CheckedChanged += OnOff_CheckedChanged;
+                InfiniteAmmo[Index].CheckedChanged += OnOff_CheckedChanged;
+                Rapidfire[Index].CheckedChanged += OnOff_CheckedChanged;
 
                 CharacterCombos[Index].SelectedIndexChanged += CharComboBox_IndexChanged;
                 CostumeCombos[Index].SelectedIndexChanged += CosComboBox_IndexChanged;
+                WeaponMode[Index].SelectedIndexChanged += WeaponMode_IndexChanged;
+                Handness[Index].SelectedIndexChanged += Handness_IndexChanged;
 
                 CharacterCombos[Index].SelectedIndex = 0;
+                WeaponMode[Index].SelectedIndex = 0;
+                Handness[Index].SelectedIndex = 0;
             }
 
             UpdateModeComboBoxEdit.Properties.Items.AddRange(Rates.Available());
             UpdateModeComboBoxEdit.SelectedIndexChanged += UpdateMode_IndexChanged;
             UpdateModeComboBoxEdit.SelectedIndex = 1;
 
-            SkinComboBoxEdit.Properties.Items.AddRange(Skins.AllSkins());
+            SkinComboBoxEdit.Properties.Items.AddRange(Design.AllSkins());
             SkinComboBoxEdit.SelectedIndexChanged += Skin_IndexChanged;
             SkinComboBoxEdit.SelectedIndex = 0;
 
@@ -350,7 +391,7 @@ namespace GameX
 
             if (Skin == "The Bezier" || Skin == "Basic" || Skin == "Office 2019 Colorful" || Skin == "Office 2019 Black" || Skin == "Office 2019 White")
             {
-                ListItem[] AllPallets = Skins.AllPaletts(SkinComboBoxEdit.Text);
+                ListItem[] AllPallets = Design.AllPaletts(SkinComboBoxEdit.Text);
 
                 PaletteComboBoxEdit.Enabled = true;
                 PaletteComboBoxEdit.Properties.Items.AddRange(AllPallets);
@@ -430,6 +471,28 @@ namespace GameX
             }
         }
 
+        private void WeaponMode_IndexChanged(object sender, EventArgs e)
+        {
+            if (!Initialized)
+                return;
+
+            ComboBoxEdit CBE = sender as ComboBoxEdit;
+            int Index = int.Parse(CBE.Name[1].ToString()) - 1;
+
+            Game.Players[Index].SetWeaponMode(CBE.SelectedIndex != 0 ? new byte[] { (byte)(CBE.SelectedItem as ListItem).Value } : new byte[] { (byte)Game.Players[Index].GetDefaultWeaponMode() });
+        }
+
+        private void Handness_IndexChanged(object sender, EventArgs e)
+        {
+            if (!Initialized)
+                return;
+
+            ComboBoxEdit CBE = sender as ComboBoxEdit;
+            int Index = int.Parse(CBE.Name[1].ToString()) - 1;
+
+            Game.Players[Index].SetHandness(CBE.SelectedIndex != 0 ? new byte[] { (byte)(CBE.SelectedItem as ListItem).Value } : new byte[] { (byte)Game.Players[Index].GetDefaultHandness() });
+        }
+
         private void CharCosFreeze_CheckedChanged(object sender, EventArgs e)
         {
             CheckButton CKBTN = sender as CheckButton;
@@ -454,7 +517,7 @@ namespace GameX
 
             if (Initialized && CB.Name.Contains("Untargetable") && !CB.Checked)
             {
-                int Player = int.Parse(CB.Name[1].ToString());
+                int Player = int.Parse(CB.Name[1].ToString()) - 1;
                 Game.Players[Player].SetUntargetable(false);
             }
         }
@@ -962,6 +1025,22 @@ namespace GameX
                 P4CosComboBox
             };
 
+            ComboBoxEdit[] Handness =
+            {
+                P1HandnessComboBox,
+                P2HandnessComboBox,
+                P3HandnessComboBox,
+                P4HandnessComboBox
+            };
+
+            ComboBoxEdit[] WeaponMode =
+            {
+                P1WeaponModeComboBox,
+                P2WeaponModeComboBox,
+                P3WeaponModeComboBox,
+                P4WeaponModeComboBox
+            };
+
             CheckButton[] CheckButtons =
             {
                 P1FreezeCharCosButton,
@@ -1016,6 +1095,14 @@ namespace GameX
 
                 // Player Name //
                 PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (Game.InGame() ? ((i == Game.LocalPlayer()) ? Game.LocalPlayerNick() : (PlayerPresent ? (Game.Players[i].IsAI() ? "CPU AI" : "Connected") : "Disconnected")) : "Disconnected");
+
+                // Handness //
+                if (Handness[i].SelectedIndex > 0 && PlayerPresent)
+                    Game.Players[i].SetHandness(new byte[] { (byte)(Handness[i].SelectedItem as ListItem).Value });
+
+                // Weapon Mode //
+                if (WeaponMode[i].SelectedIndex > 0 && PlayerPresent)
+                    Game.Players[i].SetWeaponMode(new byte[] { (byte)(WeaponMode[i].SelectedItem as ListItem).Value });
 
                 if (Game.GetActiveGameMode() == "Versus")
                     continue;

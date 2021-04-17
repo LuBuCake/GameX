@@ -66,5 +66,49 @@ namespace GameX.Game.Modules
         {
             return Main.Kernel.ReadInt32("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2DA8) != 0;
         }
+
+        public int GetDefaultHandness()
+        {
+            Tuple<int, int> Char = GetCharacter();
+
+            switch (Char.Item1)
+            {
+                case 1:
+                    return 1;
+                default:
+                    return 0;
+            }
+        }
+
+        public int GetDefaultWeaponMode()
+        {
+            Tuple<int, int> Char = GetCharacter();
+
+            switch (Char.Item1)
+            {
+                case 0:
+                case 3:
+                case 4:
+                case 6:
+                case 134:
+                    return 0;
+                default:
+                    return 1;
+            }
+        }
+
+        public void SetHandness(byte[] Mode)
+        {
+            // 0 = Right 1 = Left
+
+            Main.Kernel.WriteBytes(Mode, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1AF9);
+        }
+
+        public void SetWeaponMode(byte[] Mode)
+        {
+            // 0 = Male 1 = Female
+
+            Main.Kernel.WriteBytes(Mode, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1AF8);
+        }
     }
 }

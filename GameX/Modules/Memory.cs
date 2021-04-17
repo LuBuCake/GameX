@@ -198,10 +198,6 @@ namespace GameX.Modules
             return ReadRawAddress(ReadPointer(ModuleName, BaseAddress, Offsets), NumOfBytes);
         }
 
-        public byte ReadInt8(string ModuleName, int BaseAddress, params int[] Offsets)
-        {
-            return ReadRawAddress(ReadPointer(ModuleName, BaseAddress, Offsets), 1)[0];
-        }
         public short ReadInt16(string ModuleName, int BaseAddress, params int[] Offsets)
         {
             byte[] result = ReadRawAddress(ReadPointer(ModuleName, BaseAddress, Offsets), 2);
@@ -230,12 +226,6 @@ namespace GameX.Modules
         {
             int Address = ReadPointer(ModuleName, BaseAddress, Offsets);
             WriteRawAddress(Address, Value);
-        }
-
-        public void WriteInt8(int Value, string ModuleName, int BaseAddress, params int[] Offsets)
-        {
-            int Address = ReadPointer(ModuleName, BaseAddress, Offsets);
-            WriteRawAddress(Address, BitConverter.GetBytes((byte)Value));
         }
 
         public void WriteInt16(int Value, string ModuleName, int BaseAddress, params int[] Offsets)

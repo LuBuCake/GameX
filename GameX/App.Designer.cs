@@ -37,25 +37,19 @@ namespace GameX
             this.MasterTabControl = new DevExpress.XtraTab.XtraTabControl();
             this.TabPageChar = new DevExpress.XtraTab.XtraTabPage();
             this.TabPageCharGPPlayer4 = new DevExpress.XtraEditors.GroupControl();
-            this.P4UntargetableButton = new DevExpress.XtraEditors.CheckButton();
             this.P4FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
-            this.P4InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P4HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.P4CharPictureBox = new DevExpress.XtraEditors.PictureEdit();
             this.P4CosComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P4CharComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.TabPageCharGPPlayer3 = new DevExpress.XtraEditors.GroupControl();
-            this.P3UntargetableButton = new DevExpress.XtraEditors.CheckButton();
             this.P3FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
-            this.P3InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P3HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.P3CharPictureBox = new DevExpress.XtraEditors.PictureEdit();
             this.P3CosComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P3CharComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.TabPageCharGPPlayer2 = new DevExpress.XtraEditors.GroupControl();
-            this.P2UntargetableButton = new DevExpress.XtraEditors.CheckButton();
             this.P2FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
-            this.P2InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P2HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.P2CharPictureBox = new DevExpress.XtraEditors.PictureEdit();
             this.P2CosComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -85,6 +79,40 @@ namespace GameX
             this.SaveSettingsButton = new DevExpress.XtraEditors.SimpleButton();
             this.AboutGP = new DevExpress.XtraEditors.GroupControl();
             this.AboutMemoEdit = new DevExpress.XtraEditors.MemoEdit();
+            this.P1MiscGP = new DevExpress.XtraEditors.GroupControl();
+            this.P1InfiniteAmmoButton = new DevExpress.XtraEditors.CheckButton();
+            this.P1RapidfireButton = new DevExpress.XtraEditors.CheckButton();
+            this.P1HandnessGP = new DevExpress.XtraEditors.GroupControl();
+            this.P1WeaponModeGP = new DevExpress.XtraEditors.GroupControl();
+            this.P1HandnessComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P1WeaponModeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P2MiscGP = new DevExpress.XtraEditors.GroupControl();
+            this.P2WeaponModeGP = new DevExpress.XtraEditors.GroupControl();
+            this.P2WeaponModeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P2HandnessGP = new DevExpress.XtraEditors.GroupControl();
+            this.P2HandnessComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P2InfiniteAmmoButton = new DevExpress.XtraEditors.CheckButton();
+            this.P2RapidfireButton = new DevExpress.XtraEditors.CheckButton();
+            this.P2InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
+            this.P2UntargetableButton = new DevExpress.XtraEditors.CheckButton();
+            this.P3MiscGP = new DevExpress.XtraEditors.GroupControl();
+            this.P3WeaponModeGP = new DevExpress.XtraEditors.GroupControl();
+            this.P3WeaponModeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P3HandnessGP = new DevExpress.XtraEditors.GroupControl();
+            this.P3HandnessComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P3InfiniteAmmoButton = new DevExpress.XtraEditors.CheckButton();
+            this.P3RapidfireButton = new DevExpress.XtraEditors.CheckButton();
+            this.P3InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
+            this.P3UntargetableButton = new DevExpress.XtraEditors.CheckButton();
+            this.P4MiscGP = new DevExpress.XtraEditors.GroupControl();
+            this.P4WeaponModeGP = new DevExpress.XtraEditors.GroupControl();
+            this.P4WeaponModeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P4HandnessGP = new DevExpress.XtraEditors.GroupControl();
+            this.P4HandnessComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P4InfiniteAmmoButton = new DevExpress.XtraEditors.CheckButton();
+            this.P4RapidfireButton = new DevExpress.XtraEditors.CheckButton();
+            this.P4InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
+            this.P4UntargetableButton = new DevExpress.XtraEditors.CheckButton();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -134,6 +162,38 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.AboutGP)).BeginInit();
             this.AboutGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AboutMemoEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P1MiscGP)).BeginInit();
+            this.P1MiscGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P1HandnessGP)).BeginInit();
+            this.P1HandnessGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P1WeaponModeGP)).BeginInit();
+            this.P1WeaponModeGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P1HandnessComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P1WeaponModeComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2MiscGP)).BeginInit();
+            this.P2MiscGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2WeaponModeGP)).BeginInit();
+            this.P2WeaponModeGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2WeaponModeComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2HandnessGP)).BeginInit();
+            this.P2HandnessGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2HandnessComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P3MiscGP)).BeginInit();
+            this.P3MiscGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P3WeaponModeGP)).BeginInit();
+            this.P3WeaponModeGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P3WeaponModeComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P3HandnessGP)).BeginInit();
+            this.P3HandnessGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P3HandnessComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P4MiscGP)).BeginInit();
+            this.P4MiscGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P4WeaponModeGP)).BeginInit();
+            this.P4WeaponModeGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P4WeaponModeComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P4HandnessGP)).BeginInit();
+            this.P4HandnessGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P4HandnessComboBox.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // P1CosComboBox
@@ -209,9 +269,8 @@ namespace GameX
             // 
             // TabPageCharGPPlayer4
             // 
-            this.TabPageCharGPPlayer4.Controls.Add(this.P4UntargetableButton);
+            this.TabPageCharGPPlayer4.Controls.Add(this.P4MiscGP);
             this.TabPageCharGPPlayer4.Controls.Add(this.P4FreezeCharCosButton);
-            this.TabPageCharGPPlayer4.Controls.Add(this.P4InfiniteHPButton);
             this.TabPageCharGPPlayer4.Controls.Add(this.P4HealthBar);
             this.TabPageCharGPPlayer4.Controls.Add(this.P4CharPictureBox);
             this.TabPageCharGPPlayer4.Controls.Add(this.P4CosComboBox);
@@ -222,18 +281,6 @@ namespace GameX
             this.TabPageCharGPPlayer4.Size = new System.Drawing.Size(308, 204);
             this.TabPageCharGPPlayer4.TabIndex = 21;
             this.TabPageCharGPPlayer4.Text = "Player 4";
-            // 
-            // P4UntargetableButton
-            // 
-            this.P4UntargetableButton.AllowFocus = false;
-            this.P4UntargetableButton.Location = new System.Drawing.Point(179, 59);
-            this.P4UntargetableButton.Name = "P4UntargetableButton";
-            this.P4UntargetableButton.Size = new System.Drawing.Size(122, 23);
-            this.P4UntargetableButton.TabIndex = 10;
-            this.P4UntargetableButton.Text = "Untargetable: OFF";
-            this.P4UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
-            this.P4UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P4UntargetableButton.ToolTipTitle = "Untargetable";
             // 
             // P4FreezeCharCosButton
             // 
@@ -246,18 +293,6 @@ namespace GameX
             this.P4FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
             this.P4FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P4FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
-            // 
-            // P4InfiniteHPButton
-            // 
-            this.P4InfiniteHPButton.AllowFocus = false;
-            this.P4InfiniteHPButton.Location = new System.Drawing.Point(179, 30);
-            this.P4InfiniteHPButton.Name = "P4InfiniteHPButton";
-            this.P4InfiniteHPButton.Size = new System.Drawing.Size(122, 23);
-            this.P4InfiniteHPButton.TabIndex = 8;
-            this.P4InfiniteHPButton.Text = "Infinite HP: OFF";
-            this.P4InfiniteHPButton.ToolTip = "Keeps the health at its maximun value, usually 1000.";
-            this.P4InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P4InfiniteHPButton.ToolTipTitle = "Infinite HP";
             // 
             // P4HealthBar
             // 
@@ -314,9 +349,8 @@ namespace GameX
             // 
             // TabPageCharGPPlayer3
             // 
-            this.TabPageCharGPPlayer3.Controls.Add(this.P3UntargetableButton);
+            this.TabPageCharGPPlayer3.Controls.Add(this.P3MiscGP);
             this.TabPageCharGPPlayer3.Controls.Add(this.P3FreezeCharCosButton);
-            this.TabPageCharGPPlayer3.Controls.Add(this.P3InfiniteHPButton);
             this.TabPageCharGPPlayer3.Controls.Add(this.P3HealthBar);
             this.TabPageCharGPPlayer3.Controls.Add(this.P3CharPictureBox);
             this.TabPageCharGPPlayer3.Controls.Add(this.P3CosComboBox);
@@ -327,18 +361,6 @@ namespace GameX
             this.TabPageCharGPPlayer3.Size = new System.Drawing.Size(308, 204);
             this.TabPageCharGPPlayer3.TabIndex = 20;
             this.TabPageCharGPPlayer3.Text = "Player 3";
-            // 
-            // P3UntargetableButton
-            // 
-            this.P3UntargetableButton.AllowFocus = false;
-            this.P3UntargetableButton.Location = new System.Drawing.Point(179, 59);
-            this.P3UntargetableButton.Name = "P3UntargetableButton";
-            this.P3UntargetableButton.Size = new System.Drawing.Size(122, 23);
-            this.P3UntargetableButton.TabIndex = 10;
-            this.P3UntargetableButton.Text = "Untargetable: OFF";
-            this.P3UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
-            this.P3UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3UntargetableButton.ToolTipTitle = "Untargetable";
             // 
             // P3FreezeCharCosButton
             // 
@@ -351,18 +373,6 @@ namespace GameX
             this.P3FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
             this.P3FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P3FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
-            // 
-            // P3InfiniteHPButton
-            // 
-            this.P3InfiniteHPButton.AllowFocus = false;
-            this.P3InfiniteHPButton.Location = new System.Drawing.Point(179, 30);
-            this.P3InfiniteHPButton.Name = "P3InfiniteHPButton";
-            this.P3InfiniteHPButton.Size = new System.Drawing.Size(122, 23);
-            this.P3InfiniteHPButton.TabIndex = 8;
-            this.P3InfiniteHPButton.Text = "Infinite HP: OFF";
-            this.P3InfiniteHPButton.ToolTip = "Keeps the health at its maximun value, usually 1000.";
-            this.P3InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3InfiniteHPButton.ToolTipTitle = "Infinite HP";
             // 
             // P3HealthBar
             // 
@@ -419,9 +429,8 @@ namespace GameX
             // 
             // TabPageCharGPPlayer2
             // 
-            this.TabPageCharGPPlayer2.Controls.Add(this.P2UntargetableButton);
+            this.TabPageCharGPPlayer2.Controls.Add(this.P2MiscGP);
             this.TabPageCharGPPlayer2.Controls.Add(this.P2FreezeCharCosButton);
-            this.TabPageCharGPPlayer2.Controls.Add(this.P2InfiniteHPButton);
             this.TabPageCharGPPlayer2.Controls.Add(this.P2HealthBar);
             this.TabPageCharGPPlayer2.Controls.Add(this.P2CharPictureBox);
             this.TabPageCharGPPlayer2.Controls.Add(this.P2CosComboBox);
@@ -432,18 +441,6 @@ namespace GameX
             this.TabPageCharGPPlayer2.Size = new System.Drawing.Size(308, 204);
             this.TabPageCharGPPlayer2.TabIndex = 19;
             this.TabPageCharGPPlayer2.Text = "Player 2";
-            // 
-            // P2UntargetableButton
-            // 
-            this.P2UntargetableButton.AllowFocus = false;
-            this.P2UntargetableButton.Location = new System.Drawing.Point(179, 59);
-            this.P2UntargetableButton.Name = "P2UntargetableButton";
-            this.P2UntargetableButton.Size = new System.Drawing.Size(122, 23);
-            this.P2UntargetableButton.TabIndex = 9;
-            this.P2UntargetableButton.Text = "Untargetable: OFF";
-            this.P2UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
-            this.P2UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2UntargetableButton.ToolTipTitle = "Untargetable";
             // 
             // P2FreezeCharCosButton
             // 
@@ -456,18 +453,6 @@ namespace GameX
             this.P2FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
             this.P2FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P2FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
-            // 
-            // P2InfiniteHPButton
-            // 
-            this.P2InfiniteHPButton.AllowFocus = false;
-            this.P2InfiniteHPButton.Location = new System.Drawing.Point(179, 30);
-            this.P2InfiniteHPButton.Name = "P2InfiniteHPButton";
-            this.P2InfiniteHPButton.Size = new System.Drawing.Size(122, 23);
-            this.P2InfiniteHPButton.TabIndex = 8;
-            this.P2InfiniteHPButton.Text = "Infinite HP: OFF";
-            this.P2InfiniteHPButton.ToolTip = "Keeps the health at its maximun value, usually 1000.";
-            this.P2InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2InfiniteHPButton.ToolTipTitle = "Infinite HP";
             // 
             // P2HealthBar
             // 
@@ -524,8 +509,7 @@ namespace GameX
             // 
             // TabPageCharGPPlayer1
             // 
-            this.TabPageCharGPPlayer1.Controls.Add(this.P1UntargetableButton);
-            this.TabPageCharGPPlayer1.Controls.Add(this.P1InfiniteHPButton);
+            this.TabPageCharGPPlayer1.Controls.Add(this.P1MiscGP);
             this.TabPageCharGPPlayer1.Controls.Add(this.P1HealthBar);
             this.TabPageCharGPPlayer1.Controls.Add(this.P1CharPictureBox);
             this.TabPageCharGPPlayer1.Controls.Add(this.P1CosComboBox);
@@ -541,11 +525,11 @@ namespace GameX
             // P1UntargetableButton
             // 
             this.P1UntargetableButton.AllowFocus = false;
-            this.P1UntargetableButton.Location = new System.Drawing.Point(179, 59);
+            this.P1UntargetableButton.Location = new System.Drawing.Point(19, 42);
             this.P1UntargetableButton.Name = "P1UntargetableButton";
-            this.P1UntargetableButton.Size = new System.Drawing.Size(122, 23);
+            this.P1UntargetableButton.Size = new System.Drawing.Size(39, 23);
             this.P1UntargetableButton.TabIndex = 8;
-            this.P1UntargetableButton.Text = "Untargetable: OFF";
+            this.P1UntargetableButton.Text = "OFF";
             this.P1UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
             this.P1UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P1UntargetableButton.ToolTipTitle = "Untargetable";
@@ -553,11 +537,11 @@ namespace GameX
             // P1InfiniteHPButton
             // 
             this.P1InfiniteHPButton.AllowFocus = false;
-            this.P1InfiniteHPButton.Location = new System.Drawing.Point(179, 30);
+            this.P1InfiniteHPButton.Location = new System.Drawing.Point(19, 13);
             this.P1InfiniteHPButton.Name = "P1InfiniteHPButton";
-            this.P1InfiniteHPButton.Size = new System.Drawing.Size(122, 23);
+            this.P1InfiniteHPButton.Size = new System.Drawing.Size(39, 23);
             this.P1InfiniteHPButton.TabIndex = 7;
-            this.P1InfiniteHPButton.Text = "Infinite HP: OFF";
+            this.P1InfiniteHPButton.Text = "OFF";
             this.P1InfiniteHPButton.ToolTip = "Keeps the health at its maximun value, usually 1000.";
             this.P1InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P1InfiniteHPButton.ToolTipTitle = "Infinite HP";
@@ -815,6 +799,430 @@ namespace GameX
             this.AboutMemoEdit.TabIndex = 3;
             this.AboutMemoEdit.TabStop = false;
             // 
+            // P1MiscGP
+            // 
+            this.P1MiscGP.Controls.Add(this.P1WeaponModeGP);
+            this.P1MiscGP.Controls.Add(this.P1HandnessGP);
+            this.P1MiscGP.Controls.Add(this.P1InfiniteAmmoButton);
+            this.P1MiscGP.Controls.Add(this.P1RapidfireButton);
+            this.P1MiscGP.Controls.Add(this.P1InfiniteHPButton);
+            this.P1MiscGP.Controls.Add(this.P1UntargetableButton);
+            this.P1MiscGP.Location = new System.Drawing.Point(179, 30);
+            this.P1MiscGP.Name = "P1MiscGP";
+            this.P1MiscGP.ShowCaption = false;
+            this.P1MiscGP.Size = new System.Drawing.Size(122, 168);
+            this.P1MiscGP.TabIndex = 7;
+            // 
+            // P1InfiniteAmmoButton
+            // 
+            this.P1InfiniteAmmoButton.AllowFocus = false;
+            this.P1InfiniteAmmoButton.Location = new System.Drawing.Point(64, 13);
+            this.P1InfiniteAmmoButton.Name = "P1InfiniteAmmoButton";
+            this.P1InfiniteAmmoButton.Size = new System.Drawing.Size(39, 23);
+            this.P1InfiniteAmmoButton.TabIndex = 9;
+            this.P1InfiniteAmmoButton.Text = "OFF";
+            this.P1InfiniteAmmoButton.ToolTip = "Enables the infinite ammoflag for every item in the real-time inventory.";
+            this.P1InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P1InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
+            // 
+            // P1RapidfireButton
+            // 
+            this.P1RapidfireButton.AllowFocus = false;
+            this.P1RapidfireButton.Location = new System.Drawing.Point(64, 42);
+            this.P1RapidfireButton.Name = "P1RapidfireButton";
+            this.P1RapidfireButton.Size = new System.Drawing.Size(39, 23);
+            this.P1RapidfireButton.TabIndex = 10;
+            this.P1RapidfireButton.Text = "OFF";
+            this.P1RapidfireButton.ToolTip = "Enables the rapidfire flag for every item in the real-time inventory.";
+            this.P1RapidfireButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P1RapidfireButton.ToolTipTitle = "Rapidfire";
+            // 
+            // P1HandnessGP
+            // 
+            this.P1HandnessGP.Controls.Add(this.P1HandnessComboBox);
+            this.P1HandnessGP.Location = new System.Drawing.Point(5, 75);
+            this.P1HandnessGP.Name = "P1HandnessGP";
+            this.P1HandnessGP.ShowCaption = false;
+            this.P1HandnessGP.Size = new System.Drawing.Size(112, 41);
+            this.P1HandnessGP.TabIndex = 11;
+            // 
+            // P1WeaponModeGP
+            // 
+            this.P1WeaponModeGP.Controls.Add(this.P1WeaponModeComboBox);
+            this.P1WeaponModeGP.Location = new System.Drawing.Point(5, 122);
+            this.P1WeaponModeGP.Name = "P1WeaponModeGP";
+            this.P1WeaponModeGP.ShowCaption = false;
+            this.P1WeaponModeGP.Size = new System.Drawing.Size(112, 41);
+            this.P1WeaponModeGP.TabIndex = 12;
+            // 
+            // P1HandnessComboBox
+            // 
+            this.P1HandnessComboBox.Location = new System.Drawing.Point(8, 11);
+            this.P1HandnessComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.P1HandnessComboBox.Name = "P1HandnessComboBox";
+            this.P1HandnessComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P1HandnessComboBox.Properties.AllowFocused = false;
+            this.P1HandnessComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P1HandnessComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P1HandnessComboBox.Size = new System.Drawing.Size(96, 20);
+            this.P1HandnessComboBox.TabIndex = 3;
+            this.P1HandnessComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.P1HandnessComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P1HandnessComboBox.ToolTipTitle = "Handness";
+            // 
+            // P1WeaponModeComboBox
+            // 
+            this.P1WeaponModeComboBox.Location = new System.Drawing.Point(8, 10);
+            this.P1WeaponModeComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.P1WeaponModeComboBox.Name = "P1WeaponModeComboBox";
+            this.P1WeaponModeComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P1WeaponModeComboBox.Properties.AllowFocused = false;
+            this.P1WeaponModeComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P1WeaponModeComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P1WeaponModeComboBox.Size = new System.Drawing.Size(96, 20);
+            this.P1WeaponModeComboBox.TabIndex = 4;
+            this.P1WeaponModeComboBox.ToolTip = "Sets the player\'s weapon mode, male or female.";
+            this.P1WeaponModeComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P1WeaponModeComboBox.ToolTipTitle = "Weapon Mode";
+            // 
+            // P2MiscGP
+            // 
+            this.P2MiscGP.Controls.Add(this.P2WeaponModeGP);
+            this.P2MiscGP.Controls.Add(this.P2HandnessGP);
+            this.P2MiscGP.Controls.Add(this.P2InfiniteAmmoButton);
+            this.P2MiscGP.Controls.Add(this.P2RapidfireButton);
+            this.P2MiscGP.Controls.Add(this.P2InfiniteHPButton);
+            this.P2MiscGP.Controls.Add(this.P2UntargetableButton);
+            this.P2MiscGP.Location = new System.Drawing.Point(179, 30);
+            this.P2MiscGP.Name = "P2MiscGP";
+            this.P2MiscGP.ShowCaption = false;
+            this.P2MiscGP.Size = new System.Drawing.Size(122, 168);
+            this.P2MiscGP.TabIndex = 9;
+            // 
+            // P2WeaponModeGP
+            // 
+            this.P2WeaponModeGP.Controls.Add(this.P2WeaponModeComboBox);
+            this.P2WeaponModeGP.Location = new System.Drawing.Point(5, 122);
+            this.P2WeaponModeGP.Name = "P2WeaponModeGP";
+            this.P2WeaponModeGP.ShowCaption = false;
+            this.P2WeaponModeGP.Size = new System.Drawing.Size(112, 41);
+            this.P2WeaponModeGP.TabIndex = 12;
+            // 
+            // P2WeaponModeComboBox
+            // 
+            this.P2WeaponModeComboBox.Location = new System.Drawing.Point(8, 10);
+            this.P2WeaponModeComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.P2WeaponModeComboBox.Name = "P2WeaponModeComboBox";
+            this.P2WeaponModeComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P2WeaponModeComboBox.Properties.AllowFocused = false;
+            this.P2WeaponModeComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2WeaponModeComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2WeaponModeComboBox.Size = new System.Drawing.Size(96, 20);
+            this.P2WeaponModeComboBox.TabIndex = 4;
+            this.P2WeaponModeComboBox.ToolTip = "Sets the player\'s weapon mode, male or female.";
+            this.P2WeaponModeComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2WeaponModeComboBox.ToolTipTitle = "Weapon Mode";
+            // 
+            // P2HandnessGP
+            // 
+            this.P2HandnessGP.Controls.Add(this.P2HandnessComboBox);
+            this.P2HandnessGP.Location = new System.Drawing.Point(5, 75);
+            this.P2HandnessGP.Name = "P2HandnessGP";
+            this.P2HandnessGP.ShowCaption = false;
+            this.P2HandnessGP.Size = new System.Drawing.Size(112, 41);
+            this.P2HandnessGP.TabIndex = 11;
+            // 
+            // P2HandnessComboBox
+            // 
+            this.P2HandnessComboBox.Location = new System.Drawing.Point(8, 11);
+            this.P2HandnessComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.P2HandnessComboBox.Name = "P2HandnessComboBox";
+            this.P2HandnessComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P2HandnessComboBox.Properties.AllowFocused = false;
+            this.P2HandnessComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2HandnessComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2HandnessComboBox.Size = new System.Drawing.Size(96, 20);
+            this.P2HandnessComboBox.TabIndex = 3;
+            this.P2HandnessComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.P2HandnessComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2HandnessComboBox.ToolTipTitle = "Handness";
+            // 
+            // P2InfiniteAmmoButton
+            // 
+            this.P2InfiniteAmmoButton.AllowFocus = false;
+            this.P2InfiniteAmmoButton.Location = new System.Drawing.Point(64, 13);
+            this.P2InfiniteAmmoButton.Name = "P2InfiniteAmmoButton";
+            this.P2InfiniteAmmoButton.Size = new System.Drawing.Size(39, 23);
+            this.P2InfiniteAmmoButton.TabIndex = 9;
+            this.P2InfiniteAmmoButton.Text = "OFF";
+            this.P2InfiniteAmmoButton.ToolTip = "Enables the infinite ammoflag for every item in the real-time inventory.";
+            this.P2InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
+            // 
+            // P2RapidfireButton
+            // 
+            this.P2RapidfireButton.AllowFocus = false;
+            this.P2RapidfireButton.Location = new System.Drawing.Point(64, 42);
+            this.P2RapidfireButton.Name = "P2RapidfireButton";
+            this.P2RapidfireButton.Size = new System.Drawing.Size(39, 23);
+            this.P2RapidfireButton.TabIndex = 10;
+            this.P2RapidfireButton.Text = "OFF";
+            this.P2RapidfireButton.ToolTip = "Enables the rapidfire flag for every item in the real-time inventory.";
+            this.P2RapidfireButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2RapidfireButton.ToolTipTitle = "Rapidfire";
+            // 
+            // P2InfiniteHPButton
+            // 
+            this.P2InfiniteHPButton.AllowFocus = false;
+            this.P2InfiniteHPButton.Location = new System.Drawing.Point(19, 13);
+            this.P2InfiniteHPButton.Name = "P2InfiniteHPButton";
+            this.P2InfiniteHPButton.Size = new System.Drawing.Size(39, 23);
+            this.P2InfiniteHPButton.TabIndex = 7;
+            this.P2InfiniteHPButton.Text = "OFF";
+            this.P2InfiniteHPButton.ToolTip = "Keeps the health at its maximun value, usually 1000.";
+            this.P2InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2InfiniteHPButton.ToolTipTitle = "Infinite HP";
+            // 
+            // P2UntargetableButton
+            // 
+            this.P2UntargetableButton.AllowFocus = false;
+            this.P2UntargetableButton.Location = new System.Drawing.Point(19, 42);
+            this.P2UntargetableButton.Name = "P2UntargetableButton";
+            this.P2UntargetableButton.Size = new System.Drawing.Size(39, 23);
+            this.P2UntargetableButton.TabIndex = 8;
+            this.P2UntargetableButton.Text = "OFF";
+            this.P2UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
+            this.P2UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2UntargetableButton.ToolTipTitle = "Untargetable";
+            // 
+            // P3MiscGP
+            // 
+            this.P3MiscGP.Controls.Add(this.P3WeaponModeGP);
+            this.P3MiscGP.Controls.Add(this.P3HandnessGP);
+            this.P3MiscGP.Controls.Add(this.P3InfiniteAmmoButton);
+            this.P3MiscGP.Controls.Add(this.P3RapidfireButton);
+            this.P3MiscGP.Controls.Add(this.P3InfiniteHPButton);
+            this.P3MiscGP.Controls.Add(this.P3UntargetableButton);
+            this.P3MiscGP.Location = new System.Drawing.Point(179, 30);
+            this.P3MiscGP.Name = "P3MiscGP";
+            this.P3MiscGP.ShowCaption = false;
+            this.P3MiscGP.Size = new System.Drawing.Size(122, 168);
+            this.P3MiscGP.TabIndex = 10;
+            // 
+            // P3WeaponModeGP
+            // 
+            this.P3WeaponModeGP.Controls.Add(this.P3WeaponModeComboBox);
+            this.P3WeaponModeGP.Location = new System.Drawing.Point(5, 122);
+            this.P3WeaponModeGP.Name = "P3WeaponModeGP";
+            this.P3WeaponModeGP.ShowCaption = false;
+            this.P3WeaponModeGP.Size = new System.Drawing.Size(112, 41);
+            this.P3WeaponModeGP.TabIndex = 12;
+            // 
+            // P3WeaponModeComboBox
+            // 
+            this.P3WeaponModeComboBox.Location = new System.Drawing.Point(8, 10);
+            this.P3WeaponModeComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.P3WeaponModeComboBox.Name = "P3WeaponModeComboBox";
+            this.P3WeaponModeComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P3WeaponModeComboBox.Properties.AllowFocused = false;
+            this.P3WeaponModeComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P3WeaponModeComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P3WeaponModeComboBox.Size = new System.Drawing.Size(96, 20);
+            this.P3WeaponModeComboBox.TabIndex = 4;
+            this.P3WeaponModeComboBox.ToolTip = "Sets the player\'s weapon mode, male or female.";
+            this.P3WeaponModeComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3WeaponModeComboBox.ToolTipTitle = "Weapon Mode";
+            // 
+            // P3HandnessGP
+            // 
+            this.P3HandnessGP.Controls.Add(this.P3HandnessComboBox);
+            this.P3HandnessGP.Location = new System.Drawing.Point(5, 75);
+            this.P3HandnessGP.Name = "P3HandnessGP";
+            this.P3HandnessGP.ShowCaption = false;
+            this.P3HandnessGP.Size = new System.Drawing.Size(112, 41);
+            this.P3HandnessGP.TabIndex = 11;
+            // 
+            // P3HandnessComboBox
+            // 
+            this.P3HandnessComboBox.Location = new System.Drawing.Point(8, 11);
+            this.P3HandnessComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.P3HandnessComboBox.Name = "P3HandnessComboBox";
+            this.P3HandnessComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P3HandnessComboBox.Properties.AllowFocused = false;
+            this.P3HandnessComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P3HandnessComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P3HandnessComboBox.Size = new System.Drawing.Size(96, 20);
+            this.P3HandnessComboBox.TabIndex = 3;
+            this.P3HandnessComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.P3HandnessComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3HandnessComboBox.ToolTipTitle = "Handness";
+            // 
+            // P3InfiniteAmmoButton
+            // 
+            this.P3InfiniteAmmoButton.AllowFocus = false;
+            this.P3InfiniteAmmoButton.Location = new System.Drawing.Point(64, 13);
+            this.P3InfiniteAmmoButton.Name = "P3InfiniteAmmoButton";
+            this.P3InfiniteAmmoButton.Size = new System.Drawing.Size(39, 23);
+            this.P3InfiniteAmmoButton.TabIndex = 9;
+            this.P3InfiniteAmmoButton.Text = "OFF";
+            this.P3InfiniteAmmoButton.ToolTip = "Enables the infinite ammoflag for every item in the real-time inventory.";
+            this.P3InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
+            // 
+            // P3RapidfireButton
+            // 
+            this.P3RapidfireButton.AllowFocus = false;
+            this.P3RapidfireButton.Location = new System.Drawing.Point(64, 42);
+            this.P3RapidfireButton.Name = "P3RapidfireButton";
+            this.P3RapidfireButton.Size = new System.Drawing.Size(39, 23);
+            this.P3RapidfireButton.TabIndex = 10;
+            this.P3RapidfireButton.Text = "OFF";
+            this.P3RapidfireButton.ToolTip = "Enables the rapidfire flag for every item in the real-time inventory.";
+            this.P3RapidfireButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3RapidfireButton.ToolTipTitle = "Rapidfire";
+            // 
+            // P3InfiniteHPButton
+            // 
+            this.P3InfiniteHPButton.AllowFocus = false;
+            this.P3InfiniteHPButton.Location = new System.Drawing.Point(19, 13);
+            this.P3InfiniteHPButton.Name = "P3InfiniteHPButton";
+            this.P3InfiniteHPButton.Size = new System.Drawing.Size(39, 23);
+            this.P3InfiniteHPButton.TabIndex = 7;
+            this.P3InfiniteHPButton.Text = "OFF";
+            this.P3InfiniteHPButton.ToolTip = "Keeps the health at its maximun value, usually 1000.";
+            this.P3InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3InfiniteHPButton.ToolTipTitle = "Infinite HP";
+            // 
+            // P3UntargetableButton
+            // 
+            this.P3UntargetableButton.AllowFocus = false;
+            this.P3UntargetableButton.Location = new System.Drawing.Point(19, 42);
+            this.P3UntargetableButton.Name = "P3UntargetableButton";
+            this.P3UntargetableButton.Size = new System.Drawing.Size(39, 23);
+            this.P3UntargetableButton.TabIndex = 8;
+            this.P3UntargetableButton.Text = "OFF";
+            this.P3UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
+            this.P3UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3UntargetableButton.ToolTipTitle = "Untargetable";
+            // 
+            // P4MiscGP
+            // 
+            this.P4MiscGP.Controls.Add(this.P4WeaponModeGP);
+            this.P4MiscGP.Controls.Add(this.P4HandnessGP);
+            this.P4MiscGP.Controls.Add(this.P4InfiniteAmmoButton);
+            this.P4MiscGP.Controls.Add(this.P4RapidfireButton);
+            this.P4MiscGP.Controls.Add(this.P4InfiniteHPButton);
+            this.P4MiscGP.Controls.Add(this.P4UntargetableButton);
+            this.P4MiscGP.Location = new System.Drawing.Point(179, 30);
+            this.P4MiscGP.Name = "P4MiscGP";
+            this.P4MiscGP.ShowCaption = false;
+            this.P4MiscGP.Size = new System.Drawing.Size(122, 168);
+            this.P4MiscGP.TabIndex = 10;
+            // 
+            // P4WeaponModeGP
+            // 
+            this.P4WeaponModeGP.Controls.Add(this.P4WeaponModeComboBox);
+            this.P4WeaponModeGP.Location = new System.Drawing.Point(5, 122);
+            this.P4WeaponModeGP.Name = "P4WeaponModeGP";
+            this.P4WeaponModeGP.ShowCaption = false;
+            this.P4WeaponModeGP.Size = new System.Drawing.Size(112, 41);
+            this.P4WeaponModeGP.TabIndex = 12;
+            // 
+            // P4WeaponModeComboBox
+            // 
+            this.P4WeaponModeComboBox.Location = new System.Drawing.Point(8, 10);
+            this.P4WeaponModeComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.P4WeaponModeComboBox.Name = "P4WeaponModeComboBox";
+            this.P4WeaponModeComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P4WeaponModeComboBox.Properties.AllowFocused = false;
+            this.P4WeaponModeComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P4WeaponModeComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P4WeaponModeComboBox.Size = new System.Drawing.Size(96, 20);
+            this.P4WeaponModeComboBox.TabIndex = 4;
+            this.P4WeaponModeComboBox.ToolTip = "Sets the player\'s weapon mode, male or female.";
+            this.P4WeaponModeComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P4WeaponModeComboBox.ToolTipTitle = "Weapon Mode";
+            // 
+            // P4HandnessGP
+            // 
+            this.P4HandnessGP.Controls.Add(this.P4HandnessComboBox);
+            this.P4HandnessGP.Location = new System.Drawing.Point(5, 75);
+            this.P4HandnessGP.Name = "P4HandnessGP";
+            this.P4HandnessGP.ShowCaption = false;
+            this.P4HandnessGP.Size = new System.Drawing.Size(112, 41);
+            this.P4HandnessGP.TabIndex = 11;
+            // 
+            // P4HandnessComboBox
+            // 
+            this.P4HandnessComboBox.Location = new System.Drawing.Point(8, 11);
+            this.P4HandnessComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.P4HandnessComboBox.Name = "P4HandnessComboBox";
+            this.P4HandnessComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P4HandnessComboBox.Properties.AllowFocused = false;
+            this.P4HandnessComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P4HandnessComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P4HandnessComboBox.Size = new System.Drawing.Size(96, 20);
+            this.P4HandnessComboBox.TabIndex = 3;
+            this.P4HandnessComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.P4HandnessComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P4HandnessComboBox.ToolTipTitle = "Handness";
+            // 
+            // P4InfiniteAmmoButton
+            // 
+            this.P4InfiniteAmmoButton.AllowFocus = false;
+            this.P4InfiniteAmmoButton.Location = new System.Drawing.Point(64, 13);
+            this.P4InfiniteAmmoButton.Name = "P4InfiniteAmmoButton";
+            this.P4InfiniteAmmoButton.Size = new System.Drawing.Size(39, 23);
+            this.P4InfiniteAmmoButton.TabIndex = 9;
+            this.P4InfiniteAmmoButton.Text = "OFF";
+            this.P4InfiniteAmmoButton.ToolTip = "Enables the infinite ammoflag for every item in the real-time inventory.";
+            this.P4InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P4InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
+            // 
+            // P4RapidfireButton
+            // 
+            this.P4RapidfireButton.AllowFocus = false;
+            this.P4RapidfireButton.Location = new System.Drawing.Point(64, 42);
+            this.P4RapidfireButton.Name = "P4RapidfireButton";
+            this.P4RapidfireButton.Size = new System.Drawing.Size(39, 23);
+            this.P4RapidfireButton.TabIndex = 10;
+            this.P4RapidfireButton.Text = "OFF";
+            this.P4RapidfireButton.ToolTip = "Enables the rapidfire flag for every item in the real-time inventory.";
+            this.P4RapidfireButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P4RapidfireButton.ToolTipTitle = "Rapidfire";
+            // 
+            // P4InfiniteHPButton
+            // 
+            this.P4InfiniteHPButton.AllowFocus = false;
+            this.P4InfiniteHPButton.Location = new System.Drawing.Point(19, 13);
+            this.P4InfiniteHPButton.Name = "P4InfiniteHPButton";
+            this.P4InfiniteHPButton.Size = new System.Drawing.Size(39, 23);
+            this.P4InfiniteHPButton.TabIndex = 7;
+            this.P4InfiniteHPButton.Text = "OFF";
+            this.P4InfiniteHPButton.ToolTip = "Keeps the health at its maximun value, usually 1000.";
+            this.P4InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P4InfiniteHPButton.ToolTipTitle = "Infinite HP";
+            // 
+            // P4UntargetableButton
+            // 
+            this.P4UntargetableButton.AllowFocus = false;
+            this.P4UntargetableButton.Location = new System.Drawing.Point(19, 42);
+            this.P4UntargetableButton.Name = "P4UntargetableButton";
+            this.P4UntargetableButton.Size = new System.Drawing.Size(39, 23);
+            this.P4UntargetableButton.TabIndex = 8;
+            this.P4UntargetableButton.Text = "OFF";
+            this.P4UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
+            this.P4UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P4UntargetableButton.ToolTipTitle = "Untargetable";
+            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -879,6 +1287,38 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.AboutGP)).EndInit();
             this.AboutGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AboutMemoEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P1MiscGP)).EndInit();
+            this.P1MiscGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P1HandnessGP)).EndInit();
+            this.P1HandnessGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P1WeaponModeGP)).EndInit();
+            this.P1WeaponModeGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P1HandnessComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P1WeaponModeComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2MiscGP)).EndInit();
+            this.P2MiscGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P2WeaponModeGP)).EndInit();
+            this.P2WeaponModeGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P2WeaponModeComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2HandnessGP)).EndInit();
+            this.P2HandnessGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P2HandnessComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P3MiscGP)).EndInit();
+            this.P3MiscGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P3WeaponModeGP)).EndInit();
+            this.P3WeaponModeGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P3WeaponModeComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P3HandnessGP)).EndInit();
+            this.P3HandnessGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P3HandnessComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P4MiscGP)).EndInit();
+            this.P4MiscGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P4WeaponModeGP)).EndInit();
+            this.P4WeaponModeGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P4WeaponModeComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P4HandnessGP)).EndInit();
+            this.P4HandnessGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P4HandnessComboBox.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -908,9 +1348,6 @@ namespace GameX
         private DevExpress.XtraEditors.ProgressBarControl P3HealthBar;
         private DevExpress.XtraEditors.ProgressBarControl P2HealthBar;
         private DevExpress.XtraEditors.CheckButton P1InfiniteHPButton;
-        private DevExpress.XtraEditors.CheckButton P4InfiniteHPButton;
-        private DevExpress.XtraEditors.CheckButton P3InfiniteHPButton;
-        private DevExpress.XtraEditors.CheckButton P2InfiniteHPButton;
         private DevExpress.XtraTab.XtraTabPage TabPageSettings;
         private DevExpress.XtraEditors.GroupControl TabPageSettingsGPApp;
         private DevExpress.XtraEditors.GroupControl ConsoleGP;
@@ -929,9 +1366,6 @@ namespace GameX
         private DevExpress.XtraEditors.CheckButton P4FreezeCharCosButton;
         private DevExpress.XtraEditors.CheckButton P3FreezeCharCosButton;
         private DevExpress.XtraEditors.CheckButton P2FreezeCharCosButton;
-        private DevExpress.XtraEditors.CheckButton P4UntargetableButton;
-        private DevExpress.XtraEditors.CheckButton P3UntargetableButton;
-        private DevExpress.XtraEditors.CheckButton P2UntargetableButton;
         private DevExpress.XtraEditors.CheckButton P1UntargetableButton;
         private DevExpress.XtraEditors.GroupControl NetworkGP;
         private DevExpress.XtraEditors.LabelControl NickLabelControl;
@@ -939,6 +1373,40 @@ namespace GameX
         private DevExpress.XtraEditors.ComboBoxEdit SkinComboBoxEdit;
         private DevExpress.XtraEditors.LabelControl PaletteLabelControl;
         private DevExpress.XtraEditors.ComboBoxEdit PaletteComboBoxEdit;
+        private DevExpress.XtraEditors.GroupControl P1MiscGP;
+        private DevExpress.XtraEditors.GroupControl P1WeaponModeGP;
+        private DevExpress.XtraEditors.ComboBoxEdit P1WeaponModeComboBox;
+        private DevExpress.XtraEditors.GroupControl P1HandnessGP;
+        private DevExpress.XtraEditors.ComboBoxEdit P1HandnessComboBox;
+        private DevExpress.XtraEditors.CheckButton P1InfiniteAmmoButton;
+        private DevExpress.XtraEditors.CheckButton P1RapidfireButton;
+        private DevExpress.XtraEditors.GroupControl P4MiscGP;
+        private DevExpress.XtraEditors.GroupControl P4WeaponModeGP;
+        private DevExpress.XtraEditors.ComboBoxEdit P4WeaponModeComboBox;
+        private DevExpress.XtraEditors.GroupControl P4HandnessGP;
+        private DevExpress.XtraEditors.ComboBoxEdit P4HandnessComboBox;
+        private DevExpress.XtraEditors.CheckButton P4InfiniteAmmoButton;
+        private DevExpress.XtraEditors.CheckButton P4RapidfireButton;
+        private DevExpress.XtraEditors.CheckButton P4InfiniteHPButton;
+        private DevExpress.XtraEditors.CheckButton P4UntargetableButton;
+        private DevExpress.XtraEditors.GroupControl P3MiscGP;
+        private DevExpress.XtraEditors.GroupControl P3WeaponModeGP;
+        private DevExpress.XtraEditors.ComboBoxEdit P3WeaponModeComboBox;
+        private DevExpress.XtraEditors.GroupControl P3HandnessGP;
+        private DevExpress.XtraEditors.ComboBoxEdit P3HandnessComboBox;
+        private DevExpress.XtraEditors.CheckButton P3InfiniteAmmoButton;
+        private DevExpress.XtraEditors.CheckButton P3RapidfireButton;
+        private DevExpress.XtraEditors.CheckButton P3InfiniteHPButton;
+        private DevExpress.XtraEditors.CheckButton P3UntargetableButton;
+        private DevExpress.XtraEditors.GroupControl P2MiscGP;
+        private DevExpress.XtraEditors.GroupControl P2WeaponModeGP;
+        private DevExpress.XtraEditors.ComboBoxEdit P2WeaponModeComboBox;
+        private DevExpress.XtraEditors.GroupControl P2HandnessGP;
+        private DevExpress.XtraEditors.ComboBoxEdit P2HandnessComboBox;
+        private DevExpress.XtraEditors.CheckButton P2InfiniteAmmoButton;
+        private DevExpress.XtraEditors.CheckButton P2RapidfireButton;
+        private DevExpress.XtraEditors.CheckButton P2InfiniteHPButton;
+        private DevExpress.XtraEditors.CheckButton P2UntargetableButton;
     }
 }
 

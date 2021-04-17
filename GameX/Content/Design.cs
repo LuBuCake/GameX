@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace GameX.Content
 {
-    public class Skins
+    public class Design
     {
         public static ListItem[] AllSkins()
         {
