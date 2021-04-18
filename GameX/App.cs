@@ -1,5 +1,6 @@
 ﻿using DevExpress.LookAndFeel;
 using DevExpress.XtraEditors;
+using DevExpress.XtraTab;
 using GameX.Content;
 using GameX.Game.Content;
 using GameX.Game.Modules;
@@ -306,7 +307,14 @@ namespace GameX
             {
                 P1ConnectionButton,
                 P2ConnectionButton,
-                P3ConnectionButton,
+                P3ConnectionButton
+            };
+
+            SimpleButton[] DropButtons =
+            {
+                P1DropSimpleButton,
+                P2DropSimpleButton,
+                P3DropSimpleButton
             };
 
             #endregion
@@ -335,9 +343,10 @@ namespace GameX
                 if (Index < 3)
                 {
                     NetworkPlayerIndexes[Index].Properties.Items.AddRange(Indexes.Available());
-                    NetworkPlayerIndexes[Index].SelectedIndex = Index;
+                    NetworkPlayerIndexes[Index].SelectedIndex = 0;
 
-                    Connectbuttons[Index].Click += Network.ConnectToServer_Click;
+                    Connectbuttons[Index].Click += Network.StartClient_Click;
+                    DropButtons[Index].Click += Network.DropClient_Click;
                 }
             }
 
@@ -356,6 +365,8 @@ namespace GameX
 
             NetworkManagerButton.CheckedChanged += StartNetwork_CheckedChanged;
             StartServerButton.Click += Network.StartServer_Click;
+
+            MasterTabControl.TabIndexChanged += MasterTabPage_PageChanged;
 
             ResetHealthBars();
 
@@ -405,6 +416,18 @@ namespace GameX
             foreach (CheckButton CB in CheckButtons)
             {
                 CB.Enabled = DebugMode;
+            }
+        }
+
+        private void MasterTabPage_PageChanged(object sender, EventArgs e)
+        {
+            XtraTabControl XTC = sender as XtraTabControl;
+            XtraTabPage XTP = XTC.SelectedTabPage;
+
+            if (XTP.Name == "TabPageConsole")
+            {
+                ConsoleOutputMemoEdit.SelectionStart = ConsoleOutputMemoEdit.Text.Length;
+                ConsoleOutputMemoEdit.MaskBox.MaskBoxScrollToCaret();
             }
         }
 
@@ -591,6 +614,20 @@ namespace GameX
                 StartServerButton
             };
 
+            SimpleButton[] DropButtons =
+            {
+                P1DropSimpleButton,
+                P2DropSimpleButton,
+                P3DropSimpleButton
+            };
+
+            LabelControl[] ClientNames =
+            {
+                P1ClientLabelControl,
+                P2ClientLabelControl,
+                P3ClientLabelControl
+            };
+
             if (CB.Checked)
             {
                 CB.Enabled = false;
@@ -606,18 +643,27 @@ namespace GameX
 
                     CB.Text = "Disable";
                     Terminal.WriteLine("Network module started sucessfully.");
-                }
-                else
-                {
-                    CB.Checked = false;
-                    Terminal.WriteLine("No connection was found, check your internet connection and try again.");
+                    return;
                 }
 
+                CB.Checked = false;
+                Terminal.WriteLine("No connection was found, check your internet connection and try again.");
                 return;
             }
 
             foreach (dynamic Control in Controls)
+            {
                 Control.Enabled = false;
+
+                if (Control.Text == "Disconnect")
+                    Control.Text = "Connect";
+            }
+
+            foreach (SimpleButton SB in DropButtons)
+                SB.Enabled = false;
+
+            foreach (LabelControl LC in ClientNames)
+                LC.Text = "No client connected";
 
             CB.Text = "Enable";
             Network.FinishModule();
@@ -634,6 +680,8 @@ namespace GameX
 
                 Character_Detour();
                 RickFixes_Detour();
+
+                Terminal.WriteLine("Patches applied.");
 
                 Biohazard.NoFileChecking(true);
                 Biohazard.OnlineCharSwapFixes(true);

@@ -37,7 +37,7 @@ namespace GameX.Helpers
 
         public static string Base64Encode(string plainText)
         {
-            var plainTextBytes = Encoding.UTF8.GetBytes(plainText);
+            byte[] plainTextBytes = Encoding.UTF8.GetBytes(plainText);
             return Convert.ToBase64String(plainTextBytes);
         }
 
@@ -46,7 +46,7 @@ namespace GameX.Helpers
             string strData = "";
             try
             {
-                var base64EncodedBytes = Convert.FromBase64String(base64EncodedData);
+                byte[] base64EncodedBytes = Convert.FromBase64String(base64EncodedData);
                 strData = Encoding.UTF8.GetString(base64EncodedBytes);
             }
             catch (Exception)

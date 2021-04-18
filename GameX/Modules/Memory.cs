@@ -126,7 +126,7 @@ namespace GameX.Modules
             [Description("Releases the specified region of pages, or placeholder (for a placeholder, the address space is released and available for other Detours). After this operation, the pages are in the free state.")]
             MEM_RELEASE = 0x00008000
         }
-
+        public static bool ModuleStarted { get; set; }
         private static Process Target_Process { get; set; }
         private static IntPtr Target_Handle { get; set; }
         public static bool DebugMode { get; private set; }
@@ -135,8 +135,8 @@ namespace GameX.Modules
         {
             Target_Process = Target;
             Target_Handle = OpenProcess((int)AccessLevel, false, Target_Process.Id);
-
             EnterDebugMode();
+            ModuleStarted = true;
         }
 
         public static void FinishModule()
@@ -146,6 +146,7 @@ namespace GameX.Modules
             Target_Process?.Dispose();
             Target_Process = null;
             Target_Handle = IntPtr.Zero;
+            ModuleStarted = false;
         }
 
         /*READ WRITE*/
@@ -182,7 +183,7 @@ namespace GameX.Modules
 
             foreach (int Offset in Offsets)
             {
-                var buffer = ReadRawAddress(PointerResult);
+                byte[] buffer = ReadRawAddress(PointerResult);
                 PointerResult = BitConverter.ToInt32(buffer, 0);
                 PointerResult += Offset;
             }
@@ -367,7 +368,7 @@ namespace GameX.Modules
             if (DetourActive(DetourName))
                 return GetDetour(DetourName);
 
-            Terminal.WriteLine($"Hooking 0x{CallAddress.ToString("X")} - for {DetourName}");
+            Terminal.WriteLine($"Patching {CallAddress.ToString("X")} - for {DetourName}");
 
             int DetourAddress = VirtualAllocEx(Target_Handle, 0, DetourContent.Length, (int)MEMORY_INFORMATION.MEM_COMMIT | (int)MEMORY_INFORMATION.MEM_RESERVE, (int)MEMORY_PROTECTION.PAGE_EXECUTE_READ);
 
@@ -377,7 +378,7 @@ namespace GameX.Modules
                 return null;
             }
 
-            Terminal.WriteLine($"{DetourName} hooked! Memory allocated at 0x{DetourAddress.ToString("X")}");
+            Terminal.WriteLine($"{DetourName} patched! Memory allocated at {DetourAddress.ToString("X")}");
 
             WriteRawAddress(CallAddress, DetourJump(CallAddress, DetourAddress, CallInstruction.Length));
             WriteRawAddress(DetourAddress, DetourContent);

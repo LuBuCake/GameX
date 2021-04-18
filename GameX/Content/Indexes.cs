@@ -6,6 +6,7 @@ namespace GameX.Content
     {
         public static ListItem[] Available()
         {
+            ListItem None = new ListItem("None", 999);
             ListItem P1 = new ListItem("Player 1", 0);
             ListItem P2 = new ListItem("Player 2", 1);
             ListItem P3 = new ListItem("Player 3", 2);
@@ -13,7 +14,7 @@ namespace GameX.Content
 
             return new ListItem[]
             {
-                P1, P2, P3, P4
+                None, P1, P2, P3, P4
             };
         }
     }

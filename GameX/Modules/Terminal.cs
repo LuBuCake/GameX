@@ -37,8 +37,8 @@ namespace GameX.Modules
                 "Exit - Closes the App.",
 
                 Environment.NewLine + "Network commands:",
-                "GetPublicIPv4 - Returns your public IPv4, you can use it to connect to other players using GameX.",
-                "GetPrivateIPv4 - Returns your private IPv4, it is only used for server hosting.",
+                "GetPublicIPv4 - Returns your public IPv4.",
+                "GetPrivateIPv4 - Returns your private IPv4.",
 
                 Environment.NewLine + "Server commands:",
                 "Server Clients - Lists all connected clients.",
@@ -114,7 +114,7 @@ namespace GameX.Modules
                             return true;
                         }
 
-                       Biohazard.Players[Player - 1].SetHealth((short)Utility.Clamp(HP, 0, 1000));
+                        Biohazard.Players[Player - 1].SetHealth((short)Utility.Clamp(HP, 0, 1000));
                         WriteLine($"Player {Player} health set to {HP}.");
                     }
                     else
@@ -202,7 +202,7 @@ namespace GameX.Modules
 
             Command = Command.ToLower();
             Command = Utility.RemoveWhiteSpace(Command);
-            
+
             if (Command == "writejsonchars")
                 Characters.WriteDefaultChars();
             else if (Command == "writejsonitems")

@@ -142,7 +142,7 @@ namespace GameX.Game.Content
 
                 Terminal.WriteLine("Characters jsons written sucessfully.");
             }
-            catch(Exception Ex)
+            catch (Exception Ex)
             {
                 Terminal.WriteLine(Ex.Message);
             }
