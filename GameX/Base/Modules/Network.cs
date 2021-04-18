@@ -1,5 +1,5 @@
 ﻿using DevExpress.XtraEditors;
-using GameX.Types;
+using GameX.Base.Types;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WatsonTcp;
 
-namespace GameX.Modules
+namespace GameX.Base.Modules
 {
     public class ConnectedClient
     {

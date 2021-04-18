@@ -1,6 +1,6 @@
 ﻿using GameX.Game.Types;
-using GameX.Helpers;
-using GameX.Modules;
+using GameX.Base.Helpers;
+using GameX.Base.Modules;
 using System;
 using System.Collections.Generic;
 using System.IO;

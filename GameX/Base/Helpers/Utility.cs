@@ -1,9 +1,9 @@
-﻿using GameX.Modules;
+﻿using GameX.Base.Modules;
 using System;
 using System.Drawing;
 using System.Linq;
 
-namespace GameX.Helpers
+namespace GameX.Base.Helpers
 {
     public static class Utility
     {

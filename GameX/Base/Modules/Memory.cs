@@ -1,12 +1,12 @@
-﻿using GameX.Helpers;
-using GameX.Types;
+﻿using GameX.Base.Helpers;
+using GameX.Base.Types;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace GameX.Modules
+namespace GameX.Base.Modules
 {
     public class Memory
     {

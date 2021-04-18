@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace GameX.Modules
+namespace GameX.Base.Modules
 {
     public class Keyboard
     {

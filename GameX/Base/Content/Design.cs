@@ -1,9 +1,9 @@
 ﻿using DevExpress.LookAndFeel;
 using DevExpress.Skins;
-using GameX.Types;
+using GameX.Base.Types;
 using System.Collections.Generic;
 
-namespace GameX.Content
+namespace GameX.Base.Content
 {
     public class Design
     {

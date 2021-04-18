@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace GameX.Helpers
+namespace GameX.Base.Helpers
 {
     public static class Processes
     {

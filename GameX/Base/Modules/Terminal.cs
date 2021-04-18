@@ -1,13 +1,13 @@
 ﻿using DevExpress.XtraEditors;
 using GameX.Game.Content;
 using GameX.Game.Modules;
-using GameX.Helpers;
+using GameX.Base.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace GameX.Modules
+namespace GameX.Base.Modules
 {
     public class Terminal
     {

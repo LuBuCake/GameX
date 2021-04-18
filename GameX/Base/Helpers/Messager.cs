@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Runtime.InteropServices;
 
-namespace GameX.Helpers
+namespace GameX.Base.Helpers
 {
     public class Messager
     {

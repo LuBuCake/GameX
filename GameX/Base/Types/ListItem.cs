@@ -1,4 +1,4 @@
-﻿namespace GameX.Types
+﻿namespace GameX.Base.Types
 {
     public class ListItem
     {

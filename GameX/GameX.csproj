@@ -104,34 +104,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Content\Indexes.cs" />
-    <Compile Include="Content\Rates.cs" />
-    <Compile Include="Content\Design.cs" />
+    <Compile Include="Base\Content\Indexes.cs" />
+    <Compile Include="Base\Content\Rates.cs" />
+    <Compile Include="Base\Content\Design.cs" />
     <Compile Include="Game\Content\Miscellaneous.cs" />
     <Compile Include="Game\Modules\Biohazard.cs" />
     <Compile Include="Game\Modules\Player.cs" />
     <Compile Include="Game\Content\Characters.cs" />
     <Compile Include="Game\Types\Character.cs" />
-    <Compile Include="Helpers\Security.cs" />
-    <Compile Include="Helpers\Utility.cs" />
-    <Compile Include="Helpers\Processes.cs" />
+    <Compile Include="Base\Helpers\Security.cs" />
+    <Compile Include="Base\Helpers\Utility.cs" />
+    <Compile Include="Base\Helpers\Processes.cs" />
     <Compile Include="App.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="App.Designer.cs">
       <DependentUpon>App.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\Messager.cs" />
-    <Compile Include="Helpers\Serializer.cs" />
-    <Compile Include="Modules\Terminal.cs" />
-    <Compile Include="Modules\Keyboard.cs" />
-    <Compile Include="Modules\Memory.cs" />
-    <Compile Include="Modules\Network.cs" />
+    <Compile Include="Base\Helpers\Messager.cs" />
+    <Compile Include="Base\Helpers\Serializer.cs" />
+    <Compile Include="Base\Modules\Terminal.cs" />
+    <Compile Include="Base\Modules\Keyboard.cs" />
+    <Compile Include="Base\Modules\Memory.cs" />
+    <Compile Include="Base\Modules\Network.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Types\Detour.cs" />
-    <Compile Include="Types\ListItem.cs" />
-    <Compile Include="Types\NetItem.cs" />
+    <Compile Include="Base\Types\Detour.cs" />
+    <Compile Include="Base\Types\ListItem.cs" />
+    <Compile Include="Base\Types\NetItem.cs" />
     <EmbeddedResource Include="App.resx">
       <DependentUpon>App.cs</DependentUpon>
     </EmbeddedResource>

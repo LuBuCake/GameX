@@ -1,9 +1,9 @@
 ﻿using GameX.Game.Types;
-using GameX.Types;
+using GameX.Base.Types;
 using Newtonsoft.Json;
 using System.IO;
 
-namespace GameX.Helpers
+namespace GameX.Base.Helpers
 {
     public class Serializer
     {

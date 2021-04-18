@@ -1,4 +1,4 @@
-﻿using GameX.Types;
+﻿using GameX.Base.Types;
 
 namespace GameX.Game.Content
 {

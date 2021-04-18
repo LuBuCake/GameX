@@ -1,4 +1,4 @@
-﻿using GameX.Modules;
+﻿using GameX.Base.Modules;
 
 namespace GameX.Game.Modules
 {

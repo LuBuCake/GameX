@@ -1,13 +1,13 @@
 ﻿using DevExpress.LookAndFeel;
 using DevExpress.XtraEditors;
 using DevExpress.XtraTab;
-using GameX.Content;
+using GameX.Base.Content;
+using GameX.Base.Helpers;
+using GameX.Base.Modules;
+using GameX.Base.Types;
 using GameX.Game.Content;
 using GameX.Game.Modules;
 using GameX.Game.Types;
-using GameX.Helpers;
-using GameX.Modules;
-using GameX.Types;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

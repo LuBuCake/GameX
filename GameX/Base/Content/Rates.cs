@@ -1,6 +1,6 @@
-﻿using GameX.Types;
+﻿using GameX.Base.Types;
 
-namespace GameX.Content
+namespace GameX.Base.Content
 {
     public class Rates
     {
