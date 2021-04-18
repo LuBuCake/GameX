@@ -28,21 +28,18 @@ namespace GameX
         public double CurTime { get; private set; }
         public double UpdateMode { get; set; }
         public double FramesPerSecond { get; private set; }
-
-        public Memory Kernel { get; private set; }
         public bool Verified { get; private set; }
         public bool Initialized { get; private set; }
 
         public App()
         {
             InitializeComponent();
-            Application_PreControlLoad();
+            Application_PostInitializeComponent();
         }
 
         private void App_Load(object sender, EventArgs e)
         {
             LoadControls();
-            Application_PostControlLoad();
         }
 
         private void Application_Idle(object sender, EventArgs e)
@@ -64,15 +61,16 @@ namespace GameX
                 Target_Process.EnableRaisingEvents = false;
             }
 
-            Network.StopServer();
-
-            Kernel?.Dispose();
-            Target_Process?.Dispose();
-            Keyboard.RemoveHook();
             Application.Idle += null;
+
+            Target_Process?.Dispose();
+            Target_Process = null;
+            Memory.FinishModule();
+            Network.FinishModule();
+            Keyboard.RemoveHook();
         }
 
-        private void Application_PreControlLoad()
+        private void Application_PostInitializeComponent()
         {
             Target_Setup();
 
@@ -87,11 +85,6 @@ namespace GameX
 
             Terminal.LoadApp(this, ConsoleOutputMemoEdit, ConsoleInputTextEdit);
             ConsoleInputTextEdit.Validating += Terminal.ValidateInput;
-        }
-
-        private void Application_PostControlLoad()
-        {
-            Task.Run(() => Network.Start(this));
         }
 
         private void Application_Think()
@@ -113,8 +106,6 @@ namespace GameX
 
                 FramesPerSecond = 1.0 / Elapsed.TotalSeconds;
                 FrameTime = 1.0 / FramesPerSecond;
-
-                Task.Run(() => Network.Update());
 
                 if (Target_Handle() && Initialized)
                     GameX_Update();
@@ -152,37 +143,38 @@ namespace GameX
                     Terminal.WriteLine("Game found, validating.");
                     Text = "GameX - Resident Evil 5 / Biohazard 5 - Validanting";
                 }
+
+                return Verified;
             }
-            else
+
+            if (Verified || !Target_Process.WaitForInputIdle())
+                return Verified;
+
+            if (Target_Validate())
             {
-                if (Verified || !Target_Process.WaitForInputIdle())
-                    return Verified;
+                Terminal.WriteLine("Game validated.");
 
-                if (Target_Validate())
-                {
-                    Terminal.WriteLine("Game validated.");
+                Memory.StartModule(Target_Process);
+                CheckDebugModeControls(Memory.DebugMode);
+                GameX_Start();
 
-                    Target_Process.EnableRaisingEvents = true;
-                    Target_Process.Exited += Target_Exited;
-                    Kernel = new Memory(Target_Process);
-                    CheckDebugModeControls(Kernel.DebugMode);
-                    GameX_Start();
-                    Verified = true;
-                    Initialized = true;
-                    Text = "GameX - Resident Evil 5 / Biohazard 5 - " + (Kernel.DebugMode ? "Running in Admin Mode" : "Running in User Mode");
-                }
-                else
-                {
-                    Terminal.WriteLine("Failed validating, unsupported version.");
-                    Terminal.WriteLine("Follow the guide on https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
+                Target_Process.EnableRaisingEvents = true;
+                Target_Process.Exited += Target_Exited;
+                Verified = true;
+                Initialized = true;
+                Text = "GameX - Resident Evil 5 / Biohazard 5 - " + (Memory.DebugMode ? "Running in Admin Mode" : "Running in User Mode");
 
-                    Target_Process.EnableRaisingEvents = true;
-                    Target_Process.Exited += Target_Exited;
-                    Verified = true;
-                    Initialized = false;
-                    Text = "GameX - Resident Evil 5 / Biohazard 5 - Unsupported Version";
-                }
+                return Verified;
             }
+
+            Terminal.WriteLine("Failed validating, unsupported version.");
+            Terminal.WriteLine("Follow the guide on https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
+
+            Target_Process.EnableRaisingEvents = true;
+            Target_Process.Exited += Target_Exited;
+            Verified = true;
+            Initialized = false;
+            Text = "GameX - Resident Evil 5 / Biohazard 5 - Unsupported Version";
 
             return Verified;
         }
@@ -212,8 +204,9 @@ namespace GameX
 
         public void Target_Exited(object sender, EventArgs e)
         {
-            Kernel?.Dispose();
-            Kernel = null;
+            Memory.FinishModule();
+            Biohazard.FinishModule();
+
             Target_Process?.Dispose();
             Target_Process = null;
             Verified = false;
@@ -224,7 +217,7 @@ namespace GameX
             Terminal.WriteLine("Runtime cleared successfully.");
         }
 
-        /* Loading/Saving & Event Handling */
+        /* Event Handling & Loading */
 
         private void LoadControls()
         {
@@ -342,9 +335,9 @@ namespace GameX
                 if (Index < 3)
                 {
                     NetworkPlayerIndexes[Index].Properties.Items.AddRange(Indexes.Available());
-                    NetworkPlayerIndexes[Index].SelectedIndex = 0;
+                    NetworkPlayerIndexes[Index].SelectedIndex = Index;
 
-                    Connectbuttons[Index].Click += Network.Connect_Click;
+                    Connectbuttons[Index].Click += Network.ConnectToServer_Click;
                 }
             }
 
@@ -360,6 +353,9 @@ namespace GameX
 
             SaveSettingsButton.Click += Configuration_Save;
             LoadSettingsButton.Click += Configuration_Load;
+
+            NetworkManagerButton.CheckedChanged += StartNetwork_CheckedChanged;
+            StartServerButton.Click += Network.StartServer_Click;
 
             ResetHealthBars();
 
@@ -393,6 +389,25 @@ namespace GameX
             }
         }
 
+        private void CheckDebugModeControls(bool DebugMode)
+        {
+            if (DebugMode)
+                return;
+
+            CheckButton[] CheckButtons =
+            {
+                P1FreezeCharCosButton,
+                P2FreezeCharCosButton,
+                P3FreezeCharCosButton,
+                P4FreezeCharCosButton
+            };
+
+            foreach (CheckButton CB in CheckButtons)
+            {
+                CB.Enabled = DebugMode;
+            }
+        }
+
         private void Configuration_Save(object sender, EventArgs e)
         {
             Properties.Settings.Default.UpdateRate = UpdateModeComboBoxEdit.SelectedIndex;
@@ -423,25 +438,6 @@ namespace GameX
             }
 
             Terminal.WriteLine("Settings Loaded.");
-        }
-
-        private void CheckDebugModeControls(bool DebugMode)
-        {
-            if (DebugMode)
-                return;
-
-            CheckButton[] CheckButtons =
-            {
-                P1FreezeCharCosButton,
-                P2FreezeCharCosButton,
-                P3FreezeCharCosButton,
-                P4FreezeCharCosButton
-            };
-
-            foreach (CheckButton CB in CheckButtons)
-            {
-                CB.Enabled = DebugMode;
-            }
         }
 
         private void UpdateMode_IndexChanged(object sender, EventArgs e)
@@ -540,7 +536,7 @@ namespace GameX
             ComboBoxEdit CBE = sender as ComboBoxEdit;
             int Index = int.Parse(CBE.Name[1].ToString()) - 1;
 
-            Game.Players[Index].SetWeaponMode(CBE.SelectedIndex != 0 ? new byte[] { (byte)(CBE.SelectedItem as ListItem).Value } : new byte[] { (byte)Game.Players[Index].GetDefaultWeaponMode() });
+            Biohazard.Players[Index].SetWeaponMode(CBE.SelectedIndex != 0 ? new byte[] { (byte)(CBE.SelectedItem as ListItem).Value } : new byte[] { (byte)Biohazard.Players[Index].GetDefaultWeaponMode() });
         }
 
         private void Handness_IndexChanged(object sender, EventArgs e)
@@ -551,7 +547,7 @@ namespace GameX
             ComboBoxEdit CBE = sender as ComboBoxEdit;
             int Index = int.Parse(CBE.Name[1].ToString()) - 1;
 
-            Game.Players[Index].SetHandness(CBE.SelectedIndex != 0 ? new byte[] { (byte)(CBE.SelectedItem as ListItem).Value } : new byte[] { (byte)Game.Players[Index].GetDefaultHandness() });
+            Biohazard.Players[Index].SetHandness(CBE.SelectedIndex != 0 ? new byte[] { (byte)(CBE.SelectedItem as ListItem).Value } : new byte[] { (byte)Biohazard.Players[Index].GetDefaultHandness() });
         }
 
         private void CharCosFreeze_CheckedChanged(object sender, EventArgs e)
@@ -579,25 +575,68 @@ namespace GameX
             if (Initialized && CB.Name.Contains("Untargetable") && !CB.Checked)
             {
                 int Player = int.Parse(CB.Name[1].ToString()) - 1;
-                Game.Players[Player].SetUntargetable(false);
+                Biohazard.Players[Player].SetUntargetable(false);
             }
+        }
+
+        private async void StartNetwork_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckButton CB = sender as CheckButton;
+
+            object[] Controls =
+            {
+                P1ConnectionButton,
+                P2ConnectionButton,
+                P3ConnectionButton,
+                StartServerButton
+            };
+
+            if (CB.Checked)
+            {
+                CB.Enabled = false;
+
+                await Task.Run(() => Network.StartModule(this));
+
+                CB.Enabled = true;
+
+                if (Network.ModuleStarted)
+                {
+                    foreach (dynamic Control in Controls)
+                        Control.Enabled = true;
+
+                    CB.Text = "Disable";
+                    Terminal.WriteLine("Network module started sucessfully.");
+                }
+                else
+                {
+                    CB.Checked = false;
+                    Terminal.WriteLine("No connection was found, check your internet connection and try again.");
+                }
+
+                return;
+            }
+
+            foreach (dynamic Control in Controls)
+                Control.Enabled = false;
+
+            CB.Text = "Enable";
+            Network.FinishModule();
+            Terminal.WriteLine("Network module finished sucessfully.");
         }
 
         /* GameX Calls */
 
-        public Master Game { get; private set; }
-
         private void GameX_Start()
         {
-            Game = new Master(this);
-
             try
             {
+                Biohazard.StartModule();
+
                 Character_Detour();
                 RickFixes_Detour();
 
-                Game.NoFileChecking(true);
-                Game.OnlineCharSwapFixes(true);
+                Biohazard.NoFileChecking(true);
+                Biohazard.OnlineCharSwapFixes(true);
             }
             catch (Exception)
             {
@@ -609,8 +648,13 @@ namespace GameX
         {
             try
             {
-                Game.NoFileChecking(false);
-                Game.OnlineCharSwapFixes(false);
+                if (!Biohazard.ModuleStarted)
+                    return;
+
+                Biohazard.NoFileChecking(false);
+                Biohazard.OnlineCharSwapFixes(false);
+
+                Biohazard.FinishModule();
             }
             catch (Exception)
             {
@@ -622,6 +666,9 @@ namespace GameX
         {
             try
             {
+                if (!Biohazard.ModuleStarted)
+                    return;
+
                 CharacterPanel_Update();
             }
             catch (Exception)
@@ -641,7 +688,7 @@ namespace GameX
 
         private void Character_Detour()
         {
-            if (!Kernel.DetourActive("Character_Global"))
+            if (!Memory.DetourActive("Character_Global"))
             {
                 byte[] DetourClean =
                 {
@@ -685,13 +732,13 @@ namespace GameX
                     0x89, 0x7E, 0x0C
                 };
 
-                Detour Character_Global = Kernel.CreateDetour("Character_Global", DetourClean, 0x00C91A88, CallInstruction, true, 0x00C91A8E);
+                Detour Character_Global = Memory.CreateDetour("Character_Global", DetourClean, 0x00C91A88, CallInstruction, true, 0x00C91A8E);
 
                 if (Character_Global == null)
                     return;
             }
 
-            if (!Kernel.DetourActive("Character_StoryChar"))
+            if (!Memory.DetourActive("Character_StoryChar"))
             {
                 byte[] DetourClean =
                 {
@@ -719,13 +766,13 @@ namespace GameX
                     0x8B, 0x17
                 };
 
-                Detour Character_StoryChar = Kernel.CreateDetour("Character_StoryChar", DetourClean, 0x00C9200D, CallInstruction, true, 0x00C92012);
+                Detour Character_StoryChar = Memory.CreateDetour("Character_StoryChar", DetourClean, 0x00C9200D, CallInstruction, true, 0x00C92012);
 
                 if (Character_StoryChar == null)
                     return;
             }
 
-            if (!Kernel.DetourActive("Character_StoryCos"))
+            if (!Memory.DetourActive("Character_StoryCos"))
             {
                 byte[] DetourClean =
                 {
@@ -753,13 +800,13 @@ namespace GameX
                     0x0F, 0xBF, 0X97, 0x64, 0x13, 0x00, 0x00
                 };
 
-                Detour Character_StoryCos = Kernel.CreateDetour("Character_StoryCos", DetourClean, 0x00C9201D, CallInstruction, true, 0x00C92027);
+                Detour Character_StoryCos = Memory.CreateDetour("Character_StoryCos", DetourClean, 0x00C9201D, CallInstruction, true, 0x00C92027);
 
                 if (Character_StoryCos == null)
                     return;
             }
 
-            if (!Kernel.DetourActive("Character_StorySave"))
+            if (!Memory.DetourActive("Character_StorySave"))
             {
                 byte[] DetourClean =
                 {
@@ -792,7 +839,7 @@ namespace GameX
                     0x8D, 0xB6, 0x80, 0X00, 0X00, 0X00
                 };
 
-                Detour Character_StorySave = Kernel.CreateDetour("Character_StorySave", DetourClean, 0x00E6E0BE, CallInstruction, true, 0x00E6E0C4);
+                Detour Character_StorySave = Memory.CreateDetour("Character_StorySave", DetourClean, 0x00E6E0BE, CallInstruction, true, 0x00E6E0C4);
 
                 if (Character_StorySave == null)
                     return;
@@ -803,45 +850,45 @@ namespace GameX
 
         private void Character_DetourUpdate()
         {
-            if (!Kernel.DetourActive("Character_Global") || !Kernel.DetourActive("Character_StoryChar") || !Kernel.DetourActive("Character_StoryCos") || !Kernel.DetourActive("Character_StorySave"))
+            if (!Memory.DetourActive("Character_Global") || !Memory.DetourActive("Character_StoryChar") || !Memory.DetourActive("Character_StoryCos") || !Memory.DetourActive("Character_StorySave"))
                 return;
 
-            Detour DetourBase = Kernel.GetDetour("Character_Global");
+            Detour DetourBase = Memory.GetDetour("Character_Global");
             int DetourBase_Address = DetourBase.Address();
 
-            Kernel.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x2D });
-            Kernel.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x30 });
-            Kernel.WriteRawAddress(DetourBase_Address + 30, !P3FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x33 });
-            Kernel.WriteRawAddress(DetourBase_Address + 42, !P4FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x36 });
+            Memory.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x2D });
+            Memory.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x30 });
+            Memory.WriteRawAddress(DetourBase_Address + 30, !P3FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x33 });
+            Memory.WriteRawAddress(DetourBase_Address + 42, !P4FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x36 });
 
-            DetourBase = Kernel.GetDetour("Character_StoryChar");
+            DetourBase = Memory.GetDetour("Character_StoryChar");
             DetourBase_Address = DetourBase.Address();
 
-            Kernel.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x15 });
-            Kernel.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x13 });
+            Memory.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x15 });
+            Memory.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x13 });
 
-            DetourBase = Kernel.GetDetour("Character_StoryCos");
+            DetourBase = Memory.GetDetour("Character_StoryCos");
             DetourBase_Address = DetourBase.Address();
 
-            Kernel.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x15 });
-            Kernel.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x13 });
+            Memory.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x15 });
+            Memory.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x13 });
 
-            DetourBase = Kernel.GetDetour("Character_StorySave");
+            DetourBase = Memory.GetDetour("Character_StorySave");
             DetourBase_Address = DetourBase.Address();
 
-            Kernel.WriteRawAddress(DetourBase_Address + 20, P1FreezeCharCosButton.Checked ? new byte[] { 0x01 } : new byte[] { 0x00 });
-            Kernel.WriteRawAddress(DetourBase_Address + 49, P2FreezeCharCosButton.Checked ? new byte[] { 0x01 } : new byte[] { 0x00 });
+            Memory.WriteRawAddress(DetourBase_Address + 20, P1FreezeCharCosButton.Checked ? new byte[] { 0x01 } : new byte[] { 0x00 });
+            Memory.WriteRawAddress(DetourBase_Address + 49, P2FreezeCharCosButton.Checked ? new byte[] { 0x01 } : new byte[] { 0x00 });
         }
 
         private void Character_DetourValueUpdate()
         {
-            if (!Kernel.DetourActive("Character_Global") || !Kernel.DetourActive("Character_StoryChar") || !Kernel.DetourActive("Character_StoryCos") || !Kernel.DetourActive("Character_StorySave"))
+            if (!Memory.DetourActive("Character_Global") || !Memory.DetourActive("Character_StoryChar") || !Memory.DetourActive("Character_StoryCos") || !Memory.DetourActive("Character_StorySave"))
                 return;
 
-            int CHAR1A = Kernel.ReadPointer("re5dx9.exe", 0xDA383C, 0x6FE00);
-            int CHAR2A = Kernel.ReadPointer("re5dx9.exe", 0xDA383C, 0x6FE50);
-            int CHAR3A = Kernel.ReadPointer("re5dx9.exe", 0xDA383C, 0x6FEA0);
-            int CHAR4A = Kernel.ReadPointer("re5dx9.exe", 0xDA383C, 0x6FEF0);
+            int CHAR1A = Memory.ReadPointer("re5dx9.exe", 0xDA383C, 0x6FE00);
+            int CHAR2A = Memory.ReadPointer("re5dx9.exe", 0xDA383C, 0x6FE50);
+            int CHAR3A = Memory.ReadPointer("re5dx9.exe", 0xDA383C, 0x6FEA0);
+            int CHAR4A = Memory.ReadPointer("re5dx9.exe", 0xDA383C, 0x6FEF0);
 
             byte[] Char1A = BitConverter.GetBytes(CHAR1A);
             byte[] Char2A = BitConverter.GetBytes(CHAR2A);
@@ -866,50 +913,50 @@ namespace GameX
             byte[] Character4 = BitConverter.GetBytes(intCharacter4);
             byte[] Costume4 = BitConverter.GetBytes(intCostume4);
 
-            Detour DetourBase = Kernel.GetDetour("Character_Global");
+            Detour DetourBase = Memory.GetDetour("Character_Global");
             int DetourBase_Address = DetourBase.Address();
 
-            Kernel.WriteRawAddress(DetourBase_Address + 2, Char1A);
-            Kernel.WriteRawAddress(DetourBase_Address + 14, Char2A);
-            Kernel.WriteRawAddress(DetourBase_Address + 26, Char3A);
-            Kernel.WriteRawAddress(DetourBase_Address + 38, Char4A);
+            Memory.WriteRawAddress(DetourBase_Address + 2, Char1A);
+            Memory.WriteRawAddress(DetourBase_Address + 14, Char2A);
+            Memory.WriteRawAddress(DetourBase_Address + 26, Char3A);
+            Memory.WriteRawAddress(DetourBase_Address + 38, Char4A);
 
-            Kernel.WriteRawAddress(DetourBase_Address + 54, Character1);
-            Kernel.WriteRawAddress(DetourBase_Address + 59, Costume1);
-            Kernel.WriteRawAddress(DetourBase_Address + 69, Character2);
-            Kernel.WriteRawAddress(DetourBase_Address + 74, Costume2);
-            Kernel.WriteRawAddress(DetourBase_Address + 84, Character3);
-            Kernel.WriteRawAddress(DetourBase_Address + 89, Costume3);
-            Kernel.WriteRawAddress(DetourBase_Address + 99, Character4);
-            Kernel.WriteRawAddress(DetourBase_Address + 104, Costume4);
+            Memory.WriteRawAddress(DetourBase_Address + 54, Character1);
+            Memory.WriteRawAddress(DetourBase_Address + 59, Costume1);
+            Memory.WriteRawAddress(DetourBase_Address + 69, Character2);
+            Memory.WriteRawAddress(DetourBase_Address + 74, Costume2);
+            Memory.WriteRawAddress(DetourBase_Address + 84, Character3);
+            Memory.WriteRawAddress(DetourBase_Address + 89, Costume3);
+            Memory.WriteRawAddress(DetourBase_Address + 99, Character4);
+            Memory.WriteRawAddress(DetourBase_Address + 104, Costume4);
 
-            DetourBase = Kernel.GetDetour("Character_StoryChar");
+            DetourBase = Memory.GetDetour("Character_StoryChar");
             DetourBase_Address = DetourBase.Address();
 
-            Kernel.WriteRawAddress(DetourBase_Address + 2, Char1A);
-            Kernel.WriteRawAddress(DetourBase_Address + 14, Char2A);
+            Memory.WriteRawAddress(DetourBase_Address + 2, Char1A);
+            Memory.WriteRawAddress(DetourBase_Address + 14, Char2A);
 
-            Kernel.WriteRawAddress(DetourBase_Address + 30, Character1);
-            Kernel.WriteRawAddress(DetourBase_Address + 40, Character2);
+            Memory.WriteRawAddress(DetourBase_Address + 30, Character1);
+            Memory.WriteRawAddress(DetourBase_Address + 40, Character2);
 
-            DetourBase = Kernel.GetDetour("Character_StoryCos");
+            DetourBase = Memory.GetDetour("Character_StoryCos");
             DetourBase_Address = DetourBase.Address();
 
-            Kernel.WriteRawAddress(DetourBase_Address + 2, Char1A);
-            Kernel.WriteRawAddress(DetourBase_Address + 14, Char2A);
+            Memory.WriteRawAddress(DetourBase_Address + 2, Char1A);
+            Memory.WriteRawAddress(DetourBase_Address + 14, Char2A);
 
-            Kernel.WriteRawAddress(DetourBase_Address + 30, Costume1);
-            Kernel.WriteRawAddress(DetourBase_Address + 40, Costume2);
+            Memory.WriteRawAddress(DetourBase_Address + 30, Costume1);
+            Memory.WriteRawAddress(DetourBase_Address + 40, Costume2);
 
-            DetourBase = Kernel.GetDetour("Character_StorySave");
+            DetourBase = Memory.GetDetour("Character_StorySave");
             DetourBase_Address = DetourBase.Address();
 
-            Kernel.WriteRawAddress(DetourBase_Address + 2, Char1A);
+            Memory.WriteRawAddress(DetourBase_Address + 2, Char1A);
 
-            Kernel.WriteRawAddress(DetourBase_Address + 30, Character1);
-            Kernel.WriteRawAddress(DetourBase_Address + 37, Costume1);
-            Kernel.WriteRawAddress(DetourBase_Address + 59, Character2);
-            Kernel.WriteRawAddress(DetourBase_Address + 66, Costume2);
+            Memory.WriteRawAddress(DetourBase_Address + 30, Character1);
+            Memory.WriteRawAddress(DetourBase_Address + 37, Costume1);
+            Memory.WriteRawAddress(DetourBase_Address + 59, Character2);
+            Memory.WriteRawAddress(DetourBase_Address + 66, Costume2);
         }
 
         private void Character_ApplyCharacters(int Index)
@@ -930,7 +977,7 @@ namespace GameX
                 P4CosComboBox
             };
 
-            Game.Players[Index].SetCharacter((CharacterCombos[Index].SelectedItem as Character).Value, (CostumeCombos[Index].SelectedItem as Costume).Value);
+            Biohazard.Players[Index].SetCharacter((CharacterCombos[Index].SelectedItem as Character).Value, (CostumeCombos[Index].SelectedItem as Costume).Value);
         }
 
         #endregion
@@ -939,7 +986,7 @@ namespace GameX
 
         private void RickFixes_Detour()
         {
-            if (!Kernel.DetourActive("RickFixes_Movement_1"))
+            if (!Memory.DetourActive("RickFixes_Movement_1"))
             {
                 byte[] Function_A =
                 {
@@ -953,7 +1000,7 @@ namespace GameX
                     0xF7, 0x84, 0x17, 0xC4, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00
                 };
 
-                Detour RickFixes_Movement_1 = Kernel.CreateDetour("RickFixes_Movement_1", Function_A, 0x0079F66D, Function_A_Original, true, 0x0079F678);
+                Detour RickFixes_Movement_1 = Memory.CreateDetour("RickFixes_Movement_1", Function_A, 0x0079F66D, Function_A_Original, true, 0x0079F678);
 
                 if (RickFixes_Movement_1 != null)
                 {
@@ -961,11 +1008,11 @@ namespace GameX
                     jne[0] = 0x0F;
                     jne[1] = 0x85;
                     Memory.DetourJump(RickFixes_Movement_1.Address() + 0x0B, 0x0079F67A, 6, 6, true).CopyTo(jne, 2);
-                    Kernel.WriteRawAddress(RickFixes_Movement_1.Address() + 0x0B, jne);
+                    Memory.WriteRawAddress(RickFixes_Movement_1.Address() + 0x0B, jne);
                 }
             }
 
-            if (!Kernel.DetourActive("RickFixes_Movement_2"))
+            if (!Memory.DetourActive("RickFixes_Movement_2"))
             {
                 byte[] Function_A =
                 {
@@ -979,7 +1026,7 @@ namespace GameX
                     0x84, 0x9C, 0x17, 0xC4, 0x01, 0x00, 0x00
                 };
 
-                Detour RickFixes_Movement_2 = Kernel.CreateDetour("RickFixes_Movement_2", Function_A, 0x0079F6C1, Function_A_Original, true, 0x0079F6C8);
+                Detour RickFixes_Movement_2 = Memory.CreateDetour("RickFixes_Movement_2", Function_A, 0x0079F6C1, Function_A_Original, true, 0x0079F6C8);
 
                 if (RickFixes_Movement_2 != null)
                 {
@@ -987,11 +1034,11 @@ namespace GameX
                     jne[0] = 0x0F;
                     jne[1] = 0x85;
                     Memory.DetourJump(RickFixes_Movement_2.Address() + 0x08, 0x0079F6CA, 6, 6, true).CopyTo(jne, 2);
-                    Kernel.WriteRawAddress(RickFixes_Movement_2.Address() + 0x08, jne);
+                    Memory.WriteRawAddress(RickFixes_Movement_2.Address() + 0x08, jne);
                 }
             }
 
-            if (!Kernel.DetourActive("RickFixes_Movement_3"))
+            if (!Memory.DetourActive("RickFixes_Movement_3"))
             {
                 byte[] Function_A =
                 {
@@ -1005,7 +1052,7 @@ namespace GameX
                     0xF6, 0x84, 0x17, 0xC4, 0x01, 0x00, 0x00, 0X40
                 };
 
-                Detour RickFixes_Movement_3 = Kernel.CreateDetour("RickFixes_Movement_3", Function_A, 0x0079F698, Function_A_Original, true, 0x0079F6A0);
+                Detour RickFixes_Movement_3 = Memory.CreateDetour("RickFixes_Movement_3", Function_A, 0x0079F698, Function_A_Original, true, 0x0079F6A0);
 
                 if (RickFixes_Movement_3 != null)
                 {
@@ -1013,11 +1060,11 @@ namespace GameX
                     jne[0] = 0x0F;
                     jne[1] = 0x85;
                     Memory.DetourJump(RickFixes_Movement_3.Address() + 0x0B, 0x0079F6A2, 6, 6, true).CopyTo(jne, 2);
-                    Kernel.WriteRawAddress(RickFixes_Movement_3.Address() + 0x0B, jne);
+                    Memory.WriteRawAddress(RickFixes_Movement_3.Address() + 0x0B, jne);
                 }
             }
 
-            if (!Kernel.DetourActive("RickFixes_Movement_4"))
+            if (!Memory.DetourActive("RickFixes_Movement_4"))
             {
                 byte[] Function_A =
                 {
@@ -1031,7 +1078,7 @@ namespace GameX
                     0xF6, 0x84, 0x17, 0xC4, 0x01, 0x00, 0x00, 0X80
                 };
 
-                Detour RickFixes_Movement_4 = Kernel.CreateDetour("RickFixes_Movement_4", Function_A, 0x0079F6E9, Function_A_Original, true, 0x0079F6F1);
+                Detour RickFixes_Movement_4 = Memory.CreateDetour("RickFixes_Movement_4", Function_A, 0x0079F6E9, Function_A_Original, true, 0x0079F6F1);
 
                 if (RickFixes_Movement_4 != null)
                 {
@@ -1039,7 +1086,7 @@ namespace GameX
                     jne[0] = 0x0F;
                     jne[1] = 0x85;
                     Memory.DetourJump(RickFixes_Movement_4.Address() + 0x08, 0x0079F6F3, 6, 6, true).CopyTo(jne, 2);
-                    Kernel.WriteRawAddress(RickFixes_Movement_4.Address() + 0x08, jne);
+                    Memory.WriteRawAddress(RickFixes_Movement_4.Address() + 0x08, jne);
                 }
             }
         }
@@ -1133,7 +1180,7 @@ namespace GameX
                 // Characters & Costumes //
                 if (!CheckButtons[i].Checked && !CharacterCombos[i].IsPopupOpen && !CostumeCombos[i].IsPopupOpen)
                 {
-                    Tuple<int, int> CharCos = Game.Players[i].GetCharacter();
+                    Tuple<int, int> CharCos = Biohazard.Players[i].GetCharacter();
 
                     foreach (object Char in CharacterCombos[i].Properties.Items)
                     {
@@ -1148,36 +1195,36 @@ namespace GameX
                     }
                 }
 
-                bool PlayerPresent = Game.Players[i].IsActive();
-                double PlayerHealthPercent = PlayerPresent ? (double)Game.Players[i].GetHealth() / Game.Players[i].GetMaxHealth() : 1.0;
+                bool PlayerPresent = Biohazard.Players[i].IsActive();
+                double PlayerHealthPercent = PlayerPresent ? (double)Biohazard.Players[i].GetHealth() / Biohazard.Players[i].GetMaxHealth() : 1.0;
 
                 // Health Bar //
-                HealthBars[i].Properties.Maximum = PlayerPresent ? Game.Players[i].GetMaxHealth() : 1;
-                HealthBars[i].EditValue = PlayerPresent ? Game.Players[i].GetHealth() : 1;
+                HealthBars[i].Properties.Maximum = PlayerPresent ? Biohazard.Players[i].GetMaxHealth() : 1;
+                HealthBars[i].EditValue = PlayerPresent ? Biohazard.Players[i].GetHealth() : 1;
                 HealthBars[i].Properties.StartColor = PlayerPresent ? Color.FromArgb((int)(255.0 - (155.0 * PlayerHealthPercent)), (int)(0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(240, 240, 240);
                 HealthBars[i].Properties.EndColor = PlayerPresent ? Color.FromArgb((int)(255.0 - (155.0 * PlayerHealthPercent)), (int)(0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(240, 240, 240);
 
                 // Player Name //
-                PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (Game.InGame() ? ((i == Game.LocalPlayer()) ? Game.LocalPlayerNick() : (PlayerPresent ? (Game.Players[i].IsAI() ? "CPU AI" : "Connected") : "Disconnected")) : "Disconnected");
+                PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (Biohazard.InGame() ? ((i == Biohazard.LocalPlayer()) ? Biohazard.LocalPlayerNick() : (PlayerPresent ? (Biohazard.Players[i].IsAI() ? "CPU AI" : "Connected") : "Disconnected")) : "Disconnected");
 
                 // Handness //
                 if (Handness[i].SelectedIndex > 0 && PlayerPresent)
-                    Game.Players[i].SetHandness(new byte[] { (byte)(Handness[i].SelectedItem as ListItem).Value });
+                    Biohazard.Players[i].SetHandness(new byte[] { (byte)(Handness[i].SelectedItem as ListItem).Value });
 
                 // Weapon Mode //
                 if (WeaponMode[i].SelectedIndex > 0 && PlayerPresent)
-                    Game.Players[i].SetWeaponMode(new byte[] { (byte)(WeaponMode[i].SelectedItem as ListItem).Value });
+                    Biohazard.Players[i].SetWeaponMode(new byte[] { (byte)(WeaponMode[i].SelectedItem as ListItem).Value });
 
-                if (Game.GetActiveGameMode() == "Versus")
+                if (Biohazard.GetActiveGameMode() == "Versus")
                     continue;
 
                 // Infinite HP //
                 if (InfiniteHP[i].Checked && PlayerPresent)
-                    Game.Players[i].SetHealth(Game.Players[i].GetMaxHealth());
+                    Biohazard.Players[i].SetHealth(Biohazard.Players[i].GetMaxHealth());
 
                 // Untergetable //
                 if (Untargetable[i].Checked && PlayerPresent)
-                    Game.Players[i].SetUntargetable(true);
+                    Biohazard.Players[i].SetUntargetable(true);
             }
         }
 

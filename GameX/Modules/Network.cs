@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraEditors;
 using GameX.Types;
+using WatsonTcp;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,26 +9,29 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Threading.Tasks;
+using System.Text;
 
 namespace GameX.Modules
 {
-    public class Peer
+    public class ConnectedClient
     {
-        public TcpClient Client { get; set; }
-        public IPAddress IP { get; set; }
-        public int Port { get; set; }
+        public string IP { get; set; }
         public int Index { get; set; }
         public int Player { get; set; }
     }
 
     public class Network
     {
+        public static bool ModuleStarted { get; set; }
         private static App Main { get; set; }
-        private static TcpListener Server { get; set; }
-        public static Peer[] Peers { get; private set; }
+        public static WatsonTcpServer Server { get; set; }
+        public static WatsonTcpClient Client { get; set; }
+        public static ConnectedClient[] Clients { get; private set; }
         public static string PublicIPv4 { get; private set; }
         public static string PrivateIPv4 { get; private set; }
         public static bool HasConnection { get; private set; }
+
+        /* Utils */
 
         public static bool TestConnection(string HostNameOrAddress, int Timeout = 100)
         {
@@ -60,9 +64,10 @@ namespace GameX.Modules
             return address;
         }
 
-        public static string[] MachinePrivateIP()
+        public static string MachinePrivateIP()
         {
             List<string> ipAddrList = new List<string>();
+
             foreach (NetworkInterface item in NetworkInterface.GetAllNetworkInterfaces())
             {
                 if (item.NetworkInterfaceType == NetworkInterfaceType.Ethernet && item.OperationalStatus == OperationalStatus.Up)
@@ -76,89 +81,135 @@ namespace GameX.Modules
                     }
                 }
             }
-            return ipAddrList.ToArray();
+
+            return ipAddrList.ToArray().FirstOrDefault();
         }
 
-        public static async Task Start(App GameXRef)
+        /* Module Manager */
+
+        public static async Task StartModule(App GameXRef)
         {
             Main = GameXRef;
             HasConnection = await Task.Run(() => TestConnection("google.com"));
 
             if (HasConnection)
             {
-                Peers = new Peer[3];
+                Clients = new ConnectedClient[3];
                 PublicIPv4 = MachinePublicIP();
-                PrivateIPv4 = MachinePrivateIP().FirstOrDefault();
+                PrivateIPv4 = MachinePrivateIP();
+                ModuleStarted = true;
                 return;
             }
 
-            Terminal.WriteLine("No connection found, check your internet connection and restart GameX.");
+            ModuleStarted = false;
         }
 
-        public static async Task Update()
+        public static void FinishModule()
         {
-            if (!HasConnection || Server == null)
+            Main = null;
+            HasConnection = false;
+            Clients = null;
+            PublicIPv4 = "";
+            PrivateIPv4 = "";
+
+            if (Server != null)
+            {
+                Server.Dispose();
+                Server = null;
+            }
+
+            if (Client != null)
+            {
+                Client.Dispose();
+                Client = null;
+            }
+
+            ModuleStarted = false;
+        }
+
+        /* Server */
+
+        #region SERVER
+
+        public static void StartServer_Click(object sender, EventArgs e)
+        {
+            if (!ModuleStarted)
+            {
+                Terminal.WriteLine("The Network module hasn't been enabled, enable it to start a server.");
                 return;
+            }
 
-            TcpClient Client = Server.AcceptTcpClient();
-            await Task.Run(() => HandleClient(Client));
+            if (Server == null)
+                StartServer(sender, e);
+            else
+                StopServer(sender, e);
         }
 
-        public static void StartServer(int Port)
+        public static void StartServer(object sender, EventArgs e)
         {
-            Server = new TcpListener(IPAddress.Parse(PrivateIPv4), Port);
+            CheckButton CB = sender as CheckButton;
+
+            if (Main.ServerPortTextEdit.Text == "")
+            {
+                Terminal.WriteLine("There is not server port specified, aborting.");
+                return;
+            }
+
+            bool PortParsed = int.TryParse(Main.ServerPortTextEdit.Text, out int Port);
+
+            if (!PortParsed || Port > 65535 || Port < 0)
+            {
+                Terminal.WriteLine("Invalid port, please check your inputs.");
+                return;
+            }
+
+            try
+            {
+                Server = new WatsonTcpServer("127.0.0.1", Port);
+                Server.Events.ClientConnected += Server_ClientConnected;
+                Server.Events.ClientDisconnected += Server_ClientDisconnected;
+                Server.Events.MessageReceived += Server_MessageReceived;
+                Server.Events.ServerStarted += Server_ServerStarted;
+                Server.Events.ServerStopped += Server_ServerStopped;
+                Server.Callbacks.SyncRequestReceived = Server_SyncRequestReceived;
+
+                Server.Settings.Logger = Server_Logger;
+                Server.Settings.DebugMessages = true;
+                Server.Settings.MaxConnections = 3;
+
+                Server.Keepalive.EnableTcpKeepAlives = true;
+                Server.Keepalive.TcpKeepAliveInterval = 1;
+                Server.Keepalive.TcpKeepAliveTime = 1;
+                Server.Keepalive.TcpKeepAliveRetryCount = 3;
+            }
+            catch (Exception Ex)
+            {
+                Server?.Dispose();
+                Server = null;
+                Terminal.WriteLine(Ex.Message);
+                return;
+            }
+
             Server.Start();
 
-            Terminal.WriteLine($"Server started at {PrivateIPv4}:{Port}");
+            CB.Text = "Close";
+            Main.ServerStatusTextEdit.Text = $"Server sucessfully hosted at: 127.0.0.1:{Port}";
         }
 
-        public static void StopServer()
+        public static void StopServer(object sender, EventArgs e)
         {
-            if (!HasConnection || Server == null)
-            {
-                Terminal.WriteLine("There is no server to stop, skipping.");
-                return;
-            }
+            CheckButton CB = sender as CheckButton;
 
-            Server.Stop();
+            Server.DisconnectClients();
+            Server.Dispose();
             Server = null;
 
-            foreach (Peer peer in Peers)
-            {
-                if (peer != null && peer.Client != null)
-                    peer.Client.Close();
-            }
-
-            Terminal.WriteLine("Server closed sucessfully.");
+            CB.Text = "Open";
+            Main.ServerStatusTextEdit.Text = "Server offline";
         }
 
-        public static async Task HandleClient(TcpClient Client)
+        private static void Server_ClientConnected(object sender, ConnectionEventArgs args)
         {
-            NetworkStream DataStream = Client.GetStream();
-        }
-
-        public static async void Connect_Click(object sender, EventArgs e)
-        {
-            if (!HasConnection || Server == null)
-            {
-                Terminal.WriteLine("Server is not up, start one using the command: StartServer:Port");
-                return;
-            }
-
-            TextEdit[] IPBoxes =
-            {
-                Main.P1IPTextEdit,
-                Main.P2IPTextEdit,
-                Main.P3IPTextEdit
-            };
-
-            SimpleButton[] ConnectButtons =
-            {
-                Main.P1ConnectionButton,
-                Main.P2ConnectionButton,
-                Main.P3ConnectionButton
-            };
-
             ComboBoxEdit[] PlayerIndexes =
             {
                 Main.P1PlayerIndexComboBoxEdit,
@@ -166,66 +217,74 @@ namespace GameX.Modules
                 Main.P3PlayerIndexComboBoxEdit
             };
 
-            SimpleButton SB = sender as SimpleButton;
-            int Index = int.Parse(SB.Name[1].ToString()) - 1;
-
-            string[] Address = IPBoxes[Index].Text.Split(':');
-
-            if (!IPAddress.TryParse(Address[0], out IPAddress IPv4))
+            for (int i = 0; i < 3; i++)
             {
-                Terminal.WriteLine($"Peer {Index + 1} has a invalid IP address, your input should follow IPv4:Port.");
-                return;
+                if (Clients[i] == null)
+                    Clients[i] = new ConnectedClient() { IP = args.IpPort, Index = i, Player = (PlayerIndexes[i].SelectedItem as ListItem).Value };
             }
 
-            if (!int.TryParse(Address[1], out int Port))
+            Terminal.WriteLine("Client connected: " + args.IpPort);
+        }
+        private static void Server_ClientDisconnected(object sender, DisconnectionEventArgs args)
+        {
+            for (int i = 0; i < 3; i++)
             {
-                Terminal.WriteLine($"Peer {Index + 1} has a invalid port, your input should follow IPv4:Port.");
-                return;
+                if (Clients[i] != null && Clients[i].IP == args.IpPort)
+                    Clients[i] = null;
             }
 
-            ConnectButtons[Index].Text = "Pinging";
-            ConnectButtons[Index].Enabled = false;
-
-            Terminal.WriteLine($"Pinging {IPv4} for response.");
-
-            bool ConnectionSucess = await Task.Run(() => TestConnection(IPv4.ToString()));
-
-            if (ConnectionSucess)
-                Terminal.WriteLine($"Response received from {IPv4}, trying connection now.");
-            else
-            {
-                Terminal.WriteLine($"No response received from {IPv4}, check if the IP address is correct.");
-                ConnectButtons[Index].Text = "Connect";
-                ConnectButtons[Index].Enabled = true;
-                return;
-            }
-
-            ConnectButtons[Index].Text = "Connecting";
-
-            try
-            {
-                TcpClient Client = new TcpClient();
-                await Task.Run(() => Client.Connect(IPv4, Port));
-
-                Peers[Index] = new Peer() { Client = Client, IP = IPv4, Port = Port, Index = Index, Player = (PlayerIndexes[Index].SelectedItem as ListItem).Value };
-
-                Terminal.WriteLine($"Sucessfully connected to {IPv4}:{Port}");
-
-                ConnectButtons[Index].Text = "Disconnect";
-                ConnectButtons[Index].Click += Disconnect_Click;
-                ConnectButtons[Index].Enabled = true;
-            }
-            catch(SocketException Ex)
-            {
-                Terminal.WriteLine($"{Ex.Message}");
-                ConnectButtons[Index].Text = "Connect";
-                ConnectButtons[Index].Enabled = true;
-            }
+            Terminal.WriteLine("Client disconnected: " + args.IpPort + ": " + args.Reason.ToString());
         }
 
-        public static async void Disconnect_Click(object sender, EventArgs e)
+        private static void Server_MessageReceived(object sender, MessageReceivedEventArgs args)
+        {
+            Terminal.WriteLine("Message from " + args.IpPort + ": " + Encoding.UTF8.GetString(args.Data));
+        }
+
+        private static void Server_ServerStarted(object sender, EventArgs args)
+        {
+            Terminal.WriteLine("Server started.");
+        }
+
+        private static void Server_ServerStopped(object sender, EventArgs args)
+        {
+            Terminal.WriteLine("Server closed.");
+        }
+
+        private static SyncResponse Server_SyncRequestReceived(SyncRequest req)
+        {
+            return new SyncResponse(req, req.Data);
+        }
+
+        private static void Server_Logger(Severity sev, string msg)
+        {
+            Terminal.WriteLine("[" + sev.ToString().PadRight(9) + "] " + msg);
+        }
+
+        public static void ServerLoop()
+        {
+            if (!ModuleStarted || Server == null)
+                return;
+
+
+        }
+
+        #endregion
+
+        /* Client */
+
+        #region CLIENT
+
+        public static void ConnectToServer_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        public static void DisconnectFromServer_Click(object sender, EventArgs e)
         {
 
         }
+
+        #endregion
     }
 }

@@ -1,21 +1,20 @@
-﻿using System;
+﻿using GameX.Modules;
+using System;
 
 namespace GameX.Game.Modules
 {
     public class Player
     {
-        private App Main { get; set; }
         private int _INDEX { get; set; }
 
-        public Player(App main, int Index)
+        public Player(int Index)
         {
-            Main = main;
             _INDEX = Index;
         }
 
         public int GetBaseAddress()
         {
-            return Main.Kernel.ReadInt16("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX));
+            return Memory.ReadInt16("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX));
         }
 
         public bool IsActive()
@@ -25,46 +24,46 @@ namespace GameX.Game.Modules
 
         public Tuple<int, int> GetCharacter()
         {
-            int Character = Main.Kernel.ReadInt32("re5dx9.exe", 0xDA383C, 0x6FE08 + (0x50 * _INDEX));
-            int Costume = Main.Kernel.ReadInt32("re5dx9.exe", 0xDA383C, 0x6FE0C + (0x50 * _INDEX));
+            int Character = Memory.ReadInt32("re5dx9.exe", 0xDA383C, 0x6FE08 + (0x50 * _INDEX));
+            int Costume = Memory.ReadInt32("re5dx9.exe", 0xDA383C, 0x6FE0C + (0x50 * _INDEX));
 
             return new Tuple<int, int>(Character, Costume);
         }
 
         public void SetCharacter(int Character, int Costume)
         {
-            Main.Kernel.WriteInt32(Character, "re5dx9.exe", 0xDA383C, 0x6FE08 + (0x50 * _INDEX));
-            Main.Kernel.WriteInt32(Costume, "re5dx9.exe", 0xDA383C, 0x6FE0C + (0x50 * _INDEX));
+            Memory.WriteInt32(Character, "re5dx9.exe", 0xDA383C, 0x6FE08 + (0x50 * _INDEX));
+            Memory.WriteInt32(Costume, "re5dx9.exe", 0xDA383C, 0x6FE0C + (0x50 * _INDEX));
         }
 
         public short GetHealth()
         {
-            return Main.Kernel.ReadInt16("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1364);
+            return Memory.ReadInt16("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1364);
         }
 
         public void SetHealth(short Value)
         {
-            Main.Kernel.WriteInt16(Value, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1364);
+            Memory.WriteInt16(Value, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1364);
         }
 
         public short GetMaxHealth()
         {
-            return Main.Kernel.ReadInt16("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1366);
+            return Memory.ReadInt16("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1366);
         }
 
         public void SetMaxHealth(short Value)
         {
-            Main.Kernel.WriteInt16(Value, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1366);
+            Memory.WriteInt16(Value, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1366);
         }
 
         public void SetUntargetable(bool Invulnerable)
         {
-            Main.Kernel.WriteInt16(Invulnerable ? 0 : 1, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x135C);
+            Memory.WriteInt16(Invulnerable ? 0 : 1, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x135C);
         }
 
         public bool IsAI()
         {
-            return Main.Kernel.ReadInt32("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2DA8) == 1;
+            return Memory.ReadInt32("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2DA8) == 1;
         }
 
         public int GetDefaultHandness()
@@ -101,14 +100,14 @@ namespace GameX.Game.Modules
         {
             // 0 = Right 1 = Left
 
-            Main.Kernel.WriteBytes(Mode, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1AF9);
+            Memory.WriteBytes(Mode, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1AF9);
         }
 
         public void SetWeaponMode(byte[] Mode)
         {
             // 0 = Male 1 = Female
 
-            Main.Kernel.WriteBytes(Mode, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1AF8);
+            Memory.WriteBytes(Mode, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1AF8);
         }
     }
 }

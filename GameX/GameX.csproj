@@ -99,13 +99,16 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WatsonTcp, Version=4.8.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WatsonTcp.4.8.5\lib\net461\WatsonTcp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Content\Indexes.cs" />
     <Compile Include="Content\Rates.cs" />
     <Compile Include="Content\Design.cs" />
     <Compile Include="Game\Content\Miscellaneous.cs" />
-    <Compile Include="Game\Modules\Master.cs" />
+    <Compile Include="Game\Modules\Biohazard.cs" />
     <Compile Include="Game\Modules\Player.cs" />
     <Compile Include="Game\Content\Characters.cs" />
     <Compile Include="Game\Types\Character.cs" />

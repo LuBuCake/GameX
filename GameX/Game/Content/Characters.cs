@@ -1,6 +1,7 @@
 ﻿using GameX.Game.Types;
 using GameX.Helpers;
 using GameX.Modules;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -132,12 +133,19 @@ namespace GameX.Game.Content
         {
             List<Character> Chars = GetDefaultChars();
 
-            foreach (Character Char in Chars)
+            try
             {
-                Serializer.WriteDataFile(@"GameX/Objects/Characters/" + $"{Char.Name}.json", Serializer.SerializeCharacter(Char));
-            }
+                foreach (Character Char in Chars)
+                {
+                    Serializer.WriteDataFile(@"GameX/Objects/Characters/" + $"{Char.Name}.json", Serializer.SerializeCharacter(Char));
+                }
 
-            Terminal.WriteLine("Characters jsons written sucessfully.");
+                Terminal.WriteLine("Characters jsons written sucessfully.");
+            }
+            catch(Exception Ex)
+            {
+                Terminal.WriteLine(Ex.Message);
+            }
         }
 
         public static List<Character> GetCharactersFromFolder()

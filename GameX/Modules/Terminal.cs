@@ -1,7 +1,10 @@
 ﻿using DevExpress.XtraEditors;
 using GameX.Game.Content;
+using GameX.Game.Modules;
 using GameX.Helpers;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace GameX.Modules
@@ -23,20 +26,25 @@ namespace GameX.Modules
         {
             string[] Commands =
             {
-                Environment.NewLine + "App Commands: ",
-                "StartServer : Port - Starts a server for network connections.",
-                "StopServer - Stops and closes the opened server.",
-                "GetPublicIPv4 - Returns your public IPv4, you can use it to connect to other players using GameX.",
-                "GetPrivateIPv4 - Returns your private IPv4, it is only used for server hosting.",
+                Environment.NewLine + "App commands:",
                 "WriteJson chars/items - Writes the default json for each of the collection's objects.",
-                "Reinject - Clears both App and Game edits and performs a reinject in the Game's process.",
+                "Reinject - Clears both the app and game edits and performs a reinject in the game's process.",
                 "Clear - Clears the console output.",
                 "Help - Shows all available commands.",
                 "FPS - Shows the current FPS.",
                 "FrameTime - Shows the last frametime.",
                 "CurTime - Shows the elapsed time in seconds since the program opened",
-                "Exit - Closes the App." + Environment.NewLine,
-                "Game Commands: ",
+                "Exit - Closes the App.",
+
+                Environment.NewLine + "Network commands:",
+                "GetPublicIPv4 - Returns your public IPv4, you can use it to connect to other players using GameX.",
+                "GetPrivateIPv4 - Returns your private IPv4, it is only used for server hosting.",
+
+                Environment.NewLine + "Server commands:",
+                "Server Clients - Lists all connected clients.",
+                "Server Stats - Shows the server's statistics.",
+
+                Environment.NewLine + "Game commands:",
                 "GetHealth p1/p2/p3/p4 - Gets the current health for the respective player.",
                 "SetHealth p1/p2/p3/p4 Value - Sets the health for the respective player, this needs to be set between 0 and 1000."
             };
@@ -49,7 +57,7 @@ namespace GameX.Modules
         {
             if (Command.Contains("gethealth") && Command.Length == 11)
             {
-                if (!Main.Initialized || Main.Game == null)
+                if (!Main.Initialized || !Biohazard.ModuleStarted)
                 {
                     WriteLine("The game is not running.");
                     return true;
@@ -63,13 +71,13 @@ namespace GameX.Modules
                         return true;
                     }
 
-                    if (!Main.Game.Players[Player - 1].IsActive())
+                    if (!Biohazard.Players[Player - 1].IsActive())
                     {
                         WriteLine("The selected player is not present.");
                         return true;
                     }
 
-                    WriteLine($"{Main.Game.Players[Player - 1].GetHealth()}");
+                    WriteLine($"{Biohazard.Players[Player - 1].GetHealth()}");
                 }
                 else
                     return false;
@@ -78,7 +86,7 @@ namespace GameX.Modules
             }
             else if (Command.Contains("sethealth") && Command.Length >= 12 && Command.Length <= 15)
             {
-                if (!Main.Initialized || Main.Game == null)
+                if (!Main.Initialized || !Biohazard.ModuleStarted)
                 {
                     WriteLine("The game is not running.");
                     return true;
@@ -94,19 +102,19 @@ namespace GameX.Modules
                             return true;
                         }
 
-                        if (Main.Game.GetActiveGameMode() == "Versus")
+                        if (Biohazard.GetActiveGameMode() == "Versus")
                         {
                             WriteLine("Versus mode detected, operation ignored.");
                             return true;
                         }
 
-                        if (!Main.Game.Players[Player - 1].IsActive())
+                        if (!Biohazard.Players[Player - 1].IsActive())
                         {
                             WriteLine("The selected player is not present.");
                             return true;
                         }
 
-                        Main.Game.Players[Player - 1].SetHealth((short)Utility.Clamp(HP, 0, 1000));
+                       Biohazard.Players[Player - 1].SetHealth((short)Utility.Clamp(HP, 0, 1000));
                         WriteLine($"Player {Player} health set to {HP}.");
                     }
                     else
@@ -121,39 +129,81 @@ namespace GameX.Modules
             return false;
         }
 
-        private static void ProcessCommand(string Command)
+        private static bool ProcessNetworkCommand(string Command)
         {
-            Command = Command.ToLower();
-            Command = Utility.RemoveWhiteSpace(Command);
-
-            WriteLine(Command);
-
-            if (Command.Contains("startserver"))
-            {
-                string[] args = Command.Split(':');
-
-                if (!int.TryParse(args[1], out int Port))
-                    WriteLine("Invalid port, please specify one between 0 and 65535, you can choose using the link: https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers");
-                else
-                    Network.StartServer(Utility.Clamp(Port, 0, 65535));
-            }
-            else if (Command == "stopserver")
-                Network.StopServer();
-            else if (Command == "getpublicipv4")
+            if (Command == "getpublicipv4")
             {
                 if (Network.HasConnection)
                     WriteLine($"Your public IPv4 is: {Network.PublicIPv4}");
                 else
-                    WriteLine("No connection was found when initialized, check your internet connection and restart GameX.");
+                    WriteLine("The Network module is not running, enable it before trying its commands.");
+
+                return true;
             }
             else if (Command == "getprivateipv4")
             {
                 if (Network.HasConnection)
                     WriteLine($"Your private IPv4 is: {Network.PrivateIPv4}");
                 else
-                    WriteLine("No connection was found when initialized, check your internet connection and restart GameX.");
+                    WriteLine("The Network module is not running, enable it before trying its commands.");
+
+                return true;
             }
-            else if (Command == "writejsonchars")
+
+            return false;
+        }
+
+        private static bool ProcessServerCommand(string Command)
+        {
+            if (Command == "serverclients")
+            {
+                if (Network.Server == null)
+                {
+                    WriteLine("There is no server running, start one before trying its commands.");
+                    return true;
+                }
+
+                List<string> clients = Network.Server.ListClients().ToList();
+
+                if (clients != null && clients.Count > 0)
+                {
+                    WriteLine("Connected clients:");
+
+                    foreach (string cli in clients)
+                    {
+                        WriteLine(cli);
+                    }
+                }
+                else
+                {
+                    WriteLine("No clients connected.");
+                }
+
+                return true;
+            }
+            else if (Command == "serverstats")
+            {
+                if (Network.Server == null)
+                {
+                    WriteLine("There is no server running, start one before trying its commands.");
+                    return true;
+                }
+
+                WriteLine(Network.Server.Statistics.ToString());
+                return true;
+            }
+
+            return false;
+        }
+
+        private static void ProcessCommand(string Command)
+        {
+            WriteLine(Command);
+
+            Command = Command.ToLower();
+            Command = Utility.RemoveWhiteSpace(Command);
+            
+            if (Command == "writejsonchars")
                 Characters.WriteDefaultChars();
             else if (Command == "writejsonitems")
                 WriteLine("Not implemented yet.");
@@ -171,7 +221,7 @@ namespace GameX.Modules
                 WriteLine(((int)Main.CurTime).ToString());
             else if (Command == "exit")
                 Application.Exit();
-            else if (!ProcessGameCommand(Command))
+            else if (!ProcessGameCommand(Command) && !ProcessNetworkCommand(Command) && !ProcessServerCommand(Command))
                 WriteLine("Unknown or incorrect use of command. Type Help to see all available commands and their syntax.");
         }
 
