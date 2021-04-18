@@ -40,22 +40,6 @@ namespace GameX.Properties {
         }
         
         /// <summary>
-        /// The networked NickName for the user
-        /// </summary>
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Configuration.SettingsDescriptionAttribute("The networked NickName for the user")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("NickName")]
-        public string NickName {
-            get {
-                return ((string)(this["NickName"]));
-            }
-            set {
-                this["NickName"] = value;
-            }
-        }
-        
-        /// <summary>
         /// Sets the skin scheme for the application.
         /// </summary>
         [global::System.Configuration.UserScopedSettingAttribute()]

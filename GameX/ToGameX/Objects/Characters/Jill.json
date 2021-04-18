@@ -1,0 +1,30 @@
+{
+  "Name": "Jill",
+  "Value": 2,
+  "Costumes": [
+    {
+      "Name": "BSAA",
+      "Portrait": "GameX/Resources/Images/Characters/j0.png",
+      "File": "uPl02JillCos1",
+      "Value": 0
+    },
+    {
+      "Name": "Battlesuit",
+      "Portrait": "GameX/Resources/Images/Characters/j1.png",
+      "File": "uPl02JillCos2",
+      "Value": 1
+    },
+    {
+      "Name": "Desesperate Escape",
+      "Portrait": "GameX/Resources/Images/Characters/j1.png",
+      "File": "uPl02JillCos3",
+      "Value": 2
+    },
+    {
+      "Name": "Lost in Nightmares",
+      "Portrait": "GameX/Resources/Images/Characters/j0.png",
+      "File": "uPl02JillCos4",
+      "Value": 3
+    }
+  ]
+}

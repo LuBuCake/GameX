@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GameX.Modules;
+using System;
+using System.Drawing;
 using System.Linq;
 
 namespace GameX.Helpers
@@ -27,6 +29,20 @@ namespace GameX.Helpers
         public static string RemoveWhiteSpace(string Source)
         {
             return new string(Source.ToCharArray().Where(c => !char.IsWhiteSpace(c)).ToArray());
+        }
+
+        public static Image GetImageFromFile(string File)
+        {
+            try
+            {
+                Image img = Image.FromFile(File);
+                return img;
+            }
+            catch (Exception)
+            {
+                Terminal.WriteLine($"Portrait file not found: {File}");
+                return null;
+            }
         }
     }
 }

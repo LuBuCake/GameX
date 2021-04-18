@@ -2,11 +2,12 @@
 
 namespace GameX.Game.Types
 {
-    public class Costume
+    public class Character
     {
         public string Name { get; set; }
         public int Value { get; set; }
-        public int Index { get; set; }
+
+        public List<Costume> Costumes { get; set; }
 
         public override string ToString()
         {
@@ -14,17 +15,28 @@ namespace GameX.Game.Types
         }
     }
 
-    public class Character
+    public class Costume
     {
         public string Name { get; set; }
+        public string Portrait { get; set; }
+        public string File { get; set; }
         public int Value { get; set; }
-        public int Index { get; set; }
-
-        public List<Costume> Costumes { get; set; }
 
         public override string ToString()
         {
             return Name;
+        }
+    }
+
+    public class NetCharacter
+    {
+        public int Index { get; set; }
+        public int Character { get; set; }
+        public int Costume { get; set; }
+
+        public override string ToString()
+        {
+            return base.ToString() + Index + " " + Character + " " + Costume;
         }
     }
 }

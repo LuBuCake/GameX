@@ -1,7 +1,6 @@
-﻿using DevExpress.Skins;
-using DevExpress.LookAndFeel;
+﻿using DevExpress.LookAndFeel;
+using DevExpress.Skins;
 using GameX.Types;
-using System.Drawing;
 using System.Collections.Generic;
 
 namespace GameX.Content

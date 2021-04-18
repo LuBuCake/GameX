@@ -37,35 +37,84 @@ namespace GameX
             this.MasterTabControl = new DevExpress.XtraTab.XtraTabControl();
             this.TabPageChar = new DevExpress.XtraTab.XtraTabPage();
             this.TabPageCharGPPlayer4 = new DevExpress.XtraEditors.GroupControl();
+            this.P4MiscGP = new DevExpress.XtraEditors.GroupControl();
+            this.P4WeaponModeGP = new DevExpress.XtraEditors.GroupControl();
+            this.P4WeaponModeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P4HandnessGP = new DevExpress.XtraEditors.GroupControl();
+            this.P4HandnessComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P4InfiniteAmmoButton = new DevExpress.XtraEditors.CheckButton();
+            this.P4RapidfireButton = new DevExpress.XtraEditors.CheckButton();
+            this.P4InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
+            this.P4UntargetableButton = new DevExpress.XtraEditors.CheckButton();
             this.P4FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
             this.P4HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.P4CharPictureBox = new DevExpress.XtraEditors.PictureEdit();
             this.P4CosComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P4CharComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.TabPageCharGPPlayer3 = new DevExpress.XtraEditors.GroupControl();
+            this.P3MiscGP = new DevExpress.XtraEditors.GroupControl();
+            this.P3WeaponModeGP = new DevExpress.XtraEditors.GroupControl();
+            this.P3WeaponModeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P3HandnessGP = new DevExpress.XtraEditors.GroupControl();
+            this.P3HandnessComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P3InfiniteAmmoButton = new DevExpress.XtraEditors.CheckButton();
+            this.P3RapidfireButton = new DevExpress.XtraEditors.CheckButton();
+            this.P3InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
+            this.P3UntargetableButton = new DevExpress.XtraEditors.CheckButton();
             this.P3FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
             this.P3HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.P3CharPictureBox = new DevExpress.XtraEditors.PictureEdit();
             this.P3CosComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P3CharComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.TabPageCharGPPlayer2 = new DevExpress.XtraEditors.GroupControl();
+            this.P2MiscGP = new DevExpress.XtraEditors.GroupControl();
+            this.P2WeaponModeGP = new DevExpress.XtraEditors.GroupControl();
+            this.P2WeaponModeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P2HandnessGP = new DevExpress.XtraEditors.GroupControl();
+            this.P2HandnessComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P2InfiniteAmmoButton = new DevExpress.XtraEditors.CheckButton();
+            this.P2RapidfireButton = new DevExpress.XtraEditors.CheckButton();
+            this.P2InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
+            this.P2UntargetableButton = new DevExpress.XtraEditors.CheckButton();
             this.P2FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
             this.P2HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.P2CharPictureBox = new DevExpress.XtraEditors.PictureEdit();
             this.P2CosComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P2CharComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.TabPageCharGPPlayer1 = new DevExpress.XtraEditors.GroupControl();
-            this.P1UntargetableButton = new DevExpress.XtraEditors.CheckButton();
+            this.P1MiscGP = new DevExpress.XtraEditors.GroupControl();
+            this.P1WeaponModeGP = new DevExpress.XtraEditors.GroupControl();
+            this.P1WeaponModeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P1HandnessGP = new DevExpress.XtraEditors.GroupControl();
+            this.P1HandnessComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P1InfiniteAmmoButton = new DevExpress.XtraEditors.CheckButton();
+            this.P1RapidfireButton = new DevExpress.XtraEditors.CheckButton();
             this.P1InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
+            this.P1UntargetableButton = new DevExpress.XtraEditors.CheckButton();
             this.P1HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
+            this.TabPageInventory = new DevExpress.XtraTab.XtraTabPage();
             this.TabPageSettings = new DevExpress.XtraTab.XtraTabPage();
             this.NetworkGP = new DevExpress.XtraEditors.GroupControl();
-            this.NickLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.NickNameTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.P3NetworkGP = new DevExpress.XtraEditors.GroupControl();
+            this.P3ConnectionButton = new DevExpress.XtraEditors.SimpleButton();
+            this.P3IPLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.P3PlayerIndexComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P3IPTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.P2NetworkGP = new DevExpress.XtraEditors.GroupControl();
+            this.P2ConnectionButton = new DevExpress.XtraEditors.SimpleButton();
+            this.P2IPLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.P2PlayerIndexComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P2IPTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.P1NetworkGP = new DevExpress.XtraEditors.GroupControl();
+            this.P1ConnectionButton = new DevExpress.XtraEditors.SimpleButton();
+            this.P1IPLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.P1PlayerIndexComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P1IPTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ConsoleGP = new DevExpress.XtraEditors.GroupControl();
             this.ConsoleOutputMemoEdit = new DevExpress.XtraEditors.MemoEdit();
             this.ConsoleInputTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.TabPageSettingsGPApp = new DevExpress.XtraEditors.GroupControl();
+            this.AboutPictureEdit = new DevExpress.XtraEditors.PictureEdit();
             this.AppSettingsGP = new DevExpress.XtraEditors.GroupControl();
             this.MiscSettingsGP = new DevExpress.XtraEditors.GroupControl();
             this.PaletteLabelControl = new DevExpress.XtraEditors.LabelControl();
@@ -77,42 +126,6 @@ namespace GameX
             this.LoadSaveGP = new DevExpress.XtraEditors.GroupControl();
             this.LoadSettingsButton = new DevExpress.XtraEditors.SimpleButton();
             this.SaveSettingsButton = new DevExpress.XtraEditors.SimpleButton();
-            this.AboutGP = new DevExpress.XtraEditors.GroupControl();
-            this.AboutMemoEdit = new DevExpress.XtraEditors.MemoEdit();
-            this.P1MiscGP = new DevExpress.XtraEditors.GroupControl();
-            this.P1InfiniteAmmoButton = new DevExpress.XtraEditors.CheckButton();
-            this.P1RapidfireButton = new DevExpress.XtraEditors.CheckButton();
-            this.P1HandnessGP = new DevExpress.XtraEditors.GroupControl();
-            this.P1WeaponModeGP = new DevExpress.XtraEditors.GroupControl();
-            this.P1HandnessComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.P1WeaponModeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.P2MiscGP = new DevExpress.XtraEditors.GroupControl();
-            this.P2WeaponModeGP = new DevExpress.XtraEditors.GroupControl();
-            this.P2WeaponModeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.P2HandnessGP = new DevExpress.XtraEditors.GroupControl();
-            this.P2HandnessComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.P2InfiniteAmmoButton = new DevExpress.XtraEditors.CheckButton();
-            this.P2RapidfireButton = new DevExpress.XtraEditors.CheckButton();
-            this.P2InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
-            this.P2UntargetableButton = new DevExpress.XtraEditors.CheckButton();
-            this.P3MiscGP = new DevExpress.XtraEditors.GroupControl();
-            this.P3WeaponModeGP = new DevExpress.XtraEditors.GroupControl();
-            this.P3WeaponModeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.P3HandnessGP = new DevExpress.XtraEditors.GroupControl();
-            this.P3HandnessComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.P3InfiniteAmmoButton = new DevExpress.XtraEditors.CheckButton();
-            this.P3RapidfireButton = new DevExpress.XtraEditors.CheckButton();
-            this.P3InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
-            this.P3UntargetableButton = new DevExpress.XtraEditors.CheckButton();
-            this.P4MiscGP = new DevExpress.XtraEditors.GroupControl();
-            this.P4WeaponModeGP = new DevExpress.XtraEditors.GroupControl();
-            this.P4WeaponModeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.P4HandnessGP = new DevExpress.XtraEditors.GroupControl();
-            this.P4HandnessComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.P4InfiniteAmmoButton = new DevExpress.XtraEditors.CheckButton();
-            this.P4RapidfireButton = new DevExpress.XtraEditors.CheckButton();
-            this.P4InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
-            this.P4UntargetableButton = new DevExpress.XtraEditors.CheckButton();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -121,35 +134,79 @@ namespace GameX
             this.TabPageChar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageCharGPPlayer4)).BeginInit();
             this.TabPageCharGPPlayer4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P4MiscGP)).BeginInit();
+            this.P4MiscGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P4WeaponModeGP)).BeginInit();
+            this.P4WeaponModeGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P4WeaponModeComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P4HandnessGP)).BeginInit();
+            this.P4HandnessGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P4HandnessComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P4HealthBar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P4CharPictureBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P4CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P4CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageCharGPPlayer3)).BeginInit();
             this.TabPageCharGPPlayer3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P3MiscGP)).BeginInit();
+            this.P3MiscGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P3WeaponModeGP)).BeginInit();
+            this.P3WeaponModeGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P3WeaponModeComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P3HandnessGP)).BeginInit();
+            this.P3HandnessGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P3HandnessComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P3HealthBar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P3CharPictureBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P3CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P3CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageCharGPPlayer2)).BeginInit();
             this.TabPageCharGPPlayer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2MiscGP)).BeginInit();
+            this.P2MiscGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2WeaponModeGP)).BeginInit();
+            this.P2WeaponModeGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2WeaponModeComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2HandnessGP)).BeginInit();
+            this.P2HandnessGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2HandnessComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P2HealthBar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P2CharPictureBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P2CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P2CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageCharGPPlayer1)).BeginInit();
             this.TabPageCharGPPlayer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P1MiscGP)).BeginInit();
+            this.P1MiscGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P1WeaponModeGP)).BeginInit();
+            this.P1WeaponModeGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P1WeaponModeComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P1HandnessGP)).BeginInit();
+            this.P1HandnessGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P1HandnessComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1HealthBar.Properties)).BeginInit();
             this.TabPageSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NetworkGP)).BeginInit();
             this.NetworkGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NickNameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P3NetworkGP)).BeginInit();
+            this.P3NetworkGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P3PlayerIndexComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P3IPTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2NetworkGP)).BeginInit();
+            this.P2NetworkGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2PlayerIndexComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2IPTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P1NetworkGP)).BeginInit();
+            this.P1NetworkGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P1PlayerIndexComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P1IPTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleGP)).BeginInit();
             this.ConsoleGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageSettingsGPApp)).BeginInit();
             this.TabPageSettingsGPApp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AboutPictureEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AppSettingsGP)).BeginInit();
             this.AppSettingsGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MiscSettingsGP)).BeginInit();
@@ -159,41 +216,6 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.SkinComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoadSaveGP)).BeginInit();
             this.LoadSaveGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AboutGP)).BeginInit();
-            this.AboutGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AboutMemoEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P1MiscGP)).BeginInit();
-            this.P1MiscGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P1HandnessGP)).BeginInit();
-            this.P1HandnessGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P1WeaponModeGP)).BeginInit();
-            this.P1WeaponModeGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P1HandnessComboBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P1WeaponModeComboBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P2MiscGP)).BeginInit();
-            this.P2MiscGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P2WeaponModeGP)).BeginInit();
-            this.P2WeaponModeGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P2WeaponModeComboBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P2HandnessGP)).BeginInit();
-            this.P2HandnessGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P2HandnessComboBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P3MiscGP)).BeginInit();
-            this.P3MiscGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P3WeaponModeGP)).BeginInit();
-            this.P3WeaponModeGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P3WeaponModeComboBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P3HandnessGP)).BeginInit();
-            this.P3HandnessGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P3HandnessComboBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P4MiscGP)).BeginInit();
-            this.P4MiscGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P4WeaponModeGP)).BeginInit();
-            this.P4WeaponModeGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P4WeaponModeComboBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P4HandnessGP)).BeginInit();
-            this.P4HandnessGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P4HandnessComboBox.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // P1CosComboBox
@@ -255,6 +277,7 @@ namespace GameX
             this.MasterTabControl.TabIndex = 18;
             this.MasterTabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.TabPageChar,
+            this.TabPageInventory,
             this.TabPageSettings});
             // 
             // TabPageChar
@@ -281,835 +304,6 @@ namespace GameX
             this.TabPageCharGPPlayer4.Size = new System.Drawing.Size(308, 204);
             this.TabPageCharGPPlayer4.TabIndex = 21;
             this.TabPageCharGPPlayer4.Text = "Player 4";
-            // 
-            // P4FreezeCharCosButton
-            // 
-            this.P4FreezeCharCosButton.AllowFocus = false;
-            this.P4FreezeCharCosButton.Location = new System.Drawing.Point(102, 149);
-            this.P4FreezeCharCosButton.Name = "P4FreezeCharCosButton";
-            this.P4FreezeCharCosButton.Size = new System.Drawing.Size(53, 23);
-            this.P4FreezeCharCosButton.TabIndex = 9;
-            this.P4FreezeCharCosButton.Text = "Freeze";
-            this.P4FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
-            this.P4FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P4FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
-            // 
-            // P4HealthBar
-            // 
-            this.P4HealthBar.Location = new System.Drawing.Point(161, 30);
-            this.P4HealthBar.Name = "P4HealthBar";
-            this.P4HealthBar.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.P4HealthBar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.P4HealthBar.Properties.EndColor = System.Drawing.Color.Lime;
-            this.P4HealthBar.Properties.LookAndFeel.SkinName = "Visual Studio 2013 Dark";
-            this.P4HealthBar.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
-            this.P4HealthBar.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.P4HealthBar.Properties.Maximum = 1000;
-            this.P4HealthBar.Properties.ProgressKind = DevExpress.XtraEditors.Controls.ProgressKind.Vertical;
-            this.P4HealthBar.Properties.StartColor = System.Drawing.Color.Lime;
-            this.P4HealthBar.Size = new System.Drawing.Size(12, 168);
-            this.P4HealthBar.TabIndex = 7;
-            // 
-            // P4CharPictureBox
-            // 
-            this.P4CharPictureBox.Location = new System.Drawing.Point(5, 30);
-            this.P4CharPictureBox.Name = "P4CharPictureBox";
-            this.P4CharPictureBox.Properties.AllowFocused = false;
-            this.P4CharPictureBox.Properties.PictureAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.P4CharPictureBox.Properties.ReadOnly = true;
-            this.P4CharPictureBox.Properties.ShowMenu = false;
-            this.P4CharPictureBox.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.P4CharPictureBox.Size = new System.Drawing.Size(150, 115);
-            this.P4CharPictureBox.TabIndex = 6;
-            this.P4CharPictureBox.UseDirectXPaint = DevExpress.Utils.DefaultBoolean.True;
-            // 
-            // P4CosComboBox
-            // 
-            this.P4CosComboBox.Location = new System.Drawing.Point(5, 178);
-            this.P4CosComboBox.Name = "P4CosComboBox";
-            this.P4CosComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.P4CosComboBox.Properties.AllowFocused = false;
-            this.P4CosComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.P4CosComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.P4CosComboBox.Size = new System.Drawing.Size(150, 20);
-            this.P4CosComboBox.TabIndex = 5;
-            // 
-            // P4CharComboBox
-            // 
-            this.P4CharComboBox.Location = new System.Drawing.Point(5, 151);
-            this.P4CharComboBox.Name = "P4CharComboBox";
-            this.P4CharComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.P4CharComboBox.Properties.AllowFocused = false;
-            this.P4CharComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.P4CharComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.P4CharComboBox.Size = new System.Drawing.Size(91, 20);
-            this.P4CharComboBox.TabIndex = 2;
-            // 
-            // TabPageCharGPPlayer3
-            // 
-            this.TabPageCharGPPlayer3.Controls.Add(this.P3MiscGP);
-            this.TabPageCharGPPlayer3.Controls.Add(this.P3FreezeCharCosButton);
-            this.TabPageCharGPPlayer3.Controls.Add(this.P3HealthBar);
-            this.TabPageCharGPPlayer3.Controls.Add(this.P3CharPictureBox);
-            this.TabPageCharGPPlayer3.Controls.Add(this.P3CosComboBox);
-            this.TabPageCharGPPlayer3.Controls.Add(this.P3CharComboBox);
-            this.TabPageCharGPPlayer3.Location = new System.Drawing.Point(8, 224);
-            this.TabPageCharGPPlayer3.Margin = new System.Windows.Forms.Padding(10);
-            this.TabPageCharGPPlayer3.Name = "TabPageCharGPPlayer3";
-            this.TabPageCharGPPlayer3.Size = new System.Drawing.Size(308, 204);
-            this.TabPageCharGPPlayer3.TabIndex = 20;
-            this.TabPageCharGPPlayer3.Text = "Player 3";
-            // 
-            // P3FreezeCharCosButton
-            // 
-            this.P3FreezeCharCosButton.AllowFocus = false;
-            this.P3FreezeCharCosButton.Location = new System.Drawing.Point(102, 149);
-            this.P3FreezeCharCosButton.Name = "P3FreezeCharCosButton";
-            this.P3FreezeCharCosButton.Size = new System.Drawing.Size(53, 23);
-            this.P3FreezeCharCosButton.TabIndex = 9;
-            this.P3FreezeCharCosButton.Text = "Freeze";
-            this.P3FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
-            this.P3FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
-            // 
-            // P3HealthBar
-            // 
-            this.P3HealthBar.Location = new System.Drawing.Point(161, 30);
-            this.P3HealthBar.Name = "P3HealthBar";
-            this.P3HealthBar.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.P3HealthBar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.P3HealthBar.Properties.EndColor = System.Drawing.Color.Lime;
-            this.P3HealthBar.Properties.LookAndFeel.SkinName = "Visual Studio 2013 Dark";
-            this.P3HealthBar.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
-            this.P3HealthBar.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.P3HealthBar.Properties.Maximum = 1000;
-            this.P3HealthBar.Properties.ProgressKind = DevExpress.XtraEditors.Controls.ProgressKind.Vertical;
-            this.P3HealthBar.Properties.StartColor = System.Drawing.Color.Lime;
-            this.P3HealthBar.Size = new System.Drawing.Size(12, 168);
-            this.P3HealthBar.TabIndex = 7;
-            // 
-            // P3CharPictureBox
-            // 
-            this.P3CharPictureBox.Location = new System.Drawing.Point(5, 30);
-            this.P3CharPictureBox.Name = "P3CharPictureBox";
-            this.P3CharPictureBox.Properties.AllowFocused = false;
-            this.P3CharPictureBox.Properties.PictureAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.P3CharPictureBox.Properties.ReadOnly = true;
-            this.P3CharPictureBox.Properties.ShowMenu = false;
-            this.P3CharPictureBox.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.P3CharPictureBox.Size = new System.Drawing.Size(150, 115);
-            this.P3CharPictureBox.TabIndex = 6;
-            this.P3CharPictureBox.UseDirectXPaint = DevExpress.Utils.DefaultBoolean.True;
-            // 
-            // P3CosComboBox
-            // 
-            this.P3CosComboBox.Location = new System.Drawing.Point(5, 178);
-            this.P3CosComboBox.Name = "P3CosComboBox";
-            this.P3CosComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.P3CosComboBox.Properties.AllowFocused = false;
-            this.P3CosComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.P3CosComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.P3CosComboBox.Size = new System.Drawing.Size(150, 20);
-            this.P3CosComboBox.TabIndex = 5;
-            // 
-            // P3CharComboBox
-            // 
-            this.P3CharComboBox.Location = new System.Drawing.Point(5, 151);
-            this.P3CharComboBox.Name = "P3CharComboBox";
-            this.P3CharComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.P3CharComboBox.Properties.AllowFocused = false;
-            this.P3CharComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.P3CharComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.P3CharComboBox.Size = new System.Drawing.Size(91, 20);
-            this.P3CharComboBox.TabIndex = 2;
-            // 
-            // TabPageCharGPPlayer2
-            // 
-            this.TabPageCharGPPlayer2.Controls.Add(this.P2MiscGP);
-            this.TabPageCharGPPlayer2.Controls.Add(this.P2FreezeCharCosButton);
-            this.TabPageCharGPPlayer2.Controls.Add(this.P2HealthBar);
-            this.TabPageCharGPPlayer2.Controls.Add(this.P2CharPictureBox);
-            this.TabPageCharGPPlayer2.Controls.Add(this.P2CosComboBox);
-            this.TabPageCharGPPlayer2.Controls.Add(this.P2CharComboBox);
-            this.TabPageCharGPPlayer2.Location = new System.Drawing.Point(322, 10);
-            this.TabPageCharGPPlayer2.Margin = new System.Windows.Forms.Padding(10);
-            this.TabPageCharGPPlayer2.Name = "TabPageCharGPPlayer2";
-            this.TabPageCharGPPlayer2.Size = new System.Drawing.Size(308, 204);
-            this.TabPageCharGPPlayer2.TabIndex = 19;
-            this.TabPageCharGPPlayer2.Text = "Player 2";
-            // 
-            // P2FreezeCharCosButton
-            // 
-            this.P2FreezeCharCosButton.AllowFocus = false;
-            this.P2FreezeCharCosButton.Location = new System.Drawing.Point(102, 149);
-            this.P2FreezeCharCosButton.Name = "P2FreezeCharCosButton";
-            this.P2FreezeCharCosButton.Size = new System.Drawing.Size(53, 23);
-            this.P2FreezeCharCosButton.TabIndex = 8;
-            this.P2FreezeCharCosButton.Text = "Freeze";
-            this.P2FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
-            this.P2FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
-            // 
-            // P2HealthBar
-            // 
-            this.P2HealthBar.Location = new System.Drawing.Point(161, 30);
-            this.P2HealthBar.Name = "P2HealthBar";
-            this.P2HealthBar.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.P2HealthBar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.P2HealthBar.Properties.EndColor = System.Drawing.Color.Lime;
-            this.P2HealthBar.Properties.LookAndFeel.SkinName = "Visual Studio 2013 Dark";
-            this.P2HealthBar.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
-            this.P2HealthBar.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.P2HealthBar.Properties.Maximum = 1000;
-            this.P2HealthBar.Properties.ProgressKind = DevExpress.XtraEditors.Controls.ProgressKind.Vertical;
-            this.P2HealthBar.Properties.StartColor = System.Drawing.Color.Lime;
-            this.P2HealthBar.Size = new System.Drawing.Size(12, 168);
-            this.P2HealthBar.TabIndex = 7;
-            // 
-            // P2CharPictureBox
-            // 
-            this.P2CharPictureBox.Location = new System.Drawing.Point(5, 30);
-            this.P2CharPictureBox.Name = "P2CharPictureBox";
-            this.P2CharPictureBox.Properties.AllowFocused = false;
-            this.P2CharPictureBox.Properties.PictureAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.P2CharPictureBox.Properties.ReadOnly = true;
-            this.P2CharPictureBox.Properties.ShowMenu = false;
-            this.P2CharPictureBox.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.P2CharPictureBox.Size = new System.Drawing.Size(150, 115);
-            this.P2CharPictureBox.TabIndex = 6;
-            this.P2CharPictureBox.UseDirectXPaint = DevExpress.Utils.DefaultBoolean.True;
-            // 
-            // P2CosComboBox
-            // 
-            this.P2CosComboBox.Location = new System.Drawing.Point(5, 178);
-            this.P2CosComboBox.Name = "P2CosComboBox";
-            this.P2CosComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.P2CosComboBox.Properties.AllowFocused = false;
-            this.P2CosComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.P2CosComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.P2CosComboBox.Size = new System.Drawing.Size(150, 20);
-            this.P2CosComboBox.TabIndex = 5;
-            // 
-            // P2CharComboBox
-            // 
-            this.P2CharComboBox.Location = new System.Drawing.Point(5, 151);
-            this.P2CharComboBox.Name = "P2CharComboBox";
-            this.P2CharComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.P2CharComboBox.Properties.AllowFocused = false;
-            this.P2CharComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.P2CharComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.P2CharComboBox.Size = new System.Drawing.Size(91, 20);
-            this.P2CharComboBox.TabIndex = 2;
-            // 
-            // TabPageCharGPPlayer1
-            // 
-            this.TabPageCharGPPlayer1.Controls.Add(this.P1MiscGP);
-            this.TabPageCharGPPlayer1.Controls.Add(this.P1HealthBar);
-            this.TabPageCharGPPlayer1.Controls.Add(this.P1CharPictureBox);
-            this.TabPageCharGPPlayer1.Controls.Add(this.P1CosComboBox);
-            this.TabPageCharGPPlayer1.Controls.Add(this.P1FreezeCharCosButton);
-            this.TabPageCharGPPlayer1.Controls.Add(this.P1CharComboBox);
-            this.TabPageCharGPPlayer1.Location = new System.Drawing.Point(8, 10);
-            this.TabPageCharGPPlayer1.Margin = new System.Windows.Forms.Padding(10);
-            this.TabPageCharGPPlayer1.Name = "TabPageCharGPPlayer1";
-            this.TabPageCharGPPlayer1.Size = new System.Drawing.Size(308, 204);
-            this.TabPageCharGPPlayer1.TabIndex = 18;
-            this.TabPageCharGPPlayer1.Text = "Player 1";
-            // 
-            // P1UntargetableButton
-            // 
-            this.P1UntargetableButton.AllowFocus = false;
-            this.P1UntargetableButton.Location = new System.Drawing.Point(19, 42);
-            this.P1UntargetableButton.Name = "P1UntargetableButton";
-            this.P1UntargetableButton.Size = new System.Drawing.Size(39, 23);
-            this.P1UntargetableButton.TabIndex = 8;
-            this.P1UntargetableButton.Text = "OFF";
-            this.P1UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
-            this.P1UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P1UntargetableButton.ToolTipTitle = "Untargetable";
-            // 
-            // P1InfiniteHPButton
-            // 
-            this.P1InfiniteHPButton.AllowFocus = false;
-            this.P1InfiniteHPButton.Location = new System.Drawing.Point(19, 13);
-            this.P1InfiniteHPButton.Name = "P1InfiniteHPButton";
-            this.P1InfiniteHPButton.Size = new System.Drawing.Size(39, 23);
-            this.P1InfiniteHPButton.TabIndex = 7;
-            this.P1InfiniteHPButton.Text = "OFF";
-            this.P1InfiniteHPButton.ToolTip = "Keeps the health at its maximun value, usually 1000.";
-            this.P1InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P1InfiniteHPButton.ToolTipTitle = "Infinite HP";
-            // 
-            // P1HealthBar
-            // 
-            this.P1HealthBar.Location = new System.Drawing.Point(161, 30);
-            this.P1HealthBar.Name = "P1HealthBar";
-            this.P1HealthBar.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.P1HealthBar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.P1HealthBar.Properties.EndColor = System.Drawing.Color.Lime;
-            this.P1HealthBar.Properties.LookAndFeel.SkinName = "Visual Studio 2013 Dark";
-            this.P1HealthBar.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
-            this.P1HealthBar.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.P1HealthBar.Properties.Maximum = 1000;
-            this.P1HealthBar.Properties.ProgressKind = DevExpress.XtraEditors.Controls.ProgressKind.Vertical;
-            this.P1HealthBar.Properties.StartColor = System.Drawing.Color.Lime;
-            this.P1HealthBar.Size = new System.Drawing.Size(12, 168);
-            this.P1HealthBar.TabIndex = 6;
-            // 
-            // TabPageSettings
-            // 
-            this.TabPageSettings.Controls.Add(this.NetworkGP);
-            this.TabPageSettings.Controls.Add(this.ConsoleGP);
-            this.TabPageSettings.Controls.Add(this.TabPageSettingsGPApp);
-            this.TabPageSettings.Name = "TabPageSettings";
-            this.TabPageSettings.Size = new System.Drawing.Size(638, 438);
-            this.TabPageSettings.Text = "Settings";
-            // 
-            // NetworkGP
-            // 
-            this.NetworkGP.Controls.Add(this.NickLabelControl);
-            this.NetworkGP.Controls.Add(this.NickNameTextEdit);
-            this.NetworkGP.Location = new System.Drawing.Point(322, 10);
-            this.NetworkGP.Name = "NetworkGP";
-            this.NetworkGP.Size = new System.Drawing.Size(308, 241);
-            this.NetworkGP.TabIndex = 2;
-            this.NetworkGP.Text = "Network";
-            // 
-            // NickLabelControl
-            // 
-            this.NickLabelControl.Location = new System.Drawing.Point(71, 53);
-            this.NickLabelControl.Name = "NickLabelControl";
-            this.NickLabelControl.Size = new System.Drawing.Size(25, 13);
-            this.NickLabelControl.TabIndex = 10;
-            this.NickLabelControl.Text = "Nick:";
-            // 
-            // NickNameTextEdit
-            // 
-            this.NickNameTextEdit.CausesValidation = false;
-            this.NickNameTextEdit.Location = new System.Drawing.Point(102, 50);
-            this.NickNameTextEdit.Name = "NickNameTextEdit";
-            this.NickNameTextEdit.Properties.ValidateOnEnterKey = true;
-            this.NickNameTextEdit.Size = new System.Drawing.Size(121, 20);
-            this.NickNameTextEdit.TabIndex = 2;
-            this.NickNameTextEdit.ToolTip = "Sets the networked NickName for connected peers.";
-            this.NickNameTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.NickNameTextEdit.ToolTipTitle = "NickName";
-            // 
-            // ConsoleGP
-            // 
-            this.ConsoleGP.Controls.Add(this.ConsoleOutputMemoEdit);
-            this.ConsoleGP.Controls.Add(this.ConsoleInputTextEdit);
-            this.ConsoleGP.Location = new System.Drawing.Point(8, 261);
-            this.ConsoleGP.Name = "ConsoleGP";
-            this.ConsoleGP.Size = new System.Drawing.Size(622, 167);
-            this.ConsoleGP.TabIndex = 1;
-            this.ConsoleGP.Text = "Console";
-            // 
-            // ConsoleOutputMemoEdit
-            // 
-            this.ConsoleOutputMemoEdit.Location = new System.Drawing.Point(5, 30);
-            this.ConsoleOutputMemoEdit.Name = "ConsoleOutputMemoEdit";
-            this.ConsoleOutputMemoEdit.Properties.AllowFocused = false;
-            this.ConsoleOutputMemoEdit.Properties.ReadOnly = true;
-            this.ConsoleOutputMemoEdit.Properties.UseReadOnlyAppearance = false;
-            this.ConsoleOutputMemoEdit.Size = new System.Drawing.Size(611, 106);
-            this.ConsoleOutputMemoEdit.TabIndex = 2;
-            this.ConsoleOutputMemoEdit.TabStop = false;
-            // 
-            // ConsoleInputTextEdit
-            // 
-            this.ConsoleInputTextEdit.CausesValidation = false;
-            this.ConsoleInputTextEdit.Location = new System.Drawing.Point(5, 142);
-            this.ConsoleInputTextEdit.Name = "ConsoleInputTextEdit";
-            this.ConsoleInputTextEdit.Properties.ValidateOnEnterKey = true;
-            this.ConsoleInputTextEdit.Size = new System.Drawing.Size(611, 20);
-            this.ConsoleInputTextEdit.TabIndex = 1;
-            // 
-            // TabPageSettingsGPApp
-            // 
-            this.TabPageSettingsGPApp.Controls.Add(this.AppSettingsGP);
-            this.TabPageSettingsGPApp.Controls.Add(this.AboutGP);
-            this.TabPageSettingsGPApp.Location = new System.Drawing.Point(8, 10);
-            this.TabPageSettingsGPApp.Margin = new System.Windows.Forms.Padding(10);
-            this.TabPageSettingsGPApp.Name = "TabPageSettingsGPApp";
-            this.TabPageSettingsGPApp.Size = new System.Drawing.Size(308, 241);
-            this.TabPageSettingsGPApp.TabIndex = 0;
-            this.TabPageSettingsGPApp.Text = "GameX";
-            // 
-            // AppSettingsGP
-            // 
-            this.AppSettingsGP.Controls.Add(this.MiscSettingsGP);
-            this.AppSettingsGP.Controls.Add(this.LoadSaveGP);
-            this.AppSettingsGP.Location = new System.Drawing.Point(5, 116);
-            this.AppSettingsGP.Name = "AppSettingsGP";
-            this.AppSettingsGP.Size = new System.Drawing.Size(298, 120);
-            this.AppSettingsGP.TabIndex = 1;
-            this.AppSettingsGP.Text = "App Settings";
-            // 
-            // MiscSettingsGP
-            // 
-            this.MiscSettingsGP.Controls.Add(this.PaletteLabelControl);
-            this.MiscSettingsGP.Controls.Add(this.PaletteComboBoxEdit);
-            this.MiscSettingsGP.Controls.Add(this.UpdateModeComboBoxEdit);
-            this.MiscSettingsGP.Controls.Add(this.UpdateRateLabelControl);
-            this.MiscSettingsGP.Controls.Add(this.SkinLabelControl);
-            this.MiscSettingsGP.Controls.Add(this.SkinComboBoxEdit);
-            this.MiscSettingsGP.Location = new System.Drawing.Point(5, 30);
-            this.MiscSettingsGP.Name = "MiscSettingsGP";
-            this.MiscSettingsGP.ShowCaption = false;
-            this.MiscSettingsGP.Size = new System.Drawing.Size(170, 85);
-            this.MiscSettingsGP.TabIndex = 1;
-            // 
-            // PaletteLabelControl
-            // 
-            this.PaletteLabelControl.Location = new System.Drawing.Point(10, 62);
-            this.PaletteLabelControl.Name = "PaletteLabelControl";
-            this.PaletteLabelControl.Size = new System.Drawing.Size(38, 13);
-            this.PaletteLabelControl.TabIndex = 11;
-            this.PaletteLabelControl.Text = "Palette:";
-            // 
-            // PaletteComboBoxEdit
-            // 
-            this.PaletteComboBoxEdit.Location = new System.Drawing.Point(54, 59);
-            this.PaletteComboBoxEdit.Name = "PaletteComboBoxEdit";
-            this.PaletteComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.PaletteComboBoxEdit.Properties.AllowFocused = false;
-            this.PaletteComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.PaletteComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.PaletteComboBoxEdit.Size = new System.Drawing.Size(108, 20);
-            this.PaletteComboBoxEdit.TabIndex = 10;
-            this.PaletteComboBoxEdit.ToolTip = "Changes the palette scheme for the skin applied.";
-            this.PaletteComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.PaletteComboBoxEdit.ToolTipTitle = "Palette";
-            // 
-            // UpdateModeComboBoxEdit
-            // 
-            this.UpdateModeComboBoxEdit.Location = new System.Drawing.Point(83, 7);
-            this.UpdateModeComboBoxEdit.Name = "UpdateModeComboBoxEdit";
-            this.UpdateModeComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.UpdateModeComboBoxEdit.Properties.AllowFocused = false;
-            this.UpdateModeComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.UpdateModeComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.UpdateModeComboBoxEdit.Size = new System.Drawing.Size(79, 20);
-            this.UpdateModeComboBoxEdit.TabIndex = 6;
-            this.UpdateModeComboBoxEdit.ToolTip = "Sets the update rate for the main loop system. Aways leave the Update Rate greate" +
-    "r or equal to your game\'s FPS.";
-            this.UpdateModeComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.UpdateModeComboBoxEdit.ToolTipTitle = "Update Rate";
-            // 
-            // UpdateRateLabelControl
-            // 
-            this.UpdateRateLabelControl.Location = new System.Drawing.Point(10, 10);
-            this.UpdateRateLabelControl.Name = "UpdateRateLabelControl";
-            this.UpdateRateLabelControl.Size = new System.Drawing.Size(67, 13);
-            this.UpdateRateLabelControl.TabIndex = 7;
-            this.UpdateRateLabelControl.Text = "Update Rate:";
-            // 
-            // SkinLabelControl
-            // 
-            this.SkinLabelControl.Location = new System.Drawing.Point(10, 36);
-            this.SkinLabelControl.Name = "SkinLabelControl";
-            this.SkinLabelControl.Size = new System.Drawing.Size(25, 13);
-            this.SkinLabelControl.TabIndex = 9;
-            this.SkinLabelControl.Text = "Skin:";
-            // 
-            // SkinComboBoxEdit
-            // 
-            this.SkinComboBoxEdit.Location = new System.Drawing.Point(54, 33);
-            this.SkinComboBoxEdit.Name = "SkinComboBoxEdit";
-            this.SkinComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.SkinComboBoxEdit.Properties.AllowFocused = false;
-            this.SkinComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.SkinComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.SkinComboBoxEdit.Size = new System.Drawing.Size(108, 20);
-            this.SkinComboBoxEdit.TabIndex = 8;
-            this.SkinComboBoxEdit.ToolTip = "Changes the skin scheme for the application.";
-            this.SkinComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.SkinComboBoxEdit.ToolTipTitle = "Skin";
-            // 
-            // LoadSaveGP
-            // 
-            this.LoadSaveGP.Controls.Add(this.LoadSettingsButton);
-            this.LoadSaveGP.Controls.Add(this.SaveSettingsButton);
-            this.LoadSaveGP.Location = new System.Drawing.Point(181, 30);
-            this.LoadSaveGP.Name = "LoadSaveGP";
-            this.LoadSaveGP.Size = new System.Drawing.Size(112, 85);
-            this.LoadSaveGP.TabIndex = 0;
-            // 
-            // LoadSettingsButton
-            // 
-            this.LoadSettingsButton.AllowFocus = false;
-            this.LoadSettingsButton.Location = new System.Drawing.Point(5, 57);
-            this.LoadSettingsButton.Name = "LoadSettingsButton";
-            this.LoadSettingsButton.Size = new System.Drawing.Size(102, 23);
-            this.LoadSettingsButton.TabIndex = 1;
-            this.LoadSettingsButton.TabStop = false;
-            this.LoadSettingsButton.Text = "Load";
-            this.LoadSettingsButton.ToolTip = "Loads the last saved configuration or the default ones.";
-            this.LoadSettingsButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.LoadSettingsButton.ToolTipTitle = "Load";
-            // 
-            // SaveSettingsButton
-            // 
-            this.SaveSettingsButton.AllowFocus = false;
-            this.SaveSettingsButton.Location = new System.Drawing.Point(5, 30);
-            this.SaveSettingsButton.Name = "SaveSettingsButton";
-            this.SaveSettingsButton.Size = new System.Drawing.Size(102, 23);
-            this.SaveSettingsButton.TabIndex = 0;
-            this.SaveSettingsButton.TabStop = false;
-            this.SaveSettingsButton.Text = "Save";
-            this.SaveSettingsButton.ToolTip = "Saves the current configuration.";
-            this.SaveSettingsButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.SaveSettingsButton.ToolTipTitle = "Save";
-            // 
-            // AboutGP
-            // 
-            this.AboutGP.Controls.Add(this.AboutMemoEdit);
-            this.AboutGP.Location = new System.Drawing.Point(5, 30);
-            this.AboutGP.Name = "AboutGP";
-            this.AboutGP.ShowCaption = false;
-            this.AboutGP.Size = new System.Drawing.Size(298, 80);
-            this.AboutGP.TabIndex = 0;
-            // 
-            // AboutMemoEdit
-            // 
-            this.AboutMemoEdit.EditValue = "GameX for Resident Evil 5 - Build 1.0.0.0\r\n\r\nProgramming: Sr. Wesky (LuBuCake)\r\nT" +
-    "esting: sorryjess and Huskya\r\nDesign Lib: DevExpress (https://www.devexpress.com" +
-    "/)";
-            this.AboutMemoEdit.Location = new System.Drawing.Point(5, 5);
-            this.AboutMemoEdit.Name = "AboutMemoEdit";
-            this.AboutMemoEdit.Properties.AllowFocused = false;
-            this.AboutMemoEdit.Properties.AllowMouseWheel = false;
-            this.AboutMemoEdit.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AboutMemoEdit.Properties.Appearance.Options.UseFont = true;
-            this.AboutMemoEdit.Properties.ReadOnly = true;
-            this.AboutMemoEdit.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.AboutMemoEdit.Properties.UseReadOnlyAppearance = false;
-            this.AboutMemoEdit.Properties.WordWrap = false;
-            this.AboutMemoEdit.Size = new System.Drawing.Size(288, 70);
-            this.AboutMemoEdit.TabIndex = 3;
-            this.AboutMemoEdit.TabStop = false;
-            // 
-            // P1MiscGP
-            // 
-            this.P1MiscGP.Controls.Add(this.P1WeaponModeGP);
-            this.P1MiscGP.Controls.Add(this.P1HandnessGP);
-            this.P1MiscGP.Controls.Add(this.P1InfiniteAmmoButton);
-            this.P1MiscGP.Controls.Add(this.P1RapidfireButton);
-            this.P1MiscGP.Controls.Add(this.P1InfiniteHPButton);
-            this.P1MiscGP.Controls.Add(this.P1UntargetableButton);
-            this.P1MiscGP.Location = new System.Drawing.Point(179, 30);
-            this.P1MiscGP.Name = "P1MiscGP";
-            this.P1MiscGP.ShowCaption = false;
-            this.P1MiscGP.Size = new System.Drawing.Size(122, 168);
-            this.P1MiscGP.TabIndex = 7;
-            // 
-            // P1InfiniteAmmoButton
-            // 
-            this.P1InfiniteAmmoButton.AllowFocus = false;
-            this.P1InfiniteAmmoButton.Location = new System.Drawing.Point(64, 13);
-            this.P1InfiniteAmmoButton.Name = "P1InfiniteAmmoButton";
-            this.P1InfiniteAmmoButton.Size = new System.Drawing.Size(39, 23);
-            this.P1InfiniteAmmoButton.TabIndex = 9;
-            this.P1InfiniteAmmoButton.Text = "OFF";
-            this.P1InfiniteAmmoButton.ToolTip = "Enables the infinite ammoflag for every item in the real-time inventory.";
-            this.P1InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P1InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
-            // 
-            // P1RapidfireButton
-            // 
-            this.P1RapidfireButton.AllowFocus = false;
-            this.P1RapidfireButton.Location = new System.Drawing.Point(64, 42);
-            this.P1RapidfireButton.Name = "P1RapidfireButton";
-            this.P1RapidfireButton.Size = new System.Drawing.Size(39, 23);
-            this.P1RapidfireButton.TabIndex = 10;
-            this.P1RapidfireButton.Text = "OFF";
-            this.P1RapidfireButton.ToolTip = "Enables the rapidfire flag for every item in the real-time inventory.";
-            this.P1RapidfireButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P1RapidfireButton.ToolTipTitle = "Rapidfire";
-            // 
-            // P1HandnessGP
-            // 
-            this.P1HandnessGP.Controls.Add(this.P1HandnessComboBox);
-            this.P1HandnessGP.Location = new System.Drawing.Point(5, 75);
-            this.P1HandnessGP.Name = "P1HandnessGP";
-            this.P1HandnessGP.ShowCaption = false;
-            this.P1HandnessGP.Size = new System.Drawing.Size(112, 41);
-            this.P1HandnessGP.TabIndex = 11;
-            // 
-            // P1WeaponModeGP
-            // 
-            this.P1WeaponModeGP.Controls.Add(this.P1WeaponModeComboBox);
-            this.P1WeaponModeGP.Location = new System.Drawing.Point(5, 122);
-            this.P1WeaponModeGP.Name = "P1WeaponModeGP";
-            this.P1WeaponModeGP.ShowCaption = false;
-            this.P1WeaponModeGP.Size = new System.Drawing.Size(112, 41);
-            this.P1WeaponModeGP.TabIndex = 12;
-            // 
-            // P1HandnessComboBox
-            // 
-            this.P1HandnessComboBox.Location = new System.Drawing.Point(8, 11);
-            this.P1HandnessComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.P1HandnessComboBox.Name = "P1HandnessComboBox";
-            this.P1HandnessComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.P1HandnessComboBox.Properties.AllowFocused = false;
-            this.P1HandnessComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.P1HandnessComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.P1HandnessComboBox.Size = new System.Drawing.Size(96, 20);
-            this.P1HandnessComboBox.TabIndex = 3;
-            this.P1HandnessComboBox.ToolTip = "Sets the player\'s handness, left or right.";
-            this.P1HandnessComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P1HandnessComboBox.ToolTipTitle = "Handness";
-            // 
-            // P1WeaponModeComboBox
-            // 
-            this.P1WeaponModeComboBox.Location = new System.Drawing.Point(8, 10);
-            this.P1WeaponModeComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.P1WeaponModeComboBox.Name = "P1WeaponModeComboBox";
-            this.P1WeaponModeComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.P1WeaponModeComboBox.Properties.AllowFocused = false;
-            this.P1WeaponModeComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.P1WeaponModeComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.P1WeaponModeComboBox.Size = new System.Drawing.Size(96, 20);
-            this.P1WeaponModeComboBox.TabIndex = 4;
-            this.P1WeaponModeComboBox.ToolTip = "Sets the player\'s weapon mode, male or female.";
-            this.P1WeaponModeComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P1WeaponModeComboBox.ToolTipTitle = "Weapon Mode";
-            // 
-            // P2MiscGP
-            // 
-            this.P2MiscGP.Controls.Add(this.P2WeaponModeGP);
-            this.P2MiscGP.Controls.Add(this.P2HandnessGP);
-            this.P2MiscGP.Controls.Add(this.P2InfiniteAmmoButton);
-            this.P2MiscGP.Controls.Add(this.P2RapidfireButton);
-            this.P2MiscGP.Controls.Add(this.P2InfiniteHPButton);
-            this.P2MiscGP.Controls.Add(this.P2UntargetableButton);
-            this.P2MiscGP.Location = new System.Drawing.Point(179, 30);
-            this.P2MiscGP.Name = "P2MiscGP";
-            this.P2MiscGP.ShowCaption = false;
-            this.P2MiscGP.Size = new System.Drawing.Size(122, 168);
-            this.P2MiscGP.TabIndex = 9;
-            // 
-            // P2WeaponModeGP
-            // 
-            this.P2WeaponModeGP.Controls.Add(this.P2WeaponModeComboBox);
-            this.P2WeaponModeGP.Location = new System.Drawing.Point(5, 122);
-            this.P2WeaponModeGP.Name = "P2WeaponModeGP";
-            this.P2WeaponModeGP.ShowCaption = false;
-            this.P2WeaponModeGP.Size = new System.Drawing.Size(112, 41);
-            this.P2WeaponModeGP.TabIndex = 12;
-            // 
-            // P2WeaponModeComboBox
-            // 
-            this.P2WeaponModeComboBox.Location = new System.Drawing.Point(8, 10);
-            this.P2WeaponModeComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.P2WeaponModeComboBox.Name = "P2WeaponModeComboBox";
-            this.P2WeaponModeComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.P2WeaponModeComboBox.Properties.AllowFocused = false;
-            this.P2WeaponModeComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.P2WeaponModeComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.P2WeaponModeComboBox.Size = new System.Drawing.Size(96, 20);
-            this.P2WeaponModeComboBox.TabIndex = 4;
-            this.P2WeaponModeComboBox.ToolTip = "Sets the player\'s weapon mode, male or female.";
-            this.P2WeaponModeComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2WeaponModeComboBox.ToolTipTitle = "Weapon Mode";
-            // 
-            // P2HandnessGP
-            // 
-            this.P2HandnessGP.Controls.Add(this.P2HandnessComboBox);
-            this.P2HandnessGP.Location = new System.Drawing.Point(5, 75);
-            this.P2HandnessGP.Name = "P2HandnessGP";
-            this.P2HandnessGP.ShowCaption = false;
-            this.P2HandnessGP.Size = new System.Drawing.Size(112, 41);
-            this.P2HandnessGP.TabIndex = 11;
-            // 
-            // P2HandnessComboBox
-            // 
-            this.P2HandnessComboBox.Location = new System.Drawing.Point(8, 11);
-            this.P2HandnessComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.P2HandnessComboBox.Name = "P2HandnessComboBox";
-            this.P2HandnessComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.P2HandnessComboBox.Properties.AllowFocused = false;
-            this.P2HandnessComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.P2HandnessComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.P2HandnessComboBox.Size = new System.Drawing.Size(96, 20);
-            this.P2HandnessComboBox.TabIndex = 3;
-            this.P2HandnessComboBox.ToolTip = "Sets the player\'s handness, left or right.";
-            this.P2HandnessComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2HandnessComboBox.ToolTipTitle = "Handness";
-            // 
-            // P2InfiniteAmmoButton
-            // 
-            this.P2InfiniteAmmoButton.AllowFocus = false;
-            this.P2InfiniteAmmoButton.Location = new System.Drawing.Point(64, 13);
-            this.P2InfiniteAmmoButton.Name = "P2InfiniteAmmoButton";
-            this.P2InfiniteAmmoButton.Size = new System.Drawing.Size(39, 23);
-            this.P2InfiniteAmmoButton.TabIndex = 9;
-            this.P2InfiniteAmmoButton.Text = "OFF";
-            this.P2InfiniteAmmoButton.ToolTip = "Enables the infinite ammoflag for every item in the real-time inventory.";
-            this.P2InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
-            // 
-            // P2RapidfireButton
-            // 
-            this.P2RapidfireButton.AllowFocus = false;
-            this.P2RapidfireButton.Location = new System.Drawing.Point(64, 42);
-            this.P2RapidfireButton.Name = "P2RapidfireButton";
-            this.P2RapidfireButton.Size = new System.Drawing.Size(39, 23);
-            this.P2RapidfireButton.TabIndex = 10;
-            this.P2RapidfireButton.Text = "OFF";
-            this.P2RapidfireButton.ToolTip = "Enables the rapidfire flag for every item in the real-time inventory.";
-            this.P2RapidfireButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2RapidfireButton.ToolTipTitle = "Rapidfire";
-            // 
-            // P2InfiniteHPButton
-            // 
-            this.P2InfiniteHPButton.AllowFocus = false;
-            this.P2InfiniteHPButton.Location = new System.Drawing.Point(19, 13);
-            this.P2InfiniteHPButton.Name = "P2InfiniteHPButton";
-            this.P2InfiniteHPButton.Size = new System.Drawing.Size(39, 23);
-            this.P2InfiniteHPButton.TabIndex = 7;
-            this.P2InfiniteHPButton.Text = "OFF";
-            this.P2InfiniteHPButton.ToolTip = "Keeps the health at its maximun value, usually 1000.";
-            this.P2InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2InfiniteHPButton.ToolTipTitle = "Infinite HP";
-            // 
-            // P2UntargetableButton
-            // 
-            this.P2UntargetableButton.AllowFocus = false;
-            this.P2UntargetableButton.Location = new System.Drawing.Point(19, 42);
-            this.P2UntargetableButton.Name = "P2UntargetableButton";
-            this.P2UntargetableButton.Size = new System.Drawing.Size(39, 23);
-            this.P2UntargetableButton.TabIndex = 8;
-            this.P2UntargetableButton.Text = "OFF";
-            this.P2UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
-            this.P2UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2UntargetableButton.ToolTipTitle = "Untargetable";
-            // 
-            // P3MiscGP
-            // 
-            this.P3MiscGP.Controls.Add(this.P3WeaponModeGP);
-            this.P3MiscGP.Controls.Add(this.P3HandnessGP);
-            this.P3MiscGP.Controls.Add(this.P3InfiniteAmmoButton);
-            this.P3MiscGP.Controls.Add(this.P3RapidfireButton);
-            this.P3MiscGP.Controls.Add(this.P3InfiniteHPButton);
-            this.P3MiscGP.Controls.Add(this.P3UntargetableButton);
-            this.P3MiscGP.Location = new System.Drawing.Point(179, 30);
-            this.P3MiscGP.Name = "P3MiscGP";
-            this.P3MiscGP.ShowCaption = false;
-            this.P3MiscGP.Size = new System.Drawing.Size(122, 168);
-            this.P3MiscGP.TabIndex = 10;
-            // 
-            // P3WeaponModeGP
-            // 
-            this.P3WeaponModeGP.Controls.Add(this.P3WeaponModeComboBox);
-            this.P3WeaponModeGP.Location = new System.Drawing.Point(5, 122);
-            this.P3WeaponModeGP.Name = "P3WeaponModeGP";
-            this.P3WeaponModeGP.ShowCaption = false;
-            this.P3WeaponModeGP.Size = new System.Drawing.Size(112, 41);
-            this.P3WeaponModeGP.TabIndex = 12;
-            // 
-            // P3WeaponModeComboBox
-            // 
-            this.P3WeaponModeComboBox.Location = new System.Drawing.Point(8, 10);
-            this.P3WeaponModeComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.P3WeaponModeComboBox.Name = "P3WeaponModeComboBox";
-            this.P3WeaponModeComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.P3WeaponModeComboBox.Properties.AllowFocused = false;
-            this.P3WeaponModeComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.P3WeaponModeComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.P3WeaponModeComboBox.Size = new System.Drawing.Size(96, 20);
-            this.P3WeaponModeComboBox.TabIndex = 4;
-            this.P3WeaponModeComboBox.ToolTip = "Sets the player\'s weapon mode, male or female.";
-            this.P3WeaponModeComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3WeaponModeComboBox.ToolTipTitle = "Weapon Mode";
-            // 
-            // P3HandnessGP
-            // 
-            this.P3HandnessGP.Controls.Add(this.P3HandnessComboBox);
-            this.P3HandnessGP.Location = new System.Drawing.Point(5, 75);
-            this.P3HandnessGP.Name = "P3HandnessGP";
-            this.P3HandnessGP.ShowCaption = false;
-            this.P3HandnessGP.Size = new System.Drawing.Size(112, 41);
-            this.P3HandnessGP.TabIndex = 11;
-            // 
-            // P3HandnessComboBox
-            // 
-            this.P3HandnessComboBox.Location = new System.Drawing.Point(8, 11);
-            this.P3HandnessComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.P3HandnessComboBox.Name = "P3HandnessComboBox";
-            this.P3HandnessComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.P3HandnessComboBox.Properties.AllowFocused = false;
-            this.P3HandnessComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.P3HandnessComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.P3HandnessComboBox.Size = new System.Drawing.Size(96, 20);
-            this.P3HandnessComboBox.TabIndex = 3;
-            this.P3HandnessComboBox.ToolTip = "Sets the player\'s handness, left or right.";
-            this.P3HandnessComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3HandnessComboBox.ToolTipTitle = "Handness";
-            // 
-            // P3InfiniteAmmoButton
-            // 
-            this.P3InfiniteAmmoButton.AllowFocus = false;
-            this.P3InfiniteAmmoButton.Location = new System.Drawing.Point(64, 13);
-            this.P3InfiniteAmmoButton.Name = "P3InfiniteAmmoButton";
-            this.P3InfiniteAmmoButton.Size = new System.Drawing.Size(39, 23);
-            this.P3InfiniteAmmoButton.TabIndex = 9;
-            this.P3InfiniteAmmoButton.Text = "OFF";
-            this.P3InfiniteAmmoButton.ToolTip = "Enables the infinite ammoflag for every item in the real-time inventory.";
-            this.P3InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
-            // 
-            // P3RapidfireButton
-            // 
-            this.P3RapidfireButton.AllowFocus = false;
-            this.P3RapidfireButton.Location = new System.Drawing.Point(64, 42);
-            this.P3RapidfireButton.Name = "P3RapidfireButton";
-            this.P3RapidfireButton.Size = new System.Drawing.Size(39, 23);
-            this.P3RapidfireButton.TabIndex = 10;
-            this.P3RapidfireButton.Text = "OFF";
-            this.P3RapidfireButton.ToolTip = "Enables the rapidfire flag for every item in the real-time inventory.";
-            this.P3RapidfireButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3RapidfireButton.ToolTipTitle = "Rapidfire";
-            // 
-            // P3InfiniteHPButton
-            // 
-            this.P3InfiniteHPButton.AllowFocus = false;
-            this.P3InfiniteHPButton.Location = new System.Drawing.Point(19, 13);
-            this.P3InfiniteHPButton.Name = "P3InfiniteHPButton";
-            this.P3InfiniteHPButton.Size = new System.Drawing.Size(39, 23);
-            this.P3InfiniteHPButton.TabIndex = 7;
-            this.P3InfiniteHPButton.Text = "OFF";
-            this.P3InfiniteHPButton.ToolTip = "Keeps the health at its maximun value, usually 1000.";
-            this.P3InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3InfiniteHPButton.ToolTipTitle = "Infinite HP";
-            // 
-            // P3UntargetableButton
-            // 
-            this.P3UntargetableButton.AllowFocus = false;
-            this.P3UntargetableButton.Location = new System.Drawing.Point(19, 42);
-            this.P3UntargetableButton.Name = "P3UntargetableButton";
-            this.P3UntargetableButton.Size = new System.Drawing.Size(39, 23);
-            this.P3UntargetableButton.TabIndex = 8;
-            this.P3UntargetableButton.Text = "OFF";
-            this.P3UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
-            this.P3UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3UntargetableButton.ToolTipTitle = "Untargetable";
             // 
             // P4MiscGP
             // 
@@ -1223,11 +417,1014 @@ namespace GameX
             this.P4UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P4UntargetableButton.ToolTipTitle = "Untargetable";
             // 
+            // P4FreezeCharCosButton
+            // 
+            this.P4FreezeCharCosButton.AllowFocus = false;
+            this.P4FreezeCharCosButton.Location = new System.Drawing.Point(102, 149);
+            this.P4FreezeCharCosButton.Name = "P4FreezeCharCosButton";
+            this.P4FreezeCharCosButton.Size = new System.Drawing.Size(53, 23);
+            this.P4FreezeCharCosButton.TabIndex = 9;
+            this.P4FreezeCharCosButton.Text = "Freeze";
+            this.P4FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
+            this.P4FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P4FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
+            // 
+            // P4HealthBar
+            // 
+            this.P4HealthBar.Location = new System.Drawing.Point(161, 30);
+            this.P4HealthBar.Name = "P4HealthBar";
+            this.P4HealthBar.Properties.AllowFocused = false;
+            this.P4HealthBar.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.P4HealthBar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.P4HealthBar.Properties.EndColor = System.Drawing.Color.Lime;
+            this.P4HealthBar.Properties.LookAndFeel.SkinName = "Visual Studio 2013 Dark";
+            this.P4HealthBar.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.P4HealthBar.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.P4HealthBar.Properties.Maximum = 1;
+            this.P4HealthBar.Properties.ProgressKind = DevExpress.XtraEditors.Controls.ProgressKind.Vertical;
+            this.P4HealthBar.Properties.StartColor = System.Drawing.Color.Lime;
+            this.P4HealthBar.Size = new System.Drawing.Size(12, 168);
+            this.P4HealthBar.TabIndex = 7;
+            this.P4HealthBar.ToolTip = "Displays the respective player\'s health in a fancy way.";
+            this.P4HealthBar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P4HealthBar.ToolTipTitle = "Player Health";
+            // 
+            // P4CharPictureBox
+            // 
+            this.P4CharPictureBox.Location = new System.Drawing.Point(5, 30);
+            this.P4CharPictureBox.Name = "P4CharPictureBox";
+            this.P4CharPictureBox.Properties.AllowFocused = false;
+            this.P4CharPictureBox.Properties.PictureAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.P4CharPictureBox.Properties.ReadOnly = true;
+            this.P4CharPictureBox.Properties.ShowMenu = false;
+            this.P4CharPictureBox.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.P4CharPictureBox.Size = new System.Drawing.Size(150, 115);
+            this.P4CharPictureBox.TabIndex = 6;
+            this.P4CharPictureBox.UseDirectXPaint = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // P4CosComboBox
+            // 
+            this.P4CosComboBox.Location = new System.Drawing.Point(5, 178);
+            this.P4CosComboBox.Name = "P4CosComboBox";
+            this.P4CosComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P4CosComboBox.Properties.AllowFocused = false;
+            this.P4CosComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P4CosComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P4CosComboBox.Size = new System.Drawing.Size(150, 20);
+            this.P4CosComboBox.TabIndex = 5;
+            // 
+            // P4CharComboBox
+            // 
+            this.P4CharComboBox.Location = new System.Drawing.Point(5, 151);
+            this.P4CharComboBox.Name = "P4CharComboBox";
+            this.P4CharComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P4CharComboBox.Properties.AllowFocused = false;
+            this.P4CharComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P4CharComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P4CharComboBox.Size = new System.Drawing.Size(91, 20);
+            this.P4CharComboBox.TabIndex = 2;
+            // 
+            // TabPageCharGPPlayer3
+            // 
+            this.TabPageCharGPPlayer3.Controls.Add(this.P3MiscGP);
+            this.TabPageCharGPPlayer3.Controls.Add(this.P3FreezeCharCosButton);
+            this.TabPageCharGPPlayer3.Controls.Add(this.P3HealthBar);
+            this.TabPageCharGPPlayer3.Controls.Add(this.P3CharPictureBox);
+            this.TabPageCharGPPlayer3.Controls.Add(this.P3CosComboBox);
+            this.TabPageCharGPPlayer3.Controls.Add(this.P3CharComboBox);
+            this.TabPageCharGPPlayer3.Location = new System.Drawing.Point(8, 224);
+            this.TabPageCharGPPlayer3.Margin = new System.Windows.Forms.Padding(10);
+            this.TabPageCharGPPlayer3.Name = "TabPageCharGPPlayer3";
+            this.TabPageCharGPPlayer3.Size = new System.Drawing.Size(308, 204);
+            this.TabPageCharGPPlayer3.TabIndex = 20;
+            this.TabPageCharGPPlayer3.Text = "Player 3";
+            // 
+            // P3MiscGP
+            // 
+            this.P3MiscGP.Controls.Add(this.P3WeaponModeGP);
+            this.P3MiscGP.Controls.Add(this.P3HandnessGP);
+            this.P3MiscGP.Controls.Add(this.P3InfiniteAmmoButton);
+            this.P3MiscGP.Controls.Add(this.P3RapidfireButton);
+            this.P3MiscGP.Controls.Add(this.P3InfiniteHPButton);
+            this.P3MiscGP.Controls.Add(this.P3UntargetableButton);
+            this.P3MiscGP.Location = new System.Drawing.Point(179, 30);
+            this.P3MiscGP.Name = "P3MiscGP";
+            this.P3MiscGP.ShowCaption = false;
+            this.P3MiscGP.Size = new System.Drawing.Size(122, 168);
+            this.P3MiscGP.TabIndex = 10;
+            // 
+            // P3WeaponModeGP
+            // 
+            this.P3WeaponModeGP.Controls.Add(this.P3WeaponModeComboBox);
+            this.P3WeaponModeGP.Location = new System.Drawing.Point(5, 122);
+            this.P3WeaponModeGP.Name = "P3WeaponModeGP";
+            this.P3WeaponModeGP.ShowCaption = false;
+            this.P3WeaponModeGP.Size = new System.Drawing.Size(112, 41);
+            this.P3WeaponModeGP.TabIndex = 12;
+            // 
+            // P3WeaponModeComboBox
+            // 
+            this.P3WeaponModeComboBox.Location = new System.Drawing.Point(8, 10);
+            this.P3WeaponModeComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.P3WeaponModeComboBox.Name = "P3WeaponModeComboBox";
+            this.P3WeaponModeComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P3WeaponModeComboBox.Properties.AllowFocused = false;
+            this.P3WeaponModeComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P3WeaponModeComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P3WeaponModeComboBox.Size = new System.Drawing.Size(96, 20);
+            this.P3WeaponModeComboBox.TabIndex = 4;
+            this.P3WeaponModeComboBox.ToolTip = "Sets the player\'s weapon mode, male or female.";
+            this.P3WeaponModeComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3WeaponModeComboBox.ToolTipTitle = "Weapon Mode";
+            // 
+            // P3HandnessGP
+            // 
+            this.P3HandnessGP.Controls.Add(this.P3HandnessComboBox);
+            this.P3HandnessGP.Location = new System.Drawing.Point(5, 75);
+            this.P3HandnessGP.Name = "P3HandnessGP";
+            this.P3HandnessGP.ShowCaption = false;
+            this.P3HandnessGP.Size = new System.Drawing.Size(112, 41);
+            this.P3HandnessGP.TabIndex = 11;
+            // 
+            // P3HandnessComboBox
+            // 
+            this.P3HandnessComboBox.Location = new System.Drawing.Point(8, 11);
+            this.P3HandnessComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.P3HandnessComboBox.Name = "P3HandnessComboBox";
+            this.P3HandnessComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P3HandnessComboBox.Properties.AllowFocused = false;
+            this.P3HandnessComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P3HandnessComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P3HandnessComboBox.Size = new System.Drawing.Size(96, 20);
+            this.P3HandnessComboBox.TabIndex = 3;
+            this.P3HandnessComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.P3HandnessComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3HandnessComboBox.ToolTipTitle = "Handness";
+            // 
+            // P3InfiniteAmmoButton
+            // 
+            this.P3InfiniteAmmoButton.AllowFocus = false;
+            this.P3InfiniteAmmoButton.Location = new System.Drawing.Point(64, 13);
+            this.P3InfiniteAmmoButton.Name = "P3InfiniteAmmoButton";
+            this.P3InfiniteAmmoButton.Size = new System.Drawing.Size(39, 23);
+            this.P3InfiniteAmmoButton.TabIndex = 9;
+            this.P3InfiniteAmmoButton.Text = "OFF";
+            this.P3InfiniteAmmoButton.ToolTip = "Enables the infinite ammoflag for every item in the real-time inventory.";
+            this.P3InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
+            // 
+            // P3RapidfireButton
+            // 
+            this.P3RapidfireButton.AllowFocus = false;
+            this.P3RapidfireButton.Location = new System.Drawing.Point(64, 42);
+            this.P3RapidfireButton.Name = "P3RapidfireButton";
+            this.P3RapidfireButton.Size = new System.Drawing.Size(39, 23);
+            this.P3RapidfireButton.TabIndex = 10;
+            this.P3RapidfireButton.Text = "OFF";
+            this.P3RapidfireButton.ToolTip = "Enables the rapidfire flag for every item in the real-time inventory.";
+            this.P3RapidfireButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3RapidfireButton.ToolTipTitle = "Rapidfire";
+            // 
+            // P3InfiniteHPButton
+            // 
+            this.P3InfiniteHPButton.AllowFocus = false;
+            this.P3InfiniteHPButton.Location = new System.Drawing.Point(19, 13);
+            this.P3InfiniteHPButton.Name = "P3InfiniteHPButton";
+            this.P3InfiniteHPButton.Size = new System.Drawing.Size(39, 23);
+            this.P3InfiniteHPButton.TabIndex = 7;
+            this.P3InfiniteHPButton.Text = "OFF";
+            this.P3InfiniteHPButton.ToolTip = "Keeps the health at its maximun value, usually 1000.";
+            this.P3InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3InfiniteHPButton.ToolTipTitle = "Infinite HP";
+            // 
+            // P3UntargetableButton
+            // 
+            this.P3UntargetableButton.AllowFocus = false;
+            this.P3UntargetableButton.Location = new System.Drawing.Point(19, 42);
+            this.P3UntargetableButton.Name = "P3UntargetableButton";
+            this.P3UntargetableButton.Size = new System.Drawing.Size(39, 23);
+            this.P3UntargetableButton.TabIndex = 8;
+            this.P3UntargetableButton.Text = "OFF";
+            this.P3UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
+            this.P3UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3UntargetableButton.ToolTipTitle = "Untargetable";
+            // 
+            // P3FreezeCharCosButton
+            // 
+            this.P3FreezeCharCosButton.AllowFocus = false;
+            this.P3FreezeCharCosButton.Location = new System.Drawing.Point(102, 149);
+            this.P3FreezeCharCosButton.Name = "P3FreezeCharCosButton";
+            this.P3FreezeCharCosButton.Size = new System.Drawing.Size(53, 23);
+            this.P3FreezeCharCosButton.TabIndex = 9;
+            this.P3FreezeCharCosButton.Text = "Freeze";
+            this.P3FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
+            this.P3FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
+            // 
+            // P3HealthBar
+            // 
+            this.P3HealthBar.Location = new System.Drawing.Point(161, 30);
+            this.P3HealthBar.Name = "P3HealthBar";
+            this.P3HealthBar.Properties.AllowFocused = false;
+            this.P3HealthBar.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.P3HealthBar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.P3HealthBar.Properties.EndColor = System.Drawing.Color.Lime;
+            this.P3HealthBar.Properties.LookAndFeel.SkinName = "Visual Studio 2013 Dark";
+            this.P3HealthBar.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.P3HealthBar.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.P3HealthBar.Properties.Maximum = 1;
+            this.P3HealthBar.Properties.ProgressKind = DevExpress.XtraEditors.Controls.ProgressKind.Vertical;
+            this.P3HealthBar.Properties.StartColor = System.Drawing.Color.Lime;
+            this.P3HealthBar.Size = new System.Drawing.Size(12, 168);
+            this.P3HealthBar.TabIndex = 7;
+            this.P3HealthBar.ToolTip = "Displays the respective player\'s health in a fancy way.";
+            this.P3HealthBar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3HealthBar.ToolTipTitle = "Player Health";
+            // 
+            // P3CharPictureBox
+            // 
+            this.P3CharPictureBox.Location = new System.Drawing.Point(5, 30);
+            this.P3CharPictureBox.Name = "P3CharPictureBox";
+            this.P3CharPictureBox.Properties.AllowFocused = false;
+            this.P3CharPictureBox.Properties.PictureAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.P3CharPictureBox.Properties.ReadOnly = true;
+            this.P3CharPictureBox.Properties.ShowMenu = false;
+            this.P3CharPictureBox.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.P3CharPictureBox.Size = new System.Drawing.Size(150, 115);
+            this.P3CharPictureBox.TabIndex = 6;
+            this.P3CharPictureBox.UseDirectXPaint = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // P3CosComboBox
+            // 
+            this.P3CosComboBox.Location = new System.Drawing.Point(5, 178);
+            this.P3CosComboBox.Name = "P3CosComboBox";
+            this.P3CosComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P3CosComboBox.Properties.AllowFocused = false;
+            this.P3CosComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P3CosComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P3CosComboBox.Size = new System.Drawing.Size(150, 20);
+            this.P3CosComboBox.TabIndex = 5;
+            // 
+            // P3CharComboBox
+            // 
+            this.P3CharComboBox.Location = new System.Drawing.Point(5, 151);
+            this.P3CharComboBox.Name = "P3CharComboBox";
+            this.P3CharComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P3CharComboBox.Properties.AllowFocused = false;
+            this.P3CharComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P3CharComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P3CharComboBox.Size = new System.Drawing.Size(91, 20);
+            this.P3CharComboBox.TabIndex = 2;
+            // 
+            // TabPageCharGPPlayer2
+            // 
+            this.TabPageCharGPPlayer2.Controls.Add(this.P2MiscGP);
+            this.TabPageCharGPPlayer2.Controls.Add(this.P2FreezeCharCosButton);
+            this.TabPageCharGPPlayer2.Controls.Add(this.P2HealthBar);
+            this.TabPageCharGPPlayer2.Controls.Add(this.P2CharPictureBox);
+            this.TabPageCharGPPlayer2.Controls.Add(this.P2CosComboBox);
+            this.TabPageCharGPPlayer2.Controls.Add(this.P2CharComboBox);
+            this.TabPageCharGPPlayer2.Location = new System.Drawing.Point(322, 10);
+            this.TabPageCharGPPlayer2.Margin = new System.Windows.Forms.Padding(10);
+            this.TabPageCharGPPlayer2.Name = "TabPageCharGPPlayer2";
+            this.TabPageCharGPPlayer2.Size = new System.Drawing.Size(308, 204);
+            this.TabPageCharGPPlayer2.TabIndex = 19;
+            this.TabPageCharGPPlayer2.Text = "Player 2";
+            // 
+            // P2MiscGP
+            // 
+            this.P2MiscGP.Controls.Add(this.P2WeaponModeGP);
+            this.P2MiscGP.Controls.Add(this.P2HandnessGP);
+            this.P2MiscGP.Controls.Add(this.P2InfiniteAmmoButton);
+            this.P2MiscGP.Controls.Add(this.P2RapidfireButton);
+            this.P2MiscGP.Controls.Add(this.P2InfiniteHPButton);
+            this.P2MiscGP.Controls.Add(this.P2UntargetableButton);
+            this.P2MiscGP.Location = new System.Drawing.Point(179, 30);
+            this.P2MiscGP.Name = "P2MiscGP";
+            this.P2MiscGP.ShowCaption = false;
+            this.P2MiscGP.Size = new System.Drawing.Size(122, 168);
+            this.P2MiscGP.TabIndex = 9;
+            // 
+            // P2WeaponModeGP
+            // 
+            this.P2WeaponModeGP.Controls.Add(this.P2WeaponModeComboBox);
+            this.P2WeaponModeGP.Location = new System.Drawing.Point(5, 122);
+            this.P2WeaponModeGP.Name = "P2WeaponModeGP";
+            this.P2WeaponModeGP.ShowCaption = false;
+            this.P2WeaponModeGP.Size = new System.Drawing.Size(112, 41);
+            this.P2WeaponModeGP.TabIndex = 12;
+            // 
+            // P2WeaponModeComboBox
+            // 
+            this.P2WeaponModeComboBox.Location = new System.Drawing.Point(8, 10);
+            this.P2WeaponModeComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.P2WeaponModeComboBox.Name = "P2WeaponModeComboBox";
+            this.P2WeaponModeComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P2WeaponModeComboBox.Properties.AllowFocused = false;
+            this.P2WeaponModeComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2WeaponModeComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2WeaponModeComboBox.Size = new System.Drawing.Size(96, 20);
+            this.P2WeaponModeComboBox.TabIndex = 4;
+            this.P2WeaponModeComboBox.ToolTip = "Sets the player\'s weapon mode, male or female.";
+            this.P2WeaponModeComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2WeaponModeComboBox.ToolTipTitle = "Weapon Mode";
+            // 
+            // P2HandnessGP
+            // 
+            this.P2HandnessGP.Controls.Add(this.P2HandnessComboBox);
+            this.P2HandnessGP.Location = new System.Drawing.Point(5, 75);
+            this.P2HandnessGP.Name = "P2HandnessGP";
+            this.P2HandnessGP.ShowCaption = false;
+            this.P2HandnessGP.Size = new System.Drawing.Size(112, 41);
+            this.P2HandnessGP.TabIndex = 11;
+            // 
+            // P2HandnessComboBox
+            // 
+            this.P2HandnessComboBox.Location = new System.Drawing.Point(8, 11);
+            this.P2HandnessComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.P2HandnessComboBox.Name = "P2HandnessComboBox";
+            this.P2HandnessComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P2HandnessComboBox.Properties.AllowFocused = false;
+            this.P2HandnessComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2HandnessComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2HandnessComboBox.Size = new System.Drawing.Size(96, 20);
+            this.P2HandnessComboBox.TabIndex = 3;
+            this.P2HandnessComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.P2HandnessComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2HandnessComboBox.ToolTipTitle = "Handness";
+            // 
+            // P2InfiniteAmmoButton
+            // 
+            this.P2InfiniteAmmoButton.AllowFocus = false;
+            this.P2InfiniteAmmoButton.Location = new System.Drawing.Point(64, 13);
+            this.P2InfiniteAmmoButton.Name = "P2InfiniteAmmoButton";
+            this.P2InfiniteAmmoButton.Size = new System.Drawing.Size(39, 23);
+            this.P2InfiniteAmmoButton.TabIndex = 9;
+            this.P2InfiniteAmmoButton.Text = "OFF";
+            this.P2InfiniteAmmoButton.ToolTip = "Enables the infinite ammoflag for every item in the real-time inventory.";
+            this.P2InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
+            // 
+            // P2RapidfireButton
+            // 
+            this.P2RapidfireButton.AllowFocus = false;
+            this.P2RapidfireButton.Location = new System.Drawing.Point(64, 42);
+            this.P2RapidfireButton.Name = "P2RapidfireButton";
+            this.P2RapidfireButton.Size = new System.Drawing.Size(39, 23);
+            this.P2RapidfireButton.TabIndex = 10;
+            this.P2RapidfireButton.Text = "OFF";
+            this.P2RapidfireButton.ToolTip = "Enables the rapidfire flag for every item in the real-time inventory.";
+            this.P2RapidfireButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2RapidfireButton.ToolTipTitle = "Rapidfire";
+            // 
+            // P2InfiniteHPButton
+            // 
+            this.P2InfiniteHPButton.AllowFocus = false;
+            this.P2InfiniteHPButton.Location = new System.Drawing.Point(19, 13);
+            this.P2InfiniteHPButton.Name = "P2InfiniteHPButton";
+            this.P2InfiniteHPButton.Size = new System.Drawing.Size(39, 23);
+            this.P2InfiniteHPButton.TabIndex = 7;
+            this.P2InfiniteHPButton.Text = "OFF";
+            this.P2InfiniteHPButton.ToolTip = "Keeps the health at its maximun value, usually 1000.";
+            this.P2InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2InfiniteHPButton.ToolTipTitle = "Infinite HP";
+            // 
+            // P2UntargetableButton
+            // 
+            this.P2UntargetableButton.AllowFocus = false;
+            this.P2UntargetableButton.Location = new System.Drawing.Point(19, 42);
+            this.P2UntargetableButton.Name = "P2UntargetableButton";
+            this.P2UntargetableButton.Size = new System.Drawing.Size(39, 23);
+            this.P2UntargetableButton.TabIndex = 8;
+            this.P2UntargetableButton.Text = "OFF";
+            this.P2UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
+            this.P2UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2UntargetableButton.ToolTipTitle = "Untargetable";
+            // 
+            // P2FreezeCharCosButton
+            // 
+            this.P2FreezeCharCosButton.AllowFocus = false;
+            this.P2FreezeCharCosButton.Location = new System.Drawing.Point(102, 149);
+            this.P2FreezeCharCosButton.Name = "P2FreezeCharCosButton";
+            this.P2FreezeCharCosButton.Size = new System.Drawing.Size(53, 23);
+            this.P2FreezeCharCosButton.TabIndex = 8;
+            this.P2FreezeCharCosButton.Text = "Freeze";
+            this.P2FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
+            this.P2FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
+            // 
+            // P2HealthBar
+            // 
+            this.P2HealthBar.Location = new System.Drawing.Point(161, 30);
+            this.P2HealthBar.Name = "P2HealthBar";
+            this.P2HealthBar.Properties.AllowFocused = false;
+            this.P2HealthBar.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.P2HealthBar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.P2HealthBar.Properties.EndColor = System.Drawing.Color.Lime;
+            this.P2HealthBar.Properties.LookAndFeel.SkinName = "Visual Studio 2013 Dark";
+            this.P2HealthBar.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.P2HealthBar.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.P2HealthBar.Properties.Maximum = 1;
+            this.P2HealthBar.Properties.ProgressKind = DevExpress.XtraEditors.Controls.ProgressKind.Vertical;
+            this.P2HealthBar.Properties.StartColor = System.Drawing.Color.Lime;
+            this.P2HealthBar.Size = new System.Drawing.Size(12, 168);
+            this.P2HealthBar.TabIndex = 7;
+            this.P2HealthBar.ToolTip = "Displays the respective player\'s health in a fancy way.";
+            this.P2HealthBar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2HealthBar.ToolTipTitle = "Player Health";
+            // 
+            // P2CharPictureBox
+            // 
+            this.P2CharPictureBox.Location = new System.Drawing.Point(5, 30);
+            this.P2CharPictureBox.Name = "P2CharPictureBox";
+            this.P2CharPictureBox.Properties.AllowFocused = false;
+            this.P2CharPictureBox.Properties.PictureAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.P2CharPictureBox.Properties.ReadOnly = true;
+            this.P2CharPictureBox.Properties.ShowMenu = false;
+            this.P2CharPictureBox.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.P2CharPictureBox.Size = new System.Drawing.Size(150, 115);
+            this.P2CharPictureBox.TabIndex = 6;
+            this.P2CharPictureBox.UseDirectXPaint = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // P2CosComboBox
+            // 
+            this.P2CosComboBox.Location = new System.Drawing.Point(5, 178);
+            this.P2CosComboBox.Name = "P2CosComboBox";
+            this.P2CosComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P2CosComboBox.Properties.AllowFocused = false;
+            this.P2CosComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2CosComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2CosComboBox.Size = new System.Drawing.Size(150, 20);
+            this.P2CosComboBox.TabIndex = 5;
+            // 
+            // P2CharComboBox
+            // 
+            this.P2CharComboBox.Location = new System.Drawing.Point(5, 151);
+            this.P2CharComboBox.Name = "P2CharComboBox";
+            this.P2CharComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P2CharComboBox.Properties.AllowFocused = false;
+            this.P2CharComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2CharComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2CharComboBox.Size = new System.Drawing.Size(91, 20);
+            this.P2CharComboBox.TabIndex = 2;
+            // 
+            // TabPageCharGPPlayer1
+            // 
+            this.TabPageCharGPPlayer1.Controls.Add(this.P1MiscGP);
+            this.TabPageCharGPPlayer1.Controls.Add(this.P1HealthBar);
+            this.TabPageCharGPPlayer1.Controls.Add(this.P1CharPictureBox);
+            this.TabPageCharGPPlayer1.Controls.Add(this.P1CosComboBox);
+            this.TabPageCharGPPlayer1.Controls.Add(this.P1FreezeCharCosButton);
+            this.TabPageCharGPPlayer1.Controls.Add(this.P1CharComboBox);
+            this.TabPageCharGPPlayer1.Location = new System.Drawing.Point(8, 10);
+            this.TabPageCharGPPlayer1.Margin = new System.Windows.Forms.Padding(10);
+            this.TabPageCharGPPlayer1.Name = "TabPageCharGPPlayer1";
+            this.TabPageCharGPPlayer1.Size = new System.Drawing.Size(308, 204);
+            this.TabPageCharGPPlayer1.TabIndex = 18;
+            this.TabPageCharGPPlayer1.Text = "Player 1";
+            // 
+            // P1MiscGP
+            // 
+            this.P1MiscGP.Controls.Add(this.P1WeaponModeGP);
+            this.P1MiscGP.Controls.Add(this.P1HandnessGP);
+            this.P1MiscGP.Controls.Add(this.P1InfiniteAmmoButton);
+            this.P1MiscGP.Controls.Add(this.P1RapidfireButton);
+            this.P1MiscGP.Controls.Add(this.P1InfiniteHPButton);
+            this.P1MiscGP.Controls.Add(this.P1UntargetableButton);
+            this.P1MiscGP.Location = new System.Drawing.Point(179, 30);
+            this.P1MiscGP.Name = "P1MiscGP";
+            this.P1MiscGP.ShowCaption = false;
+            this.P1MiscGP.Size = new System.Drawing.Size(122, 168);
+            this.P1MiscGP.TabIndex = 7;
+            // 
+            // P1WeaponModeGP
+            // 
+            this.P1WeaponModeGP.Controls.Add(this.P1WeaponModeComboBox);
+            this.P1WeaponModeGP.Location = new System.Drawing.Point(5, 122);
+            this.P1WeaponModeGP.Name = "P1WeaponModeGP";
+            this.P1WeaponModeGP.ShowCaption = false;
+            this.P1WeaponModeGP.Size = new System.Drawing.Size(112, 41);
+            this.P1WeaponModeGP.TabIndex = 12;
+            // 
+            // P1WeaponModeComboBox
+            // 
+            this.P1WeaponModeComboBox.Location = new System.Drawing.Point(8, 10);
+            this.P1WeaponModeComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.P1WeaponModeComboBox.Name = "P1WeaponModeComboBox";
+            this.P1WeaponModeComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P1WeaponModeComboBox.Properties.AllowFocused = false;
+            this.P1WeaponModeComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P1WeaponModeComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P1WeaponModeComboBox.Size = new System.Drawing.Size(96, 20);
+            this.P1WeaponModeComboBox.TabIndex = 4;
+            this.P1WeaponModeComboBox.ToolTip = "Sets the player\'s weapon mode, male or female.";
+            this.P1WeaponModeComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P1WeaponModeComboBox.ToolTipTitle = "Weapon Mode";
+            // 
+            // P1HandnessGP
+            // 
+            this.P1HandnessGP.Controls.Add(this.P1HandnessComboBox);
+            this.P1HandnessGP.Location = new System.Drawing.Point(5, 75);
+            this.P1HandnessGP.Name = "P1HandnessGP";
+            this.P1HandnessGP.ShowCaption = false;
+            this.P1HandnessGP.Size = new System.Drawing.Size(112, 41);
+            this.P1HandnessGP.TabIndex = 11;
+            // 
+            // P1HandnessComboBox
+            // 
+            this.P1HandnessComboBox.Location = new System.Drawing.Point(8, 11);
+            this.P1HandnessComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.P1HandnessComboBox.Name = "P1HandnessComboBox";
+            this.P1HandnessComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P1HandnessComboBox.Properties.AllowFocused = false;
+            this.P1HandnessComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P1HandnessComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P1HandnessComboBox.Size = new System.Drawing.Size(96, 20);
+            this.P1HandnessComboBox.TabIndex = 3;
+            this.P1HandnessComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.P1HandnessComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P1HandnessComboBox.ToolTipTitle = "Handness";
+            // 
+            // P1InfiniteAmmoButton
+            // 
+            this.P1InfiniteAmmoButton.AllowFocus = false;
+            this.P1InfiniteAmmoButton.Location = new System.Drawing.Point(64, 13);
+            this.P1InfiniteAmmoButton.Name = "P1InfiniteAmmoButton";
+            this.P1InfiniteAmmoButton.Size = new System.Drawing.Size(39, 23);
+            this.P1InfiniteAmmoButton.TabIndex = 9;
+            this.P1InfiniteAmmoButton.Text = "OFF";
+            this.P1InfiniteAmmoButton.ToolTip = "Enables the infinite ammoflag for every item in the real-time inventory.";
+            this.P1InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P1InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
+            // 
+            // P1RapidfireButton
+            // 
+            this.P1RapidfireButton.AllowFocus = false;
+            this.P1RapidfireButton.Location = new System.Drawing.Point(64, 42);
+            this.P1RapidfireButton.Name = "P1RapidfireButton";
+            this.P1RapidfireButton.Size = new System.Drawing.Size(39, 23);
+            this.P1RapidfireButton.TabIndex = 10;
+            this.P1RapidfireButton.Text = "OFF";
+            this.P1RapidfireButton.ToolTip = "Enables the rapidfire flag for every item in the real-time inventory.";
+            this.P1RapidfireButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P1RapidfireButton.ToolTipTitle = "Rapidfire";
+            // 
+            // P1InfiniteHPButton
+            // 
+            this.P1InfiniteHPButton.AllowFocus = false;
+            this.P1InfiniteHPButton.Location = new System.Drawing.Point(19, 13);
+            this.P1InfiniteHPButton.Name = "P1InfiniteHPButton";
+            this.P1InfiniteHPButton.Size = new System.Drawing.Size(39, 23);
+            this.P1InfiniteHPButton.TabIndex = 7;
+            this.P1InfiniteHPButton.Text = "OFF";
+            this.P1InfiniteHPButton.ToolTip = "Keeps the health at its maximun value, usually 1000.";
+            this.P1InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P1InfiniteHPButton.ToolTipTitle = "Infinite HP";
+            // 
+            // P1UntargetableButton
+            // 
+            this.P1UntargetableButton.AllowFocus = false;
+            this.P1UntargetableButton.Location = new System.Drawing.Point(19, 42);
+            this.P1UntargetableButton.Name = "P1UntargetableButton";
+            this.P1UntargetableButton.Size = new System.Drawing.Size(39, 23);
+            this.P1UntargetableButton.TabIndex = 8;
+            this.P1UntargetableButton.Text = "OFF";
+            this.P1UntargetableButton.ToolTip = "Disables damage collision of the respective player.";
+            this.P1UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P1UntargetableButton.ToolTipTitle = "Untargetable";
+            // 
+            // P1HealthBar
+            // 
+            this.P1HealthBar.Location = new System.Drawing.Point(161, 30);
+            this.P1HealthBar.Name = "P1HealthBar";
+            this.P1HealthBar.Properties.AllowFocused = false;
+            this.P1HealthBar.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.P1HealthBar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.P1HealthBar.Properties.EndColor = System.Drawing.Color.Lime;
+            this.P1HealthBar.Properties.LookAndFeel.SkinName = "Visual Studio 2013 Dark";
+            this.P1HealthBar.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.P1HealthBar.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.P1HealthBar.Properties.Maximum = 1;
+            this.P1HealthBar.Properties.ProgressKind = DevExpress.XtraEditors.Controls.ProgressKind.Vertical;
+            this.P1HealthBar.Properties.StartColor = System.Drawing.Color.Lime;
+            this.P1HealthBar.Size = new System.Drawing.Size(12, 168);
+            this.P1HealthBar.TabIndex = 6;
+            this.P1HealthBar.ToolTip = "Displays the respective player\'s health in a fancy way.";
+            this.P1HealthBar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P1HealthBar.ToolTipTitle = "Player Health";
+            // 
+            // TabPageInventory
+            // 
+            this.TabPageInventory.Name = "TabPageInventory";
+            this.TabPageInventory.Size = new System.Drawing.Size(638, 438);
+            this.TabPageInventory.Text = "Inventory";
+            // 
+            // TabPageSettings
+            // 
+            this.TabPageSettings.Controls.Add(this.NetworkGP);
+            this.TabPageSettings.Controls.Add(this.ConsoleGP);
+            this.TabPageSettings.Controls.Add(this.TabPageSettingsGPApp);
+            this.TabPageSettings.Name = "TabPageSettings";
+            this.TabPageSettings.Size = new System.Drawing.Size(638, 438);
+            this.TabPageSettings.Text = "Settings";
+            // 
+            // NetworkGP
+            // 
+            this.NetworkGP.Controls.Add(this.P3NetworkGP);
+            this.NetworkGP.Controls.Add(this.P2NetworkGP);
+            this.NetworkGP.Controls.Add(this.P1NetworkGP);
+            this.NetworkGP.Location = new System.Drawing.Point(322, 10);
+            this.NetworkGP.Name = "NetworkGP";
+            this.NetworkGP.Size = new System.Drawing.Size(308, 241);
+            this.NetworkGP.TabIndex = 2;
+            this.NetworkGP.Text = "Network";
+            // 
+            // P3NetworkGP
+            // 
+            this.P3NetworkGP.Controls.Add(this.P3ConnectionButton);
+            this.P3NetworkGP.Controls.Add(this.P3IPLabelControl);
+            this.P3NetworkGP.Controls.Add(this.P3PlayerIndexComboBoxEdit);
+            this.P3NetworkGP.Controls.Add(this.P3IPTextEdit);
+            this.P3NetworkGP.Location = new System.Drawing.Point(5, 170);
+            this.P3NetworkGP.Name = "P3NetworkGP";
+            this.P3NetworkGP.Size = new System.Drawing.Size(298, 64);
+            this.P3NetworkGP.TabIndex = 13;
+            // 
+            // P3ConnectionButton
+            // 
+            this.P3ConnectionButton.AllowFocus = false;
+            this.P3ConnectionButton.Location = new System.Drawing.Point(214, 33);
+            this.P3ConnectionButton.Name = "P3ConnectionButton";
+            this.P3ConnectionButton.Size = new System.Drawing.Size(78, 23);
+            this.P3ConnectionButton.TabIndex = 14;
+            this.P3ConnectionButton.TabStop = false;
+            this.P3ConnectionButton.Text = "Connect";
+            this.P3ConnectionButton.ToolTip = "Connects or disconnects a peer from the network module.";
+            this.P3ConnectionButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3ConnectionButton.ToolTipTitle = "Connection";
+            // 
+            // P3IPLabelControl
+            // 
+            this.P3IPLabelControl.Location = new System.Drawing.Point(7, 38);
+            this.P3IPLabelControl.Name = "P3IPLabelControl";
+            this.P3IPLabelControl.Size = new System.Drawing.Size(12, 13);
+            this.P3IPLabelControl.TabIndex = 10;
+            this.P3IPLabelControl.Text = "IP:";
+            // 
+            // P3PlayerIndexComboBoxEdit
+            // 
+            this.P3PlayerIndexComboBoxEdit.EditValue = "";
+            this.P3PlayerIndexComboBoxEdit.Location = new System.Drawing.Point(141, 35);
+            this.P3PlayerIndexComboBoxEdit.Name = "P3PlayerIndexComboBoxEdit";
+            this.P3PlayerIndexComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P3PlayerIndexComboBoxEdit.Properties.AllowFocused = false;
+            this.P3PlayerIndexComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P3PlayerIndexComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P3PlayerIndexComboBoxEdit.Size = new System.Drawing.Size(67, 20);
+            this.P3PlayerIndexComboBoxEdit.TabIndex = 12;
+            this.P3PlayerIndexComboBoxEdit.TabStop = false;
+            this.P3PlayerIndexComboBoxEdit.ToolTip = "Defines which player index will be affected by this peer\'s actions.";
+            this.P3PlayerIndexComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3PlayerIndexComboBoxEdit.ToolTipTitle = "Player index";
+            // 
+            // P3IPTextEdit
+            // 
+            this.P3IPTextEdit.CausesValidation = false;
+            this.P3IPTextEdit.EditValue = "";
+            this.P3IPTextEdit.Location = new System.Drawing.Point(25, 35);
+            this.P3IPTextEdit.Name = "P3IPTextEdit";
+            this.P3IPTextEdit.Properties.ValidateOnEnterKey = true;
+            this.P3IPTextEdit.Size = new System.Drawing.Size(110, 20);
+            this.P3IPTextEdit.TabIndex = 11;
+            this.P3IPTextEdit.ToolTip = "Defines the IP:Port address for a peer connection.";
+            this.P3IPTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3IPTextEdit.ToolTipTitle = "IP Address";
+            // 
+            // P2NetworkGP
+            // 
+            this.P2NetworkGP.Controls.Add(this.P2ConnectionButton);
+            this.P2NetworkGP.Controls.Add(this.P2IPLabelControl);
+            this.P2NetworkGP.Controls.Add(this.P2PlayerIndexComboBoxEdit);
+            this.P2NetworkGP.Controls.Add(this.P2IPTextEdit);
+            this.P2NetworkGP.Location = new System.Drawing.Point(5, 100);
+            this.P2NetworkGP.Name = "P2NetworkGP";
+            this.P2NetworkGP.Size = new System.Drawing.Size(298, 64);
+            this.P2NetworkGP.TabIndex = 12;
+            // 
+            // P2ConnectionButton
+            // 
+            this.P2ConnectionButton.AllowFocus = false;
+            this.P2ConnectionButton.Location = new System.Drawing.Point(214, 33);
+            this.P2ConnectionButton.Name = "P2ConnectionButton";
+            this.P2ConnectionButton.Size = new System.Drawing.Size(78, 23);
+            this.P2ConnectionButton.TabIndex = 14;
+            this.P2ConnectionButton.TabStop = false;
+            this.P2ConnectionButton.Text = "Connect";
+            this.P2ConnectionButton.ToolTip = "Connects or disconnects a peer from the network module.";
+            this.P2ConnectionButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2ConnectionButton.ToolTipTitle = "Connection";
+            // 
+            // P2IPLabelControl
+            // 
+            this.P2IPLabelControl.Location = new System.Drawing.Point(7, 38);
+            this.P2IPLabelControl.Name = "P2IPLabelControl";
+            this.P2IPLabelControl.Size = new System.Drawing.Size(12, 13);
+            this.P2IPLabelControl.TabIndex = 10;
+            this.P2IPLabelControl.Text = "IP:";
+            // 
+            // P2PlayerIndexComboBoxEdit
+            // 
+            this.P2PlayerIndexComboBoxEdit.EditValue = "";
+            this.P2PlayerIndexComboBoxEdit.Location = new System.Drawing.Point(141, 35);
+            this.P2PlayerIndexComboBoxEdit.Name = "P2PlayerIndexComboBoxEdit";
+            this.P2PlayerIndexComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P2PlayerIndexComboBoxEdit.Properties.AllowFocused = false;
+            this.P2PlayerIndexComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2PlayerIndexComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2PlayerIndexComboBoxEdit.Size = new System.Drawing.Size(67, 20);
+            this.P2PlayerIndexComboBoxEdit.TabIndex = 12;
+            this.P2PlayerIndexComboBoxEdit.TabStop = false;
+            this.P2PlayerIndexComboBoxEdit.ToolTip = "Defines which player index will be affected by this peer\'s actions.";
+            this.P2PlayerIndexComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2PlayerIndexComboBoxEdit.ToolTipTitle = "Player index";
+            // 
+            // P2IPTextEdit
+            // 
+            this.P2IPTextEdit.CausesValidation = false;
+            this.P2IPTextEdit.EditValue = "";
+            this.P2IPTextEdit.Location = new System.Drawing.Point(25, 35);
+            this.P2IPTextEdit.Name = "P2IPTextEdit";
+            this.P2IPTextEdit.Properties.ValidateOnEnterKey = true;
+            this.P2IPTextEdit.Size = new System.Drawing.Size(110, 20);
+            this.P2IPTextEdit.TabIndex = 11;
+            this.P2IPTextEdit.ToolTip = "Defines the IP:Port address for a peer connection.";
+            this.P2IPTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2IPTextEdit.ToolTipTitle = "IP Address";
+            // 
+            // P1NetworkGP
+            // 
+            this.P1NetworkGP.Controls.Add(this.P1ConnectionButton);
+            this.P1NetworkGP.Controls.Add(this.P1IPLabelControl);
+            this.P1NetworkGP.Controls.Add(this.P1PlayerIndexComboBoxEdit);
+            this.P1NetworkGP.Controls.Add(this.P1IPTextEdit);
+            this.P1NetworkGP.Location = new System.Drawing.Point(5, 30);
+            this.P1NetworkGP.Name = "P1NetworkGP";
+            this.P1NetworkGP.Size = new System.Drawing.Size(298, 64);
+            this.P1NetworkGP.TabIndex = 11;
+            // 
+            // P1ConnectionButton
+            // 
+            this.P1ConnectionButton.AllowFocus = false;
+            this.P1ConnectionButton.Location = new System.Drawing.Point(214, 33);
+            this.P1ConnectionButton.Name = "P1ConnectionButton";
+            this.P1ConnectionButton.Size = new System.Drawing.Size(78, 23);
+            this.P1ConnectionButton.TabIndex = 14;
+            this.P1ConnectionButton.TabStop = false;
+            this.P1ConnectionButton.Text = "Connect";
+            this.P1ConnectionButton.ToolTip = "Connects or disconnects a peer from the network module.";
+            this.P1ConnectionButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P1ConnectionButton.ToolTipTitle = "Connection";
+            // 
+            // P1IPLabelControl
+            // 
+            this.P1IPLabelControl.Location = new System.Drawing.Point(7, 38);
+            this.P1IPLabelControl.Name = "P1IPLabelControl";
+            this.P1IPLabelControl.Size = new System.Drawing.Size(12, 13);
+            this.P1IPLabelControl.TabIndex = 10;
+            this.P1IPLabelControl.Text = "IP:";
+            // 
+            // P1PlayerIndexComboBoxEdit
+            // 
+            this.P1PlayerIndexComboBoxEdit.EditValue = "";
+            this.P1PlayerIndexComboBoxEdit.Location = new System.Drawing.Point(141, 35);
+            this.P1PlayerIndexComboBoxEdit.Name = "P1PlayerIndexComboBoxEdit";
+            this.P1PlayerIndexComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P1PlayerIndexComboBoxEdit.Properties.AllowFocused = false;
+            this.P1PlayerIndexComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P1PlayerIndexComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P1PlayerIndexComboBoxEdit.Size = new System.Drawing.Size(67, 20);
+            this.P1PlayerIndexComboBoxEdit.TabIndex = 12;
+            this.P1PlayerIndexComboBoxEdit.TabStop = false;
+            this.P1PlayerIndexComboBoxEdit.ToolTip = "Defines which player index will be affected by this peer\'s actions.";
+            this.P1PlayerIndexComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P1PlayerIndexComboBoxEdit.ToolTipTitle = "Player index";
+            // 
+            // P1IPTextEdit
+            // 
+            this.P1IPTextEdit.CausesValidation = false;
+            this.P1IPTextEdit.EditValue = "";
+            this.P1IPTextEdit.Location = new System.Drawing.Point(25, 35);
+            this.P1IPTextEdit.Name = "P1IPTextEdit";
+            this.P1IPTextEdit.Properties.ValidateOnEnterKey = true;
+            this.P1IPTextEdit.Size = new System.Drawing.Size(110, 20);
+            this.P1IPTextEdit.TabIndex = 11;
+            this.P1IPTextEdit.ToolTip = "Defines the IP:Port address for a peer connection.";
+            this.P1IPTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P1IPTextEdit.ToolTipTitle = "IP Address";
+            // 
+            // ConsoleGP
+            // 
+            this.ConsoleGP.Controls.Add(this.ConsoleOutputMemoEdit);
+            this.ConsoleGP.Controls.Add(this.ConsoleInputTextEdit);
+            this.ConsoleGP.Location = new System.Drawing.Point(8, 261);
+            this.ConsoleGP.Name = "ConsoleGP";
+            this.ConsoleGP.Size = new System.Drawing.Size(622, 167);
+            this.ConsoleGP.TabIndex = 1;
+            this.ConsoleGP.Text = "Console";
+            // 
+            // ConsoleOutputMemoEdit
+            // 
+            this.ConsoleOutputMemoEdit.Location = new System.Drawing.Point(5, 30);
+            this.ConsoleOutputMemoEdit.Name = "ConsoleOutputMemoEdit";
+            this.ConsoleOutputMemoEdit.Properties.AllowFocused = false;
+            this.ConsoleOutputMemoEdit.Properties.ReadOnly = true;
+            this.ConsoleOutputMemoEdit.Properties.UseReadOnlyAppearance = false;
+            this.ConsoleOutputMemoEdit.Size = new System.Drawing.Size(611, 106);
+            this.ConsoleOutputMemoEdit.TabIndex = 2;
+            this.ConsoleOutputMemoEdit.TabStop = false;
+            // 
+            // ConsoleInputTextEdit
+            // 
+            this.ConsoleInputTextEdit.CausesValidation = false;
+            this.ConsoleInputTextEdit.Location = new System.Drawing.Point(5, 142);
+            this.ConsoleInputTextEdit.Name = "ConsoleInputTextEdit";
+            this.ConsoleInputTextEdit.Properties.ValidateOnEnterKey = true;
+            this.ConsoleInputTextEdit.Size = new System.Drawing.Size(611, 20);
+            this.ConsoleInputTextEdit.TabIndex = 1;
+            // 
+            // TabPageSettingsGPApp
+            // 
+            this.TabPageSettingsGPApp.Controls.Add(this.AboutPictureEdit);
+            this.TabPageSettingsGPApp.Controls.Add(this.AppSettingsGP);
+            this.TabPageSettingsGPApp.Location = new System.Drawing.Point(8, 10);
+            this.TabPageSettingsGPApp.Margin = new System.Windows.Forms.Padding(10);
+            this.TabPageSettingsGPApp.Name = "TabPageSettingsGPApp";
+            this.TabPageSettingsGPApp.Size = new System.Drawing.Size(308, 241);
+            this.TabPageSettingsGPApp.TabIndex = 0;
+            this.TabPageSettingsGPApp.Text = "GameX";
+            // 
+            // AboutPictureEdit
+            // 
+            this.AboutPictureEdit.Location = new System.Drawing.Point(5, 30);
+            this.AboutPictureEdit.Name = "AboutPictureEdit";
+            this.AboutPictureEdit.Properties.AllowFocused = false;
+            this.AboutPictureEdit.Properties.PictureInterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            this.AboutPictureEdit.Properties.ReadOnly = true;
+            this.AboutPictureEdit.Properties.ShowMenu = false;
+            this.AboutPictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.AboutPictureEdit.Size = new System.Drawing.Size(298, 80);
+            this.AboutPictureEdit.TabIndex = 2;
+            this.AboutPictureEdit.UseDirectXPaint = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // AppSettingsGP
+            // 
+            this.AppSettingsGP.Controls.Add(this.MiscSettingsGP);
+            this.AppSettingsGP.Controls.Add(this.LoadSaveGP);
+            this.AppSettingsGP.Location = new System.Drawing.Point(5, 116);
+            this.AppSettingsGP.Name = "AppSettingsGP";
+            this.AppSettingsGP.Size = new System.Drawing.Size(298, 120);
+            this.AppSettingsGP.TabIndex = 1;
+            this.AppSettingsGP.Text = "App Settings";
+            // 
+            // MiscSettingsGP
+            // 
+            this.MiscSettingsGP.Controls.Add(this.PaletteLabelControl);
+            this.MiscSettingsGP.Controls.Add(this.PaletteComboBoxEdit);
+            this.MiscSettingsGP.Controls.Add(this.UpdateModeComboBoxEdit);
+            this.MiscSettingsGP.Controls.Add(this.UpdateRateLabelControl);
+            this.MiscSettingsGP.Controls.Add(this.SkinLabelControl);
+            this.MiscSettingsGP.Controls.Add(this.SkinComboBoxEdit);
+            this.MiscSettingsGP.Location = new System.Drawing.Point(5, 30);
+            this.MiscSettingsGP.Name = "MiscSettingsGP";
+            this.MiscSettingsGP.ShowCaption = false;
+            this.MiscSettingsGP.Size = new System.Drawing.Size(170, 85);
+            this.MiscSettingsGP.TabIndex = 1;
+            // 
+            // PaletteLabelControl
+            // 
+            this.PaletteLabelControl.Location = new System.Drawing.Point(10, 62);
+            this.PaletteLabelControl.Name = "PaletteLabelControl";
+            this.PaletteLabelControl.Size = new System.Drawing.Size(38, 13);
+            this.PaletteLabelControl.TabIndex = 11;
+            this.PaletteLabelControl.Text = "Palette:";
+            // 
+            // PaletteComboBoxEdit
+            // 
+            this.PaletteComboBoxEdit.Location = new System.Drawing.Point(54, 59);
+            this.PaletteComboBoxEdit.Name = "PaletteComboBoxEdit";
+            this.PaletteComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.PaletteComboBoxEdit.Properties.AllowFocused = false;
+            this.PaletteComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.PaletteComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.PaletteComboBoxEdit.Size = new System.Drawing.Size(111, 20);
+            this.PaletteComboBoxEdit.TabIndex = 10;
+            this.PaletteComboBoxEdit.ToolTip = "Changes the palette scheme for the skin applied.";
+            this.PaletteComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.PaletteComboBoxEdit.ToolTipTitle = "Palette";
+            // 
+            // UpdateModeComboBoxEdit
+            // 
+            this.UpdateModeComboBoxEdit.Location = new System.Drawing.Point(83, 7);
+            this.UpdateModeComboBoxEdit.Name = "UpdateModeComboBoxEdit";
+            this.UpdateModeComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.UpdateModeComboBoxEdit.Properties.AllowFocused = false;
+            this.UpdateModeComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.UpdateModeComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.UpdateModeComboBoxEdit.Size = new System.Drawing.Size(82, 20);
+            this.UpdateModeComboBoxEdit.TabIndex = 6;
+            this.UpdateModeComboBoxEdit.ToolTip = "Sets the update rate for the main loop system. Aways leave the Update Rate greate" +
+    "r or equal to your game\'s FPS.";
+            this.UpdateModeComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.UpdateModeComboBoxEdit.ToolTipTitle = "Update Rate";
+            // 
+            // UpdateRateLabelControl
+            // 
+            this.UpdateRateLabelControl.Location = new System.Drawing.Point(10, 10);
+            this.UpdateRateLabelControl.Name = "UpdateRateLabelControl";
+            this.UpdateRateLabelControl.Size = new System.Drawing.Size(67, 13);
+            this.UpdateRateLabelControl.TabIndex = 7;
+            this.UpdateRateLabelControl.Text = "Update Rate:";
+            // 
+            // SkinLabelControl
+            // 
+            this.SkinLabelControl.Location = new System.Drawing.Point(10, 36);
+            this.SkinLabelControl.Name = "SkinLabelControl";
+            this.SkinLabelControl.Size = new System.Drawing.Size(25, 13);
+            this.SkinLabelControl.TabIndex = 9;
+            this.SkinLabelControl.Text = "Skin:";
+            // 
+            // SkinComboBoxEdit
+            // 
+            this.SkinComboBoxEdit.Location = new System.Drawing.Point(54, 33);
+            this.SkinComboBoxEdit.Name = "SkinComboBoxEdit";
+            this.SkinComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.SkinComboBoxEdit.Properties.AllowFocused = false;
+            this.SkinComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.SkinComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.SkinComboBoxEdit.Size = new System.Drawing.Size(111, 20);
+            this.SkinComboBoxEdit.TabIndex = 8;
+            this.SkinComboBoxEdit.ToolTip = "Changes the skin scheme for the application.";
+            this.SkinComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.SkinComboBoxEdit.ToolTipTitle = "Skin";
+            // 
+            // LoadSaveGP
+            // 
+            this.LoadSaveGP.Controls.Add(this.LoadSettingsButton);
+            this.LoadSaveGP.Controls.Add(this.SaveSettingsButton);
+            this.LoadSaveGP.Location = new System.Drawing.Point(181, 30);
+            this.LoadSaveGP.Name = "LoadSaveGP";
+            this.LoadSaveGP.Size = new System.Drawing.Size(112, 85);
+            this.LoadSaveGP.TabIndex = 0;
+            // 
+            // LoadSettingsButton
+            // 
+            this.LoadSettingsButton.AllowFocus = false;
+            this.LoadSettingsButton.Location = new System.Drawing.Point(5, 57);
+            this.LoadSettingsButton.Name = "LoadSettingsButton";
+            this.LoadSettingsButton.Size = new System.Drawing.Size(102, 23);
+            this.LoadSettingsButton.TabIndex = 1;
+            this.LoadSettingsButton.TabStop = false;
+            this.LoadSettingsButton.Text = "Load";
+            this.LoadSettingsButton.ToolTip = "Loads the last saved configuration or the default ones.";
+            this.LoadSettingsButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.LoadSettingsButton.ToolTipTitle = "Load";
+            // 
+            // SaveSettingsButton
+            // 
+            this.SaveSettingsButton.AllowFocus = false;
+            this.SaveSettingsButton.Location = new System.Drawing.Point(5, 30);
+            this.SaveSettingsButton.Name = "SaveSettingsButton";
+            this.SaveSettingsButton.Size = new System.Drawing.Size(102, 23);
+            this.SaveSettingsButton.TabIndex = 0;
+            this.SaveSettingsButton.TabStop = false;
+            this.SaveSettingsButton.Text = "Save";
+            this.SaveSettingsButton.ToolTip = "Saves the current configuration.";
+            this.SaveSettingsButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.SaveSettingsButton.ToolTipTitle = "Save";
+            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 493);
+            this.ClientSize = new System.Drawing.Size(664, 493);
             this.Controls.Add(this.MasterTabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("App.IconOptions.Image")));
@@ -1244,36 +1441,82 @@ namespace GameX
             this.TabPageChar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TabPageCharGPPlayer4)).EndInit();
             this.TabPageCharGPPlayer4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P4MiscGP)).EndInit();
+            this.P4MiscGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P4WeaponModeGP)).EndInit();
+            this.P4WeaponModeGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P4WeaponModeComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P4HandnessGP)).EndInit();
+            this.P4HandnessGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P4HandnessComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P4HealthBar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P4CharPictureBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P4CosComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P4CharComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageCharGPPlayer3)).EndInit();
             this.TabPageCharGPPlayer3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P3MiscGP)).EndInit();
+            this.P3MiscGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P3WeaponModeGP)).EndInit();
+            this.P3WeaponModeGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P3WeaponModeComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P3HandnessGP)).EndInit();
+            this.P3HandnessGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P3HandnessComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P3HealthBar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P3CharPictureBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P3CosComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P3CharComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageCharGPPlayer2)).EndInit();
             this.TabPageCharGPPlayer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P2MiscGP)).EndInit();
+            this.P2MiscGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P2WeaponModeGP)).EndInit();
+            this.P2WeaponModeGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P2WeaponModeComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2HandnessGP)).EndInit();
+            this.P2HandnessGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P2HandnessComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P2HealthBar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P2CharPictureBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P2CosComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P2CharComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageCharGPPlayer1)).EndInit();
             this.TabPageCharGPPlayer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P1MiscGP)).EndInit();
+            this.P1MiscGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P1WeaponModeGP)).EndInit();
+            this.P1WeaponModeGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P1WeaponModeComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P1HandnessGP)).EndInit();
+            this.P1HandnessGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P1HandnessComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1HealthBar.Properties)).EndInit();
             this.TabPageSettings.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.NetworkGP)).EndInit();
             this.NetworkGP.ResumeLayout(false);
-            this.NetworkGP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NickNameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P3NetworkGP)).EndInit();
+            this.P3NetworkGP.ResumeLayout(false);
+            this.P3NetworkGP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P3PlayerIndexComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P3IPTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2NetworkGP)).EndInit();
+            this.P2NetworkGP.ResumeLayout(false);
+            this.P2NetworkGP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2PlayerIndexComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2IPTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P1NetworkGP)).EndInit();
+            this.P1NetworkGP.ResumeLayout(false);
+            this.P1NetworkGP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P1PlayerIndexComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P1IPTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleGP)).EndInit();
             this.ConsoleGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageSettingsGPApp)).EndInit();
             this.TabPageSettingsGPApp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.AboutPictureEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AppSettingsGP)).EndInit();
             this.AppSettingsGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MiscSettingsGP)).EndInit();
@@ -1284,41 +1527,6 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.SkinComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoadSaveGP)).EndInit();
             this.LoadSaveGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.AboutGP)).EndInit();
-            this.AboutGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.AboutMemoEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P1MiscGP)).EndInit();
-            this.P1MiscGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.P1HandnessGP)).EndInit();
-            this.P1HandnessGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.P1WeaponModeGP)).EndInit();
-            this.P1WeaponModeGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.P1HandnessComboBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P1WeaponModeComboBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P2MiscGP)).EndInit();
-            this.P2MiscGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.P2WeaponModeGP)).EndInit();
-            this.P2WeaponModeGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.P2WeaponModeComboBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P2HandnessGP)).EndInit();
-            this.P2HandnessGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.P2HandnessComboBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P3MiscGP)).EndInit();
-            this.P3MiscGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.P3WeaponModeGP)).EndInit();
-            this.P3WeaponModeGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.P3WeaponModeComboBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P3HandnessGP)).EndInit();
-            this.P3HandnessGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.P3HandnessComboBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P4MiscGP)).EndInit();
-            this.P4MiscGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.P4WeaponModeGP)).EndInit();
-            this.P4WeaponModeGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.P4WeaponModeComboBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P4HandnessGP)).EndInit();
-            this.P4HandnessGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.P4HandnessComboBox.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1353,7 +1561,6 @@ namespace GameX
         private DevExpress.XtraEditors.GroupControl ConsoleGP;
         private DevExpress.XtraEditors.MemoEdit ConsoleOutputMemoEdit;
         private DevExpress.XtraEditors.TextEdit ConsoleInputTextEdit;
-        private DevExpress.XtraEditors.GroupControl AboutGP;
         private DevExpress.XtraEditors.ComboBoxEdit UpdateModeComboBoxEdit;
         private DevExpress.XtraEditors.GroupControl AppSettingsGP;
         private DevExpress.XtraEditors.SimpleButton SaveSettingsButton;
@@ -1361,14 +1568,10 @@ namespace GameX
         private DevExpress.XtraEditors.GroupControl LoadSaveGP;
         private DevExpress.XtraEditors.GroupControl MiscSettingsGP;
         private DevExpress.XtraEditors.LabelControl UpdateRateLabelControl;
-        private DevExpress.XtraEditors.TextEdit NickNameTextEdit;
-        private DevExpress.XtraEditors.MemoEdit AboutMemoEdit;
         private DevExpress.XtraEditors.CheckButton P4FreezeCharCosButton;
         private DevExpress.XtraEditors.CheckButton P3FreezeCharCosButton;
         private DevExpress.XtraEditors.CheckButton P2FreezeCharCosButton;
         private DevExpress.XtraEditors.CheckButton P1UntargetableButton;
-        private DevExpress.XtraEditors.GroupControl NetworkGP;
-        private DevExpress.XtraEditors.LabelControl NickLabelControl;
         private DevExpress.XtraEditors.LabelControl SkinLabelControl;
         private DevExpress.XtraEditors.ComboBoxEdit SkinComboBoxEdit;
         private DevExpress.XtraEditors.LabelControl PaletteLabelControl;
@@ -1407,6 +1610,24 @@ namespace GameX
         private DevExpress.XtraEditors.CheckButton P2RapidfireButton;
         private DevExpress.XtraEditors.CheckButton P2InfiniteHPButton;
         private DevExpress.XtraEditors.CheckButton P2UntargetableButton;
+        private DevExpress.XtraTab.XtraTabPage TabPageInventory;
+        private DevExpress.XtraEditors.GroupControl P1NetworkGP;
+        private DevExpress.XtraEditors.LabelControl P1IPLabelControl;
+        private DevExpress.XtraEditors.GroupControl P3NetworkGP;
+        private DevExpress.XtraEditors.LabelControl P3IPLabelControl;
+        private DevExpress.XtraEditors.GroupControl P2NetworkGP;
+        private DevExpress.XtraEditors.LabelControl P2IPLabelControl;
+        private DevExpress.XtraEditors.PictureEdit AboutPictureEdit;
+        public DevExpress.XtraEditors.TextEdit P1IPTextEdit;
+        public DevExpress.XtraEditors.ComboBoxEdit P1PlayerIndexComboBoxEdit;
+        public DevExpress.XtraEditors.ComboBoxEdit P3PlayerIndexComboBoxEdit;
+        public DevExpress.XtraEditors.TextEdit P3IPTextEdit;
+        public DevExpress.XtraEditors.ComboBoxEdit P2PlayerIndexComboBoxEdit;
+        public DevExpress.XtraEditors.TextEdit P2IPTextEdit;
+        public DevExpress.XtraEditors.SimpleButton P1ConnectionButton;
+        public DevExpress.XtraEditors.SimpleButton P3ConnectionButton;
+        public DevExpress.XtraEditors.SimpleButton P2ConnectionButton;
+        public DevExpress.XtraEditors.GroupControl NetworkGP;
     }
 }
 

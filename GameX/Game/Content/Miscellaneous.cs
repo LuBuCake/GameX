@@ -1,18 +1,16 @@
 ﻿using GameX.Types;
-using System;
-using System.Collections.Generic;
 
 namespace GameX.Game.Content
 {
-    public class Variables
+    public class Miscellaneous
     {
         public static ListItem[] Handness()
         {
             return new ListItem[]
             {
                 new ListItem("Default"),
-                new ListItem("Right-Handed", 0),
-                new ListItem("Left-Handed", 1)
+                new ListItem("R-Handed", 0),
+                new ListItem("L-Handed", 1)
             };
         }
 

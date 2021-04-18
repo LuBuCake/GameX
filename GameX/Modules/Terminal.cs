@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using GameX.Game.Content;
 using GameX.Helpers;
 using System;
 using System.Windows.Forms;
@@ -11,9 +12,9 @@ namespace GameX.Modules
         private static MemoEdit ConsoleOutput { get; set; }
         private static TextEdit ConsoleInput { get; set; }
 
-        public static void LoadApp(App GameXInstance, MemoEdit ConsoleOut, TextEdit ConsoleIn)
+        public static void LoadApp(App GameXRef, MemoEdit ConsoleOut, TextEdit ConsoleIn)
         {
-            Main = GameXInstance;
+            Main = GameXRef;
             ConsoleOutput = ConsoleOut;
             ConsoleInput = ConsoleIn;
         }
@@ -23,6 +24,11 @@ namespace GameX.Modules
             string[] Commands =
             {
                 Environment.NewLine + "App Commands: ",
+                "StartServer : Port - Starts a server for network connections.",
+                "StopServer - Stops and closes the opened server.",
+                "GetPublicIPv4 - Returns your public IPv4, you can use it to connect to other players using GameX.",
+                "GetPrivateIPv4 - Returns your private IPv4, it is only used for server hosting.",
+                "WriteJson chars/items - Writes the default json for each of the collection's objects.",
                 "Reinject - Clears both App and Game edits and performs a reinject in the Game's process.",
                 "Clear - Clears the console output.",
                 "Help - Shows all available commands.",
@@ -122,8 +128,37 @@ namespace GameX.Modules
 
             WriteLine(Command);
 
-            if (Command == "reinject")
-                Main.Process_Exited(null, null);
+            if (Command.Contains("startserver"))
+            {
+                string[] args = Command.Split(':');
+
+                if (!int.TryParse(args[1], out int Port))
+                    WriteLine("Invalid port, please specify one between 0 and 65535, you can choose using the link: https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers");
+                else
+                    Network.StartServer(Utility.Clamp(Port, 0, 65535));
+            }
+            else if (Command == "stopserver")
+                Network.StopServer();
+            else if (Command == "getpublicipv4")
+            {
+                if (Network.HasConnection)
+                    WriteLine($"Your public IPv4 is: {Network.PublicIPv4}");
+                else
+                    WriteLine("No connection was found when initialized, check your internet connection and restart GameX.");
+            }
+            else if (Command == "getprivateipv4")
+            {
+                if (Network.HasConnection)
+                    WriteLine($"Your private IPv4 is: {Network.PrivateIPv4}");
+                else
+                    WriteLine("No connection was found when initialized, check your internet connection and restart GameX.");
+            }
+            else if (Command == "writejsonchars")
+                Characters.WriteDefaultChars();
+            else if (Command == "writejsonitems")
+                WriteLine("Not implemented yet.");
+            else if (Command == "reinject")
+                Main.Target_Exited(null, null);
             else if (Command == "clear")
                 Clear();
             else if (Command == "help")

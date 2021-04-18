@@ -1,0 +1,12 @@
+{
+  "Name": "Excella",
+  "Value": 5,
+  "Costumes": [
+    {
+      "Name": "Tricell",
+      "Portrait": "GameX/Resources/Images/Characters/e0.png",
+      "File": "uPl05ExcellaNormal",
+      "Value": 0
+    }
+  ]
+}

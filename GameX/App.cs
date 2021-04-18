@@ -12,13 +12,14 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GameX
 {
     public partial class App : XtraForm
     {
-        /*App Init*/
+        /* App Init */
 
         private Messager Peaker { get; set; }
         private Stopwatch FrameElapser { get; set; }
@@ -28,14 +29,58 @@ namespace GameX
         public double UpdateMode { get; set; }
         public double FramesPerSecond { get; private set; }
 
+        public Memory Kernel { get; private set; }
+        public bool Verified { get; private set; }
+        public bool Initialized { get; private set; }
+
         public App()
         {
             InitializeComponent();
-            Keyboard.CreateHook(GameX_Keyboard);
+            Application_PreControlLoad();
+        }
+
+        private void App_Load(object sender, EventArgs e)
+        {
+            LoadControls();
+            Application_PostControlLoad();
+        }
+
+        private void Application_Idle(object sender, EventArgs e)
+        {
+            while (Peaker.IsApplicationIdle())
+            {
+                Application_Think();
+            }
+        }
+
+        private void Application_ApplicationExit(object sender, EventArgs e)
+        {
+            if (Target_Process != null)
+            {
+                if (Initialized)
+                    GameX_End();
+
+                Target_Process.Exited += null;
+                Target_Process.EnableRaisingEvents = false;
+            }
+
+            Network.StopServer();
+
+            Kernel?.Dispose();
+            Target_Process?.Dispose();
+            Keyboard.RemoveHook();
+            Application.Idle += null;
+        }
+
+        private void Application_PreControlLoad()
+        {
+            Target_Setup();
 
             Peaker = new Messager();
             FrameElapser = new Stopwatch();
             CurTimeElapser = new Stopwatch();
+
+            Keyboard.CreateHook(GameX_Keyboard);
 
             Application.Idle += Application_Idle;
             Application.ApplicationExit += Application_ApplicationExit;
@@ -44,133 +89,12 @@ namespace GameX
             ConsoleInputTextEdit.Validating += Terminal.ValidateInput;
         }
 
-        private void App_Load(object sender, EventArgs e)
+        private void Application_PostControlLoad()
         {
-            LoadControls();
+            Task.Run(() => Network.Start(this));
         }
 
-        private void Application_Idle(object sender, EventArgs e)
-        {
-            while (Peaker.IsApplicationIdle())
-            {
-                Think();
-            }
-        }
-
-        private void Application_ApplicationExit(object sender, EventArgs e)
-        {
-            if (TargetProcess != null)
-            {
-                if (Initialized)
-                    GameX_End();
-
-                TargetProcess.Exited += null;
-                TargetProcess.EnableRaisingEvents = false;
-            }
-
-            Kernel?.Dispose();
-            TargetProcess?.Dispose();
-            Keyboard.RemoveHook();
-            Application.Idle += null;
-        }
-
-        /*App Handlers*/
-
-        private Process TargetProcess { get; set; }
-        public Memory Kernel { get; private set; }
-        public bool Verified { get; private set; }
-        public bool Initialized { get; private set; }
-
-        private string GameX_Target = "re5dx9";
-        private string GameX_TargetVersion = "1.0.0.129";
-        private string[] GameX_TargetModules = { "steam_api.dll", "maluc.dll" };
-
-        private bool ValidateTarget(Process process)
-        {
-            try
-            {
-                if (GameX_TargetVersion != "" && (process.MainModule == null || !process.MainModule.FileVersionInfo.ToString().Contains(GameX_TargetVersion)))
-                    return false;
-
-                if (GameX_TargetModules.Length > 0)
-                {
-                    if (GameX_TargetModules.Any(Module => !Processes.ProcessHasModule(process, Module)))
-                    {
-                        return false;
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-
-            return true;
-        }
-
-        private bool HandleProcess()
-        {
-            if (TargetProcess == null)
-            {
-                TargetProcess = Processes.GetProcessByName(GameX_Target);
-                Verified = false;
-                Initialized = false;
-                Text = "GameX - Resident Evil 5 / Biohazard 5 - Waiting game";
-
-                if (TargetProcess != null)
-                {
-                    Terminal.WriteLine("Game found, validating.");
-                    Text = "GameX - Resident Evil 5 / Biohazard 5 - Validanting";
-                }
-            }
-            else
-            {
-                if (Verified || !TargetProcess.WaitForInputIdle())
-                    return Verified;
-
-                if (ValidateTarget(TargetProcess))
-                {
-                    Terminal.WriteLine("Game validated.");
-
-                    TargetProcess.EnableRaisingEvents = true;
-                    TargetProcess.Exited += Process_Exited;
-                    Kernel = new Memory(TargetProcess);
-                    CheckDebugModeControls(Kernel.DebugMode);
-                    GameX_Start();
-                    Verified = true;
-                    Initialized = true;
-                    Text = "GameX - Resident Evil 5 / Biohazard 5 - " + (Kernel.DebugMode ? "Running in Admin Mode" : "Running in User Mode");
-                }
-                else
-                {
-                    Terminal.WriteLine("Failed validating, unsupported version.");
-                    Terminal.WriteLine("Follow the guide on https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
-
-                    TargetProcess.EnableRaisingEvents = true;
-                    TargetProcess.Exited += Process_Exited;
-                    Verified = true;
-                    Initialized = false;
-                    Text = "GameX - Resident Evil 5 / Biohazard 5 - Unsupported Version";
-                }
-            }
-
-            return Verified;
-        }
-
-        public void Process_Exited(object sender, EventArgs e)
-        {
-            Kernel?.Dispose();
-            Kernel = null;
-            TargetProcess?.Dispose();
-            TargetProcess = null;
-            Verified = false;
-            Initialized = false;
-
-            Terminal.WriteLine("Runtime cleared successfully.");
-            Terminal.WriteLine("Waiting game.");
-        }
-
-        private void Think()
+        private void Application_Think()
         {
             if (!CurTimeElapser.IsRunning)
                 CurTimeElapser.Start();
@@ -190,16 +114,128 @@ namespace GameX
                 FramesPerSecond = 1.0 / Elapsed.TotalSeconds;
                 FrameTime = 1.0 / FramesPerSecond;
 
-                if (HandleProcess() && Initialized)
+                Task.Run(() => Network.Update());
+
+                if (Target_Handle() && Initialized)
                     GameX_Update();
             }
         }
 
-        /*Loading/Saving & Event Handling*/
+        /* Target Processing */
+
+        private string Target { get; set; }
+        private string Target_Version { get; set; }
+        private Process Target_Process { get; set; }
+        private List<string> Target_Modules { get; set; }
+
+        private void Target_Setup()
+        {
+            Target = "re5dx9.exe";
+            Target_Version = "1.0.0.129";
+            Target_Modules = new List<string>()
+            {
+                "steam_api.dll", "maluc.dll"
+            };
+        }
+
+        private bool Target_Handle()
+        {
+            if (Target_Process == null)
+            {
+                Target_Process = Processes.GetProcessByName(Target);
+                Verified = false;
+                Initialized = false;
+                Text = "GameX - Resident Evil 5 / Biohazard 5 - Waiting game";
+
+                if (Target_Process != null)
+                {
+                    Terminal.WriteLine("Game found, validating.");
+                    Text = "GameX - Resident Evil 5 / Biohazard 5 - Validanting";
+                }
+            }
+            else
+            {
+                if (Verified || !Target_Process.WaitForInputIdle())
+                    return Verified;
+
+                if (Target_Validate())
+                {
+                    Terminal.WriteLine("Game validated.");
+
+                    Target_Process.EnableRaisingEvents = true;
+                    Target_Process.Exited += Target_Exited;
+                    Kernel = new Memory(Target_Process);
+                    CheckDebugModeControls(Kernel.DebugMode);
+                    GameX_Start();
+                    Verified = true;
+                    Initialized = true;
+                    Text = "GameX - Resident Evil 5 / Biohazard 5 - " + (Kernel.DebugMode ? "Running in Admin Mode" : "Running in User Mode");
+                }
+                else
+                {
+                    Terminal.WriteLine("Failed validating, unsupported version.");
+                    Terminal.WriteLine("Follow the guide on https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
+
+                    Target_Process.EnableRaisingEvents = true;
+                    Target_Process.Exited += Target_Exited;
+                    Verified = true;
+                    Initialized = false;
+                    Text = "GameX - Resident Evil 5 / Biohazard 5 - Unsupported Version";
+                }
+            }
+
+            return Verified;
+        }
+
+        private bool Target_Validate()
+        {
+            try
+            {
+                if (Target_Version != "" && (Target_Process.MainModule == null || !Target_Process.MainModule.FileVersionInfo.ToString().Contains(Target_Version)))
+                    return false;
+
+                if (Target_Modules.Count > 0)
+                {
+                    if (Target_Modules.Any(Module => !Processes.ProcessHasModule(Target_Process, Module)))
+                    {
+                        return false;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void Target_Exited(object sender, EventArgs e)
+        {
+            Kernel?.Dispose();
+            Kernel = null;
+            Target_Process?.Dispose();
+            Target_Process = null;
+            Verified = false;
+            Initialized = false;
+
+            ResetHealthBars();
+
+            Terminal.WriteLine("Runtime cleared successfully.");
+        }
+
+        /* Loading/Saving & Event Handling */
 
         private void LoadControls()
         {
             #region Controls
+
+            ComboBoxEdit[] NetworkPlayerIndexes =
+            {
+                P1PlayerIndexComboBoxEdit,
+                P2PlayerIndexComboBoxEdit,
+                P3PlayerIndexComboBoxEdit,
+            };
 
             ComboBoxEdit[] CharacterCombos =
             {
@@ -273,21 +309,20 @@ namespace GameX
                 P4RapidfireButton
             };
 
+            SimpleButton[] Connectbuttons =
+            {
+                P1ConnectionButton,
+                P2ConnectionButton,
+                P3ConnectionButton,
+            };
+
             #endregion
 
             for (int Index = 0; Index < CharacterCombos.Length; Index++)
             {
-                List<Character> AvailableChars = Characters.GetChars();
-                CharacterCombos[Index].Properties.Items.Clear();
-
-                foreach (Character Char in AvailableChars)
-                {
-                    Char.Index = Index;
-                    CharacterCombos[Index].Properties.Items.Add(Char);
-                }
-
-                WeaponMode[Index].Properties.Items.AddRange(Variables.WeaponMode());
-                Handness[Index].Properties.Items.AddRange(Variables.Handness());
+                CharacterCombos[Index].Properties.Items.AddRange(Characters.GetCharactersFromFolder());
+                WeaponMode[Index].Properties.Items.AddRange(Miscellaneous.WeaponMode());
+                Handness[Index].Properties.Items.AddRange(Miscellaneous.Handness());
 
                 CharCosFreezes[Index].CheckedChanged += CharCosFreeze_CheckedChanged;
                 InfiniteHP[Index].CheckedChanged += OnOff_CheckedChanged;
@@ -303,6 +338,14 @@ namespace GameX
                 CharacterCombos[Index].SelectedIndex = 0;
                 WeaponMode[Index].SelectedIndex = 0;
                 Handness[Index].SelectedIndex = 0;
+
+                if (Index < 3)
+                {
+                    NetworkPlayerIndexes[Index].Properties.Items.AddRange(Indexes.Available());
+                    NetworkPlayerIndexes[Index].SelectedIndex = 0;
+
+                    Connectbuttons[Index].Click += Network.Connect_Click;
+                }
             }
 
             UpdateModeComboBoxEdit.Properties.Items.AddRange(Rates.Available());
@@ -318,15 +361,41 @@ namespace GameX
             SaveSettingsButton.Click += Configuration_Save;
             LoadSettingsButton.Click += Configuration_Load;
 
+            ResetHealthBars();
+
+            Image Logo = Utility.GetImageFromFile(@"GameX/Resources/Images/App/logo.png");
+
+            if (Logo != null)
+                AboutPictureEdit.Image = Logo;
+
             Terminal.WriteLine("App initialized.");
             Configuration_Load(null, null);
-            Terminal.WriteLine("Waiting game.");
+        }
+
+        private void ResetHealthBars()
+        {
+            ProgressBarControl[] HealthBars =
+            {
+                P1HealthBar,
+                P2HealthBar,
+                P3HealthBar,
+                P4HealthBar
+            };
+
+            foreach (ProgressBarControl Bar in HealthBars)
+            {
+                Bar.Properties.Maximum = 1;
+                Bar.Properties.Minimum = 0;
+                Bar.EditValue = 1;
+                Bar.BackColor = Color.FromArgb(40, 40, 40);
+                Bar.Properties.StartColor = Color.FromArgb(240, 240, 240);
+                Bar.Properties.EndColor = Color.FromArgb(240, 240, 240);
+            }
         }
 
         private void Configuration_Save(object sender, EventArgs e)
         {
             Properties.Settings.Default.UpdateRate = UpdateModeComboBoxEdit.SelectedIndex;
-            Properties.Settings.Default.NickName = NickNameTextEdit.Text;
             Properties.Settings.Default.Skin = UserLookAndFeel.Default.ActiveSkinName;
             Properties.Settings.Default.Pallete = UserLookAndFeel.Default.ActiveSvgPaletteName;
             Properties.Settings.Default.Save();
@@ -337,7 +406,6 @@ namespace GameX
         private void Configuration_Load(object sender, EventArgs e)
         {
             UpdateModeComboBoxEdit.SelectedIndex = Properties.Settings.Default.UpdateRate;
-            NickNameTextEdit.Text = Properties.Settings.Default.NickName;
 
             foreach (ListItem Skin in SkinComboBoxEdit.Properties.Items)
             {
@@ -425,15 +493,16 @@ namespace GameX
             ComboBoxEdit CBE = sender as ComboBoxEdit;
             Character CBEChar = CBE.SelectedItem as Character;
 
-            CostumeCombos[CBEChar.Index].Properties.Items.Clear();
+            int Index = int.Parse(CBE.Name[1].ToString()) - 1;
+
+            CostumeCombos[Index].Properties.Items.Clear();
 
             foreach (Costume Cos in CBEChar.Costumes)
             {
-                Cos.Index = CBEChar.Index;
-                CostumeCombos[CBEChar.Index].Properties.Items.Add(Cos);
+                CostumeCombos[Index].Properties.Items.Add(Cos);
             }
 
-            CostumeCombos[CBEChar.Index].SelectedIndex = 0;
+            CostumeCombos[Index].SelectedIndex = 0;
         }
 
         private void CosComboBox_IndexChanged(object sender, EventArgs e)
@@ -446,29 +515,21 @@ namespace GameX
                 P4CharPictureBox
             };
 
-            ComboBoxEdit[] CharacterCombos =
-            {
-                P1CharComboBox,
-                P2CharComboBox,
-                P3CharComboBox,
-                P4CharComboBox
-            };
-
             ComboBoxEdit CBE = sender as ComboBoxEdit;
             Costume CBECos = CBE.SelectedItem as Costume;
 
-            Image Portrait = Characters.GetCharacterPortrait(CharacterCombos[CBECos.Index].Text + " " + CBE.Text);
+            int Index = int.Parse(CBE.Name[1].ToString()) - 1;
 
-            if (Portrait == null)
+            Image Portrait = Utility.GetImageFromFile(CBECos.Portrait);
+
+            if (Portrait != null)
+                CharPicBoxes[Index].Image = Portrait;
+
+            if (!Initialized)
                 return;
 
-            CharPicBoxes[CBECos.Index].Image = Portrait;
-
-            if (Initialized)
-            {
-                Character_ApplyCharacters(CBECos.Index);
-                Character_DetourValueUpdate();
-            }
+            Character_ApplyCharacters(Index);
+            Character_DetourValueUpdate();
         }
 
         private void WeaponMode_IndexChanged(object sender, EventArgs e)
@@ -522,7 +583,7 @@ namespace GameX
             }
         }
 
-        /*GameX Calls*/
+        /* GameX Calls */
 
         public Master Game { get; private set; }
 
@@ -574,7 +635,7 @@ namespace GameX
 
         }
 
-        /*Mods*/
+        /* Mods */
 
         #region Character
 
@@ -985,7 +1046,7 @@ namespace GameX
 
         #endregion
 
-        /*General Read-Write*/
+        /* General Read-Write */
 
         #region Character Panel
 
@@ -1088,10 +1149,13 @@ namespace GameX
                 }
 
                 bool PlayerPresent = Game.Players[i].IsActive();
+                double PlayerHealthPercent = PlayerPresent ? (double)Game.Players[i].GetHealth() / Game.Players[i].GetMaxHealth() : 1.0;
 
                 // Health Bar //
                 HealthBars[i].Properties.Maximum = PlayerPresent ? Game.Players[i].GetMaxHealth() : 1;
-                HealthBars[i].EditValue = PlayerPresent ? Game.Players[i].GetHealth() : 0;
+                HealthBars[i].EditValue = PlayerPresent ? Game.Players[i].GetHealth() : 1;
+                HealthBars[i].Properties.StartColor = PlayerPresent ? Color.FromArgb((int)(255.0 - (155.0 * PlayerHealthPercent)), (int)(0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(240, 240, 240);
+                HealthBars[i].Properties.EndColor = PlayerPresent ? Color.FromArgb((int)(255.0 - (155.0 * PlayerHealthPercent)), (int)(0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(240, 240, 240);
 
                 // Player Name //
                 PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (Game.InGame() ? ((i == Game.LocalPlayer()) ? Game.LocalPlayerNick() : (PlayerPresent ? (Game.Players[i].IsAI() ? "CPU AI" : "Connected") : "Disconnected")) : "Disconnected");

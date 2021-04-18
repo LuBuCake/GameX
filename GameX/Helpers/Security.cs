@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace GameX.Helpers
 {
-    public class Cryptography
+    public class Security
     {
         #region ### MD5 Hash ###
         /// <summary>

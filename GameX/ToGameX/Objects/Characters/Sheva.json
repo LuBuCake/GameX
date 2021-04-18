@@ -1,0 +1,60 @@
+{
+  "Name": "Sheva",
+  "Value": 1,
+  "Costumes": [
+    {
+      "Name": "BSAA",
+      "Portrait": "GameX/Resources/Images/Characters/s0.png",
+      "File": "uPl01ShebaNormal",
+      "Value": 0
+    },
+    {
+      "Name": "Melee Vest",
+      "Portrait": "GameX/Resources/Images/Characters/s0.png",
+      "File": "uPl01ShebaArmorA",
+      "Value": 1
+    },
+    {
+      "Name": "Bulletproof Vest",
+      "Portrait": "GameX/Resources/Images/Characters/s0.png",
+      "File": "uPl01ShebaArmorB",
+      "Value": 2
+    },
+    {
+      "Name": "Full Armor",
+      "Portrait": "GameX/Resources/Images/Characters/s0.png",
+      "File": "uPl01ShebaArmorF",
+      "Value": 3
+    },
+    {
+      "Name": "Plain",
+      "Portrait": "GameX/Resources/Images/Characters/s0.png",
+      "File": "uPl01ShebaPlain",
+      "Value": 4
+    },
+    {
+      "Name": "Amazon",
+      "Portrait": "GameX/Resources/Images/Characters/s5.png",
+      "File": "uPl01ShebaCos1",
+      "Value": 5
+    },
+    {
+      "Name": "Clubbin",
+      "Portrait": "GameX/Resources/Images/Characters/s6.png",
+      "File": "uPl01ShebaCos2",
+      "Value": 6
+    },
+    {
+      "Name": "Business",
+      "Portrait": "GameX/Resources/Images/Characters/s7.png",
+      "File": "uPl01ShebaCos3",
+      "Value": 7
+    },
+    {
+      "Name": "Fairy Tail",
+      "Portrait": "GameX/Resources/Images/Characters/s8.png",
+      "File": "uPl01ShebaCos4",
+      "Value": 8
+    }
+  ]
+}

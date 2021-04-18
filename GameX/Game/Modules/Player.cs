@@ -64,7 +64,7 @@ namespace GameX.Game.Modules
 
         public bool IsAI()
         {
-            return Main.Kernel.ReadInt32("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2DA8) != 0;
+            return Main.Kernel.ReadInt32("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2DA8) == 1;
         }
 
         public int GetDefaultHandness()

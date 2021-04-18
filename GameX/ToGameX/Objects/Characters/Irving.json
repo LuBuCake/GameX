@@ -1,0 +1,12 @@
+{
+  "Name": "Irving",
+  "Value": 134,
+  "Costumes": [
+    {
+      "Name": "Story Mode",
+      "Portrait": "GameX/Resources/Images/Characters/i0.png",
+      "File": "uPl86Irving",
+      "Value": 0
+    }
+  ]
+}

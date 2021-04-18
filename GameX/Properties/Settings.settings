@@ -5,9 +5,6 @@
     <Setting Name="UpdateRate" Description="Update Mode for the Engine" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1</Value>
     </Setting>
-    <Setting Name="NickName" Description="The networked NickName for the user" Type="System.String" Scope="User">
-      <Value Profile="(Default)">NickName</Value>
-    </Setting>
     <Setting Name="Skin" Description="Sets the skin scheme for the application." Type="System.String" Scope="User">
       <Value Profile="(Default)">The Bezier</Value>
     </Setting>

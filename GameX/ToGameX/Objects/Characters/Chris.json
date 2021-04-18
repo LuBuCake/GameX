@@ -1,0 +1,66 @@
+{
+  "Name": "Chris",
+  "Value": 0,
+  "Costumes": [
+    {
+      "Name": "BSAA",
+      "Portrait": "GameX/Resources/Images/Characters/c0.png",
+      "File": "uPl00ChrisNormal",
+      "Value": 0
+    },
+    {
+      "Name": "Melee Vest",
+      "Portrait": "GameX/Resources/Images/Characters/c0.png",
+      "File": "uPl00ChrisArmorA",
+      "Value": 1
+    },
+    {
+      "Name": "Bulletproof Vest",
+      "Portrait": "GameX/Resources/Images/Characters/c0.png",
+      "File": "uPl00ChrisArmorB",
+      "Value": 2
+    },
+    {
+      "Name": "Full Armor",
+      "Portrait": "GameX/Resources/Images/Characters/c0.png",
+      "File": "uPl00ChrisArmorF",
+      "Value": 3
+    },
+    {
+      "Name": "Plain",
+      "Portrait": "GameX/Resources/Images/Characters/c0.png",
+      "File": "uPl00ChrisPlain",
+      "Value": 4
+    },
+    {
+      "Name": "Safari",
+      "Portrait": "GameX/Resources/Images/Characters/c5.png",
+      "File": "uPl00ChrisCos1",
+      "Value": 5
+    },
+    {
+      "Name": "STARS",
+      "Portrait": "GameX/Resources/Images/Characters/c6.png",
+      "File": "uPl00ChrisCos2",
+      "Value": 6
+    },
+    {
+      "Name": "Warrior",
+      "Portrait": "GameX/Resources/Images/Characters/c7.png",
+      "File": "uPl00ChrisCos3",
+      "Value": 7
+    },
+    {
+      "Name": "Lost in Nightmares",
+      "Portrait": "GameX/Resources/Images/Characters/c0.png",
+      "File": "uPl00ChrisEp1",
+      "Value": 8
+    },
+    {
+      "Name": "Heavy Metal",
+      "Portrait": "GameX/Resources/Images/Characters/c9.png",
+      "File": "uPl00ChrisCos4",
+      "Value": 9
+    }
+  ]
+}
