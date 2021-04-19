@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using GameX.Base.Types;
 
 namespace GameX.Base.Modules
 {
@@ -14,22 +15,52 @@ namespace GameX.Base.Modules
         private static App Main { get; set; }
         private static MemoEdit ConsoleOutput { get; set; }
         private static TextEdit ConsoleInput { get; set; }
+        private static string[] ConsoleTextInterfaces { get; set; }
+        public static int ActiveInterface { get; private set; }
+
+        public enum ConsoleInterface
+        {
+            Console = 0,
+            Server = 1,
+            Client = 2
+        }
 
         public static void LoadApp(App GameXRef, MemoEdit ConsoleOut, TextEdit ConsoleIn)
         {
             Main = GameXRef;
             ConsoleOutput = ConsoleOut;
             ConsoleInput = ConsoleIn;
+
+            ConsoleTextInterfaces = new string[3];
+            ActiveInterface = 0;
+        }
+
+        public static void Interface_IndexChanged(object sender, EventArgs e)
+        {
+            ComboBoxEdit CBE = sender as ComboBoxEdit;
+            ListItem Interface = CBE.SelectedItem as ListItem;
+
+            ActiveInterface = Interface.Value;
+            ConsoleOutput.Text = ConsoleTextInterfaces[ActiveInterface];
+        }
+
+        public static void ClearConsole_Click(object sender, EventArgs e)
+        {
+            ConsoleTextInterfaces[ActiveInterface] = "";
+            ConsoleOutput.Text = ConsoleTextInterfaces[ActiveInterface];
         }
 
         private static void ShowCommands()
         {
             string[] Commands =
             {
+                Environment.NewLine + "Commands must be written as follows, no spaces except for arguments that need spacing like messages.",
+                "For arguments you must separe the command and each argument with '::' like C++.",
+                "Example: SetHealth::P1::750 = SetHealth is the command, P1 the first argument and finally 750, the third argument.",
+
                 Environment.NewLine + "App commands:",
-                "WriteJson chars/items - Writes the default json for each of the collection's objects.",
+                "WriteJson::Chars/Items - Writes the default json for each of the collection's objects.",
                 "Reinject - Clears both the app and game edits and performs a reinject in the game's process.",
-                "Clear - Clears the console output.",
                 "Help - Shows all available commands.",
                 "FPS - Shows the current FPS.",
                 "FrameTime - Shows the last frametime.",
@@ -41,21 +72,24 @@ namespace GameX.Base.Modules
                 "GetPrivateIPv4 - Returns your private IPv4.",
 
                 Environment.NewLine + "Server commands:",
-                "Server Clients - Lists all connected clients.",
-                "Server Stats - Shows the server's statistics.",
+                "ServerClients - Lists all connected clients.",
+                "ServerStats - Shows the server's statistics.",
+
+                Environment.NewLine + "Client commands:",
+                "ClientStats - Shows the client's statistics.",
 
                 Environment.NewLine + "Game commands:",
-                "GetHealth p1/p2/p3/p4 - Gets the current health for the respective player.",
-                "SetHealth p1/p2/p3/p4 Value - Sets the health for the respective player, this needs to be set between 0 and 1000."
+                "GetHealth::P1/P2/P3/P4 - Gets the current health for the respective player.",
+                "SetHealth::P1/P2/P3/P4::Ammount - Sets the health for the respective player, this needs to be set between 0 and 1000."
             };
 
             foreach (string Command in Commands)
                 WriteLine(Command);
         }
 
-        private static bool ProcessGameCommand(string Command)
+        private static bool ProcessGameCommand(string[] Command)
         {
-            if (Command.Contains("gethealth") && Command.Length == 11)
+            if (Command[0] == "gethealth" && Command.Length == 2)
             {
                 if (!Main.Initialized || !Biohazard.ModuleStarted)
                 {
@@ -63,7 +97,7 @@ namespace GameX.Base.Modules
                     return true;
                 }
 
-                if (Command[9] == 'p' && int.TryParse(Command[10].ToString(), out int Player))
+                if (int.TryParse(Command[1][1].ToString(), out int Player))
                 {
                     if (!(Player >= 1 && Player <= 4))
                     {
@@ -78,13 +112,12 @@ namespace GameX.Base.Modules
                     }
 
                     WriteLine($"{Biohazard.Players[Player - 1].GetHealth()}");
+                    return true;
                 }
-                else
-                    return false;
 
-                return true;
+                return false;
             }
-            else if (Command.Contains("sethealth") && Command.Length >= 12 && Command.Length <= 15)
+            else if (Command[0] == "Sethealth" && Command.Length == 3)
             {
                 if (!Main.Initialized || !Biohazard.ModuleStarted)
                 {
@@ -92,9 +125,9 @@ namespace GameX.Base.Modules
                     return true;
                 }
 
-                if (Command[9] == 'p' && int.TryParse(Command[10].ToString(), out int Player))
+                if (int.TryParse(Command[1][1].ToString(), out int Player))
                 {
-                    if (int.TryParse(Command.Substring(11, Command.Length - 11), out int HP))
+                    if (int.TryParse(Command[2], out int HP))
                     {
                         if (!(Player >= 1 && Player <= 4))
                         {
@@ -114,24 +147,23 @@ namespace GameX.Base.Modules
                             return true;
                         }
 
-                        Biohazard.Players[Player - 1].SetHealth((short)Utility.Clamp(HP, 0, 1000));
-                        WriteLine($"Player {Player} health set to {HP}.");
-                    }
-                    else
-                        return false;
-                }
-                else
-                    return false;
+                        short TargetHP = (short)Utility.Clamp(HP, 0, Biohazard.Players[Player - 1].GetMaxHealth());
+                        Biohazard.Players[Player - 1].SetHealth(TargetHP);
+                        WriteLine($"Player {Player} health set to {TargetHP}.");
 
-                return true;
+                        return true;
+                    }
+                }
+
+                return false;
             }
 
             return false;
         }
 
-        private static bool ProcessNetworkCommand(string Command)
+        private static bool ProcessNetworkCommand(string[] Command)
         {
-            if (Command == "getpublicipv4")
+            if (Command[0] == "getpublicipv4")
             {
                 if (Network.HasConnection)
                     WriteLine($"Your public IPv4 is: {Network.PublicIPv4}");
@@ -140,7 +172,7 @@ namespace GameX.Base.Modules
 
                 return true;
             }
-            else if (Command == "getprivateipv4")
+            else if (Command[0] == "getprivateipv4")
             {
                 if (Network.HasConnection)
                     WriteLine($"Your private IPv4 is: {Network.PrivateIPv4}");
@@ -153,9 +185,9 @@ namespace GameX.Base.Modules
             return false;
         }
 
-        private static bool ProcessServerCommand(string Command)
+        private static bool ProcessServerCommand(string[] Command)
         {
-            if (Command == "serverclients")
+            if (Command[0] == "serverclients")
             {
                 if (Network.Server == null)
                 {
@@ -181,7 +213,7 @@ namespace GameX.Base.Modules
 
                 return true;
             }
-            else if (Command == "serverstats")
+            else if (Command[0] == "serverstats")
             {
                 if (Network.Server == null)
                 {
@@ -196,32 +228,64 @@ namespace GameX.Base.Modules
             return false;
         }
 
-        private static void ProcessCommand(string Command)
+        private static bool ProcessClientCommand(string[] Command)
         {
-            WriteLine(Command);
+            if (Command[0] == "clientstats")
+            {
+                if (Network.Server == null)
+                {
+                    WriteLine("You are not connected to any server, connect to one first.");
+                    return true;
+                }
 
-            Command = Command.ToLower();
-            Command = Utility.RemoveWhiteSpace(Command);
+                WriteLine(Network.BuddyServer.Connector.Statistics.ToString());
+                return true;
+            }
 
-            if (Command == "writejsonchars")
+            return false;
+        }
+
+        private static void ProcessCommand(string RawCommand)
+        {
+            WriteLine(RawCommand);
+
+            string[] Command;
+
+            if (RawCommand.Contains("::"))
+            {
+                string[] TempSplit = RawCommand.Split(new string[] { "::" }, StringSplitOptions.None);
+                Command = new string[TempSplit.Length];
+
+                for (int i = 0; i < TempSplit.Length; i++)
+                {
+                    Command[i] = TempSplit[i];
+                }
+
+                Command[0] = Utility.RemoveWhiteSpace(Command[0].ToLower());
+            }
+            else
+            {
+                Command = new string[1];
+                Command[0] = Utility.RemoveWhiteSpace(RawCommand.ToLower());
+            }
+
+            if (Command[0] == "writejson" && Utility.RemoveWhiteSpace(Command[1].ToLower()) == "chars")
                 Characters.WriteDefaultChars();
-            else if (Command == "writejsonitems")
+            else if (Command[0] == "writejson" && Utility.RemoveWhiteSpace(Command[1].ToLower()) == "items")
                 WriteLine("Not implemented yet.");
-            else if (Command == "reinject")
+            else if (Command[0] == "reinject")
                 Main.Target_Exited(null, null);
-            else if (Command == "clear")
-                Clear();
-            else if (Command == "help")
+            else if (Command[0] == "help")
                 ShowCommands();
-            else if (Command == "fps")
+            else if (Command[0] == "fps")
                 WriteLine(Main.FramesPerSecond.ToString().Substring(0, 5));
-            else if (Command == "frametime")
+            else if (Command[0] == "frametime")
                 WriteLine(Main.FrameTime.ToString().Substring(0, 5));
-            else if (Command == "curtime")
+            else if (Command[0] == "curtime")
                 WriteLine(((int)Main.CurTime).ToString());
-            else if (Command == "exit")
+            else if (Command[0] == "exit")
                 Application.Exit();
-            else if (!ProcessGameCommand(Command) && !ProcessNetworkCommand(Command) && !ProcessServerCommand(Command))
+            else if (!ProcessGameCommand(Command) && !ProcessNetworkCommand(Command) && !ProcessServerCommand(Command) && !ProcessClientCommand(Command))
                 WriteLine("Unknown or incorrect use of command. Type Help to see all available commands and their syntax.");
         }
 
@@ -230,9 +294,34 @@ namespace GameX.Base.Modules
             TextEdit TE = sender as TextEdit;
 
             if (TE.Text != "")
-                ProcessCommand(TE.Text);
+            {
+                if (ActiveInterface == (int)ConsoleInterface.Console)
+                    ProcessCommand(TE.Text);
+                else
+                {
+                    if (ActiveInterface == (int)ConsoleInterface.Server)
+                        Network.Server_BroadcastMessage("[CHAT]" + $"{Main.PlayerNameTextEdit.Text}: " + TE.Text, "", true);
+                    else
+                    {
+                        Network.Client_SendMessage("[CHAT]" + $"{Main.PlayerNameTextEdit.Text}: " + TE.Text, true);
+                    }
+                }
+            }
 
             TE.Text = "";
+        }
+
+        public static void WriteMessage(string Message, int Interface)
+        {
+            ConsoleInput.Text = "";
+            ConsoleTextInterfaces[Interface] += (ConsoleOutput.Text != "" ? Environment.NewLine : "") + Message;
+            ConsoleOutput.Text = ConsoleTextInterfaces[ActiveInterface];
+
+            if (Interface == ActiveInterface)
+            {
+                ConsoleOutput.SelectionStart = ConsoleOutput.Text.Length;
+                ConsoleOutput.MaskBox.MaskBoxScrollToCaret();
+            }
         }
 
         public static void WriteLine(string Output)
@@ -242,14 +331,10 @@ namespace GameX.Base.Modules
             if (string.IsNullOrWhiteSpace(Output))
                 return;
 
-            ConsoleOutput.Text += (ConsoleOutput.Text != "" ? Environment.NewLine : "") + Output;
+            ConsoleTextInterfaces[(int)ConsoleInterface.Console] += (ConsoleOutput.Text != "" ? Environment.NewLine : "") + Output;
+            ConsoleOutput.Text = ConsoleTextInterfaces[ActiveInterface];
             ConsoleOutput.SelectionStart = ConsoleOutput.Text.Length;
             ConsoleOutput.MaskBox.MaskBoxScrollToCaret();
-        }
-
-        public static void Clear()
-        {
-            ConsoleOutput.Text = "";
         }
     }
 }

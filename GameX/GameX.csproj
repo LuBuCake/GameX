@@ -105,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\Content\Indexes.cs" />
+    <Compile Include="Base\Content\Interfaces.cs" />
     <Compile Include="Base\Content\Rates.cs" />
     <Compile Include="Base\Content\Design.cs" />
     <Compile Include="Game\Content\Miscellaneous.cs" />

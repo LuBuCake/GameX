@@ -94,8 +94,7 @@ namespace GameX
             this.P1HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.TabPageInventory = new DevExpress.XtraTab.XtraTabPage();
             this.TabPageSettings = new DevExpress.XtraTab.XtraTabPage();
-            this.NetworkManagerGP = new DevExpress.XtraEditors.GroupControl();
-            this.NetworkInfoGP = new DevExpress.XtraEditors.GroupControl();
+            this.ServerInfoGP = new DevExpress.XtraEditors.GroupControl();
             this.ServerStatusTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ServerManagerGP = new DevExpress.XtraEditors.GroupControl();
             this.ServerPortTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -104,31 +103,25 @@ namespace GameX
             this.NetworkModuleGP = new DevExpress.XtraEditors.GroupControl();
             this.NetworkManagerButton = new DevExpress.XtraEditors.CheckButton();
             this.NetworkConnectionsGP = new DevExpress.XtraEditors.GroupControl();
-            this.NetworkClientsGP = new DevExpress.XtraEditors.GroupControl();
+            this.BuddyClientsGP = new DevExpress.XtraEditors.GroupControl();
             this.P1ClientGP = new DevExpress.XtraEditors.GroupControl();
+            this.P1DropSimpleButton = new DevExpress.XtraEditors.SimpleButton();
+            this.P1ClientLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.P1PlayerIndexComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P2ClientGP = new DevExpress.XtraEditors.GroupControl();
+            this.P2DropSimpleButton = new DevExpress.XtraEditors.SimpleButton();
+            this.P2ClientLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.P2PlayerIndexComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P3ClientGP = new DevExpress.XtraEditors.GroupControl();
+            this.P3DropSimpleButton = new DevExpress.XtraEditors.SimpleButton();
+            this.P3ClientLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.P3PlayerIndexComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.P3NetworkGP = new DevExpress.XtraEditors.GroupControl();
-            this.P3PortTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.P3PortLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.P3ConnectionButton = new DevExpress.XtraEditors.SimpleButton();
-            this.P3IPLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.P3IPTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.P2NetworkGP = new DevExpress.XtraEditors.GroupControl();
-            this.P2PortTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.P2PortLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.P2ConnectionButton = new DevExpress.XtraEditors.SimpleButton();
-            this.P2IPLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.P2IPTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.P1NetworkGP = new DevExpress.XtraEditors.GroupControl();
-            this.P1PortTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.P1PortLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.P1ConnectionButton = new DevExpress.XtraEditors.SimpleButton();
-            this.P1IPLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.P1IPTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.BuddyServerGP = new DevExpress.XtraEditors.GroupControl();
+            this.BuddyServerPortTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.BuddyServerPortLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.BuddyServerConnectionButton = new DevExpress.XtraEditors.SimpleButton();
+            this.BuddyServerIPLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.BuddyServerIPTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.TabPageSettingsGPApp = new DevExpress.XtraEditors.GroupControl();
             this.AboutPictureEdit = new DevExpress.XtraEditors.PictureEdit();
             this.AppSettingsGP = new DevExpress.XtraEditors.GroupControl();
@@ -140,18 +133,15 @@ namespace GameX
             this.SkinLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.SkinComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.LoadSaveGP = new DevExpress.XtraEditors.GroupControl();
+            this.PlayerNameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.LoadSettingsButton = new DevExpress.XtraEditors.SimpleButton();
             this.SaveSettingsButton = new DevExpress.XtraEditors.SimpleButton();
             this.TabPageConsole = new DevExpress.XtraTab.XtraTabPage();
             this.ConsoleGP = new DevExpress.XtraEditors.GroupControl();
             this.ConsoleOutputMemoEdit = new DevExpress.XtraEditors.MemoEdit();
+            this.ClearConsoleSimpleButton = new DevExpress.XtraEditors.SimpleButton();
+            this.ConsoleModeComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.ConsoleInputTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.P1ClientLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.P2ClientLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.P3ClientLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.P1DropSimpleButton = new DevExpress.XtraEditors.SimpleButton();
-            this.P2DropSimpleButton = new DevExpress.XtraEditors.SimpleButton();
-            this.P3DropSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -212,10 +202,8 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.P1HandnessComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1HealthBar.Properties)).BeginInit();
             this.TabPageSettings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NetworkManagerGP)).BeginInit();
-            this.NetworkManagerGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NetworkInfoGP)).BeginInit();
-            this.NetworkInfoGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ServerInfoGP)).BeginInit();
+            this.ServerInfoGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ServerStatusTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServerManagerGP)).BeginInit();
             this.ServerManagerGP.SuspendLayout();
@@ -224,8 +212,8 @@ namespace GameX
             this.NetworkModuleGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NetworkConnectionsGP)).BeginInit();
             this.NetworkConnectionsGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NetworkClientsGP)).BeginInit();
-            this.NetworkClientsGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BuddyClientsGP)).BeginInit();
+            this.BuddyClientsGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.P1ClientGP)).BeginInit();
             this.P1ClientGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.P1PlayerIndexComboBoxEdit.Properties)).BeginInit();
@@ -235,18 +223,10 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.P3ClientGP)).BeginInit();
             this.P3ClientGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.P3PlayerIndexComboBoxEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P3NetworkGP)).BeginInit();
-            this.P3NetworkGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P3PortTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P3IPTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P2NetworkGP)).BeginInit();
-            this.P2NetworkGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P2PortTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P2IPTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P1NetworkGP)).BeginInit();
-            this.P1NetworkGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P1PortTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P1IPTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuddyServerGP)).BeginInit();
+            this.BuddyServerGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BuddyServerPortTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuddyServerIPTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageSettingsGPApp)).BeginInit();
             this.TabPageSettingsGPApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AboutPictureEdit.Properties)).BeginInit();
@@ -259,10 +239,12 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.SkinComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoadSaveGP)).BeginInit();
             this.LoadSaveGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PlayerNameTextEdit.Properties)).BeginInit();
             this.TabPageConsole.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleGP)).BeginInit();
             this.ConsoleGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsoleModeComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -288,9 +270,10 @@ namespace GameX
             this.P1FreezeCharCosButton.TabIndex = 4;
             this.P1FreezeCharCosButton.TabStop = false;
             this.P1FreezeCharCosButton.Text = "Freeze";
-            this.P1FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
+            this.P1FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s character and costume values instead of default " +
+    "ones.";
             this.P1FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P1FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
+            this.P1FreezeCharCosButton.ToolTipTitle = "Freeze character and costume";
             // 
             // P1CharComboBox
             // 
@@ -432,7 +415,7 @@ namespace GameX
             this.P4InfiniteAmmoButton.TabIndex = 0;
             this.P4InfiniteAmmoButton.TabStop = false;
             this.P4InfiniteAmmoButton.Text = "OFF";
-            this.P4InfiniteAmmoButton.ToolTip = "Enables the infinite ammoflag for every item in the real-time inventory.";
+            this.P4InfiniteAmmoButton.ToolTip = "Enables the infinite ammo flag for every item in the real-time inventory.";
             this.P4InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P4InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
             // 
@@ -484,9 +467,10 @@ namespace GameX
             this.P4FreezeCharCosButton.TabIndex = 9;
             this.P4FreezeCharCosButton.TabStop = false;
             this.P4FreezeCharCosButton.Text = "Freeze";
-            this.P4FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
+            this.P4FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s character and costume values instead of default " +
+    "ones.";
             this.P4FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P4FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
+            this.P4FreezeCharCosButton.ToolTipTitle = "Freeze character and costume";
             // 
             // P4HealthBar
             // 
@@ -637,7 +621,7 @@ namespace GameX
             this.P3InfiniteAmmoButton.TabIndex = 0;
             this.P3InfiniteAmmoButton.TabStop = false;
             this.P3InfiniteAmmoButton.Text = "OFF";
-            this.P3InfiniteAmmoButton.ToolTip = "Enables the infinite ammoflag for every item in the real-time inventory.";
+            this.P3InfiniteAmmoButton.ToolTip = "Enables the infinite ammo flag for every item in the real-time inventory.";
             this.P3InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P3InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
             // 
@@ -689,9 +673,10 @@ namespace GameX
             this.P3FreezeCharCosButton.TabIndex = 9;
             this.P3FreezeCharCosButton.TabStop = false;
             this.P3FreezeCharCosButton.Text = "Freeze";
-            this.P3FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
+            this.P3FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s character and costume values instead of default " +
+    "ones.";
             this.P3FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
+            this.P3FreezeCharCosButton.ToolTipTitle = "Freeze character and costume";
             // 
             // P3HealthBar
             // 
@@ -842,7 +827,7 @@ namespace GameX
             this.P2InfiniteAmmoButton.TabIndex = 0;
             this.P2InfiniteAmmoButton.TabStop = false;
             this.P2InfiniteAmmoButton.Text = "OFF";
-            this.P2InfiniteAmmoButton.ToolTip = "Enables the infinite ammoflag for every item in the real-time inventory.";
+            this.P2InfiniteAmmoButton.ToolTip = "Enables the infinite ammo flag for every item in the real-time inventory.";
             this.P2InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P2InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
             // 
@@ -894,9 +879,10 @@ namespace GameX
             this.P2FreezeCharCosButton.TabIndex = 8;
             this.P2FreezeCharCosButton.TabStop = false;
             this.P2FreezeCharCosButton.Text = "Freeze";
-            this.P2FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s Char and Cos values instead of default ones.";
+            this.P2FreezeCharCosButton.ToolTip = "Makes the game code load GameX\'s character and costume values instead of default " +
+    "ones.";
             this.P2FreezeCharCosButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2FreezeCharCosButton.ToolTipTitle = "Freeze Char and Cos";
+            this.P2FreezeCharCosButton.ToolTipTitle = "Freeze character and costume";
             // 
             // P2HealthBar
             // 
@@ -1047,7 +1033,7 @@ namespace GameX
             this.P1InfiniteAmmoButton.TabIndex = 0;
             this.P1InfiniteAmmoButton.TabStop = false;
             this.P1InfiniteAmmoButton.Text = "OFF";
-            this.P1InfiniteAmmoButton.ToolTip = "Enables the infinite ammoflag for every item in the real-time inventory.";
+            this.P1InfiniteAmmoButton.ToolTip = "Enables the infinite ammo flag for every item in the real-time inventory.";
             this.P1InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P1InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
             // 
@@ -1118,32 +1104,20 @@ namespace GameX
             // 
             // TabPageSettings
             // 
-            this.TabPageSettings.Controls.Add(this.NetworkManagerGP);
             this.TabPageSettings.Controls.Add(this.NetworkConnectionsGP);
             this.TabPageSettings.Controls.Add(this.TabPageSettingsGPApp);
             this.TabPageSettings.Name = "TabPageSettings";
             this.TabPageSettings.Size = new System.Drawing.Size(638, 438);
             this.TabPageSettings.Text = "Settings";
             // 
-            // NetworkManagerGP
+            // ServerInfoGP
             // 
-            this.NetworkManagerGP.Controls.Add(this.NetworkInfoGP);
-            this.NetworkManagerGP.Controls.Add(this.ServerManagerGP);
-            this.NetworkManagerGP.Controls.Add(this.NetworkModuleGP);
-            this.NetworkManagerGP.Location = new System.Drawing.Point(8, 258);
-            this.NetworkManagerGP.Name = "NetworkManagerGP";
-            this.NetworkManagerGP.Size = new System.Drawing.Size(308, 170);
-            this.NetworkManagerGP.TabIndex = 0;
-            this.NetworkManagerGP.Text = "Network Manager";
-            // 
-            // NetworkInfoGP
-            // 
-            this.NetworkInfoGP.Controls.Add(this.ServerStatusTextEdit);
-            this.NetworkInfoGP.Location = new System.Drawing.Point(5, 105);
-            this.NetworkInfoGP.Name = "NetworkInfoGP";
-            this.NetworkInfoGP.Size = new System.Drawing.Size(298, 60);
-            this.NetworkInfoGP.TabIndex = 0;
-            this.NetworkInfoGP.Text = "Info";
+            this.ServerInfoGP.Controls.Add(this.ServerStatusTextEdit);
+            this.ServerInfoGP.Location = new System.Drawing.Point(5, 352);
+            this.ServerInfoGP.Name = "ServerInfoGP";
+            this.ServerInfoGP.Size = new System.Drawing.Size(298, 60);
+            this.ServerInfoGP.TabIndex = 0;
+            this.ServerInfoGP.Text = "Info";
             // 
             // ServerStatusTextEdit
             // 
@@ -1169,7 +1143,7 @@ namespace GameX
             this.ServerManagerGP.Controls.Add(this.ServerPortTextEdit);
             this.ServerManagerGP.Controls.Add(this.ServerPortLabelControl);
             this.ServerManagerGP.Controls.Add(this.StartServerButton);
-            this.ServerManagerGP.Location = new System.Drawing.Point(131, 30);
+            this.ServerManagerGP.Location = new System.Drawing.Point(131, 277);
             this.ServerManagerGP.Name = "ServerManagerGP";
             this.ServerManagerGP.Size = new System.Drawing.Size(172, 69);
             this.ServerManagerGP.TabIndex = 0;
@@ -1209,14 +1183,14 @@ namespace GameX
             this.StartServerButton.TabIndex = 0;
             this.StartServerButton.TabStop = false;
             this.StartServerButton.Text = "Open";
-            this.StartServerButton.ToolTip = "Starts a server at the specified port.";
+            this.StartServerButton.ToolTip = "Starts a server at the specified port so your friends can join you.";
             this.StartServerButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.StartServerButton.ToolTipTitle = "Start Server";
+            this.StartServerButton.ToolTipTitle = "Server hosting";
             // 
             // NetworkModuleGP
             // 
             this.NetworkModuleGP.Controls.Add(this.NetworkManagerButton);
-            this.NetworkModuleGP.Location = new System.Drawing.Point(5, 30);
+            this.NetworkModuleGP.Location = new System.Drawing.Point(5, 277);
             this.NetworkModuleGP.Name = "NetworkModuleGP";
             this.NetworkModuleGP.Size = new System.Drawing.Size(120, 69);
             this.NetworkModuleGP.TabIndex = 0;
@@ -1238,26 +1212,27 @@ namespace GameX
             // 
             // NetworkConnectionsGP
             // 
-            this.NetworkConnectionsGP.Controls.Add(this.NetworkClientsGP);
-            this.NetworkConnectionsGP.Controls.Add(this.P3NetworkGP);
-            this.NetworkConnectionsGP.Controls.Add(this.P2NetworkGP);
-            this.NetworkConnectionsGP.Controls.Add(this.P1NetworkGP);
+            this.NetworkConnectionsGP.Controls.Add(this.ServerInfoGP);
+            this.NetworkConnectionsGP.Controls.Add(this.BuddyClientsGP);
+            this.NetworkConnectionsGP.Controls.Add(this.ServerManagerGP);
+            this.NetworkConnectionsGP.Controls.Add(this.BuddyServerGP);
+            this.NetworkConnectionsGP.Controls.Add(this.NetworkModuleGP);
             this.NetworkConnectionsGP.Location = new System.Drawing.Point(322, 10);
             this.NetworkConnectionsGP.Name = "NetworkConnectionsGP";
             this.NetworkConnectionsGP.Size = new System.Drawing.Size(308, 418);
             this.NetworkConnectionsGP.TabIndex = 0;
             this.NetworkConnectionsGP.Text = "Network Connections";
             // 
-            // NetworkClientsGP
+            // BuddyClientsGP
             // 
-            this.NetworkClientsGP.Controls.Add(this.P1ClientGP);
-            this.NetworkClientsGP.Controls.Add(this.P2ClientGP);
-            this.NetworkClientsGP.Controls.Add(this.P3ClientGP);
-            this.NetworkClientsGP.Location = new System.Drawing.Point(5, 240);
-            this.NetworkClientsGP.Name = "NetworkClientsGP";
-            this.NetworkClientsGP.Size = new System.Drawing.Size(298, 173);
-            this.NetworkClientsGP.TabIndex = 0;
-            this.NetworkClientsGP.Text = "Clients";
+            this.BuddyClientsGP.Controls.Add(this.P1ClientGP);
+            this.BuddyClientsGP.Controls.Add(this.P2ClientGP);
+            this.BuddyClientsGP.Controls.Add(this.P3ClientGP);
+            this.BuddyClientsGP.Location = new System.Drawing.Point(5, 100);
+            this.BuddyClientsGP.Name = "BuddyClientsGP";
+            this.BuddyClientsGP.Size = new System.Drawing.Size(298, 173);
+            this.BuddyClientsGP.TabIndex = 0;
+            this.BuddyClientsGP.Text = "Clients";
             // 
             // P1ClientGP
             // 
@@ -1269,6 +1244,28 @@ namespace GameX
             this.P1ClientGP.ShowCaption = false;
             this.P1ClientGP.Size = new System.Drawing.Size(288, 42);
             this.P1ClientGP.TabIndex = 0;
+            // 
+            // P1DropSimpleButton
+            // 
+            this.P1DropSimpleButton.AllowFocus = false;
+            this.P1DropSimpleButton.Enabled = false;
+            this.P1DropSimpleButton.Location = new System.Drawing.Point(212, 11);
+            this.P1DropSimpleButton.Name = "P1DropSimpleButton";
+            this.P1DropSimpleButton.Size = new System.Drawing.Size(59, 20);
+            this.P1DropSimpleButton.TabIndex = 0;
+            this.P1DropSimpleButton.TabStop = false;
+            this.P1DropSimpleButton.Text = "Drop";
+            this.P1DropSimpleButton.ToolTip = "Drops the client from the server leaving the slot free for another client.";
+            this.P1DropSimpleButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P1DropSimpleButton.ToolTipTitle = "Drop Client";
+            // 
+            // P1ClientLabelControl
+            // 
+            this.P1ClientLabelControl.Location = new System.Drawing.Point(15, 14);
+            this.P1ClientLabelControl.Name = "P1ClientLabelControl";
+            this.P1ClientLabelControl.Size = new System.Drawing.Size(103, 13);
+            this.P1ClientLabelControl.TabIndex = 0;
+            this.P1ClientLabelControl.Text = "No client connected";
             // 
             // P1PlayerIndexComboBoxEdit
             // 
@@ -1298,6 +1295,28 @@ namespace GameX
             this.P2ClientGP.Size = new System.Drawing.Size(288, 42);
             this.P2ClientGP.TabIndex = 0;
             // 
+            // P2DropSimpleButton
+            // 
+            this.P2DropSimpleButton.AllowFocus = false;
+            this.P2DropSimpleButton.Enabled = false;
+            this.P2DropSimpleButton.Location = new System.Drawing.Point(212, 11);
+            this.P2DropSimpleButton.Name = "P2DropSimpleButton";
+            this.P2DropSimpleButton.Size = new System.Drawing.Size(59, 20);
+            this.P2DropSimpleButton.TabIndex = 0;
+            this.P2DropSimpleButton.TabStop = false;
+            this.P2DropSimpleButton.Text = "Drop";
+            this.P2DropSimpleButton.ToolTip = "Drops the client from the server leaving the slot free for another client.";
+            this.P2DropSimpleButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2DropSimpleButton.ToolTipTitle = "Drop Client";
+            // 
+            // P2ClientLabelControl
+            // 
+            this.P2ClientLabelControl.Location = new System.Drawing.Point(15, 14);
+            this.P2ClientLabelControl.Name = "P2ClientLabelControl";
+            this.P2ClientLabelControl.Size = new System.Drawing.Size(103, 13);
+            this.P2ClientLabelControl.TabIndex = 0;
+            this.P2ClientLabelControl.Text = "No client connected";
+            // 
             // P2PlayerIndexComboBoxEdit
             // 
             this.P2PlayerIndexComboBoxEdit.EditValue = "";
@@ -1326,6 +1345,28 @@ namespace GameX
             this.P3ClientGP.Size = new System.Drawing.Size(288, 42);
             this.P3ClientGP.TabIndex = 0;
             // 
+            // P3DropSimpleButton
+            // 
+            this.P3DropSimpleButton.AllowFocus = false;
+            this.P3DropSimpleButton.Enabled = false;
+            this.P3DropSimpleButton.Location = new System.Drawing.Point(212, 11);
+            this.P3DropSimpleButton.Name = "P3DropSimpleButton";
+            this.P3DropSimpleButton.Size = new System.Drawing.Size(59, 20);
+            this.P3DropSimpleButton.TabIndex = 0;
+            this.P3DropSimpleButton.TabStop = false;
+            this.P3DropSimpleButton.Text = "Drop";
+            this.P3DropSimpleButton.ToolTip = "Drops the client from the server leaving the slot free for another client.";
+            this.P3DropSimpleButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3DropSimpleButton.ToolTipTitle = "Drop Client";
+            // 
+            // P3ClientLabelControl
+            // 
+            this.P3ClientLabelControl.Location = new System.Drawing.Point(15, 14);
+            this.P3ClientLabelControl.Name = "P3ClientLabelControl";
+            this.P3ClientLabelControl.Size = new System.Drawing.Size(103, 13);
+            this.P3ClientLabelControl.TabIndex = 0;
+            this.P3ClientLabelControl.Text = "No client connected";
+            // 
             // P3PlayerIndexComboBoxEdit
             // 
             this.P3PlayerIndexComboBoxEdit.EditValue = "";
@@ -1343,221 +1384,78 @@ namespace GameX
             this.P3PlayerIndexComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P3PlayerIndexComboBoxEdit.ToolTipTitle = "Player index";
             // 
-            // P3NetworkGP
+            // BuddyServerGP
             // 
-            this.P3NetworkGP.Controls.Add(this.P3PortTextEdit);
-            this.P3NetworkGP.Controls.Add(this.P3PortLabelControl);
-            this.P3NetworkGP.Controls.Add(this.P3ConnectionButton);
-            this.P3NetworkGP.Controls.Add(this.P3IPLabelControl);
-            this.P3NetworkGP.Controls.Add(this.P3IPTextEdit);
-            this.P3NetworkGP.Location = new System.Drawing.Point(5, 170);
-            this.P3NetworkGP.Name = "P3NetworkGP";
-            this.P3NetworkGP.Size = new System.Drawing.Size(298, 64);
-            this.P3NetworkGP.TabIndex = 0;
+            this.BuddyServerGP.Controls.Add(this.BuddyServerPortTextEdit);
+            this.BuddyServerGP.Controls.Add(this.BuddyServerPortLabelControl);
+            this.BuddyServerGP.Controls.Add(this.BuddyServerConnectionButton);
+            this.BuddyServerGP.Controls.Add(this.BuddyServerIPLabelControl);
+            this.BuddyServerGP.Controls.Add(this.BuddyServerIPTextEdit);
+            this.BuddyServerGP.Location = new System.Drawing.Point(5, 30);
+            this.BuddyServerGP.Name = "BuddyServerGP";
+            this.BuddyServerGP.Size = new System.Drawing.Size(298, 64);
+            this.BuddyServerGP.TabIndex = 0;
+            this.BuddyServerGP.Text = "Server";
             // 
-            // P3PortTextEdit
+            // BuddyServerPortTextEdit
             // 
-            this.P3PortTextEdit.CausesValidation = false;
-            this.P3PortTextEdit.EditValue = "";
-            this.P3PortTextEdit.Location = new System.Drawing.Point(157, 35);
-            this.P3PortTextEdit.Name = "P3PortTextEdit";
-            this.P3PortTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.P3PortTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.P3PortTextEdit.Properties.ValidateOnEnterKey = true;
-            this.P3PortTextEdit.Size = new System.Drawing.Size(51, 20);
-            this.P3PortTextEdit.TabIndex = 6;
-            this.P3PortTextEdit.ToolTip = "Defines the IP address for a connection.";
-            this.P3PortTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3PortTextEdit.ToolTipTitle = "IP Address";
+            this.BuddyServerPortTextEdit.CausesValidation = false;
+            this.BuddyServerPortTextEdit.EditValue = "";
+            this.BuddyServerPortTextEdit.Location = new System.Drawing.Point(157, 35);
+            this.BuddyServerPortTextEdit.Name = "BuddyServerPortTextEdit";
+            this.BuddyServerPortTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.BuddyServerPortTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.BuddyServerPortTextEdit.Properties.ValidateOnEnterKey = true;
+            this.BuddyServerPortTextEdit.Size = new System.Drawing.Size(51, 20);
+            this.BuddyServerPortTextEdit.TabIndex = 2;
+            this.BuddyServerPortTextEdit.ToolTip = "Defines the IP address for a connection.";
+            this.BuddyServerPortTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.BuddyServerPortTextEdit.ToolTipTitle = "IP Address";
             // 
-            // P3PortLabelControl
+            // BuddyServerPortLabelControl
             // 
-            this.P3PortLabelControl.Location = new System.Drawing.Point(127, 38);
-            this.P3PortLabelControl.Name = "P3PortLabelControl";
-            this.P3PortLabelControl.Size = new System.Drawing.Size(24, 13);
-            this.P3PortLabelControl.TabIndex = 0;
-            this.P3PortLabelControl.Text = "Port:";
+            this.BuddyServerPortLabelControl.Location = new System.Drawing.Point(127, 38);
+            this.BuddyServerPortLabelControl.Name = "BuddyServerPortLabelControl";
+            this.BuddyServerPortLabelControl.Size = new System.Drawing.Size(24, 13);
+            this.BuddyServerPortLabelControl.TabIndex = 0;
+            this.BuddyServerPortLabelControl.Text = "Port:";
             // 
-            // P3ConnectionButton
+            // BuddyServerConnectionButton
             // 
-            this.P3ConnectionButton.AllowFocus = false;
-            this.P3ConnectionButton.Enabled = false;
-            this.P3ConnectionButton.Location = new System.Drawing.Point(214, 33);
-            this.P3ConnectionButton.Name = "P3ConnectionButton";
-            this.P3ConnectionButton.Size = new System.Drawing.Size(78, 23);
-            this.P3ConnectionButton.TabIndex = 0;
-            this.P3ConnectionButton.TabStop = false;
-            this.P3ConnectionButton.Text = "Connect";
-            this.P3ConnectionButton.ToolTip = "Connects or disconnects a peer from the network module.";
-            this.P3ConnectionButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3ConnectionButton.ToolTipTitle = "Connection";
+            this.BuddyServerConnectionButton.AllowFocus = false;
+            this.BuddyServerConnectionButton.Enabled = false;
+            this.BuddyServerConnectionButton.Location = new System.Drawing.Point(214, 33);
+            this.BuddyServerConnectionButton.Name = "BuddyServerConnectionButton";
+            this.BuddyServerConnectionButton.Size = new System.Drawing.Size(78, 23);
+            this.BuddyServerConnectionButton.TabIndex = 0;
+            this.BuddyServerConnectionButton.TabStop = false;
+            this.BuddyServerConnectionButton.Text = "Connect";
+            this.BuddyServerConnectionButton.ToolTip = "Connects to a server specified by the IP and Port.";
+            this.BuddyServerConnectionButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.BuddyServerConnectionButton.ToolTipTitle = "Server connection";
             // 
-            // P3IPLabelControl
+            // BuddyServerIPLabelControl
             // 
-            this.P3IPLabelControl.Location = new System.Drawing.Point(7, 38);
-            this.P3IPLabelControl.Name = "P3IPLabelControl";
-            this.P3IPLabelControl.Size = new System.Drawing.Size(12, 13);
-            this.P3IPLabelControl.TabIndex = 0;
-            this.P3IPLabelControl.Text = "IP:";
+            this.BuddyServerIPLabelControl.Location = new System.Drawing.Point(7, 38);
+            this.BuddyServerIPLabelControl.Name = "BuddyServerIPLabelControl";
+            this.BuddyServerIPLabelControl.Size = new System.Drawing.Size(12, 13);
+            this.BuddyServerIPLabelControl.TabIndex = 0;
+            this.BuddyServerIPLabelControl.Text = "IP:";
             // 
-            // P3IPTextEdit
+            // BuddyServerIPTextEdit
             // 
-            this.P3IPTextEdit.CausesValidation = false;
-            this.P3IPTextEdit.EditValue = "";
-            this.P3IPTextEdit.Location = new System.Drawing.Point(25, 35);
-            this.P3IPTextEdit.Name = "P3IPTextEdit";
-            this.P3IPTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.P3IPTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.P3IPTextEdit.Properties.ValidateOnEnterKey = true;
-            this.P3IPTextEdit.Size = new System.Drawing.Size(96, 20);
-            this.P3IPTextEdit.TabIndex = 5;
-            this.P3IPTextEdit.ToolTip = "Defines the IP address for a connection.";
-            this.P3IPTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3IPTextEdit.ToolTipTitle = "IP Address";
-            // 
-            // P2NetworkGP
-            // 
-            this.P2NetworkGP.Controls.Add(this.P2PortTextEdit);
-            this.P2NetworkGP.Controls.Add(this.P2PortLabelControl);
-            this.P2NetworkGP.Controls.Add(this.P2ConnectionButton);
-            this.P2NetworkGP.Controls.Add(this.P2IPLabelControl);
-            this.P2NetworkGP.Controls.Add(this.P2IPTextEdit);
-            this.P2NetworkGP.Location = new System.Drawing.Point(5, 100);
-            this.P2NetworkGP.Name = "P2NetworkGP";
-            this.P2NetworkGP.Size = new System.Drawing.Size(298, 64);
-            this.P2NetworkGP.TabIndex = 0;
-            // 
-            // P2PortTextEdit
-            // 
-            this.P2PortTextEdit.CausesValidation = false;
-            this.P2PortTextEdit.EditValue = "";
-            this.P2PortTextEdit.Location = new System.Drawing.Point(157, 35);
-            this.P2PortTextEdit.Name = "P2PortTextEdit";
-            this.P2PortTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.P2PortTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.P2PortTextEdit.Properties.ValidateOnEnterKey = true;
-            this.P2PortTextEdit.Size = new System.Drawing.Size(51, 20);
-            this.P2PortTextEdit.TabIndex = 4;
-            this.P2PortTextEdit.ToolTip = "Defines the IP address for a connection.";
-            this.P2PortTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2PortTextEdit.ToolTipTitle = "IP Address";
-            // 
-            // P2PortLabelControl
-            // 
-            this.P2PortLabelControl.Location = new System.Drawing.Point(127, 38);
-            this.P2PortLabelControl.Name = "P2PortLabelControl";
-            this.P2PortLabelControl.Size = new System.Drawing.Size(24, 13);
-            this.P2PortLabelControl.TabIndex = 0;
-            this.P2PortLabelControl.Text = "Port:";
-            // 
-            // P2ConnectionButton
-            // 
-            this.P2ConnectionButton.AllowFocus = false;
-            this.P2ConnectionButton.Enabled = false;
-            this.P2ConnectionButton.Location = new System.Drawing.Point(214, 33);
-            this.P2ConnectionButton.Name = "P2ConnectionButton";
-            this.P2ConnectionButton.Size = new System.Drawing.Size(78, 23);
-            this.P2ConnectionButton.TabIndex = 0;
-            this.P2ConnectionButton.TabStop = false;
-            this.P2ConnectionButton.Text = "Connect";
-            this.P2ConnectionButton.ToolTip = "Connects or disconnects a peer from the network module.";
-            this.P2ConnectionButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2ConnectionButton.ToolTipTitle = "Connection";
-            // 
-            // P2IPLabelControl
-            // 
-            this.P2IPLabelControl.Location = new System.Drawing.Point(7, 38);
-            this.P2IPLabelControl.Name = "P2IPLabelControl";
-            this.P2IPLabelControl.Size = new System.Drawing.Size(12, 13);
-            this.P2IPLabelControl.TabIndex = 0;
-            this.P2IPLabelControl.Text = "IP:";
-            // 
-            // P2IPTextEdit
-            // 
-            this.P2IPTextEdit.CausesValidation = false;
-            this.P2IPTextEdit.EditValue = "";
-            this.P2IPTextEdit.Location = new System.Drawing.Point(25, 35);
-            this.P2IPTextEdit.Name = "P2IPTextEdit";
-            this.P2IPTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.P2IPTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.P2IPTextEdit.Properties.ValidateOnEnterKey = true;
-            this.P2IPTextEdit.Size = new System.Drawing.Size(96, 20);
-            this.P2IPTextEdit.TabIndex = 3;
-            this.P2IPTextEdit.ToolTip = "Defines the IP address for a connection.";
-            this.P2IPTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2IPTextEdit.ToolTipTitle = "IP Address";
-            // 
-            // P1NetworkGP
-            // 
-            this.P1NetworkGP.Controls.Add(this.P1PortTextEdit);
-            this.P1NetworkGP.Controls.Add(this.P1PortLabelControl);
-            this.P1NetworkGP.Controls.Add(this.P1ConnectionButton);
-            this.P1NetworkGP.Controls.Add(this.P1IPLabelControl);
-            this.P1NetworkGP.Controls.Add(this.P1IPTextEdit);
-            this.P1NetworkGP.Location = new System.Drawing.Point(5, 30);
-            this.P1NetworkGP.Name = "P1NetworkGP";
-            this.P1NetworkGP.Size = new System.Drawing.Size(298, 64);
-            this.P1NetworkGP.TabIndex = 0;
-            // 
-            // P1PortTextEdit
-            // 
-            this.P1PortTextEdit.CausesValidation = false;
-            this.P1PortTextEdit.EditValue = "";
-            this.P1PortTextEdit.Location = new System.Drawing.Point(157, 35);
-            this.P1PortTextEdit.Name = "P1PortTextEdit";
-            this.P1PortTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.P1PortTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.P1PortTextEdit.Properties.ValidateOnEnterKey = true;
-            this.P1PortTextEdit.Size = new System.Drawing.Size(51, 20);
-            this.P1PortTextEdit.TabIndex = 2;
-            this.P1PortTextEdit.ToolTip = "Defines the IP address for a connection.";
-            this.P1PortTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P1PortTextEdit.ToolTipTitle = "IP Address";
-            // 
-            // P1PortLabelControl
-            // 
-            this.P1PortLabelControl.Location = new System.Drawing.Point(127, 38);
-            this.P1PortLabelControl.Name = "P1PortLabelControl";
-            this.P1PortLabelControl.Size = new System.Drawing.Size(24, 13);
-            this.P1PortLabelControl.TabIndex = 0;
-            this.P1PortLabelControl.Text = "Port:";
-            // 
-            // P1ConnectionButton
-            // 
-            this.P1ConnectionButton.AllowFocus = false;
-            this.P1ConnectionButton.Enabled = false;
-            this.P1ConnectionButton.Location = new System.Drawing.Point(214, 33);
-            this.P1ConnectionButton.Name = "P1ConnectionButton";
-            this.P1ConnectionButton.Size = new System.Drawing.Size(78, 23);
-            this.P1ConnectionButton.TabIndex = 0;
-            this.P1ConnectionButton.TabStop = false;
-            this.P1ConnectionButton.Text = "Connect";
-            this.P1ConnectionButton.ToolTip = "Connects or disconnects a peer from the network module.";
-            this.P1ConnectionButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P1ConnectionButton.ToolTipTitle = "Connection";
-            // 
-            // P1IPLabelControl
-            // 
-            this.P1IPLabelControl.Location = new System.Drawing.Point(7, 38);
-            this.P1IPLabelControl.Name = "P1IPLabelControl";
-            this.P1IPLabelControl.Size = new System.Drawing.Size(12, 13);
-            this.P1IPLabelControl.TabIndex = 0;
-            this.P1IPLabelControl.Text = "IP:";
-            // 
-            // P1IPTextEdit
-            // 
-            this.P1IPTextEdit.CausesValidation = false;
-            this.P1IPTextEdit.EditValue = "";
-            this.P1IPTextEdit.Location = new System.Drawing.Point(25, 35);
-            this.P1IPTextEdit.Name = "P1IPTextEdit";
-            this.P1IPTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.P1IPTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.P1IPTextEdit.Properties.ValidateOnEnterKey = true;
-            this.P1IPTextEdit.Size = new System.Drawing.Size(96, 20);
-            this.P1IPTextEdit.TabIndex = 1;
-            this.P1IPTextEdit.ToolTip = "Defines the IP address for a connection.";
-            this.P1IPTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P1IPTextEdit.ToolTipTitle = "IP Address";
+            this.BuddyServerIPTextEdit.CausesValidation = false;
+            this.BuddyServerIPTextEdit.EditValue = "";
+            this.BuddyServerIPTextEdit.Location = new System.Drawing.Point(25, 35);
+            this.BuddyServerIPTextEdit.Name = "BuddyServerIPTextEdit";
+            this.BuddyServerIPTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.BuddyServerIPTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.BuddyServerIPTextEdit.Properties.ValidateOnEnterKey = true;
+            this.BuddyServerIPTextEdit.Size = new System.Drawing.Size(96, 20);
+            this.BuddyServerIPTextEdit.TabIndex = 1;
+            this.BuddyServerIPTextEdit.ToolTip = "Defines the IP address for a connection.";
+            this.BuddyServerIPTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.BuddyServerIPTextEdit.ToolTipTitle = "IP Address";
             // 
             // TabPageSettingsGPApp
             // 
@@ -1568,7 +1466,7 @@ namespace GameX
             this.TabPageSettingsGPApp.Location = new System.Drawing.Point(8, 10);
             this.TabPageSettingsGPApp.Margin = new System.Windows.Forms.Padding(10);
             this.TabPageSettingsGPApp.Name = "TabPageSettingsGPApp";
-            this.TabPageSettingsGPApp.Size = new System.Drawing.Size(308, 241);
+            this.TabPageSettingsGPApp.Size = new System.Drawing.Size(308, 418);
             this.TabPageSettingsGPApp.TabIndex = 0;
             this.TabPageSettingsGPApp.Text = "GameX v1.00 - Copyright © LuBuCake 2021";
             // 
@@ -1684,12 +1582,29 @@ namespace GameX
             // 
             // LoadSaveGP
             // 
+            this.LoadSaveGP.Controls.Add(this.PlayerNameTextEdit);
             this.LoadSaveGP.Controls.Add(this.LoadSettingsButton);
             this.LoadSaveGP.Controls.Add(this.SaveSettingsButton);
             this.LoadSaveGP.Location = new System.Drawing.Point(181, 30);
             this.LoadSaveGP.Name = "LoadSaveGP";
+            this.LoadSaveGP.ShowCaption = false;
             this.LoadSaveGP.Size = new System.Drawing.Size(112, 85);
             this.LoadSaveGP.TabIndex = 0;
+            // 
+            // PlayerNameTextEdit
+            // 
+            this.PlayerNameTextEdit.CausesValidation = false;
+            this.PlayerNameTextEdit.EditValue = "";
+            this.PlayerNameTextEdit.Location = new System.Drawing.Point(5, 6);
+            this.PlayerNameTextEdit.Name = "PlayerNameTextEdit";
+            this.PlayerNameTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.PlayerNameTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.PlayerNameTextEdit.Properties.ValidateOnEnterKey = true;
+            this.PlayerNameTextEdit.Size = new System.Drawing.Size(102, 20);
+            this.PlayerNameTextEdit.TabIndex = 6;
+            this.PlayerNameTextEdit.ToolTip = "Defines the player name that will be displayed in the Network.";
+            this.PlayerNameTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.PlayerNameTextEdit.ToolTipTitle = "Player Name";
             // 
             // LoadSettingsButton
             // 
@@ -1727,6 +1642,8 @@ namespace GameX
             // ConsoleGP
             // 
             this.ConsoleGP.Controls.Add(this.ConsoleOutputMemoEdit);
+            this.ConsoleGP.Controls.Add(this.ClearConsoleSimpleButton);
+            this.ConsoleGP.Controls.Add(this.ConsoleModeComboBoxEdit);
             this.ConsoleGP.Controls.Add(this.ConsoleInputTextEdit);
             this.ConsoleGP.Location = new System.Drawing.Point(8, 10);
             this.ConsoleGP.Name = "ConsoleGP";
@@ -1735,14 +1652,44 @@ namespace GameX
             // 
             // ConsoleOutputMemoEdit
             // 
+            this.ConsoleOutputMemoEdit.CausesValidation = false;
             this.ConsoleOutputMemoEdit.Location = new System.Drawing.Point(5, 30);
             this.ConsoleOutputMemoEdit.Name = "ConsoleOutputMemoEdit";
-            this.ConsoleOutputMemoEdit.Properties.AllowFocused = false;
             this.ConsoleOutputMemoEdit.Properties.ReadOnly = true;
             this.ConsoleOutputMemoEdit.Properties.UseReadOnlyAppearance = false;
             this.ConsoleOutputMemoEdit.Size = new System.Drawing.Size(612, 357);
             this.ConsoleOutputMemoEdit.TabIndex = 0;
             this.ConsoleOutputMemoEdit.TabStop = false;
+            // 
+            // ClearConsoleSimpleButton
+            // 
+            this.ClearConsoleSimpleButton.AllowFocus = false;
+            this.ClearConsoleSimpleButton.Location = new System.Drawing.Point(465, 393);
+            this.ClearConsoleSimpleButton.Name = "ClearConsoleSimpleButton";
+            this.ClearConsoleSimpleButton.Size = new System.Drawing.Size(35, 20);
+            this.ClearConsoleSimpleButton.TabIndex = 3;
+            this.ClearConsoleSimpleButton.TabStop = false;
+            this.ClearConsoleSimpleButton.Text = "Clear";
+            this.ClearConsoleSimpleButton.ToolTip = "Clears the active interface\'s text.";
+            this.ClearConsoleSimpleButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.ClearConsoleSimpleButton.ToolTipTitle = "Clear output";
+            // 
+            // ConsoleModeComboBoxEdit
+            // 
+            this.ConsoleModeComboBoxEdit.Location = new System.Drawing.Point(506, 393);
+            this.ConsoleModeComboBoxEdit.Name = "ConsoleModeComboBoxEdit";
+            this.ConsoleModeComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.ConsoleModeComboBoxEdit.Properties.AllowFocused = false;
+            this.ConsoleModeComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.ConsoleModeComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.ConsoleModeComboBoxEdit.Size = new System.Drawing.Size(111, 20);
+            this.ConsoleModeComboBoxEdit.TabIndex = 2;
+            this.ConsoleModeComboBoxEdit.TabStop = false;
+            this.ConsoleModeComboBoxEdit.ToolTip = "Changes the active interface, you can choose console for commands and debugs or o" +
+    "ne of the two available chats if connectd.";
+            this.ConsoleModeComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.ConsoleModeComboBoxEdit.ToolTipTitle = "Active interface";
             // 
             // ConsoleInputTextEdit
             // 
@@ -1750,74 +1697,8 @@ namespace GameX
             this.ConsoleInputTextEdit.Location = new System.Drawing.Point(5, 393);
             this.ConsoleInputTextEdit.Name = "ConsoleInputTextEdit";
             this.ConsoleInputTextEdit.Properties.ValidateOnEnterKey = true;
-            this.ConsoleInputTextEdit.Size = new System.Drawing.Size(612, 20);
+            this.ConsoleInputTextEdit.Size = new System.Drawing.Size(454, 20);
             this.ConsoleInputTextEdit.TabIndex = 1;
-            // 
-            // P1ClientLabelControl
-            // 
-            this.P1ClientLabelControl.Location = new System.Drawing.Point(15, 14);
-            this.P1ClientLabelControl.Name = "P1ClientLabelControl";
-            this.P1ClientLabelControl.Size = new System.Drawing.Size(103, 13);
-            this.P1ClientLabelControl.TabIndex = 0;
-            this.P1ClientLabelControl.Text = "No client connected";
-            // 
-            // P2ClientLabelControl
-            // 
-            this.P2ClientLabelControl.Location = new System.Drawing.Point(15, 14);
-            this.P2ClientLabelControl.Name = "P2ClientLabelControl";
-            this.P2ClientLabelControl.Size = new System.Drawing.Size(103, 13);
-            this.P2ClientLabelControl.TabIndex = 0;
-            this.P2ClientLabelControl.Text = "No client connected";
-            // 
-            // P3ClientLabelControl
-            // 
-            this.P3ClientLabelControl.Location = new System.Drawing.Point(15, 14);
-            this.P3ClientLabelControl.Name = "P3ClientLabelControl";
-            this.P3ClientLabelControl.Size = new System.Drawing.Size(103, 13);
-            this.P3ClientLabelControl.TabIndex = 0;
-            this.P3ClientLabelControl.Text = "No client connected";
-            // 
-            // P1DropSimpleButton
-            // 
-            this.P1DropSimpleButton.AllowFocus = false;
-            this.P1DropSimpleButton.Enabled = false;
-            this.P1DropSimpleButton.Location = new System.Drawing.Point(212, 11);
-            this.P1DropSimpleButton.Name = "P1DropSimpleButton";
-            this.P1DropSimpleButton.Size = new System.Drawing.Size(59, 20);
-            this.P1DropSimpleButton.TabIndex = 0;
-            this.P1DropSimpleButton.TabStop = false;
-            this.P1DropSimpleButton.Text = "Drop";
-            this.P1DropSimpleButton.ToolTip = "Drops the client from the server leaving the slot free for another client.";
-            this.P1DropSimpleButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P1DropSimpleButton.ToolTipTitle = "Drop Client";
-            // 
-            // P2DropSimpleButton
-            // 
-            this.P2DropSimpleButton.AllowFocus = false;
-            this.P2DropSimpleButton.Enabled = false;
-            this.P2DropSimpleButton.Location = new System.Drawing.Point(212, 11);
-            this.P2DropSimpleButton.Name = "P2DropSimpleButton";
-            this.P2DropSimpleButton.Size = new System.Drawing.Size(59, 20);
-            this.P2DropSimpleButton.TabIndex = 0;
-            this.P2DropSimpleButton.TabStop = false;
-            this.P2DropSimpleButton.Text = "Drop";
-            this.P2DropSimpleButton.ToolTip = "Drops the client from the server leaving the slot free for another client.";
-            this.P2DropSimpleButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2DropSimpleButton.ToolTipTitle = "Drop Client";
-            // 
-            // P3DropSimpleButton
-            // 
-            this.P3DropSimpleButton.AllowFocus = false;
-            this.P3DropSimpleButton.Enabled = false;
-            this.P3DropSimpleButton.Location = new System.Drawing.Point(212, 11);
-            this.P3DropSimpleButton.Name = "P3DropSimpleButton";
-            this.P3DropSimpleButton.Size = new System.Drawing.Size(59, 20);
-            this.P3DropSimpleButton.TabIndex = 0;
-            this.P3DropSimpleButton.TabStop = false;
-            this.P3DropSimpleButton.Text = "Drop";
-            this.P3DropSimpleButton.ToolTip = "Drops the client from the server leaving the slot free for another client.";
-            this.P3DropSimpleButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3DropSimpleButton.ToolTipTitle = "Drop Client";
             // 
             // App
             // 
@@ -1892,10 +1773,8 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.P1HandnessComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1HealthBar.Properties)).EndInit();
             this.TabPageSettings.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.NetworkManagerGP)).EndInit();
-            this.NetworkManagerGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.NetworkInfoGP)).EndInit();
-            this.NetworkInfoGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ServerInfoGP)).EndInit();
+            this.ServerInfoGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ServerStatusTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServerManagerGP)).EndInit();
             this.ServerManagerGP.ResumeLayout(false);
@@ -1905,8 +1784,8 @@ namespace GameX
             this.NetworkModuleGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.NetworkConnectionsGP)).EndInit();
             this.NetworkConnectionsGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.NetworkClientsGP)).EndInit();
-            this.NetworkClientsGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BuddyClientsGP)).EndInit();
+            this.BuddyClientsGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.P1ClientGP)).EndInit();
             this.P1ClientGP.ResumeLayout(false);
             this.P1ClientGP.PerformLayout();
@@ -1919,21 +1798,11 @@ namespace GameX
             this.P3ClientGP.ResumeLayout(false);
             this.P3ClientGP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.P3PlayerIndexComboBoxEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P3NetworkGP)).EndInit();
-            this.P3NetworkGP.ResumeLayout(false);
-            this.P3NetworkGP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P3PortTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P3IPTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P2NetworkGP)).EndInit();
-            this.P2NetworkGP.ResumeLayout(false);
-            this.P2NetworkGP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P2PortTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P2IPTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P1NetworkGP)).EndInit();
-            this.P1NetworkGP.ResumeLayout(false);
-            this.P1NetworkGP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P1PortTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.P1IPTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuddyServerGP)).EndInit();
+            this.BuddyServerGP.ResumeLayout(false);
+            this.BuddyServerGP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BuddyServerPortTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuddyServerIPTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageSettingsGPApp)).EndInit();
             this.TabPageSettingsGPApp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AboutPictureEdit.Properties)).EndInit();
@@ -1947,10 +1816,12 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.SkinComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoadSaveGP)).EndInit();
             this.LoadSaveGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PlayerNameTextEdit.Properties)).EndInit();
             this.TabPageConsole.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleGP)).EndInit();
             this.ConsoleGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsoleModeComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -2033,41 +1904,26 @@ namespace GameX
         private DevExpress.XtraEditors.CheckButton P2InfiniteHPButton;
         private DevExpress.XtraEditors.CheckButton P2UntargetableButton;
         private DevExpress.XtraTab.XtraTabPage TabPageInventory;
-        private DevExpress.XtraEditors.GroupControl P1NetworkGP;
-        private DevExpress.XtraEditors.LabelControl P1IPLabelControl;
-        private DevExpress.XtraEditors.GroupControl P3NetworkGP;
-        private DevExpress.XtraEditors.LabelControl P3IPLabelControl;
-        private DevExpress.XtraEditors.GroupControl P2NetworkGP;
-        private DevExpress.XtraEditors.LabelControl P2IPLabelControl;
+        private DevExpress.XtraEditors.GroupControl BuddyServerGP;
+        private DevExpress.XtraEditors.LabelControl BuddyServerIPLabelControl;
         private DevExpress.XtraEditors.PictureEdit AboutPictureEdit;
-        public DevExpress.XtraEditors.TextEdit P1IPTextEdit;
+        public DevExpress.XtraEditors.TextEdit BuddyServerIPTextEdit;
         public DevExpress.XtraEditors.ComboBoxEdit P1PlayerIndexComboBoxEdit;
         public DevExpress.XtraEditors.ComboBoxEdit P3PlayerIndexComboBoxEdit;
-        public DevExpress.XtraEditors.TextEdit P3IPTextEdit;
         public DevExpress.XtraEditors.ComboBoxEdit P2PlayerIndexComboBoxEdit;
-        public DevExpress.XtraEditors.TextEdit P2IPTextEdit;
-        public DevExpress.XtraEditors.SimpleButton P1ConnectionButton;
-        public DevExpress.XtraEditors.SimpleButton P3ConnectionButton;
-        public DevExpress.XtraEditors.SimpleButton P2ConnectionButton;
+        public DevExpress.XtraEditors.SimpleButton BuddyServerConnectionButton;
         public DevExpress.XtraEditors.GroupControl NetworkConnectionsGP;
         private DevExpress.XtraTab.XtraTabPage TabPageConsole;
         private DevExpress.XtraEditors.GroupControl ConsoleGP;
-        private DevExpress.XtraEditors.MemoEdit ConsoleOutputMemoEdit;
-        private DevExpress.XtraEditors.TextEdit ConsoleInputTextEdit;
         private DevExpress.XtraEditors.CheckButton NetworkManagerButton;
-        private DevExpress.XtraEditors.GroupControl NetworkManagerGP;
-        public DevExpress.XtraEditors.TextEdit P3PortTextEdit;
-        private DevExpress.XtraEditors.LabelControl P3PortLabelControl;
-        public DevExpress.XtraEditors.TextEdit P2PortTextEdit;
-        private DevExpress.XtraEditors.LabelControl P2PortLabelControl;
-        public DevExpress.XtraEditors.TextEdit P1PortTextEdit;
-        private DevExpress.XtraEditors.LabelControl P1PortLabelControl;
+        public DevExpress.XtraEditors.TextEdit BuddyServerPortTextEdit;
+        private DevExpress.XtraEditors.LabelControl BuddyServerPortLabelControl;
         private DevExpress.XtraEditors.GroupControl NetworkModuleGP;
-        private DevExpress.XtraEditors.GroupControl NetworkInfoGP;
+        private DevExpress.XtraEditors.GroupControl ServerInfoGP;
         private DevExpress.XtraEditors.GroupControl ServerManagerGP;
         public DevExpress.XtraEditors.TextEdit ServerPortTextEdit;
         private DevExpress.XtraEditors.LabelControl ServerPortLabelControl;
-        private DevExpress.XtraEditors.GroupControl NetworkClientsGP;
+        private DevExpress.XtraEditors.GroupControl BuddyClientsGP;
         public DevExpress.XtraEditors.TextEdit ServerStatusTextEdit;
         public DevExpress.XtraEditors.CheckButton StartServerButton;
         private DevExpress.XtraEditors.GroupControl P1ClientGP;
@@ -2079,6 +1935,11 @@ namespace GameX
         public DevExpress.XtraEditors.SimpleButton P1DropSimpleButton;
         public DevExpress.XtraEditors.SimpleButton P2DropSimpleButton;
         public DevExpress.XtraEditors.SimpleButton P3DropSimpleButton;
+        private DevExpress.XtraEditors.ComboBoxEdit ConsoleModeComboBoxEdit;
+        public DevExpress.XtraEditors.SimpleButton ClearConsoleSimpleButton;
+        public DevExpress.XtraEditors.TextEdit PlayerNameTextEdit;
+        public DevExpress.XtraEditors.TextEdit ConsoleInputTextEdit;
+        private DevExpress.XtraEditors.MemoEdit ConsoleOutputMemoEdit;
     }
 }
 

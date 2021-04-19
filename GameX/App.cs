@@ -303,13 +303,6 @@ namespace GameX
                 P4RapidfireButton
             };
 
-            SimpleButton[] Connectbuttons =
-            {
-                P1ConnectionButton,
-                P2ConnectionButton,
-                P3ConnectionButton
-            };
-
             SimpleButton[] DropButtons =
             {
                 P1DropSimpleButton,
@@ -345,7 +338,6 @@ namespace GameX
                     NetworkPlayerIndexes[Index].Properties.Items.AddRange(Indexes.Available());
                     NetworkPlayerIndexes[Index].SelectedIndex = 0;
 
-                    Connectbuttons[Index].Click += Network.StartClient_Click;
                     DropButtons[Index].Click += Network.DropClient_Click;
                 }
             }
@@ -366,7 +358,15 @@ namespace GameX
             NetworkManagerButton.CheckedChanged += StartNetwork_CheckedChanged;
             StartServerButton.Click += Network.StartServer_Click;
 
+            BuddyServerConnectionButton.Click += Network.StartClient_Click;
+
             MasterTabControl.TabIndexChanged += MasterTabPage_PageChanged;
+
+            ConsoleModeComboBoxEdit.Properties.Items.AddRange(Interfaces.Available());
+            ConsoleModeComboBoxEdit.SelectedIndexChanged += Terminal.Interface_IndexChanged;
+            ConsoleModeComboBoxEdit.SelectedIndex = 0;
+
+            ClearConsoleSimpleButton.Click += Terminal.ClearConsole_Click;
 
             ResetHealthBars();
 
@@ -436,6 +436,7 @@ namespace GameX
             Properties.Settings.Default.UpdateRate = UpdateModeComboBoxEdit.SelectedIndex;
             Properties.Settings.Default.Skin = UserLookAndFeel.Default.ActiveSkinName;
             Properties.Settings.Default.Pallete = UserLookAndFeel.Default.ActiveSvgPaletteName;
+            Properties.Settings.Default.PlayerName = PlayerNameTextEdit.Text;
             Properties.Settings.Default.Save();
 
             Terminal.WriteLine("Settings saved.");
@@ -459,6 +460,8 @@ namespace GameX
                         PaletteComboBoxEdit.SelectedItem = Pallete;
                 }
             }
+
+            PlayerNameTextEdit.Text = Properties.Settings.Default.PlayerName;
 
             Terminal.WriteLine("Settings Loaded.");
         }
@@ -600,6 +603,16 @@ namespace GameX
                 int Player = int.Parse(CB.Name[1].ToString()) - 1;
                 Biohazard.Players[Player].SetUntargetable(false);
             }
+            else if (Initialized && CB.Name.Contains("InfiniteAmmo") && !CB.Checked)
+            {
+                int Player = int.Parse(CB.Name[1].ToString()) - 1;
+                Biohazard.Players[Player].SetInfiniteAmmo(false);
+            }
+            else if (Initialized && CB.Name.Contains("Rapidfire") && !CB.Checked)
+            {
+                int Player = int.Parse(CB.Name[1].ToString()) - 1;
+                Biohazard.Players[Player].SetRapidFire(false);
+            }
         }
 
         private async void StartNetwork_CheckedChanged(object sender, EventArgs e)
@@ -608,9 +621,7 @@ namespace GameX
 
             object[] Controls =
             {
-                P1ConnectionButton,
-                P2ConnectionButton,
-                P3ConnectionButton,
+                BuddyServerConnectionButton,
                 StartServerButton
             };
 
@@ -631,6 +642,7 @@ namespace GameX
             if (CB.Checked)
             {
                 CB.Enabled = false;
+                CB.Text = "Enabling";
 
                 await Task.Run(() => Network.StartModule(this));
 
@@ -680,8 +692,6 @@ namespace GameX
 
                 Character_Detour();
                 RickFixes_Detour();
-
-                Terminal.WriteLine("Patches applied.");
 
                 Biohazard.NoFileChecking(true);
                 Biohazard.OnlineCharSwapFixes(true);
@@ -1221,6 +1231,22 @@ namespace GameX
                 P4UntargetableButton
             };
 
+            CheckButton[] InfiniteAmmo =
+            {
+                P1InfiniteAmmoButton,
+                P2InfiniteAmmoButton,
+                P3InfiniteAmmoButton,
+                P4InfiniteAmmoButton
+            };
+
+            CheckButton[] RapidFire =
+            {
+                P1RapidfireButton,
+                P2RapidfireButton,
+                P3RapidfireButton,
+                P4RapidfireButton
+            };
+
             #endregion
 
             for (int i = 0; i < 4; i++)
@@ -1273,6 +1299,12 @@ namespace GameX
                 // Untergetable //
                 if (Untargetable[i].Checked && PlayerPresent)
                     Biohazard.Players[i].SetUntargetable(true);
+
+                if (InfiniteAmmo[i].Checked && PlayerPresent)
+                    Biohazard.Players[i].SetInfiniteAmmo(true);
+
+                if (RapidFire[i].Checked && PlayerPresent)
+                    Biohazard.Players[i].SetRapidFire(true);
             }
         }
 
