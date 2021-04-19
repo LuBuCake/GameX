@@ -84,7 +84,7 @@ namespace GameX
             Application.Idle += Application_Idle;
             Application.ApplicationExit += Application_ApplicationExit;
 
-            Terminal.LoadApp(this, ConsoleOutputMemoEdit, ConsoleInputTextEdit);
+            Terminal.LoadApp(this);
             ConsoleInputTextEdit.Validating += Terminal.ValidateInput;
         }
 

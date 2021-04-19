@@ -13,8 +13,6 @@ namespace GameX.Base.Modules
     public class Terminal
     {
         private static App Main { get; set; }
-        private static MemoEdit ConsoleOutput { get; set; }
-        private static TextEdit ConsoleInput { get; set; }
         private static string[] ConsoleTextInterfaces { get; set; }
         public static int ActiveInterface { get; private set; }
 
@@ -25,12 +23,9 @@ namespace GameX.Base.Modules
             Client = 2
         }
 
-        public static void LoadApp(App GameXRef, MemoEdit ConsoleOut, TextEdit ConsoleIn)
+        public static void LoadApp(App GameXRef)
         {
             Main = GameXRef;
-            ConsoleOutput = ConsoleOut;
-            ConsoleInput = ConsoleIn;
-
             ConsoleTextInterfaces = new string[3];
             ActiveInterface = 0;
         }
@@ -41,13 +36,13 @@ namespace GameX.Base.Modules
             ListItem Interface = CBE.SelectedItem as ListItem;
 
             ActiveInterface = Interface.Value;
-            ConsoleOutput.Text = ConsoleTextInterfaces[ActiveInterface];
+            Main.ConsoleOutputMemoEdit.Text = ConsoleTextInterfaces[ActiveInterface];
         }
 
         public static void ClearConsole_Click(object sender, EventArgs e)
         {
             ConsoleTextInterfaces[ActiveInterface] = "";
-            ConsoleOutput.Text = ConsoleTextInterfaces[ActiveInterface];
+            Main.ConsoleOutputMemoEdit.Text = ConsoleTextInterfaces[ActiveInterface];
         }
 
         private static void ShowCommands()
@@ -313,28 +308,28 @@ namespace GameX.Base.Modules
 
         public static void WriteMessage(string Message, int Interface)
         {
-            ConsoleInput.Text = "";
-            ConsoleTextInterfaces[Interface] += (ConsoleOutput.Text != "" ? Environment.NewLine : "") + Message;
-            ConsoleOutput.Text = ConsoleTextInterfaces[ActiveInterface];
+            Main.ConsoleInputTextEdit.Text = "";
+            ConsoleTextInterfaces[Interface] += (Main.ConsoleOutputMemoEdit.Text != "" ? Environment.NewLine : "") + Message;
+            Main.ConsoleOutputMemoEdit.Text = ConsoleTextInterfaces[ActiveInterface];
 
             if (Interface == ActiveInterface)
             {
-                ConsoleOutput.SelectionStart = ConsoleOutput.Text.Length;
-                ConsoleOutput.MaskBox.MaskBoxScrollToCaret();
+                Main.ConsoleOutputMemoEdit.SelectionStart = Main.ConsoleOutputMemoEdit.Text.Length;
+                Main.ConsoleOutputMemoEdit.MaskBox.MaskBoxScrollToCaret();
             }
         }
 
         public static void WriteLine(string Output)
         {
-            ConsoleInput.Text = "";
+            Main.ConsoleInputTextEdit.Text = "";
 
             if (string.IsNullOrWhiteSpace(Output))
                 return;
 
-            ConsoleTextInterfaces[(int)ConsoleInterface.Console] += (ConsoleOutput.Text != "" ? Environment.NewLine : "") + Output;
-            ConsoleOutput.Text = ConsoleTextInterfaces[ActiveInterface];
-            ConsoleOutput.SelectionStart = ConsoleOutput.Text.Length;
-            ConsoleOutput.MaskBox.MaskBoxScrollToCaret();
+            ConsoleTextInterfaces[(int)ConsoleInterface.Console] += (Main.ConsoleOutputMemoEdit.Text != "" ? Environment.NewLine : "") + Output;
+            Main.ConsoleOutputMemoEdit.Text = ConsoleTextInterfaces[ActiveInterface];
+            Main.ConsoleOutputMemoEdit.SelectionStart = Main.ConsoleOutputMemoEdit.Text.Length;
+            Main.ConsoleOutputMemoEdit.MaskBox.MaskBoxScrollToCaret();
         }
     }
 }

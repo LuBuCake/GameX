@@ -55,37 +55,37 @@
     <ApplicationIcon>system_control_panel_15843.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.BonusSkins.v20.2">
+    <Reference Include="DevExpress.BonusSkins.v20.1">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Data.Desktop.v20.2">
+    <Reference Include="DevExpress.Data.Desktop.v20.1">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Data.v20.2">
+    <Reference Include="DevExpress.Data.v20.1">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Images.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Office.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Pdf.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.RichEdit.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v20.2">
+    <Reference Include="DevExpress.Images.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.1">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Sparkline.v20.2.Core">
+    <Reference Include="DevExpress.Sparkline.v20.1.Core">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v20.2">
+    <Reference Include="DevExpress.XtraEditors.v20.1">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Printing.v20.2.Core">
+    <Reference Include="DevExpress.Printing.v20.1.Core">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraRichEdit.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -160,7 +160,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <PublishFile Include="DevExpress.BonusSkins.v20.2">
+    <PublishFile Include="DevExpress.BonusSkins.v20.1">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -170,7 +170,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.Data.Desktop.v20.2">
+    <PublishFile Include="DevExpress.Data.Desktop.v20.1">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -180,7 +180,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.Data.v20.2">
+    <PublishFile Include="DevExpress.Data.v20.1">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -190,7 +190,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.Pdf.v20.2.Core">
+    <PublishFile Include="DevExpress.Pdf.v20.1.Core">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -200,7 +200,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.Pdf.v20.2.Drawing">
+    <PublishFile Include="DevExpress.Pdf.v20.1.Drawing">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -210,7 +210,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.Printing.v20.2.Core">
+    <PublishFile Include="DevExpress.Printing.v20.1.Core">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -220,7 +220,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.Sparkline.v20.2.Core">
+    <PublishFile Include="DevExpress.Sparkline.v20.1.Core">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -230,7 +230,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.Utils.v20.2">
+    <PublishFile Include="DevExpress.Utils.v20.1">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -240,7 +240,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.XtraBars.v20.2">
+    <PublishFile Include="DevExpress.XtraBars.v20.1">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -250,7 +250,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="DevExpress.XtraEditors.v20.2">
+    <PublishFile Include="DevExpress.XtraEditors.v20.1">
       <Visible>False</Visible>
       <Group>
       </Group>

@@ -110,10 +110,6 @@ namespace GameX
             this.P3DropSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.P3ClientLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.P3PlayerIndexComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.ServerManagerGP = new DevExpress.XtraEditors.GroupControl();
-            this.ServerPortTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ServerPortLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.StartServerButton = new DevExpress.XtraEditors.CheckButton();
             this.BuddyServerGP = new DevExpress.XtraEditors.GroupControl();
             this.BuddyServerPortTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.BuddyServerPortLabelControl = new DevExpress.XtraEditors.LabelControl();
@@ -122,6 +118,10 @@ namespace GameX
             this.BuddyServerIPTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.NetworkModuleGP = new DevExpress.XtraEditors.GroupControl();
             this.NetworkManagerButton = new DevExpress.XtraEditors.CheckButton();
+            this.ServerManagerGP = new DevExpress.XtraEditors.GroupControl();
+            this.ServerPortTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.ServerPortLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.StartServerButton = new DevExpress.XtraEditors.CheckButton();
             this.TabPageSettingsGPApp = new DevExpress.XtraEditors.GroupControl();
             this.AboutPictureEdit = new DevExpress.XtraEditors.PictureEdit();
             this.AppSettingsGP = new DevExpress.XtraEditors.GroupControl();
@@ -218,15 +218,15 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.P3ClientGP)).BeginInit();
             this.P3ClientGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.P3PlayerIndexComboBoxEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ServerManagerGP)).BeginInit();
-            this.ServerManagerGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ServerPortTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BuddyServerGP)).BeginInit();
             this.BuddyServerGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BuddyServerPortTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BuddyServerIPTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NetworkModuleGP)).BeginInit();
             this.NetworkModuleGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ServerManagerGP)).BeginInit();
+            this.ServerManagerGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ServerPortTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageSettingsGPApp)).BeginInit();
             this.TabPageSettingsGPApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AboutPictureEdit.Properties)).BeginInit();
@@ -1312,55 +1312,6 @@ namespace GameX
             this.P3PlayerIndexComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P3PlayerIndexComboBoxEdit.ToolTipTitle = "Player index";
             // 
-            // ServerManagerGP
-            // 
-            this.ServerManagerGP.Controls.Add(this.ServerPortTextEdit);
-            this.ServerManagerGP.Controls.Add(this.ServerPortLabelControl);
-            this.ServerManagerGP.Controls.Add(this.StartServerButton);
-            this.ServerManagerGP.Location = new System.Drawing.Point(131, 30);
-            this.ServerManagerGP.Name = "ServerManagerGP";
-            this.ServerManagerGP.Size = new System.Drawing.Size(172, 69);
-            this.ServerManagerGP.TabIndex = 0;
-            this.ServerManagerGP.Text = "Server";
-            // 
-            // ServerPortTextEdit
-            // 
-            this.ServerPortTextEdit.CausesValidation = false;
-            this.ServerPortTextEdit.EditValue = "9950";
-            this.ServerPortTextEdit.Location = new System.Drawing.Point(36, 37);
-            this.ServerPortTextEdit.Name = "ServerPortTextEdit";
-            this.ServerPortTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.ServerPortTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.ServerPortTextEdit.Properties.ValidateOnEnterKey = true;
-            this.ServerPortTextEdit.Size = new System.Drawing.Size(51, 20);
-            this.ServerPortTextEdit.TabIndex = 0;
-            this.ServerPortTextEdit.TabStop = false;
-            this.ServerPortTextEdit.ToolTip = "Defines the port which a server would be hosted in.";
-            this.ServerPortTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.ServerPortTextEdit.ToolTipTitle = "Server Port";
-            // 
-            // ServerPortLabelControl
-            // 
-            this.ServerPortLabelControl.Location = new System.Drawing.Point(6, 40);
-            this.ServerPortLabelControl.Name = "ServerPortLabelControl";
-            this.ServerPortLabelControl.Size = new System.Drawing.Size(24, 13);
-            this.ServerPortLabelControl.TabIndex = 19;
-            this.ServerPortLabelControl.Text = "Port:";
-            // 
-            // StartServerButton
-            // 
-            this.StartServerButton.AllowFocus = false;
-            this.StartServerButton.Enabled = false;
-            this.StartServerButton.Location = new System.Drawing.Point(93, 35);
-            this.StartServerButton.Name = "StartServerButton";
-            this.StartServerButton.Size = new System.Drawing.Size(73, 23);
-            this.StartServerButton.TabIndex = 0;
-            this.StartServerButton.TabStop = false;
-            this.StartServerButton.Text = "Open";
-            this.StartServerButton.ToolTip = "Starts a server at the specified port so your friends can join you.";
-            this.StartServerButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.StartServerButton.ToolTipTitle = "Server hosting";
-            // 
             // BuddyServerGP
             // 
             this.BuddyServerGP.Controls.Add(this.BuddyServerPortTextEdit);
@@ -1456,6 +1407,55 @@ namespace GameX
     "ceive connections from other players.";
             this.NetworkManagerButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.NetworkManagerButton.ToolTipTitle = "Network";
+            // 
+            // ServerManagerGP
+            // 
+            this.ServerManagerGP.Controls.Add(this.ServerPortTextEdit);
+            this.ServerManagerGP.Controls.Add(this.ServerPortLabelControl);
+            this.ServerManagerGP.Controls.Add(this.StartServerButton);
+            this.ServerManagerGP.Location = new System.Drawing.Point(131, 30);
+            this.ServerManagerGP.Name = "ServerManagerGP";
+            this.ServerManagerGP.Size = new System.Drawing.Size(172, 69);
+            this.ServerManagerGP.TabIndex = 0;
+            this.ServerManagerGP.Text = "Server";
+            // 
+            // ServerPortTextEdit
+            // 
+            this.ServerPortTextEdit.CausesValidation = false;
+            this.ServerPortTextEdit.EditValue = "9950";
+            this.ServerPortTextEdit.Location = new System.Drawing.Point(36, 37);
+            this.ServerPortTextEdit.Name = "ServerPortTextEdit";
+            this.ServerPortTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.ServerPortTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ServerPortTextEdit.Properties.ValidateOnEnterKey = true;
+            this.ServerPortTextEdit.Size = new System.Drawing.Size(51, 20);
+            this.ServerPortTextEdit.TabIndex = 0;
+            this.ServerPortTextEdit.TabStop = false;
+            this.ServerPortTextEdit.ToolTip = "Defines the port which a server would be hosted in.";
+            this.ServerPortTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.ServerPortTextEdit.ToolTipTitle = "Server Port";
+            // 
+            // ServerPortLabelControl
+            // 
+            this.ServerPortLabelControl.Location = new System.Drawing.Point(6, 40);
+            this.ServerPortLabelControl.Name = "ServerPortLabelControl";
+            this.ServerPortLabelControl.Size = new System.Drawing.Size(24, 13);
+            this.ServerPortLabelControl.TabIndex = 19;
+            this.ServerPortLabelControl.Text = "Port:";
+            // 
+            // StartServerButton
+            // 
+            this.StartServerButton.AllowFocus = false;
+            this.StartServerButton.Enabled = false;
+            this.StartServerButton.Location = new System.Drawing.Point(93, 35);
+            this.StartServerButton.Name = "StartServerButton";
+            this.StartServerButton.Size = new System.Drawing.Size(73, 23);
+            this.StartServerButton.TabIndex = 0;
+            this.StartServerButton.TabStop = false;
+            this.StartServerButton.Text = "Open";
+            this.StartServerButton.ToolTip = "Starts a server at the specified port so your friends can join you.";
+            this.StartServerButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.StartServerButton.ToolTipTitle = "Server hosting";
             // 
             // TabPageSettingsGPApp
             // 
@@ -1652,10 +1652,12 @@ namespace GameX
             // 
             // ConsoleOutputMemoEdit
             // 
-            this.ConsoleOutputMemoEdit.CausesValidation = false;
             this.ConsoleOutputMemoEdit.Location = new System.Drawing.Point(5, 30);
             this.ConsoleOutputMemoEdit.Name = "ConsoleOutputMemoEdit";
+            this.ConsoleOutputMemoEdit.Properties.AcceptsReturn = false;
+            this.ConsoleOutputMemoEdit.Properties.HideSelection = false;
             this.ConsoleOutputMemoEdit.Properties.ReadOnly = true;
+            this.ConsoleOutputMemoEdit.Properties.ShowNullValuePrompt = DevExpress.XtraEditors.ShowNullValuePromptOptions.NullValue;
             this.ConsoleOutputMemoEdit.Properties.UseReadOnlyAppearance = false;
             this.ConsoleOutputMemoEdit.Size = new System.Drawing.Size(612, 357);
             this.ConsoleOutputMemoEdit.TabIndex = 0;
@@ -1792,10 +1794,6 @@ namespace GameX
             this.P3ClientGP.ResumeLayout(false);
             this.P3ClientGP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.P3PlayerIndexComboBoxEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ServerManagerGP)).EndInit();
-            this.ServerManagerGP.ResumeLayout(false);
-            this.ServerManagerGP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ServerPortTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BuddyServerGP)).EndInit();
             this.BuddyServerGP.ResumeLayout(false);
             this.BuddyServerGP.PerformLayout();
@@ -1803,6 +1801,10 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.BuddyServerIPTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NetworkModuleGP)).EndInit();
             this.NetworkModuleGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ServerManagerGP)).EndInit();
+            this.ServerManagerGP.ResumeLayout(false);
+            this.ServerManagerGP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ServerPortTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageSettingsGPApp)).EndInit();
             this.TabPageSettingsGPApp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AboutPictureEdit.Properties)).EndInit();
@@ -1939,7 +1941,7 @@ namespace GameX
         public DevExpress.XtraEditors.SimpleButton ClearConsoleSimpleButton;
         public DevExpress.XtraEditors.TextEdit PlayerNameTextEdit;
         public DevExpress.XtraEditors.TextEdit ConsoleInputTextEdit;
-        private DevExpress.XtraEditors.MemoEdit ConsoleOutputMemoEdit;
+        public DevExpress.XtraEditors.MemoEdit ConsoleOutputMemoEdit;
     }
 }
 

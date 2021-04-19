@@ -437,10 +437,13 @@ namespace GameX.Base.Modules
         {
             SimpleButton CB = sender as SimpleButton;
 
+            CB.Enabled = false;
+
             BuddyServer?.Connector?.Dispose();
             BuddyServer = null;
 
             CB.Text = "Connect";
+            CB.Enabled = true;
         }
 
         private static void Client_ServerConnected(object sender, ConnectionEventArgs args)
