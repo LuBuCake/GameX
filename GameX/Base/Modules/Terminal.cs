@@ -23,7 +23,7 @@ namespace GameX.Base.Modules
             Client = 2
         }
 
-        public static void LoadApp(App GameXRef)
+        public static void StartModule(App GameXRef)
         {
             Main = GameXRef;
             ConsoleTextInterfaces = new string[3];
@@ -49,8 +49,8 @@ namespace GameX.Base.Modules
         {
             string[] Commands =
             {
-                Environment.NewLine + "Commands must be written as follows, no spaces except for arguments that need spacing like messages.",
-                "For arguments you must separe the command and each argument with '::' like C++.",
+                Environment.NewLine + "[Console] Commands must be written as follows, no spaces except for arguments that need spacing like messages., "
+                + "and for arguments you must separe the command and each argument with '::'.",
                 "Example: SetHealth::P1::750 = SetHealth is the command, P1 the first argument and finally 750, the third argument.",
 
                 Environment.NewLine + "App commands:",
@@ -88,7 +88,7 @@ namespace GameX.Base.Modules
             {
                 if (!Main.Initialized || !Biohazard.ModuleStarted)
                 {
-                    WriteLine("The game is not running.");
+                    WriteLine("[Console] The game is not running.");
                     return true;
                 }
 
@@ -96,13 +96,13 @@ namespace GameX.Base.Modules
                 {
                     if (!(Player >= 1 && Player <= 4))
                     {
-                        WriteLine("Please specify a player index between 1 and 4");
+                        WriteLine("[Console] Please specify a player index between 1 and 4");
                         return true;
                     }
 
                     if (!Biohazard.Players[Player - 1].IsActive())
                     {
-                        WriteLine("The selected player is not present.");
+                        WriteLine("[Console] The selected player is not present.");
                         return true;
                     }
 
@@ -112,11 +112,11 @@ namespace GameX.Base.Modules
 
                 return false;
             }
-            else if (Command[0] == "Sethealth" && Command.Length == 3)
+            else if (Command[0] == "sethealth" && Command.Length == 3)
             {
                 if (!Main.Initialized || !Biohazard.ModuleStarted)
                 {
-                    WriteLine("The game is not running.");
+                    WriteLine("[Console] The game is not running.");
                     return true;
                 }
 
@@ -126,19 +126,19 @@ namespace GameX.Base.Modules
                     {
                         if (!(Player >= 1 && Player <= 4))
                         {
-                            WriteLine("Please specify a player index between 1 and 4");
+                            WriteLine("[Console] Please specify a player index between 1 and 4");
                             return true;
                         }
 
                         if (Biohazard.GetActiveGameMode() == "Versus")
                         {
-                            WriteLine("Versus mode detected, operation ignored.");
+                            WriteLine("[Console] Versus mode detected, operation ignored.");
                             return true;
                         }
 
                         if (!Biohazard.Players[Player - 1].IsActive())
                         {
-                            WriteLine("The selected player is not present.");
+                            WriteLine("[Console] The selected player is not present.");
                             return true;
                         }
 
@@ -161,18 +161,18 @@ namespace GameX.Base.Modules
             if (Command[0] == "getpublicipv4")
             {
                 if (Network.HasConnection)
-                    WriteLine($"Your public IPv4 is: {Network.PublicIPv4}");
+                    WriteLine($"[Console] Your public IPv4 is: {Network.PublicIPv4}");
                 else
-                    WriteLine("The Network module is not running, enable it before trying its commands.");
+                    WriteLine("[Console] The Network module is not running, enable it before trying its commands.");
 
                 return true;
             }
             else if (Command[0] == "getprivateipv4")
             {
                 if (Network.HasConnection)
-                    WriteLine($"Your private IPv4 is: {Network.PrivateIPv4}");
+                    WriteLine($"[Console] Your private IPv4 is: {Network.PrivateIPv4}");
                 else
-                    WriteLine("The Network module is not running, enable it before trying its commands.");
+                    WriteLine("[Console] The Network module is not running, enable it before trying its commands.");
 
                 return true;
             }
@@ -186,7 +186,7 @@ namespace GameX.Base.Modules
             {
                 if (Network.Server == null)
                 {
-                    WriteLine("There is no server running, start one before trying its commands.");
+                    WriteLine("[Console] There is no server running, start one before trying its commands.");
                     return true;
                 }
 
@@ -194,7 +194,7 @@ namespace GameX.Base.Modules
 
                 if (clients != null && clients.Count > 0)
                 {
-                    WriteLine("Connected clients:");
+                    WriteLine("[Console] Connected clients:");
 
                     foreach (string cli in clients)
                     {
@@ -203,7 +203,7 @@ namespace GameX.Base.Modules
                 }
                 else
                 {
-                    WriteLine("No clients connected.");
+                    WriteLine("[Console] No clients connected.");
                 }
 
                 return true;
@@ -212,7 +212,7 @@ namespace GameX.Base.Modules
             {
                 if (Network.Server == null)
                 {
-                    WriteLine("There is no server running, start one before trying its commands.");
+                    WriteLine("[Console] There is no server running, start one before trying its commands.");
                     return true;
                 }
 
@@ -229,7 +229,7 @@ namespace GameX.Base.Modules
             {
                 if (Network.Server == null)
                 {
-                    WriteLine("You are not connected to any server, connect to one first.");
+                    WriteLine("[Console] You are not connected to any server, connect to one first.");
                     return true;
                 }
 
@@ -281,7 +281,7 @@ namespace GameX.Base.Modules
             else if (Command[0] == "exit")
                 Application.Exit();
             else if (!ProcessGameCommand(Command) && !ProcessNetworkCommand(Command) && !ProcessServerCommand(Command) && !ProcessClientCommand(Command))
-                WriteLine("Unknown or incorrect use of command. Type Help to see all available commands and their syntax.");
+                WriteLine("[Console] Unknown or incorrect use of command. Type Help to see all available commands and their syntax.");
         }
 
         public static void ValidateInput(object sender, EventArgs e)
@@ -309,11 +309,19 @@ namespace GameX.Base.Modules
         public static void WriteMessage(string Message, int Interface)
         {
             Main.ConsoleInputTextEdit.Text = "";
-            ConsoleTextInterfaces[Interface] += (Main.ConsoleOutputMemoEdit.Text != "" ? Environment.NewLine : "") + Message;
-            Main.ConsoleOutputMemoEdit.Text = ConsoleTextInterfaces[ActiveInterface];
+
+            string Current = ConsoleTextInterfaces[Interface];
+
+            if (string.IsNullOrWhiteSpace(Current))
+                Current = Message;
+            else
+                Current += Environment.NewLine + Message;
+
+            ConsoleTextInterfaces[Interface] = Current;
 
             if (Interface == ActiveInterface)
             {
+                Main.ConsoleOutputMemoEdit.Text = ConsoleTextInterfaces[ActiveInterface];
                 Main.ConsoleOutputMemoEdit.SelectionStart = Main.ConsoleOutputMemoEdit.Text.Length;
                 Main.ConsoleOutputMemoEdit.MaskBox.MaskBoxScrollToCaret();
             }
@@ -323,10 +331,14 @@ namespace GameX.Base.Modules
         {
             Main.ConsoleInputTextEdit.Text = "";
 
-            if (string.IsNullOrWhiteSpace(Output))
-                return;
+            string Current = ConsoleTextInterfaces[(int)ConsoleInterface.Console];
 
-            ConsoleTextInterfaces[(int)ConsoleInterface.Console] += (Main.ConsoleOutputMemoEdit.Text != "" ? Environment.NewLine : "") + Output;
+            if (string.IsNullOrWhiteSpace(Current))
+                Current = Output;
+            else
+                Current += Environment.NewLine + Output;
+
+            ConsoleTextInterfaces[(int)ConsoleInterface.Console] = Current;
             Main.ConsoleOutputMemoEdit.Text = ConsoleTextInterfaces[ActiveInterface];
             Main.ConsoleOutputMemoEdit.SelectionStart = Main.ConsoleOutputMemoEdit.Text.Length;
             Main.ConsoleOutputMemoEdit.MaskBox.MaskBoxScrollToCaret();

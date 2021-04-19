@@ -92,7 +92,6 @@ namespace GameX
             this.P1InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P1UntargetableButton = new DevExpress.XtraEditors.CheckButton();
             this.P1HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
-            this.TabPageInventory = new DevExpress.XtraTab.XtraTabPage();
             this.TabPageSettings = new DevExpress.XtraTab.XtraTabPage();
             this.NetworkMasterGP = new DevExpress.XtraEditors.GroupControl();
             this.ServerInfoGP = new DevExpress.XtraEditors.GroupControl();
@@ -311,7 +310,6 @@ namespace GameX
             this.MasterTabControl.TabIndex = 18;
             this.MasterTabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.TabPageChar,
-            this.TabPageInventory,
             this.TabPageSettings,
             this.TabPageConsole});
             // 
@@ -474,6 +472,7 @@ namespace GameX
             // 
             // P4HealthBar
             // 
+            this.P4HealthBar.EditValue = 1;
             this.P4HealthBar.Location = new System.Drawing.Point(161, 30);
             this.P4HealthBar.Name = "P4HealthBar";
             this.P4HealthBar.Properties.AllowFocused = false;
@@ -680,6 +679,7 @@ namespace GameX
             // 
             // P3HealthBar
             // 
+            this.P3HealthBar.EditValue = 1;
             this.P3HealthBar.Location = new System.Drawing.Point(161, 30);
             this.P3HealthBar.Name = "P3HealthBar";
             this.P3HealthBar.Properties.AllowFocused = false;
@@ -886,6 +886,7 @@ namespace GameX
             // 
             // P2HealthBar
             // 
+            this.P2HealthBar.EditValue = 1;
             this.P2HealthBar.Location = new System.Drawing.Point(161, 30);
             this.P2HealthBar.Name = "P2HealthBar";
             this.P2HealthBar.Properties.AllowFocused = false;
@@ -1078,6 +1079,7 @@ namespace GameX
             // 
             // P1HealthBar
             // 
+            this.P1HealthBar.EditValue = 1;
             this.P1HealthBar.Location = new System.Drawing.Point(161, 30);
             this.P1HealthBar.Name = "P1HealthBar";
             this.P1HealthBar.Properties.AllowFocused = false;
@@ -1095,12 +1097,6 @@ namespace GameX
             this.P1HealthBar.ToolTip = "Displays the respective player\'s health in a fancy way.";
             this.P1HealthBar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P1HealthBar.ToolTipTitle = "Player Health";
-            // 
-            // TabPageInventory
-            // 
-            this.TabPageInventory.Name = "TabPageInventory";
-            this.TabPageInventory.Size = new System.Drawing.Size(638, 438);
-            this.TabPageInventory.Text = "Inventory";
             // 
             // TabPageSettings
             // 
@@ -1144,9 +1140,9 @@ namespace GameX
             this.ServerStatusTextEdit.Properties.ReadOnly = true;
             this.ServerStatusTextEdit.Properties.UseReadOnlyAppearance = false;
             this.ServerStatusTextEdit.Size = new System.Drawing.Size(283, 20);
-            this.ServerStatusTextEdit.TabIndex = 12;
+            this.ServerStatusTextEdit.TabIndex = 0;
             this.ServerStatusTextEdit.TabStop = false;
-            this.ServerStatusTextEdit.ToolTip = "If the server is running, shows the IPAddress : Port that your friends can use to" +
+            this.ServerStatusTextEdit.ToolTip = "If the server is running, shows the \"IPAddress:Port\" that your friends can use to" +
     " join you.";
             this.ServerStatusTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.ServerStatusTextEdit.ToolTipTitle = "Server Info";
@@ -1410,6 +1406,7 @@ namespace GameX
             // 
             // ServerManagerGP
             // 
+            this.ServerManagerGP.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.ServerManagerGP.Controls.Add(this.ServerPortTextEdit);
             this.ServerManagerGP.Controls.Add(this.ServerPortLabelControl);
             this.ServerManagerGP.Controls.Add(this.StartServerButton);
@@ -1487,7 +1484,7 @@ namespace GameX
             // 
             this.AppSettingsGP.Controls.Add(this.MiscSettingsGP);
             this.AppSettingsGP.Controls.Add(this.LoadSaveGP);
-            this.AppSettingsGP.Location = new System.Drawing.Point(5, 116);
+            this.AppSettingsGP.Location = new System.Drawing.Point(5, 114);
             this.AppSettingsGP.Name = "AppSettingsGP";
             this.AppSettingsGP.Size = new System.Drawing.Size(298, 120);
             this.AppSettingsGP.TabIndex = 0;
@@ -1654,8 +1651,7 @@ namespace GameX
             // 
             this.ConsoleOutputMemoEdit.Location = new System.Drawing.Point(5, 30);
             this.ConsoleOutputMemoEdit.Name = "ConsoleOutputMemoEdit";
-            this.ConsoleOutputMemoEdit.Properties.AcceptsReturn = false;
-            this.ConsoleOutputMemoEdit.Properties.HideSelection = false;
+            this.ConsoleOutputMemoEdit.Properties.AllowFocused = false;
             this.ConsoleOutputMemoEdit.Properties.ReadOnly = true;
             this.ConsoleOutputMemoEdit.Properties.ShowNullValuePrompt = DevExpress.XtraEditors.ShowNullValuePromptOptions.NullValue;
             this.ConsoleOutputMemoEdit.Properties.UseReadOnlyAppearance = false;
@@ -1905,7 +1901,6 @@ namespace GameX
         private DevExpress.XtraEditors.CheckButton P2RapidfireButton;
         private DevExpress.XtraEditors.CheckButton P2InfiniteHPButton;
         private DevExpress.XtraEditors.CheckButton P2UntargetableButton;
-        private DevExpress.XtraTab.XtraTabPage TabPageInventory;
         private DevExpress.XtraEditors.GroupControl BuddyServerGP;
         private DevExpress.XtraEditors.LabelControl BuddyServerIPLabelControl;
         private DevExpress.XtraEditors.PictureEdit AboutPictureEdit;

@@ -18,7 +18,6 @@ namespace GameX.Base.Modules
         public string IP { get; set; }
         public string Name { get; set; }
         public int Index { get; set; }
-        public int Player { get; set; }
     }
 
     public class ServerConnected
@@ -38,7 +37,7 @@ namespace GameX.Base.Modules
         public static string PrivateIPv4 { get; private set; }
         public static bool HasConnection { get; private set; }
 
-        /* Utils */
+        #region Utility
 
         public static bool TestConnection(string HostNameOrAddress, int Timeout = 100)
         {
@@ -92,7 +91,9 @@ namespace GameX.Base.Modules
             return ipAddrList.ToArray().FirstOrDefault();
         }
 
-        /* Module Manager */
+        #endregion
+
+        #region Module Manager
 
         public static async Task StartModule(App GameXRef)
         {
@@ -105,6 +106,7 @@ namespace GameX.Base.Modules
                 PublicIPv4 = MachinePublicIP();
                 PrivateIPv4 = MachinePrivateIP();
                 ModuleStarted = true;
+                Terminal.WriteLine("[Network] Module started successfully.");
                 return;
             }
 
@@ -130,17 +132,18 @@ namespace GameX.Base.Modules
             PublicIPv4 = "";
             PrivateIPv4 = "";
             ModuleStarted = false;
+            Terminal.WriteLine("[Network] Module finished successfully.");
         }
 
-        /* Server */
+        #endregion
 
-        #region SERVER
+        #region Server
 
         public static void StartServer_Click(object sender, EventArgs e)
         {
             if (!ModuleStarted)
             {
-                Terminal.WriteLine("The Network module hasn't been enabled, enable it to start a server.");
+                Terminal.WriteLine("[App] The Network module hasn't been enabled, enable it to start a server.");
                 return;
             }
 
@@ -154,7 +157,7 @@ namespace GameX.Base.Modules
         {
             if (Main.ServerPortTextEdit.Text == "")
             {
-                Terminal.WriteLine("There is not server port specified, aborting.");
+                Terminal.WriteLine("[App] There is not server port specified, aborting.");
                 return;
             }
 
@@ -162,9 +165,11 @@ namespace GameX.Base.Modules
 
             if (!PortParsed || Port > 65535 || Port < 0)
             {
-                Terminal.WriteLine("Invalid port, please check your inputs.");
+                Terminal.WriteLine("[App] Invalid port, please check your inputs.");
                 return;
             }
+
+            Main.ServerPortTextEdit.Enabled = false;
 
             try
             {
@@ -174,7 +179,7 @@ namespace GameX.Base.Modules
                 Server.Events.MessageReceived += Server_MessageReceived;
                 Server.Events.ServerStarted += Server_ServerStarted;
                 Server.Events.ServerStopped += Server_ServerStopped;
-                Server.Callbacks.SyncRequestReceived = SyncRequestReceived;
+                Server.Callbacks.SyncRequestReceived = Server_SyncRequestReceived;
 
                 Server.Settings.Logger = Logger;
                 Server.Settings.DebugMessages = true;
@@ -190,7 +195,8 @@ namespace GameX.Base.Modules
             {
                 Server?.Dispose();
                 Server = null;
-                Terminal.WriteLine(Ex.Message);
+                Main.ServerPortTextEdit.Enabled = true;
+                Terminal.WriteLine($"[Server] {Ex.Message}");
                 return;
             }
 
@@ -204,18 +210,28 @@ namespace GameX.Base.Modules
             Server?.Dispose();
             Server = null;
 
+            Main.ServerPortTextEdit.Enabled = true;
             Main.StartServerButton.Text = "Open";
             Main.ServerStatusTextEdit.Text = "Server offline";
         }
 
-        private static void Server_ClientConnected(object sender, ConnectionEventArgs args)
+        private static async void Server_ClientConnected(object sender, ConnectionEventArgs args)
         {
-            ComboBoxEdit[] PlayerIndexes =
+            Terminal.WriteLine($"[Server] New client connected: {args.IpPort}");
+
+            string PlayerName = args.IpPort;
+
+            try
             {
-                Main.P1PlayerIndexComboBoxEdit,
-                Main.P2PlayerIndexComboBoxEdit,
-                Main.P3PlayerIndexComboBoxEdit
-            };
+                Terminal.WriteLine($"[Server] Sending PlayerName request to {args.IpPort}, waiting response.");
+                SyncResponse PlayerNameRequest = await Task.Run(() => Server.SendAndWait(5000, args.IpPort, "[NICKNAME]"));
+                PlayerName = Encoding.UTF8.GetString(PlayerNameRequest.Data);
+                Terminal.WriteLine($"[Server] PlayerName received from {args.IpPort}.");
+            }
+            catch(Exception)
+            {
+                Terminal.WriteLine($"[Server] PlayerName response from {args.IpPort} timed out, going with defaults.");
+            }
 
             LabelControl[] ClientNames =
             {
@@ -235,14 +251,12 @@ namespace GameX.Base.Modules
             {
                 if (BuddyClients[i] == null)
                 {
-                    BuddyClients[i] = new ClientConnected() { IP = args.IpPort, Index = i, Player = (PlayerIndexes[i].SelectedItem as ListItem).Value };
-                    ClientNames[i].Text = args.IpPort;
+                    BuddyClients[i] = new ClientConnected() { IP = args.IpPort, Index = i };
+                    ClientNames[i].Text = PlayerName;
                     DropButtons[i].Enabled = true;
                     break;
                 }
             }
-
-            Terminal.WriteLine($"[SERVER] Client connected: {args.IpPort}");
         }
 
         private static void Server_ClientDisconnected(object sender, DisconnectionEventArgs args)
@@ -271,7 +285,7 @@ namespace GameX.Base.Modules
                 }
             }
 
-            Terminal.WriteLine($"[SERVER] Client disconnected: {args.IpPort} - Reason: {args.Reason}");
+            Terminal.WriteLine($"[Server] The client {args.IpPort} has been disconnected, reason: {args.Reason}");
         }
 
         private static void Server_MessageReceived(object sender, MessageReceivedEventArgs args)
@@ -305,26 +319,32 @@ namespace GameX.Base.Modules
                 }
                 else
                 {
-                    Terminal.WriteLine($"[SERVER] Message received from {args.IpPort}: {Decoded}");
+                    Terminal.WriteLine($"[Server] Message received from {args.IpPort}: {Decoded}");
                 }
 
                 return;
             }
 
-            Terminal.WriteLine($"[SERVER] Empty message received from {args.IpPort}.");
+            Terminal.WriteLine($"[Server] Empty or unknown message received from {args.IpPort}.");
+        }
+
+        private static SyncResponse Server_SyncRequestReceived(SyncRequest req)
+        {
+            Terminal.WriteLine($"[Server] Empty or unknown request received from {req.IpPort}, sending empty response back.");
+            return new SyncResponse(req, "");
         }
 
         private static void Server_ServerStarted(object sender, EventArgs args)
         {
-            Terminal.WriteLine("Server started.");
+            Terminal.WriteLine("[Server] Successfully started.");
         }
 
         private static void Server_ServerStopped(object sender, EventArgs args)
         {
-            Terminal.WriteLine("Server closed.");
+            Terminal.WriteLine("[Server] Successfully shutted down.");
         }
 
-        public static void DropClient_Click(object sender, EventArgs e)
+        public static void Server_DropClient(object sender, EventArgs e)
         {
             if (Server == null)
                 return;
@@ -333,7 +353,7 @@ namespace GameX.Base.Modules
             int index = int.Parse(SB.Name[1].ToString()) - 1;
 
             Server.DisconnectClient(BuddyClients[index].IP);
-            Terminal.WriteLine($"[SERVER] Dropping client: {BuddyClients[index].IP}");
+            Terminal.WriteLine($"[Server] Dropping client {BuddyClients[index].IP}.");
 
             LabelControl[] ClientNames =
             {
@@ -356,15 +376,13 @@ namespace GameX.Base.Modules
 
         #endregion
 
-        /* Client */
-
-        #region CLIENT
+        #region Client
 
         public static async void StartClient_Click(object sender, EventArgs e)
         {
             if (!ModuleStarted)
             {
-                Terminal.WriteLine("The Network module hasn't been enabled, enable it to start a server.");
+                Terminal.WriteLine("[App] The Network module hasn't been enabled, enable it to start a server.");
                 return;
             }
 
@@ -380,13 +398,13 @@ namespace GameX.Base.Modules
 
             if (Main.BuddyServerIPTextEdit.Text == "")
             {
-                Terminal.WriteLine("No IP address specified, aborting.");
+                Terminal.WriteLine("[App] No IP address specified, aborting.");
                 return;
             }
 
             if (!IPAddress.TryParse(Main.BuddyServerIPTextEdit.Text, out IPAddress IP))
             {
-                Terminal.WriteLine("Invalid IP specified, please check your inputs.");
+                Terminal.WriteLine("[App] Invalid IP specified, please check your inputs.");
                 return;
             }
 
@@ -394,8 +412,17 @@ namespace GameX.Base.Modules
 
             if (!PortParsed || Port > 65535 || Port < 0)
             {
-                Terminal.WriteLine("Invalid port, please check your inputs.");
+                Terminal.WriteLine("[App] Invalid port, please check your inputs.");
                 return;
+            }
+
+            if (Server != null)
+            {
+                if (Main.BuddyServerIPTextEdit.Text == PrivateIPv4 && Main.BuddyServerPortTextEdit.Text == Main.ServerPortTextEdit.Text)
+                {
+                    Terminal.WriteLine("[App] You cannot join yourself, please specify another IP:Port combination.");
+                    return;
+                }
             }
 
             try
@@ -404,7 +431,7 @@ namespace GameX.Base.Modules
                 BuddyServer.Connector.Events.ServerConnected += Client_ServerConnected;
                 BuddyServer.Connector.Events.ServerDisconnected += Client_ServerDisconnected;
                 BuddyServer.Connector.Events.MessageReceived += Client_MessageReceived;
-                BuddyServer.Connector.Callbacks.SyncRequestReceived = SyncRequestReceived;
+                BuddyServer.Connector.Callbacks.SyncRequestReceived = Client_SyncRequestReceived;
 
                 BuddyServer.Connector.Settings.DebugMessages = true;
                 BuddyServer.Connector.Settings.Logger = Logger;
@@ -425,7 +452,7 @@ namespace GameX.Base.Modules
                 CB.Text = "Connect";
                 BuddyServer?.Connector?.Dispose();
                 BuddyServer = null;
-                Terminal.WriteLine(Ex.Message);
+                Terminal.WriteLine($"[Client] {Ex.Message}");
                 return;
             }
 
@@ -437,6 +464,8 @@ namespace GameX.Base.Modules
         {
             SimpleButton CB = sender as SimpleButton;
 
+            string IPPort = BuddyServer?.IP;
+
             CB.Enabled = false;
 
             BuddyServer?.Connector?.Dispose();
@@ -444,12 +473,13 @@ namespace GameX.Base.Modules
 
             CB.Text = "Connect";
             CB.Enabled = true;
+
+            Terminal.WriteLine($"[Client] Sucessfully disconnected from {IPPort}.");
         }
 
         private static void Client_ServerConnected(object sender, ConnectionEventArgs args)
         {
-            Client_SendMessage($"[NAME]{Main.PlayerNameTextEdit.Text}");
-            Terminal.WriteLine($"[CLIENT] Sucessfully connected to: {args.IpPort}");
+            Terminal.WriteLine($"[Client] Sucessfully connected to {args.IpPort}.");
         }
 
         private static void Client_ServerDisconnected(object sender, DisconnectionEventArgs args)
@@ -461,7 +491,7 @@ namespace GameX.Base.Modules
                 Main.BuddyServerConnectionButton.Text = "Connect";
             }
 
-            Terminal.WriteLine($"[CLIENT] Disconnected from: {args.IpPort} - Reason: {args.Reason}");
+            Terminal.WriteLine($"[Client] Disconnected from {args.IpPort}, reason: {args.Reason}");
         }
 
         private static void Client_MessageReceived(object sender, MessageReceivedEventArgs args)
@@ -474,63 +504,48 @@ namespace GameX.Base.Modules
                 {
                     Decoded = Decoded.Replace("[CHAT]", "");
                     Terminal.WriteMessage(Decoded, (int)Terminal.ConsoleInterface.Client);
+                    return;
                 }
-                else
-                {
-                    Terminal.WriteLine($"Message received from {args.IpPort}: {Decoded}");
-                }
-
-                return;
             }
 
-            Terminal.WriteLine($"[CLIENT] Empty message received from {args.IpPort}.");
+            Terminal.WriteLine($"[Client] Empty or unknown message received from {args.IpPort}.");
         }
 
+        private static SyncResponse Client_SyncRequestReceived(SyncRequest req)
+        {
+            if (req.Data != null)
+            {
+                string Decoded = Encoding.UTF8.GetString(req.Data);
+
+                if (Decoded == "[NICKNAME]")
+                {
+                    Terminal.WriteLine($"[Client] PlayerName request received from {req.IpPort}, sending response back.");
+                    return new SyncResponse(req, Main.PlayerNameTextEdit.Text);
+                }
+            }
+
+            Terminal.WriteLine($"[Client] Empty or unknown request received from {req.IpPort}, sending empty response back.");
+            return new SyncResponse(req, "");
+        }
 
         #endregion
 
-        /* Shared */
-
-        #region SHARED
+        #region Shared
 
         private static void Logger(Severity sev, string msg)
         {
             
         }
 
-        private static SyncResponse SyncRequestReceived(SyncRequest req)
-        {
-            Terminal.WriteLine("Synchronous request received from " + req.IpPort + ": ");
-            if (req.Data != null) Terminal.WriteLine(Encoding.UTF8.GetString(req.Data));
-            else Terminal.WriteLine("[null]");
-
-            if (req.Metadata != null && req.Metadata.Count > 0)
-            {
-                Terminal.WriteLine("Metadata:");
-                foreach (KeyValuePair<object, object> curr in req.Metadata)
-                {
-                    Terminal.WriteLine("  " + curr.Key.ToString() + ": " + curr.Value.ToString());
-                }
-            }
-
-            Dictionary<object, object> retMetadata = new Dictionary<object, object>();
-            retMetadata.Add("foo", "bar");
-            retMetadata.Add("bar", "baz");
-
-            return new SyncResponse(req, retMetadata, "Here is your response!");
-        }
-
         #endregion
 
-        /* Senders */
-
-        #region SENDERS
+        #region Senders
 
         public static void Server_BroadcastMessage(string Message, string IPException = "", bool WriteInTheChat = false, bool SuppressTerminal = false)
         {
             if (!ModuleStarted || Server == null)
             {
-                Terminal.WriteLine("The server isn't running, send request ignored.");
+                Terminal.WriteLine("[App] The server is offline, send request ignored.");
                 return;
             }
 
@@ -538,11 +553,12 @@ namespace GameX.Base.Modules
 
             if (clients.Count == 0)
             {
-                Terminal.WriteLine("No clients connected, send request ignored.");
+                Terminal.WriteLine("[App] No clients connected, send request ignored.");
                 return;
             }
 
             byte[] Encoded = Encoding.UTF8.GetBytes(Message);
+            int MessagesSent = 0;
 
             foreach (string Cli in clients)
             {
@@ -550,6 +566,7 @@ namespace GameX.Base.Modules
                     continue;
 
                 Server.Send(Cli, Encoded);
+                MessagesSent++;
             }
 
             if (WriteInTheChat)
@@ -560,17 +577,17 @@ namespace GameX.Base.Modules
                 Terminal.WriteMessage(Message, (int)Terminal.ConsoleInterface.Server);
             }
 
-            if (SuppressTerminal)
+            if (SuppressTerminal || MessagesSent == 0)
                 return;
 
-            Terminal.WriteLine($"[SERVER] Message sucessfully sent to {clients.Count} client{(clients.Count > 1 ? "s" : "")}.");
+            Terminal.WriteLine($"[Server] Message sucessfully sent to {clients.Count} client{(clients.Count > 1 ? "s" : "")}.");
         }
 
         public static void Server_SendMessage(string IPPort, string Message, bool SuppressTerminal = false)
         {
             if (!ModuleStarted || Server == null)
             {
-                Terminal.WriteLine("The server isn't running, send request ignored.");
+                Terminal.WriteLine("[App] The server is offline, send request ignored.");
                 return;
             }
 
@@ -580,20 +597,20 @@ namespace GameX.Base.Modules
             if (SuppressTerminal)
                 return;
 
-            Terminal.WriteLine($"[SERVER] Message sucessfully sent to: {IPPort}");
+            Terminal.WriteLine($"[Server] Message sucessfully sent to {IPPort}.");
         }
 
         public static void Client_SendMessage(string Message, bool WriteInTheChat = false, bool SuppressTerminal = false)
         {
             if (!ModuleStarted)
             {
-                Terminal.WriteLine("The Network module isn't running, send request ignored.");
+                Terminal.WriteLine("[App] The Network module isn't running, send request ignored.");
                 return;
             }
 
             if (BuddyServer == null)
             {
-                Terminal.WriteLine("No connection found at the specified index.");
+                Terminal.WriteLine("[App] No connection found at the specified server.");
                 return;
             }
 
@@ -611,7 +628,7 @@ namespace GameX.Base.Modules
             if (SuppressTerminal)
                 return;
 
-            Terminal.WriteLine($"[CLIENT] Message sucessfully sent to the Server.");
+            Terminal.WriteLine($"[Client] Message sucessfully sent to the Server.");
         }
 
         #endregion

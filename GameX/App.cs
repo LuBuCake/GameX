@@ -1,4 +1,5 @@
 ﻿using DevExpress.LookAndFeel;
+using DevExpress.Skins;
 using DevExpress.XtraEditors;
 using DevExpress.XtraTab;
 using GameX.Base.Content;
@@ -84,7 +85,7 @@ namespace GameX
             Application.Idle += Application_Idle;
             Application.ApplicationExit += Application_ApplicationExit;
 
-            Terminal.LoadApp(this);
+            Terminal.StartModule(this);
             ConsoleInputTextEdit.Validating += Terminal.ValidateInput;
         }
 
@@ -141,7 +142,7 @@ namespace GameX
 
                 if (Target_Process != null)
                 {
-                    Terminal.WriteLine("Game found, validating.");
+                    Terminal.WriteLine("[App] Game found, validating.");
                     Text = "GameX - Resident Evil 5 / Biohazard 5 - Validanting";
                 }
 
@@ -153,7 +154,7 @@ namespace GameX
 
             if (Target_Validate())
             {
-                Terminal.WriteLine("Game validated.");
+                Terminal.WriteLine("[App] Game validated.");
 
                 Memory.StartModule(Target_Process);
                 CheckDebugModeControls(Memory.DebugMode);
@@ -168,8 +169,8 @@ namespace GameX
                 return Verified;
             }
 
-            Terminal.WriteLine("Failed validating, unsupported version.");
-            Terminal.WriteLine("Follow the guide on https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
+            Terminal.WriteLine("[App] Failed validating, unsupported version.");
+            Terminal.WriteLine("[App] Follow the guide on https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
 
             Target_Process.EnableRaisingEvents = true;
             Target_Process.Exited += Target_Exited;
@@ -215,7 +216,7 @@ namespace GameX
 
             ResetHealthBars();
 
-            Terminal.WriteLine("Runtime cleared successfully.");
+            Terminal.WriteLine("[App] Runtime cleared successfully.");
         }
 
         /* Event Handling & Loading */
@@ -338,7 +339,7 @@ namespace GameX
                     NetworkPlayerIndexes[Index].Properties.Items.AddRange(Indexes.Available());
                     NetworkPlayerIndexes[Index].SelectedIndex = 0;
 
-                    DropButtons[Index].Click += Network.DropClient_Click;
+                    DropButtons[Index].Click += Network.Server_DropClient;
                 }
             }
 
@@ -375,7 +376,7 @@ namespace GameX
             if (Logo != null)
                 AboutPictureEdit.Image = Logo;
 
-            Terminal.WriteLine("App initialized.");
+            Terminal.WriteLine("[App] App initialized.");
             Configuration_Load(null, null);
         }
 
@@ -394,9 +395,9 @@ namespace GameX
                 Bar.Properties.Maximum = 1;
                 Bar.Properties.Minimum = 0;
                 Bar.EditValue = 1;
-                Bar.BackColor = Color.FromArgb(40, 40, 40);
-                Bar.Properties.StartColor = Color.FromArgb(240, 240, 240);
-                Bar.Properties.EndColor = Color.FromArgb(240, 240, 240);
+                Bar.BackColor = CommonSkins.GetSkin(UserLookAndFeel.Default).TranslateColor(SystemColors.Window);
+                Bar.Properties.StartColor = Color.FromArgb(0, 255, 230);
+                Bar.Properties.EndColor = Color.FromArgb(0, 255, 230);
             }
         }
 
@@ -439,7 +440,7 @@ namespace GameX
             Properties.Settings.Default.PlayerName = PlayerNameTextEdit.Text;
             Properties.Settings.Default.Save();
 
-            Terminal.WriteLine("Settings saved.");
+            Terminal.WriteLine("[App] Settings saved.");
         }
 
         private void Configuration_Load(object sender, EventArgs e)
@@ -463,7 +464,7 @@ namespace GameX
 
             PlayerNameTextEdit.Text = Properties.Settings.Default.PlayerName;
 
-            Terminal.WriteLine("Settings Loaded.");
+            Terminal.WriteLine("[App] Settings Loaded.");
         }
 
         private void UpdateMode_IndexChanged(object sender, EventArgs e)
@@ -492,6 +493,8 @@ namespace GameX
                 PaletteComboBoxEdit.Text = "";
                 PaletteComboBoxEdit.Enabled = false;
             }
+
+            ResetHealthBars();
         }
 
         private void Palette_IndexChanged(object sender, EventArgs e)
@@ -500,6 +503,8 @@ namespace GameX
                 return;
 
             UserLookAndFeel.Default.SetSkinStyle(SkinComboBoxEdit.Text, PaletteComboBoxEdit.Text);
+
+            ResetHealthBars();
         }
 
         private void CharComboBox_IndexChanged(object sender, EventArgs e)
@@ -654,12 +659,11 @@ namespace GameX
                         Control.Enabled = true;
 
                     CB.Text = "Disable";
-                    Terminal.WriteLine("Network module started sucessfully.");
                     return;
                 }
 
                 CB.Checked = false;
-                Terminal.WriteLine("No connection was found, check your internet connection and try again.");
+                Terminal.WriteLine("[App] No connection was found, check your internet connection and try again.");
                 return;
             }
 
@@ -679,7 +683,6 @@ namespace GameX
 
             CB.Text = "Enable";
             Network.FinishModule();
-            Terminal.WriteLine("Network module finished sucessfully.");
         }
 
         /* GameX Calls */
@@ -1275,8 +1278,8 @@ namespace GameX
                 // Health Bar //
                 HealthBars[i].Properties.Maximum = PlayerPresent ? Biohazard.Players[i].GetMaxHealth() : 1;
                 HealthBars[i].EditValue = PlayerPresent ? Biohazard.Players[i].GetHealth() : 1;
-                HealthBars[i].Properties.StartColor = PlayerPresent ? Color.FromArgb((int)(255.0 - (155.0 * PlayerHealthPercent)), (int)(0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(240, 240, 240);
-                HealthBars[i].Properties.EndColor = PlayerPresent ? Color.FromArgb((int)(255.0 - (155.0 * PlayerHealthPercent)), (int)(0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(240, 240, 240);
+                HealthBars[i].Properties.StartColor = PlayerPresent ? Color.FromArgb((int)(255.0 - (155.0 * PlayerHealthPercent)), (int)(0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(0, 255, 230);
+                HealthBars[i].Properties.EndColor = PlayerPresent ? Color.FromArgb((int)(255.0 - (155.0 * PlayerHealthPercent)), (int)(0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(0, 255, 230);
 
                 // Player Name //
                 PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (Biohazard.InGame() ? ((i == Biohazard.LocalPlayer()) ? Biohazard.LocalPlayerNick() : (PlayerPresent ? (Biohazard.Players[i].IsAI() ? "CPU AI" : "Connected") : "Disconnected")) : "Disconnected");

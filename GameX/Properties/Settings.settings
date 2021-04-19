@@ -9,7 +9,7 @@
       <Value Profile="(Default)">The Bezier</Value>
     </Setting>
     <Setting Name="Pallete" Description="Sets the color scheme for the skin applied." Type="System.String" Scope="User">
-      <Value Profile="(Default)">VS Dark</Value>
+      <Value Profile="(Default)">DefaultSkinPalette</Value>
     </Setting>
     <Setting Name="PlayerName" Type="System.String" Scope="User">
       <Value Profile="(Default)">PlayerName</Value>

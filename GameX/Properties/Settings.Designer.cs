@@ -61,7 +61,7 @@ namespace GameX.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Configuration.SettingsDescriptionAttribute("Sets the color scheme for the skin applied.")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("VS Dark")]
+        [global::System.Configuration.DefaultSettingValueAttribute("DefaultSkinPalette")]
         public string Pallete {
             get {
                 return ((string)(this["Pallete"]));

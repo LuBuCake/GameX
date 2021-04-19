@@ -137,6 +137,7 @@ namespace GameX.Base.Modules
             Target_Handle = OpenProcess((int)AccessLevel, false, Target_Process.Id);
             EnterDebugMode();
             ModuleStarted = true;
+            Terminal.WriteLine("[Memory] Module started successfully.");
         }
 
         public static void FinishModule()
@@ -147,6 +148,7 @@ namespace GameX.Base.Modules
             Target_Process = null;
             Target_Handle = IntPtr.Zero;
             ModuleStarted = false;
+            Terminal.WriteLine("[Memory] Module finished successfully.");
         }
 
         /*READ WRITE*/
@@ -250,7 +252,7 @@ namespace GameX.Base.Modules
             WriteRawAddress(Address, BitConverter.GetBytes(Value));
         }
 
-        /*MEMORY INJECTION (REQUIRES DEBUGMODE BECAUSE ITS CODE INJECTION DUH)*/
+        /*MEMORY INJECTION (REQUIRES DEBUGMODE)*/
 
         private static Dictionary<string, Detour> Detours { get; set; }
 
@@ -262,8 +264,8 @@ namespace GameX.Base.Modules
             }
             catch (Win32Exception)
             {
-                Terminal.WriteLine("Failed entering debug mode.");
-                Terminal.WriteLine("WARNING: Code injection is only allowed in Admin Mode, expect limitations in User Mode.");
+                Terminal.WriteLine("[Memory] Failed entering debug mode.");
+                Terminal.WriteLine("[Memory] WARNING: Code injection is only allowed in Admin Mode, expect limitations in User Mode.");
                 DebugMode = false;
                 return;
             }
@@ -273,7 +275,7 @@ namespace GameX.Base.Modules
             if (Detours == null)
                 Detours = new Dictionary<string, Detour>();
 
-            Terminal.WriteLine("Entered debug mode.");
+            Terminal.WriteLine("[Memory] Entered debug mode.");
         }
 
         public static void ExitDebugMode()
@@ -285,7 +287,7 @@ namespace GameX.Base.Modules
             Process.LeaveDebugMode();
             DebugMode = false;
 
-            Terminal.WriteLine("Exited debug mode.");
+            Terminal.WriteLine("[Memory] Exited debug mode.");
         }
 
         public static int ChangeProtection(int lpBaseAddress, int dwSize, int flNewProtect)
@@ -293,9 +295,9 @@ namespace GameX.Base.Modules
             bool Changed = VirtualProtectEx(Target_Handle, lpBaseAddress, dwSize, flNewProtect, out int lpflOldProtect);
 
             if (Changed)
-                Terminal.WriteLine($"Protection changed at 0x{lpBaseAddress.ToString("X")} successfully.");
+                Terminal.WriteLine($"[Memory] Protection successfully changed at {lpBaseAddress.ToString("X")}.");
             else
-                Terminal.WriteLine($"Protection change failed at 0x{lpBaseAddress.ToString("X")}.");
+                Terminal.WriteLine($"[Memory] Protection change failed at {lpBaseAddress.ToString("X")}.");
 
             return lpflOldProtect;
         }
@@ -368,17 +370,17 @@ namespace GameX.Base.Modules
             if (DetourActive(DetourName))
                 return GetDetour(DetourName);
 
-            Terminal.WriteLine($"Patching {CallAddress.ToString("X")} - for {DetourName}");
+            Terminal.WriteLine($"[Memory] Patching {CallAddress.ToString("X")} for {DetourName}.");
 
             int DetourAddress = VirtualAllocEx(Target_Handle, 0, DetourContent.Length, (int)MEMORY_INFORMATION.MEM_COMMIT | (int)MEMORY_INFORMATION.MEM_RESERVE, (int)MEMORY_PROTECTION.PAGE_EXECUTE_READ);
 
             if (DetourAddress == 0)
             {
-                Terminal.WriteLine($"WARNING: Memory allocation failed for {DetourName}, skipping.");
+                Terminal.WriteLine($"[Memory] WARNING: Memory allocation failed for {DetourName}, skipping.");
                 return null;
             }
 
-            Terminal.WriteLine($"{DetourName} patched! Memory allocated at {DetourAddress.ToString("X")}");
+            Terminal.WriteLine($"[Memory] {DetourName} patched! Memory allocated at {DetourAddress.ToString("X")}.");
 
             WriteRawAddress(CallAddress, DetourJump(CallAddress, DetourAddress, CallInstruction.Length));
             WriteRawAddress(DetourAddress, DetourContent);
