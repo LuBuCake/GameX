@@ -16,13 +16,6 @@ namespace GameX.Base.Modules
         private static string[] ConsoleTextInterfaces { get; set; }
         public static int ActiveInterface { get; private set; }
 
-        public enum ConsoleInterface
-        {
-            Console = 0,
-            Server = 1,
-            Client = 2
-        }
-
         public static void StartModule(App GameXRef)
         {
             Main = GameXRef;
@@ -66,7 +59,6 @@ namespace GameX.Base.Modules
                 Environment.NewLine + "App commands:",
                 "WriteJson::Chars - Writes the default json for each of the base characters, to load them restart the App.",
                 "WriteJson::Items - Writes the default json for each of the base items, to load them restart the App.",
-                "Reinject - Clears the app and undo game edits performing a reinject in the game's process.",
                 "Help - Shows all available commands.",
                 "FPS - Shows the current FPS.",
                 "FrameTime - Shows the last frametime.",
@@ -280,9 +272,6 @@ namespace GameX.Base.Modules
                 case "writejson" when Utility.RemoveWhiteSpace(Command[1].ToLower()) == "items":
                     WriteLine("Not implemented yet.");
                     break;
-                case "reinject":
-                    Main.Target_Exited(null, null);
-                    break;
                 case "help":
                     ShowCommands();
                     break;
@@ -316,10 +305,10 @@ namespace GameX.Base.Modules
             {
                 switch (ActiveInterface)
                 {
-                    case (int)ConsoleInterface.Console:
+                    case (int)Enums.ConsoleInterface.Console:
                         ProcessCommand(TE.Text);
                         break;
-                    case (int)ConsoleInterface.Server:
+                    case (int)Enums.ConsoleInterface.Server:
                         Network.Server_BroadcastMessage("[CHAT]" + $"{Main.PlayerNameTextEdit.Text}: " + TE.Text, "", true);
                         break;
                     default:
@@ -349,16 +338,49 @@ namespace GameX.Base.Modules
             ScrollToEnd();
         }
 
-        public static void WriteLine(string Output)
+        public static void WriteLine(string Output, Enums.MessageBoxType MessageBox = Enums.MessageBoxType.None)
         {
-            string Current = ConsoleTextInterfaces[(int)ConsoleInterface.Console];
+            if (MessageBox != Enums.MessageBoxType.None)
+            {
+                string Message = Output;
+
+                if (Message.Contains("[App] "))
+                    Message = Message.Replace("[App] ", "");
+                else if (Message.Contains("[Memory] "))
+                    Message = Message.Replace("[Memory] ", "");
+                else if (Message.Contains("[Biohazard] "))
+                    Message = Message.Replace("[Biohazard] ", "");
+                else if (Message.Contains("[Network] "))
+                    Message = Message.Replace("[Network] ", "");
+                else if (Message.Contains("[Server] "))
+                    Message = Message.Replace("[Server] ", "");
+                else if (Message.Contains("[Client] "))
+                    Message = Message.Replace("[Client] ", "");
+                else if (Message.Contains("[Console] "))
+                    Message = Message.Replace("[Console] ", "");
+
+                switch (MessageBox)
+                {
+                    case Enums.MessageBoxType.Error:
+                        Utility.MessageBox_Error(Message);
+                        break;
+                    case Enums.MessageBoxType.Information:
+                        Utility.MessageBox_Information(Message);
+                        break;
+                    case Enums.MessageBoxType.Warning:
+                        Utility.MessageBox_Warning(Message);
+                        break;
+                }
+            }
+
+            string Current = ConsoleTextInterfaces[(int)Enums.ConsoleInterface.Console];
 
             if (string.IsNullOrWhiteSpace(Current))
                 Current = Output;
             else
                 Current += Environment.NewLine + Output;
 
-            ConsoleTextInterfaces[(int)ConsoleInterface.Console] = Current;
+            ConsoleTextInterfaces[(int)Enums.ConsoleInterface.Console] = Current;
             Main.ConsoleOutputMemoEdit.Text = ConsoleTextInterfaces[ActiveInterface];
             ScrollToEnd();
         }

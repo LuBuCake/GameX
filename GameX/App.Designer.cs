@@ -116,11 +116,9 @@ namespace GameX
             this.BuddyServerIPLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.BuddyServerIPTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.NetworkModuleGP = new DevExpress.XtraEditors.GroupControl();
-            this.NetworkManagerButton = new DevExpress.XtraEditors.CheckButton();
             this.ServerManagerGP = new DevExpress.XtraEditors.GroupControl();
             this.ServerPortTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ServerPortLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.StartServerButton = new DevExpress.XtraEditors.CheckButton();
             this.TabPageSettingsGPApp = new DevExpress.XtraEditors.GroupControl();
             this.AboutPictureEdit = new DevExpress.XtraEditors.PictureEdit();
             this.AppSettingsGP = new DevExpress.XtraEditors.GroupControl();
@@ -141,6 +139,8 @@ namespace GameX
             this.ClearConsoleSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.ConsoleModeComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.ConsoleInputTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.StartServerButton = new DevExpress.XtraEditors.SimpleButton();
+            this.NetworkManagerButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -1390,26 +1390,12 @@ namespace GameX
             this.NetworkModuleGP.TabIndex = 0;
             this.NetworkModuleGP.Text = "Module";
             // 
-            // NetworkManagerButton
-            // 
-            this.NetworkManagerButton.AllowFocus = false;
-            this.NetworkManagerButton.Location = new System.Drawing.Point(9, 35);
-            this.NetworkManagerButton.Name = "NetworkManagerButton";
-            this.NetworkManagerButton.Size = new System.Drawing.Size(102, 23);
-            this.NetworkManagerButton.TabIndex = 0;
-            this.NetworkManagerButton.TabStop = false;
-            this.NetworkManagerButton.Text = "Enable";
-            this.NetworkManagerButton.ToolTip = "Enables or disables the Network module. It is needed in order to connect to or re" +
-    "ceive connections from other players.";
-            this.NetworkManagerButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.NetworkManagerButton.ToolTipTitle = "Network";
-            // 
             // ServerManagerGP
             // 
             this.ServerManagerGP.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.ServerManagerGP.Controls.Add(this.StartServerButton);
             this.ServerManagerGP.Controls.Add(this.ServerPortTextEdit);
             this.ServerManagerGP.Controls.Add(this.ServerPortLabelControl);
-            this.ServerManagerGP.Controls.Add(this.StartServerButton);
             this.ServerManagerGP.Location = new System.Drawing.Point(131, 30);
             this.ServerManagerGP.Name = "ServerManagerGP";
             this.ServerManagerGP.Size = new System.Drawing.Size(172, 69);
@@ -1439,20 +1425,6 @@ namespace GameX
             this.ServerPortLabelControl.Size = new System.Drawing.Size(24, 13);
             this.ServerPortLabelControl.TabIndex = 19;
             this.ServerPortLabelControl.Text = "Port:";
-            // 
-            // StartServerButton
-            // 
-            this.StartServerButton.AllowFocus = false;
-            this.StartServerButton.Enabled = false;
-            this.StartServerButton.Location = new System.Drawing.Point(93, 35);
-            this.StartServerButton.Name = "StartServerButton";
-            this.StartServerButton.Size = new System.Drawing.Size(73, 23);
-            this.StartServerButton.TabIndex = 0;
-            this.StartServerButton.TabStop = false;
-            this.StartServerButton.Text = "Open";
-            this.StartServerButton.ToolTip = "Starts a server at the specified port so your friends can join you.";
-            this.StartServerButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.StartServerButton.ToolTipTitle = "Server hosting";
             // 
             // TabPageSettingsGPApp
             // 
@@ -1698,6 +1670,33 @@ namespace GameX
             this.ConsoleInputTextEdit.Size = new System.Drawing.Size(454, 20);
             this.ConsoleInputTextEdit.TabIndex = 1;
             // 
+            // StartServerButton
+            // 
+            this.StartServerButton.AllowFocus = false;
+            this.StartServerButton.Enabled = false;
+            this.StartServerButton.Location = new System.Drawing.Point(93, 35);
+            this.StartServerButton.Name = "StartServerButton";
+            this.StartServerButton.Size = new System.Drawing.Size(73, 23);
+            this.StartServerButton.TabIndex = 20;
+            this.StartServerButton.TabStop = false;
+            this.StartServerButton.Text = "Open";
+            this.StartServerButton.ToolTip = "Connects to a server specified by the IP and Port.";
+            this.StartServerButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.StartServerButton.ToolTipTitle = "Server connection";
+            // 
+            // NetworkManagerButton
+            // 
+            this.NetworkManagerButton.AllowFocus = false;
+            this.NetworkManagerButton.Location = new System.Drawing.Point(9, 35);
+            this.NetworkManagerButton.Name = "NetworkManagerButton";
+            this.NetworkManagerButton.Size = new System.Drawing.Size(102, 23);
+            this.NetworkManagerButton.TabIndex = 0;
+            this.NetworkManagerButton.TabStop = false;
+            this.NetworkManagerButton.Text = "Enable";
+            this.NetworkManagerButton.ToolTip = "Connects to a server specified by the IP and Port.";
+            this.NetworkManagerButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.NetworkManagerButton.ToolTipTitle = "Server connection";
+            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1912,7 +1911,6 @@ namespace GameX
         public DevExpress.XtraEditors.GroupControl NetworkMasterGP;
         private DevExpress.XtraTab.XtraTabPage TabPageConsole;
         private DevExpress.XtraEditors.GroupControl ConsoleGP;
-        private DevExpress.XtraEditors.CheckButton NetworkManagerButton;
         public DevExpress.XtraEditors.TextEdit BuddyServerPortTextEdit;
         private DevExpress.XtraEditors.LabelControl BuddyServerPortLabelControl;
         private DevExpress.XtraEditors.GroupControl NetworkModuleGP;
@@ -1922,7 +1920,6 @@ namespace GameX
         private DevExpress.XtraEditors.LabelControl ServerPortLabelControl;
         private DevExpress.XtraEditors.GroupControl BuddyClientsGP;
         public DevExpress.XtraEditors.TextEdit ServerStatusTextEdit;
-        public DevExpress.XtraEditors.CheckButton StartServerButton;
         private DevExpress.XtraEditors.GroupControl P1ClientGP;
         private DevExpress.XtraEditors.GroupControl P2ClientGP;
         private DevExpress.XtraEditors.GroupControl P3ClientGP;
@@ -1937,6 +1934,8 @@ namespace GameX
         public DevExpress.XtraEditors.TextEdit PlayerNameTextEdit;
         public DevExpress.XtraEditors.TextEdit ConsoleInputTextEdit;
         public DevExpress.XtraEditors.MemoEdit ConsoleOutputMemoEdit;
+        public DevExpress.XtraEditors.SimpleButton StartServerButton;
+        private DevExpress.XtraEditors.SimpleButton NetworkManagerButton;
     }
 }
 

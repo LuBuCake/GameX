@@ -108,12 +108,12 @@
     <Compile Include="Base\Content\Interfaces.cs" />
     <Compile Include="Base\Content\Rates.cs" />
     <Compile Include="Base\Content\Design.cs" />
+    <Compile Include="Base\Helpers\Enums.cs" />
     <Compile Include="Game\Content\Miscellaneous.cs" />
     <Compile Include="Game\Modules\Biohazard.cs" />
     <Compile Include="Game\Modules\Player.cs" />
     <Compile Include="Game\Content\Characters.cs" />
     <Compile Include="Game\Types\Character.cs" />
-    <Compile Include="Base\Helpers\Security.cs" />
     <Compile Include="Base\Helpers\Utility.cs" />
     <Compile Include="Base\Helpers\Processes.cs" />
     <Compile Include="App.cs">
@@ -122,7 +122,7 @@
     <Compile Include="App.Designer.cs">
       <DependentUpon>App.cs</DependentUpon>
     </Compile>
-    <Compile Include="Base\Helpers\Messager.cs" />
+    <Compile Include="Base\Helpers\Peaker.cs" />
     <Compile Include="Base\Helpers\Serializer.cs" />
     <Compile Include="Base\Modules\Terminal.cs" />
     <Compile Include="Base\Modules\Keyboard.cs" />

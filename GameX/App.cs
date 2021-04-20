@@ -23,7 +23,7 @@ namespace GameX
     {
         /* App Init */
 
-        private Messager Peaker { get; set; }
+        private Peaker MsgPeaker { get; set; }
         private Stopwatch FrameElapser { get; set; }
         private Stopwatch CurTimeElapser { get; set; }
         public double FrameTime { get; private set; }
@@ -36,19 +36,19 @@ namespace GameX
         public App()
         {
             InitializeComponent();
-            Application_PostInitializeComponent();
+            Application_Init();
         }
 
         private void App_Load(object sender, EventArgs e)
         {
-            LoadControls();
+            Application_Load();
         }
 
         private void Application_Idle(object sender, EventArgs e)
         {
-            while (Peaker.IsApplicationIdle())
+            while (MsgPeaker.IsApplicationIdle())
             {
-                Application_Think();
+                Application_Update();
             }
         }
 
@@ -72,11 +72,11 @@ namespace GameX
             Keyboard.RemoveHook();
         }
 
-        private void Application_PostInitializeComponent()
+        private void Application_Init()
         {
             Target_Setup();
 
-            Peaker = new Messager();
+            MsgPeaker = new Peaker();
             FrameElapser = new Stopwatch();
             CurTimeElapser = new Stopwatch();
 
@@ -89,7 +89,12 @@ namespace GameX
             ConsoleInputTextEdit.Validating += Terminal.ValidateInput;
         }
 
-        private void Application_Think()
+        private void Application_Load()
+        {
+            SetupControls();
+        }
+
+        private void Application_Update()
         {
             if (!CurTimeElapser.IsRunning)
                 CurTimeElapser.Start();
@@ -99,7 +104,7 @@ namespace GameX
 
             TimeSpan Elapsed = FrameElapser.Elapsed;
 
-            if (!(Elapsed.TotalSeconds >= UpdateMode)) 
+            if (Elapsed.TotalSeconds < UpdateMode) 
                 return;
 
             CurTime = CurTimeElapser.Elapsed.TotalSeconds;
@@ -204,7 +209,7 @@ namespace GameX
             return true;
         }
 
-        public void Target_Exited(object sender, EventArgs e)
+        private void Target_Exited(object sender, EventArgs e)
         {
             Memory.FinishModule();
             Biohazard.FinishModule();
@@ -219,9 +224,9 @@ namespace GameX
             Terminal.WriteLine("[App] Runtime cleared successfully.");
         }
 
-        /* Event Handling & Loading */
+        /* Control Methods */
 
-        private void LoadControls()
+        private void SetupControls()
         {
             #region Controls
 
@@ -356,7 +361,7 @@ namespace GameX
             SaveSettingsButton.Click += Configuration_Save;
             LoadSettingsButton.Click += Configuration_Load;
 
-            NetworkManagerButton.CheckedChanged += StartNetwork_CheckedChanged;
+            NetworkManagerButton.Click += StartNetwork_Click;
             StartServerButton.Click += Network.StartServer_Click;
 
             BuddyServerConnectionButton.Click += Network.StartClient_Click;
@@ -417,8 +422,11 @@ namespace GameX
             foreach (CheckButton CB in CheckButtons)
             {
                 CB.Enabled = false;
+                CB.Checked = false;
             }
         }
+
+        /* Event Handlers */
 
         private void MasterTabPage_PageChanged(object sender, EventArgs e)
         {
@@ -619,9 +627,9 @@ namespace GameX
             }
         }
 
-        private async void StartNetwork_CheckedChanged(object sender, EventArgs e)
+        private async void StartNetwork_Click(object sender, EventArgs e)
         {
-            CheckButton CB = sender as CheckButton;
+            SimpleButton SB = sender as SimpleButton;
 
             object[] ToDisable =
             {
@@ -643,26 +651,25 @@ namespace GameX
                 P3ClientLabelControl
             };
 
-            if (CB.Checked)
+            if (!Network.ModuleStarted)
             {
-                CB.Enabled = false;
-                CB.Text = "Enabling";
+                SB.Enabled = false;
+                SB.Text = "Enabling";
 
                 await Task.Run(() => Network.StartModule(this));
 
-                CB.Enabled = true;
+                SB.Enabled = true;
 
                 if (Network.ModuleStarted)
                 {
                     foreach (dynamic Control in ToDisable)
                         Control.Enabled = true;
 
-                    CB.Text = "Disable";
+                    SB.Text = "Disable";
                     return;
                 }
 
-                CB.Checked = false;
-                Terminal.WriteLine("[App] No connection was found, check your internet connection and try again.");
+                Terminal.WriteLine("[App] No connection was found, check your internet connection and try again.", Enums.MessageBoxType.Error);
                 return;
             }
 
@@ -674,13 +681,13 @@ namespace GameX
                     Control.Text = "Connect";
             }
 
-            foreach (SimpleButton SB in DropButtons)
-                SB.Enabled = false;
+            foreach (SimpleButton SDB in DropButtons)
+                SDB.Enabled = false;
 
             foreach (LabelControl LC in ClientNames)
                 LC.Text = "No client connected";
 
-            CB.Text = "Enable";
+            SB.Text = "Enable";
             Network.FinishModule();
         }
 

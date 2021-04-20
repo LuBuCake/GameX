@@ -2,6 +2,7 @@
 using System;
 using System.Drawing;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace GameX.Base.Helpers
 {
@@ -9,9 +10,7 @@ namespace GameX.Base.Helpers
     {
         public static int Clamp(int Value, int Min, int Max)
         {
-            if (Value > Max) return Max;
-            else if (Value < Min) return Min;
-            return Value;
+            return Value > Max ? Max : Value < Min ? Min : Value;
         }
 
         public static bool CompareByteArray(byte[] Array1, byte[] Array2, int Length)
@@ -20,7 +19,7 @@ namespace GameX.Base.Helpers
                 return false;
 
             for (int i = 0; i < Length; i++)
-                if (Array1[i] != Array1[i])
+                if (Array1[i] != Array2[i])
                     return false;
 
             return true;
@@ -43,6 +42,21 @@ namespace GameX.Base.Helpers
                 Terminal.WriteLine($"Portrait file not found: {File}");
                 return null;
             }
+        }
+
+        public static void MessageBox_Information(string Message)
+        {
+            MessageBox.Show(Message, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public static void MessageBox_Error(string Message)
+        {
+            MessageBox.Show(Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        public static void MessageBox_Warning(string Message)
+        {
+            MessageBox.Show(Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using DevExpress.XtraEditors;
+using GameX.Base.Helpers;
 using WatsonTcp;
 
 namespace GameX.Base.Modules
@@ -109,7 +110,7 @@ namespace GameX.Base.Modules
         {
             if (!ModuleStarted)
             {
-                Terminal.WriteLine("[App] The Network module hasn't been enabled, enable it to start a server.");
+                Terminal.WriteLine("[App] The Network module hasn't been enabled, enable it to start a server.", Enums.MessageBoxType.Error);
                 return;
             }
 
@@ -123,7 +124,7 @@ namespace GameX.Base.Modules
         {
             if (Main.ServerPortTextEdit.Text == "")
             {
-                Terminal.WriteLine("[App] There is not server port specified, aborting.");
+                Terminal.WriteLine("[App] Please specify a server port.", Enums.MessageBoxType.Error);
                 return;
             }
 
@@ -131,7 +132,7 @@ namespace GameX.Base.Modules
 
             if (!PortParsed || Port > 65535 || Port < 0)
             {
-                Terminal.WriteLine("[App] Invalid port, please check your inputs.");
+                Terminal.WriteLine("[App] Invalid port, specify a port between 1 and 65535.", Enums.MessageBoxType.Error);
                 return;
             }
 
@@ -348,7 +349,7 @@ namespace GameX.Base.Modules
         {
             if (!ModuleStarted)
             {
-                Terminal.WriteLine("[App] The Network module hasn't been enabled, enable it to start a server.");
+                Terminal.WriteLine("[App] The Network module hasn't been enabled, enable it to start a server.", Enums.MessageBoxType.Error);
                 return;
             }
 
@@ -364,21 +365,33 @@ namespace GameX.Base.Modules
 
             if (Main.BuddyServerIPTextEdit.Text == "")
             {
-                Terminal.WriteLine("[App] No IP address specified, aborting.");
+                Terminal.WriteLine("[App] No IP address specified.", Enums.MessageBoxType.Error);
+                return;
+            }
+
+            if (Main.BuddyServerPortTextEdit.Text == "")
+            {
+                Terminal.WriteLine("[App] Please specify a server port.", Enums.MessageBoxType.Error);
                 return;
             }
 
             if (!IPAddress.TryParse(Main.BuddyServerIPTextEdit.Text, out IPAddress IP))
             {
-                Terminal.WriteLine("[App] Invalid IP specified, please check your inputs.");
+                Terminal.WriteLine("[App] The specified IP is invalid.", Enums.MessageBoxType.Error);
+                return;
+            }
+
+            if (IP.ToString() == "0.0.0.0" || IP.ToString() == "::0")
+            {
+                Terminal.WriteLine("[App] The specified IP is invalid.", Enums.MessageBoxType.Error);
                 return;
             }
 
             bool PortParsed = int.TryParse(Main.BuddyServerPortTextEdit.Text, out int Port);
 
-            if (!PortParsed || Port > 65535 || Port < 0)
+            if (!PortParsed || Port > 65535 || Port < 1)
             {
-                Terminal.WriteLine("[App] Invalid port, please check your inputs.");
+                Terminal.WriteLine("[App] The specified port is invalid, please specify one between 1 and 65535.", Enums.MessageBoxType.Error);
                 return;
             }
 
@@ -386,7 +399,7 @@ namespace GameX.Base.Modules
             {
                 if (Array.Exists(PrivateIPv4, AvailableIP => AvailableIP == Main.BuddyServerIPTextEdit.Text) && Main.BuddyServerPortTextEdit.Text == Main.ServerPortTextEdit.Text)
                 {
-                    Terminal.WriteLine("[Network] You cannot join yourself, please specify another IP:Port combination.");
+                    Terminal.WriteLine("[Network] You cannot join yourself, please specify another IP:Port combination.", Enums.MessageBoxType.Error);
                     return;
                 }
             }
@@ -419,6 +432,7 @@ namespace GameX.Base.Modules
                 BuddyServer?.Connector?.Dispose();
                 BuddyServer = null;
                 Terminal.WriteLine($"[Client] {Ex.Message}");
+                Utility.MessageBox_Information("No connection found at the specified IP:Port.");
                 return;
             }
 
@@ -445,7 +459,7 @@ namespace GameX.Base.Modules
 
         private static void Client_ServerConnected(object sender, ConnectionEventArgs args)
         {
-            Terminal.WriteLine($"[Client] Sucessfully connected to {args.IpPort}.");
+            Terminal.WriteLine($"[Client] Sucessfully connected to {args.IpPort}.", Enums.MessageBoxType.Information);
         }
 
         private static void Client_ServerDisconnected(object sender, DisconnectionEventArgs args)
@@ -469,7 +483,7 @@ namespace GameX.Base.Modules
                 if (Decoded.Contains("[CHAT]"))
                 {
                     Decoded = Decoded.Replace("[CHAT]", "");
-                    Terminal.WriteMessage(Decoded, (int)Terminal.ConsoleInterface.Client);
+                    Terminal.WriteMessage(Decoded, (int)Enums.ConsoleInterface.Client);
                     return;
                 }
             }
@@ -540,7 +554,7 @@ namespace GameX.Base.Modules
                 if (Message.Contains("[CHAT]"))
                     Message = Message.Replace("[CHAT]", "");
 
-                Terminal.WriteMessage(Message, (int)Terminal.ConsoleInterface.Server);
+                Terminal.WriteMessage(Message, (int)Enums.ConsoleInterface.Server);
             }
 
             if (SuppressTerminal || MessagesSent == 0)
@@ -588,7 +602,7 @@ namespace GameX.Base.Modules
                 if (Message.Contains("[CHAT]"))
                     Message = Message.Replace("[CHAT]", "");
 
-                Terminal.WriteMessage(Message, (int)Terminal.ConsoleInterface.Client);
+                Terminal.WriteMessage(Message, (int)Enums.ConsoleInterface.Client);
             }
 
             if (SuppressTerminal)
