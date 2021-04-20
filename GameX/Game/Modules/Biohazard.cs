@@ -9,7 +9,7 @@ namespace GameX.Game.Modules
 
         public static void StartModule()
         {
-            Players = new Player[]
+            Players = new[]
             {
                 new Player(0),
                 new Player(1),
@@ -18,12 +18,14 @@ namespace GameX.Game.Modules
             };
 
             ModuleStarted = true;
+            Terminal.WriteLine("[Biohazard] Module started successfully.");
         }
 
         public static void FinishModule()
         {
             Players = null;
             ModuleStarted = false;
+            Terminal.WriteLine("[Biohazard] Module finished successfully.");
         }
 
         public static void NoFileChecking(bool Enable)

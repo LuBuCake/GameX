@@ -282,6 +282,7 @@
 
 mkdir C:\Users\madne\Desktop\GameX\
 mkdir C:\Users\madne\Desktop\GameX\GameX\
+mkdir C:\Users\madne\Desktop\GameX\GameX\Binaries\
 
 xcopy $(ProjectDir)\ToGameX C:\Users\madne\Desktop\GameX\GameX /e /y
 xcopy $(TargetDir)\*.dll C:\Users\madne\Desktop\GameX\GameX\Binaries /y

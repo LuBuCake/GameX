@@ -1,14 +1,12 @@
-﻿using DevExpress.XtraEditors;
-using GameX.Base.Types;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using DevExpress.XtraEditors;
 using WatsonTcp;
 
 namespace GameX.Base.Modules
@@ -33,8 +31,7 @@ namespace GameX.Base.Modules
         public static WatsonTcpServer Server { get; set; }
         public static ServerConnected BuddyServer { get; set; }
         public static ClientConnected[] BuddyClients { get; private set; }
-        public static string PublicIPv4 { get; private set; }
-        public static string PrivateIPv4 { get; private set; }
+        public static string[] PrivateIPv4 { get; private set; }
         public static bool HasConnection { get; private set; }
 
         #region Utility
@@ -53,42 +50,13 @@ namespace GameX.Base.Modules
             }
         }
 
-        public static string MachinePublicIP()
+        public static string[] MachinePrivateIP()
         {
-            string address = "";
-            WebRequest request = WebRequest.Create("http://checkip.dyndns.org/");
-            using (WebResponse response = request.GetResponse())
-            using (StreamReader stream = new StreamReader(response.GetResponseStream()))
-            {
-                address = stream.ReadToEnd();
-            }
-
-            int first = address.IndexOf("Address: ") + 9;
-            int last = address.LastIndexOf("</body>");
-            address = address.Substring(first, last - first);
-
-            return address;
-        }
-
-        public static string MachinePrivateIP()
-        {
-            List<string> ipAddrList = new List<string>();
-
-            foreach (NetworkInterface item in NetworkInterface.GetAllNetworkInterfaces())
-            {
-                if (item.NetworkInterfaceType == NetworkInterfaceType.Ethernet && item.OperationalStatus == OperationalStatus.Up)
-                {
-                    foreach (UnicastIPAddressInformation ip in item.GetIPProperties().UnicastAddresses)
-                    {
-                        if (ip.Address.AddressFamily == AddressFamily.InterNetwork)
-                        {
-                            ipAddrList.Add(ip.Address.ToString());
-                        }
-                    }
-                }
-            }
-
-            return ipAddrList.ToArray().FirstOrDefault();
+            return (from item in NetworkInterface.GetAllNetworkInterfaces() 
+                where item.NetworkInterfaceType == NetworkInterfaceType.Ethernet && item.OperationalStatus == OperationalStatus.Up 
+                from ip in item.GetIPProperties().UnicastAddresses 
+                where ip.Address.AddressFamily == AddressFamily.InterNetwork 
+                select ip.Address.ToString()).ToArray();
         }
 
         #endregion
@@ -103,7 +71,6 @@ namespace GameX.Base.Modules
             if (HasConnection)
             {
                 BuddyClients = new ClientConnected[3];
-                PublicIPv4 = MachinePublicIP();
                 PrivateIPv4 = MachinePrivateIP();
                 ModuleStarted = true;
                 Terminal.WriteLine("[Network] Module started successfully.");
@@ -129,8 +96,7 @@ namespace GameX.Base.Modules
 
             Main = null;
             HasConnection = false;
-            PublicIPv4 = "";
-            PrivateIPv4 = "";
+            PrivateIPv4 = null;
             ModuleStarted = false;
             Terminal.WriteLine("[Network] Module finished successfully.");
         }
@@ -173,7 +139,7 @@ namespace GameX.Base.Modules
 
             try
             {
-                Server = new WatsonTcpServer(PrivateIPv4, Port);
+                Server = new WatsonTcpServer(null, Port);
                 Server.Events.ClientConnected += Server_ClientConnected;
                 Server.Events.ClientDisconnected += Server_ClientDisconnected;
                 Server.Events.MessageReceived += Server_MessageReceived;
@@ -201,7 +167,7 @@ namespace GameX.Base.Modules
             }
 
             Main.StartServerButton.Text = "Close";
-            Main.ServerStatusTextEdit.Text = $"Server sucessfully hosted at: {PrivateIPv4}:{Port}";
+            Main.ServerStatusTextEdit.Text = $"Server sucessfully hosted at the port: {Port}";
         }
 
         public static void StopServer(object sender, EventArgs e)
@@ -223,14 +189,14 @@ namespace GameX.Base.Modules
 
             try
             {
-                Terminal.WriteLine($"[Server] Sending PlayerName request to {args.IpPort}, waiting response.");
-                SyncResponse PlayerNameRequest = await Task.Run(() => Server.SendAndWait(5000, args.IpPort, "[NICKNAME]"));
+                Terminal.WriteLine($"[Server] Sending Player Name request to {args.IpPort}, waiting response.");
+                SyncResponse PlayerNameRequest = await Task.Run(() => Server.SendAndWait(5000, args.IpPort, "[PLAYERNAME]"));
                 PlayerName = Encoding.UTF8.GetString(PlayerNameRequest.Data);
-                Terminal.WriteLine($"[Server] PlayerName received from {args.IpPort}.");
+                Terminal.WriteLine($"[Server] Player Name received from {args.IpPort}.");
             }
             catch(Exception)
             {
-                Terminal.WriteLine($"[Server] PlayerName response from {args.IpPort} timed out, going with defaults.");
+                Terminal.WriteLine($"[Server] Player Name response from {args.IpPort} timed out, going with defaults.");
             }
 
             LabelControl[] ClientNames =
@@ -249,13 +215,13 @@ namespace GameX.Base.Modules
 
             for (int i = 0; i < 3; i++)
             {
-                if (BuddyClients[i] == null)
-                {
-                    BuddyClients[i] = new ClientConnected() { IP = args.IpPort, Index = i };
-                    ClientNames[i].Text = PlayerName;
-                    DropButtons[i].Enabled = true;
-                    break;
-                }
+                if (BuddyClients[i] != null) 
+                    continue;
+
+                BuddyClients[i] = new ClientConnected { IP = args.IpPort, Name = PlayerName, Index = i };
+                ClientNames[i].Text = PlayerName;
+                DropButtons[i].Enabled = true;
+                break;
             }
         }
 
@@ -277,12 +243,12 @@ namespace GameX.Base.Modules
 
             for (int i = 0; i < 3; i++)
             {
-                if (BuddyClients[i] != null && BuddyClients[i].IP == args.IpPort)
-                {
-                    BuddyClients[i] = null;
-                    ClientNames[i].Text = "No client connected";
-                    DropButtons[i].Enabled = false;
-                }
+                if (BuddyClients[i] == null || BuddyClients[i].IP != args.IpPort) 
+                    continue;
+
+                BuddyClients[i] = null;
+                ClientNames[i].Text = "No client connected";
+                DropButtons[i].Enabled = false;
             }
 
             Terminal.WriteLine($"[Server] The client {args.IpPort} has been disconnected, reason: {args.Reason}");
@@ -418,16 +384,16 @@ namespace GameX.Base.Modules
 
             if (Server != null)
             {
-                if (Main.BuddyServerIPTextEdit.Text == PrivateIPv4 && Main.BuddyServerPortTextEdit.Text == Main.ServerPortTextEdit.Text)
+                if (Array.Exists(PrivateIPv4, AvailableIP => AvailableIP == Main.BuddyServerIPTextEdit.Text) && Main.BuddyServerPortTextEdit.Text == Main.ServerPortTextEdit.Text)
                 {
-                    Terminal.WriteLine("[App] You cannot join yourself, please specify another IP:Port combination.");
+                    Terminal.WriteLine("[Network] You cannot join yourself, please specify another IP:Port combination.");
                     return;
                 }
             }
 
             try
             {
-                BuddyServer = new ServerConnected() { Connector = new WatsonTcpClient(IP.ToString(), Port), IP = $"{IP}:{Port}" };
+                BuddyServer = new ServerConnected { Connector = new WatsonTcpClient(IP.ToString(), Port), IP = $"{IP}:{Port}" };
                 BuddyServer.Connector.Events.ServerConnected += Client_ServerConnected;
                 BuddyServer.Connector.Events.ServerDisconnected += Client_ServerDisconnected;
                 BuddyServer.Connector.Events.MessageReceived += Client_MessageReceived;
@@ -517,9 +483,9 @@ namespace GameX.Base.Modules
             {
                 string Decoded = Encoding.UTF8.GetString(req.Data);
 
-                if (Decoded == "[NICKNAME]")
+                if (Decoded == "[PLAYERNAME]")
                 {
-                    Terminal.WriteLine($"[Client] PlayerName request received from {req.IpPort}, sending response back.");
+                    Terminal.WriteLine($"[Client] Player Name request received from {req.IpPort}, sending response back.");
                     return new SyncResponse(req, Main.PlayerNameTextEdit.Text);
                 }
             }
@@ -580,7 +546,7 @@ namespace GameX.Base.Modules
             if (SuppressTerminal || MessagesSent == 0)
                 return;
 
-            Terminal.WriteLine($"[Server] Message sucessfully sent to {clients.Count} client{(clients.Count > 1 ? "s" : "")}.");
+            Terminal.WriteLine($"[Server] Message sucessfully broadcasted to {clients.Count} client{(clients.Count > 1 ? "s" : "")}.");
         }
 
         public static void Server_SendMessage(string IPPort, string Message, bool SuppressTerminal = false)
@@ -628,7 +594,7 @@ namespace GameX.Base.Modules
             if (SuppressTerminal)
                 return;
 
-            Terminal.WriteLine($"[Client] Message sucessfully sent to the Server.");
+            Terminal.WriteLine("[Client] Message sucessfully sent to the Server.");
         }
 
         #endregion

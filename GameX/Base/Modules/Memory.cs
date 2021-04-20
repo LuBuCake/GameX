@@ -38,7 +38,7 @@ namespace GameX.Base.Modules
         public static extern bool IsWow64Process(IntPtr hProcess, out bool lpSystemInfo);
 
         [DllImport("user32.dll")]
-        static extern bool SetForegroundWindow(IntPtr hWnd);
+        public static extern bool SetForegroundWindow(IntPtr hWnd);
 
         public enum MEMORY_ACCESS
         {
@@ -295,9 +295,9 @@ namespace GameX.Base.Modules
             bool Changed = VirtualProtectEx(Target_Handle, lpBaseAddress, dwSize, flNewProtect, out int lpflOldProtect);
 
             if (Changed)
-                Terminal.WriteLine($"[Memory] Protection successfully changed at {lpBaseAddress.ToString("X")}.");
+                Terminal.WriteLine($"[Memory] Protection successfully changed at {lpBaseAddress:X}.");
             else
-                Terminal.WriteLine($"[Memory] Protection change failed at {lpBaseAddress.ToString("X")}.");
+                Terminal.WriteLine($"[Memory] Protection change failed at {lpBaseAddress:X}.");
 
             return lpflOldProtect;
         }
@@ -356,10 +356,7 @@ namespace GameX.Base.Modules
 
         public static bool DetourActive(string DetourName)
         {
-            if (Detours == null || !Detours.TryGetValue(DetourName, out Detour Detour))
-                return false;
-
-            return true;
+            return Detours != null && Detours.TryGetValue(DetourName, out _);
         }
 
         public static Detour CreateDetour(string DetourName, byte[] DetourContent, int CallAddress, byte[] CallInstruction, bool JumpBack = false, int JumpBackAddress = 0)
@@ -370,7 +367,7 @@ namespace GameX.Base.Modules
             if (DetourActive(DetourName))
                 return GetDetour(DetourName);
 
-            Terminal.WriteLine($"[Memory] Patching {CallAddress.ToString("X")} for {DetourName}.");
+            Terminal.WriteLine($"[Memory] Patching {CallAddress:X} for {DetourName}.");
 
             int DetourAddress = VirtualAllocEx(Target_Handle, 0, DetourContent.Length, (int)MEMORY_INFORMATION.MEM_COMMIT | (int)MEMORY_INFORMATION.MEM_RESERVE, (int)MEMORY_PROTECTION.PAGE_EXECUTE_READ);
 
@@ -380,7 +377,7 @@ namespace GameX.Base.Modules
                 return null;
             }
 
-            Terminal.WriteLine($"[Memory] {DetourName} patched! Memory allocated at {DetourAddress.ToString("X")}.");
+            Terminal.WriteLine($"[Memory] {DetourName} patched! Memory allocated at {DetourAddress:X}.");
 
             WriteRawAddress(CallAddress, DetourJump(CallAddress, DetourAddress, CallInstruction.Length));
             WriteRawAddress(DetourAddress, DetourContent);

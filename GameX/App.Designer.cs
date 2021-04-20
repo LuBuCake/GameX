@@ -1684,8 +1684,8 @@ namespace GameX
             this.ConsoleModeComboBoxEdit.Size = new System.Drawing.Size(111, 20);
             this.ConsoleModeComboBoxEdit.TabIndex = 2;
             this.ConsoleModeComboBoxEdit.TabStop = false;
-            this.ConsoleModeComboBoxEdit.ToolTip = "Changes the active interface, you can choose console for commands and debugs or o" +
-    "ne of the two available chats if connectd.";
+            this.ConsoleModeComboBoxEdit.ToolTip = "Changes the active interface, you can choose console for commands and logs or one" +
+    " of the two available chats if connectd.";
             this.ConsoleModeComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.ConsoleModeComboBoxEdit.ToolTipTitle = "Active interface";
             // 

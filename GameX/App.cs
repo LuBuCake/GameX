@@ -99,19 +99,19 @@ namespace GameX
 
             TimeSpan Elapsed = FrameElapser.Elapsed;
 
-            if (Elapsed.TotalSeconds >= UpdateMode)
-            {
-                CurTime = CurTimeElapser.Elapsed.TotalSeconds;
+            if (!(Elapsed.TotalSeconds >= UpdateMode)) 
+                return;
 
-                FrameElapser.Stop();
-                FrameElapser.Reset();
+            CurTime = CurTimeElapser.Elapsed.TotalSeconds;
 
-                FramesPerSecond = 1.0 / Elapsed.TotalSeconds;
-                FrameTime = 1.0 / FramesPerSecond;
+            FrameElapser.Stop();
+            FrameElapser.Reset();
 
-                if (Target_Handle() && Initialized)
-                    GameX_Update();
-            }
+            FramesPerSecond = 1.0 / Elapsed.TotalSeconds;
+            FrameTime = 1.0 / FramesPerSecond;
+
+            if (Target_Handle() && Initialized)
+                GameX_Update();
         }
 
         /* Target Processing */
@@ -140,11 +140,11 @@ namespace GameX
                 Initialized = false;
                 Text = "GameX - Resident Evil 5 / Biohazard 5 - Waiting game";
 
-                if (Target_Process != null)
-                {
-                    Terminal.WriteLine("[App] Game found, validating.");
-                    Text = "GameX - Resident Evil 5 / Biohazard 5 - Validanting";
-                }
+                if (Target_Process == null) 
+                    return Verified;
+
+                Terminal.WriteLine("[App] Game found, validating.");
+                Text = "GameX - Resident Evil 5 / Biohazard 5 - Validanting";
 
                 return Verified;
             }
@@ -334,13 +334,13 @@ namespace GameX
                 WeaponMode[Index].SelectedIndex = 0;
                 Handness[Index].SelectedIndex = 0;
 
-                if (Index < 3)
-                {
-                    NetworkPlayerIndexes[Index].Properties.Items.AddRange(Indexes.Available());
-                    NetworkPlayerIndexes[Index].SelectedIndex = 0;
+                if (Index == 3) 
+                    continue;
 
-                    DropButtons[Index].Click += Network.Server_DropClient;
-                }
+                NetworkPlayerIndexes[Index].Properties.Items.AddRange(Indexes.Available());
+                NetworkPlayerIndexes[Index].SelectedIndex = 0;
+
+                DropButtons[Index].Click += Network.Server_DropClient;
             }
 
             UpdateModeComboBoxEdit.Properties.Items.AddRange(Rates.Available());
@@ -361,7 +361,7 @@ namespace GameX
 
             BuddyServerConnectionButton.Click += Network.StartClient_Click;
 
-            MasterTabControl.TabIndexChanged += MasterTabPage_PageChanged;
+            MasterTabControl.SelectedPageChanged += MasterTabPage_PageChanged;
 
             ConsoleModeComboBoxEdit.Properties.Items.AddRange(Interfaces.Available());
             ConsoleModeComboBoxEdit.SelectedIndexChanged += Terminal.Interface_IndexChanged;
@@ -416,7 +416,7 @@ namespace GameX
 
             foreach (CheckButton CB in CheckButtons)
             {
-                CB.Enabled = DebugMode;
+                CB.Enabled = false;
             }
         }
 
@@ -425,11 +425,10 @@ namespace GameX
             XtraTabControl XTC = sender as XtraTabControl;
             XtraTabPage XTP = XTC.SelectedTabPage;
 
-            if (XTP.Name == "TabPageConsole")
-            {
-                ConsoleOutputMemoEdit.SelectionStart = ConsoleOutputMemoEdit.Text.Length;
-                ConsoleOutputMemoEdit.MaskBox.MaskBoxScrollToCaret();
-            }
+            if (XTP.Name != "TabPageConsole") 
+                return;
+
+            Terminal.ScrollToEnd();
         }
 
         private void Configuration_Save(object sender, EventArgs e)
@@ -567,7 +566,7 @@ namespace GameX
             ComboBoxEdit CBE = sender as ComboBoxEdit;
             int Index = int.Parse(CBE.Name[1].ToString()) - 1;
 
-            Biohazard.Players[Index].SetWeaponMode(CBE.SelectedIndex != 0 ? new byte[] { (byte)(CBE.SelectedItem as ListItem).Value } : new byte[] { (byte)Biohazard.Players[Index].GetDefaultWeaponMode() });
+            Biohazard.Players[Index].SetWeaponMode(CBE.SelectedIndex != 0 ? new[] { (byte)(CBE.SelectedItem as ListItem).Value } : new[] { (byte)Biohazard.Players[Index].GetDefaultWeaponMode() });
         }
 
         private void Handness_IndexChanged(object sender, EventArgs e)
@@ -578,7 +577,7 @@ namespace GameX
             ComboBoxEdit CBE = sender as ComboBoxEdit;
             int Index = int.Parse(CBE.Name[1].ToString()) - 1;
 
-            Biohazard.Players[Index].SetHandness(CBE.SelectedIndex != 0 ? new byte[] { (byte)(CBE.SelectedItem as ListItem).Value } : new byte[] { (byte)Biohazard.Players[Index].GetDefaultHandness() });
+            Biohazard.Players[Index].SetHandness(CBE.SelectedIndex != 0 ? new[] { (byte)(CBE.SelectedItem as ListItem).Value } : new[] { (byte)Biohazard.Players[Index].GetDefaultHandness() });
         }
 
         private void CharCosFreeze_CheckedChanged(object sender, EventArgs e)
@@ -624,7 +623,7 @@ namespace GameX
         {
             CheckButton CB = sender as CheckButton;
 
-            object[] Controls =
+            object[] ToDisable =
             {
                 BuddyServerConnectionButton,
                 StartServerButton
@@ -655,7 +654,7 @@ namespace GameX
 
                 if (Network.ModuleStarted)
                 {
-                    foreach (dynamic Control in Controls)
+                    foreach (dynamic Control in ToDisable)
                         Control.Enabled = true;
 
                     CB.Text = "Disable";
@@ -667,7 +666,7 @@ namespace GameX
                 return;
             }
 
-            foreach (dynamic Control in Controls)
+            foreach (dynamic Control in ToDisable)
             {
                 Control.Enabled = false;
 
@@ -699,9 +698,9 @@ namespace GameX
                 Biohazard.NoFileChecking(true);
                 Biohazard.OnlineCharSwapFixes(true);
             }
-            catch (Exception)
+            catch (Exception Ex)
             {
-                return;
+                Terminal.WriteLine(Ex.Message);
             }
         }
 
@@ -717,9 +716,9 @@ namespace GameX
 
                 Biohazard.FinishModule();
             }
-            catch (Exception)
+            catch (Exception Ex)
             {
-                return;
+                Terminal.WriteLine(Ex.Message);
             }
         }
 
@@ -734,7 +733,7 @@ namespace GameX
             }
             catch (Exception)
             {
-                return;
+                // ignore
             }
         }
 
@@ -1286,11 +1285,11 @@ namespace GameX
 
                 // Handness //
                 if (Handness[i].SelectedIndex > 0 && PlayerPresent)
-                    Biohazard.Players[i].SetHandness(new byte[] { (byte)(Handness[i].SelectedItem as ListItem).Value });
+                    Biohazard.Players[i].SetHandness(new[] { (byte)(Handness[i].SelectedItem as ListItem).Value });
 
                 // Weapon Mode //
                 if (WeaponMode[i].SelectedIndex > 0 && PlayerPresent)
-                    Biohazard.Players[i].SetWeaponMode(new byte[] { (byte)(WeaponMode[i].SelectedItem as ListItem).Value });
+                    Biohazard.Players[i].SetWeaponMode(new[] { (byte)(WeaponMode[i].SelectedItem as ListItem).Value });
 
                 if (Biohazard.GetActiveGameMode() == "Versus")
                     continue;
@@ -1303,9 +1302,11 @@ namespace GameX
                 if (Untargetable[i].Checked && PlayerPresent)
                     Biohazard.Players[i].SetUntargetable(true);
 
+                // Infinite Ammo //
                 if (InfiniteAmmo[i].Checked && PlayerPresent)
                     Biohazard.Players[i].SetInfiniteAmmo(true);
 
+                // Rapidfire //
                 if (RapidFire[i].Checked && PlayerPresent)
                     Biohazard.Players[i].SetRapidFire(true);
             }
