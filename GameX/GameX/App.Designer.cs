@@ -116,7 +116,9 @@ namespace GameX
             this.BuddyServerIPLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.BuddyServerIPTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.NetworkModuleGP = new DevExpress.XtraEditors.GroupControl();
+            this.NetworkManagerButton = new DevExpress.XtraEditors.SimpleButton();
             this.ServerManagerGP = new DevExpress.XtraEditors.GroupControl();
+            this.StartServerButton = new DevExpress.XtraEditors.SimpleButton();
             this.ServerPortTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ServerPortLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.TabPageSettingsGPApp = new DevExpress.XtraEditors.GroupControl();
@@ -139,8 +141,6 @@ namespace GameX
             this.ClearConsoleSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.ConsoleModeComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.ConsoleInputTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.StartServerButton = new DevExpress.XtraEditors.SimpleButton();
-            this.NetworkManagerButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -478,13 +478,13 @@ namespace GameX
             this.P4HealthBar.Properties.AllowFocused = false;
             this.P4HealthBar.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.P4HealthBar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.P4HealthBar.Properties.EndColor = System.Drawing.Color.Lime;
+            this.P4HealthBar.Properties.EndColor = System.Drawing.Color.White;
             this.P4HealthBar.Properties.LookAndFeel.SkinName = "Visual Studio 2013 Dark";
             this.P4HealthBar.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.P4HealthBar.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.P4HealthBar.Properties.Maximum = 1;
             this.P4HealthBar.Properties.ProgressKind = DevExpress.XtraEditors.Controls.ProgressKind.Vertical;
-            this.P4HealthBar.Properties.StartColor = System.Drawing.Color.Lime;
+            this.P4HealthBar.Properties.StartColor = System.Drawing.Color.White;
             this.P4HealthBar.Size = new System.Drawing.Size(12, 168);
             this.P4HealthBar.TabIndex = 0;
             this.P4HealthBar.ToolTip = "Displays the respective player\'s health in a fancy way.";
@@ -685,13 +685,13 @@ namespace GameX
             this.P3HealthBar.Properties.AllowFocused = false;
             this.P3HealthBar.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.P3HealthBar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.P3HealthBar.Properties.EndColor = System.Drawing.Color.Lime;
+            this.P3HealthBar.Properties.EndColor = System.Drawing.Color.White;
             this.P3HealthBar.Properties.LookAndFeel.SkinName = "Visual Studio 2013 Dark";
             this.P3HealthBar.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.P3HealthBar.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.P3HealthBar.Properties.Maximum = 1;
             this.P3HealthBar.Properties.ProgressKind = DevExpress.XtraEditors.Controls.ProgressKind.Vertical;
-            this.P3HealthBar.Properties.StartColor = System.Drawing.Color.Lime;
+            this.P3HealthBar.Properties.StartColor = System.Drawing.Color.White;
             this.P3HealthBar.Size = new System.Drawing.Size(12, 168);
             this.P3HealthBar.TabIndex = 0;
             this.P3HealthBar.ToolTip = "Displays the respective player\'s health in a fancy way.";
@@ -892,13 +892,13 @@ namespace GameX
             this.P2HealthBar.Properties.AllowFocused = false;
             this.P2HealthBar.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.P2HealthBar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.P2HealthBar.Properties.EndColor = System.Drawing.Color.Lime;
+            this.P2HealthBar.Properties.EndColor = System.Drawing.Color.White;
             this.P2HealthBar.Properties.LookAndFeel.SkinName = "Visual Studio 2013 Dark";
             this.P2HealthBar.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.P2HealthBar.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.P2HealthBar.Properties.Maximum = 1;
             this.P2HealthBar.Properties.ProgressKind = DevExpress.XtraEditors.Controls.ProgressKind.Vertical;
-            this.P2HealthBar.Properties.StartColor = System.Drawing.Color.Lime;
+            this.P2HealthBar.Properties.StartColor = System.Drawing.Color.White;
             this.P2HealthBar.Size = new System.Drawing.Size(12, 168);
             this.P2HealthBar.TabIndex = 0;
             this.P2HealthBar.ToolTip = "Displays the respective player\'s health in a fancy way.";
@@ -1085,13 +1085,13 @@ namespace GameX
             this.P1HealthBar.Properties.AllowFocused = false;
             this.P1HealthBar.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.P1HealthBar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.P1HealthBar.Properties.EndColor = System.Drawing.Color.Lime;
+            this.P1HealthBar.Properties.EndColor = System.Drawing.Color.White;
             this.P1HealthBar.Properties.LookAndFeel.SkinName = "Visual Studio 2013 Dark";
             this.P1HealthBar.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.P1HealthBar.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.P1HealthBar.Properties.Maximum = 1;
             this.P1HealthBar.Properties.ProgressKind = DevExpress.XtraEditors.Controls.ProgressKind.Vertical;
-            this.P1HealthBar.Properties.StartColor = System.Drawing.Color.Lime;
+            this.P1HealthBar.Properties.StartColor = System.Drawing.Color.White;
             this.P1HealthBar.Size = new System.Drawing.Size(12, 168);
             this.P1HealthBar.TabIndex = 0;
             this.P1HealthBar.ToolTip = "Displays the respective player\'s health in a fancy way.";
@@ -1390,6 +1390,19 @@ namespace GameX
             this.NetworkModuleGP.TabIndex = 0;
             this.NetworkModuleGP.Text = "Module";
             // 
+            // NetworkManagerButton
+            // 
+            this.NetworkManagerButton.AllowFocus = false;
+            this.NetworkManagerButton.Location = new System.Drawing.Point(9, 35);
+            this.NetworkManagerButton.Name = "NetworkManagerButton";
+            this.NetworkManagerButton.Size = new System.Drawing.Size(102, 23);
+            this.NetworkManagerButton.TabIndex = 0;
+            this.NetworkManagerButton.TabStop = false;
+            this.NetworkManagerButton.Text = "Enable";
+            this.NetworkManagerButton.ToolTip = "Connects to a server specified by the IP and Port.";
+            this.NetworkManagerButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.NetworkManagerButton.ToolTipTitle = "Server connection";
+            // 
             // ServerManagerGP
             // 
             this.ServerManagerGP.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
@@ -1401,6 +1414,20 @@ namespace GameX
             this.ServerManagerGP.Size = new System.Drawing.Size(172, 69);
             this.ServerManagerGP.TabIndex = 0;
             this.ServerManagerGP.Text = "Server";
+            // 
+            // StartServerButton
+            // 
+            this.StartServerButton.AllowFocus = false;
+            this.StartServerButton.Enabled = false;
+            this.StartServerButton.Location = new System.Drawing.Point(93, 35);
+            this.StartServerButton.Name = "StartServerButton";
+            this.StartServerButton.Size = new System.Drawing.Size(73, 23);
+            this.StartServerButton.TabIndex = 20;
+            this.StartServerButton.TabStop = false;
+            this.StartServerButton.Text = "Open";
+            this.StartServerButton.ToolTip = "Connects to a server specified by the IP and Port.";
+            this.StartServerButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.StartServerButton.ToolTipTitle = "Server connection";
             // 
             // ServerPortTextEdit
             // 
@@ -1669,33 +1696,6 @@ namespace GameX
             this.ConsoleInputTextEdit.Properties.ValidateOnEnterKey = true;
             this.ConsoleInputTextEdit.Size = new System.Drawing.Size(454, 20);
             this.ConsoleInputTextEdit.TabIndex = 1;
-            // 
-            // StartServerButton
-            // 
-            this.StartServerButton.AllowFocus = false;
-            this.StartServerButton.Enabled = false;
-            this.StartServerButton.Location = new System.Drawing.Point(93, 35);
-            this.StartServerButton.Name = "StartServerButton";
-            this.StartServerButton.Size = new System.Drawing.Size(73, 23);
-            this.StartServerButton.TabIndex = 20;
-            this.StartServerButton.TabStop = false;
-            this.StartServerButton.Text = "Open";
-            this.StartServerButton.ToolTip = "Connects to a server specified by the IP and Port.";
-            this.StartServerButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.StartServerButton.ToolTipTitle = "Server connection";
-            // 
-            // NetworkManagerButton
-            // 
-            this.NetworkManagerButton.AllowFocus = false;
-            this.NetworkManagerButton.Location = new System.Drawing.Point(9, 35);
-            this.NetworkManagerButton.Name = "NetworkManagerButton";
-            this.NetworkManagerButton.Size = new System.Drawing.Size(102, 23);
-            this.NetworkManagerButton.TabIndex = 0;
-            this.NetworkManagerButton.TabStop = false;
-            this.NetworkManagerButton.Text = "Enable";
-            this.NetworkManagerButton.ToolTip = "Connects to a server specified by the IP and Port.";
-            this.NetworkManagerButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.NetworkManagerButton.ToolTipTitle = "Server connection";
             // 
             // App
             // 
