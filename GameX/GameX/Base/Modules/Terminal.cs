@@ -4,6 +4,7 @@ using GameX.Game.Modules;
 using GameX.Base.Helpers;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using GameX.Base.Types;
@@ -43,7 +44,7 @@ namespace GameX.Base.Modules
         public static void ScrollToEnd()
         {
             Main.ConsoleOutputMemoEdit.SelectionStart = Main.ConsoleOutputMemoEdit.Text.Length;
-            Main.ConsoleOutputMemoEdit.MaskBox.MaskBoxScrollToCaret();
+            Main.ConsoleOutputMemoEdit.MaskBox?.MaskBoxScrollToCaret();
         }
 
         private static void ShowCommands()
@@ -82,6 +83,53 @@ namespace GameX.Base.Modules
 
             foreach (string Command in Commands)
                 WriteLine(Command);
+        }
+
+        private static bool ProcessDevCommand(string[] Command)
+        {
+            switch (Command[0])
+            {
+                case "encodeimage":
+                {
+                    string CurrentDirectory = $"{Directory.GetCurrentDirectory()}/";
+                    DirectoryInfo DirInfor = new DirectoryInfo(CurrentDirectory);
+                    FileInfo[] ImageFiles = DirInfor.GetFiles("*.png");
+
+                    if (ImageFiles.Length <= 0)
+                    {
+                        WriteLine("[App] No files found with the specified extension.");
+                        return true;
+                    }
+
+                    foreach (FileInfo ImageFile in ImageFiles)
+                    {
+                        Encoder.EncodeFile(CurrentDirectory + ImageFile.Name, ".png");
+                    }
+
+                    return true;
+                }
+                case "decodeimage":
+                {
+                    string CurrentDirectory = $"{Directory.GetCurrentDirectory()}/";
+                    DirectoryInfo DirInfor = new DirectoryInfo(CurrentDirectory);
+                    FileInfo[] ImageFiles = DirInfor.GetFiles("*.eia");
+
+                    if (ImageFiles.Length <= 0)
+                    {
+                        WriteLine("[App] No files found with the specified extension.");
+                        return true;
+                    }
+
+                    foreach (FileInfo ImageFile in ImageFiles)
+                    {
+                        Encoder.DecodeFile(CurrentDirectory + ImageFile.Name, ".eia");
+                    }
+
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         private static bool ProcessGameCommand(string[] Command)
@@ -289,7 +337,7 @@ namespace GameX.Base.Modules
                     break;
                 default:
                 {
-                    if (!ProcessGameCommand(Command) && !ProcessNetworkCommand(Command) && !ProcessServerCommand(Command) && !ProcessClientCommand(Command))
+                    if (!ProcessDevCommand(Command) && !ProcessGameCommand(Command) && !ProcessNetworkCommand(Command) && !ProcessServerCommand(Command) && !ProcessClientCommand(Command))
                         WriteLine("[Console] Unknown or incorrect use of command. Type Help to see all available commands and their syntax.");
 
                     break;

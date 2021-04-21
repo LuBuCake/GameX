@@ -374,12 +374,12 @@ namespace GameX
 
             ClearConsoleSimpleButton.Click += Terminal.ClearConsole_Click;
 
-            ResetHealthBars();
-
-            Image Logo = Utility.GetImageFromFile(@"GameX/Resources/Images/App/logo.png");
+            Image Logo = Utility.GetImageFromStream(@"GameX/Resources/Images/Application/logo.eia");
 
             if (Logo != null)
                 AboutPictureEdit.Image = Logo;
+
+            ResetHealthBars();
 
             Terminal.WriteLine("[App] App initialized.");
             Configuration_Load(null, null);
@@ -401,8 +401,8 @@ namespace GameX
                 Bar.Properties.Minimum = 0;
                 Bar.EditValue = 1;
                 Bar.BackColor = CommonSkins.GetSkin(UserLookAndFeel.Default).TranslateColor(SystemColors.Window);
-                Bar.Properties.StartColor = Color.FromArgb(0, 255, 230);
-                Bar.Properties.EndColor = Color.FromArgb(0, 255, 230);
+                Bar.Properties.StartColor = Color.FromArgb(0, 0, 0, 0);
+                Bar.Properties.EndColor = Color.FromArgb(0, 0, 0, 0);
             }
         }
 
@@ -669,7 +669,7 @@ namespace GameX
                     return;
                 }
 
-                Terminal.WriteLine("[App] No connection was found, check your internet connection and try again.", Enums.MessageBoxType.Error);
+                Terminal.WriteLine("[App] The connection response was either null or too slow, please check your internet and try again.", Enums.MessageBoxType.Error);
                 return;
             }
 

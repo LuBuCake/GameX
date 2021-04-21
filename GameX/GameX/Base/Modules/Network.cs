@@ -37,7 +37,7 @@ namespace GameX.Base.Modules
 
         #region Utility
 
-        public static bool TestConnection(string HostNameOrAddress, int Timeout = 100)
+        public static bool TestConnection(string HostNameOrAddress, int Timeout = 500)
         {
             try
             {

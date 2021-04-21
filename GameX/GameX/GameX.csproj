@@ -108,6 +108,7 @@
     <Compile Include="Base\Content\Interfaces.cs" />
     <Compile Include="Base\Content\Rates.cs" />
     <Compile Include="Base\Content\Design.cs" />
+    <Compile Include="Base\Helpers\Encoder.cs" />
     <Compile Include="Base\Helpers\Enums.cs" />
     <Compile Include="Game\Content\Miscellaneous.cs" />
     <Compile Include="Game\Modules\Biohazard.cs" />
@@ -262,6 +263,7 @@
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Logo.png" />
     <Content Include="system_control_panel_15843.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -278,7 +280,13 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>rd /s /q C:\Users\madne\Desktop\GameX\
+    <PostBuildEvent>if $(ConfigurationName) == Debug (
+  rd /s /q $(TargetDir)\GameX\
+  mkdir $(TargetDir)\GameX\
+  xcopy $(ProjectDir)\ToGameX $(TargetDir)\GameX\ /e /y
+)
+
+rd /s /q C:\Users\madne\Desktop\GameX\
 
 mkdir C:\Users\madne\Desktop\GameX\
 mkdir C:\Users\madne\Desktop\GameX\GameX\
@@ -288,14 +296,15 @@ xcopy $(ProjectDir)\ToGameX C:\Users\madne\Desktop\GameX\GameX /e /y
 xcopy $(TargetDir)\*.dll C:\Users\madne\Desktop\GameX\GameX\Binaries /y
 
 xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\GameX /y
-xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\GameX /y</PostBuildEvent>
+xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\GameX /y
+
+if $(ConfigurationName) == Release (
+  rd /s /q $(TargetDir)\
+)</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PreBuildEvent>rd /s /q $(TargetDir)\GameX\
-
-mkdir $(TargetDir)\GameX\
-
-xcopy $(ProjectDir)\ToGameX $(TargetDir)\GameX\ /e /y</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

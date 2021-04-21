@@ -1,6 +1,7 @@
 ﻿using GameX.Base.Modules;
 using System;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -39,7 +40,21 @@ namespace GameX.Base.Helpers
             }
             catch (Exception)
             {
-                Terminal.WriteLine($"Portrait file not found: {File}");
+                Terminal.WriteLine($"Image file not found: {File}");
+                return null;
+            }
+        }
+
+        public static Image GetImageFromStream(string File)
+        {
+            try
+            {
+                Image img = Image.FromStream(new MemoryStream(Encoder.GetDecodedStream(File)));
+                return img;
+            }
+            catch (Exception)
+            {
+                Terminal.WriteLine($"Image file not found: {File}");
                 return null;
             }
         }

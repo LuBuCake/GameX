@@ -1142,8 +1142,8 @@ namespace GameX
             this.ServerStatusTextEdit.Size = new System.Drawing.Size(283, 20);
             this.ServerStatusTextEdit.TabIndex = 0;
             this.ServerStatusTextEdit.TabStop = false;
-            this.ServerStatusTextEdit.ToolTip = "If the server is running, shows the \"IPAddress:Port\" that your friends can use to" +
-    " join you.";
+            this.ServerStatusTextEdit.ToolTip = "Shows the server status, type \"GetIP\" in the console to get the available IPs and" +
+    " pair it with the shown Port for a connection.";
             this.ServerStatusTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.ServerStatusTextEdit.ToolTipTitle = "Server Info";
             // 
@@ -1464,7 +1464,6 @@ namespace GameX
             this.TabPageSettingsGPApp.Name = "TabPageSettingsGPApp";
             this.TabPageSettingsGPApp.Size = new System.Drawing.Size(308, 418);
             this.TabPageSettingsGPApp.TabIndex = 0;
-            this.TabPageSettingsGPApp.Text = "GameX v1.00 - Copyright © LuBuCake 2021";
             // 
             // AboutPictureEdit
             // 
@@ -1475,7 +1474,7 @@ namespace GameX
             this.AboutPictureEdit.Properties.ReadOnly = true;
             this.AboutPictureEdit.Properties.ShowMenu = false;
             this.AboutPictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.AboutPictureEdit.Size = new System.Drawing.Size(298, 80);
+            this.AboutPictureEdit.Size = new System.Drawing.Size(298, 69);
             this.AboutPictureEdit.TabIndex = 0;
             this.AboutPictureEdit.UseDirectXPaint = DevExpress.Utils.DefaultBoolean.True;
             // 
@@ -1483,7 +1482,7 @@ namespace GameX
             // 
             this.AppSettingsGP.Controls.Add(this.MiscSettingsGP);
             this.AppSettingsGP.Controls.Add(this.LoadSaveGP);
-            this.AppSettingsGP.Location = new System.Drawing.Point(5, 114);
+            this.AppSettingsGP.Location = new System.Drawing.Point(5, 293);
             this.AppSettingsGP.Name = "AppSettingsGP";
             this.AppSettingsGP.Size = new System.Drawing.Size(298, 120);
             this.AppSettingsGP.TabIndex = 0;
@@ -1529,14 +1528,14 @@ namespace GameX
             // 
             // UpdateModeComboBoxEdit
             // 
-            this.UpdateModeComboBoxEdit.Location = new System.Drawing.Point(83, 7);
+            this.UpdateModeComboBoxEdit.Location = new System.Drawing.Point(54, 7);
             this.UpdateModeComboBoxEdit.Name = "UpdateModeComboBoxEdit";
             this.UpdateModeComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
             this.UpdateModeComboBoxEdit.Properties.AllowFocused = false;
             this.UpdateModeComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.UpdateModeComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.UpdateModeComboBoxEdit.Size = new System.Drawing.Size(82, 20);
+            this.UpdateModeComboBoxEdit.Size = new System.Drawing.Size(111, 20);
             this.UpdateModeComboBoxEdit.TabIndex = 0;
             this.UpdateModeComboBoxEdit.TabStop = false;
             this.UpdateModeComboBoxEdit.ToolTip = "Sets the update rate for the main loop system. Aways leave the Update Rate greate" +
@@ -1548,9 +1547,9 @@ namespace GameX
             // 
             this.UpdateRateLabelControl.Location = new System.Drawing.Point(10, 10);
             this.UpdateRateLabelControl.Name = "UpdateRateLabelControl";
-            this.UpdateRateLabelControl.Size = new System.Drawing.Size(67, 13);
+            this.UpdateRateLabelControl.Size = new System.Drawing.Size(26, 13);
             this.UpdateRateLabelControl.TabIndex = 0;
-            this.UpdateRateLabelControl.Text = "Update Rate:";
+            this.UpdateRateLabelControl.Text = "Rate:";
             // 
             // SkinLabelControl
             // 
@@ -1618,6 +1617,7 @@ namespace GameX
             // SaveSettingsButton
             // 
             this.SaveSettingsButton.AllowFocus = false;
+            this.SaveSettingsButton.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.SaveSettingsButton.Location = new System.Drawing.Point(5, 30);
             this.SaveSettingsButton.Name = "SaveSettingsButton";
             this.SaveSettingsButton.Size = new System.Drawing.Size(102, 23);
