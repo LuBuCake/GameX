@@ -5,14 +5,11 @@
     <Setting Name="UpdateRate" Description="Update Mode for the Engine" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1</Value>
     </Setting>
-    <Setting Name="Skin" Description="Sets the skin scheme for the application." Type="System.String" Scope="User">
-      <Value Profile="(Default)">The Bezier</Value>
-    </Setting>
-    <Setting Name="Pallete" Description="Sets the color scheme for the skin applied." Type="System.String" Scope="User">
-      <Value Profile="(Default)">DefaultSkinPalette</Value>
+    <Setting Name="Skin" Description="Sets the color scheme for the skin applied." Type="System.String" Scope="User">
+      <Value Profile="(Default)">VS Dark</Value>
     </Setting>
     <Setting Name="PlayerName" Description="The name that will be networked betweem players" Type="System.String" Scope="User">
-      <Value Profile="(Default)">PlayerName</Value>
+      <Value Profile="(Default)">Player</Value>
     </Setting>
   </Settings>
 </SettingsFile>

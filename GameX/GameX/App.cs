@@ -367,11 +367,9 @@ namespace GameX
             UpdateModeComboBoxEdit.SelectedIndexChanged += UpdateMode_IndexChanged;
             UpdateModeComboBoxEdit.SelectedIndex = 1;
 
-            SkinComboBoxEdit.Properties.Items.AddRange(Design.AllSkins());
-            SkinComboBoxEdit.SelectedIndexChanged += Skin_IndexChanged;
-            SkinComboBoxEdit.SelectedIndex = 0;
-
+            PaletteComboBoxEdit.Properties.Items.AddRange(Design.AllPaletts("The Bezier"));
             PaletteComboBoxEdit.SelectedIndexChanged += Palette_IndexChanged;
+            PaletteComboBoxEdit.SelectedIndex = 0;
 
             SaveSettingsButton.Click += Configuration_Save;
             LoadSettingsButton.Click += Configuration_Load;
@@ -389,15 +387,29 @@ namespace GameX
 
             ClearConsoleSimpleButton.Click += Terminal.ClearConsole_Click;
 
-            Image Logo = Utility.GetImageFromStream(@"GameX/Resources/Images/Application/logo.eia");
-
-            if (Logo != null)
-                AboutPictureEdit.Image = Logo;
-
             ResetHealthBars();
+            SetLogo();
 
             Terminal.WriteLine("[App] App initialized.");
             Configuration_Load(null, null);
+        }
+
+        private void SetLogo()
+        {
+            Color Window = CommonSkins.GetSkin(UserLookAndFeel.Default).TranslateColor(SystemColors.Window);
+            int total = Window.R + Window.G + Window.B;
+
+            Image LogoB = Utility.GetImageFromStream(@"GameX/Resources/Images/Application/logob.eia");
+            Image LogoW = Utility.GetImageFromStream(@"GameX/Resources/Images/Application/logow.eia");
+
+            if (total > 380 && LogoB != null)
+            {
+                AboutPictureEdit.Image = LogoB;
+            }
+            else if (total < 380 && LogoW != null)
+            {
+                AboutPictureEdit.Image = LogoW;
+            }
         }
 
         private void ResetHealthBars()
@@ -493,8 +505,7 @@ namespace GameX
         private void Configuration_Save(object sender, EventArgs e)
         {
             Properties.Settings.Default.UpdateRate = UpdateModeComboBoxEdit.SelectedIndex;
-            Properties.Settings.Default.Skin = UserLookAndFeel.Default.ActiveSkinName;
-            Properties.Settings.Default.Pallete = UserLookAndFeel.Default.ActiveSvgPaletteName;
+            Properties.Settings.Default.Skin = UserLookAndFeel.Default.ActiveSvgPaletteName;
             Properties.Settings.Default.PlayerName = PlayerNameTextEdit.Text;
             Properties.Settings.Default.Save();
 
@@ -505,19 +516,10 @@ namespace GameX
         {
             UpdateModeComboBoxEdit.SelectedIndex = Properties.Settings.Default.UpdateRate;
 
-            foreach (ListItem Skin in SkinComboBoxEdit.Properties.Items)
+            foreach (ListItem Pallete in PaletteComboBoxEdit.Properties.Items)
             {
-                if (Skin.Text == Properties.Settings.Default.Skin)
-                    SkinComboBoxEdit.SelectedItem = Skin;
-            }
-
-            if (PaletteComboBoxEdit.Enabled)
-            {
-                foreach (ListItem Pallete in PaletteComboBoxEdit.Properties.Items)
-                {
-                    if (Pallete.Text == Properties.Settings.Default.Pallete)
-                        PaletteComboBoxEdit.SelectedItem = Pallete;
-                }
+                if (Pallete.Text == Properties.Settings.Default.Skin)
+                    PaletteComboBoxEdit.SelectedItem = Pallete;
             }
 
             PlayerNameTextEdit.Text = Properties.Settings.Default.PlayerName;
@@ -530,39 +532,15 @@ namespace GameX
             UpdateMode = 1.0 / (UpdateModeComboBoxEdit.SelectedItem as ListItem).Value;
         }
 
-        private void Skin_IndexChanged(object sender, EventArgs e)
-        {
-            UserLookAndFeel.Default.SetSkinStyle(SkinComboBoxEdit.Text);
-
-            PaletteComboBoxEdit.Properties.Items.Clear();
-
-            string Skin = SkinComboBoxEdit.Text;
-
-            if (Skin == "The Bezier" || Skin == "Basic" || Skin == "Office 2019 Colorful" || Skin == "Office 2019 Black" || Skin == "Office 2019 White")
-            {
-                ListItem[] AllPallets = Design.AllPaletts(SkinComboBoxEdit.Text);
-
-                PaletteComboBoxEdit.Enabled = true;
-                PaletteComboBoxEdit.Properties.Items.AddRange(AllPallets);
-                PaletteComboBoxEdit.SelectedIndex = 0;
-            }
-            else
-            {
-                PaletteComboBoxEdit.Text = "";
-                PaletteComboBoxEdit.Enabled = false;
-            }
-
-            ResetHealthBars();
-        }
-
         private void Palette_IndexChanged(object sender, EventArgs e)
         {
             if (PaletteComboBoxEdit.Text == "")
                 return;
 
-            UserLookAndFeel.Default.SetSkinStyle(SkinComboBoxEdit.Text, PaletteComboBoxEdit.Text);
+            UserLookAndFeel.Default.SetSkinStyle(UserLookAndFeel.Default.ActiveSkinName, PaletteComboBoxEdit.Text);
 
             ResetHealthBars();
+            SetLogo();
         }
 
         private void CharComboBox_IndexChanged(object sender, EventArgs e)

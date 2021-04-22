@@ -40,12 +40,12 @@ namespace GameX.Properties {
         }
         
         /// <summary>
-        /// Sets the skin scheme for the application.
+        /// Sets the color scheme for the skin applied.
         /// </summary>
         [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Configuration.SettingsDescriptionAttribute("Sets the skin scheme for the application.")]
+        [global::System.Configuration.SettingsDescriptionAttribute("Sets the color scheme for the skin applied.")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("The Bezier")]
+        [global::System.Configuration.DefaultSettingValueAttribute("VS Dark")]
         public string Skin {
             get {
                 return ((string)(this["Skin"]));
@@ -56,28 +56,12 @@ namespace GameX.Properties {
         }
         
         /// <summary>
-        /// Sets the color scheme for the skin applied.
-        /// </summary>
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Configuration.SettingsDescriptionAttribute("Sets the color scheme for the skin applied.")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("DefaultSkinPalette")]
-        public string Pallete {
-            get {
-                return ((string)(this["Pallete"]));
-            }
-            set {
-                this["Pallete"] = value;
-            }
-        }
-        
-        /// <summary>
         /// The name that will be networked betweem players
         /// </summary>
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Configuration.SettingsDescriptionAttribute("The name that will be networked betweem players")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("PlayerName")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Player")]
         public string PlayerName {
             get {
                 return ((string)(this["PlayerName"]));
