@@ -11,24 +11,14 @@ namespace GameX.Base.Helpers
 
         // NET DATA //
 
-        public static string SerializeNetData(NetItem Data)
+        public static string SerializeCharacterChanged(NetCharacterChange Data)
         {
             return JsonConvert.SerializeObject(Data);
         }
 
-        public static NetItem DeserializeNetData(string Data)
+        public static NetCharacterChange DeserializeCharacterChanged(string Data)
         {
-            return JsonConvert.DeserializeObject<NetItem>(Data);
-        }
-
-        public static string SerializeNetCharacterData(NetCharacter Data)
-        {
-            return JsonConvert.SerializeObject(Data);
-        }
-
-        public static NetCharacter DeserializeNetCharacterData(string Data)
-        {
-            return JsonConvert.DeserializeObject<NetCharacter>(Data);
+            return JsonConvert.DeserializeObject<NetCharacterChange>(Data);
         }
 
         // CLIENT OBJECTS //

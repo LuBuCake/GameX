@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DevExpress.XtraEditors;
 using GameX.Base.Helpers;
+using GameX.Game.Types;
 using WatsonTcp;
 
 namespace GameX.Base.Modules
@@ -90,9 +91,7 @@ namespace GameX.Base.Modules
 
             if (BuddyServer != null)
             {
-                BuddyServer.Connector?.Dispose();
-                BuddyServer.Connector = null;
-                BuddyServer = null;
+                StopClient(Main.BuddyServerConnectionButton, null);
             }
 
             Main = null;
@@ -167,6 +166,8 @@ namespace GameX.Base.Modules
                 return;
             }
 
+            Main.BuddyServerConnectionButton.Enabled = false;
+
             Main.StartServerButton.Text = "Close";
             Main.ServerStatusTextEdit.Text = $"Server sucessfully hosted at the port: {Port}";
         }
@@ -176,6 +177,8 @@ namespace GameX.Base.Modules
             Server?.DisconnectClients();
             Server?.Dispose();
             Server = null;
+
+            Main.BuddyServerConnectionButton.Enabled = true;
 
             Main.ServerPortTextEdit.Enabled = true;
             Main.StartServerButton.Text = "Open";
@@ -214,9 +217,25 @@ namespace GameX.Base.Modules
                 Main.P3DropSimpleButton,
             };
 
+            ComboBoxEdit[] CharacterCombos =
+            {
+                Main.P1CharComboBox,
+                Main.P2CharComboBox,
+                Main.P3CharComboBox,
+                Main.P4CharComboBox
+            };
+
+            ComboBoxEdit[] CostumeCombos =
+            {
+                Main.P1CosComboBox,
+                Main.P2CosComboBox,
+                Main.P3CosComboBox,
+                Main.P4CosComboBox
+            };
+
             for (int i = 0; i < 3; i++)
             {
-                if (BuddyClients[i] != null) 
+                if (BuddyClients[i] != null)
                     continue;
 
                 BuddyClients[i] = new ClientConnected { IP = args.IpPort, Name = PlayerName, Index = i };
@@ -283,6 +302,23 @@ namespace GameX.Base.Modules
                             ClientNames[i].Text = Decoded;
                         }
                     }
+                }
+                else if (Decoded.Contains("[CHARCHANGE]"))
+                {
+                    Decoded = Decoded.Replace("[CHARCHANGE]", "");
+                    ClientConnected ClientSender = null;
+                    NetCharacterChange Change = Serializer.DeserializeCharacterChanged(Decoded);
+
+                    foreach (ClientConnected Client in BuddyClients)
+                    {
+                        if (Client.IP != args.IpPort)
+                            continue;
+
+                        ClientSender = Client;
+                        break;
+                    }
+
+                    Main.Character_ReceiveChange(Change, ClientSender);
                 }
                 else
                 {
@@ -436,6 +472,8 @@ namespace GameX.Base.Modules
                 return;
             }
 
+            Main.StartServerButton.Enabled = false;
+
             CB.Enabled = true;
             CB.Text = "Disconnect";
         }
@@ -450,6 +488,8 @@ namespace GameX.Base.Modules
 
             BuddyServer?.Connector?.Dispose();
             BuddyServer = null;
+
+            Main.StartServerButton.Enabled = true;
 
             CB.Text = "Connect";
             CB.Enabled = true;
@@ -484,6 +524,14 @@ namespace GameX.Base.Modules
                 {
                     Decoded = Decoded.Replace("[CHAT]", "");
                     Terminal.WriteMessage(Decoded, (int)Enums.ConsoleInterface.Client);
+                    return;
+                }
+
+                if (Decoded.Contains("[CHARCHANGE]"))
+                {
+                    Decoded = Decoded.Replace("[CHARCHANGE]", "");
+                    NetCharacterChange Change = Serializer.DeserializeCharacterChanged(Decoded);
+                    Main.Character_ReceiveChange(Change);
                     return;
                 }
             }

@@ -32,6 +32,10 @@ namespace GameX
         public double FramesPerSecond { get; private set; }
         public bool Verified { get; private set; }
         public bool Initialized { get; private set; }
+        private bool CharChangeReceived { get; set; }
+        private int CharChangedIndex { get; set; }
+        private int CharChangedChar { get; set; }
+        private int CharChangedCos { get; set; }
 
         public App()
         {
@@ -101,6 +105,8 @@ namespace GameX
 
             if (!FrameElapser.IsRunning)
                 FrameElapser.Start();
+
+            SetReceivedChars();
 
             TimeSpan Elapsed = FrameElapser.Elapsed;
 
@@ -230,13 +236,6 @@ namespace GameX
         {
             #region Controls
 
-            ComboBoxEdit[] NetworkPlayerIndexes =
-            {
-                P1PlayerIndexComboBoxEdit,
-                P2PlayerIndexComboBoxEdit,
-                P3PlayerIndexComboBoxEdit,
-            };
-
             ComboBoxEdit[] CharacterCombos =
             {
                 P1CharComboBox,
@@ -342,9 +341,6 @@ namespace GameX
                 if (Index == 3) 
                     continue;
 
-                NetworkPlayerIndexes[Index].Properties.Items.AddRange(Indexes.Available());
-                NetworkPlayerIndexes[Index].SelectedIndex = 0;
-
                 DropButtons[Index].Click += Network.Server_DropClient;
             }
 
@@ -404,6 +400,42 @@ namespace GameX
                 Bar.Properties.StartColor = Color.FromArgb(0, 0, 0, 0);
                 Bar.Properties.EndColor = Color.FromArgb(0, 0, 0, 0);
             }
+        }
+
+        private void SetReceivedChars()
+        {
+            if (!CharChangeReceived)
+                return;
+
+            ComboBoxEdit[] CharacterCombos =
+            {
+                P1CharComboBox,
+                P2CharComboBox,
+                P3CharComboBox,
+                P4CharComboBox
+            };
+
+            ComboBoxEdit[] CostumeCombos =
+            {
+                P1CosComboBox,
+                P2CosComboBox,
+                P3CosComboBox,
+                P4CosComboBox
+            };
+
+            foreach (object Char in CharacterCombos[CharChangedIndex].Properties.Items)
+            {
+                if ((Char as Character).Value == CharChangedChar)
+                    CharacterCombos[CharChangedIndex].SelectedItem = Char;
+            }
+
+            foreach (object Cos in CostumeCombos[CharChangedIndex].Properties.Items)
+            {
+                if ((Cos as Costume).Value == CharChangedCos)
+                    CostumeCombos[CharChangedIndex].SelectedItem = Cos;
+            }
+
+            CharChangeReceived = false;
         }
 
         private void CheckDebugModeControls(bool DebugMode)
@@ -541,6 +573,14 @@ namespace GameX
 
         private void CosComboBox_IndexChanged(object sender, EventArgs e)
         {
+            ComboBoxEdit[] CharacterCombos =
+            {
+                P1CharComboBox,
+                P2CharComboBox,
+                P3CharComboBox,
+                P4CharComboBox
+            };
+
             PictureEdit[] CharPicBoxes =
             {
                 P1CharPictureBox,
@@ -558,6 +598,11 @@ namespace GameX
 
             if (Portrait != null)
                 CharPicBoxes[Index].Image = Portrait;
+
+            if (!CharChangeReceived)
+            {
+                Character_SendChange(Index, (CharacterCombos[Index].SelectedItem as Character).Value, CBECos.Value);
+            }
 
             if (!Initialized)
                 return;
@@ -673,6 +718,8 @@ namespace GameX
                 return;
             }
 
+            Network.FinishModule();
+
             foreach (dynamic Control in ToDisable)
             {
                 Control.Enabled = false;
@@ -688,7 +735,6 @@ namespace GameX
                 LC.Text = "No client connected";
 
             SB.Text = "Enable";
-            Network.FinishModule();
         }
 
         /* GameX Calls */
@@ -1045,6 +1091,45 @@ namespace GameX
             };
 
             Biohazard.Players[Index].SetCharacter((CharacterCombos[Index].SelectedItem as Character).Value, (CostumeCombos[Index].SelectedItem as Costume).Value);
+        }
+
+        // NET
+
+        public void Character_SendChange(int index, int character, int costume)
+        {
+            if (!Network.ModuleStarted 
+                || Network.Server == null && Network.BuddyServer == null 
+                || Network.Server != null && Network.Server.ListClients().ToList().Count < 1)
+                return;
+
+            NetCharacterChange Change = new NetCharacterChange()
+            {
+                Index = index, Character = character, Costume = costume
+            };
+
+            string SerializedChange = $"[CHARCHANGE]{Serializer.SerializeCharacterChanged(Change)}";
+
+            if (Network.Server != null)
+            {
+                Network.Server_BroadcastMessage(SerializedChange, "", false, true);
+                return;
+            }
+
+            Network.Client_SendMessage(SerializedChange, false, true);
+        }
+
+        public void Character_ReceiveChange(NetCharacterChange Change, ClientConnected Client = null)
+        {
+            if (Network.Server != null && Client != null && Network.Server.ListClients().Where(x => x != Client.IP).ToList().Count > 0)
+            {
+                string SerializedChange = $"[CHARCHANGE]{Serializer.SerializeCharacterChanged(Change)}";
+                Network.Server_BroadcastMessage(SerializedChange, Client.IP);
+            }
+
+            CharChangeReceived = true;
+            CharChangedIndex = Change.Index;
+            CharChangedChar = Change.Character;
+            CharChangedCos = Change.Costume;
         }
 
         #endregion

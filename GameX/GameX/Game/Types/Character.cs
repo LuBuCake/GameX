@@ -28,7 +28,7 @@ namespace GameX.Game.Types
         }
     }
 
-    public class NetCharacter
+    public class NetCharacterChange
     {
         public int Index { get; set; }
         public int Character { get; set; }

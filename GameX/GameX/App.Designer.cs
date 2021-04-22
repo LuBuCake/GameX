@@ -100,15 +100,12 @@ namespace GameX
             this.P1ClientGP = new DevExpress.XtraEditors.GroupControl();
             this.P1DropSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.P1ClientLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.P1PlayerIndexComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P2ClientGP = new DevExpress.XtraEditors.GroupControl();
             this.P2DropSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.P2ClientLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.P2PlayerIndexComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P3ClientGP = new DevExpress.XtraEditors.GroupControl();
             this.P3DropSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.P3ClientLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.P3PlayerIndexComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.BuddyServerGP = new DevExpress.XtraEditors.GroupControl();
             this.BuddyServerPortTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.BuddyServerPortLabelControl = new DevExpress.XtraEditors.LabelControl();
@@ -210,13 +207,10 @@ namespace GameX
             this.BuddyClientsGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.P1ClientGP)).BeginInit();
             this.P1ClientGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P1PlayerIndexComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P2ClientGP)).BeginInit();
             this.P2ClientGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P2PlayerIndexComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P3ClientGP)).BeginInit();
             this.P3ClientGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P3PlayerIndexComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BuddyServerGP)).BeginInit();
             this.BuddyServerGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BuddyServerPortTextEdit.Properties)).BeginInit();
@@ -1162,7 +1156,6 @@ namespace GameX
             // 
             this.P1ClientGP.Controls.Add(this.P1DropSimpleButton);
             this.P1ClientGP.Controls.Add(this.P1ClientLabelControl);
-            this.P1ClientGP.Controls.Add(this.P1PlayerIndexComboBoxEdit);
             this.P1ClientGP.Location = new System.Drawing.Point(5, 30);
             this.P1ClientGP.Name = "P1ClientGP";
             this.P1ClientGP.ShowCaption = false;
@@ -1173,12 +1166,12 @@ namespace GameX
             // 
             this.P1DropSimpleButton.AllowFocus = false;
             this.P1DropSimpleButton.Enabled = false;
-            this.P1DropSimpleButton.Location = new System.Drawing.Point(212, 11);
+            this.P1DropSimpleButton.Location = new System.Drawing.Point(152, 11);
             this.P1DropSimpleButton.Name = "P1DropSimpleButton";
-            this.P1DropSimpleButton.Size = new System.Drawing.Size(59, 20);
+            this.P1DropSimpleButton.Size = new System.Drawing.Size(119, 20);
             this.P1DropSimpleButton.TabIndex = 0;
             this.P1DropSimpleButton.TabStop = false;
-            this.P1DropSimpleButton.Text = "Drop";
+            this.P1DropSimpleButton.Text = "Drop Client";
             this.P1DropSimpleButton.ToolTip = "Drops the client from the server leaving the slot free for another client.";
             this.P1DropSimpleButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P1DropSimpleButton.ToolTipTitle = "Drop Client";
@@ -1191,28 +1184,10 @@ namespace GameX
             this.P1ClientLabelControl.TabIndex = 0;
             this.P1ClientLabelControl.Text = "No client connected";
             // 
-            // P1PlayerIndexComboBoxEdit
-            // 
-            this.P1PlayerIndexComboBoxEdit.EditValue = "";
-            this.P1PlayerIndexComboBoxEdit.Location = new System.Drawing.Point(128, 11);
-            this.P1PlayerIndexComboBoxEdit.Name = "P1PlayerIndexComboBoxEdit";
-            this.P1PlayerIndexComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.P1PlayerIndexComboBoxEdit.Properties.AllowFocused = false;
-            this.P1PlayerIndexComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.P1PlayerIndexComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.P1PlayerIndexComboBoxEdit.Size = new System.Drawing.Size(78, 20);
-            this.P1PlayerIndexComboBoxEdit.TabIndex = 0;
-            this.P1PlayerIndexComboBoxEdit.TabStop = false;
-            this.P1PlayerIndexComboBoxEdit.ToolTip = "Defines which player index will be affected by this client\'s actions.";
-            this.P1PlayerIndexComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P1PlayerIndexComboBoxEdit.ToolTipTitle = "Player index";
-            // 
             // P2ClientGP
             // 
             this.P2ClientGP.Controls.Add(this.P2DropSimpleButton);
             this.P2ClientGP.Controls.Add(this.P2ClientLabelControl);
-            this.P2ClientGP.Controls.Add(this.P2PlayerIndexComboBoxEdit);
             this.P2ClientGP.Location = new System.Drawing.Point(5, 78);
             this.P2ClientGP.Name = "P2ClientGP";
             this.P2ClientGP.ShowCaption = false;
@@ -1223,12 +1198,12 @@ namespace GameX
             // 
             this.P2DropSimpleButton.AllowFocus = false;
             this.P2DropSimpleButton.Enabled = false;
-            this.P2DropSimpleButton.Location = new System.Drawing.Point(212, 11);
+            this.P2DropSimpleButton.Location = new System.Drawing.Point(152, 11);
             this.P2DropSimpleButton.Name = "P2DropSimpleButton";
-            this.P2DropSimpleButton.Size = new System.Drawing.Size(59, 20);
+            this.P2DropSimpleButton.Size = new System.Drawing.Size(119, 20);
             this.P2DropSimpleButton.TabIndex = 0;
             this.P2DropSimpleButton.TabStop = false;
-            this.P2DropSimpleButton.Text = "Drop";
+            this.P2DropSimpleButton.Text = "Drop Client";
             this.P2DropSimpleButton.ToolTip = "Drops the client from the server leaving the slot free for another client.";
             this.P2DropSimpleButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P2DropSimpleButton.ToolTipTitle = "Drop Client";
@@ -1241,28 +1216,10 @@ namespace GameX
             this.P2ClientLabelControl.TabIndex = 0;
             this.P2ClientLabelControl.Text = "No client connected";
             // 
-            // P2PlayerIndexComboBoxEdit
-            // 
-            this.P2PlayerIndexComboBoxEdit.EditValue = "";
-            this.P2PlayerIndexComboBoxEdit.Location = new System.Drawing.Point(128, 11);
-            this.P2PlayerIndexComboBoxEdit.Name = "P2PlayerIndexComboBoxEdit";
-            this.P2PlayerIndexComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.P2PlayerIndexComboBoxEdit.Properties.AllowFocused = false;
-            this.P2PlayerIndexComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.P2PlayerIndexComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.P2PlayerIndexComboBoxEdit.Size = new System.Drawing.Size(78, 20);
-            this.P2PlayerIndexComboBoxEdit.TabIndex = 0;
-            this.P2PlayerIndexComboBoxEdit.TabStop = false;
-            this.P2PlayerIndexComboBoxEdit.ToolTip = "Defines which player index will be affected by this client\'s actions.";
-            this.P2PlayerIndexComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2PlayerIndexComboBoxEdit.ToolTipTitle = "Player index";
-            // 
             // P3ClientGP
             // 
             this.P3ClientGP.Controls.Add(this.P3DropSimpleButton);
             this.P3ClientGP.Controls.Add(this.P3ClientLabelControl);
-            this.P3ClientGP.Controls.Add(this.P3PlayerIndexComboBoxEdit);
             this.P3ClientGP.Location = new System.Drawing.Point(5, 126);
             this.P3ClientGP.Name = "P3ClientGP";
             this.P3ClientGP.ShowCaption = false;
@@ -1273,12 +1230,12 @@ namespace GameX
             // 
             this.P3DropSimpleButton.AllowFocus = false;
             this.P3DropSimpleButton.Enabled = false;
-            this.P3DropSimpleButton.Location = new System.Drawing.Point(212, 11);
+            this.P3DropSimpleButton.Location = new System.Drawing.Point(152, 11);
             this.P3DropSimpleButton.Name = "P3DropSimpleButton";
-            this.P3DropSimpleButton.Size = new System.Drawing.Size(59, 20);
+            this.P3DropSimpleButton.Size = new System.Drawing.Size(119, 20);
             this.P3DropSimpleButton.TabIndex = 0;
             this.P3DropSimpleButton.TabStop = false;
-            this.P3DropSimpleButton.Text = "Drop";
+            this.P3DropSimpleButton.Text = "Drop Client";
             this.P3DropSimpleButton.ToolTip = "Drops the client from the server leaving the slot free for another client.";
             this.P3DropSimpleButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P3DropSimpleButton.ToolTipTitle = "Drop Client";
@@ -1290,23 +1247,6 @@ namespace GameX
             this.P3ClientLabelControl.Size = new System.Drawing.Size(103, 13);
             this.P3ClientLabelControl.TabIndex = 0;
             this.P3ClientLabelControl.Text = "No client connected";
-            // 
-            // P3PlayerIndexComboBoxEdit
-            // 
-            this.P3PlayerIndexComboBoxEdit.EditValue = "";
-            this.P3PlayerIndexComboBoxEdit.Location = new System.Drawing.Point(128, 11);
-            this.P3PlayerIndexComboBoxEdit.Name = "P3PlayerIndexComboBoxEdit";
-            this.P3PlayerIndexComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.P3PlayerIndexComboBoxEdit.Properties.AllowFocused = false;
-            this.P3PlayerIndexComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.P3PlayerIndexComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.P3PlayerIndexComboBoxEdit.Size = new System.Drawing.Size(78, 20);
-            this.P3PlayerIndexComboBoxEdit.TabIndex = 0;
-            this.P3PlayerIndexComboBoxEdit.TabStop = false;
-            this.P3PlayerIndexComboBoxEdit.ToolTip = "Defines which player index will be affected by this client\'s actions.";
-            this.P3PlayerIndexComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3PlayerIndexComboBoxEdit.ToolTipTitle = "Player index";
             // 
             // BuddyServerGP
             // 
@@ -1780,15 +1720,12 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.P1ClientGP)).EndInit();
             this.P1ClientGP.ResumeLayout(false);
             this.P1ClientGP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P1PlayerIndexComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P2ClientGP)).EndInit();
             this.P2ClientGP.ResumeLayout(false);
             this.P2ClientGP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P2PlayerIndexComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P3ClientGP)).EndInit();
             this.P3ClientGP.ResumeLayout(false);
             this.P3ClientGP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P3PlayerIndexComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BuddyServerGP)).EndInit();
             this.BuddyServerGP.ResumeLayout(false);
             this.BuddyServerGP.PerformLayout();
@@ -1826,20 +1763,12 @@ namespace GameX
 
         #endregion
         private DevExpress.XtraEditors.CheckButton P1FreezeCharCosButton;
-        private DevExpress.XtraEditors.ComboBoxEdit P1CharComboBox;
         private DevExpress.XtraEditors.PictureEdit P1CharPictureBox;
-        private DevExpress.XtraEditors.ComboBoxEdit P1CosComboBox;
         private DevExpress.XtraTab.XtraTabControl MasterTabControl;
         private DevExpress.XtraTab.XtraTabPage TabPageChar;
         private DevExpress.XtraEditors.GroupControl TabPageCharGPPlayer4;
-        private DevExpress.XtraEditors.ComboBoxEdit P4CosComboBox;
-        private DevExpress.XtraEditors.ComboBoxEdit P4CharComboBox;
         private DevExpress.XtraEditors.GroupControl TabPageCharGPPlayer3;
-        private DevExpress.XtraEditors.ComboBoxEdit P3CosComboBox;
-        private DevExpress.XtraEditors.ComboBoxEdit P3CharComboBox;
         private DevExpress.XtraEditors.GroupControl TabPageCharGPPlayer2;
-        private DevExpress.XtraEditors.ComboBoxEdit P2CosComboBox;
-        private DevExpress.XtraEditors.ComboBoxEdit P2CharComboBox;
         private DevExpress.XtraEditors.GroupControl TabPageCharGPPlayer1;
         private DevExpress.XtraEditors.PictureEdit P4CharPictureBox;
         private DevExpress.XtraEditors.PictureEdit P3CharPictureBox;
@@ -1904,9 +1833,6 @@ namespace GameX
         private DevExpress.XtraEditors.LabelControl BuddyServerIPLabelControl;
         private DevExpress.XtraEditors.PictureEdit AboutPictureEdit;
         public DevExpress.XtraEditors.TextEdit BuddyServerIPTextEdit;
-        public DevExpress.XtraEditors.ComboBoxEdit P1PlayerIndexComboBoxEdit;
-        public DevExpress.XtraEditors.ComboBoxEdit P3PlayerIndexComboBoxEdit;
-        public DevExpress.XtraEditors.ComboBoxEdit P2PlayerIndexComboBoxEdit;
         public DevExpress.XtraEditors.SimpleButton BuddyServerConnectionButton;
         public DevExpress.XtraEditors.GroupControl NetworkMasterGP;
         private DevExpress.XtraTab.XtraTabPage TabPageConsole;
@@ -1936,6 +1862,14 @@ namespace GameX
         public DevExpress.XtraEditors.MemoEdit ConsoleOutputMemoEdit;
         public DevExpress.XtraEditors.SimpleButton StartServerButton;
         private DevExpress.XtraEditors.SimpleButton NetworkManagerButton;
+        public DevExpress.XtraEditors.ComboBoxEdit P1CharComboBox;
+        public DevExpress.XtraEditors.ComboBoxEdit P1CosComboBox;
+        public DevExpress.XtraEditors.ComboBoxEdit P4CosComboBox;
+        public DevExpress.XtraEditors.ComboBoxEdit P4CharComboBox;
+        public DevExpress.XtraEditors.ComboBoxEdit P3CosComboBox;
+        public DevExpress.XtraEditors.ComboBoxEdit P3CharComboBox;
+        public DevExpress.XtraEditors.ComboBoxEdit P2CosComboBox;
+        public DevExpress.XtraEditors.ComboBoxEdit P2CharComboBox;
     }
 }
 

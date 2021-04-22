@@ -104,7 +104,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\Content\Indexes.cs" />
     <Compile Include="Base\Content\Interfaces.cs" />
     <Compile Include="Base\Content\Rates.cs" />
     <Compile Include="Base\Content\Design.cs" />
@@ -133,7 +132,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Base\Types\Detour.cs" />
     <Compile Include="Base\Types\ListItem.cs" />
-    <Compile Include="Base\Types\NetItem.cs" />
     <EmbeddedResource Include="App.resx">
       <DependentUpon>App.cs</DependentUpon>
     </EmbeddedResource>
