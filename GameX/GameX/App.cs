@@ -23,6 +23,8 @@ namespace GameX
     {
         /* App Init */
 
+        #region Base Props
+
         private Peaker MsgPeaker { get; set; }
         private Stopwatch FrameElapser { get; set; }
         private Stopwatch CurTimeElapser { get; set; }
@@ -32,10 +34,17 @@ namespace GameX
         public double FramesPerSecond { get; private set; }
         public bool Verified { get; private set; }
         public bool Initialized { get; private set; }
+
+        #endregion
+
+        #region NET Props
+
         private bool CharChangeReceived { get; set; }
         private int CharChangedIndex { get; set; }
         private int CharChangedChar { get; set; }
         private int CharChangedCos { get; set; }
+        
+        #endregion
 
         public App()
         {
@@ -106,7 +115,7 @@ namespace GameX
             if (!FrameElapser.IsRunning)
                 FrameElapser.Start();
 
-            SetReceivedChars();
+            Application_MaxFPS();
 
             TimeSpan Elapsed = FrameElapser.Elapsed;
 
@@ -121,6 +130,16 @@ namespace GameX
             FramesPerSecond = 1.0 / Elapsed.TotalSeconds;
             FrameTime = 1.0 / FramesPerSecond;
 
+            Application_LimitedFPS();
+        }
+
+        private void Application_MaxFPS()
+        {
+            SetReceivedChars();
+        }
+
+        private void Application_LimitedFPS()
+        {
             if (Target_Handle() && Initialized)
                 GameX_Update();
         }
@@ -1118,7 +1137,7 @@ namespace GameX
             Network.Client_SendMessage(SerializedChange, false, true);
         }
 
-        public void Character_ReceiveChange(NetCharacterChange Change, ClientConnected Client = null)
+        public void Character_ReceiveChange(NetCharacterChange Change, ConnectedClient Client = null)
         {
             if (Network.Server != null && Client != null && Network.Server.ListClients().Where(x => x != Client.IP).ToList().Count > 0)
             {

@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 
 namespace GameX.Base.Modules
 {
-    public class Memory
+    public static class Memory
     {
         [DllImport("kernel32.dll")]
         public static extern IntPtr OpenProcess(int dwDesiredAccess, bool bInheritHandle, int dwProcessId);

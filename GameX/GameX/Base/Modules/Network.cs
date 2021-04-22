@@ -8,37 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using DevExpress.XtraEditors;
 using GameX.Base.Helpers;
+using GameX.Base.Types;
 using GameX.Game.Types;
 using WatsonTcp;
 
 namespace GameX.Base.Modules
 {
-    public class ClientConnected
-    {
-        public string IP { get; set; }
-        public string Name { get; set; }
-        public int Index { get; set; }
-    }
-
-    public class ServerConnected
-    {
-        public string IP { get; set; }
-        public WatsonTcpClient Connector {get;set;}
-    }
-
-    public class Network
+    public static class Network
     {
         public static bool ModuleStarted { get; set; }
         private static App Main { get; set; }
         public static WatsonTcpServer Server { get; set; }
-        public static ServerConnected BuddyServer { get; set; }
-        public static ClientConnected[] BuddyClients { get; private set; }
+        public static ConnectedServer BuddyServer { get; set; }
+        public static ConnectedClient[] BuddyClients { get; private set; }
         public static string[] PrivateIPv4 { get; private set; }
         public static bool HasConnection { get; private set; }
 
         #region Utility
 
-        public static bool TestConnection(string HostNameOrAddress, int Timeout = 500)
+        public static bool TestConnection(string HostNameOrAddress, int Timeout = 1000)
         {
             try
             {
@@ -68,11 +56,11 @@ namespace GameX.Base.Modules
         public static async Task StartModule(App GameXRef)
         {
             Main = GameXRef;
-            HasConnection = await Task.Run(() => TestConnection("google.com"));
+            HasConnection = await Task.Run(() => TestConnection("8.8.8.8"));
 
             if (HasConnection)
             {
-                BuddyClients = new ClientConnected[3];
+                BuddyClients = new ConnectedClient[3];
                 PrivateIPv4 = MachinePrivateIP();
                 ModuleStarted = true;
                 Terminal.WriteLine("[Network] Module started successfully.");
@@ -238,7 +226,7 @@ namespace GameX.Base.Modules
                 if (BuddyClients[i] != null)
                     continue;
 
-                BuddyClients[i] = new ClientConnected { IP = args.IpPort, Name = PlayerName, Index = i };
+                BuddyClients[i] = new ConnectedClient { IP = args.IpPort, Name = PlayerName, Index = i };
                 ClientNames[i].Text = PlayerName;
                 DropButtons[i].Enabled = true;
                 break;
@@ -306,10 +294,10 @@ namespace GameX.Base.Modules
                 else if (Decoded.Contains("[CHARCHANGE]"))
                 {
                     Decoded = Decoded.Replace("[CHARCHANGE]", "");
-                    ClientConnected ClientSender = null;
+                    ConnectedClient ClientSender = null;
                     NetCharacterChange Change = Serializer.DeserializeCharacterChanged(Decoded);
 
-                    foreach (ClientConnected Client in BuddyClients)
+                    foreach (ConnectedClient Client in BuddyClients)
                     {
                         if (Client.IP != args.IpPort)
                             continue;
@@ -442,7 +430,7 @@ namespace GameX.Base.Modules
 
             try
             {
-                BuddyServer = new ServerConnected { Connector = new WatsonTcpClient(IP.ToString(), Port), IP = $"{IP}:{Port}" };
+                BuddyServer = new ConnectedServer { Connector = new WatsonTcpClient(IP.ToString(), Port), IP = $"{IP}:{Port}" };
                 BuddyServer.Connector.Events.ServerConnected += Client_ServerConnected;
                 BuddyServer.Connector.Events.ServerDisconnected += Client_ServerDisconnected;
                 BuddyServer.Connector.Events.MessageReceived += Client_MessageReceived;

@@ -5,7 +5,7 @@ using System.IO;
 
 namespace GameX.Base.Helpers
 {
-    public class Serializer
+    public static class Serializer
     {
         #region Serializer
 

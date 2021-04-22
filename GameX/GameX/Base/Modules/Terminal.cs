@@ -11,7 +11,7 @@ using GameX.Base.Types;
 
 namespace GameX.Base.Modules
 {
-    public class Terminal
+    public static class Terminal
     {
         private static App Main { get; set; }
         private static string[] ConsoleTextInterfaces { get; set; }

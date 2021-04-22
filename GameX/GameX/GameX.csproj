@@ -109,6 +109,8 @@
     <Compile Include="Base\Content\Design.cs" />
     <Compile Include="Base\Helpers\Encoder.cs" />
     <Compile Include="Base\Helpers\Enums.cs" />
+    <Compile Include="Base\Types\ConnectedClient.cs" />
+    <Compile Include="Base\Types\ConnectedServer.cs" />
     <Compile Include="Game\Content\Miscellaneous.cs" />
     <Compile Include="Game\Modules\Biohazard.cs" />
     <Compile Include="Game\Modules\Player.cs" />

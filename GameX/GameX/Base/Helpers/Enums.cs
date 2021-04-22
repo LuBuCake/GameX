@@ -2,7 +2,7 @@
 
 namespace GameX.Base.Helpers
 {
-    public class Enums
+    public static class Enums
     {
         public enum MEMORY_ACCESS
         {

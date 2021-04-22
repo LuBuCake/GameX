@@ -71,7 +71,11 @@ namespace GameX.Properties {
             }
         }
         
+        /// <summary>
+        /// The name that will be networked betweem players
+        /// </summary>
         [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsDescriptionAttribute("The name that will be networked betweem players")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("PlayerName")]
         public string PlayerName {

@@ -7,7 +7,7 @@ using GameX.Base.Modules;
 
 namespace GameX.Base.Helpers
 {
-    public class Encoder
+    public static class Encoder
     {
         /*
          * File extensions:

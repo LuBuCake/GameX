@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 namespace GameX.Base.Modules
 {
-    public class Keyboard
+    public static class Keyboard
     {
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         private static extern IntPtr SetWindowsHookEx(int idHook, HookCallback lpfn, IntPtr hMod, uint dwThreadId);
