@@ -1,0 +1,18 @@
+{
+  "Name": "Josh",
+  "Value": 4,
+  "Costumes": [
+    {
+      "Name": "Story Mode",
+      "Portrait": "GameX.Biohazard.5/Resources/Images/Characters/js0.png",
+      "File": "uPl04JoshCos1",
+      "Value": 0
+    },
+    {
+      "Name": "Reunion BSAA",
+      "Portrait": "GameX.Biohazard.5/Resources/Images/Characters/js0.png",
+      "File": "uPl04JoshCos2",
+      "Value": 1
+    }
+  ]
+}
