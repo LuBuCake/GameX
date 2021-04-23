@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Windows.Forms;
 using GameX.Base.Types;
 
@@ -357,10 +358,10 @@ namespace GameX.Base.Modules
                         ProcessCommand(TE.Text);
                         break;
                     case (int)Enums.ConsoleInterface.Server:
-                        Network.Server_BroadcastMessage("[CHAT]" + $"{Main.PlayerNameTextEdit.Text}: " + TE.Text, "", true);
+                        Network.Server_BroadcastMessage("[CHAT]" + $"{Main.PlayerNameTextEdit.Text}: " + TE.Text, "", true, true);
                         break;
                     default:
-                        Network.Client_SendMessage("[CHAT]" + $"{Main.PlayerNameTextEdit.Text}: " + TE.Text, true);
+                        Network.Client_SendMessage("[CHAT]" + $"{Main.PlayerNameTextEdit.Text}: " + TE.Text, true, true);
                         break;
                 }
             }
@@ -381,6 +382,16 @@ namespace GameX.Base.Modules
 
             if (Interface != ActiveInterface) 
                 return;
+
+            if (Main.ConsoleOutputMemoEdit.InvokeRequired)
+            {
+                Main.ConsoleOutputMemoEdit.Invoke((MethodInvoker)delegate
+                {
+                    Main.ConsoleOutputMemoEdit.Text = ConsoleTextInterfaces[ActiveInterface];
+                    ScrollToEnd();
+                });
+                return;
+            }
 
             Main.ConsoleOutputMemoEdit.Text = ConsoleTextInterfaces[ActiveInterface];
             ScrollToEnd();
@@ -429,6 +440,17 @@ namespace GameX.Base.Modules
                 Current += Environment.NewLine + Output;
 
             ConsoleTextInterfaces[(int)Enums.ConsoleInterface.Console] = Current;
+
+            if (Main.ConsoleOutputMemoEdit.InvokeRequired)
+            {
+                Main.ConsoleOutputMemoEdit.Invoke((MethodInvoker) delegate
+                {
+                    Main.ConsoleOutputMemoEdit.Text = ConsoleTextInterfaces[ActiveInterface];
+                    ScrollToEnd();
+                });
+                return;
+            }
+
             Main.ConsoleOutputMemoEdit.Text = ConsoleTextInterfaces[ActiveInterface];
             ScrollToEnd();
         }

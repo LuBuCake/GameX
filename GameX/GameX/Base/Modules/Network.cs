@@ -6,6 +6,7 @@ using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using GameX.Base.Helpers;
 using GameX.Base.Types;
@@ -227,8 +228,15 @@ namespace GameX.Base.Modules
                     continue;
 
                 BuddyClients[i] = new ConnectedClient { IP = args.IpPort, Name = PlayerName, Index = i };
-                ClientNames[i].Text = PlayerName;
-                DropButtons[i].Enabled = true;
+
+                Threading.SetControlPropertyThreadSafe(ClientNames[i], "Text", PlayerName);
+                Threading.SetControlPropertyThreadSafe(DropButtons[i], "Enabled", true);
+
+                for (int j = 0; j < 4; j++)
+                {
+                    Main.Character_SendChange(j, CharacterCombos[j].SelectedIndex, CostumeCombos[j].SelectedIndex);
+                }
+
                 break;
             }
         }
@@ -255,8 +263,8 @@ namespace GameX.Base.Modules
                     continue;
 
                 BuddyClients[i] = null;
-                ClientNames[i].Text = "No client connected";
-                DropButtons[i].Enabled = false;
+                Threading.SetControlPropertyThreadSafe(ClientNames[i], "Text", "No client connected");
+                Threading.SetControlPropertyThreadSafe(DropButtons[i], "Enabled", false);
             }
 
             Terminal.WriteLine($"[Server] The client {args.IpPort} has been disconnected, reason: {args.Reason}");
@@ -361,8 +369,8 @@ namespace GameX.Base.Modules
             };
 
             BuddyClients[index] = null;
-            ClientNames[index].Text = "No client connected";
-            DropButtons[index].Enabled = false;
+            Threading.SetControlPropertyThreadSafe(ClientNames[index], "Text", "No client connected");
+            Threading.SetControlPropertyThreadSafe(DropButtons[index], "Enabled", false);
         }
 
         #endregion

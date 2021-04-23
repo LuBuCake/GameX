@@ -38,12 +38,8 @@ namespace GameX
         #endregion
 
         #region NET Props
-
         private bool CharChangeReceived { get; set; }
-        private int CharChangedIndex { get; set; }
-        private int CharChangedChar { get; set; }
-        private int CharChangedCos { get; set; }
-        
+
         #endregion
 
         public App()
@@ -135,7 +131,7 @@ namespace GameX
 
         private void Application_MaxFPS()
         {
-            SetReceivedChars();
+            
         }
 
         private void Application_LimitedFPS()
@@ -433,42 +429,6 @@ namespace GameX
             }
         }
 
-        private void SetReceivedChars()
-        {
-            if (!CharChangeReceived)
-                return;
-
-            ComboBoxEdit[] CharacterCombos =
-            {
-                P1CharComboBox,
-                P2CharComboBox,
-                P3CharComboBox,
-                P4CharComboBox
-            };
-
-            ComboBoxEdit[] CostumeCombos =
-            {
-                P1CosComboBox,
-                P2CosComboBox,
-                P3CosComboBox,
-                P4CosComboBox
-            };
-
-            foreach (object Char in CharacterCombos[CharChangedIndex].Properties.Items)
-            {
-                if ((Char as Character).Value == CharChangedChar)
-                    CharacterCombos[CharChangedIndex].SelectedItem = Char;
-            }
-
-            foreach (object Cos in CostumeCombos[CharChangedIndex].Properties.Items)
-            {
-                if ((Cos as Costume).Value == CharChangedCos)
-                    CostumeCombos[CharChangedIndex].SelectedItem = Cos;
-            }
-
-            CharChangeReceived = false;
-        }
-
         private void CheckDebugModeControls(bool DebugMode)
         {
             if (DebugMode)
@@ -598,7 +558,7 @@ namespace GameX
 
             if (!CharChangeReceived)
             {
-                Character_SendChange(Index, (CharacterCombos[Index].SelectedItem as Character).Value, CBECos.Value);
+                Character_SendChange(Index, CharacterCombos[Index].SelectedIndex, CBE.SelectedIndex);
             }
 
             if (!Initialized)
@@ -1123,10 +1083,28 @@ namespace GameX
                 Network.Server_BroadcastMessage(SerializedChange, Client.IP);
             }
 
+            ComboBoxEdit[] CharacterCombos =
+            {
+                P1CharComboBox,
+                P2CharComboBox,
+                P3CharComboBox,
+                P4CharComboBox
+            };
+
+            ComboBoxEdit[] CostumeCombos =
+            {
+                P1CosComboBox,
+                P2CosComboBox,
+                P3CosComboBox,
+                P4CosComboBox
+            };
+
             CharChangeReceived = true;
-            CharChangedIndex = Change.Index;
-            CharChangedChar = Change.Character;
-            CharChangedCos = Change.Costume;
+
+            Threading.SetControlPropertyThreadSafe(CharacterCombos[Change.Index], "SelectedIndex", Change.Character);
+            Threading.SetControlPropertyThreadSafe(CostumeCombos[Change.Index], "SelectedIndex", Change.Costume);
+
+            CharChangeReceived = false;
         }
 
         #endregion

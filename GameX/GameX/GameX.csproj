@@ -109,6 +109,7 @@
     <Compile Include="Base\Content\Design.cs" />
     <Compile Include="Base\Helpers\Encoder.cs" />
     <Compile Include="Base\Helpers\Enums.cs" />
+    <Compile Include="Base\Helpers\Threading.cs" />
     <Compile Include="Base\Types\ConnectedClient.cs" />
     <Compile Include="Base\Types\ConnectedServer.cs" />
     <Compile Include="Game\Content\Miscellaneous.cs" />
@@ -263,7 +264,6 @@
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Logo.png" />
     <Content Include="system_control_panel_15843.ico" />
   </ItemGroup>
   <ItemGroup>
