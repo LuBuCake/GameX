@@ -286,26 +286,26 @@
   xcopy $(ProjectDir)\ToGameX $(TargetDir) /e /y
 )
 
-rd /s /q $(SolutionDir)\GameX.Base\ToGameX\
+rd /s /q $(SolutionDir)\References\
 
-mkdir $(SolutionDir)\GameX.Base\ToGameX\
-mkdir $(SolutionDir)\GameX.Base\ToGameX\GameX.Base\
-mkdir $(SolutionDir)\GameX.Base\ToGameX\GameX.Base\Binaries\
+mkdir $(SolutionDir)\References\
+mkdir $(SolutionDir)\References\GameX.Base\
+mkdir $(SolutionDir)\References\GameX.Base\Binaries\
 
-xcopy $(TargetDir)\*.dll $(SolutionDir)\GameX.Base\ToGameX\GameX.Base\Binaries /y
+xcopy $(TargetDir)\*.dll $(SolutionDir)\References\GameX.Base\Binaries\ /y
 
 mkdir C:\Users\madne\Desktop\GameX\
 mkdir C:\Users\madne\Desktop\GameX\GameX.Base\
 mkdir C:\Users\madne\Desktop\GameX\GameX.Biohazard.5\
 
-xcopy $(SolutionDir)\GameX.Base\ToGameX C:\Users\madne\Desktop\GameX /e /y
+xcopy $(SolutionDir)\References\ C:\Users\madne\Desktop\GameX /e /y
 
 xcopy $(ProjectDir)\ToGameX C:\Users\madne\Desktop\GameX\ /e /y
 
 xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\GameX /y
 xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\GameX /y
 
-rd /s /q $(SolutionDir)\GameX.Base\ToGameX\
+rd /s /q $(SolutionDir)\References\
 
 if $(ConfigurationName) == Release (
   rd /s /q $(TargetDir)\
