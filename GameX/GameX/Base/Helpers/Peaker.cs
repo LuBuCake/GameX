@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 namespace GameX.Base.Helpers
 {
-    public class Peaker
+    public static class Peaker
     {
         [StructLayout(LayoutKind.Sequential)]
         public struct NativeMessage
@@ -20,7 +20,7 @@ namespace GameX.Base.Helpers
         [DllImport("user32.dll")]
         public static extern int PeekMessage(out NativeMessage message, IntPtr window, uint filterMin, uint filterMax, uint remove);
 
-        public bool IsApplicationIdle()
+        public static bool IsApplicationIdle()
         {
             NativeMessage result;
             return PeekMessage(out result, IntPtr.Zero, 0, 0, 0) == 0;

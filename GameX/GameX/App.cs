@@ -25,7 +25,6 @@ namespace GameX
 
         #region Base Props
 
-        private Peaker MsgPeaker { get; set; }
         private Stopwatch FrameElapser { get; set; }
         private Stopwatch CurTimeElapser { get; set; }
         public double FrameTime { get; private set; }
@@ -55,7 +54,7 @@ namespace GameX
 
         private void Application_Idle(object sender, EventArgs e)
         {
-            while (MsgPeaker.IsApplicationIdle())
+            while (Peaker.IsApplicationIdle())
             {
                 Application_Update();
             }
@@ -85,9 +84,11 @@ namespace GameX
         {
             Target_Setup();
 
-            MsgPeaker = new Peaker();
             FrameElapser = new Stopwatch();
             CurTimeElapser = new Stopwatch();
+
+            FrameElapser.Start();
+            CurTimeElapser.Start();
 
             Keyboard.CreateHook(GameX_Keyboard);
 
@@ -105,13 +106,8 @@ namespace GameX
 
         private void Application_Update()
         {
-            if (!CurTimeElapser.IsRunning)
-                CurTimeElapser.Start();
-
             if (!FrameElapser.IsRunning)
                 FrameElapser.Start();
-
-            Application_MaxFPS();
 
             TimeSpan Elapsed = FrameElapser.Elapsed;
 
@@ -126,15 +122,10 @@ namespace GameX
             FramesPerSecond = 1.0 / Elapsed.TotalSeconds;
             FrameTime = 1.0 / FramesPerSecond;
 
-            Application_LimitedFPS();
+            Application_DoWork();
         }
 
-        private void Application_MaxFPS()
-        {
-            
-        }
-
-        private void Application_LimitedFPS()
+        private void Application_DoWork()
         {
             if (Target_Handle() && Initialized)
                 GameX_Update();
