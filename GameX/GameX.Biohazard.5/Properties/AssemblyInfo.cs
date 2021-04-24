@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("GameX")]
-[assembly: AssemblyDescription("Hack in new features to play with!")]
+[assembly: AssemblyDescription("Enable some extra mods in your game without changing any of its files!")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("LuBuCake")]
 [assembly: AssemblyProduct("GameX")]
