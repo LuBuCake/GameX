@@ -1178,7 +1178,7 @@ namespace GameX
             // 
             this.P1ClientLabelControl.Location = new System.Drawing.Point(15, 14);
             this.P1ClientLabelControl.Name = "P1ClientLabelControl";
-            this.P1ClientLabelControl.Size = new System.Drawing.Size(94, 13);
+            this.P1ClientLabelControl.Size = new System.Drawing.Size(103, 13);
             this.P1ClientLabelControl.TabIndex = 0;
             this.P1ClientLabelControl.Text = "No client connected";
             // 
@@ -1210,7 +1210,7 @@ namespace GameX
             // 
             this.P2ClientLabelControl.Location = new System.Drawing.Point(15, 14);
             this.P2ClientLabelControl.Name = "P2ClientLabelControl";
-            this.P2ClientLabelControl.Size = new System.Drawing.Size(94, 13);
+            this.P2ClientLabelControl.Size = new System.Drawing.Size(103, 13);
             this.P2ClientLabelControl.TabIndex = 0;
             this.P2ClientLabelControl.Text = "No client connected";
             // 
@@ -1242,7 +1242,7 @@ namespace GameX
             // 
             this.P3ClientLabelControl.Location = new System.Drawing.Point(15, 14);
             this.P3ClientLabelControl.Name = "P3ClientLabelControl";
-            this.P3ClientLabelControl.Size = new System.Drawing.Size(94, 13);
+            this.P3ClientLabelControl.Size = new System.Drawing.Size(103, 13);
             this.P3ClientLabelControl.TabIndex = 0;
             this.P3ClientLabelControl.Text = "No client connected";
             // 
@@ -1300,7 +1300,7 @@ namespace GameX
             // 
             this.BuddyServerIPLabelControl.Location = new System.Drawing.Point(7, 38);
             this.BuddyServerIPLabelControl.Name = "BuddyServerIPLabelControl";
-            this.BuddyServerIPLabelControl.Size = new System.Drawing.Size(14, 13);
+            this.BuddyServerIPLabelControl.Size = new System.Drawing.Size(12, 13);
             this.BuddyServerIPLabelControl.TabIndex = 0;
             this.BuddyServerIPLabelControl.Text = "IP:";
             // 
@@ -1370,7 +1370,7 @@ namespace GameX
             // ServerPortTextEdit
             // 
             this.ServerPortTextEdit.CausesValidation = false;
-            this.ServerPortTextEdit.EditValue = "9950";
+            this.ServerPortTextEdit.EditValue = "5004";
             this.ServerPortTextEdit.Location = new System.Drawing.Point(36, 37);
             this.ServerPortTextEdit.Name = "ServerPortTextEdit";
             this.ServerPortTextEdit.Properties.Appearance.Options.UseTextOptions = true;
@@ -1444,7 +1444,7 @@ namespace GameX
             // 
             this.PlayerNameLabelControl.Location = new System.Drawing.Point(15, 10);
             this.PlayerNameLabelControl.Name = "PlayerNameLabelControl";
-            this.PlayerNameLabelControl.Size = new System.Drawing.Size(23, 13);
+            this.PlayerNameLabelControl.Size = new System.Drawing.Size(25, 13);
             this.PlayerNameLabelControl.TabIndex = 7;
             this.PlayerNameLabelControl.Text = "Nick:";
             // 
@@ -1482,7 +1482,7 @@ namespace GameX
             // 
             this.UpdateRateLabelControl.Location = new System.Drawing.Point(15, 36);
             this.UpdateRateLabelControl.Name = "UpdateRateLabelControl";
-            this.UpdateRateLabelControl.Size = new System.Drawing.Size(27, 13);
+            this.UpdateRateLabelControl.Size = new System.Drawing.Size(26, 13);
             this.UpdateRateLabelControl.TabIndex = 0;
             this.UpdateRateLabelControl.Text = "Rate:";
             // 
@@ -1490,7 +1490,7 @@ namespace GameX
             // 
             this.PaletteLabelControl.Location = new System.Drawing.Point(15, 62);
             this.PaletteLabelControl.Name = "PaletteLabelControl";
-            this.PaletteLabelControl.Size = new System.Drawing.Size(23, 13);
+            this.PaletteLabelControl.Size = new System.Drawing.Size(25, 13);
             this.PaletteLabelControl.TabIndex = 0;
             this.PaletteLabelControl.Text = "Skin:";
             // 
