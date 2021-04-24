@@ -31,13 +31,13 @@ namespace GameX.Launcher
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(App));
             this.SelectorGP = new DevExpress.XtraEditors.GroupControl();
-            this.GameXPictureEdit = new DevExpress.XtraEditors.PictureEdit();
-            this.GameXComboEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.GameXButton = new DevExpress.XtraEditors.SimpleButton();
+            this.GameXComboEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.GameXPictureEdit = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.SelectorGP)).BeginInit();
             this.SelectorGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GameXPictureEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameXComboEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GameXPictureEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // SelectorGP
@@ -53,18 +53,14 @@ namespace GameX.Launcher
             this.SelectorGP.TabIndex = 0;
             this.SelectorGP.Text = "Available Versions";
             // 
-            // GameXPictureEdit
+            // GameXButton
             // 
-            this.GameXPictureEdit.Location = new System.Drawing.Point(5, 30);
-            this.GameXPictureEdit.Name = "GameXPictureEdit";
-            this.GameXPictureEdit.Properties.AllowFocused = false;
-            this.GameXPictureEdit.Properties.PictureInterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            this.GameXPictureEdit.Properties.ReadOnly = true;
-            this.GameXPictureEdit.Properties.ShowMenu = false;
-            this.GameXPictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.GameXPictureEdit.Size = new System.Drawing.Size(298, 69);
-            this.GameXPictureEdit.TabIndex = 1;
-            this.GameXPictureEdit.UseDirectXPaint = DevExpress.Utils.DefaultBoolean.True;
+            this.GameXButton.AllowFocus = false;
+            this.GameXButton.Location = new System.Drawing.Point(231, 105);
+            this.GameXButton.Name = "GameXButton";
+            this.GameXButton.Size = new System.Drawing.Size(72, 20);
+            this.GameXButton.TabIndex = 3;
+            this.GameXButton.Text = "Launch";
             // 
             // GameXComboEdit
             // 
@@ -79,13 +75,18 @@ namespace GameX.Launcher
             this.GameXComboEdit.TabIndex = 2;
             this.GameXComboEdit.TabStop = false;
             // 
-            // GameXButton
+            // GameXPictureEdit
             // 
-            this.GameXButton.Location = new System.Drawing.Point(231, 105);
-            this.GameXButton.Name = "GameXButton";
-            this.GameXButton.Size = new System.Drawing.Size(72, 20);
-            this.GameXButton.TabIndex = 3;
-            this.GameXButton.Text = "Launch";
+            this.GameXPictureEdit.Location = new System.Drawing.Point(5, 30);
+            this.GameXPictureEdit.Name = "GameXPictureEdit";
+            this.GameXPictureEdit.Properties.AllowFocused = false;
+            this.GameXPictureEdit.Properties.PictureInterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            this.GameXPictureEdit.Properties.ReadOnly = true;
+            this.GameXPictureEdit.Properties.ShowMenu = false;
+            this.GameXPictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.GameXPictureEdit.Size = new System.Drawing.Size(298, 69);
+            this.GameXPictureEdit.TabIndex = 1;
+            this.GameXPictureEdit.UseDirectXPaint = DevExpress.Utils.DefaultBoolean.True;
             // 
             // App
             // 
@@ -102,8 +103,8 @@ namespace GameX.Launcher
             this.Load += new System.EventHandler(this.App_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SelectorGP)).EndInit();
             this.SelectorGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GameXPictureEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameXComboEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GameXPictureEdit.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -19,6 +19,12 @@ namespace GameX.Launcher
 
             if (GameXSelector.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(RuntimeDll))
             {
+                if (!File.Exists($"{Directory.GetCurrentDirectory()}/{RuntimeDll}"))
+                {
+                    MessageBox.Show("The specified file wasn't found, please do not modify the contents of this application.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 Assembly assembly = Assembly.LoadFile($"{Directory.GetCurrentDirectory()}/{RuntimeDll}");
                 Type type = assembly.GetType("GameX.App");
                 DevExpress.XtraEditors.XtraForm GUI = (DevExpress.XtraEditors.XtraForm) Activator.CreateInstance(type);

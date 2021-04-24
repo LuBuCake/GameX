@@ -18,8 +18,9 @@ namespace GameX.Base.Modules
     {
         public static bool ModuleStarted { get; set; }
         private static App Main { get; set; }
-        public static WatsonTcpServer TCPServer { get; set; }
-        public static Server TCPClient { get; set; }
+        public static WatsonTcpServer _Server { get; set; }
+        public static WatsonTcpClient _Client { get; set; }
+        public static string _ClientIP { get; set; }
         public static Client[] BuddyClients { get; private set; }
         public static string[] PrivateIPv4 { get; private set; }
         public static bool HasConnection { get; private set; }
@@ -73,12 +74,12 @@ namespace GameX.Base.Modules
 
         public static void FinishModule()
         {
-            if (TCPServer != null)
+            if (_Server != null)
             {
                 StopServer(null, null);
             }
 
-            if (TCPClient != null)
+            if (_Client != null)
             {
                 StopClient(Main.BuddyServerConnectionButton, null);
             }
@@ -103,7 +104,7 @@ namespace GameX.Base.Modules
                 return;
             }
 
-            if (TCPServer == null)
+            if (_Server == null)
                 StartServer(sender, e);
             else
                 StopServer(sender, e);
@@ -130,28 +131,28 @@ namespace GameX.Base.Modules
 
             try
             {
-                TCPServer = new WatsonTcpServer(null, Port);
-                TCPServer.Events.ClientConnected += Server_ClientConnected;
-                TCPServer.Events.ClientDisconnected += Server_ClientDisconnected;
-                TCPServer.Events.MessageReceived += Server_MessageReceived;
-                TCPServer.Events.ServerStarted += Server_ServerStarted;
-                TCPServer.Events.ServerStopped += Server_ServerStopped;
-                TCPServer.Callbacks.SyncRequestReceived = Server_SyncRequestReceived;
+                _Server = new WatsonTcpServer(null, Port);
+                _Server.Events.ClientConnected += Server_ClientConnected;
+                _Server.Events.ClientDisconnected += Server_ClientDisconnected;
+                _Server.Events.MessageReceived += Server_MessageReceived;
+                _Server.Events.ServerStarted += Server_ServerStarted;
+                _Server.Events.ServerStopped += Server_ServerStopped;
 
-                TCPServer.Settings.Logger = Logger;
-                TCPServer.Settings.DebugMessages = true;
-                TCPServer.Settings.MaxConnections = 3;
+                _Server.Callbacks.SyncRequestReceived = Server_SyncRequestReceived;
 
-                TCPServer.Keepalive.EnableTcpKeepAlives = true;
-                TCPServer.Keepalive.TcpKeepAliveInterval = 1;
-                TCPServer.Keepalive.TcpKeepAliveTime = 1;
-                TCPServer.Keepalive.TcpKeepAliveRetryCount = 3;
-                TCPServer.Start();
+                _Server.Settings.Logger = Server_Logger;
+                _Server.Settings.DebugMessages = true;
+
+                _Server.Keepalive.EnableTcpKeepAlives = true;
+                _Server.Keepalive.TcpKeepAliveInterval = 2;
+                _Server.Keepalive.TcpKeepAliveTime = 2;
+                _Server.Keepalive.TcpKeepAliveRetryCount = 5;
+                _Server.Start();
             }
             catch (Exception Ex)
             {
-                TCPServer?.Dispose();
-                TCPServer = null;
+                _Server?.Dispose();
+                _Server = null;
                 Main.ServerPortTextEdit.Enabled = true;
                 Terminal.WriteLine($"[Server] {Ex.Message}");
                 return;
@@ -165,9 +166,9 @@ namespace GameX.Base.Modules
 
         public static void StopServer(object sender, EventArgs e)
         {
-            TCPServer?.DisconnectClients();
-            TCPServer?.Dispose();
-            TCPServer = null;
+            _Server?.DisconnectClients();
+            _Server?.Dispose();
+            _Server = null;
 
             Main.BuddyServerConnectionButton.Enabled = true;
 
@@ -185,8 +186,7 @@ namespace GameX.Base.Modules
             try
             {
                 Terminal.WriteLine($"[Server] Sending Player Name request to {args.IpPort}, waiting response.");
-                SyncResponse PlayerNameRequest =
-                    await Task.Run(() => TCPServer.SendAndWait(5000, args.IpPort, "[PLAYERNAME]"));
+                SyncResponse PlayerNameRequest = await Task.Run(() => _Server.SendAndWait(5000, args.IpPort, "[PLAYERNAME]"));
                 PlayerName = Encoding.UTF8.GetString(PlayerNameRequest.Data);
                 Terminal.WriteLine($"[Server] Player Name received from {args.IpPort}.");
             }
@@ -225,6 +225,14 @@ namespace GameX.Base.Modules
                 Main.P4CosComboBox
             };
 
+            CheckButton[] CharCosFreezes =
+            {
+                Main.P1FreezeCharCosButton,
+                Main.P2FreezeCharCosButton,
+                Main.P3FreezeCharCosButton,
+                Main.P4FreezeCharCosButton
+            };
+
             for (int i = 0; i < 3; i++)
             {
                 if (BuddyClients[i] != null)
@@ -237,7 +245,8 @@ namespace GameX.Base.Modules
 
                 for (int j = 0; j < 4; j++)
                 {
-                    Main.Character_SendChange(j, CharacterCombos[j].SelectedIndex, CostumeCombos[j].SelectedIndex);
+                    Main.Character_SendFreezeChange(j, CharCosFreezes[j].Checked);
+                    Main.Character_SendSelectionChange(j, CharacterCombos[j].SelectedIndex, CostumeCombos[j].SelectedIndex);
                 }
 
                 break;
@@ -302,11 +311,11 @@ namespace GameX.Base.Modules
                         }
                     }
                 }
-                else if (Decoded.Contains("[CHARCHANGE]"))
+                else if (Decoded.Contains("[CHARSELECTIONCHANGE]"))
                 {
-                    Decoded = Decoded.Replace("[CHARCHANGE]", "");
+                    Decoded = Decoded.Replace("[CHARSELECTIONCHANGE]", "");
                     Client ClientSender = null;
-                    NetCharacterChange Change = Serializer.DeserializeCharacterChanged(Decoded);
+                    NetCharacterSelectionChange Change = Serializer.DeserializeCharacterSelectionChanged(Decoded);
 
                     foreach (Client Client in BuddyClients)
                     {
@@ -317,7 +326,24 @@ namespace GameX.Base.Modules
                         break;
                     }
 
-                    Main.Character_ReceiveChange(Change, ClientSender);
+                    Main.Character_ReceiveSelectionChange(Change, ClientSender);
+                }
+                else if (Decoded.Contains("[CHARFREEZECHANGE]"))
+                {
+                    Decoded = Decoded.Replace("[CHARFREEZECHANGE]", "");
+                    Client ClientSender = null;
+                    NetCharacterFreezeChange Change = Serializer.DeserializeCharacterFreezeChanged(Decoded);
+
+                    foreach (Client Client in BuddyClients)
+                    {
+                        if (Client.IP != args.IpPort)
+                            continue;
+
+                        ClientSender = Client;
+                        break;
+                    }
+
+                    Main.Character_ReceiveFreezeChange(Change, ClientSender);
                 }
                 else
                 {
@@ -349,13 +375,13 @@ namespace GameX.Base.Modules
 
         public static void Server_DropClient(object sender, EventArgs e)
         {
-            if (TCPServer == null)
+            if (_Server == null)
                 return;
 
             SimpleButton SB = sender as SimpleButton;
             int index = int.Parse(SB.Name[1].ToString()) - 1;
 
-            TCPServer.DisconnectClient(BuddyClients[index].IP);
+            _Server.DisconnectClient(BuddyClients[index].IP);
             Terminal.WriteLine($"[Server] Dropping client {BuddyClients[index].IP}.");
 
             LabelControl[] ClientNames =
@@ -377,11 +403,16 @@ namespace GameX.Base.Modules
             Threading.SetControlPropertyThreadSafe(DropButtons[index], "Enabled", false);
         }
 
+        private static void Server_Logger(Severity sev, string msg)
+        {
+            Terminal.WriteLine($"[Server] [{sev}] {msg}");
+        }
+
         #endregion
 
         #region Client
 
-        public static async void StartClient_Click(object sender, EventArgs e)
+        public static void StartClient_Click(object sender, EventArgs e)
         {
             if (!ModuleStarted)
             {
@@ -390,15 +421,22 @@ namespace GameX.Base.Modules
                 return;
             }
 
-            if (TCPClient == null)
-                await StartClient(sender, e);
+            if (_Client == null)
+                StartClient(sender, e);
             else
                 StopClient(sender, e);
         }
 
-        public static async Task StartClient(object sender, EventArgs e)
+        public static void StartClient(object sender, EventArgs e)
         {
             SimpleButton CB = sender as SimpleButton;
+
+            if (_Client != null)
+            {
+                _Client.Dispose();
+                _Client = null;
+                _ClientIP = null;
+            }
 
             if (Main.BuddyServerIPTextEdit.Text == "")
             {
@@ -428,51 +466,52 @@ namespace GameX.Base.Modules
 
             if (!PortParsed || Port > 65535 || Port < 1)
             {
-                Terminal.WriteLine("[App] The specified port is invalid, please specify one between 1 and 65535.",
-                    Enums.MessageBoxType.Error);
+                Terminal.WriteLine("[App] The specified port is invalid, please specify one between 1 and 65535.", Enums.MessageBoxType.Error);
                 return;
             }
 
-            if (TCPServer != null)
+            if (_Server != null)
             {
                 if (Array.Exists(PrivateIPv4, AvailableIP => AvailableIP == Main.BuddyServerIPTextEdit.Text) &&
                     Main.BuddyServerPortTextEdit.Text == Main.ServerPortTextEdit.Text)
                 {
-                    Terminal.WriteLine(
-                        "[Network] You cannot join yourself, please specify another IP:Port combination.",
-                        Enums.MessageBoxType.Error);
+                    Terminal.WriteLine("[Network] You cannot join yourself, please specify another IP:Port combination.", Enums.MessageBoxType.Error);
                     return;
                 }
             }
 
             try
             {
-                TCPClient = new Server {Connector = new WatsonTcpClient(IP.ToString(), Port), IP = $"{IP}:{Port}"};
-                TCPClient.Connector.Events.ServerConnected += Client_ServerConnected;
-                TCPClient.Connector.Events.ServerDisconnected += Client_ServerDisconnected;
-                TCPClient.Connector.Events.MessageReceived += Client_MessageReceived;
-                TCPClient.Connector.Callbacks.SyncRequestReceived = Client_SyncRequestReceived;
+                _ClientIP = $"{IP}:{Port}";
 
-                TCPClient.Connector.Settings.DebugMessages = true;
-                TCPClient.Connector.Settings.Logger = Logger;
+                _Client = new WatsonTcpClient(IP.ToString(), Port);
+                _Client.Events.ServerConnected += Client_ServerConnected;
+                _Client.Events.ServerDisconnected += Client_ServerDisconnected;
+                _Client.Events.MessageReceived += Client_MessageReceived;
 
-                TCPClient.Connector.Keepalive.EnableTcpKeepAlives = true;
-                TCPClient.Connector.Keepalive.TcpKeepAliveInterval = 1;
-                TCPClient.Connector.Keepalive.TcpKeepAliveTime = 1;
-                TCPClient.Connector.Keepalive.TcpKeepAliveRetryCount = 3;
+                _Client.Callbacks.SyncRequestReceived = Client_SyncRequestReceived;
+
+                _Client.Settings.DebugMessages = true;
+                _Client.Settings.Logger = Client_Logger;
+
+                _Client.Keepalive.EnableTcpKeepAlives = true;
+                _Client.Keepalive.TcpKeepAliveInterval = 2;
+                _Client.Keepalive.TcpKeepAliveTime = 2;
+                _Client.Keepalive.TcpKeepAliveRetryCount = 5;
 
                 CB.Enabled = false;
                 CB.Text = "Connecting";
 
-                await Task.Run(() => TCPClient.Connector.Connect());
+                _Client.Connect();
             }
             catch (Exception Ex)
             {
                 CB.Enabled = true;
                 CB.Text = "Connect";
-                TCPClient?.Connector?.Dispose();
-                TCPClient = null;
-                Terminal.WriteLine($"[Client] {Ex.Message}");
+                _Client?.Dispose();
+                _Client = null;
+                _ClientIP = null;
+                Terminal.WriteLine($"[Client] {Ex}");
                 Utility.MessageBox_Information("No connection found at the specified IP:Port.");
                 return;
             }
@@ -487,12 +526,13 @@ namespace GameX.Base.Modules
         {
             SimpleButton CB = sender as SimpleButton;
 
-            string IPPort = TCPClient?.IP;
+            string IPPort = _ClientIP;
 
             CB.Enabled = false;
 
-            TCPClient?.Connector?.Dispose();
-            TCPClient = null;
+            _Client?.Dispose();
+            _Client = null;
+            _ClientIP = null;
 
             Main.StartServerButton.Enabled = true;
 
@@ -504,15 +544,17 @@ namespace GameX.Base.Modules
 
         private static void Client_ServerConnected(object sender, ConnectionEventArgs args)
         {
-            Terminal.WriteLine($"[Client] Sucessfully connected to {args.IpPort}.", Enums.MessageBoxType.Information);
+            Terminal.WriteLine($"[Client] Sucessfully connected to {args.IpPort}.");
         }
 
         private static void Client_ServerDisconnected(object sender, DisconnectionEventArgs args)
         {
-            if (TCPClient != null && TCPClient.Connector != null && !TCPClient.Connector.Connected)
+            if (_Client != null && !_Client.Connected)
             {
-                TCPClient?.Connector?.Dispose();
-                TCPClient = null;
+                _Client.Dispose();
+                _Client = null;
+                _ClientIP = null;
+
                 Threading.SetControlPropertyThreadSafe(Main.BuddyServerConnectionButton, "Text", "Connect");
                 Threading.SetControlPropertyThreadSafe(Main.StartServerButton, "Enabled", true);
             }
@@ -532,12 +574,19 @@ namespace GameX.Base.Modules
                     Terminal.WriteMessage(Decoded, (int) Enums.ConsoleInterface.Client);
                     return;
                 }
-
-                if (Decoded.Contains("[CHARCHANGE]"))
+                if (Decoded.Contains("[CHARSELECTIONCHANGE]"))
                 {
-                    Decoded = Decoded.Replace("[CHARCHANGE]", "");
-                    NetCharacterChange Change = Serializer.DeserializeCharacterChanged(Decoded);
-                    Main.Character_ReceiveChange(Change);
+                    Decoded = Decoded.Replace("[CHARSELECTIONCHANGE]", "");
+                    NetCharacterSelectionChange Change = Serializer.DeserializeCharacterSelectionChanged(Decoded);
+                    Main.Character_ReceiveSelectionChange(Change);
+                    return;
+                }
+
+                if (Decoded.Contains("[CHARFREEZECHANGE]"))
+                {
+                    Decoded = Decoded.Replace("[CHARFREEZECHANGE]", "");
+                    NetCharacterFreezeChange Change = Serializer.DeserializeCharacterFreezeChanged(Decoded);
+                    Main.Character_ReceiveFreezeChange(Change);
                     return;
                 }
             }
@@ -564,28 +613,24 @@ namespace GameX.Base.Modules
             return new SyncResponse(req, "");
         }
 
-        #endregion
-
-        #region Shared
-
-        private static void Logger(Severity sev, string msg)
+        private static void Client_Logger(Severity sev, string msg)
         {
+            Terminal.WriteLine($"[Client] [{sev}] {msg}");
         }
 
         #endregion
 
         #region Senders
 
-        public static void Server_BroadcastMessage(string Message, string IPException = "", bool WriteInTheChat = false,
-            bool SuppressTerminal = false)
+        public static void Server_BroadcastMessage(string Message, string IPException = "", bool WriteInTheChat = false, bool SuppressTerminal = false)
         {
-            if (!ModuleStarted || TCPServer == null)
+            if (!ModuleStarted || _Server == null)
             {
                 Terminal.WriteLine("[App] The server is offline, send request ignored.");
                 return;
             }
 
-            List<string> clients = TCPServer.ListClients().ToList();
+            List<string> clients = _Server.ListClients().ToList();
 
             if (clients.Count == 0)
             {
@@ -601,7 +646,7 @@ namespace GameX.Base.Modules
                 if (IPException != "" && Cli == IPException)
                     continue;
 
-                TCPServer.Send(Cli, Encoded);
+                _Server.Send(Cli, Encoded);
                 MessagesSent++;
             }
 
@@ -622,14 +667,14 @@ namespace GameX.Base.Modules
 
         public static void Server_SendMessage(string IPPort, string Message, bool SuppressTerminal = false)
         {
-            if (!ModuleStarted || TCPServer == null)
+            if (!ModuleStarted || _Server == null)
             {
                 Terminal.WriteLine("[App] The server is offline, send request ignored.");
                 return;
             }
 
             byte[] Encoded = Encoding.UTF8.GetBytes(Message);
-            TCPServer.Send(IPPort, Encoded);
+            _Server.Send(IPPort, Encoded);
 
             if (SuppressTerminal)
                 return;
@@ -637,8 +682,7 @@ namespace GameX.Base.Modules
             Terminal.WriteLine($"[Server] Message sucessfully sent to {IPPort}.");
         }
 
-        public static void Client_SendMessage(string Message, bool WriteInTheChat = false,
-            bool SuppressTerminal = false)
+        public static void Client_SendMessage(string Message, bool WriteInTheChat = false, bool SuppressTerminal = false)
         {
             if (!ModuleStarted)
             {
@@ -646,14 +690,14 @@ namespace GameX.Base.Modules
                 return;
             }
 
-            if (TCPClient == null)
+            if (_Client == null)
             {
                 Terminal.WriteLine("[App] No connection found at the specified server.");
                 return;
             }
 
             byte[] Encoded = Encoding.UTF8.GetBytes(Message);
-            TCPClient.Connector.Send(Encoded);
+            _Client.Send(Encoded);
 
             if (WriteInTheChat)
             {

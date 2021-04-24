@@ -25,22 +25,22 @@ namespace GameX.Game.Content
                     },
                     new Costume
                     {
-                        Name = "Melee Vest", Portrait = @"GameX.Biohazard.5/image/character/c0.png",
+                        Name = "Melee Vest", Portrait = @"GameX.Biohazard.5/image/character/c1.png",
                         File = "uPl00ChrisArmorA", Value = 1
                     },
                     new Costume
                     {
-                        Name = "Bulletproof Vest", Portrait = @"GameX.Biohazard.5/image/character/c0.png",
+                        Name = "Bulletproof Vest", Portrait = @"GameX.Biohazard.5/image/character/c2.png",
                         File = "uPl00ChrisArmorB", Value = 2
                     },
                     new Costume
                     {
-                        Name = "Full Armor", Portrait = @"GameX.Biohazard.5/image/character/c0.png",
+                        Name = "Full Armor", Portrait = @"GameX.Biohazard.5/image/character/c3.png",
                         File = "uPl00ChrisArmorF", Value = 3
                     },
                     new Costume
                     {
-                        Name = "Plain", Portrait = @"GameX.Biohazard.5/image/character/c0.png",
+                        Name = "Plain", Portrait = @"GameX.Biohazard.5/image/character/c4.png",
                         File = "uPl00ChrisPlain", Value = 4
                     },
                     new Costume
@@ -84,22 +84,22 @@ namespace GameX.Game.Content
                     },
                     new Costume
                     {
-                        Name = "Melee Vest", Portrait = @"GameX.Biohazard.5/image/character/s0.png",
+                        Name = "Melee Vest", Portrait = @"GameX.Biohazard.5/image/character/s1.png",
                         File = "uPl01ShebaArmorA", Value = 1
                     },
                     new Costume
                     {
-                        Name = "Bulletproof Vest", Portrait = @"GameX.Biohazard.5/image/character/s0.png",
+                        Name = "Bulletproof Vest", Portrait = @"GameX.Biohazard.5/image/character/s2.png",
                         File = "uPl01ShebaArmorB", Value = 2
                     },
                     new Costume
                     {
-                        Name = "Full Armor", Portrait = @"GameX.Biohazard.5/image/character/s0.png",
+                        Name = "Full Armor", Portrait = @"GameX.Biohazard.5/image/character/s3.png",
                         File = "uPl01ShebaArmorF", Value = 3
                     },
                     new Costume
                     {
-                        Name = "Plain", Portrait = @"GameX.Biohazard.5/image/character/s0.png",
+                        Name = "Plain", Portrait = @"GameX.Biohazard.5/image/character/s4.png",
                         File = "uPl01ShebaPlain", Value = 4
                     },
                     new Costume
@@ -143,12 +143,12 @@ namespace GameX.Game.Content
                     },
                     new Costume
                     {
-                        Name = "Desesperate Escape", Portrait = @"GameX.Biohazard.5/image/character/j1.png",
+                        Name = "Desesperate Escape", Portrait = @"GameX.Biohazard.5/image/character/j2.png",
                         File = "uPl02JillCos3", Value = 2
                     },
                     new Costume
                     {
-                        Name = "Lost in Nightmares", Portrait = @"GameX.Biohazard.5/image/character/j0.png",
+                        Name = "Lost in Nightmares", Portrait = @"GameX.Biohazard.5/image/character/j3.png",
                         File = "uPl02JillCos4", Value = 3
                     }
                 }
@@ -186,7 +186,7 @@ namespace GameX.Game.Content
                     },
                     new Costume
                     {
-                        Name = "Reunion BSAA", Portrait = @"GameX.Biohazard.5/image/character/js0.png",
+                        Name = "Reunion BSAA", Portrait = @"GameX.Biohazard.5/image/character/js1.png",
                         File = "uPl04JoshCos2", Value = 1
                     }
                 }

@@ -10,25 +10,25 @@
     },
     {
       "Name": "Melee Vest",
-      "Portrait": "GameX.Biohazard.5/image/character/s0.png",
+      "Portrait": "GameX.Biohazard.5/image/character/s1.png",
       "File": "uPl01ShebaArmorA",
       "Value": 1
     },
     {
       "Name": "Bulletproof Vest",
-      "Portrait": "GameX.Biohazard.5/image/character/s0.png",
+      "Portrait": "GameX.Biohazard.5/image/character/s2.png",
       "File": "uPl01ShebaArmorB",
       "Value": 2
     },
     {
       "Name": "Full Armor",
-      "Portrait": "GameX.Biohazard.5/image/character/s0.png",
+      "Portrait": "GameX.Biohazard.5/image/character/s3.png",
       "File": "uPl01ShebaArmorF",
       "Value": 3
     },
     {
       "Name": "Plain",
-      "Portrait": "GameX.Biohazard.5/image/character/s0.png",
+      "Portrait": "GameX.Biohazard.5/image/character/s4.png",
       "File": "uPl01ShebaPlain",
       "Value": 4
     },

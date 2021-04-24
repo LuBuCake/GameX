@@ -39,7 +39,8 @@ namespace GameX
 
         #region NET Props
 
-        private bool CharChangeReceived { get; set; }
+        private bool CharCosSelectionChangeReceived { get; set; }
+        private bool CharCosFreezeChangeReceived { get; set; }
 
         #endregion
 
@@ -476,6 +477,8 @@ namespace GameX
                 throw;
             }
 
+            Utility.MessageBox_Information("Settings saved.");
+
             Terminal.WriteLine("[App] Settings saved.");
         }
 
@@ -499,7 +502,7 @@ namespace GameX
                 throw;
             }
 
-            UpdateModeComboBoxEdit.SelectedIndex = Setts.UpdateRate;
+            UpdateModeComboBoxEdit.SelectedIndex = Utility.Clamp(Setts.UpdateRate, 0, 2);
             PlayerNameTextEdit.Text = Setts.PlayerName;
 
             foreach (ListItem Pallete in PaletteComboBoxEdit.Properties.Items)
@@ -508,7 +511,10 @@ namespace GameX
                     PaletteComboBoxEdit.SelectedItem = Pallete;
             }
 
-            Terminal.WriteLine("[App] Settings Loaded.");
+            if (sender != null)
+                Utility.MessageBox_Information("Settings loaded.");
+
+            Terminal.WriteLine("[App] Settings loaded.");
         }
 
         private void UpdateMode_IndexChanged(object sender, EventArgs e)
@@ -580,10 +586,8 @@ namespace GameX
             if (Portrait != null)
                 CharPicBoxes[Index].Image = Portrait;
 
-            if (!CharChangeReceived)
-            {
-                Character_SendChange(Index, CharacterCombos[Index].SelectedIndex, CBE.SelectedIndex);
-            }
+            if (!CharCosSelectionChangeReceived)
+                Character_SendSelectionChange(Index, CharacterCombos[Index].SelectedIndex, CBE.SelectedIndex);
 
             if (!Initialized)
                 return;
@@ -623,11 +627,16 @@ namespace GameX
             CheckButton CKBTN = sender as CheckButton;
             CKBTN.Text = CKBTN.Checked ? "Frozen" : "Freeze";
 
+            int Index = int.Parse(CKBTN.Name[1].ToString()) - 1;
+
+            if (!CharCosFreezeChangeReceived && CKBTN.Enabled)
+                Character_SendFreezeChange(Index, CKBTN.Checked);
+
             if (!Initialized)
                 return;
 
             Character_DetourUpdate();
-            Character_ApplyCharacters(int.Parse(CKBTN.Name[1].ToString()) - 1);
+            Character_ApplyCharacters(Index);
         }
 
         private void OnOff_CheckedChanged(object sender, EventArgs e)
@@ -1098,21 +1107,21 @@ namespace GameX
 
         // NET
 
-        public void Character_SendChange(int index, int character, int costume)
+        public void Character_SendSelectionChange(int index, int character, int costume)
         {
             if (!Network.ModuleStarted
-                || Network.TCPServer == null && Network.TCPClient == null
-                || Network.TCPServer != null && Network.TCPServer.ListClients().ToList().Count < 1)
+                || Network._Server == null && Network._Client == null
+                || Network._Server != null && Network._Server.ListClients().ToList().Count < 1)
                 return;
 
-            NetCharacterChange Change = new NetCharacterChange()
+            NetCharacterSelectionChange Change = new NetCharacterSelectionChange()
             {
                 Index = index, Character = character, Costume = costume
             };
 
-            string SerializedChange = $"[CHARCHANGE]{Serializer.SerializeCharacterChanged(Change)}";
+            string SerializedChange = $"[CHARSELECTIONCHANGE]{Serializer.SerializeCharacterSelectionChanged(Change)}";
 
-            if (Network.TCPServer != null)
+            if (Network._Server != null)
             {
                 Network.Server_BroadcastMessage(SerializedChange, "", false, true);
                 return;
@@ -1121,12 +1130,12 @@ namespace GameX
             Network.Client_SendMessage(SerializedChange, false, true);
         }
 
-        public void Character_ReceiveChange(NetCharacterChange Change, Client Client = null)
+        public void Character_ReceiveSelectionChange(NetCharacterSelectionChange Change, Client Client = null)
         {
-            if (Network.TCPServer != null && Client != null &&
-                Network.TCPServer.ListClients().Where(x => x != Client.IP).ToList().Count > 0)
+            if (Network._Server != null && Client != null &&
+                Network._Server.ListClients().Where(x => x != Client.IP).ToList().Count > 0)
             {
-                string SerializedChange = $"[CHARCHANGE]{Serializer.SerializeCharacterChanged(Change)}";
+                string SerializedChange = $"[CHARSELECTIONCHANGE]{Serializer.SerializeCharacterSelectionChanged(Change)}";
                 Network.Server_BroadcastMessage(SerializedChange, Client.IP, false, true);
             }
 
@@ -1146,12 +1155,61 @@ namespace GameX
                 P4CosComboBox
             };
 
-            CharChangeReceived = true;
+            CharCosSelectionChangeReceived = true;
 
             Threading.SetControlPropertyThreadSafe(CharacterCombos[Change.Index], "SelectedIndex", Change.Character);
             Threading.SetControlPropertyThreadSafe(CostumeCombos[Change.Index], "SelectedIndex", Change.Costume);
 
-            CharChangeReceived = false;
+            CharCosSelectionChangeReceived = false;
+        }
+
+        public void Character_SendFreezeChange(int index, bool freeze)
+        {
+            if (!Network.ModuleStarted
+                || Network._Server == null && Network._Client == null
+                || Network._Server != null && Network._Server.ListClients().ToList().Count < 1)
+                return;
+
+            NetCharacterFreezeChange Change = new NetCharacterFreezeChange()
+            {
+                Index = index,
+                Freeze = freeze
+            };
+
+            string SerializedChange = $"[CHARFREEZECHANGE]{Serializer.SerializeCharacterFreezeChanged(Change)}";
+
+            if (Network._Server != null)
+            {
+                Network.Server_BroadcastMessage(SerializedChange, "", false, true);
+                return;
+            }
+
+            Network.Client_SendMessage(SerializedChange, false, true);
+        }
+
+        public void Character_ReceiveFreezeChange(NetCharacterFreezeChange Change, Client Client = null)
+        {
+            if (Network._Server != null && Client != null &&
+                Network._Server.ListClients().Where(x => x != Client.IP).ToList().Count > 0)
+            {
+                string SerializedChange = $"[CHARFREEZECHANGE]{Serializer.SerializeCharacterFreezeChanged(Change)}";
+                Network.Server_BroadcastMessage(SerializedChange, Client.IP, false, true);
+            }
+
+            CheckButton[] CharCosFreezes =
+            {
+                P1FreezeCharCosButton,
+                P2FreezeCharCosButton,
+                P3FreezeCharCosButton,
+                P4FreezeCharCosButton
+            };
+
+            CharCosFreezeChangeReceived = true;
+
+            if (CharCosFreezes[Change.Index].Enabled)
+                Threading.SetControlPropertyThreadSafe(CharCosFreezes[Change.Index], "Checked", Change.Freeze);
+
+            CharCosFreezeChangeReceived = false;
         }
 
         #endregion

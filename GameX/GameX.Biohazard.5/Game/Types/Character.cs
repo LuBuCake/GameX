@@ -28,7 +28,7 @@ namespace GameX.Game.Types
         }
     }
 
-    public class NetCharacterChange
+    public class NetCharacterSelectionChange
     {
         public int Index { get; set; }
         public int Character { get; set; }
@@ -38,5 +38,11 @@ namespace GameX.Game.Types
         {
             return base.ToString() + Index + " " + Character + " " + Costume;
         }
+    }
+
+    public class NetCharacterFreezeChange
+    {
+        public int Index { get; set; }
+        public bool Freeze { get; set; }
     }
 }

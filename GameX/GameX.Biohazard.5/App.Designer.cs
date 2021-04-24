@@ -1178,7 +1178,7 @@ namespace GameX
             // 
             this.P1ClientLabelControl.Location = new System.Drawing.Point(15, 14);
             this.P1ClientLabelControl.Name = "P1ClientLabelControl";
-            this.P1ClientLabelControl.Size = new System.Drawing.Size(103, 13);
+            this.P1ClientLabelControl.Size = new System.Drawing.Size(94, 13);
             this.P1ClientLabelControl.TabIndex = 0;
             this.P1ClientLabelControl.Text = "No client connected";
             // 
@@ -1210,7 +1210,7 @@ namespace GameX
             // 
             this.P2ClientLabelControl.Location = new System.Drawing.Point(15, 14);
             this.P2ClientLabelControl.Name = "P2ClientLabelControl";
-            this.P2ClientLabelControl.Size = new System.Drawing.Size(103, 13);
+            this.P2ClientLabelControl.Size = new System.Drawing.Size(94, 13);
             this.P2ClientLabelControl.TabIndex = 0;
             this.P2ClientLabelControl.Text = "No client connected";
             // 
@@ -1242,7 +1242,7 @@ namespace GameX
             // 
             this.P3ClientLabelControl.Location = new System.Drawing.Point(15, 14);
             this.P3ClientLabelControl.Name = "P3ClientLabelControl";
-            this.P3ClientLabelControl.Size = new System.Drawing.Size(103, 13);
+            this.P3ClientLabelControl.Size = new System.Drawing.Size(94, 13);
             this.P3ClientLabelControl.TabIndex = 0;
             this.P3ClientLabelControl.Text = "No client connected";
             // 
@@ -1300,7 +1300,7 @@ namespace GameX
             // 
             this.BuddyServerIPLabelControl.Location = new System.Drawing.Point(7, 38);
             this.BuddyServerIPLabelControl.Name = "BuddyServerIPLabelControl";
-            this.BuddyServerIPLabelControl.Size = new System.Drawing.Size(12, 13);
+            this.BuddyServerIPLabelControl.Size = new System.Drawing.Size(14, 13);
             this.BuddyServerIPLabelControl.TabIndex = 0;
             this.BuddyServerIPLabelControl.Text = "IP:";
             // 
@@ -1444,7 +1444,7 @@ namespace GameX
             // 
             this.PlayerNameLabelControl.Location = new System.Drawing.Point(15, 10);
             this.PlayerNameLabelControl.Name = "PlayerNameLabelControl";
-            this.PlayerNameLabelControl.Size = new System.Drawing.Size(25, 13);
+            this.PlayerNameLabelControl.Size = new System.Drawing.Size(23, 13);
             this.PlayerNameLabelControl.TabIndex = 7;
             this.PlayerNameLabelControl.Text = "Nick:";
             // 
@@ -1482,7 +1482,7 @@ namespace GameX
             // 
             this.UpdateRateLabelControl.Location = new System.Drawing.Point(15, 36);
             this.UpdateRateLabelControl.Name = "UpdateRateLabelControl";
-            this.UpdateRateLabelControl.Size = new System.Drawing.Size(26, 13);
+            this.UpdateRateLabelControl.Size = new System.Drawing.Size(27, 13);
             this.UpdateRateLabelControl.TabIndex = 0;
             this.UpdateRateLabelControl.Text = "Rate:";
             // 
@@ -1490,7 +1490,7 @@ namespace GameX
             // 
             this.PaletteLabelControl.Location = new System.Drawing.Point(15, 62);
             this.PaletteLabelControl.Name = "PaletteLabelControl";
-            this.PaletteLabelControl.Size = new System.Drawing.Size(25, 13);
+            this.PaletteLabelControl.Size = new System.Drawing.Size(23, 13);
             this.PaletteLabelControl.TabIndex = 0;
             this.PaletteLabelControl.Text = "Skin:";
             // 
@@ -1739,7 +1739,6 @@ namespace GameX
         }
 
         #endregion
-        private DevExpress.XtraEditors.CheckButton P1FreezeCharCosButton;
         private DevExpress.XtraEditors.PictureEdit P1CharPictureBox;
         private DevExpress.XtraTab.XtraTabControl MasterTabControl;
         private DevExpress.XtraTab.XtraTabPage TabPageChar;
@@ -1764,9 +1763,6 @@ namespace GameX
         private DevExpress.XtraEditors.GroupControl LoadSaveGP;
         private DevExpress.XtraEditors.GroupControl MiscSettingsGP;
         private DevExpress.XtraEditors.LabelControl UpdateRateLabelControl;
-        private DevExpress.XtraEditors.CheckButton P4FreezeCharCosButton;
-        private DevExpress.XtraEditors.CheckButton P3FreezeCharCosButton;
-        private DevExpress.XtraEditors.CheckButton P2FreezeCharCosButton;
         private DevExpress.XtraEditors.CheckButton P1UntargetableButton;
         private DevExpress.XtraEditors.LabelControl PaletteLabelControl;
         private DevExpress.XtraEditors.ComboBoxEdit PaletteComboBoxEdit;
@@ -1846,6 +1842,10 @@ namespace GameX
         public DevExpress.XtraEditors.ComboBoxEdit P2CosComboBox;
         public DevExpress.XtraEditors.ComboBoxEdit P2CharComboBox;
         private DevExpress.XtraEditors.LabelControl PlayerNameLabelControl;
+        public DevExpress.XtraEditors.CheckButton P1FreezeCharCosButton;
+        public DevExpress.XtraEditors.CheckButton P4FreezeCharCosButton;
+        public DevExpress.XtraEditors.CheckButton P3FreezeCharCosButton;
+        public DevExpress.XtraEditors.CheckButton P2FreezeCharCosButton;
     }
 }
 
