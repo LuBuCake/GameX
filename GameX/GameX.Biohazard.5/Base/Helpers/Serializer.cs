@@ -13,7 +13,7 @@ namespace GameX.Base.Helpers
 
         public static string SerializeSettings(Settings Data)
         {
-            return JsonConvert.SerializeObject(Data);
+            return JsonConvert.SerializeObject(Data, Formatting.Indented);
         }
 
         public static Settings DeserializeSettings(string Data)

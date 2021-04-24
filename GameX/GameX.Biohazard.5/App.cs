@@ -206,9 +206,7 @@ namespace GameX
         {
             try
             {
-                if (Target_Version != "" && (Target_Process.MainModule == null ||
-                                             !Target_Process.MainModule.FileVersionInfo.ToString()
-                                                 .Contains(Target_Version)))
+                if (Target_Version != "" && (Target_Process.MainModule == null || !Target_Process.MainModule.FileVersionInfo.ToString().Contains(Target_Version)))
                     return false;
 
                 if (Target_Modules.Count > 0)
@@ -392,16 +390,16 @@ namespace GameX
             Color Window = CommonSkins.GetSkin(UserLookAndFeel.Default).TranslateColor(SystemColors.Window);
             int total = Window.R + Window.G + Window.B;
 
-            Image LogoB = Utility.GetImageFromStream(@"GameX.Biohazard.5/Resources/Images/Application/logob.eia");
-            Image LogoW = Utility.GetImageFromStream(@"GameX.Biohazard.5/Resources/Images/Application/logow.eia");
+            Image LogoA = Utility.GetImageFromStream(@"GameX.Biohazard.5/image/application/logo_a.eia");
+            Image LogoB = Utility.GetImageFromStream(@"GameX.Biohazard.5/image/application/logo_b.eia");
 
-            if (total > 380 && LogoB != null)
+            if (total > 380 && LogoA != null)
+            {
+                AboutPictureEdit.Image = LogoA;
+            }
+            else if (total < 380 && LogoB != null)
             {
                 AboutPictureEdit.Image = LogoB;
-            }
-            else if (total < 380 && LogoW != null)
-            {
-                AboutPictureEdit.Image = LogoW;
             }
         }
 
@@ -463,14 +461,14 @@ namespace GameX
         {
             Settings Setts = new Settings()
             {
-                UpdateRate = UpdateModeComboBoxEdit.SelectedIndex, 
-                PlayerName = PlayerNameTextEdit.Text, 
+                UpdateRate = UpdateModeComboBoxEdit.SelectedIndex,
+                PlayerName = PlayerNameTextEdit.Text,
                 SkinName = UserLookAndFeel.Default.ActiveSvgPaletteName
             };
 
             try
             {
-                Serializer.WriteDataFile(@"GameX.Biohazard.5/Settings.json", Serializer.SerializeSettings(Setts));
+                Serializer.WriteDataFile(@"GameX.Biohazard.5/appsettings.json", Serializer.SerializeSettings(Setts));
             }
             catch (Exception Ex)
             {
@@ -492,8 +490,8 @@ namespace GameX
 
             try
             {
-                if (File.Exists(@"GameX.Biohazard.5/Settings.json"))
-                    Setts = Serializer.DeserializeSettings(File.ReadAllText(@"GameX.Biohazard.5/Settings.json"));
+                if (File.Exists(@"GameX.Biohazard.5/appsettings.json"))
+                    Setts = Serializer.DeserializeSettings(File.ReadAllText(@"GameX.Biohazard.5/appsettings.json"));
             }
             catch (Exception Ex)
             {

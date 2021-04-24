@@ -513,7 +513,8 @@ namespace GameX.Base.Modules
             {
                 TCPClient?.Connector?.Dispose();
                 TCPClient = null;
-                Main.BuddyServerConnectionButton.Text = "Connect";
+                Threading.SetControlPropertyThreadSafe(Main.BuddyServerConnectionButton, "Text", "Connect");
+                Threading.SetControlPropertyThreadSafe(Main.StartServerButton, "Enabled", true);
             }
 
             Terminal.WriteLine($"[Client] Disconnected from {args.IpPort}, reason: {args.Reason}");

@@ -20,52 +20,52 @@ namespace GameX.Game.Content
                 {
                     new Costume
                     {
-                        Name = "BSAA", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/c0.png",
+                        Name = "BSAA", Portrait = @"GameX.Biohazard.5/image/character/c0.png",
                         File = "uPl00ChrisNormal", Value = 0
                     },
                     new Costume
                     {
-                        Name = "Melee Vest", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/c0.png",
+                        Name = "Melee Vest", Portrait = @"GameX.Biohazard.5/image/character/c0.png",
                         File = "uPl00ChrisArmorA", Value = 1
                     },
                     new Costume
                     {
-                        Name = "Bulletproof Vest", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/c0.png",
+                        Name = "Bulletproof Vest", Portrait = @"GameX.Biohazard.5/image/character/c0.png",
                         File = "uPl00ChrisArmorB", Value = 2
                     },
                     new Costume
                     {
-                        Name = "Full Armor", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/c0.png",
+                        Name = "Full Armor", Portrait = @"GameX.Biohazard.5/image/character/c0.png",
                         File = "uPl00ChrisArmorF", Value = 3
                     },
                     new Costume
                     {
-                        Name = "Plain", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/c0.png",
+                        Name = "Plain", Portrait = @"GameX.Biohazard.5/image/character/c0.png",
                         File = "uPl00ChrisPlain", Value = 4
                     },
                     new Costume
                     {
-                        Name = "Safari", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/c5.png",
+                        Name = "Safari", Portrait = @"GameX.Biohazard.5/image/character/c5.png",
                         File = "uPl00ChrisCos1", Value = 5
                     },
                     new Costume
                     {
-                        Name = "STARS", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/c6.png", File = "uPl00ChrisCos2",
+                        Name = "STARS", Portrait = @"GameX.Biohazard.5/image/character/c6.png", File = "uPl00ChrisCos2",
                         Value = 6
                     },
                     new Costume
                     {
-                        Name = "Warrior", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/c7.png",
+                        Name = "Warrior", Portrait = @"GameX.Biohazard.5/image/character/c7.png",
                         File = "uPl00ChrisCos3", Value = 7
                     },
                     new Costume
                     {
-                        Name = "Lost in Nightmares", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/c0.png",
+                        Name = "Lost in Nightmares", Portrait = @"GameX.Biohazard.5/image/character/c0.png",
                         File = "uPl00ChrisEp1", Value = 8
                     },
                     new Costume
                     {
-                        Name = "Heavy Metal", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/c9.png",
+                        Name = "Heavy Metal", Portrait = @"GameX.Biohazard.5/image/character/c9.png",
                         File = "uPl00ChrisCos4", Value = 9
                     }
                 }
@@ -79,47 +79,47 @@ namespace GameX.Game.Content
                 {
                     new Costume
                     {
-                        Name = "BSAA", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/s0.png",
+                        Name = "BSAA", Portrait = @"GameX.Biohazard.5/image/character/s0.png",
                         File = "uPl01ShebaNormal", Value = 0
                     },
                     new Costume
                     {
-                        Name = "Melee Vest", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/s0.png",
+                        Name = "Melee Vest", Portrait = @"GameX.Biohazard.5/image/character/s0.png",
                         File = "uPl01ShebaArmorA", Value = 1
                     },
                     new Costume
                     {
-                        Name = "Bulletproof Vest", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/s0.png",
+                        Name = "Bulletproof Vest", Portrait = @"GameX.Biohazard.5/image/character/s0.png",
                         File = "uPl01ShebaArmorB", Value = 2
                     },
                     new Costume
                     {
-                        Name = "Full Armor", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/s0.png",
+                        Name = "Full Armor", Portrait = @"GameX.Biohazard.5/image/character/s0.png",
                         File = "uPl01ShebaArmorF", Value = 3
                     },
                     new Costume
                     {
-                        Name = "Plain", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/s0.png",
+                        Name = "Plain", Portrait = @"GameX.Biohazard.5/image/character/s0.png",
                         File = "uPl01ShebaPlain", Value = 4
                     },
                     new Costume
                     {
-                        Name = "Amazon", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/s5.png",
+                        Name = "Amazon", Portrait = @"GameX.Biohazard.5/image/character/s5.png",
                         File = "uPl01ShebaCos1", Value = 5
                     },
                     new Costume
                     {
-                        Name = "Clubbin", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/s6.png",
+                        Name = "Clubbin", Portrait = @"GameX.Biohazard.5/image/character/s6.png",
                         File = "uPl01ShebaCos2", Value = 6
                     },
                     new Costume
                     {
-                        Name = "Business", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/s7.png",
+                        Name = "Business", Portrait = @"GameX.Biohazard.5/image/character/s7.png",
                         File = "uPl01ShebaCos3", Value = 7
                     },
                     new Costume
                     {
-                        Name = "Fairy Tail", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/s8.png",
+                        Name = "Fairy Tail", Portrait = @"GameX.Biohazard.5/image/character/s8.png",
                         File = "uPl01ShebaCos4", Value = 8
                     }
                 }
@@ -133,22 +133,22 @@ namespace GameX.Game.Content
                 {
                     new Costume
                     {
-                        Name = "BSAA", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/j0.png", File = "uPl02JillCos1",
+                        Name = "BSAA", Portrait = @"GameX.Biohazard.5/image/character/j0.png", File = "uPl02JillCos1",
                         Value = 0
                     },
                     new Costume
                     {
-                        Name = "Battlesuit", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/j1.png",
+                        Name = "Battlesuit", Portrait = @"GameX.Biohazard.5/image/character/j1.png",
                         File = "uPl02JillCos2", Value = 1
                     },
                     new Costume
                     {
-                        Name = "Desesperate Escape", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/j1.png",
+                        Name = "Desesperate Escape", Portrait = @"GameX.Biohazard.5/image/character/j1.png",
                         File = "uPl02JillCos3", Value = 2
                     },
                     new Costume
                     {
-                        Name = "Lost in Nightmares", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/j0.png",
+                        Name = "Lost in Nightmares", Portrait = @"GameX.Biohazard.5/image/character/j0.png",
                         File = "uPl02JillCos4", Value = 3
                     }
                 }
@@ -162,12 +162,12 @@ namespace GameX.Game.Content
                 {
                     new Costume
                     {
-                        Name = "Midnight", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/w0.png",
+                        Name = "Midnight", Portrait = @"GameX.Biohazard.5/image/character/w0.png",
                         File = "uPl03WeskerCos1", Value = 0
                     },
                     new Costume
                     {
-                        Name = "STARS", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/w1.png",
+                        Name = "STARS", Portrait = @"GameX.Biohazard.5/image/character/w1.png",
                         File = "uPl03WeskerCos2", Value = 1
                     }
                 }
@@ -181,12 +181,12 @@ namespace GameX.Game.Content
                 {
                     new Costume
                     {
-                        Name = "Story Mode", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/js0.png",
+                        Name = "Story Mode", Portrait = @"GameX.Biohazard.5/image/character/js0.png",
                         File = "uPl04JoshCos1", Value = 0
                     },
                     new Costume
                     {
-                        Name = "Reunion BSAA", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/js0.png",
+                        Name = "Reunion BSAA", Portrait = @"GameX.Biohazard.5/image/character/js0.png",
                         File = "uPl04JoshCos2", Value = 1
                     }
                 }
@@ -200,7 +200,7 @@ namespace GameX.Game.Content
                 {
                     new Costume
                     {
-                        Name = "Tricell", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/e0.png",
+                        Name = "Tricell", Portrait = @"GameX.Biohazard.5/image/character/e0.png",
                         File = "uPl05ExcellaNormal", Value = 0
                     }
                 }
@@ -214,7 +214,7 @@ namespace GameX.Game.Content
                 {
                     new Costume
                     {
-                        Name = "STARS", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/b0.png",
+                        Name = "STARS", Portrait = @"GameX.Biohazard.5/image/character/b0.png",
                         File = "uPl06BarryNormal", Value = 0
                     }
                 }
@@ -228,7 +228,7 @@ namespace GameX.Game.Content
                 {
                     new Costume
                     {
-                        Name = "STARS", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/r0.png",
+                        Name = "STARS", Portrait = @"GameX.Biohazard.5/image/character/r0.png",
                         File = "uPl07RebeccaNormal", Value = 0
                     }
                 }
@@ -242,7 +242,7 @@ namespace GameX.Game.Content
                 {
                     new Costume
                     {
-                        Name = "Story Mode", Portrait = @"GameX.Biohazard.5/Resources/Images/Characters/i0.png",
+                        Name = "Story Mode", Portrait = @"GameX.Biohazard.5/image/character/i0.png",
                         File = "uPl86Irving", Value = 0
                     }
                 }
@@ -270,7 +270,7 @@ namespace GameX.Game.Content
             {
                 foreach (Character Char in Chars)
                 {
-                    Serializer.WriteDataFile(@"GameX.Biohazard.5/Objects/Characters/" + $"{Char.Name}.json", Serializer.SerializeCharacter(Char));
+                    Serializer.WriteDataFile(@"GameX.Biohazard.5/prefab/character/" + $"{Char.Name.ToLower()}.json", Serializer.SerializeCharacter(Char));
                 }
 
                 Terminal.WriteLine("Characters jsons written sucessfully.");
@@ -285,14 +285,14 @@ namespace GameX.Game.Content
         {
             try
             {
-                DirectoryInfo CharactersFolder = new DirectoryInfo(@"GameX.Biohazard.5/Objects/Characters/");
+                DirectoryInfo CharactersFolder = new DirectoryInfo(@"GameX.Biohazard.5/prefab/character/");
                 FileInfo[] CharacterFiles = CharactersFolder.GetFiles("*.json");
                 List<Character> AvailableCharacters = new List<Character>();
 
                 foreach (FileInfo CharFile in CharacterFiles)
                 {
                     AvailableCharacters.Add(
-                        Serializer.DeserializeCharacter(File.ReadAllText(@"GameX.Biohazard.5/Objects/Characters/" + CharFile.Name)));
+                        Serializer.DeserializeCharacter(File.ReadAllText(@"GameX.Biohazard.5/prefab/character/" + CharFile.Name)));
                 }
 
                 return AvailableCharacters.OrderBy(x => x.Value).ToList();

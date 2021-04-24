@@ -1,0 +1,12 @@
+{
+  "Name": "Rebecca",
+  "Value": 7,
+  "Costumes": [
+    {
+      "Name": "STARS",
+      "Portrait": "GameX.Biohazard.5/image/character/r0.png",
+      "File": "uPl07RebeccaNormal",
+      "Value": 0
+    }
+  ]
+}
