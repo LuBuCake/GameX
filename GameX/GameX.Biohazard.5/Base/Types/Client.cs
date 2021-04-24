@@ -1,6 +1,6 @@
 ﻿namespace GameX.Base.Types
 {
-    public class ConnectedClient
+    public class Client
     {
         public string IP { get; set; }
         public string Name { get; set; }

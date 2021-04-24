@@ -22,53 +22,5 @@ namespace GameX.Properties {
                 return defaultInstance;
             }
         }
-        
-        /// <summary>
-        /// Update Mode for the Engine
-        /// </summary>
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Configuration.SettingsDescriptionAttribute("Update Mode for the Engine")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public int UpdateRate {
-            get {
-                return ((int)(this["UpdateRate"]));
-            }
-            set {
-                this["UpdateRate"] = value;
-            }
-        }
-        
-        /// <summary>
-        /// Sets the color scheme for the skin applied.
-        /// </summary>
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Configuration.SettingsDescriptionAttribute("Sets the color scheme for the skin applied.")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("VS Dark")]
-        public string Skin {
-            get {
-                return ((string)(this["Skin"]));
-            }
-            set {
-                this["Skin"] = value;
-            }
-        }
-        
-        /// <summary>
-        /// The name that will be networked betweem players
-        /// </summary>
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Configuration.SettingsDescriptionAttribute("The name that will be networked betweem players")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Player")]
-        public string PlayerName {
-            get {
-                return ((string)(this["PlayerName"]));
-            }
-            set {
-                this["PlayerName"] = value;
-            }
-        }
     }
 }

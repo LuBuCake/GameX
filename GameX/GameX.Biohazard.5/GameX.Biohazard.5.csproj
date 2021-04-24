@@ -110,8 +110,9 @@
     <Compile Include="Base\Helpers\Encoder.cs" />
     <Compile Include="Base\Helpers\Enums.cs" />
     <Compile Include="Base\Helpers\Threading.cs" />
-    <Compile Include="Base\Types\ConnectedClient.cs" />
-    <Compile Include="Base\Types\ConnectedServer.cs" />
+    <Compile Include="Base\Types\Settings.cs" />
+    <Compile Include="Base\Types\Client.cs" />
+    <Compile Include="Base\Types\Server.cs" />
     <Compile Include="Game\Content\Miscellaneous.cs" />
     <Compile Include="Game\Modules\Biohazard.cs" />
     <Compile Include="Game\Modules\Player.cs" />

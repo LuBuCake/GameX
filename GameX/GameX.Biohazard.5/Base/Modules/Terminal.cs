@@ -233,13 +233,13 @@ namespace GameX.Base.Modules
             {
                 case "serverclients":
                 {
-                    if (Network.Server == null)
+                    if (Network.TCPServer == null)
                     {
                         WriteLine("[App] There is no server running, start one before trying its commands.");
                         return true;
                     }
 
-                    List<string> clients = Network.Server.ListClients().ToList();
+                    List<string> clients = Network.TCPServer.ListClients().ToList();
 
                     if (clients.Count > 0)
                     {
@@ -259,13 +259,13 @@ namespace GameX.Base.Modules
                 }
                 case "serverstats":
                 {
-                    if (Network.Server == null)
+                    if (Network.TCPServer == null)
                     {
                         WriteLine("[App] There is no server running, start one before trying its commands.");
                         return true;
                     }
 
-                    WriteLine(Network.Server.Statistics.ToString());
+                    WriteLine(Network.TCPServer.Statistics.ToString());
                     return true;
                 }
                 default:
@@ -278,13 +278,13 @@ namespace GameX.Base.Modules
             if (Command[0] != "clientstats")
                 return false;
 
-            if (Network.Server == null)
+            if (Network.TCPServer == null)
             {
                 WriteLine("[Console] You are not connected to any server, connect to one first.");
                 return true;
             }
 
-            WriteLine(Network.BuddyServer.Connector.Statistics.ToString());
+            WriteLine(Network.TCPClient.Connector.Statistics.ToString());
             return true;
         }
 

@@ -270,8 +270,7 @@ namespace GameX.Game.Content
             {
                 foreach (Character Char in Chars)
                 {
-                    Serializer.WriteDataFile(@"GameX/Objects/Characters/" + $"{Char.Name}.json",
-                        Serializer.SerializeCharacter(Char));
+                    Serializer.WriteDataFile(@"GameX.Biohazard.5/Objects/Characters/" + $"{Char.Name}.json", Serializer.SerializeCharacter(Char));
                 }
 
                 Terminal.WriteLine("Characters jsons written sucessfully.");

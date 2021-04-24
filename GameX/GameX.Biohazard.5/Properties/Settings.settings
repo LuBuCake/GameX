@@ -1,15 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GameX.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
   <Profiles />
-  <Settings>
-    <Setting Name="UpdateRate" Description="Update Mode for the Engine" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">1</Value>
-    </Setting>
-    <Setting Name="Skin" Description="Sets the color scheme for the skin applied." Type="System.String" Scope="User">
-      <Value Profile="(Default)">VS Dark</Value>
-    </Setting>
-    <Setting Name="PlayerName" Description="The name that will be networked betweem players" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Player</Value>
-    </Setting>
-  </Settings>
+  <Settings />
 </SettingsFile>

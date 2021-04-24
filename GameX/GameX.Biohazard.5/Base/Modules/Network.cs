@@ -18,9 +18,9 @@ namespace GameX.Base.Modules
     {
         public static bool ModuleStarted { get; set; }
         private static App Main { get; set; }
-        public static WatsonTcpServer Server { get; set; }
-        public static ConnectedServer BuddyServer { get; set; }
-        public static ConnectedClient[] BuddyClients { get; private set; }
+        public static WatsonTcpServer TCPServer { get; set; }
+        public static Server TCPClient { get; set; }
+        public static Client[] BuddyClients { get; private set; }
         public static string[] PrivateIPv4 { get; private set; }
         public static bool HasConnection { get; private set; }
 
@@ -61,7 +61,7 @@ namespace GameX.Base.Modules
 
             if (HasConnection)
             {
-                BuddyClients = new ConnectedClient[3];
+                BuddyClients = new Client[3];
                 PrivateIPv4 = MachinePrivateIP();
                 ModuleStarted = true;
                 Terminal.WriteLine("[Network] Module started successfully.");
@@ -73,12 +73,12 @@ namespace GameX.Base.Modules
 
         public static void FinishModule()
         {
-            if (Server != null)
+            if (TCPServer != null)
             {
                 StopServer(null, null);
             }
 
-            if (BuddyServer != null)
+            if (TCPClient != null)
             {
                 StopClient(Main.BuddyServerConnectionButton, null);
             }
@@ -103,7 +103,7 @@ namespace GameX.Base.Modules
                 return;
             }
 
-            if (Server == null)
+            if (TCPServer == null)
                 StartServer(sender, e);
             else
                 StopServer(sender, e);
@@ -130,28 +130,28 @@ namespace GameX.Base.Modules
 
             try
             {
-                Server = new WatsonTcpServer(null, Port);
-                Server.Events.ClientConnected += Server_ClientConnected;
-                Server.Events.ClientDisconnected += Server_ClientDisconnected;
-                Server.Events.MessageReceived += Server_MessageReceived;
-                Server.Events.ServerStarted += Server_ServerStarted;
-                Server.Events.ServerStopped += Server_ServerStopped;
-                Server.Callbacks.SyncRequestReceived = Server_SyncRequestReceived;
+                TCPServer = new WatsonTcpServer(null, Port);
+                TCPServer.Events.ClientConnected += Server_ClientConnected;
+                TCPServer.Events.ClientDisconnected += Server_ClientDisconnected;
+                TCPServer.Events.MessageReceived += Server_MessageReceived;
+                TCPServer.Events.ServerStarted += Server_ServerStarted;
+                TCPServer.Events.ServerStopped += Server_ServerStopped;
+                TCPServer.Callbacks.SyncRequestReceived = Server_SyncRequestReceived;
 
-                Server.Settings.Logger = Logger;
-                Server.Settings.DebugMessages = true;
-                Server.Settings.MaxConnections = 3;
+                TCPServer.Settings.Logger = Logger;
+                TCPServer.Settings.DebugMessages = true;
+                TCPServer.Settings.MaxConnections = 3;
 
-                Server.Keepalive.EnableTcpKeepAlives = true;
-                Server.Keepalive.TcpKeepAliveInterval = 1;
-                Server.Keepalive.TcpKeepAliveTime = 1;
-                Server.Keepalive.TcpKeepAliveRetryCount = 3;
-                Server.Start();
+                TCPServer.Keepalive.EnableTcpKeepAlives = true;
+                TCPServer.Keepalive.TcpKeepAliveInterval = 1;
+                TCPServer.Keepalive.TcpKeepAliveTime = 1;
+                TCPServer.Keepalive.TcpKeepAliveRetryCount = 3;
+                TCPServer.Start();
             }
             catch (Exception Ex)
             {
-                Server?.Dispose();
-                Server = null;
+                TCPServer?.Dispose();
+                TCPServer = null;
                 Main.ServerPortTextEdit.Enabled = true;
                 Terminal.WriteLine($"[Server] {Ex.Message}");
                 return;
@@ -165,9 +165,9 @@ namespace GameX.Base.Modules
 
         public static void StopServer(object sender, EventArgs e)
         {
-            Server?.DisconnectClients();
-            Server?.Dispose();
-            Server = null;
+            TCPServer?.DisconnectClients();
+            TCPServer?.Dispose();
+            TCPServer = null;
 
             Main.BuddyServerConnectionButton.Enabled = true;
 
@@ -186,7 +186,7 @@ namespace GameX.Base.Modules
             {
                 Terminal.WriteLine($"[Server] Sending Player Name request to {args.IpPort}, waiting response.");
                 SyncResponse PlayerNameRequest =
-                    await Task.Run(() => Server.SendAndWait(5000, args.IpPort, "[PLAYERNAME]"));
+                    await Task.Run(() => TCPServer.SendAndWait(5000, args.IpPort, "[PLAYERNAME]"));
                 PlayerName = Encoding.UTF8.GetString(PlayerNameRequest.Data);
                 Terminal.WriteLine($"[Server] Player Name received from {args.IpPort}.");
             }
@@ -230,7 +230,7 @@ namespace GameX.Base.Modules
                 if (BuddyClients[i] != null)
                     continue;
 
-                BuddyClients[i] = new ConnectedClient {IP = args.IpPort, Name = PlayerName, Index = i};
+                BuddyClients[i] = new Client {IP = args.IpPort, Name = PlayerName, Index = i};
 
                 Threading.SetControlPropertyThreadSafe(ClientNames[i], "Text", PlayerName);
                 Threading.SetControlPropertyThreadSafe(DropButtons[i], "Enabled", true);
@@ -305,10 +305,10 @@ namespace GameX.Base.Modules
                 else if (Decoded.Contains("[CHARCHANGE]"))
                 {
                     Decoded = Decoded.Replace("[CHARCHANGE]", "");
-                    ConnectedClient ClientSender = null;
+                    Client ClientSender = null;
                     NetCharacterChange Change = Serializer.DeserializeCharacterChanged(Decoded);
 
-                    foreach (ConnectedClient Client in BuddyClients)
+                    foreach (Client Client in BuddyClients)
                     {
                         if (Client.IP != args.IpPort)
                             continue;
@@ -349,13 +349,13 @@ namespace GameX.Base.Modules
 
         public static void Server_DropClient(object sender, EventArgs e)
         {
-            if (Server == null)
+            if (TCPServer == null)
                 return;
 
             SimpleButton SB = sender as SimpleButton;
             int index = int.Parse(SB.Name[1].ToString()) - 1;
 
-            Server.DisconnectClient(BuddyClients[index].IP);
+            TCPServer.DisconnectClient(BuddyClients[index].IP);
             Terminal.WriteLine($"[Server] Dropping client {BuddyClients[index].IP}.");
 
             LabelControl[] ClientNames =
@@ -390,7 +390,7 @@ namespace GameX.Base.Modules
                 return;
             }
 
-            if (BuddyServer == null)
+            if (TCPClient == null)
                 await StartClient(sender, e);
             else
                 StopClient(sender, e);
@@ -433,7 +433,7 @@ namespace GameX.Base.Modules
                 return;
             }
 
-            if (Server != null)
+            if (TCPServer != null)
             {
                 if (Array.Exists(PrivateIPv4, AvailableIP => AvailableIP == Main.BuddyServerIPTextEdit.Text) &&
                     Main.BuddyServerPortTextEdit.Text == Main.ServerPortTextEdit.Text)
@@ -447,32 +447,31 @@ namespace GameX.Base.Modules
 
             try
             {
-                BuddyServer = new ConnectedServer
-                    {Connector = new WatsonTcpClient(IP.ToString(), Port), IP = $"{IP}:{Port}"};
-                BuddyServer.Connector.Events.ServerConnected += Client_ServerConnected;
-                BuddyServer.Connector.Events.ServerDisconnected += Client_ServerDisconnected;
-                BuddyServer.Connector.Events.MessageReceived += Client_MessageReceived;
-                BuddyServer.Connector.Callbacks.SyncRequestReceived = Client_SyncRequestReceived;
+                TCPClient = new Server {Connector = new WatsonTcpClient(IP.ToString(), Port), IP = $"{IP}:{Port}"};
+                TCPClient.Connector.Events.ServerConnected += Client_ServerConnected;
+                TCPClient.Connector.Events.ServerDisconnected += Client_ServerDisconnected;
+                TCPClient.Connector.Events.MessageReceived += Client_MessageReceived;
+                TCPClient.Connector.Callbacks.SyncRequestReceived = Client_SyncRequestReceived;
 
-                BuddyServer.Connector.Settings.DebugMessages = true;
-                BuddyServer.Connector.Settings.Logger = Logger;
+                TCPClient.Connector.Settings.DebugMessages = true;
+                TCPClient.Connector.Settings.Logger = Logger;
 
-                BuddyServer.Connector.Keepalive.EnableTcpKeepAlives = true;
-                BuddyServer.Connector.Keepalive.TcpKeepAliveInterval = 1;
-                BuddyServer.Connector.Keepalive.TcpKeepAliveTime = 1;
-                BuddyServer.Connector.Keepalive.TcpKeepAliveRetryCount = 3;
+                TCPClient.Connector.Keepalive.EnableTcpKeepAlives = true;
+                TCPClient.Connector.Keepalive.TcpKeepAliveInterval = 1;
+                TCPClient.Connector.Keepalive.TcpKeepAliveTime = 1;
+                TCPClient.Connector.Keepalive.TcpKeepAliveRetryCount = 3;
 
                 CB.Enabled = false;
                 CB.Text = "Connecting";
 
-                await Task.Run(() => BuddyServer.Connector.Connect());
+                await Task.Run(() => TCPClient.Connector.Connect());
             }
             catch (Exception Ex)
             {
                 CB.Enabled = true;
                 CB.Text = "Connect";
-                BuddyServer?.Connector?.Dispose();
-                BuddyServer = null;
+                TCPClient?.Connector?.Dispose();
+                TCPClient = null;
                 Terminal.WriteLine($"[Client] {Ex.Message}");
                 Utility.MessageBox_Information("No connection found at the specified IP:Port.");
                 return;
@@ -488,12 +487,12 @@ namespace GameX.Base.Modules
         {
             SimpleButton CB = sender as SimpleButton;
 
-            string IPPort = BuddyServer?.IP;
+            string IPPort = TCPClient?.IP;
 
             CB.Enabled = false;
 
-            BuddyServer?.Connector?.Dispose();
-            BuddyServer = null;
+            TCPClient?.Connector?.Dispose();
+            TCPClient = null;
 
             Main.StartServerButton.Enabled = true;
 
@@ -510,10 +509,10 @@ namespace GameX.Base.Modules
 
         private static void Client_ServerDisconnected(object sender, DisconnectionEventArgs args)
         {
-            if (BuddyServer != null && BuddyServer.Connector != null && !BuddyServer.Connector.Connected)
+            if (TCPClient != null && TCPClient.Connector != null && !TCPClient.Connector.Connected)
             {
-                BuddyServer?.Connector?.Dispose();
-                BuddyServer = null;
+                TCPClient?.Connector?.Dispose();
+                TCPClient = null;
                 Main.BuddyServerConnectionButton.Text = "Connect";
             }
 
@@ -579,13 +578,13 @@ namespace GameX.Base.Modules
         public static void Server_BroadcastMessage(string Message, string IPException = "", bool WriteInTheChat = false,
             bool SuppressTerminal = false)
         {
-            if (!ModuleStarted || Server == null)
+            if (!ModuleStarted || TCPServer == null)
             {
                 Terminal.WriteLine("[App] The server is offline, send request ignored.");
                 return;
             }
 
-            List<string> clients = Server.ListClients().ToList();
+            List<string> clients = TCPServer.ListClients().ToList();
 
             if (clients.Count == 0)
             {
@@ -601,7 +600,7 @@ namespace GameX.Base.Modules
                 if (IPException != "" && Cli == IPException)
                     continue;
 
-                Server.Send(Cli, Encoded);
+                TCPServer.Send(Cli, Encoded);
                 MessagesSent++;
             }
 
@@ -622,14 +621,14 @@ namespace GameX.Base.Modules
 
         public static void Server_SendMessage(string IPPort, string Message, bool SuppressTerminal = false)
         {
-            if (!ModuleStarted || Server == null)
+            if (!ModuleStarted || TCPServer == null)
             {
                 Terminal.WriteLine("[App] The server is offline, send request ignored.");
                 return;
             }
 
             byte[] Encoded = Encoding.UTF8.GetBytes(Message);
-            Server.Send(IPPort, Encoded);
+            TCPServer.Send(IPPort, Encoded);
 
             if (SuppressTerminal)
                 return;
@@ -646,14 +645,14 @@ namespace GameX.Base.Modules
                 return;
             }
 
-            if (BuddyServer == null)
+            if (TCPClient == null)
             {
                 Terminal.WriteLine("[App] No connection found at the specified server.");
                 return;
             }
 
             byte[] Encoded = Encoding.UTF8.GetBytes(Message);
-            BuddyServer.Connector.Send(Encoded);
+            TCPClient.Connector.Send(Encoded);
 
             if (WriteInTheChat)
             {

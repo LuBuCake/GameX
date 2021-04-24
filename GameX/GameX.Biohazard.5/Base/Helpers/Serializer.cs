@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using GameX.Base.Types;
 using GameX.Game.Types;
 using Newtonsoft.Json;
 
@@ -7,6 +8,18 @@ namespace GameX.Base.Helpers
     public static class Serializer
     {
         #region Serializer
+
+        // APP SETTINGS //
+
+        public static string SerializeSettings(Settings Data)
+        {
+            return JsonConvert.SerializeObject(Data);
+        }
+
+        public static Settings DeserializeSettings(string Data)
+        {
+            return JsonConvert.DeserializeObject<Settings>(Data);
+        }
 
         // NET DATA //
 

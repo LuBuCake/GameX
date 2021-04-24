@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -460,25 +461,54 @@ namespace GameX
 
         private void Configuration_Save(object sender, EventArgs e)
         {
-            Properties.Settings.Default.UpdateRate = UpdateModeComboBoxEdit.SelectedIndex;
-            Properties.Settings.Default.Skin = UserLookAndFeel.Default.ActiveSvgPaletteName;
-            Properties.Settings.Default.PlayerName = PlayerNameTextEdit.Text;
-            Properties.Settings.Default.Save();
+            Settings Setts = new Settings()
+            {
+                UpdateRate = UpdateModeComboBoxEdit.SelectedIndex, 
+                PlayerName = PlayerNameTextEdit.Text, 
+                SkinName = UserLookAndFeel.Default.ActiveSvgPaletteName
+            };
+
+            try
+            {
+                Serializer.WriteDataFile(@"GameX.Biohazard.5/Settings.json", Serializer.SerializeSettings(Setts));
+            }
+            catch (Exception Ex)
+            {
+                Terminal.WriteLine(Ex.Message);
+                throw;
+            }
 
             Terminal.WriteLine("[App] Settings saved.");
         }
 
         private void Configuration_Load(object sender, EventArgs e)
         {
-            UpdateModeComboBoxEdit.SelectedIndex = Properties.Settings.Default.UpdateRate;
+            Settings Setts = new Settings()
+            {
+                UpdateRate = 1,
+                PlayerName = "Player",
+                SkinName = "VS Dark"
+            };
+
+            try
+            {
+                if (File.Exists(@"GameX.Biohazard.5/Settings.json"))
+                    Setts = Serializer.DeserializeSettings(File.ReadAllText(@"GameX.Biohazard.5/Settings.json"));
+            }
+            catch (Exception Ex)
+            {
+                Terminal.WriteLine(Ex.Message);
+                throw;
+            }
+
+            UpdateModeComboBoxEdit.SelectedIndex = Setts.UpdateRate;
+            PlayerNameTextEdit.Text = Setts.PlayerName;
 
             foreach (ListItem Pallete in PaletteComboBoxEdit.Properties.Items)
             {
-                if (Pallete.Text == Properties.Settings.Default.Skin)
+                if (Pallete.Text == Setts.SkinName)
                     PaletteComboBoxEdit.SelectedItem = Pallete;
             }
-
-            PlayerNameTextEdit.Text = Properties.Settings.Default.PlayerName;
 
             Terminal.WriteLine("[App] Settings Loaded.");
         }
@@ -1073,8 +1103,8 @@ namespace GameX
         public void Character_SendChange(int index, int character, int costume)
         {
             if (!Network.ModuleStarted
-                || Network.Server == null && Network.BuddyServer == null
-                || Network.Server != null && Network.Server.ListClients().ToList().Count < 1)
+                || Network.TCPServer == null && Network.TCPClient == null
+                || Network.TCPServer != null && Network.TCPServer.ListClients().ToList().Count < 1)
                 return;
 
             NetCharacterChange Change = new NetCharacterChange()
@@ -1084,7 +1114,7 @@ namespace GameX
 
             string SerializedChange = $"[CHARCHANGE]{Serializer.SerializeCharacterChanged(Change)}";
 
-            if (Network.Server != null)
+            if (Network.TCPServer != null)
             {
                 Network.Server_BroadcastMessage(SerializedChange, "", false, true);
                 return;
@@ -1093,13 +1123,13 @@ namespace GameX
             Network.Client_SendMessage(SerializedChange, false, true);
         }
 
-        public void Character_ReceiveChange(NetCharacterChange Change, ConnectedClient Client = null)
+        public void Character_ReceiveChange(NetCharacterChange Change, Client Client = null)
         {
-            if (Network.Server != null && Client != null &&
-                Network.Server.ListClients().Where(x => x != Client.IP).ToList().Count > 0)
+            if (Network.TCPServer != null && Client != null &&
+                Network.TCPServer.ListClients().Where(x => x != Client.IP).ToList().Count > 0)
             {
                 string SerializedChange = $"[CHARCHANGE]{Serializer.SerializeCharacterChanged(Change)}";
-                Network.Server_BroadcastMessage(SerializedChange, Client.IP);
+                Network.Server_BroadcastMessage(SerializedChange, Client.IP, false, true);
             }
 
             ComboBoxEdit[] CharacterCombos =
