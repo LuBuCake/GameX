@@ -4,8 +4,6 @@
   "GroupIndex": 1,
   "Name": "M3 (SG)",
   "Portrait": "shotgun_m3",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     300,
     320,
@@ -45,7 +43,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

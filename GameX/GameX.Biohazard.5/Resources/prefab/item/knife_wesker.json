@@ -4,8 +4,6 @@
   "GroupIndex": 5,
   "Name": "Knife (Wesker)",
   "Portrait": "knife_wesker",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     50
   ],
@@ -26,7 +24,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

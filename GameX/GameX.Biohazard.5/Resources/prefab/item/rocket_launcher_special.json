@@ -4,8 +4,6 @@
   "GroupIndex": 0,
   "Name": "RPG-7 NVS",
   "Portrait": "rocket_launcher_special",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     30000
   ],
@@ -26,7 +24,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

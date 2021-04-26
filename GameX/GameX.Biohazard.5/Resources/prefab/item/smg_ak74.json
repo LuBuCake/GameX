@@ -4,8 +4,6 @@
   "GroupIndex": 1,
   "Name": "AK74  (MG)",
   "Portrait": "smg_ak74",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     90,
     100,
@@ -44,7 +42,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

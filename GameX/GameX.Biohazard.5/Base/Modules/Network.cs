@@ -43,12 +43,7 @@ namespace GameX.Base.Modules
 
         public static string[] MachinePrivateIP()
         {
-            return (from item in NetworkInterface.GetAllNetworkInterfaces()
-                where item.NetworkInterfaceType == NetworkInterfaceType.Ethernet &&
-                      item.OperationalStatus == OperationalStatus.Up
-                from ip in item.GetIPProperties().UnicastAddresses
-                where ip.Address.AddressFamily == AddressFamily.InterNetwork
-                select ip.Address.ToString()).ToArray();
+            return (from item in NetworkInterface.GetAllNetworkInterfaces() where item.NetworkInterfaceType == NetworkInterfaceType.Ethernet && item.OperationalStatus == OperationalStatus.Up from ip in item.GetIPProperties().UnicastAddresses where ip.Address.AddressFamily == AddressFamily.InterNetwork select ip.Address.ToString()).ToArray();
         }
 
         #endregion
@@ -99,8 +94,7 @@ namespace GameX.Base.Modules
         {
             if (!ModuleStarted)
             {
-                Terminal.WriteLine("[App] The Network module hasn't been enabled, enable it to start a server.",
-                    Enums.MessageBoxType.Error);
+                Terminal.WriteLine("[App] The Network module hasn't been enabled, enable it to start a server.", Enums.MessageBoxType.Error);
                 return;
             }
 
@@ -122,8 +116,7 @@ namespace GameX.Base.Modules
 
             if (!PortParsed || Port > 65535 || Port < 0)
             {
-                Terminal.WriteLine("[App] Invalid port, specify a port between 1 and 65535.",
-                    Enums.MessageBoxType.Error);
+                Terminal.WriteLine("[App] Invalid port, specify a port between 1 and 65535.", Enums.MessageBoxType.Error);
                 return;
             }
 
@@ -358,8 +351,7 @@ namespace GameX.Base.Modules
 
         private static SyncResponse Server_SyncRequestReceived(SyncRequest req)
         {
-            Terminal.WriteLine(
-                $"[Server] Empty or unknown request received from {req.IpPort}, sending empty response back.");
+            Terminal.WriteLine($"[Server] Empty or unknown request received from {req.IpPort}, sending empty response back.");
             return new SyncResponse(req, "");
         }
 
@@ -416,8 +408,7 @@ namespace GameX.Base.Modules
         {
             if (!ModuleStarted)
             {
-                Terminal.WriteLine("[App] The Network module hasn't been enabled, enable it to start a server.",
-                    Enums.MessageBoxType.Error);
+                Terminal.WriteLine("[App] The Network module hasn't been enabled, enable it to start a server.", Enums.MessageBoxType.Error);
                 return;
             }
 
@@ -472,8 +463,7 @@ namespace GameX.Base.Modules
 
             if (_Server != null)
             {
-                if (Array.Exists(PrivateIPv4, AvailableIP => AvailableIP == Main.BuddyServerIPTextEdit.Text) &&
-                    Main.BuddyServerPortTextEdit.Text == Main.ServerPortTextEdit.Text)
+                if (Array.Exists(PrivateIPv4, AvailableIP => AvailableIP == Main.BuddyServerIPTextEdit.Text) && Main.BuddyServerPortTextEdit.Text == Main.ServerPortTextEdit.Text)
                 {
                     Terminal.WriteLine("[Network] You cannot join yourself, please specify another IP:Port combination.", Enums.MessageBoxType.Error);
                     return;
@@ -574,6 +564,7 @@ namespace GameX.Base.Modules
                     Terminal.WriteMessage(Decoded, (int) Enums.ConsoleInterface.Client);
                     return;
                 }
+
                 if (Decoded.Contains("[CHARSELECTIONCHANGE]"))
                 {
                     Decoded = Decoded.Replace("[CHARSELECTIONCHANGE]", "");
@@ -602,14 +593,12 @@ namespace GameX.Base.Modules
 
                 if (Decoded == "[PLAYERNAME]")
                 {
-                    Terminal.WriteLine(
-                        $"[Client] Player Name request received from {req.IpPort}, sending response back.");
+                    Terminal.WriteLine($"[Client] Player Name request received from {req.IpPort}, sending response back.");
                     return new SyncResponse(req, Main.PlayerNameTextEdit.Text);
                 }
             }
 
-            Terminal.WriteLine(
-                $"[Client] Empty or unknown request received from {req.IpPort}, sending empty response back.");
+            Terminal.WriteLine($"[Client] Empty or unknown request received from {req.IpPort}, sending empty response back.");
             return new SyncResponse(req, "");
         }
 
@@ -661,8 +650,7 @@ namespace GameX.Base.Modules
             if (SuppressTerminal || MessagesSent == 0)
                 return;
 
-            Terminal.WriteLine(
-                $"[Server] Message sucessfully broadcasted to {clients.Count} client{(clients.Count > 1 ? "s" : "")}.");
+            Terminal.WriteLine($"[Server] Message sucessfully broadcasted to {clients.Count} client{(clients.Count > 1 ? "s" : "")}.");
         }
 
         public static void Server_SendMessage(string IPPort, string Message, bool SuppressTerminal = false)

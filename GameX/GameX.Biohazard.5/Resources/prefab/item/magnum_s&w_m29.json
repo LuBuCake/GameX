@@ -4,8 +4,6 @@
   "GroupIndex": 0,
   "Name": "S&W M29 (MAG)",
   "Portrait": "magnum_s&w_m29",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     1500,
     1700,
@@ -42,7 +40,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

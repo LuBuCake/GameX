@@ -92,6 +92,7 @@ namespace GameX
             this.P1InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P1UntargetableButton = new DevExpress.XtraEditors.CheckButton();
             this.P1HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
+            this.TabPageInventory = new DevExpress.XtraTab.XtraTabPage();
             this.TabPageSettings = new DevExpress.XtraTab.XtraTabPage();
             this.NetworkMasterGP = new DevExpress.XtraEditors.GroupControl();
             this.ServerInfoGP = new DevExpress.XtraEditors.GroupControl();
@@ -138,7 +139,6 @@ namespace GameX
             this.ClearConsoleSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.ConsoleModeComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.ConsoleInputTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.TabPageInventory = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -1094,6 +1094,12 @@ namespace GameX
             this.P1HealthBar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P1HealthBar.ToolTipTitle = "Player Health";
             // 
+            // TabPageInventory
+            // 
+            this.TabPageInventory.Name = "TabPageInventory";
+            this.TabPageInventory.Size = new System.Drawing.Size(638, 438);
+            this.TabPageInventory.Text = "Inventory";
+            // 
             // TabPageSettings
             // 
             this.TabPageSettings.Controls.Add(this.NetworkMasterGP);
@@ -1627,12 +1633,6 @@ namespace GameX
             this.ConsoleInputTextEdit.Properties.ValidateOnEnterKey = true;
             this.ConsoleInputTextEdit.Size = new System.Drawing.Size(454, 20);
             this.ConsoleInputTextEdit.TabIndex = 1;
-            // 
-            // TabPageInventory
-            // 
-            this.TabPageInventory.Name = "TabPageInventory";
-            this.TabPageInventory.Size = new System.Drawing.Size(638, 438);
-            this.TabPageInventory.Text = "Inventory";
             // 
             // App
             // 

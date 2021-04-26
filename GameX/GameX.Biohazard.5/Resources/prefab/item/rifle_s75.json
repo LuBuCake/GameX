@@ -4,8 +4,6 @@
   "GroupIndex": 0,
   "Name": "S75 (RIF)",
   "Portrait": "rifle_s75",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     750,
     800,
@@ -51,7 +49,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

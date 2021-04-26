@@ -4,8 +4,6 @@
   "GroupIndex": 0,
   "Name": "M92F (HG)",
   "Portrait": "pistol_m92f",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     150,
     170,
@@ -50,7 +48,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

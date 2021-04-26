@@ -51,8 +51,7 @@ namespace GameX.Base.Modules
         {
             string[] Commands =
             {
-                Environment.NewLine + "Commands must be written without spaces and "
-                                    + "arguments must be separated from the command and others arguments with :: (double colons).",
+                Environment.NewLine + "Commands must be written without spaces and " + "arguments must be separated from the command and others arguments with :: (double colons).",
 
                 Environment.NewLine + "Example: SetHealth::P1::1000",
                 "SetHealth is the command, P1 the first argument and 1000 the second argument.",
@@ -215,8 +214,7 @@ namespace GameX.Base.Modules
                         return true;
                     }
 
-                    string Output = Network.PrivateIPv4.Aggregate("[Network] Your available IPs for connection are: ",
-                        (current, IP) => current + $" ({IP})");
+                    string Output = Network.PrivateIPv4.Aggregate("[Network] Your available IPs for connection are: ", (current, IP) => current + $" ({IP})");
 
                     WriteLine(Output);
 
@@ -330,18 +328,14 @@ namespace GameX.Base.Modules
                     WriteLine($"[App] {Main.FrameTime.ToString().Substring(0, 5)}");
                     break;
                 case "curtime":
-                    WriteLine($"[App] {(int)Main.CurTime}");
+                    WriteLine($"[App] {(int) Main.CurTime}");
                     break;
                 case "exit":
                     Application.Exit();
                     break;
                 default:
                 {
-                    if (!ProcessDevCommand(Command) && 
-                        !ProcessGameCommand(Command) &&
-                        !ProcessNetworkCommand(Command) && 
-                        !ProcessServerCommand(Command) &&
-                        !ProcessClientCommand(Command))
+                    if (!ProcessDevCommand(Command) && !ProcessGameCommand(Command) && !ProcessNetworkCommand(Command) && !ProcessServerCommand(Command) && !ProcessClientCommand(Command))
                         WriteLine("[Console] Unknown or incorrect use of command. Type Help to see all available commands and their syntax.");
 
                     break;

@@ -4,8 +4,6 @@
   "GroupIndex": 2,
   "Name": "H&K PSG-1 (RIF)",
   "Portrait": "rifle_h&k_psg1",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     600,
     650,
@@ -45,7 +43,5 @@
     0,
     1,
     2
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

@@ -4,8 +4,6 @@
   "GroupIndex": 3,
   "Name": "Grenade Launcher (EXP)",
   "Portrait": "launcher_exp",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     1000
   ],
@@ -26,7 +24,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

@@ -4,8 +4,6 @@
   "GroupIndex": 2,
   "Name": "SIG P226 (HG)",
   "Portrait": "pistol_sig_p226",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     180,
     220,
@@ -45,7 +43,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

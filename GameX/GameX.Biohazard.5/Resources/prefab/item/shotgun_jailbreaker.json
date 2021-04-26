@@ -4,8 +4,6 @@
   "GroupIndex": 2,
   "Name": "Jail Breaker (SG)",
   "Portrait": "shotgun_jailbreaker",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     180,
     200,
@@ -47,7 +45,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

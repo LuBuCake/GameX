@@ -4,8 +4,6 @@
   "GroupIndex": 2,
   "Name": "Shotgun Ammo",
   "Portrait": "ammo_shotgun",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     0
   ],
@@ -26,7 +24,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

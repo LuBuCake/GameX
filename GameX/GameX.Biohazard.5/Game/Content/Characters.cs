@@ -291,8 +291,7 @@ namespace GameX.Game.Content
 
                 foreach (FileInfo CharFile in CharacterFiles)
                 {
-                    AvailableCharacters.Add(
-                        Serializer.DeserializeCharacter(File.ReadAllText(@"GameX.Biohazard.5/prefab/character/" + CharFile.Name)));
+                    AvailableCharacters.Add(Serializer.DeserializeCharacter(File.ReadAllText(@"GameX.Biohazard.5/prefab/character/" + CharFile.Name)));
                 }
 
                 return AvailableCharacters.OrderBy(x => x.Value).ToList();

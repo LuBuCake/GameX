@@ -4,8 +4,6 @@
   "GroupIndex": 3,
   "Name": "Hydra (SG)",
   "Portrait": "shotgun_hydra",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     280,
     290,
@@ -46,7 +44,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

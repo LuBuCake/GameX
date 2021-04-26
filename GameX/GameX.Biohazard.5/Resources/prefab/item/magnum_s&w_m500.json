@@ -4,8 +4,6 @@
   "GroupIndex": 2,
   "Name": "S&W M500 (MAG)",
   "Portrait": "magnum_s&w_m500",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     2100,
     2300,
@@ -42,7 +40,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

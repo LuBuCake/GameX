@@ -4,8 +4,6 @@
   "GroupIndex": 5,
   "Name": "Samurai Edge DLC (HG)",
   "Portrait": "pistol_samurai_edge_dlc",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     340
   ],
@@ -26,7 +24,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

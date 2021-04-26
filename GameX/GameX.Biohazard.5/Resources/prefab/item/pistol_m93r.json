@@ -4,8 +4,6 @@
   "GroupIndex": 3,
   "Name": "M93R (HG)",
   "Portrait": "pistol_m93r",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     170,
     190,
@@ -49,7 +47,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

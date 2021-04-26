@@ -4,8 +4,6 @@
   "GroupIndex": 2,
   "Name": "Knife (Sheva)",
   "Portrait": "knife_sheva",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     50
   ],
@@ -26,7 +24,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

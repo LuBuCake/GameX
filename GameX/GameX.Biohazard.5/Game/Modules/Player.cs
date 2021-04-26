@@ -114,8 +114,7 @@ namespace GameX.Game.Modules
         {
             for (int slot = 0; slot < 9; slot++)
             {
-                Memory.WriteBytes(Enable ? new byte[] {0x01} : new byte[] {0x00}, "re5dx9.exe", 0x00DA383C,
-                    0x24 + (0x04 * _INDEX), 0x21C5 + (+0x48 * slot));
+                Memory.WriteBytes(Enable ? new byte[] {0x01} : new byte[] {0x00}, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x21C5 + (+0x48 * slot));
             }
         }
 
@@ -123,8 +122,7 @@ namespace GameX.Game.Modules
         {
             for (int slot = 0; slot < 9; slot++)
             {
-                Memory.WriteBytes(Enable ? new byte[] {0x80} : new byte[] {0x00}, "re5dx9.exe", 0x00DA383C,
-                    0x24 + (0x04 * _INDEX), 0x21C7 + (+0x48 * slot));
+                Memory.WriteBytes(Enable ? new byte[] {0x80} : new byte[] {0x00}, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x21C7 + (+0x48 * slot));
             }
         }
     }

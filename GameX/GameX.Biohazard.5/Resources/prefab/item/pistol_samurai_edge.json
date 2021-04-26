@@ -4,8 +4,6 @@
   "GroupIndex": 4,
   "Name": "Samurai Edge (HG)",
   "Portrait": "pistol_samurai_edge",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     400
   ],
@@ -26,7 +24,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

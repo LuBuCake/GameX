@@ -4,8 +4,6 @@
   "GroupIndex": 1,
   "Name": "H&K P8 (HG)",
   "Portrait": "pistol_h&k_p8",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     140,
     160,
@@ -48,7 +46,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

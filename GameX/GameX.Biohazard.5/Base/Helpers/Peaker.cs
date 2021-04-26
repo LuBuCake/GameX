@@ -18,8 +18,7 @@ namespace GameX.Base.Helpers
         }
 
         [DllImport("user32.dll")]
-        public static extern int PeekMessage(out NativeMessage message, IntPtr window, uint filterMin, uint filterMax,
-            uint remove);
+        public static extern int PeekMessage(out NativeMessage message, IntPtr window, uint filterMin, uint filterMax, uint remove);
 
         public static bool IsApplicationIdle()
         {

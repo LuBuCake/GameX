@@ -17,27 +17,22 @@ namespace GameX.Base.Modules
         public static extern bool CloseHandle(IntPtr pHandle);
 
         [DllImport("kernel32.dll")]
-        public static extern bool VirtualProtectEx(IntPtr pHandle, int lpBaseAddress, int dwSize, int flNewProtect,
-            out int lpflOldProtect);
+        public static extern bool VirtualProtectEx(IntPtr pHandle, int lpBaseAddress, int dwSize, int flNewProtect, out int lpflOldProtect);
 
         [DllImport("kernel32.dll")]
-        public static extern int VirtualAllocEx(IntPtr pHandle, int lpBaseAddress, int dwSize, int flAllocType,
-            int flProtect);
+        public static extern int VirtualAllocEx(IntPtr pHandle, int lpBaseAddress, int dwSize, int flAllocType, int flProtect);
 
         [DllImport("kernel32.dll")]
         public static extern int VirtualFreeEx(IntPtr pHandle, int lpBaseAddress, int dwSize, int dwFreeType);
 
         [DllImport("kernel32.dll")]
-        public static extern bool ReadProcessMemory(IntPtr pHandle, int lpBaseAddress, [Out] byte[] lpBuffer,
-            int dwSize, ref int lpNumberOfBytesRead);
+        public static extern bool ReadProcessMemory(IntPtr pHandle, int lpBaseAddress, [Out] byte[] lpBuffer, int dwSize, ref int lpNumberOfBytesRead);
 
         [DllImport("kernel32.dll", SetLastError = true)]
-        public static extern bool WriteProcessMemory(IntPtr pHandle, int lpBaseAddress, byte[] lpBuffer, int dwSize,
-            ref int lpNumberOfBytesWritten);
+        public static extern bool WriteProcessMemory(IntPtr pHandle, int lpBaseAddress, byte[] lpBuffer, int dwSize, ref int lpNumberOfBytesWritten);
 
         [DllImport("kernel32")]
-        public static extern IntPtr CreateRemoteThread(IntPtr hProcess, IntPtr lpThreadAttributes, uint dwStackSize,
-            IntPtr lpStartAddress, IntPtr lpParameter, uint dwCreationFlags, out IntPtr lpThreadId);
+        public static extern IntPtr CreateRemoteThread(IntPtr hProcess, IntPtr lpThreadAttributes, uint dwStackSize, IntPtr lpStartAddress, IntPtr lpParameter, uint dwCreationFlags, out IntPtr lpThreadId);
 
         [DllImport("kernel32")]
         public static extern bool IsWow64Process(IntPtr hProcess, out bool lpSystemInfo);
@@ -50,8 +45,7 @@ namespace GameX.Base.Modules
         private static IntPtr Target_Handle { get; set; }
         public static bool DebugMode { get; private set; }
 
-        public static void StartModule(Process Target,
-            Enums.MEMORY_ACCESS AccessLevel = Enums.MEMORY_ACCESS.PROCESS_ALL_ACCESS)
+        public static void StartModule(Process Target, Enums.MEMORY_ACCESS AccessLevel = Enums.MEMORY_ACCESS.PROCESS_ALL_ACCESS)
         {
             Target_Process = Target;
             Target_Handle = OpenProcess((int) AccessLevel, false, Target_Process.Id);
@@ -185,10 +179,8 @@ namespace GameX.Base.Modules
             catch (Win32Exception)
             {
                 Terminal.WriteLine("[Memory] Failed entering debug mode.");
-                Terminal.WriteLine(
-                    "[Memory] WARNING: Code injection is only allowed in Admin Mode, expect limitations in User Mode.");
-                Utility.MessageBox_Warning(
-                    "Code injection is only allowed in Admin Mode, expect limitations in User Mode.");
+                Terminal.WriteLine("[Memory] WARNING: Code injection is only allowed in Admin Mode, expect limitations in User Mode.");
+                Utility.MessageBox_Warning("Code injection is only allowed in Admin Mode, expect limitations in User Mode.");
                 DebugMode = false;
                 return;
             }
@@ -249,8 +241,7 @@ namespace GameX.Base.Modules
             Detours = null;
         }
 
-        public static byte[] DetourJump(int JumpAddress, int LandAddress, int JumpInstructionLength, int JumpSize = 5,
-            bool AddressOnly = false)
+        public static byte[] DetourJump(int JumpAddress, int LandAddress, int JumpInstructionLength, int JumpSize = 5, bool AddressOnly = false)
         {
             byte[] JumpInstruction = new byte[JumpInstructionLength];
             JumpInstruction[0] = 0xE9;
@@ -283,8 +274,7 @@ namespace GameX.Base.Modules
             return Detours != null && Detours.TryGetValue(DetourName, out _);
         }
 
-        public static Detour CreateDetour(string DetourName, byte[] DetourContent, int CallAddress,
-            byte[] CallInstruction, bool JumpBack = false, int JumpBackAddress = 0)
+        public static Detour CreateDetour(string DetourName, byte[] DetourContent, int CallAddress, byte[] CallInstruction, bool JumpBack = false, int JumpBackAddress = 0)
         {
             if (!DebugMode)
                 return null;
@@ -294,9 +284,7 @@ namespace GameX.Base.Modules
 
             Terminal.WriteLine($"[Memory] Patching {CallAddress:X} for {DetourName}.");
 
-            int DetourAddress = VirtualAllocEx(Target_Handle, 0, DetourContent.Length,
-                (int) Enums.MEMORY_INFORMATION.MEM_COMMIT | (int) Enums.MEMORY_INFORMATION.MEM_RESERVE,
-                (int) Enums.MEMORY_PROTECTION.PAGE_EXECUTE_READ);
+            int DetourAddress = VirtualAllocEx(Target_Handle, 0, DetourContent.Length, (int) Enums.MEMORY_INFORMATION.MEM_COMMIT | (int) Enums.MEMORY_INFORMATION.MEM_RESERVE, (int) Enums.MEMORY_PROTECTION.PAGE_EXECUTE_READ);
 
             if (DetourAddress == 0)
             {
@@ -310,11 +298,9 @@ namespace GameX.Base.Modules
             WriteRawAddress(DetourAddress, DetourContent);
 
             if (JumpBack && JumpBackAddress != 0)
-                WriteRawAddress(DetourAddress + DetourContent.Length,
-                    DetourJump(DetourAddress + DetourContent.Length, JumpBackAddress, 5));
+                WriteRawAddress(DetourAddress + DetourContent.Length, DetourJump(DetourAddress + DetourContent.Length, JumpBackAddress, 5));
 
-            Detour Detour = new Detour(DetourName, DetourAddress, CallAddress, CallInstruction, DetourContent, JumpBack,
-                JumpBackAddress);
+            Detour Detour = new Detour(DetourName, DetourAddress, CallAddress, CallInstruction, DetourContent, JumpBack, JumpBackAddress);
             Detours.Add(DetourName, Detour);
 
             return Detour;

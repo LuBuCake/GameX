@@ -4,8 +4,6 @@
   "GroupIndex": 2,
   "Name": "Grenade Launcher (ACD)",
   "Portrait": "launcher_acd",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     500
   ],
@@ -26,7 +24,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

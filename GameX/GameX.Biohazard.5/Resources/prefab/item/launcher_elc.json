@@ -4,8 +4,6 @@
   "GroupIndex": 5,
   "Name": "Grenade Launcher (ELC)",
   "Portrait": "launcher_elc",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     100
   ],
@@ -26,7 +24,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

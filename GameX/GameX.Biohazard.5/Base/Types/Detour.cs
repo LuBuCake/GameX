@@ -10,8 +10,7 @@
         private bool DetourJumpBack { get; set; }
         private int DetourJumpBackAddress { get; set; }
 
-        public Detour(string Name, int Address, int CallAddress, byte[] CallInstruction, byte[] Content,
-            bool JumpBack = false, int JumpBackAddress = 0)
+        public Detour(string Name, int Address, int CallAddress, byte[] CallInstruction, byte[] Content, bool JumpBack = false, int JumpBackAddress = 0)
         {
             DetourName = Name;
             DetourAddress = Address;

@@ -113,12 +113,12 @@ namespace GameX
             if (!FrameElapser.IsRunning)
                 FrameElapser.Start();
 
+            CurTime = CurTimeElapser.Elapsed.TotalSeconds;
+
             TimeSpan Elapsed = FrameElapser.Elapsed;
 
             if (Elapsed.TotalSeconds < UpdateMode)
                 return;
-
-            CurTime = CurTimeElapser.Elapsed.TotalSeconds;
 
             FrameElapser.Stop();
             FrameElapser.Reset();
@@ -185,8 +185,7 @@ namespace GameX
                 Target_Process.Exited += Target_Exited;
                 Verified = true;
                 Initialized = true;
-                Text = "GameX - Resident Evil 5 / Biohazard 5 - " +
-                       (Memory.DebugMode ? "Running in Admin Mode" : "Running in User Mode");
+                Text = "GameX - Resident Evil 5 / Biohazard 5 - " + (Memory.DebugMode ? "Running in Admin Mode" : "Running in User Mode");
 
                 return Verified;
             }
@@ -604,9 +603,7 @@ namespace GameX
             ComboBoxEdit CBE = sender as ComboBoxEdit;
             int Index = int.Parse(CBE.Name[1].ToString()) - 1;
 
-            Biohazard.Players[Index].SetWeaponMode(CBE.SelectedIndex != 0
-                ? new[] {(byte) (CBE.SelectedItem as ListItem).Value}
-                : new[] {(byte) Biohazard.Players[Index].GetDefaultWeaponMode()});
+            Biohazard.Players[Index].SetWeaponMode(CBE.SelectedIndex != 0 ? new[] {(byte) (CBE.SelectedItem as ListItem).Value} : new[] {(byte) Biohazard.Players[Index].GetDefaultWeaponMode()});
         }
 
         private void Handness_IndexChanged(object sender, EventArgs e)
@@ -617,9 +614,7 @@ namespace GameX
             ComboBoxEdit CBE = sender as ComboBoxEdit;
             int Index = int.Parse(CBE.Name[1].ToString()) - 1;
 
-            Biohazard.Players[Index].SetHandness(CBE.SelectedIndex != 0
-                ? new[] {(byte) (CBE.SelectedItem as ListItem).Value}
-                : new[] {(byte) Biohazard.Players[Index].GetDefaultHandness()});
+            Biohazard.Players[Index].SetHandness(CBE.SelectedIndex != 0 ? new[] {(byte) (CBE.SelectedItem as ListItem).Value} : new[] {(byte) Biohazard.Players[Index].GetDefaultHandness()});
         }
 
         private void CharCosFreeze_CheckedChanged(object sender, EventArgs e)
@@ -708,9 +703,7 @@ namespace GameX
                     return;
                 }
 
-                Terminal.WriteLine(
-                    "[App] The connection response was either null or too slow, please check your internet and try again.",
-                    Enums.MessageBoxType.Error);
+                Terminal.WriteLine("[App] The connection response was either null or too slow, please check your internet and try again.", Enums.MessageBoxType.Error);
                 return;
             }
 
@@ -991,61 +984,45 @@ namespace GameX
 
         private void Character_DetourUpdate()
         {
-            if (!Memory.DetourActive("Character_Global") || !Memory.DetourActive("Character_StoryChar") ||
-                !Memory.DetourActive("Character_StoryCos") || !Memory.DetourActive("Character_StorySave") ||
-                !Memory.DetourActive("Character_StoryCosPersistent"))
+            if (!Memory.DetourActive("Character_Global") || !Memory.DetourActive("Character_StoryChar") || !Memory.DetourActive("Character_StoryCos") || !Memory.DetourActive("Character_StorySave") || !Memory.DetourActive("Character_StoryCosPersistent"))
                 return;
 
             Detour DetourBase = Memory.GetDetour("Character_Global");
             int DetourBase_Address = DetourBase.Address();
 
-            Memory.WriteRawAddress(DetourBase_Address + 6,
-                !P1FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x2D});
-            Memory.WriteRawAddress(DetourBase_Address + 18,
-                !P2FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x30});
-            Memory.WriteRawAddress(DetourBase_Address + 30,
-                !P3FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x33});
-            Memory.WriteRawAddress(DetourBase_Address + 42,
-                !P4FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x36});
+            Memory.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x2D});
+            Memory.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x30});
+            Memory.WriteRawAddress(DetourBase_Address + 30, !P3FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x33});
+            Memory.WriteRawAddress(DetourBase_Address + 42, !P4FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x36});
 
             DetourBase = Memory.GetDetour("Character_StoryChar");
             DetourBase_Address = DetourBase.Address();
 
-            Memory.WriteRawAddress(DetourBase_Address + 6,
-                !P1FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x15});
-            Memory.WriteRawAddress(DetourBase_Address + 18,
-                !P2FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x13});
+            Memory.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x15});
+            Memory.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x13});
 
             DetourBase = Memory.GetDetour("Character_StoryCos");
             DetourBase_Address = DetourBase.Address();
 
-            Memory.WriteRawAddress(DetourBase_Address + 6,
-                !P1FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x15});
-            Memory.WriteRawAddress(DetourBase_Address + 18,
-                !P2FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x13});
+            Memory.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x15});
+            Memory.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x13});
 
             DetourBase = Memory.GetDetour("Character_StorySave");
             DetourBase_Address = DetourBase.Address();
 
-            Memory.WriteRawAddress(DetourBase_Address + 20,
-                P1FreezeCharCosButton.Checked ? new byte[] {0x01} : new byte[] {0x00});
-            Memory.WriteRawAddress(DetourBase_Address + 49,
-                P2FreezeCharCosButton.Checked ? new byte[] {0x01} : new byte[] {0x00});
+            Memory.WriteRawAddress(DetourBase_Address + 20, P1FreezeCharCosButton.Checked ? new byte[] {0x01} : new byte[] {0x00});
+            Memory.WriteRawAddress(DetourBase_Address + 49, P2FreezeCharCosButton.Checked ? new byte[] {0x01} : new byte[] {0x00});
 
             DetourBase = Memory.GetDetour("Character_StoryCosPersistent");
             DetourBase_Address = DetourBase.Address();
 
-            Memory.WriteRawAddress(DetourBase_Address + 6,
-                P1FreezeCharCosButton.Checked ? new byte[] { 0x74, 0x1D } : new byte[] { 0x90, 0x90 });
-            Memory.WriteRawAddress(DetourBase_Address + 18,
-                P2FreezeCharCosButton.Checked ? new byte[] { 0x74, 0x1B } : new byte[] { 0x90, 0x90 });
+            Memory.WriteRawAddress(DetourBase_Address + 6, P1FreezeCharCosButton.Checked ? new byte[] {0x74, 0x1D} : new byte[] {0x90, 0x90});
+            Memory.WriteRawAddress(DetourBase_Address + 18, P2FreezeCharCosButton.Checked ? new byte[] {0x74, 0x1B} : new byte[] {0x90, 0x90});
         }
 
         private void Character_DetourValueUpdate()
         {
-            if (!Memory.DetourActive("Character_Global") || !Memory.DetourActive("Character_StoryChar") ||
-                !Memory.DetourActive("Character_StoryCos") || !Memory.DetourActive("Character_StorySave") ||
-                !Memory.DetourActive("Character_StoryCosPersistent"))
+            if (!Memory.DetourActive("Character_Global") || !Memory.DetourActive("Character_StoryChar") || !Memory.DetourActive("Character_StoryCos") || !Memory.DetourActive("Character_StorySave") || !Memory.DetourActive("Character_StoryCosPersistent"))
                 return;
 
             int CHAR1A = Memory.ReadPointer("re5dx9.exe", 0xDA383C, 0x6FE00);
@@ -1160,9 +1137,7 @@ namespace GameX
 
         public void Character_SendSelectionChange(int index, int character, int costume)
         {
-            if (!Network.ModuleStarted
-                || Network._Server == null && Network._Client == null
-                || Network._Server != null && Network._Server.ListClients().ToList().Count < 1)
+            if (!Network.ModuleStarted || Network._Server == null && Network._Client == null || Network._Server != null && Network._Server.ListClients().ToList().Count < 1)
                 return;
 
             NetCharacterSelectionChange Change = new NetCharacterSelectionChange()
@@ -1183,8 +1158,7 @@ namespace GameX
 
         public void Character_ReceiveSelectionChange(NetCharacterSelectionChange Change, Client Client = null)
         {
-            if (Network._Server != null && Client != null &&
-                Network._Server.ListClients().Where(x => x != Client.IP).ToList().Count > 0)
+            if (Network._Server != null && Client != null && Network._Server.ListClients().Where(x => x != Client.IP).ToList().Count > 0)
             {
                 string SerializedChange = $"[CHARSELECTIONCHANGE]{Serializer.SerializeCharacterSelectionChanged(Change)}";
                 Network.Server_BroadcastMessage(SerializedChange, Client.IP, false, true);
@@ -1216,9 +1190,7 @@ namespace GameX
 
         public void Character_SendFreezeChange(int index, bool freeze)
         {
-            if (!Network.ModuleStarted
-                || Network._Server == null && Network._Client == null
-                || Network._Server != null && Network._Server.ListClients().ToList().Count < 1)
+            if (!Network.ModuleStarted || Network._Server == null && Network._Client == null || Network._Server != null && Network._Server.ListClients().ToList().Count < 1)
                 return;
 
             NetCharacterFreezeChange Change = new NetCharacterFreezeChange()
@@ -1240,8 +1212,7 @@ namespace GameX
 
         public void Character_ReceiveFreezeChange(NetCharacterFreezeChange Change, Client Client = null)
         {
-            if (Network._Server != null && Client != null &&
-                Network._Server.ListClients().Where(x => x != Client.IP).ToList().Count > 0)
+            if (Network._Server != null && Client != null && Network._Server.ListClients().Where(x => x != Client.IP).ToList().Count > 0)
             {
                 string SerializedChange = $"[CHARFREEZECHANGE]{Serializer.SerializeCharacterFreezeChanged(Change)}";
                 Network.Server_BroadcastMessage(SerializedChange, Client.IP, false, true);
@@ -1283,8 +1254,7 @@ namespace GameX
                     0xF7, 0x84, 0x17, 0xC4, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00
                 };
 
-                Detour RickFixes_Movement_1 = Memory.CreateDetour("RickFixes_Movement_1", Function_A, 0x0079F66D,
-                    Function_A_Original, true, 0x0079F678);
+                Detour RickFixes_Movement_1 = Memory.CreateDetour("RickFixes_Movement_1", Function_A, 0x0079F66D, Function_A_Original, true, 0x0079F678);
 
                 if (RickFixes_Movement_1 != null)
                 {
@@ -1310,8 +1280,7 @@ namespace GameX
                     0x84, 0x9C, 0x17, 0xC4, 0x01, 0x00, 0x00
                 };
 
-                Detour RickFixes_Movement_2 = Memory.CreateDetour("RickFixes_Movement_2", Function_A, 0x0079F6C1,
-                    Function_A_Original, true, 0x0079F6C8);
+                Detour RickFixes_Movement_2 = Memory.CreateDetour("RickFixes_Movement_2", Function_A, 0x0079F6C1, Function_A_Original, true, 0x0079F6C8);
 
                 if (RickFixes_Movement_2 != null)
                 {
@@ -1337,8 +1306,7 @@ namespace GameX
                     0xF6, 0x84, 0x17, 0xC4, 0x01, 0x00, 0x00, 0X40
                 };
 
-                Detour RickFixes_Movement_3 = Memory.CreateDetour("RickFixes_Movement_3", Function_A, 0x0079F698,
-                    Function_A_Original, true, 0x0079F6A0);
+                Detour RickFixes_Movement_3 = Memory.CreateDetour("RickFixes_Movement_3", Function_A, 0x0079F698, Function_A_Original, true, 0x0079F6A0);
 
                 if (RickFixes_Movement_3 != null)
                 {
@@ -1364,8 +1332,7 @@ namespace GameX
                     0xF6, 0x84, 0x17, 0xC4, 0x01, 0x00, 0x00, 0X80
                 };
 
-                Detour RickFixes_Movement_4 = Memory.CreateDetour("RickFixes_Movement_4", Function_A, 0x0079F6E9,
-                    Function_A_Original, true, 0x0079F6F1);
+                Detour RickFixes_Movement_4 = Memory.CreateDetour("RickFixes_Movement_4", Function_A, 0x0079F6E9, Function_A_Original, true, 0x0079F6F1);
 
                 if (RickFixes_Movement_4 != null)
                 {
@@ -1499,28 +1466,16 @@ namespace GameX
                 }
 
                 bool PlayerPresent = Biohazard.Players[i].IsActive();
-                double PlayerHealthPercent = PlayerPresent
-                    ? (double) Biohazard.Players[i].GetHealth() / Biohazard.Players[i].GetMaxHealth()
-                    : 1.0;
+                double PlayerHealthPercent = PlayerPresent ? (double) Biohazard.Players[i].GetHealth() / Biohazard.Players[i].GetMaxHealth() : 1.0;
 
                 // Health Bar //
                 HealthBars[i].Properties.Maximum = PlayerPresent ? Biohazard.Players[i].GetMaxHealth() : 1;
                 HealthBars[i].EditValue = PlayerPresent ? Biohazard.Players[i].GetHealth() : 1;
-                HealthBars[i].Properties.StartColor = PlayerPresent
-                    ? Color.FromArgb((int) (255.0 - (155.0 * PlayerHealthPercent)),
-                        (int) (0.0 + (255.0 * PlayerHealthPercent)), 0)
-                    : Color.FromArgb(0, 0, 0, 0);
-                HealthBars[i].Properties.EndColor = PlayerPresent
-                    ? Color.FromArgb((int) (255.0 - (155.0 * PlayerHealthPercent)),
-                        (int) (0.0 + (255.0 * PlayerHealthPercent)), 0)
-                    : Color.FromArgb(0, 0, 0, 0);
+                HealthBars[i].Properties.StartColor = PlayerPresent ? Color.FromArgb((int) (255.0 - (155.0 * PlayerHealthPercent)), (int) (0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(0, 0, 0, 0);
+                HealthBars[i].Properties.EndColor = PlayerPresent ? Color.FromArgb((int) (255.0 - (155.0 * PlayerHealthPercent)), (int) (0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(0, 0, 0, 0);
 
                 // Player Name //
-                PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (Biohazard.InGame()
-                    ? ((i == Biohazard.LocalPlayer())
-                        ? Biohazard.LocalPlayerNick()
-                        : (PlayerPresent ? (Biohazard.Players[i].IsAI() ? "CPU AI" : "Connected") : "Disconnected"))
-                    : "Disconnected");
+                PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (Biohazard.InGame() ? ((i == Biohazard.LocalPlayer()) ? Biohazard.LocalPlayerNick() : (PlayerPresent ? (Biohazard.Players[i].IsAI() ? "CPU AI" : "Connected") : "Disconnected")) : "Disconnected");
 
                 // Handness //
                 if (Handness[i].SelectedIndex > 0 && PlayerPresent)

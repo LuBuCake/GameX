@@ -4,8 +4,6 @@
   "GroupIndex": 2,
   "Name": "H&K MP5 (MG)",
   "Portrait": "smg_mp5",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     60,
     80,
@@ -44,7 +42,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

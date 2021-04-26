@@ -4,8 +4,6 @@
   "GroupIndex": 0,
   "Name": "VZ61 (MG)",
   "Portrait": "smg_vz61",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     50,
     60,
@@ -47,7 +45,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

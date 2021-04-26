@@ -4,8 +4,6 @@
   "GroupIndex": 0,
   "Name": "Stun Rod",
   "Portrait": "stunrod",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     666
   ],
@@ -26,7 +24,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }

@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DevExpress.Office.Drawing;
-
-namespace GameX.Game.Types
+﻿namespace GameX.Game.Types
 {
     public class Item
     {
@@ -16,10 +9,6 @@ namespace GameX.Game.Types
         public string Name { get; set; }
         public string Portrait { get; set; }
 
-        // Variables
-        public int Quantity { get; set; }
-        public int MaxQuantity { get; set; }
-
         // Upgrade Levels
         public int[] Firepower { get; set; }
         public double[] ReloadSpeed { get; set; }
@@ -28,10 +17,6 @@ namespace GameX.Game.Types
         public int[] Piercing { get; set; }
         public int[] Range { get; set; }
         public int[] Scope { get; set; }
-
-        // Flags
-        public bool InfiniteAmmo { get; set; }
-        public bool RapidFire { get; set; }
 
         public override string ToString()
         {

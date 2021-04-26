@@ -4,8 +4,6 @@
   "GroupIndex": 0,
   "Name": "Nothing",
   "Portrait": "default",
-  "Quantity": 0,
-  "MaxQuantity": 0,
   "Firepower": [
     0
   ],
@@ -26,7 +24,5 @@
   ],
   "Scope": [
     0
-  ],
-  "InfiniteAmmo": false,
-  "RapidFire": false
+  ]
 }
