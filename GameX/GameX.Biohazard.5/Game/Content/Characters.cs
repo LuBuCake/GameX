@@ -248,7 +248,7 @@ namespace GameX.Game.Content
                 }
             };
 
-            return new List<Character>()
+            return new List<Character>
             {
                 Chris,
                 Sheva,
@@ -273,7 +273,7 @@ namespace GameX.Game.Content
                     Serializer.WriteDataFile(@"GameX.Biohazard.5/prefab/character/" + $"{Char.Name.ToLower()}.json", Serializer.SerializeCharacter(Char));
                 }
 
-                Terminal.WriteLine("Characters jsons written sucessfully.");
+                Terminal.WriteLine("[App] Characters jsons written sucessfully.");
             }
             catch (Exception Ex)
             {

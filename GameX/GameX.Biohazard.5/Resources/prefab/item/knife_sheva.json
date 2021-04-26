@@ -1,0 +1,32 @@
+{
+  "Value": 270,
+  "Group": 7,
+  "GroupIndex": 2,
+  "Name": "Knife (Sheva)",
+  "Portrait": "knife_sheva",
+  "Quantity": 0,
+  "MaxQuantity": 0,
+  "Firepower": [
+    50
+  ],
+  "ReloadSpeed": [
+    0.0
+  ],
+  "Capacity": [
+    1
+  ],
+  "Critical": [
+    0
+  ],
+  "Piercing": [
+    0
+  ],
+  "Range": [
+    0
+  ],
+  "Scope": [
+    0
+  ],
+  "InfiniteAmmo": false,
+  "RapidFire": false
+}

@@ -1,0 +1,32 @@
+{
+  "Value": 304,
+  "Group": 12,
+  "GroupIndex": 4,
+  "Name": "Lantern",
+  "Portrait": "lantern",
+  "Quantity": 0,
+  "MaxQuantity": 0,
+  "Firepower": [
+    0
+  ],
+  "ReloadSpeed": [
+    0.0
+  ],
+  "Capacity": [
+    1
+  ],
+  "Critical": [
+    0
+  ],
+  "Piercing": [
+    0
+  ],
+  "Range": [
+    0
+  ],
+  "Scope": [
+    0
+  ],
+  "InfiniteAmmo": false,
+  "RapidFire": false
+}

@@ -318,30 +318,31 @@ namespace GameX.Base.Modules
                     Characters.WriteDefaultChars();
                     break;
                 case "writejson" when Utility.RemoveWhiteSpace(Command[1].ToLower()) == "items":
-                    WriteLine("Not implemented yet.");
+                    Items.WriteDefaultItems();
                     break;
                 case "help":
                     ShowCommands();
                     break;
                 case "fps":
-                    WriteLine(Main.FramesPerSecond.ToString().Substring(0, 5));
+                    WriteLine($"[App] {Main.FramesPerSecond.ToString().Substring(0, 5)}");
                     break;
                 case "frametime":
-                    WriteLine(Main.FrameTime.ToString().Substring(0, 5));
+                    WriteLine($"[App] {Main.FrameTime.ToString().Substring(0, 5)}");
                     break;
                 case "curtime":
-                    WriteLine(((int) Main.CurTime).ToString());
+                    WriteLine($"[App] {(int)Main.CurTime}");
                     break;
                 case "exit":
                     Application.Exit();
                     break;
                 default:
                 {
-                    if (!ProcessDevCommand(Command) && !ProcessGameCommand(Command) &&
-                        !ProcessNetworkCommand(Command) && !ProcessServerCommand(Command) &&
+                    if (!ProcessDevCommand(Command) && 
+                        !ProcessGameCommand(Command) &&
+                        !ProcessNetworkCommand(Command) && 
+                        !ProcessServerCommand(Command) &&
                         !ProcessClientCommand(Command))
-                        WriteLine(
-                            "[Console] Unknown or incorrect use of command. Type Help to see all available commands and their syntax.");
+                        WriteLine("[Console] Unknown or incorrect use of command. Type Help to see all available commands and their syntax.");
 
                     break;
                 }
@@ -360,12 +361,10 @@ namespace GameX.Base.Modules
                         ProcessCommand(TE.Text);
                         break;
                     case (int) Enums.ConsoleInterface.Server:
-                        Network.Server_BroadcastMessage("[CHAT]" + $"{Main.PlayerNameTextEdit.Text}: " + TE.Text, "",
-                            true, true);
+                        Network.Server_BroadcastMessage("[CHAT]" + $"{Main.PlayerNameTextEdit.Text}: " + TE.Text, "", true, true);
                         break;
                     default:
-                        Network.Client_SendMessage("[CHAT]" + $"{Main.PlayerNameTextEdit.Text}: " + TE.Text, true,
-                            true);
+                        Network.Client_SendMessage("[CHAT]" + $"{Main.PlayerNameTextEdit.Text}: " + TE.Text, true, true);
                         break;
                 }
             }

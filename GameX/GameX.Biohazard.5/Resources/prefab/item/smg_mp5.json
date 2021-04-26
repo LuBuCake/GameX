@@ -1,0 +1,50 @@
+{
+  "Value": 275,
+  "Group": 3,
+  "GroupIndex": 2,
+  "Name": "H&K MP5 (MG)",
+  "Portrait": "smg_mp5",
+  "Quantity": 0,
+  "MaxQuantity": 0,
+  "Firepower": [
+    60,
+    80,
+    90,
+    100,
+    120
+  ],
+  "ReloadSpeed": [
+    2.7,
+    2.55,
+    2.4,
+    2.1
+  ],
+  "Capacity": [
+    45,
+    55,
+    65,
+    80,
+    90,
+    100,
+    110,
+    120,
+    130,
+    150
+  ],
+  "Critical": [
+    0
+  ],
+  "Piercing": [
+    0,
+    1,
+    2
+  ],
+  "Range": [
+    0
+  ],
+  "Scope": [
+    0
+  ],
+  "InfiniteAmmo": false,
+  "RapidFire": false
+}

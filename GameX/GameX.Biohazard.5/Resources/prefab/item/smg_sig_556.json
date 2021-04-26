@@ -1,0 +1,52 @@
+{
+  "Value": 265,
+  "Group": 3,
+  "GroupIndex": 3,
+  "Name": "SIG 556 (MG)",
+  "Portrait": "smg_sig_556",
+  "Quantity": 0,
+  "MaxQuantity": 0,
+  "Firepower": [
+    80,
+    90,
+    100,
+    120,
+    130,
+    140,
+    150,
+    160,
+    180
+  ],
+  "ReloadSpeed": [
+    2.55,
+    2.41,
+    2.27,
+    1.98,
+    1.7,
+    1.42
+  ],
+  "Capacity": [
+    40,
+    45,
+    50,
+    55,
+    60,
+    65,
+    70,
+    80
+  ],
+  "Critical": [
+    0
+  ],
+  "Piercing": [
+    0
+  ],
+  "Range": [
+    0
+  ],
+  "Scope": [
+    0
+  ],
+  "InfiniteAmmo": false,
+  "RapidFire": false
+}

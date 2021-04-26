@@ -1,0 +1,55 @@
+{
+  "Value": 260,
+  "Group": 2,
+  "GroupIndex": 0,
+  "Name": "Ithaca (SG)",
+  "Portrait": "shotgun_ithaca",
+  "Quantity": 0,
+  "MaxQuantity": 0,
+  "Firepower": [
+    200,
+    230,
+    260,
+    300,
+    330,
+    360,
+    400
+  ],
+  "ReloadSpeed": [
+    3.0,
+    2.85,
+    2.7,
+    2.4
+  ],
+  "Capacity": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    13,
+    15,
+    16,
+    17,
+    18,
+    20,
+    22,
+    25
+  ],
+  "Critical": [
+    0,
+    1
+  ],
+  "Piercing": [
+    0
+  ],
+  "Range": [
+    0
+  ],
+  "Scope": [
+    0
+  ],
+  "InfiniteAmmo": false,
+  "RapidFire": false
+}

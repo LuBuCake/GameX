@@ -1,0 +1,32 @@
+{
+  "Value": 528,
+  "Group": 9,
+  "GroupIndex": 10,
+  "Name": "Eletric Rounds",
+  "Portrait": "rounds_elc",
+  "Quantity": 0,
+  "MaxQuantity": 0,
+  "Firepower": [
+    0
+  ],
+  "ReloadSpeed": [
+    0.0
+  ],
+  "Capacity": [
+    12
+  ],
+  "Critical": [
+    0
+  ],
+  "Piercing": [
+    0
+  ],
+  "Range": [
+    0
+  ],
+  "Scope": [
+    0
+  ],
+  "InfiniteAmmo": false,
+  "RapidFire": false
+}

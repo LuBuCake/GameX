@@ -1,0 +1,32 @@
+{
+  "Value": 515,
+  "Group": 9,
+  "GroupIndex": 2,
+  "Name": "Shotgun Ammo",
+  "Portrait": "ammo_shotgun",
+  "Quantity": 0,
+  "MaxQuantity": 0,
+  "Firepower": [
+    0
+  ],
+  "ReloadSpeed": [
+    0.0
+  ],
+  "Capacity": [
+    30
+  ],
+  "Critical": [
+    0
+  ],
+  "Piercing": [
+    0
+  ],
+  "Range": [
+    0
+  ],
+  "Scope": [
+    0
+  ],
+  "InfiniteAmmo": false,
+  "RapidFire": false
+}

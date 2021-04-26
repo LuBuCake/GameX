@@ -1,0 +1,32 @@
+{
+  "Value": 292,
+  "Group": 7,
+  "GroupIndex": 3,
+  "Name": "Knife (Jill)",
+  "Portrait": "knife_jill",
+  "Quantity": 0,
+  "MaxQuantity": 0,
+  "Firepower": [
+    50
+  ],
+  "ReloadSpeed": [
+    0.0
+  ],
+  "Capacity": [
+    1
+  ],
+  "Critical": [
+    0
+  ],
+  "Piercing": [
+    0
+  ],
+  "Range": [
+    0
+  ],
+  "Scope": [
+    0
+  ],
+  "InfiniteAmmo": false,
+  "RapidFire": false
+}

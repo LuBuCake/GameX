@@ -1,0 +1,32 @@
+{
+  "Value": 313,
+  "Group": 6,
+  "GroupIndex": 1,
+  "Name": "Grenade Launcher (FLM)",
+  "Portrait": "launcher_flm",
+  "Quantity": 0,
+  "MaxQuantity": 0,
+  "Firepower": [
+    500
+  ],
+  "ReloadSpeed": [
+    0.0
+  ],
+  "Capacity": [
+    12
+  ],
+  "Critical": [
+    0
+  ],
+  "Piercing": [
+    0
+  ],
+  "Range": [
+    0
+  ],
+  "Scope": [
+    0
+  ],
+  "InfiniteAmmo": false,
+  "RapidFire": false
+}

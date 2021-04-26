@@ -1,0 +1,32 @@
+{
+  "Value": 1537,
+  "Group": 11,
+  "GroupIndex": 0,
+  "Name": "Melee Vest",
+  "Portrait": "vest_melee",
+  "Quantity": 0,
+  "MaxQuantity": 0,
+  "Firepower": [
+    0
+  ],
+  "ReloadSpeed": [
+    0.0
+  ],
+  "Capacity": [
+    1
+  ],
+  "Critical": [
+    0
+  ],
+  "Piercing": [
+    0
+  ],
+  "Range": [
+    0
+  ],
+  "Scope": [
+    0
+  ],
+  "InfiniteAmmo": false,
+  "RapidFire": false
+}

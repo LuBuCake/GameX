@@ -1,0 +1,32 @@
+{
+  "Value": 264,
+  "Group": 8,
+  "GroupIndex": 2,
+  "Name": "Flash Grenade",
+  "Portrait": "grenade_fls",
+  "Quantity": 0,
+  "MaxQuantity": 0,
+  "Firepower": [
+    100
+  ],
+  "ReloadSpeed": [
+    0.0
+  ],
+  "Capacity": [
+    5
+  ],
+  "Critical": [
+    0
+  ],
+  "Piercing": [
+    0
+  ],
+  "Range": [
+    0
+  ],
+  "Scope": [
+    0
+  ],
+  "InfiniteAmmo": false,
+  "RapidFire": false
+}

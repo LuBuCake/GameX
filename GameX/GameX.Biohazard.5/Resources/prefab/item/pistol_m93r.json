@@ -1,0 +1,55 @@
+{
+  "Value": 286,
+  "Group": 1,
+  "GroupIndex": 3,
+  "Name": "M93R (HG)",
+  "Portrait": "pistol_m93r",
+  "Quantity": 0,
+  "MaxQuantity": 0,
+  "Firepower": [
+    170,
+    190,
+    210,
+    230,
+    250,
+    270,
+    290,
+    310,
+    330,
+    350,
+    370,
+    400
+  ],
+  "ReloadSpeed": [
+    1.7,
+    1.62,
+    1.53,
+    1.36
+  ],
+  "Capacity": [
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    30
+  ],
+  "Critical": [
+    0
+  ],
+  "Piercing": [
+    0
+  ],
+  "Range": [
+    0
+  ],
+  "Scope": [
+    0
+  ],
+  "InfiniteAmmo": false,
+  "RapidFire": false
+}

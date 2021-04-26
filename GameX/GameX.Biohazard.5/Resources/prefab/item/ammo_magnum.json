@@ -1,0 +1,32 @@
+{
+  "Value": 521,
+  "Group": 9,
+  "GroupIndex": 4,
+  "Name": "Magnum Ammo",
+  "Portrait": "ammo_magnum",
+  "Quantity": 0,
+  "MaxQuantity": 0,
+  "Firepower": [
+    0
+  ],
+  "ReloadSpeed": [
+    0.0
+  ],
+  "Capacity": [
+    12
+  ],
+  "Critical": [
+    0
+  ],
+  "Piercing": [
+    0
+  ],
+  "Range": [
+    0
+  ],
+  "Scope": [
+    0
+  ],
+  "InfiniteAmmo": false,
+  "RapidFire": false
+}

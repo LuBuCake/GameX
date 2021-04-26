@@ -119,6 +119,7 @@ namespace GameX
             this.ServerPortTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ServerPortLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.TabPageSettingsGPApp = new DevExpress.XtraEditors.GroupControl();
+            this.MiscModsGP = new DevExpress.XtraEditors.GroupControl();
             this.AboutPictureEdit = new DevExpress.XtraEditors.PictureEdit();
             this.AppSettingsGP = new DevExpress.XtraEditors.GroupControl();
             this.MiscSettingsGP = new DevExpress.XtraEditors.GroupControl();
@@ -137,6 +138,7 @@ namespace GameX
             this.ClearConsoleSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.ConsoleModeComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.ConsoleInputTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.TabPageInventory = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -221,6 +223,7 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.ServerPortTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageSettingsGPApp)).BeginInit();
             this.TabPageSettingsGPApp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscModsGP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AboutPictureEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AppSettingsGP)).BeginInit();
             this.AppSettingsGP.SuspendLayout();
@@ -302,6 +305,7 @@ namespace GameX
             this.MasterTabControl.TabIndex = 18;
             this.MasterTabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.TabPageChar,
+            this.TabPageInventory,
             this.TabPageSettings,
             this.TabPageConsole});
             // 
@@ -479,7 +483,7 @@ namespace GameX
             this.P4HealthBar.Properties.StartColor = System.Drawing.Color.White;
             this.P4HealthBar.Size = new System.Drawing.Size(12, 168);
             this.P4HealthBar.TabIndex = 0;
-            this.P4HealthBar.ToolTip = "Displays the respective player\'s health in a fancy way.";
+            this.P4HealthBar.ToolTip = "Displays the respective player\'s health.";
             this.P4HealthBar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P4HealthBar.ToolTipTitle = "Player Health";
             // 
@@ -686,7 +690,7 @@ namespace GameX
             this.P3HealthBar.Properties.StartColor = System.Drawing.Color.White;
             this.P3HealthBar.Size = new System.Drawing.Size(12, 168);
             this.P3HealthBar.TabIndex = 0;
-            this.P3HealthBar.ToolTip = "Displays the respective player\'s health in a fancy way.";
+            this.P3HealthBar.ToolTip = "Displays the respective player\'s health.";
             this.P3HealthBar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P3HealthBar.ToolTipTitle = "Player Health";
             // 
@@ -893,7 +897,7 @@ namespace GameX
             this.P2HealthBar.Properties.StartColor = System.Drawing.Color.White;
             this.P2HealthBar.Size = new System.Drawing.Size(12, 168);
             this.P2HealthBar.TabIndex = 0;
-            this.P2HealthBar.ToolTip = "Displays the respective player\'s health in a fancy way.";
+            this.P2HealthBar.ToolTip = "Displays the respective player\'s health.";
             this.P2HealthBar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P2HealthBar.ToolTipTitle = "Player Health";
             // 
@@ -1086,7 +1090,7 @@ namespace GameX
             this.P1HealthBar.Properties.StartColor = System.Drawing.Color.White;
             this.P1HealthBar.Size = new System.Drawing.Size(12, 168);
             this.P1HealthBar.TabIndex = 0;
-            this.P1HealthBar.ToolTip = "Displays the respective player\'s health in a fancy way.";
+            this.P1HealthBar.ToolTip = "Displays the respective player\'s health.";
             this.P1HealthBar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P1HealthBar.ToolTipTitle = "Player Health";
             // 
@@ -1395,6 +1399,7 @@ namespace GameX
             // 
             this.TabPageSettingsGPApp.AppearanceCaption.Options.UseTextOptions = true;
             this.TabPageSettingsGPApp.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.TabPageSettingsGPApp.Controls.Add(this.MiscModsGP);
             this.TabPageSettingsGPApp.Controls.Add(this.AboutPictureEdit);
             this.TabPageSettingsGPApp.Controls.Add(this.AppSettingsGP);
             this.TabPageSettingsGPApp.Location = new System.Drawing.Point(322, 10);
@@ -1402,6 +1407,14 @@ namespace GameX
             this.TabPageSettingsGPApp.Name = "TabPageSettingsGPApp";
             this.TabPageSettingsGPApp.Size = new System.Drawing.Size(308, 418);
             this.TabPageSettingsGPApp.TabIndex = 0;
+            // 
+            // MiscModsGP
+            // 
+            this.MiscModsGP.Location = new System.Drawing.Point(5, 105);
+            this.MiscModsGP.Name = "MiscModsGP";
+            this.MiscModsGP.Size = new System.Drawing.Size(298, 182);
+            this.MiscModsGP.TabIndex = 1;
+            this.MiscModsGP.Text = "Miscellaneous";
             // 
             // AboutPictureEdit
             // 
@@ -1615,6 +1628,12 @@ namespace GameX
             this.ConsoleInputTextEdit.Size = new System.Drawing.Size(454, 20);
             this.ConsoleInputTextEdit.TabIndex = 1;
             // 
+            // TabPageInventory
+            // 
+            this.TabPageInventory.Name = "TabPageInventory";
+            this.TabPageInventory.Size = new System.Drawing.Size(638, 438);
+            this.TabPageInventory.Text = "Inventory";
+            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1717,6 +1736,7 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.ServerPortTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageSettingsGPApp)).EndInit();
             this.TabPageSettingsGPApp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MiscModsGP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AboutPictureEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AppSettingsGP)).EndInit();
             this.AppSettingsGP.ResumeLayout(false);
@@ -1846,6 +1866,8 @@ namespace GameX
         public DevExpress.XtraEditors.CheckButton P4FreezeCharCosButton;
         public DevExpress.XtraEditors.CheckButton P3FreezeCharCosButton;
         public DevExpress.XtraEditors.CheckButton P2FreezeCharCosButton;
+        private DevExpress.XtraEditors.GroupControl MiscModsGP;
+        private DevExpress.XtraTab.XtraTabPage TabPageInventory;
     }
 }
 

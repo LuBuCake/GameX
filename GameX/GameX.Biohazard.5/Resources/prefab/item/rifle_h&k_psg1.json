@@ -1,0 +1,51 @@
+{
+  "Value": 284,
+  "Group": 4,
+  "GroupIndex": 2,
+  "Name": "H&K PSG-1 (RIF)",
+  "Portrait": "rifle_h&k_psg1",
+  "Quantity": 0,
+  "MaxQuantity": 0,
+  "Firepower": [
+    600,
+    650,
+    700,
+    750,
+    800,
+    900,
+    1000,
+    1200
+  ],
+  "ReloadSpeed": [
+    2.55,
+    2.41,
+    2.27,
+    2.13,
+    1.98,
+    1.7
+  ],
+  "Capacity": [
+    5,
+    6,
+    7,
+    9,
+    11,
+    15
+  ],
+  "Critical": [
+    0
+  ],
+  "Piercing": [
+    0
+  ],
+  "Range": [
+    0
+  ],
+  "Scope": [
+    0,
+    1,
+    2
+  ],
+  "InfiniteAmmo": false,
+  "RapidFire": false
+}

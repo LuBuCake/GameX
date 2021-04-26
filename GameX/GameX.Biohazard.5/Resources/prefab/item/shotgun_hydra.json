@@ -1,0 +1,52 @@
+{
+  "Value": 281,
+  "Group": 2,
+  "GroupIndex": 3,
+  "Name": "Hydra (SG)",
+  "Portrait": "shotgun_hydra",
+  "Quantity": 0,
+  "MaxQuantity": 0,
+  "Firepower": [
+    280,
+    290,
+    310,
+    330,
+    350,
+    380,
+    400,
+    420,
+    440,
+    460,
+    500,
+    550
+  ],
+  "ReloadSpeed": [
+    3.67,
+    3.3
+  ],
+  "Capacity": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "Critical": [
+    0
+  ],
+  "Piercing": [
+    0
+  ],
+  "Range": [
+    0,
+    1,
+    2
+  ],
+  "Scope": [
+    0
+  ],
+  "InfiniteAmmo": false,
+  "RapidFire": false
+}

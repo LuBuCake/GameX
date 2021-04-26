@@ -76,11 +76,12 @@ namespace GameX
 
             Application.Idle += null;
 
-            Target_Process?.Dispose();
-            Target_Process = null;
             Memory.FinishModule();
             Network.FinishModule();
             Keyboard.RemoveHook();
+
+            Target_Process?.Dispose();
+            Target_Process = null;
         }
 
         private void Application_Init()
@@ -191,8 +192,7 @@ namespace GameX
             }
 
             Terminal.WriteLine("[App] Failed validating, unsupported version.");
-            Terminal.WriteLine(
-                "[App] Follow the guide on https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
+            Terminal.WriteLine("[App] Follow the guide on https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
 
             Target_Process.EnableRaisingEvents = true;
             Target_Process.Exited += Target_Exited;
@@ -840,8 +840,7 @@ namespace GameX
                     0x89, 0x7E, 0x0C
                 };
 
-                Detour Character_Global = Memory.CreateDetour("Character_Global", DetourClean, 0x00C91A88,
-                    CallInstruction, true, 0x00C91A8E);
+                Detour Character_Global = Memory.CreateDetour("Character_Global", DetourClean, 0x00C91A88, CallInstruction, true, 0x00C91A8E);
 
                 if (Character_Global == null)
                     return;
@@ -875,8 +874,7 @@ namespace GameX
                     0x8B, 0x17
                 };
 
-                Detour Character_StoryChar = Memory.CreateDetour("Character_StoryChar", DetourClean, 0x00C9200D,
-                    CallInstruction, true, 0x00C92012);
+                Detour Character_StoryChar = Memory.CreateDetour("Character_StoryChar", DetourClean, 0x00C9200D, CallInstruction, true, 0x00C92012);
 
                 if (Character_StoryChar == null)
                     return;
@@ -910,8 +908,7 @@ namespace GameX
                     0x0F, 0xBF, 0X97, 0x64, 0x13, 0x00, 0x00
                 };
 
-                Detour Character_StoryCos = Memory.CreateDetour("Character_StoryCos", DetourClean, 0x00C9201D,
-                    CallInstruction, true, 0x00C92027);
+                Detour Character_StoryCos = Memory.CreateDetour("Character_StoryCos", DetourClean, 0x00C9201D, CallInstruction, true, 0x00C92027);
 
                 if (Character_StoryCos == null)
                     return;
@@ -950,20 +947,53 @@ namespace GameX
                     0x8D, 0xB6, 0x80, 0X00, 0X00, 0X00
                 };
 
-                Detour Character_StorySave = Memory.CreateDetour("Character_StorySave", DetourClean, 0x00E6E0BE,
-                    CallInstruction, true, 0x00E6E0C4);
+                Detour Character_StorySave = Memory.CreateDetour("Character_StorySave", DetourClean, 0x00E6E0BE, CallInstruction, true, 0x00E6E0C4);
 
                 if (Character_StorySave == null)
                     return;
             }
 
+            if (!Memory.DetourActive("Character_StoryCosPersistent"))
+            {
+                byte[] DetourClean =
+                {
+                    0x81, 0xFF, 0x00, 0x00, 0x00, 0x00,
+                    0x74, 0x1D,
+                    0x0F, 0x1F, 0x40, 0x00,
+                    0x81, 0xFF, 0x00, 0x00, 0x00, 0x00,
+                    0x74, 0x1B,
+                    0x0F, 0x1F, 0x40, 0x00,
+                    0x0F, 0xBE, 0x84, 0x2A, 0x70, 0xC9, 0x0C, 0x01,
+                    0xEB, 0x17,
+                    0x0F, 0x1F, 0x00,
+                    0xB8, 0x00, 0x00, 0x00, 0x00,
+                    0xEB, 0x0D,
+                    0x0F, 0x1F, 0x00,
+                    0xB8, 0x00, 0x00, 0x00, 0x00,
+                    0xEB, 0x03,
+                    0x0F, 0x1F, 0x00
+                };
+
+                byte[] CallInstruction =
+                {
+                    0x0F, 0xBE, 0x84, 0x2A, 0x70, 0xC9, 0x0C, 0x01
+                };
+
+                Detour Character_StoryCosPersistent = Memory.CreateDetour("Character_StoryCosPersistent", DetourClean, 0x0072FAB5, CallInstruction, true, 0x0072FABD);
+
+                if (Character_StoryCosPersistent == null)
+                    return;
+            }
+
             Character_DetourValueUpdate();
+            Character_DetourUpdate();
         }
 
         private void Character_DetourUpdate()
         {
             if (!Memory.DetourActive("Character_Global") || !Memory.DetourActive("Character_StoryChar") ||
-                !Memory.DetourActive("Character_StoryCos") || !Memory.DetourActive("Character_StorySave"))
+                !Memory.DetourActive("Character_StoryCos") || !Memory.DetourActive("Character_StorySave") ||
+                !Memory.DetourActive("Character_StoryCosPersistent"))
                 return;
 
             Detour DetourBase = Memory.GetDetour("Character_Global");
@@ -1001,12 +1031,21 @@ namespace GameX
                 P1FreezeCharCosButton.Checked ? new byte[] {0x01} : new byte[] {0x00});
             Memory.WriteRawAddress(DetourBase_Address + 49,
                 P2FreezeCharCosButton.Checked ? new byte[] {0x01} : new byte[] {0x00});
+
+            DetourBase = Memory.GetDetour("Character_StoryCosPersistent");
+            DetourBase_Address = DetourBase.Address();
+
+            Memory.WriteRawAddress(DetourBase_Address + 6,
+                P1FreezeCharCosButton.Checked ? new byte[] { 0x74, 0x1D } : new byte[] { 0x90, 0x90 });
+            Memory.WriteRawAddress(DetourBase_Address + 18,
+                P2FreezeCharCosButton.Checked ? new byte[] { 0x74, 0x1B } : new byte[] { 0x90, 0x90 });
         }
 
         private void Character_DetourValueUpdate()
         {
             if (!Memory.DetourActive("Character_Global") || !Memory.DetourActive("Character_StoryChar") ||
-                !Memory.DetourActive("Character_StoryCos") || !Memory.DetourActive("Character_StorySave"))
+                !Memory.DetourActive("Character_StoryCos") || !Memory.DetourActive("Character_StorySave") ||
+                !Memory.DetourActive("Character_StoryCosPersistent"))
                 return;
 
             int CHAR1A = Memory.ReadPointer("re5dx9.exe", 0xDA383C, 0x6FE00);
@@ -1081,6 +1120,15 @@ namespace GameX
             Memory.WriteRawAddress(DetourBase_Address + 37, Costume1);
             Memory.WriteRawAddress(DetourBase_Address + 59, Character2);
             Memory.WriteRawAddress(DetourBase_Address + 66, Costume2);
+
+            DetourBase = Memory.GetDetour("Character_StoryCosPersistent");
+            DetourBase_Address = DetourBase.Address();
+
+            Memory.WriteRawAddress(DetourBase_Address + 2, Char1A);
+            Memory.WriteRawAddress(DetourBase_Address + 14, Char2A);
+
+            Memory.WriteRawAddress(DetourBase_Address + 38, Costume1);
+            Memory.WriteRawAddress(DetourBase_Address + 48, Costume2);
         }
 
         private void Character_ApplyCharacters(int Index)
@@ -1101,8 +1149,11 @@ namespace GameX
                 P4CosComboBox
             };
 
-            Biohazard.Players[Index].SetCharacter((CharacterCombos[Index].SelectedItem as Character).Value,
-                (CostumeCombos[Index].SelectedItem as Costume).Value);
+            int Character = (CharacterCombos[Index].SelectedItem as Character).Value;
+            int Costume = (CostumeCombos[Index].SelectedItem as Costume).Value;
+
+            Biohazard.SetStoryModeCharacter(Index, Character, Costume);
+            Biohazard.Players[Index].SetCharacter(Character, Costume);
         }
 
         // NET

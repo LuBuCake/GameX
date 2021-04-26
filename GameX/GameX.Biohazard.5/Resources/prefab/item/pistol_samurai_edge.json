@@ -1,0 +1,32 @@
+{
+  "Value": 297,
+  "Group": 1,
+  "GroupIndex": 4,
+  "Name": "Samurai Edge (HG)",
+  "Portrait": "pistol_samurai_edge",
+  "Quantity": 0,
+  "MaxQuantity": 0,
+  "Firepower": [
+    400
+  ],
+  "ReloadSpeed": [
+    0.0
+  ],
+  "Capacity": [
+    15
+  ],
+  "Critical": [
+    0
+  ],
+  "Piercing": [
+    0
+  ],
+  "Range": [
+    0
+  ],
+  "Scope": [
+    0
+  ],
+  "InfiniteAmmo": false,
+  "RapidFire": false
+}

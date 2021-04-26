@@ -1,0 +1,48 @@
+{
+  "Value": 267,
+  "Group": 5,
+  "GroupIndex": 0,
+  "Name": "S&W M29 (MAG)",
+  "Portrait": "magnum_s&w_m29",
+  "Quantity": 0,
+  "MaxQuantity": 0,
+  "Firepower": [
+    1500,
+    1700,
+    1900,
+    2100,
+    2400,
+    2700,
+    3200
+  ],
+  "ReloadSpeed": [
+    3.53,
+    3.36,
+    3.18,
+    2.83
+  ],
+  "Capacity": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "Critical": [
+    0
+  ],
+  "Piercing": [
+    0
+  ],
+  "Range": [
+    0,
+    1
+  ],
+  "Scope": [
+    0
+  ],
+  "InfiniteAmmo": false,
+  "RapidFire": false
+}

@@ -55,6 +55,16 @@ namespace GameX.Base.Helpers
             return JsonConvert.DeserializeObject<Character>(Data);
         }
 
+        public static string SerializeItem(Item Data)
+        {
+            return JsonConvert.SerializeObject(Data, Formatting.Indented);
+        }
+
+        public static Item DeserializeItem(string Data)
+        {
+            return JsonConvert.DeserializeObject<Item>(Data);
+        }
+
         #endregion
 
         #region File Writer
