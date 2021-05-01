@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("GameX")]
 [assembly: AssemblyDescription("Enable some extra mods in your game without changing any of its files!")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("LuBuCake")]
+[assembly: AssemblyCompany("Singullaritys")]
 [assembly: AssemblyProduct("GameX")]
-[assembly: AssemblyCopyright("Copyright © LuBuCake  2021")]
+[assembly: AssemblyCopyright("Copyright © LuBuCake 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 // Setting ComVisible to false makes the types in this assembly not visible 

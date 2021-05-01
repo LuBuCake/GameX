@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using DevExpress.XtraRichEdit.Import;
 
 namespace GameX.Base.Helpers
 {
@@ -104,6 +105,13 @@ namespace GameX.Base.Helpers
             Error = 1,
             Warning = 2,
             Information = 3
+        }
+
+        public enum PrefabType
+        {
+            Character = 1,
+            Item = 2,
+            All = 3
         }
     }
 }

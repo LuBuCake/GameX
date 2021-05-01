@@ -24,23 +24,41 @@ namespace GameX.Launcher
 
         private void SetupControls()
         {
-            string[] Dirs = Directory.GetDirectories(Directory.GetCurrentDirectory(), "GameX.Biohazard.*");
-            List<GameXInfo> Versions = new List<GameXInfo>();
+            string AppDirectory = Directory.GetCurrentDirectory();
+            string AddonsDirectory = AppDirectory + "/GameX.Addons/";
 
-            foreach (string Dir in Dirs)
+            if (!Directory.Exists(AddonsDirectory))
+                Directory.CreateDirectory(AddonsDirectory);
+
+            string[] Dirs = Directory.GetDirectories(AddonsDirectory, "GameX.Biohazard.*");
+
+            if (Dirs.Length > 0)
             {
-                if (File.Exists($"{Dir}/appinfo.json"))
+                List<GameXInfo> Versions = new List<GameXInfo>();
+
+                foreach (string Dir in Dirs)
                 {
-                    GameXInfo Info = Serializer.DeserializeGameXInfo(File.ReadAllText($"{Dir}/appinfo.json"));
-                    Versions.Add(Info);
+                    if (File.Exists($"{Dir}/appinfo.json"))
+                    {
+                        GameXInfo Info = Serializer.DeserializeGameXInfo(File.ReadAllText($"{Dir}/appinfo.json"));
+                        Versions.Add(Info);
+                    }
                 }
+
+                GameXComboEdit.SelectedIndexChanged += GameX_IndexChanged;
+                GameXComboEdit.Properties.Items.AddRange(Versions);
+                GameXComboEdit.SelectedIndex = 0;
+
+                GameXButton.Click += GameX_Click;
+
+                SelectorGP.Text = "Available addons";
+
+                return;
             }
 
-            GameXComboEdit.SelectedIndexChanged += GameX_IndexChanged;
-            GameXComboEdit.Properties.Items.AddRange(Versions);
-            GameXComboEdit.SelectedIndex = 0;
-
-            GameXButton.Click += GameX_Click;
+            SelectorGP.Text = "No addons found";
+            GameXButton.Enabled = false;
+            GameXComboEdit.Enabled = false;
         }
 
         // Event Handlers //

@@ -105,6 +105,7 @@ namespace GameX
 
         private void Application_Load()
         {
+            CreatePrefabs(Enums.PrefabType.All);
             SetupControls();
         }
 
@@ -238,6 +239,68 @@ namespace GameX
             ResetHealthBars();
 
             Terminal.WriteLine("[App] Runtime cleared successfully.");
+        }
+
+        /* External Loading Methods */
+
+        public void CreatePrefabs(Enums.PrefabType Prefab, bool Override = false)
+        {
+            string prefabDir = Directory.GetCurrentDirectory() + "/GameX.Addons/GameX.Biohazard.5/prefab/";
+
+            if (!Directory.Exists(prefabDir))
+                Directory.CreateDirectory(prefabDir);
+
+            string charDir = prefabDir + "character/";
+
+            if (!Directory.Exists(charDir))
+                Directory.CreateDirectory(charDir);
+
+            string itemDir = prefabDir + "item/";
+
+            if (!Directory.Exists(itemDir))
+                Directory.CreateDirectory(itemDir);
+
+            DirectoryInfo CharactersFolder = new DirectoryInfo(charDir);
+            DirectoryInfo ItemsFolder = new DirectoryInfo(itemDir);
+
+            FileInfo[] CharacterFiles = CharactersFolder.GetFiles("*.json");
+            FileInfo[] ItemFiles = ItemsFolder.GetFiles("*.json");
+
+            switch (Prefab)
+            {
+                case Enums.PrefabType.Character:
+                {
+                    if (CharacterFiles.Length < 9 || Override)
+                    {
+                        Characters.WriteDefaultChars();
+                    }
+
+                    break;
+                }
+                case Enums.PrefabType.Item:
+                {
+                    if (ItemFiles.Length < 67 || Override)
+                    {
+                        Items.WriteDefaultItems();
+                    }
+
+                    break;
+                }
+                case Enums.PrefabType.All:
+                {
+                    if (CharacterFiles.Length == 0 || Override)
+                    {
+                        Characters.WriteDefaultChars();
+                    }
+
+                    if (ItemFiles.Length == 0 || Override)
+                    {
+                        Items.WriteDefaultItems();
+                    }
+
+                    break;
+                }
+            }
         }
 
         /* Control Methods */
@@ -390,8 +453,8 @@ namespace GameX
             Color Window = CommonSkins.GetSkin(UserLookAndFeel.Default).TranslateColor(SystemColors.Window);
             int total = Window.R + Window.G + Window.B;
 
-            Image LogoA = Utility.GetImageFromStream(@"GameX.Biohazard.5/image/application/logo_a.eia");
-            Image LogoB = Utility.GetImageFromStream(@"GameX.Biohazard.5/image/application/logo_b.eia");
+            Image LogoA = Utility.GetImageFromStream(@"GameX.Addons/GameX.Biohazard.5/image/application/logo_a.eia");
+            Image LogoB = Utility.GetImageFromStream(@"GameX.Addons/GameX.Biohazard.5/image/application/logo_b.eia");
 
             if (total > 380 && LogoA != null)
             {
@@ -580,7 +643,7 @@ namespace GameX
 
             int Index = int.Parse(CBE.Name[1].ToString()) - 1;
 
-            Image Portrait = Utility.GetImageFromFile(CBECos.Portrait);
+            Image Portrait = Utility.GetImageFromFile(@"GameX.Addons/GameX.Biohazard.5/image/character/" + CBECos.Portrait);
 
             if (Portrait != null)
                 CharPicBoxes[Index].Image = Portrait;

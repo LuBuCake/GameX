@@ -106,23 +106,13 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>rd /s /q $(SolutionDir)\References\
+    <PostBuildEvent>mkdir C:\Users\madne\Desktop\GameX\
+mkdir C:\Users\madne\Desktop\GameX\GameX.Binaries\
 
-mkdir $(SolutionDir)\References\
-mkdir $(SolutionDir)\References\GameX.Base\
-mkdir $(SolutionDir)\References\GameX.Base\binaries\
-
-xcopy $(TargetDir)\*.dll $(SolutionDir)\References\GameX.Base\binaries\ /y
-
-mkdir C:\Users\madne\Desktop\GameX\
-mkdir C:\Users\madne\Desktop\GameX\GameX.Base\
-
-xcopy $(SolutionDir)\References\ C:\Users\madne\Desktop\GameX /e /y
+xcopy $(TargetDir)\*.dll C:\Users\madne\Desktop\GameX\GameX.Binaries\ /y
 
 xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\GameX /y
 xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\GameX /y
-
-rd /s /q $(SolutionDir)\References\
 
 rd /s /q $(TargetDir)\</PostBuildEvent>
   </PropertyGroup>

@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("GameX.Launcher")]
 [assembly: AssemblyDescription("Enable some extra mods in your game without changing any of its files!")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("LuBuCake")]
+[assembly: AssemblyCompany("Singullaritys")]
 [assembly: AssemblyProduct("GameX.Launcher")]
 [assembly: AssemblyCopyright("Copyright © LuBuCake  2021")]
 [assembly: AssemblyTrademark("")]

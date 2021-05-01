@@ -284,27 +284,20 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>rd /s /q $(SolutionDir)\References\
+    <PostBuildEvent>mkdir C:\Users\madne\Desktop\GameX\
+mkdir C:\Users\madne\Desktop\GameX\GameX.Binaries\
 
-mkdir $(SolutionDir)\References\
-mkdir $(SolutionDir)\References\GameX.Base\
-mkdir $(SolutionDir)\References\GameX.Base\binaries\
-
-xcopy $(TargetDir)\*.dll $(SolutionDir)\References\GameX.Base\binaries\ /y
-del $(SolutionDir)\References\GameX.Base\Binaries\$(TargetFileName) /Q /S
+xcopy $(TargetDir)\*.dll C:\Users\madne\Desktop\GameX\GameX.Binaries\ /y
+del C:\Users\madne\Desktop\GameX\GameX.Binaries\$(TargetFileName) /Q /S
 
 mkdir C:\Users\madne\Desktop\GameX\
-mkdir C:\Users\madne\Desktop\GameX\GameX.Base\
-mkdir C:\Users\madne\Desktop\GameX\GameX.Biohazard.5\
+mkdir C:\Users\madne\Desktop\GameX\GameX.Addons\
+mkdir C:\Users\madne\Desktop\GameX\GameX.Addons\GameX.Biohazard.5\
 
-xcopy $(SolutionDir)\References\ C:\Users\madne\Desktop\GameX /e /y
+xcopy $(ProjectDir)\Resources C:\Users\madne\Desktop\GameX\GameX.Addons\GameX.Biohazard.5\ /e /y
 
-xcopy $(ProjectDir)\Resources C:\Users\madne\Desktop\GameX\GameX.Biohazard.5\ /e /y
-
-xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\GameX\GameX.Biohazard.5\ /y
-xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\GameX\GameX.Biohazard.5\ /y
-
-rd /s /q $(SolutionDir)\References\
+xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\GameX\GameX.Addons\GameX.Biohazard.5\ /y
+xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\GameX\GameX.Addons\GameX.Biohazard.5\ /y
 
 rd /s /q $(TargetDir)\</PostBuildEvent>
   </PropertyGroup>

@@ -313,10 +313,10 @@ namespace GameX.Base.Modules
             switch (Command[0])
             {
                 case "writejson" when Utility.RemoveWhiteSpace(Command[1].ToLower()) == "chars":
-                    Characters.WriteDefaultChars();
+                    Main.CreatePrefabs(Enums.PrefabType.Character, true);
                     break;
                 case "writejson" when Utility.RemoveWhiteSpace(Command[1].ToLower()) == "items":
-                    Items.WriteDefaultItems();
+                    Main.CreatePrefabs(Enums.PrefabType.Item, true);
                     break;
                 case "help":
                     ShowCommands();

@@ -51,7 +51,6 @@ namespace GameX.Launcher
             this.SelectorGP.Name = "SelectorGP";
             this.SelectorGP.Size = new System.Drawing.Size(308, 133);
             this.SelectorGP.TabIndex = 0;
-            this.SelectorGP.Text = "Available Versions";
             // 
             // GameXButton
             // 
