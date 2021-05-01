@@ -15,6 +15,7 @@ using GameX.Base.Helpers;
 using GameX.Base.Modules;
 using GameX.Base.Types;
 using GameX.Game.Content;
+using GameX.Game.Helpers;
 using GameX.Game.Modules;
 using GameX.Game.Types;
 
@@ -160,13 +161,13 @@ namespace GameX
                 Target_Process = Processes.GetProcessByName(Target);
                 Verified = false;
                 Initialized = false;
-                Text = "GameX - Resident Evil 5 / Biohazard 5 - Waiting game";
+                Text = "GameX - Resident Evil 5 - Waiting game";
 
                 if (Target_Process == null)
                     return Verified;
 
                 Terminal.WriteLine("[App] Game found, validating.");
-                Text = "GameX - Resident Evil 5 / Biohazard 5 - Validanting";
+                Text = "GameX - Resident Evil 5 - Validanting";
 
                 return Verified;
             }
@@ -186,7 +187,7 @@ namespace GameX
                 Target_Process.Exited += Target_Exited;
                 Verified = true;
                 Initialized = true;
-                Text = "GameX - Resident Evil 5 / Biohazard 5 - " + (Memory.DebugMode ? "Running in Admin Mode" : "Running in User Mode");
+                Text = "GameX - Resident Evil 5 - " + (Memory.DebugMode ? "Running in Admin Mode" : "Running in User Mode");
 
                 return Verified;
             }
@@ -241,7 +242,7 @@ namespace GameX
             Terminal.WriteLine("[App] Runtime cleared successfully.");
         }
 
-        /* External Loading Methods */
+        /* External File Methods */
 
         public void CreatePrefabs(Enums.PrefabType Prefab, bool Override = false)
         {
@@ -288,12 +289,12 @@ namespace GameX
                 }
                 case Enums.PrefabType.All:
                 {
-                    if (CharacterFiles.Length == 0 || Override)
+                    if (CharacterFiles.Length < 9 || Override)
                     {
                         Characters.WriteDefaultChars();
                     }
 
-                    if (ItemFiles.Length == 0 || Override)
+                    if (ItemFiles.Length < 67 || Override)
                     {
                         Items.WriteDefaultItems();
                     }
@@ -388,6 +389,12 @@ namespace GameX
                 P3DropSimpleButton
             };
 
+            SimpleButton[] EnableDisable =
+            {
+                ControllerAimButton,
+                ColorFilterButton
+            };
+
             #endregion
 
             for (int Index = 0; Index < CharacterCombos.Length; Index++)
@@ -410,6 +417,11 @@ namespace GameX
                 CharacterCombos[Index].SelectedIndex = 0;
                 WeaponMode[Index].SelectedIndex = 0;
                 Handness[Index].SelectedIndex = 0;
+
+                if (Index < EnableDisable.Length)
+                {
+                    EnableDisable[Index].Click += EnableDisable_Click;
+                }
 
                 if (Index == 3)
                     continue;
@@ -724,6 +736,31 @@ namespace GameX
             }
         }
 
+        private void EnableDisable_Click(object sender, EventArgs e)
+        {
+            SimpleButton SB = sender as SimpleButton;
+
+            SB.Text = SB.Text == "Enable" ? "Disable" : "Enable";
+
+            switch (SB.Name)
+            {
+                case "ControllerAimButton":
+                {
+                    if (Initialized)
+                        Biohazard.EnableControllerAim(SB.Text == "Disable");
+
+                    break;
+                }
+                case "ColorFilterButton":
+                {
+                    if (Initialized)
+                        Biohazard.EnableColorFilter(SB.Text == "Disable");
+
+                    break;
+                }
+            }
+        }
+
         private async void StartNetwork_Click(object sender, EventArgs e)
         {
             SimpleButton SB = sender as SimpleButton;
@@ -789,6 +826,38 @@ namespace GameX
             SB.Text = "Enable";
         }
 
+        /* Mod Controls Check */
+
+        private void CheckControls()
+        {
+            SimpleButton[] EnableDisable =
+            {
+                ControllerAimButton,
+                ColorFilterButton
+            };
+
+            foreach (SimpleButton SB in EnableDisable)
+            {
+                switch (SB.Name)
+                {
+                    case "ControllerAimButton":
+                    {
+                        if (SB.Text == "Disable")
+                            Biohazard.EnableControllerAim(true);
+
+                        break;
+                    }
+                    case "ColorFilterButton":
+                    {
+                        if (SB.Text == "Disable")
+                            Biohazard.EnableColorFilter(true);
+
+                        break;
+                    }
+                }
+            }
+        }
+
         /* GameX Calls */
 
         private void GameX_Start()
@@ -799,6 +868,8 @@ namespace GameX
 
                 Character_Detour();
                 RickFixes_Detour();
+
+                CheckControls();
 
                 Biohazard.NoFileChecking(true);
                 Biohazard.OnlineCharSwapFixes(true);
@@ -818,6 +889,8 @@ namespace GameX
 
                 Biohazard.NoFileChecking(false);
                 Biohazard.OnlineCharSwapFixes(false);
+                Biohazard.EnableControllerAim(false);
+                Biohazard.EnableColorFilter(false);
 
                 Biohazard.FinishModule();
             }
@@ -1548,7 +1621,8 @@ namespace GameX
                 if (WeaponMode[i].SelectedIndex > 0 && PlayerPresent)
                     Biohazard.Players[i].SetWeaponMode(new[] {(byte) (WeaponMode[i].SelectedItem as ListItem).Value});
 
-                if (Biohazard.GetActiveGameMode() == "Versus")
+                // If versus then end the current iteration //
+                if (Biohazard.GetActiveGameMode() == (int)GameEnums.GameMode.Versus)
                     continue;
 
                 // Infinite HP //

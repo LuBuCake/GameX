@@ -28,6 +28,12 @@ namespace GameX.Game.Modules
             Terminal.WriteLine("[Biohazard] Module finished successfully.");
         }
 
+        public static void EnableColorFilter(bool Enable)
+        {
+            Memory.WriteBytes(Enable ? new byte[] { 0xE9, 0x51, 0x04, 0x00, 0x00, 0x90 } : new byte[] { 0x0F, 0x84, 0x50, 0x04, 0x00, 0x00 }, "re5dx9.exe", 0x3C7113);
+            Memory.WriteBytes(Enable ? new byte[] { 0xE9, 0x88, 0x66, 0x00, 0x00, 0x90 } : new byte[] { 0x0F, 0x87, 0x87, 0x66, 0x00, 0x00 }, "re5dx9.exe", 0x945D8);
+        }
+
         public static void NoFileChecking(bool Enable)
         {
             Memory.WriteBytes(!Enable ? new byte[] {0xC3, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90} : new byte[] {83, 0x3D, 0x0C, 0xAD, 0x23, 0x01, 0x00}, "re5dx9.exe", 0xE340);
@@ -50,27 +56,26 @@ namespace GameX.Game.Modules
             Memory.WriteInt32(Costume, "re5dx9.exe", 0xDA383C, 0x7139C + (0x50 * Index));
         }
 
-        public static string GetActiveGameMode()
+        public static void EnableControllerAim(bool Enable)
         {
-            int gamemode = Memory.ReadInt32("re5dx9.exe", 0x00DA383C, 0x954, 0x2088);
+            Memory.WriteRawAddress(0x00B66ACD, Enable ? new byte[] { 0xEB } : new byte[] { 0x75 });
+            Memory.WriteRawAddress(0x00B67FD0, Enable ? new byte[] { 0x90, 0X90 } : new byte[] { 0x74, 0x18 });
+            Memory.WriteRawAddress(0x00B84D79, Enable ? new byte[] { 0x90, 0X90 } : new byte[] { 0x74, 0X3A });
+            Memory.WriteRawAddress(0x00B74940, Enable ? new byte[] { 0xE9, 0xC5, 0x01, 0x00, 0x00, 0x90 } : new byte[] { 0x0F, 0x85, 0xC4, 0x01, 0x00, 0x00 });
+            Memory.WriteRawAddress(0x00B85A80, Enable ? new byte[] { 0x90, 0x90, 0x90, 0x90, 0x90, 0x90 } : new byte[] { 0x0F, 0x84, 0xC4, 0x06, 0x00, 0x00 });
+            Memory.WriteRawAddress(0x00B85AEA, Enable ? new byte[] { 0x90, 0x90, 0x90, 0x90, 0x90, 0x90 } : new byte[] { 0x0F, 0x84, 0x44, 0x03, 0x00, 0x00 });
+            Memory.WriteRawAddress(0x00B877DB, Enable ? new byte[] { 0x90, 0x90 } : new byte[] { 0x75, 0x16 });
+            Memory.WriteRawAddress(0x00B87869, Enable ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x24 });
+            Memory.WriteRawAddress(0x00B87640, Enable ? new byte[] { 0xEB } : new byte[] { 0x74 });
+            Memory.WriteRawAddress(0x00B87710, Enable ? new byte[] { 0x90, 0x90 } : new byte[] { 0x75, 0x16 });
+            Memory.WriteRawAddress(0x00B877AC, Enable ? new byte[] { 0xEB } : new byte[] { 0x74 });
+            Memory.WriteRawAddress(0x00B8721A, Enable ? new byte[] { 0xEB } : new byte[] { 0x74 });
+            Memory.WriteRawAddress(0x00B692C1, Enable ? new byte[] { 0x80, 0xC2, 0x01 } : new byte[] { 0x80, 0xC2, 0x02 });
+        }
 
-            switch (gamemode)
-            {
-                case 0:
-                    return "Story";
-                case 1:
-                    return "Versus";
-                case 2:
-                    return "The Mercenaries";
-                case 3:
-                    return "Lost in Nightmares";
-                case 4:
-                    return "Desesperate Scape";
-                case 5:
-                    return "The Mercenaries Reunion";
-                default:
-                    return "Unknown";
-            }
+        public static int GetActiveGameMode()
+        {
+            return Memory.ReadInt32("re5dx9.exe", 0x00DA383C, 0x954, 0x2088);
         }
 
         public static int LocalPlayer()

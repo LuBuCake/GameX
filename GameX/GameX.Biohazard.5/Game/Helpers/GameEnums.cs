@@ -32,5 +32,15 @@ namespace GameX.Game.Helpers
 
             [Description("Special")] Special = 12
         }
+
+        public enum GameMode
+        {
+            [Description("Campaign")] Campaign = 0,
+            [Description("Versus")] Versus = 1,
+            [Description("The Mercenaries")] Mercenaries = 2,
+            [Description("Lost in Nightmares")] LIN = 3,
+            [Description("Desesperate Scape")] DE = 4,
+            [Description("The Mercenaries Reunion")] Reunion = 5,
+        }
     }
 }

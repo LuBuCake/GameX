@@ -7,6 +7,7 @@ using DevExpress.XtraEditors;
 using GameX.Base.Helpers;
 using GameX.Base.Types;
 using GameX.Game.Content;
+using GameX.Game.Helpers;
 using GameX.Game.Modules;
 
 namespace GameX.Base.Modules
@@ -156,7 +157,7 @@ namespace GameX.Base.Modules
                     return true;
                 }
 
-                if (Biohazard.GetActiveGameMode() == "Versus")
+                if (Biohazard.GetActiveGameMode() == (int)GameEnums.GameMode.Versus)
                 {
                     WriteLine("[Biohazard] Versus mode detected, operation ignored.");
                     return true;
