@@ -199,7 +199,7 @@ namespace GameX
             Target_Process.Exited += Target_Exited;
             Verified = true;
             Initialized = false;
-            Text = "GameX - Resident Evil 5 / Biohazard 5 - Unsupported Version";
+            Text = "GameX - Resident Evil 5 - Unsupported Version";
 
             return Verified;
         }

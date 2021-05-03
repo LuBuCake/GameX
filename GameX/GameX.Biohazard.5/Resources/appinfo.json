@@ -1,5 +1,6 @@
 {
   "GameXName": "Resident Evil 5",
   "GameXLogo": "GameX.Addons/GameX.Biohazard.5/image/application/logo_b.eia",
-  "GameXFile": "GameX.Addons/GameX.Biohazard.5/GameX.Biohazard.5.dll"
+  "GameXFile": "GameX.Addons/GameX.Biohazard.5/GameX.Biohazard.5.dll",
+  "Platform": "x86"
 }

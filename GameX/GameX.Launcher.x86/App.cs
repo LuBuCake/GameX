@@ -41,7 +41,9 @@ namespace GameX.Launcher
                     if (File.Exists($"{Dir}/appinfo.json"))
                     {
                         GameXInfo Info = Serializer.DeserializeGameXInfo(File.ReadAllText($"{Dir}/appinfo.json"));
-                        Versions.Add(Info);
+
+                        if (Info.Platform == "x86")
+                            Versions.Add(Info);
                     }
                 }
 

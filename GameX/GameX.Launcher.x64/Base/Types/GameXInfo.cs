@@ -5,6 +5,7 @@
         public string GameXName { get; set; }
         public string GameXLogo { get; set; }
         public string GameXFile { get; set; }
+        public string Platform { get; set; }
 
         public override string ToString()
         {

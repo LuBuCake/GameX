@@ -3,14 +3,14 @@
     public class Detour
     {
         private string DetourName { get; set; }
-        private int DetourAddress { get; set; }
-        private int DetourCallAddress { get; set; }
+        private long DetourAddress { get; set; }
+        private long DetourCallAddress { get; set; }
         private byte[] DetourCallInstruction { get; set; }
         private byte[] DetourContent { get; set; }
         private bool DetourJumpBack { get; set; }
-        private int DetourJumpBackAddress { get; set; }
+        private long DetourJumpBackAddress { get; set; }
 
-        public Detour(string Name, int Address, int CallAddress, byte[] CallInstruction, byte[] Content, bool JumpBack = false, int JumpBackAddress = 0)
+        public Detour(string Name, long Address, long CallAddress, byte[] CallInstruction, byte[] Content, bool JumpBack = false, long JumpBackAddress = 0)
         {
             DetourName = Name;
             DetourAddress = Address;
@@ -26,12 +26,12 @@
             return DetourName;
         }
 
-        public int Address()
+        public long Address()
         {
             return DetourAddress;
         }
 
-        public int CallAddress()
+        public long CallAddress()
         {
             return DetourCallAddress;
         }
@@ -51,7 +51,7 @@
             return DetourJumpBack;
         }
 
-        public int JumpBackAddress()
+        public long JumpBackAddress()
         {
             return DetourJumpBackAddress;
         }
