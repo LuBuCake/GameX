@@ -19,8 +19,6 @@ namespace GameX
 {
     public partial class App : XtraForm
     {
-        /* App Init */
-
         #region Base Props
 
         private Stopwatch FrameElapser { get; set; }
@@ -34,6 +32,7 @@ namespace GameX
 
         #endregion
 
+        #region Application Methods
 
         public App()
         {
@@ -125,7 +124,9 @@ namespace GameX
                 GameX_Update();
         }
 
-        /* Target Processing */
+        #endregion
+
+        #region Target Processing
 
         private string Target { get; set; }
         private string Target_Version { get; set; }
@@ -134,7 +135,7 @@ namespace GameX
 
         private void Target_Setup()
         {
-            Target = "re8demo.exe";
+            Target = "re8.exe";
             Target_Version = "0,0,0,0";
             Target_Modules = new List<string>()
             {
@@ -149,13 +150,13 @@ namespace GameX
                 Target_Process = Processes.GetProcessByName(Target);
                 Verified = false;
                 Initialized = false;
-                Text = "GameX - Resident Evil Village Demo - Waiting game";
+                Text = "GameX - Resident Evil Village - Waiting game";
 
                 if (Target_Process == null)
                     return Verified;
 
                 Terminal.WriteLine("[App] Game found, validating.");
-                Text = "GameX - Resident Evil Village Demo - Validanting";
+                Text = "GameX - Resident Evil Village - Validanting";
 
                 return Verified;
             }
@@ -175,7 +176,7 @@ namespace GameX
                 Target_Process.Exited += Target_Exited;
                 Verified = true;
                 Initialized = true;
-                Text = "GameX - Resident Evil Village Demo - " + (Memory.DebugMode ? "Running in Admin Mode" : "Running in User Mode");
+                Text = "GameX - Resident Evil Village - " + (Memory.DebugMode ? "Running in Admin Mode" : "Running in User Mode");
 
                 return Verified;
             }
@@ -186,7 +187,7 @@ namespace GameX
             Target_Process.Exited += Target_Exited;
             Verified = true;
             Initialized = false;
-            Text = "GameX - Resident Evil Village Demo - Unsupported Version";
+            Text = "GameX - Resident Evil Village - Unsupported Version";
 
             return Verified;
         }
@@ -227,7 +228,9 @@ namespace GameX
             Terminal.WriteLine("[App] Runtime cleared successfully.");
         }
 
-        /* Controls */
+        #endregion
+
+        #region Controllers
 
         private void SetupControls()
         {
@@ -265,8 +268,8 @@ namespace GameX
             Color Window = CommonSkins.GetSkin(UserLookAndFeel.Default).TranslateColor(SystemColors.Window);
             int total = Window.R + Window.G + Window.B;
 
-            Image LogoA = Utility.GetImageFromStream(@"GameX.Addons/GameX.Biohazard.Village.Demo/image/application/logo_a.eia");
-            Image LogoB = Utility.GetImageFromStream(@"GameX.Addons/GameX.Biohazard.Village.Demo/image/application/logo_b.eia");
+            Image LogoA = Utility.GetImageFromStream(@"GameX.Addons/GameX.Biohazard.Village/image/application/logo_a.eia");
+            Image LogoB = Utility.GetImageFromStream(@"GameX.Addons/GameX.Biohazard.Village/image/application/logo_b.eia");
 
             if (total > 380 && LogoA != null)
             {
@@ -284,7 +287,11 @@ namespace GameX
                 return;
         }
 
-        /* Event Handlers */
+        #endregion
+
+        #region Event Handlers
+
+        // CONTROLLERS //
 
         private void MasterTabPage_PageChanged(object sender, EventArgs e)
         {
@@ -307,7 +314,7 @@ namespace GameX
 
             try
             {
-                Serializer.WriteDataFile(@"GameX.Biohazard.Village.Demo/appsettings.json", Serializer.SerializeSettings(Setts));
+                Serializer.WriteDataFile(@"GameX.Addons/GameX.Biohazard.Village/appsettings.json", Serializer.SerializeSettings(Setts));
             }
             catch (Exception Ex)
             {
@@ -330,8 +337,8 @@ namespace GameX
 
             try
             {
-                if (File.Exists(@"GameX.Biohazard.Village.Demo/appsettings.json"))
-                    Setts = Serializer.DeserializeSettings(File.ReadAllText(@"GameX.Biohazard.Village.Demo/appsettings.json"));
+                if (File.Exists(@"GameX.Addons/GameX.Biohazard.Village/appsettings.json"))
+                    Setts = Serializer.DeserializeSettings(File.ReadAllText(@"GameX.Addons/GameX.Biohazard.Village/appsettings.json"));
             }
             catch (Exception Ex)
             {
@@ -368,15 +375,35 @@ namespace GameX
             SetLogo();
         }
 
-        /* GameX Calls */
+        // MODS //
+
+        private void EnableDisable_Click(object sender, EventArgs e)
+        {
+            SimpleButton SB = sender as SimpleButton;
+
+            SB.Text = SB.Text == "Enable" ? "Disable" : "Enable";
+
+            switch (SB.Name)
+            {
+                case "InfiniteHealthButton":
+                {
+                    if (Initialized)
+                        Biohazard.InfiniteHealth(SB.Text == "Disable");
+
+                    break;
+                }
+            }
+        }
+
+        #endregion
+
+        #region GameX Calls
 
         private void GameX_Start()
         {
             try
             {
                 Biohazard.StartModule();
-
-                Biohazard.NoTimeDecrease(true);
             }
             catch (Exception Ex)
             {
@@ -390,8 +417,6 @@ namespace GameX
             {
                 if (!Biohazard.ModuleStarted)
                     return;
-
-                Biohazard.NoTimeDecrease(false);
 
                 Biohazard.FinishModule();
             }
@@ -415,8 +440,13 @@ namespace GameX
             }
         }
 
-        private static void GameX_Keyboard(int input)
+        private void GameX_Keyboard(int input)
         {
+            if (!Initialized)
+                return;
+
         }
+
+        #endregion
     }
 }

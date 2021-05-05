@@ -2,14 +2,11 @@
 {
     public class Item
     {
-        // Base
         public int Value { get; set; }
         public int Group { get; set; }
         public int GroupIndex { get; set; }
         public string Name { get; set; }
         public string Portrait { get; set; }
-
-        // Upgrade Levels
         public int[] Firepower { get; set; }
         public double[] ReloadSpeed { get; set; }
         public int[] Capacity { get; set; }

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameX.Biohazard.5", "GameX.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameX.Launcher.x86", "GameX.Launcher.x86\GameX.Launcher.x86.csproj", "{E3A23135-1149-4770-95EA-09F65EACFE28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameX.Biohazard.Village.Demo", "GameX.Biohazard.Village.Demo\GameX.Biohazard.Village.Demo.csproj", "{74A4EFBD-F4F8-4D57-BBC0-4EAC56370FF6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameX.Biohazard.Village", "GameX.Biohazard.Village\GameX.Biohazard.Village.csproj", "{74A4EFBD-F4F8-4D57-BBC0-4EAC56370FF6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameX.Launcher.x64", "GameX.Launcher.x64\GameX.Launcher.x64.csproj", "{4AE517CF-5846-441C-B94D-45C2F9A95FD3}"
 EndProject

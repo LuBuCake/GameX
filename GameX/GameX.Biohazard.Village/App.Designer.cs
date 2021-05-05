@@ -74,7 +74,7 @@ namespace GameX
             // MasterTabControl
             // 
             this.MasterTabControl.HeaderAutoFill = DevExpress.Utils.DefaultBoolean.True;
-            this.MasterTabControl.Location = new System.Drawing.Point(12, 13);
+            this.MasterTabControl.Location = new System.Drawing.Point(12, 12);
             this.MasterTabControl.Name = "MasterTabControl";
             this.MasterTabControl.SelectedTabPage = this.TabPageMain;
             this.MasterTabControl.Size = new System.Drawing.Size(640, 467);
@@ -235,6 +235,7 @@ namespace GameX
             this.ConsoleGP.Controls.Add(this.ConsoleModeComboBoxEdit);
             this.ConsoleGP.Controls.Add(this.ConsoleInputTextEdit);
             this.ConsoleGP.Location = new System.Drawing.Point(8, 10);
+            this.ConsoleGP.Margin = new System.Windows.Forms.Padding(10);
             this.ConsoleGP.Name = "ConsoleGP";
             this.ConsoleGP.Size = new System.Drawing.Size(622, 418);
             this.ConsoleGP.TabIndex = 2;
@@ -254,7 +255,7 @@ namespace GameX
             // ClearConsoleSimpleButton
             // 
             this.ClearConsoleSimpleButton.AllowFocus = false;
-            this.ClearConsoleSimpleButton.Location = new System.Drawing.Point(465, 393);
+            this.ClearConsoleSimpleButton.Location = new System.Drawing.Point(465, 392);
             this.ClearConsoleSimpleButton.Name = "ClearConsoleSimpleButton";
             this.ClearConsoleSimpleButton.Size = new System.Drawing.Size(35, 20);
             this.ClearConsoleSimpleButton.TabIndex = 3;
@@ -266,7 +267,7 @@ namespace GameX
             // 
             // ConsoleModeComboBoxEdit
             // 
-            this.ConsoleModeComboBoxEdit.Location = new System.Drawing.Point(506, 393);
+            this.ConsoleModeComboBoxEdit.Location = new System.Drawing.Point(506, 392);
             this.ConsoleModeComboBoxEdit.Name = "ConsoleModeComboBoxEdit";
             this.ConsoleModeComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
             this.ConsoleModeComboBoxEdit.Properties.AllowFocused = false;
@@ -284,7 +285,7 @@ namespace GameX
             // ConsoleInputTextEdit
             // 
             this.ConsoleInputTextEdit.CausesValidation = false;
-            this.ConsoleInputTextEdit.Location = new System.Drawing.Point(5, 393);
+            this.ConsoleInputTextEdit.Location = new System.Drawing.Point(5, 392);
             this.ConsoleInputTextEdit.Name = "ConsoleInputTextEdit";
             this.ConsoleInputTextEdit.Properties.ValidateOnEnterKey = true;
             this.ConsoleInputTextEdit.Size = new System.Drawing.Size(454, 20);

@@ -41,7 +41,7 @@ namespace GameX.Base.Modules
         public static extern bool SetForegroundWindow(IntPtr hWnd);
 
         public static bool ModuleStarted { get; set; }
-        public static Process Target_Process { get; set; }
+        private static Process Target_Process { get; set; }
         private static IntPtr Target_Handle { get; set; }
         public static bool DebugMode { get; private set; }
 
@@ -50,6 +50,7 @@ namespace GameX.Base.Modules
             Target_Process = Target;
             Target_Handle = OpenProcess((int) AccessLevel, false, Target_Process.Id);
             EnterDebugMode();
+            SetForegroundWindow(Target_Process.MainWindowHandle);
             ModuleStarted = true;
             Terminal.WriteLine("[Memory] Module started successfully.");
         }
@@ -61,6 +62,7 @@ namespace GameX.Base.Modules
             Target_Process?.Dispose();
             Target_Process = null;
             Target_Handle = IntPtr.Zero;
+            SetForegroundWindow(Process.GetCurrentProcess().MainWindowHandle);
             ModuleStarted = false;
             Terminal.WriteLine("[Memory] Module finished successfully.");
         }
@@ -245,7 +247,7 @@ namespace GameX.Base.Modules
         {
             byte[] JumpInstruction = new byte[JumpInstructionLength];
             JumpInstruction[0] = 0xE9;
-            byte[] Address = BitConverter.GetBytes(LandAddress - JumpAddress - JumpSize);
+            byte[] Address = BitConverter.GetBytes((int)(LandAddress - JumpAddress - JumpSize));
             Address.CopyTo(JumpInstruction, 1);
 
             if (AddressOnly)
@@ -318,6 +320,7 @@ namespace GameX.Base.Modules
             WriteRawAddress(Detour.CallAddress(), Detour.CallInstruction());
             VirtualFreeEx(Target_Handle, Detour.Address(), 0, (int) Enums.MEMORY_INFORMATION.MEM_RELEASE);
             Detours.Remove(DetourName);
+            Terminal.WriteLine($"[Memory] {DetourName} removed sucessfully.");
             return true;
         }
     }

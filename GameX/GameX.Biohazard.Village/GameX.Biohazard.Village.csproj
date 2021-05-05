@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GameX</RootNamespace>
-    <AssemblyName>GameX.Biohazard.Village.Demo</AssemblyName>
+    <AssemblyName>GameX.Biohazard.Village</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -126,12 +126,12 @@ del C:\Users\madne\Desktop\GameX\GameX.Binaries\$(TargetFileName) /Q /S
 
 mkdir C:\Users\madne\Desktop\GameX\
 mkdir C:\Users\madne\Desktop\GameX\GameX.Addons\
-mkdir C:\Users\madne\Desktop\GameX\GameX.Addons\GameX.Biohazard.Village.Demo\
+mkdir C:\Users\madne\Desktop\GameX\GameX.Addons\GameX.Biohazard.Village\
 
-xcopy $(ProjectDir)\Resources C:\Users\madne\Desktop\GameX\GameX.Addons\GameX.Biohazard.Village.Demo\ /e /y
+xcopy $(ProjectDir)\Resources C:\Users\madne\Desktop\GameX\GameX.Addons\GameX.Biohazard.Village\ /e /y
 
-xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\GameX\GameX.Addons\GameX.Biohazard.Village.Demo\ /y
-xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\GameX\GameX.Addons\GameX.Biohazard.Village.Demo\ /y
+xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\GameX\GameX.Addons\GameX.Biohazard.Village\ /y
+xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\GameX\GameX.Addons\GameX.Biohazard.Village\ /y
 
 rd /s /q $(TargetDir)\</PostBuildEvent>
   </PropertyGroup>

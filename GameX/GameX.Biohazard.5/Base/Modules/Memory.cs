@@ -48,8 +48,9 @@ namespace GameX.Base.Modules
         public static void StartModule(Process Target, Enums.MEMORY_ACCESS AccessLevel = Enums.MEMORY_ACCESS.PROCESS_ALL_ACCESS)
         {
             Target_Process = Target;
-            Target_Handle = OpenProcess((int) AccessLevel, false, Target_Process.Id);
+            Target_Handle = OpenProcess((int)AccessLevel, false, Target_Process.Id);
             EnterDebugMode();
+            SetForegroundWindow(Target_Process.MainWindowHandle);
             ModuleStarted = true;
             Terminal.WriteLine("[Memory] Module started successfully.");
         }
@@ -61,6 +62,7 @@ namespace GameX.Base.Modules
             Target_Process?.Dispose();
             Target_Process = null;
             Target_Handle = IntPtr.Zero;
+            SetForegroundWindow(Process.GetCurrentProcess().MainWindowHandle);
             ModuleStarted = false;
             Terminal.WriteLine("[Memory] Module finished successfully.");
         }
@@ -318,6 +320,7 @@ namespace GameX.Base.Modules
             WriteRawAddress(Detour.CallAddress(), Detour.CallInstruction());
             VirtualFreeEx(Target_Handle, Detour.Address(), 0, (int) Enums.MEMORY_INFORMATION.MEM_RELEASE);
             Detours.Remove(DetourName);
+            Terminal.WriteLine($"[Memory] {DetourName} removed sucessfully.");
             return true;
         }
     }

@@ -121,6 +121,10 @@ namespace GameX
             this.ServerPortLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.TabPageSettingsGPApp = new DevExpress.XtraEditors.GroupControl();
             this.MiscModsGP = new DevExpress.XtraEditors.GroupControl();
+            this.ColorFilterGP = new DevExpress.XtraEditors.GroupControl();
+            this.ColorFilterButton = new DevExpress.XtraEditors.SimpleButton();
+            this.ControllerAimGP = new DevExpress.XtraEditors.GroupControl();
+            this.ControllerAimButton = new DevExpress.XtraEditors.SimpleButton();
             this.AboutPictureEdit = new DevExpress.XtraEditors.PictureEdit();
             this.AppSettingsGP = new DevExpress.XtraEditors.GroupControl();
             this.MiscSettingsGP = new DevExpress.XtraEditors.GroupControl();
@@ -139,10 +143,6 @@ namespace GameX
             this.ClearConsoleSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.ConsoleModeComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.ConsoleInputTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ControllerAimGP = new DevExpress.XtraEditors.GroupControl();
-            this.ControllerAimButton = new DevExpress.XtraEditors.SimpleButton();
-            this.ColorFilterGP = new DevExpress.XtraEditors.GroupControl();
-            this.ColorFilterButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -229,6 +229,10 @@ namespace GameX
             this.TabPageSettingsGPApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MiscModsGP)).BeginInit();
             this.MiscModsGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ColorFilterGP)).BeginInit();
+            this.ColorFilterGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ControllerAimGP)).BeginInit();
+            this.ControllerAimGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AboutPictureEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AppSettingsGP)).BeginInit();
             this.AppSettingsGP.SuspendLayout();
@@ -245,10 +249,6 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleModeComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ControllerAimGP)).BeginInit();
-            this.ControllerAimGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ColorFilterGP)).BeginInit();
-            this.ColorFilterGP.SuspendLayout();
             this.SuspendLayout();
             // 
             // P1CosComboBox
@@ -1433,6 +1433,54 @@ namespace GameX
             this.MiscModsGP.TabIndex = 1;
             this.MiscModsGP.Text = "Miscellaneous";
             // 
+            // ColorFilterGP
+            // 
+            this.ColorFilterGP.AppearanceCaption.Options.UseTextOptions = true;
+            this.ColorFilterGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ColorFilterGP.Controls.Add(this.ColorFilterButton);
+            this.ColorFilterGP.Location = new System.Drawing.Point(5, 106);
+            this.ColorFilterGP.Name = "ColorFilterGP";
+            this.ColorFilterGP.Size = new System.Drawing.Size(112, 71);
+            this.ColorFilterGP.TabIndex = 1;
+            this.ColorFilterGP.Text = "Color Filter";
+            // 
+            // ColorFilterButton
+            // 
+            this.ColorFilterButton.AllowFocus = false;
+            this.ColorFilterButton.Location = new System.Drawing.Point(15, 36);
+            this.ColorFilterButton.Name = "ColorFilterButton";
+            this.ColorFilterButton.Size = new System.Drawing.Size(82, 23);
+            this.ColorFilterButton.TabIndex = 1;
+            this.ColorFilterButton.TabStop = false;
+            this.ColorFilterButton.Text = "Enable";
+            this.ColorFilterButton.ToolTip = "Enables the true color filter skipping the default one.";
+            this.ColorFilterButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.ColorFilterButton.ToolTipTitle = "Color Filter";
+            // 
+            // ControllerAimGP
+            // 
+            this.ControllerAimGP.AppearanceCaption.Options.UseTextOptions = true;
+            this.ControllerAimGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ControllerAimGP.Controls.Add(this.ControllerAimButton);
+            this.ControllerAimGP.Location = new System.Drawing.Point(5, 30);
+            this.ControllerAimGP.Name = "ControllerAimGP";
+            this.ControllerAimGP.Size = new System.Drawing.Size(112, 71);
+            this.ControllerAimGP.TabIndex = 0;
+            this.ControllerAimGP.Text = "Controller Aim";
+            // 
+            // ControllerAimButton
+            // 
+            this.ControllerAimButton.AllowFocus = false;
+            this.ControllerAimButton.Location = new System.Drawing.Point(15, 36);
+            this.ControllerAimButton.Name = "ControllerAimButton";
+            this.ControllerAimButton.Size = new System.Drawing.Size(82, 23);
+            this.ControllerAimButton.TabIndex = 1;
+            this.ControllerAimButton.TabStop = false;
+            this.ControllerAimButton.Text = "Enable";
+            this.ControllerAimButton.ToolTip = "Enables or disables the controller aim type for mouse and keyboard.";
+            this.ControllerAimButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.ControllerAimButton.ToolTipTitle = "Controller Aim";
+            // 
             // AboutPictureEdit
             // 
             this.AboutPictureEdit.Location = new System.Drawing.Point(5, 30);
@@ -1645,54 +1693,6 @@ namespace GameX
             this.ConsoleInputTextEdit.Size = new System.Drawing.Size(454, 20);
             this.ConsoleInputTextEdit.TabIndex = 1;
             // 
-            // ControllerAimGP
-            // 
-            this.ControllerAimGP.AppearanceCaption.Options.UseTextOptions = true;
-            this.ControllerAimGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.ControllerAimGP.Controls.Add(this.ControllerAimButton);
-            this.ControllerAimGP.Location = new System.Drawing.Point(5, 30);
-            this.ControllerAimGP.Name = "ControllerAimGP";
-            this.ControllerAimGP.Size = new System.Drawing.Size(112, 71);
-            this.ControllerAimGP.TabIndex = 0;
-            this.ControllerAimGP.Text = "Controller Aim";
-            // 
-            // ControllerAimButton
-            // 
-            this.ControllerAimButton.AllowFocus = false;
-            this.ControllerAimButton.Location = new System.Drawing.Point(15, 36);
-            this.ControllerAimButton.Name = "ControllerAimButton";
-            this.ControllerAimButton.Size = new System.Drawing.Size(82, 23);
-            this.ControllerAimButton.TabIndex = 1;
-            this.ControllerAimButton.TabStop = false;
-            this.ControllerAimButton.Text = "Enable";
-            this.ControllerAimButton.ToolTip = "Enables or disables the controller aim type for mouse and keyboard.";
-            this.ControllerAimButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.ControllerAimButton.ToolTipTitle = "Controller Aim";
-            // 
-            // ColorFilterGP
-            // 
-            this.ColorFilterGP.AppearanceCaption.Options.UseTextOptions = true;
-            this.ColorFilterGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.ColorFilterGP.Controls.Add(this.ColorFilterButton);
-            this.ColorFilterGP.Location = new System.Drawing.Point(5, 106);
-            this.ColorFilterGP.Name = "ColorFilterGP";
-            this.ColorFilterGP.Size = new System.Drawing.Size(112, 71);
-            this.ColorFilterGP.TabIndex = 1;
-            this.ColorFilterGP.Text = "Color Filter";
-            // 
-            // ColorFilterButton
-            // 
-            this.ColorFilterButton.AllowFocus = false;
-            this.ColorFilterButton.Location = new System.Drawing.Point(15, 36);
-            this.ColorFilterButton.Name = "ColorFilterButton";
-            this.ColorFilterButton.Size = new System.Drawing.Size(82, 23);
-            this.ColorFilterButton.TabIndex = 1;
-            this.ColorFilterButton.TabStop = false;
-            this.ColorFilterButton.Text = "Enable";
-            this.ColorFilterButton.ToolTip = "Enables the true color filter skipping the default one.";
-            this.ColorFilterButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.ColorFilterButton.ToolTipTitle = "Color Filter";
-            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1797,6 +1797,10 @@ namespace GameX
             this.TabPageSettingsGPApp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MiscModsGP)).EndInit();
             this.MiscModsGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ColorFilterGP)).EndInit();
+            this.ColorFilterGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ControllerAimGP)).EndInit();
+            this.ControllerAimGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AboutPictureEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AppSettingsGP)).EndInit();
             this.AppSettingsGP.ResumeLayout(false);
@@ -1814,10 +1818,6 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleModeComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ControllerAimGP)).EndInit();
-            this.ControllerAimGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ColorFilterGP)).EndInit();
-            this.ColorFilterGP.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -23,8 +23,6 @@ namespace GameX
 {
     public partial class App : XtraForm
     {
-        /* App Init */
-
         #region Base Props
 
         private Stopwatch FrameElapser { get; set; }
@@ -44,6 +42,8 @@ namespace GameX
         private bool CharCosFreezeChangeReceived { get; set; }
 
         #endregion
+
+        #region Application Methods
 
         public App()
         {
@@ -137,7 +137,9 @@ namespace GameX
                 GameX_Update();
         }
 
-        /* Target Processing */
+        #endregion
+
+        #region Target Processing
 
         private string Target { get; set; }
         private string Target_Version { get; set; }
@@ -242,69 +244,9 @@ namespace GameX
             Terminal.WriteLine("[App] Runtime cleared successfully.");
         }
 
-        /* External File Methods */
+        #endregion
 
-        public void CreatePrefabs(Enums.PrefabType Prefab, bool Override = false)
-        {
-            string prefabDir = Directory.GetCurrentDirectory() + "/GameX.Addons/GameX.Biohazard.5/prefab/";
-
-            if (!Directory.Exists(prefabDir))
-                Directory.CreateDirectory(prefabDir);
-
-            string charDir = prefabDir + "character/";
-
-            if (!Directory.Exists(charDir))
-                Directory.CreateDirectory(charDir);
-
-            string itemDir = prefabDir + "item/";
-
-            if (!Directory.Exists(itemDir))
-                Directory.CreateDirectory(itemDir);
-
-            DirectoryInfo CharactersFolder = new DirectoryInfo(charDir);
-            DirectoryInfo ItemsFolder = new DirectoryInfo(itemDir);
-
-            FileInfo[] CharacterFiles = CharactersFolder.GetFiles("*.json");
-            FileInfo[] ItemFiles = ItemsFolder.GetFiles("*.json");
-
-            switch (Prefab)
-            {
-                case Enums.PrefabType.Character:
-                {
-                    if (CharacterFiles.Length < 9 || Override)
-                    {
-                        Characters.WriteDefaultChars();
-                    }
-
-                    break;
-                }
-                case Enums.PrefabType.Item:
-                {
-                    if (ItemFiles.Length < 67 || Override)
-                    {
-                        Items.WriteDefaultItems();
-                    }
-
-                    break;
-                }
-                case Enums.PrefabType.All:
-                {
-                    if (CharacterFiles.Length < 9 || Override)
-                    {
-                        Characters.WriteDefaultChars();
-                    }
-
-                    if (ItemFiles.Length < 67 || Override)
-                    {
-                        Items.WriteDefaultItems();
-                    }
-
-                    break;
-                }
-            }
-        }
-
-        /* Control Methods */
+        #region Controllers
 
         private void SetupControls()
         {
@@ -519,8 +461,11 @@ namespace GameX
             }
         }
 
-        /* Event Handlers */
+        #endregion
 
+        #region Event Handlers
+
+        // CONTROLLERS //
         private void MasterTabPage_PageChanged(object sender, EventArgs e)
         {
             XtraTabControl XTC = sender as XtraTabControl;
@@ -543,7 +488,7 @@ namespace GameX
 
             try
             {
-                Serializer.WriteDataFile(@"GameX.Biohazard.5/appsettings.json", Serializer.SerializeSettings(Setts));
+                Serializer.WriteDataFile(@"GameX.Addons/GameX.Biohazard.5/appsettings.json", Serializer.SerializeSettings(Setts));
             }
             catch (Exception Ex)
             {
@@ -567,8 +512,8 @@ namespace GameX
 
             try
             {
-                if (File.Exists(@"GameX.Biohazard.5/appsettings.json"))
-                    Setts = Serializer.DeserializeSettings(File.ReadAllText(@"GameX.Biohazard.5/appsettings.json"));
+                if (File.Exists(@"GameX.Addons/GameX.Biohazard.5/appsettings.json"))
+                    Setts = Serializer.DeserializeSettings(File.ReadAllText(@"GameX.Addons/GameX.Biohazard.5/appsettings.json"));
             }
             catch (Exception Ex)
             {
@@ -606,6 +551,8 @@ namespace GameX
             ResetHealthBars();
             SetLogo();
         }
+
+        // MODS //
 
         private void CharComboBox_IndexChanged(object sender, EventArgs e)
         {
@@ -826,9 +773,11 @@ namespace GameX
             SB.Text = "Enable";
         }
 
-        /* Mod Controls Check */
+        #endregion
 
-        private void CheckControls()
+        #region GameX Calls
+
+        private void GameX_CheckControls()
         {
             SimpleButton[] EnableDisable =
             {
@@ -858,8 +807,6 @@ namespace GameX
             }
         }
 
-        /* GameX Calls */
-
         private void GameX_Start()
         {
             try
@@ -869,7 +816,7 @@ namespace GameX
                 Character_Detour();
                 RickFixes_Detour();
 
-                CheckControls();
+                GameX_CheckControls();
 
                 Biohazard.NoFileChecking(true);
                 Biohazard.OnlineCharSwapFixes(true);
@@ -919,7 +866,73 @@ namespace GameX
         {
         }
 
-        /* Mods */
+        #endregion
+
+        #region External
+
+        public void CreatePrefabs(Enums.PrefabType Prefab, bool Override = false)
+        {
+            string prefabDir = Directory.GetCurrentDirectory() + "/GameX.Addons/GameX.Biohazard.5/prefab/";
+
+            if (!Directory.Exists(prefabDir))
+                Directory.CreateDirectory(prefabDir);
+
+            string charDir = prefabDir + "character/";
+
+            if (!Directory.Exists(charDir))
+                Directory.CreateDirectory(charDir);
+
+            string itemDir = prefabDir + "item/";
+
+            if (!Directory.Exists(itemDir))
+                Directory.CreateDirectory(itemDir);
+
+            DirectoryInfo CharactersFolder = new DirectoryInfo(charDir);
+            DirectoryInfo ItemsFolder = new DirectoryInfo(itemDir);
+
+            FileInfo[] CharacterFiles = CharactersFolder.GetFiles("*.json");
+            FileInfo[] ItemFiles = ItemsFolder.GetFiles("*.json");
+
+            switch (Prefab)
+            {
+                case Enums.PrefabType.Character:
+                    {
+                        if (CharacterFiles.Length < 9 || Override)
+                        {
+                            Characters.WriteDefaultChars();
+                        }
+
+                        break;
+                    }
+                case Enums.PrefabType.Item:
+                    {
+                        if (ItemFiles.Length < 67 || Override)
+                        {
+                            Items.WriteDefaultItems();
+                        }
+
+                        break;
+                    }
+                case Enums.PrefabType.All:
+                    {
+                        if (CharacterFiles.Length < 9 || Override)
+                        {
+                            Characters.WriteDefaultChars();
+                        }
+
+                        if (ItemFiles.Length < 67 || Override)
+                        {
+                            Items.WriteDefaultItems();
+                        }
+
+                        break;
+                    }
+            }
+        }
+
+        #endregion
+
+        #region Mods
 
         #region Character
 
@@ -1483,9 +1496,9 @@ namespace GameX
 
         #endregion
 
-        /* General Read-Write */
+        #endregion
 
-        #region Character Panel
+        #region General Read/Write
 
         private void CharacterPanel_Update()
         {
@@ -1602,24 +1615,24 @@ namespace GameX
                 }
 
                 bool PlayerPresent = Biohazard.Players[i].IsActive();
-                double PlayerHealthPercent = PlayerPresent ? (double) Biohazard.Players[i].GetHealth() / Biohazard.Players[i].GetMaxHealth() : 1.0;
+                double PlayerHealthPercent = PlayerPresent ? (double)Biohazard.Players[i].GetHealth() / Biohazard.Players[i].GetMaxHealth() : 1.0;
 
                 // Health Bar //
                 HealthBars[i].Properties.Maximum = PlayerPresent ? Biohazard.Players[i].GetMaxHealth() : 1;
                 HealthBars[i].EditValue = PlayerPresent ? Biohazard.Players[i].GetHealth() : 1;
-                HealthBars[i].Properties.StartColor = PlayerPresent ? Color.FromArgb((int) (255.0 - (155.0 * PlayerHealthPercent)), (int) (0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(0, 0, 0, 0);
-                HealthBars[i].Properties.EndColor = PlayerPresent ? Color.FromArgb((int) (255.0 - (155.0 * PlayerHealthPercent)), (int) (0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(0, 0, 0, 0);
+                HealthBars[i].Properties.StartColor = PlayerPresent ? Color.FromArgb((int)(255.0 - (155.0 * PlayerHealthPercent)), (int)(0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(0, 0, 0, 0);
+                HealthBars[i].Properties.EndColor = PlayerPresent ? Color.FromArgb((int)(255.0 - (155.0 * PlayerHealthPercent)), (int)(0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(0, 0, 0, 0);
 
                 // Player Name //
                 PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (Biohazard.InGame() ? ((i == Biohazard.LocalPlayer()) ? Biohazard.LocalPlayerNick() : (PlayerPresent ? (Biohazard.Players[i].IsAI() ? "CPU AI" : "Connected") : "Disconnected")) : "Disconnected");
 
                 // Handness //
                 if (Handness[i].SelectedIndex > 0 && PlayerPresent)
-                    Biohazard.Players[i].SetHandness(new[] {(byte) (Handness[i].SelectedItem as ListItem).Value});
+                    Biohazard.Players[i].SetHandness(new[] { (byte)(Handness[i].SelectedItem as ListItem).Value });
 
                 // Weapon Mode //
                 if (WeaponMode[i].SelectedIndex > 0 && PlayerPresent)
-                    Biohazard.Players[i].SetWeaponMode(new[] {(byte) (WeaponMode[i].SelectedItem as ListItem).Value});
+                    Biohazard.Players[i].SetWeaponMode(new[] { (byte)(WeaponMode[i].SelectedItem as ListItem).Value });
 
                 // If versus then end the current iteration //
                 if (Biohazard.GetActiveGameMode() == (int)GameEnums.GameMode.Versus)
