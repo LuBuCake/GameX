@@ -107,13 +107,22 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>mkdir C:\Users\madne\Desktop\GameX\
-mkdir C:\Users\madne\Desktop\GameX\binaries\
+    <PostBuildEvent>mkdir C:\Users\madne\Desktop\x64\
+mkdir C:\Users\madne\Desktop\x64\binaries\
 
-xcopy $(TargetDir)\*.dll C:\Users\madne\Desktop\GameX\binaries\ /y
+xcopy $(TargetDir)\DevExpress.BonusSkins.v20.2.dll C:\Users\madne\Desktop\x64\binaries\ /y
+xcopy $(TargetDir)\DevExpress.Data.Desktop.v20.2.dll C:\Users\madne\Desktop\x64\binaries\ /y
+xcopy $(TargetDir)\DevExpress.Data.v20.2.dll C:\Users\madne\Desktop\x64\binaries\ /y
+xcopy $(TargetDir)\DevExpress.Printing.v20.2.dll C:\Users\madne\Desktop\x64\binaries\ /y
+xcopy $(TargetDir)\DevExpress.Sparkline.v20.2.dll C:\Users\madne\Desktop\x64\binaries\ /y
+xcopy $(TargetDir)\DevExpress.Utils.v20.2.dll C:\Users\madne\Desktop\x64\binaries\ /y
+xcopy $(TargetDir)\DevExpress.XtraEditors.v20.2.dll C:\Users\madne\Desktop\x64\binaries\ /y
+xcopy $(TargetDir)\DevExpress.XtraLayout.v20.2.dll C:\Users\madne\Desktop\x64\binaries\ /y
+xcopy $(TargetDir)\DevExpress.XtraTreeList.v20.2.dll C:\Users\madne\Desktop\x64\binaries\ /y
+xcopy $(TargetDir)\Newtonsoft.Json.dll C:\Users\madne\Desktop\x64\binaries\ /y
 
-xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\GameX /y
-xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\GameX /y
+xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\x64 /y
+xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\x64 /y
 
 rd /s /q $(TargetDir)\</PostBuildEvent>
   </PropertyGroup>

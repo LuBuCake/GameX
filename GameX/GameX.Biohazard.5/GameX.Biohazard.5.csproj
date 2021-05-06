@@ -287,20 +287,25 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>mkdir C:\Users\madne\Desktop\GameX\
-mkdir C:\Users\madne\Desktop\GameX\binaries\
+    <PostBuildEvent>mkdir C:\Users\madne\Desktop\x86\
+mkdir C:\Users\madne\Desktop\x86\addons\
+mkdir C:\Users\madne\Desktop\x86\addons\GameX.Biohazard.5\
+mkdir C:\Users\madne\Desktop\x86\addons\GameX.Biohazard.5\binaries\
 
-xcopy $(TargetDir)\*.dll C:\Users\madne\Desktop\GameX\binaries\ /y
-del C:\Users\madne\Desktop\GameX\binaries\$(TargetFileName) /Q /S
+xcopy $(TargetDir)\DevExpress.Images.v20.2.dll C:\Users\madne\Desktop\x86\addons\GameX.Biohazard.5\binaries\ /y
+xcopy $(TargetDir)\DevExpress.Office.v20.2.dll C:\Users\madne\Desktop\x86\addons\GameX.Biohazard.5\binaries\ /y
+xcopy $(TargetDir)\DevExpress.Pdf.v20.2.dll C:\Users\madne\Desktop\x86\addons\GameX.Biohazard.5\binaries\ /y
+xcopy $(TargetDir)\DevExpress.RichEdit.v20.2.dll C:\Users\madne\Desktop\x86\addons\GameX.Biohazard.5\binaries\ /y
+xcopy $(TargetDir)\DevExpress.XtraBars.v20.2.dll C:\Users\madne\Desktop\x86\addons\GameX.Biohazard.5\binaries\ /y
+xcopy $(TargetDir)\DevExpress.XtraGrid.v20.2.dll C:\Users\madne\Desktop\x86\addons\GameX.Biohazard.5\binaries\ /y
+xcopy $(TargetDir)\DevExpress.XtraPrinting.v20.2.dll C:\Users\madne\Desktop\x86\addons\GameX.Biohazard.5\binaries\ /y
+xcopy $(TargetDir)\DevExpress.XtraRichEdit.v20.2.dll C:\Users\madne\Desktop\x86\addons\GameX.Biohazard.5\binaries\ /y
+xcopy $(TargetDir)\WatsonTcp.dll C:\Users\madne\Desktop\x86\addons\GameX.Biohazard.5\binaries\ /y
 
-mkdir C:\Users\madne\Desktop\GameX\
-mkdir C:\Users\madne\Desktop\GameX\addons\
-mkdir C:\Users\madne\Desktop\GameX\addons\GameX.Biohazard.5\
+xcopy $(ProjectDir)\Resources C:\Users\madne\Desktop\x86\addons\GameX.Biohazard.5\ /e /y
 
-xcopy $(ProjectDir)\Resources C:\Users\madne\Desktop\GameX\addons\GameX.Biohazard.5\ /e /y
-
-xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\GameX\addons\GameX.Biohazard.5\ /y
-xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\GameX\addons\GameX.Biohazard.5\ /y
+xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\x86\addons\GameX.Biohazard.5\ /y
+xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\x86\addons\GameX.Biohazard.5\ /y
 
 rd /s /q $(TargetDir)\</PostBuildEvent>
   </PropertyGroup>

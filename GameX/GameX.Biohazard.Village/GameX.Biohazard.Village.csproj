@@ -119,20 +119,15 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>mkdir C:\Users\madne\Desktop\GameX\
-mkdir C:\Users\madne\Desktop\GameX\binaries\
+    <PostBuildEvent>mkdir C:\Users\madne\Desktop\x64\
+mkdir C:\Users\madne\Desktop\x64\addons\
+mkdir C:\Users\madne\Desktop\x64\addons\GameX.Biohazard.Village\
+mkdir C:\Users\madne\Desktop\x64\addons\GameX.Biohazard.Village\binaries\
 
-xcopy $(TargetDir)\*.dll C:\Users\madne\Desktop\GameX\binaries\ /y
-del C:\Users\madne\Desktop\GameX\binaries\$(TargetFileName) /Q /S
+xcopy $(ProjectDir)\Resources C:\Users\madne\Desktop\x64\addons\GameX.Biohazard.Village\ /e /y
 
-mkdir C:\Users\madne\Desktop\GameX\
-mkdir C:\Users\madne\Desktop\GameX\addons\
-mkdir C:\Users\madne\Desktop\GameX\addons\GameX.Biohazard.Village\
-
-xcopy $(ProjectDir)\Resources C:\Users\madne\Desktop\GameX\addons\GameX.Biohazard.Village\ /e /y
-
-xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\GameX\addons\GameX.Biohazard.Village\ /y
-xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\GameX\addons\GameX.Biohazard.Village\ /y
+xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\x64\addons\GameX.Biohazard.Village\ /y
+xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\x64\addons\GameX.Biohazard.Village\ /y
 
 rd /s /q $(TargetDir)\</PostBuildEvent>
   </PropertyGroup>
