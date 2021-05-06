@@ -4,8 +4,8 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("GameX")]
-[assembly: AssemblyDescription("Enable some extra mods in your game without changing any of its files!")]
+[assembly: AssemblyTitle("GameX - MT Framework Launcher")]
+[assembly: AssemblyDescription("A fancy and trustful trainer to make your gameplay way more fun!")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Singullaritys")]
 [assembly: AssemblyProduct("GameX")]
