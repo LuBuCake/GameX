@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("GameX.Launcher")]
+[assembly: AssemblyTitle("GameX")]
 [assembly: AssemblyDescription("Enable some extra mods in your game without changing any of its files!")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Singullaritys")]
-[assembly: AssemblyProduct("GameX.Launcher")]
+[assembly: AssemblyProduct("GameX")]
 [assembly: AssemblyCopyright("Copyright © LuBuCake  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

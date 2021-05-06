@@ -1,6 +1,13 @@
 {
   "GameXName": "Resident Evil 5",
-  "GameXLogo": "GameX.Addons/GameX.Biohazard.5/image/application/logo_b.eia",
-  "GameXFile": "GameX.Addons/GameX.Biohazard.5/GameX.Biohazard.5.dll",
-  "Platform": "x86"
+  "GameXLogo": [
+    "addons/GameX.Biohazard.5/image/application/logo_a.eia",
+    "addons/GameX.Biohazard.5/image/application/logo_b.eia"
+  ],
+  "GameXFile": "addons/GameX.Biohazard.5/GameX.Biohazard.5.dll",
+  "Platform": "x86",
+  "GameXLogoColors": [
+    "DarkOrange",
+    "White"
+  ]
 }

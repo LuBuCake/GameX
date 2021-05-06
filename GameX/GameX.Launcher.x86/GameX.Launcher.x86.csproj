@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GameX.Launcher</RootNamespace>
-    <AssemblyName>GameX.Launcher.x86</AssemblyName>
+    <AssemblyName>GameX-x86</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -108,9 +108,9 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>mkdir C:\Users\madne\Desktop\GameX\
-mkdir C:\Users\madne\Desktop\GameX\GameX.Binaries\
+mkdir C:\Users\madne\Desktop\GameX\binaries\
 
-xcopy $(TargetDir)\*.dll C:\Users\madne\Desktop\GameX\GameX.Binaries\ /y
+xcopy $(TargetDir)\*.dll C:\Users\madne\Desktop\GameX\binaries\ /y
 
 xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\GameX /y
 xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\GameX /y

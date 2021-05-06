@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
@@ -25,7 +26,7 @@ namespace GameX.Launcher
         private void SetupControls()
         {
             string AppDirectory = Directory.GetCurrentDirectory();
-            string AddonsDirectory = AppDirectory + "/GameX.Addons/";
+            string AddonsDirectory = AppDirectory + "/addons/";
 
             if (!Directory.Exists(AddonsDirectory))
                 Directory.CreateDirectory(AddonsDirectory);
@@ -72,7 +73,17 @@ namespace GameX.Launcher
 
             try
             {
-                GameXPictureEdit.Image = Utility.GetImageFromStream(Info.GameXLogo);
+                Image LogoA = Utility.GetImageFromStream(Info.GameXLogo[0]);
+                Image LogoB = Utility.GetImageFromStream(Info.GameXLogo[1]);
+
+                if (LogoA == null || LogoB == null)
+                    return;
+
+                LogoA = LogoA.ColorReplace(Info.GameXLogoColors[0], true);
+                LogoB = LogoB.ColorReplace(Info.GameXLogoColors[1], true);
+
+                Image Logo = Utility.MergeImage(LogoA, LogoB);
+                GameXPictureEdit.Image = Logo;
             }
             catch (Exception)
             {

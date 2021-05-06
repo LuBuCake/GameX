@@ -1167,7 +1167,7 @@ namespace GameX.Game.Content
             {
                 foreach (Item item in Chars)
                 {
-                    Serializer.WriteDataFile(@"GameX.Addons/GameX.Biohazard.5/prefab/item/" + $"{item.Portrait.ToLower()}.json", Serializer.SerializeItem(item));
+                    Serializer.WriteDataFile(@"addons/GameX.Biohazard.5/prefab/item/" + $"{item.Portrait.ToLower()}.json", Serializer.SerializeItem(item));
                 }
 
                 Terminal.WriteLine("[App] Item jsons written sucessfully.");
@@ -1182,13 +1182,13 @@ namespace GameX.Game.Content
         {
             try
             {
-                DirectoryInfo ItemsFolder = new DirectoryInfo(@"GameX.Addons/GameX.Biohazard.5/prefab/item/");
+                DirectoryInfo ItemsFolder = new DirectoryInfo(@"addons/GameX.Biohazard.5/prefab/item/");
                 FileInfo[] ItemFiles = ItemsFolder.GetFiles("*.json");
                 List<Item> AvailableItems = new List<Item>();
 
                 foreach (FileInfo ItemFile in ItemFiles)
                 {
-                    AvailableItems.Add(Serializer.DeserializeItem(File.ReadAllText(@"GameX.Addons/GameX.Biohazard.5/prefab/item/" + ItemFile.Name)));
+                    AvailableItems.Add(Serializer.DeserializeItem(File.ReadAllText(@"addons/GameX.Biohazard.5/prefab/item/" + ItemFile.Name)));
                 }
 
                 return AvailableItems.OrderBy(x => x.Group).ThenBy(x => x.GroupIndex).ToList();

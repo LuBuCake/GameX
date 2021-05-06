@@ -73,6 +73,16 @@ namespace GameX.Game.Modules
             Memory.WriteRawAddress(0x00B692C1, Enable ? new byte[] { 0x80, 0xC2, 0x01 } : new byte[] { 0x80, 0xC2, 0x02 });
         }
 
+        public static void WeskerNoSunglassDrop(bool Enable)
+        {
+            Memory.WriteBytes(Enable ? new byte[] { 0xEB } : new byte[] { 0x75 }, "re5dx9.exe", 0x77B1C1);
+        }
+
+        public static void WeskerNoDashCost(bool Enable)
+        {
+            Memory.WriteInt32(Enable ? 0 : 100, "re5dx9.exe", 0xDA3814, 0x80);
+        }
+
         public static int GetActiveGameMode()
         {
             return Memory.ReadInt32("re5dx9.exe", 0x00DA383C, 0x954, 0x2088);

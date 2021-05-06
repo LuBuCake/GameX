@@ -7,8 +7,15 @@ namespace GameX.Base.Helpers
     public static class Serializer
     {
         #region Serializer
+        public static string SerializeGameXInfo(GameXInfo Data)
+        {
+            return JsonConvert.SerializeObject(Data, Formatting.Indented);
+        }
 
-        // APP SETTINGS //
+        public static GameXInfo DeserializeGameXInfo(string Data)
+        {
+            return JsonConvert.DeserializeObject<GameXInfo>(Data);
+        }
 
         public static string SerializeSettings(Settings Data)
         {

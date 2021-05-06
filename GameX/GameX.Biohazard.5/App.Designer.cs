@@ -121,6 +121,11 @@ namespace GameX
             this.ServerPortLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.TabPageSettingsGPApp = new DevExpress.XtraEditors.GroupControl();
             this.MiscModsGP = new DevExpress.XtraEditors.GroupControl();
+            this.MiscExtraGP = new DevExpress.XtraEditors.GroupControl();
+            this.WeskerGP = new DevExpress.XtraEditors.GroupControl();
+            this.WeskerNoDashCostButton = new DevExpress.XtraEditors.SimpleButton();
+            this.WeskerInfiniteDashButton = new DevExpress.XtraEditors.SimpleButton();
+            this.WeskerSunglassesButton = new DevExpress.XtraEditors.SimpleButton();
             this.ColorFilterGP = new DevExpress.XtraEditors.GroupControl();
             this.ColorFilterButton = new DevExpress.XtraEditors.SimpleButton();
             this.ControllerAimGP = new DevExpress.XtraEditors.GroupControl();
@@ -229,6 +234,9 @@ namespace GameX
             this.TabPageSettingsGPApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MiscModsGP)).BeginInit();
             this.MiscModsGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscExtraGP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeskerGP)).BeginInit();
+            this.WeskerGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ColorFilterGP)).BeginInit();
             this.ColorFilterGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ControllerAimGP)).BeginInit();
@@ -1197,7 +1205,7 @@ namespace GameX
             // 
             this.P1ClientLabelControl.Location = new System.Drawing.Point(15, 14);
             this.P1ClientLabelControl.Name = "P1ClientLabelControl";
-            this.P1ClientLabelControl.Size = new System.Drawing.Size(103, 13);
+            this.P1ClientLabelControl.Size = new System.Drawing.Size(94, 13);
             this.P1ClientLabelControl.TabIndex = 0;
             this.P1ClientLabelControl.Text = "No client connected";
             // 
@@ -1229,7 +1237,7 @@ namespace GameX
             // 
             this.P2ClientLabelControl.Location = new System.Drawing.Point(15, 14);
             this.P2ClientLabelControl.Name = "P2ClientLabelControl";
-            this.P2ClientLabelControl.Size = new System.Drawing.Size(103, 13);
+            this.P2ClientLabelControl.Size = new System.Drawing.Size(94, 13);
             this.P2ClientLabelControl.TabIndex = 0;
             this.P2ClientLabelControl.Text = "No client connected";
             // 
@@ -1261,7 +1269,7 @@ namespace GameX
             // 
             this.P3ClientLabelControl.Location = new System.Drawing.Point(15, 14);
             this.P3ClientLabelControl.Name = "P3ClientLabelControl";
-            this.P3ClientLabelControl.Size = new System.Drawing.Size(103, 13);
+            this.P3ClientLabelControl.Size = new System.Drawing.Size(94, 13);
             this.P3ClientLabelControl.TabIndex = 0;
             this.P3ClientLabelControl.Text = "No client connected";
             // 
@@ -1319,7 +1327,7 @@ namespace GameX
             // 
             this.BuddyServerIPLabelControl.Location = new System.Drawing.Point(7, 38);
             this.BuddyServerIPLabelControl.Name = "BuddyServerIPLabelControl";
-            this.BuddyServerIPLabelControl.Size = new System.Drawing.Size(12, 13);
+            this.BuddyServerIPLabelControl.Size = new System.Drawing.Size(14, 13);
             this.BuddyServerIPLabelControl.TabIndex = 0;
             this.BuddyServerIPLabelControl.Text = "IP:";
             // 
@@ -1404,7 +1412,7 @@ namespace GameX
             // 
             // ServerPortLabelControl
             // 
-            this.ServerPortLabelControl.Location = new System.Drawing.Point(6, 40);
+            this.ServerPortLabelControl.Location = new System.Drawing.Point(7, 40);
             this.ServerPortLabelControl.Name = "ServerPortLabelControl";
             this.ServerPortLabelControl.Size = new System.Drawing.Size(24, 13);
             this.ServerPortLabelControl.TabIndex = 19;
@@ -1425,6 +1433,8 @@ namespace GameX
             // 
             // MiscModsGP
             // 
+            this.MiscModsGP.Controls.Add(this.MiscExtraGP);
+            this.MiscModsGP.Controls.Add(this.WeskerGP);
             this.MiscModsGP.Controls.Add(this.ColorFilterGP);
             this.MiscModsGP.Controls.Add(this.ControllerAimGP);
             this.MiscModsGP.Location = new System.Drawing.Point(5, 105);
@@ -1432,6 +1442,64 @@ namespace GameX
             this.MiscModsGP.Size = new System.Drawing.Size(298, 182);
             this.MiscModsGP.TabIndex = 1;
             this.MiscModsGP.Text = "Miscellaneous";
+            // 
+            // MiscExtraGP
+            // 
+            this.MiscExtraGP.Location = new System.Drawing.Point(123, 30);
+            this.MiscExtraGP.Name = "MiscExtraGP";
+            this.MiscExtraGP.ShowCaption = false;
+            this.MiscExtraGP.Size = new System.Drawing.Size(170, 70);
+            this.MiscExtraGP.TabIndex = 3;
+            // 
+            // WeskerGP
+            // 
+            this.WeskerGP.Controls.Add(this.WeskerNoDashCostButton);
+            this.WeskerGP.Controls.Add(this.WeskerInfiniteDashButton);
+            this.WeskerGP.Controls.Add(this.WeskerSunglassesButton);
+            this.WeskerGP.Location = new System.Drawing.Point(123, 106);
+            this.WeskerGP.Name = "WeskerGP";
+            this.WeskerGP.Size = new System.Drawing.Size(170, 71);
+            this.WeskerGP.TabIndex = 2;
+            this.WeskerGP.Text = "Wesker";
+            // 
+            // WeskerNoDashCostButton
+            // 
+            this.WeskerNoDashCostButton.AllowFocus = false;
+            this.WeskerNoDashCostButton.Location = new System.Drawing.Point(115, 36);
+            this.WeskerNoDashCostButton.Name = "WeskerNoDashCostButton";
+            this.WeskerNoDashCostButton.Size = new System.Drawing.Size(48, 23);
+            this.WeskerNoDashCostButton.TabIndex = 4;
+            this.WeskerNoDashCostButton.TabStop = false;
+            this.WeskerNoDashCostButton.Text = "OFF";
+            this.WeskerNoDashCostButton.ToolTip = "Removes dash\'s HP cost.";
+            this.WeskerNoDashCostButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.WeskerNoDashCostButton.ToolTipTitle = "Dash No HP Cost";
+            // 
+            // WeskerInfiniteDashButton
+            // 
+            this.WeskerInfiniteDashButton.AllowFocus = false;
+            this.WeskerInfiniteDashButton.Location = new System.Drawing.Point(61, 36);
+            this.WeskerInfiniteDashButton.Name = "WeskerInfiniteDashButton";
+            this.WeskerInfiniteDashButton.Size = new System.Drawing.Size(48, 23);
+            this.WeskerInfiniteDashButton.TabIndex = 3;
+            this.WeskerInfiniteDashButton.TabStop = false;
+            this.WeskerInfiniteDashButton.Text = "OFF";
+            this.WeskerInfiniteDashButton.ToolTip = "Removes Wesker\'s dash turn penalties and makes it infinite.";
+            this.WeskerInfiniteDashButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.WeskerInfiniteDashButton.ToolTipTitle = "Infinite Dash";
+            // 
+            // WeskerSunglassesButton
+            // 
+            this.WeskerSunglassesButton.AllowFocus = false;
+            this.WeskerSunglassesButton.Location = new System.Drawing.Point(7, 36);
+            this.WeskerSunglassesButton.Name = "WeskerSunglassesButton";
+            this.WeskerSunglassesButton.Size = new System.Drawing.Size(48, 23);
+            this.WeskerSunglassesButton.TabIndex = 2;
+            this.WeskerSunglassesButton.TabStop = false;
+            this.WeskerSunglassesButton.Text = "OFF";
+            this.WeskerSunglassesButton.ToolTip = "Wesker no longer drops his sunglasses after being hit.";
+            this.WeskerSunglassesButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.WeskerSunglassesButton.ToolTipTitle = "Never Drop Sunglasses";
             // 
             // ColorFilterGP
             // 
@@ -1453,7 +1521,7 @@ namespace GameX
             this.ColorFilterButton.TabIndex = 1;
             this.ColorFilterButton.TabStop = false;
             this.ColorFilterButton.Text = "Enable";
-            this.ColorFilterButton.ToolTip = "Enables the true color filter skipping the default one.";
+            this.ColorFilterButton.ToolTip = "Enables the true color filter disabling the default ones.";
             this.ColorFilterButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.ColorFilterButton.ToolTipTitle = "Color Filter";
             // 
@@ -1477,7 +1545,7 @@ namespace GameX
             this.ControllerAimButton.TabIndex = 1;
             this.ControllerAimButton.TabStop = false;
             this.ControllerAimButton.Text = "Enable";
-            this.ControllerAimButton.ToolTip = "Enables or disables the controller aim type for mouse and keyboard.";
+            this.ControllerAimButton.ToolTip = "Enables the controller aim type for mouse and keyboard.";
             this.ControllerAimButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.ControllerAimButton.ToolTipTitle = "Controller Aim";
             // 
@@ -1522,9 +1590,9 @@ namespace GameX
             // 
             this.PlayerNameLabelControl.Location = new System.Drawing.Point(15, 10);
             this.PlayerNameLabelControl.Name = "PlayerNameLabelControl";
-            this.PlayerNameLabelControl.Size = new System.Drawing.Size(25, 13);
+            this.PlayerNameLabelControl.Size = new System.Drawing.Size(31, 13);
             this.PlayerNameLabelControl.TabIndex = 7;
-            this.PlayerNameLabelControl.Text = "Nick:";
+            this.PlayerNameLabelControl.Text = "Name:";
             // 
             // PlayerNameTextEdit
             // 
@@ -1560,7 +1628,7 @@ namespace GameX
             // 
             this.UpdateRateLabelControl.Location = new System.Drawing.Point(15, 36);
             this.UpdateRateLabelControl.Name = "UpdateRateLabelControl";
-            this.UpdateRateLabelControl.Size = new System.Drawing.Size(26, 13);
+            this.UpdateRateLabelControl.Size = new System.Drawing.Size(27, 13);
             this.UpdateRateLabelControl.TabIndex = 0;
             this.UpdateRateLabelControl.Text = "Rate:";
             // 
@@ -1568,7 +1636,7 @@ namespace GameX
             // 
             this.PaletteLabelControl.Location = new System.Drawing.Point(15, 62);
             this.PaletteLabelControl.Name = "PaletteLabelControl";
-            this.PaletteLabelControl.Size = new System.Drawing.Size(25, 13);
+            this.PaletteLabelControl.Size = new System.Drawing.Size(23, 13);
             this.PaletteLabelControl.TabIndex = 0;
             this.PaletteLabelControl.Text = "Skin:";
             // 
@@ -1797,6 +1865,9 @@ namespace GameX
             this.TabPageSettingsGPApp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MiscModsGP)).EndInit();
             this.MiscModsGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MiscExtraGP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeskerGP)).EndInit();
+            this.WeskerGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ColorFilterGP)).EndInit();
             this.ColorFilterGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ControllerAimGP)).EndInit();
@@ -1936,6 +2007,11 @@ namespace GameX
         private DevExpress.XtraEditors.SimpleButton ControllerAimButton;
         private DevExpress.XtraEditors.GroupControl ColorFilterGP;
         private DevExpress.XtraEditors.SimpleButton ColorFilterButton;
+        private DevExpress.XtraEditors.GroupControl WeskerGP;
+        private DevExpress.XtraEditors.SimpleButton WeskerNoDashCostButton;
+        private DevExpress.XtraEditors.SimpleButton WeskerInfiniteDashButton;
+        private DevExpress.XtraEditors.SimpleButton WeskerSunglassesButton;
+        private DevExpress.XtraEditors.GroupControl MiscExtraGP;
     }
 }
 

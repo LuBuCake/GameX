@@ -125,5 +125,12 @@ namespace GameX.Game.Modules
                 Memory.WriteBytes(Enable ? new byte[] {0x80} : new byte[] {0x00}, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x21C7 + (+0x48 * slot));
             }
         }
+
+        public void ResetDash()
+        {
+            Memory.WriteInt32(0, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x210F);
+            Memory.WriteFloat(1.3f, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x10DC, 0x120, 0x1C);
+            Memory.WriteFloat(0f, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x10DC, 0x120, 0x2C);
+        }
     }
 }

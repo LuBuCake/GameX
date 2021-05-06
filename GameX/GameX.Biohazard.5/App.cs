@@ -160,6 +160,8 @@ namespace GameX
         {
             if (Target_Process == null)
             {
+                ResetHealthBars();
+
                 Target_Process = Processes.GetProcessByName(Target);
                 Verified = false;
                 Initialized = false;
@@ -238,8 +240,6 @@ namespace GameX
             Target_Process = null;
             Verified = false;
             Initialized = false;
-
-            ResetHealthBars();
 
             Terminal.WriteLine("[App] Runtime cleared successfully.");
         }
@@ -337,6 +337,13 @@ namespace GameX
                 ColorFilterButton
             };
 
+            SimpleButton[] OnOff =
+            {
+                WeskerSunglassesButton,
+                WeskerInfiniteDashButton,
+                WeskerNoDashCostButton
+            };
+
             #endregion
 
             for (int Index = 0; Index < CharacterCombos.Length; Index++)
@@ -369,6 +376,7 @@ namespace GameX
                     continue;
 
                 DropButtons[Index].Click += Network.Server_DropClient;
+                OnOff[Index].Click += OnOff_Click;
             }
 
             UpdateModeComboBoxEdit.Properties.Items.AddRange(Rates.Available());
@@ -407,17 +415,19 @@ namespace GameX
             Color Window = CommonSkins.GetSkin(UserLookAndFeel.Default).TranslateColor(SystemColors.Window);
             int total = Window.R + Window.G + Window.B;
 
-            Image LogoA = Utility.GetImageFromStream(@"GameX.Addons/GameX.Biohazard.5/image/application/logo_a.eia");
-            Image LogoB = Utility.GetImageFromStream(@"GameX.Addons/GameX.Biohazard.5/image/application/logo_b.eia");
+            GameXInfo appinfo = Serializer.DeserializeGameXInfo(Serializer.ReadDataFile(@"addons/GameX.Biohazard.5/appinfo.json"));
 
-            if (total > 380 && LogoA != null)
-            {
-                AboutPictureEdit.Image = LogoA;
-            }
-            else if (total < 380 && LogoB != null)
-            {
-                AboutPictureEdit.Image = LogoB;
-            }
+            Image LogoA = Utility.GetImageFromStream(appinfo.GameXLogo[0]);
+            Image LogoB = Utility.GetImageFromStream(appinfo.GameXLogo[1]);
+
+            if (LogoA == null || LogoB == null)
+                return;
+
+            LogoA = LogoA.ColorReplace(appinfo.GameXLogoColors[0], true);
+            LogoB = LogoB.ColorReplace(total > 380 ? Color.Black : Color.White, true);
+
+            Image Logo = Utility.MergeImage(LogoA, LogoB);
+            AboutPictureEdit.Image = Logo;
         }
 
         private void ResetHealthBars()
@@ -488,7 +498,7 @@ namespace GameX
 
             try
             {
-                Serializer.WriteDataFile(@"GameX.Addons/GameX.Biohazard.5/appsettings.json", Serializer.SerializeSettings(Setts));
+                Serializer.WriteDataFile(@"addons/GameX.Biohazard.5/appsettings.json", Serializer.SerializeSettings(Setts));
             }
             catch (Exception Ex)
             {
@@ -512,8 +522,8 @@ namespace GameX
 
             try
             {
-                if (File.Exists(@"GameX.Addons/GameX.Biohazard.5/appsettings.json"))
-                    Setts = Serializer.DeserializeSettings(File.ReadAllText(@"GameX.Addons/GameX.Biohazard.5/appsettings.json"));
+                if (File.Exists(@"addons/GameX.Biohazard.5/appsettings.json"))
+                    Setts = Serializer.DeserializeSettings(File.ReadAllText(@"addons/GameX.Biohazard.5/appsettings.json"));
             }
             catch (Exception Ex)
             {
@@ -602,7 +612,7 @@ namespace GameX
 
             int Index = int.Parse(CBE.Name[1].ToString()) - 1;
 
-            Image Portrait = Utility.GetImageFromFile(@"GameX.Addons/GameX.Biohazard.5/image/character/" + CBECos.Portrait);
+            Image Portrait = Utility.GetImageFromFile(@"addons/GameX.Biohazard.5/image/character/" + CBECos.Portrait);
 
             if (Portrait != null)
                 CharPicBoxes[Index].Image = Portrait;
@@ -666,27 +676,44 @@ namespace GameX
             if (!CB.Checked && CB.Text.Contains("ON"))
                 CB.Text = CB.Text.Replace("ON", "OFF");
 
-            if (Initialized && CB.Name.Contains("Untargetable") && !CB.Checked)
+            if (!Initialized)
+                return;
+
+            if (CB.Name.Contains("Untargetable") && !CB.Checked)
             {
                 int Player = int.Parse(CB.Name[1].ToString()) - 1;
                 Biohazard.Players[Player].SetUntargetable(false);
             }
-            else if (Initialized && CB.Name.Contains("InfiniteAmmo") && !CB.Checked)
+            else if (CB.Name.Contains("InfiniteAmmo") && !CB.Checked)
             {
                 int Player = int.Parse(CB.Name[1].ToString()) - 1;
                 Biohazard.Players[Player].SetInfiniteAmmo(false);
             }
-            else if (Initialized && CB.Name.Contains("Rapidfire") && !CB.Checked)
+            else if (CB.Name.Contains("Rapidfire") && !CB.Checked)
             {
                 int Player = int.Parse(CB.Name[1].ToString()) - 1;
                 Biohazard.Players[Player].SetRapidFire(false);
             }
         }
 
+        private void OnOff_Click(object sender, EventArgs e)
+        {
+            SimpleButton SB = sender as SimpleButton;
+            SB.Text = SB.Text == "ON" ? "OFF" : "ON";
+
+            if (SB.Name.Equals("WeskerSunglassesButton"))
+            {
+                Biohazard.WeskerNoSunglassDrop(SB.Text.Equals("ON"));
+            }
+            else if (SB.Name.Equals("WeskerNoDashCostButton"))
+            {
+                Biohazard.WeskerNoDashCost(SB.Text.Equals("ON"));
+            }
+        }
+
         private void EnableDisable_Click(object sender, EventArgs e)
         {
             SimpleButton SB = sender as SimpleButton;
-
             SB.Text = SB.Text == "Enable" ? "Disable" : "Enable";
 
             switch (SB.Name)
@@ -694,14 +721,14 @@ namespace GameX
                 case "ControllerAimButton":
                 {
                     if (Initialized)
-                        Biohazard.EnableControllerAim(SB.Text == "Disable");
+                        Biohazard.EnableControllerAim(SB.Text.Equals("Disable"));
 
                     break;
                 }
                 case "ColorFilterButton":
                 {
                     if (Initialized)
-                        Biohazard.EnableColorFilter(SB.Text == "Disable");
+                        Biohazard.EnableColorFilter(SB.Text.Equals("Disable"));
 
                     break;
                 }
@@ -782,7 +809,9 @@ namespace GameX
             SimpleButton[] EnableDisable =
             {
                 ControllerAimButton,
-                ColorFilterButton
+                ColorFilterButton,
+                WeskerSunglassesButton,
+                WeskerNoDashCostButton
             };
 
             foreach (SimpleButton SB in EnableDisable)
@@ -800,6 +829,20 @@ namespace GameX
                     {
                         if (SB.Text == "Disable")
                             Biohazard.EnableColorFilter(true);
+
+                        break;
+                    }
+                    case "WeskerSunglassesButton":
+                    {
+                        if (SB.Text == "ON")
+                            Biohazard.WeskerNoSunglassDrop(true);
+
+                        break;
+                    }
+                    case "WeskerNoDashCostButton":
+                    {
+                        if (SB.Text == "ON")
+                            Biohazard.WeskerNoDashCost(true);
 
                         break;
                     }
@@ -838,6 +881,8 @@ namespace GameX
                 Biohazard.OnlineCharSwapFixes(false);
                 Biohazard.EnableControllerAim(false);
                 Biohazard.EnableColorFilter(false);
+                Biohazard.WeskerNoSunglassDrop(false);
+                Biohazard.WeskerNoDashCost(false);
 
                 Biohazard.FinishModule();
             }
@@ -854,7 +899,7 @@ namespace GameX
                 if (!Biohazard.ModuleStarted)
                     return;
 
-                CharacterPanel_Update();
+                Character_Update();
             }
             catch (Exception)
             {
@@ -872,7 +917,7 @@ namespace GameX
 
         public void CreatePrefabs(Enums.PrefabType Prefab, bool Override = false)
         {
-            string prefabDir = Directory.GetCurrentDirectory() + "/GameX.Addons/GameX.Biohazard.5/prefab/";
+            string prefabDir = Directory.GetCurrentDirectory() + "/addons/GameX.Biohazard.5/prefab/";
 
             if (!Directory.Exists(prefabDir))
                 Directory.CreateDirectory(prefabDir);
@@ -1500,7 +1545,7 @@ namespace GameX
 
         #region General Read/Write
 
-        private void CharacterPanel_Update()
+        private void Character_Update()
         {
             #region Controls
 
@@ -1620,11 +1665,11 @@ namespace GameX
                 // Health Bar //
                 HealthBars[i].Properties.Maximum = PlayerPresent ? Biohazard.Players[i].GetMaxHealth() : 1;
                 HealthBars[i].EditValue = PlayerPresent ? Biohazard.Players[i].GetHealth() : 1;
-                HealthBars[i].Properties.StartColor = PlayerPresent ? Color.FromArgb((int)(255.0 - (155.0 * PlayerHealthPercent)), (int)(0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(0, 0, 0, 0);
-                HealthBars[i].Properties.EndColor = PlayerPresent ? Color.FromArgb((int)(255.0 - (155.0 * PlayerHealthPercent)), (int)(0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(0, 0, 0, 0);
+                HealthBars[i].Properties.StartColor = PlayerPresent ? Color.FromArgb((int)(255.0 - 155.0 * PlayerHealthPercent), (int)(0.0 + 255.0 * PlayerHealthPercent), 0) : Color.FromArgb(0, 0, 0, 0);
+                HealthBars[i].Properties.EndColor = PlayerPresent ? Color.FromArgb((int)(255.0 - 155.0 * PlayerHealthPercent), (int)(0.0 + 255.0 * PlayerHealthPercent), 0) : Color.FromArgb(0, 0, 0, 0);
 
                 // Player Name //
-                PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (Biohazard.InGame() ? ((i == Biohazard.LocalPlayer()) ? Biohazard.LocalPlayerNick() : (PlayerPresent ? (Biohazard.Players[i].IsAI() ? "CPU AI" : "Connected") : "Disconnected")) : "Disconnected");
+                PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (Biohazard.InGame() ? i == Biohazard.LocalPlayer() ? Biohazard.LocalPlayerNick() : PlayerPresent ? Biohazard.Players[i].IsAI() ? "CPU AI" : "Connected" : "Disconnected" : "Disconnected");
 
                 // Handness //
                 if (Handness[i].SelectedIndex > 0 && PlayerPresent)
@@ -1653,6 +1698,11 @@ namespace GameX
                 // Rapidfire //
                 if (RapidFire[i].Checked && PlayerPresent)
                     Biohazard.Players[i].SetRapidFire(true);
+
+                // Infinite Dash //
+                if (WeskerInfiniteDashButton.Text.Equals("ON") && PlayerPresent && Biohazard.Players[i].GetCharacter().Item1.Equals(3))
+                    Biohazard.Players[i].ResetDash();
+
             }
         }
 

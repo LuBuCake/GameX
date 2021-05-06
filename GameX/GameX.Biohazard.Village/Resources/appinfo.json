@@ -1,6 +1,13 @@
 {
   "GameXName": "Resident Evil Village",
-  "GameXLogo": "GameX.Addons/GameX.Biohazard.Village/image/application/logo_b.eia",
-  "GameXFile": "GameX.Addons/GameX.Biohazard.Village/GameX.Biohazard.Village.dll",
-  "Platform": "x64"
+  "GameXLogo": [
+    "addons/GameX.Biohazard.Village/image/application/logo_a.eia",
+    "addons/GameX.Biohazard.Village/image/application/logo_b.eia"
+  ],
+  "GameXFile": "addons/GameX.Biohazard.Village/GameX.Biohazard.Village.dll",
+  "Platform": "x64",
+  "GameXLogoColors": [
+    "215, 195, 40",
+    "White"
+  ]
 }

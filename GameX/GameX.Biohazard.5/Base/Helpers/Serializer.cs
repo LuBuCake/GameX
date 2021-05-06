@@ -11,6 +11,16 @@ namespace GameX.Base.Helpers
 
         // APP SETTINGS //
 
+        public static string SerializeGameXInfo(GameXInfo Data)
+        {
+            return JsonConvert.SerializeObject(Data, Formatting.Indented);
+        }
+
+        public static GameXInfo DeserializeGameXInfo(string Data)
+        {
+            return JsonConvert.DeserializeObject<GameXInfo>(Data);
+        }
+
         public static string SerializeSettings(Settings Data)
         {
             return JsonConvert.SerializeObject(Data, Formatting.Indented);

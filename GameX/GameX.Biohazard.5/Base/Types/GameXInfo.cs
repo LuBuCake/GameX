@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace GameX.Launcher.Base.Types
+namespace GameX.Base.Types
 {
     public class GameXInfo
     {

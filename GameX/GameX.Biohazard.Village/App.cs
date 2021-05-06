@@ -268,17 +268,19 @@ namespace GameX
             Color Window = CommonSkins.GetSkin(UserLookAndFeel.Default).TranslateColor(SystemColors.Window);
             int total = Window.R + Window.G + Window.B;
 
-            Image LogoA = Utility.GetImageFromStream(@"GameX.Addons/GameX.Biohazard.Village/image/application/logo_a.eia");
-            Image LogoB = Utility.GetImageFromStream(@"GameX.Addons/GameX.Biohazard.Village/image/application/logo_b.eia");
+            GameXInfo appinfo = Serializer.DeserializeGameXInfo(Serializer.ReadDataFile(@"addons/GameX.Biohazard.Village/appinfo.json"));
 
-            if (total > 380 && LogoA != null)
-            {
-                AboutPictureEdit.Image = LogoA;
-            }
-            else if (total < 380 && LogoB != null)
-            {
-                AboutPictureEdit.Image = LogoB;
-            }
+            Image LogoA = Utility.GetImageFromStream(appinfo.GameXLogo[0]);
+            Image LogoB = Utility.GetImageFromStream(appinfo.GameXLogo[1]);
+
+            if (LogoA == null || LogoB == null)
+                return;
+
+            LogoA = LogoA.ColorReplace(appinfo.GameXLogoColors[0], true);
+            LogoB = LogoB.ColorReplace(total > 380 ? Color.Black : Color.White, true);
+
+            Image Logo = Utility.MergeImage(LogoA, LogoB);
+            AboutPictureEdit.Image = Logo;
         }
 
         private void CheckDebugModeControls(bool DebugMode)
@@ -314,7 +316,7 @@ namespace GameX
 
             try
             {
-                Serializer.WriteDataFile(@"GameX.Addons/GameX.Biohazard.Village/appsettings.json", Serializer.SerializeSettings(Setts));
+                Serializer.WriteDataFile(@"addons/GameX.Biohazard.Village/appsettings.json", Serializer.SerializeSettings(Setts));
             }
             catch (Exception Ex)
             {
@@ -337,8 +339,8 @@ namespace GameX
 
             try
             {
-                if (File.Exists(@"GameX.Addons/GameX.Biohazard.Village/appsettings.json"))
-                    Setts = Serializer.DeserializeSettings(File.ReadAllText(@"GameX.Addons/GameX.Biohazard.Village/appsettings.json"));
+                if (File.Exists(@"addons/GameX.Biohazard.Village/appsettings.json"))
+                    Setts = Serializer.DeserializeSettings(File.ReadAllText(@"addons/GameX.Biohazard.Village/appsettings.json"));
             }
             catch (Exception Ex)
             {
