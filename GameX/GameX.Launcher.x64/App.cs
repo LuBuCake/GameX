@@ -48,15 +48,18 @@ namespace GameX.Launcher
                     }
                 }
 
-                GameXComboEdit.SelectedIndexChanged += GameX_IndexChanged;
-                GameXComboEdit.Properties.Items.AddRange(Versions);
-                GameXComboEdit.SelectedIndex = 0;
+                if (Versions.Count > 0)
+                {
+                    GameXComboEdit.SelectedIndexChanged += GameX_IndexChanged;
+                    GameXComboEdit.Properties.Items.AddRange(Versions);
+                    GameXComboEdit.SelectedIndex = 0;
 
-                GameXButton.Click += GameX_Click;
+                    GameXButton.Click += GameX_Click;
 
-                SelectorGP.Text = "Available addons";
+                    SelectorGP.Text = "Available addons";
 
-                return;
+                    return;
+                }
             }
 
             SelectorGP.Text = "No addons found";

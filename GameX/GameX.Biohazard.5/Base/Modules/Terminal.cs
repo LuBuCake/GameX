@@ -100,7 +100,7 @@ namespace GameX.Base.Modules
                         Platform = "x86"
                     };
                     Serializer.WriteDataFile(@"addons/GameX.Biohazard.5/appinfo.json", Serializer.SerializeGameXInfo(appinfo));
-                    break;
+                    return true;
                 case "encodeimage":
                 {
                     string CurrentDirectory = $"{Directory.GetCurrentDirectory()}/";

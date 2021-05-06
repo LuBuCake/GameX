@@ -7,7 +7,7 @@
   "GameXFile": "addons/GameX.Biohazard.Village/GameX.Biohazard.Village.dll",
   "Platform": "x64",
   "GameXLogoColors": [
-    "215, 195, 40",
+    "220, 200, 0",
     "White"
   ]
 }

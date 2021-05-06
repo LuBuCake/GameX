@@ -72,11 +72,11 @@ namespace GameX.Base.Modules
                         GameXName = "Resident Evil Village",
                         GameXFile = "addons/GameX.Biohazard.Village/GameX.Biohazard.Village.dll",
                         GameXLogo = new[] { "addons/GameX.Biohazard.Village/image/application/logo_a.eia", "addons/GameX.Biohazard.Village/image/application/logo_b.eia" },
-                        GameXLogoColors = new[] { Color.FromArgb(215, 195, 40), Color.White },
+                        GameXLogoColors = new[] { Color.FromArgb(220, 200, 0), Color.White },
                         Platform = "x64"
                     };
                     Serializer.WriteDataFile(@"addons/GameX.Biohazard.Village/appinfo.json", Serializer.SerializeGameXInfo(appinfo));
-                    break;
+                    return true;
                 case "encodeimage":
                 {
                     string CurrentDirectory = $"{Directory.GetCurrentDirectory()}/";
