@@ -98,7 +98,7 @@ namespace GameX.Launcher
             this.MaximizeBox = false;
             this.Name = "App";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GameX - Launcher";
+            this.Text = "GameX - RE Engine";
             this.Load += new System.EventHandler(this.App_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SelectorGP)).EndInit();
             this.SelectorGP.ResumeLayout(false);

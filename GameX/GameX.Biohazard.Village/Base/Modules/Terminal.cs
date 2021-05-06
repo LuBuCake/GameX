@@ -71,7 +71,7 @@ namespace GameX.Base.Modules
                     {
                         GameXName = "Resident Evil Village",
                         GameXFile = "addons/GameX.Biohazard.Village/GameX.Biohazard.Village.dll",
-                        GameXLogo = new[] { "addons/GameX.Biohazard.Village/image/application/logo_a.eia", "addons/GameX.Biohazard.Village/image/application/logo_b.eia" },
+                        GameXLogo = new[] { "addons/GameX.Biohazard.Village/images/application/logo_a.eia", "addons/GameX.Biohazard.Village/images/application/logo_b.eia" },
                         GameXLogoColors = new[] { Color.FromArgb(220, 200, 0), Color.White },
                         Platform = "x64"
                     };

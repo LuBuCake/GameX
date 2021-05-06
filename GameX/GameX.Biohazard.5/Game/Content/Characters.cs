@@ -270,7 +270,7 @@ namespace GameX.Game.Content
             {
                 foreach (Character Char in Chars)
                 {
-                    Serializer.WriteDataFile(@"addons/GameX.Biohazard.5/prefab/character/" + $"{Char.Name.ToLower()}.json", Serializer.SerializeCharacter(Char));
+                    Serializer.WriteDataFile(@"addons/GameX.Biohazard.5/prefabs/character/" + $"{Char.Name.ToLower()}.json", Serializer.SerializeCharacter(Char));
                 }
 
                 Terminal.WriteLine("[App] Characters jsons written sucessfully.");
@@ -285,13 +285,13 @@ namespace GameX.Game.Content
         {
             try
             {
-                DirectoryInfo CharactersFolder = new DirectoryInfo(@"addons/GameX.Biohazard.5/prefab/character/");
+                DirectoryInfo CharactersFolder = new DirectoryInfo(@"addons/GameX.Biohazard.5/prefabs/character/");
                 FileInfo[] CharacterFiles = CharactersFolder.GetFiles("*.json");
                 List<Character> AvailableCharacters = new List<Character>();
 
                 foreach (FileInfo CharFile in CharacterFiles)
                 {
-                    AvailableCharacters.Add(Serializer.DeserializeCharacter(File.ReadAllText(@"addons/GameX.Biohazard.5/prefab/character/" + CharFile.Name)));
+                    AvailableCharacters.Add(Serializer.DeserializeCharacter(File.ReadAllText(@"addons/GameX.Biohazard.5/prefabs/character/" + CharFile.Name)));
                 }
 
                 return AvailableCharacters.OrderBy(x => x.Value).ToList();

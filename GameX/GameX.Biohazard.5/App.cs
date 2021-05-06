@@ -612,7 +612,7 @@ namespace GameX
 
             int Index = int.Parse(CBE.Name[1].ToString()) - 1;
 
-            Image Portrait = Utility.GetImageFromFile(@"addons/GameX.Biohazard.5/image/character/" + CBECos.Portrait);
+            Image Portrait = Utility.GetImageFromFile(@"addons/GameX.Biohazard.5/images/character/" + CBECos.Portrait);
 
             if (Portrait != null)
                 CharPicBoxes[Index].Image = Portrait;
@@ -917,7 +917,7 @@ namespace GameX
 
         public void CreatePrefabs(Enums.PrefabType Prefab, bool Override = false)
         {
-            string prefabDir = Directory.GetCurrentDirectory() + "/addons/GameX.Biohazard.5/prefab/";
+            string prefabDir = Directory.GetCurrentDirectory() + "/addons/GameX.Biohazard.5/prefabs/";
 
             if (!Directory.Exists(prefabDir))
                 Directory.CreateDirectory(prefabDir);

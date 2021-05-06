@@ -95,7 +95,7 @@ namespace GameX.Base.Modules
                     {
                         GameXName = "Resident Evil 5",
                         GameXFile = "addons/GameX.Biohazard.5/GameX.Biohazard.5.dll",
-                        GameXLogo = new[] { "addons/GameX.Biohazard.5/image/application/logo_a.eia", "addons/GameX.Biohazard.5/image/application/logo_b.eia" },
+                        GameXLogo = new[] { "addons/GameX.Biohazard.5/images/application/logo_a.eia", "addons/GameX.Biohazard.5/images/application/logo_b.eia" },
                         GameXLogoColors = new[] { Color.DarkOrange, Color.White },
                         Platform = "x86"
                     };
