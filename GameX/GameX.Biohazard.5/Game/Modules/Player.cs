@@ -6,10 +6,12 @@ namespace GameX.Game.Modules
     public class Player
     {
         private int _INDEX { get; set; }
+        public Inventory _Inventory { get; set; }
 
         public Player(int Index)
         {
             _INDEX = Index;
+            _Inventory = new Inventory(Index);
         }
 
         public int GetBaseAddress()
