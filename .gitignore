@@ -11,8 +11,12 @@ GameX/GameX.Launcher.x64/obj/
 GameX/GameX.Launcher.x86/.vs/
 GameX/GameX.Launcher.x86/bin/
 GameX/GameX.Launcher.x86/obj/
+GameX/GameX.Updater/.vs/
+GameX/GameX.Updater/bin/
+GameX/GameX.Updater/obj/
 
 GameX/GameX.Biohazard.5/Properties/licenses.licx
 GameX/GameX.Biohazard.Village/Properties/licenses.licx
 GameX/GameX.Launcher.x64/Properties/licenses.licx
 GameX/GameX.Launcher.x86/Properties/licenses.licx
+GameX/GameX.Updater/Properties/licenses.licx
