@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using GameX.Launcher.Base.Helpers;
@@ -69,7 +70,7 @@ namespace GameX.Launcher
 
         // Event Handlers //
 
-        private void GameX_IndexChanged(object sender, EventArgs e)
+        private async void GameX_IndexChanged(object sender, EventArgs e)
         {
             ComboBoxEdit CBE = sender as ComboBoxEdit;
             GameXInfo Info = CBE.SelectedItem as GameXInfo;
@@ -82,10 +83,10 @@ namespace GameX.Launcher
                 if (LogoA == null || LogoB == null)
                     return;
 
-                LogoA = LogoA.ColorReplace(Info.GameXLogoColors[0], true);
-                LogoB = LogoB.ColorReplace(Info.GameXLogoColors[1], true);
+                LogoA = await Task.Run(() => LogoA.ColorReplace(Info.GameXLogoColors[0], true));
+                LogoB = await Task.Run(() => LogoB.ColorReplace(Info.GameXLogoColors[1], true));
 
-                Image Logo = Utility.MergeImage(LogoA, LogoB);
+                Image Logo = await Task.Run(() => Utility.MergeImage(LogoA, LogoB));
                 GameXPictureEdit.Image = Logo;
             }
             catch (Exception)
