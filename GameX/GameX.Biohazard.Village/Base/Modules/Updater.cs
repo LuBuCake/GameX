@@ -60,7 +60,9 @@ namespace GameX.Base.Modules
 
                 if (Current >= Latest)
                 {
-                    Utility.MessageBox_Information("Your app's version is up-to-date.");
+                    if (ShowAlert)
+                        Utility.MessageBox_Information("Your app's version is up-to-date.");
+
                     return;
                 }
 
