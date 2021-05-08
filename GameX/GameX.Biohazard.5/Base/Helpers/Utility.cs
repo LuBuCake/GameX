@@ -107,19 +107,24 @@ namespace GameX.Base.Helpers
             return outputImage;
         }
 
-        public static void MessageBox_Information(string Message)
+        public static DialogResult MessageBox_Information(string Message, MessageBoxButtons Button = MessageBoxButtons.OK)
         {
-            MessageBox.Show(Message, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return MessageBox.Show(Message, "Information", Button, MessageBoxIcon.Information);
         }
 
-        public static void MessageBox_Error(string Message)
+        public static DialogResult MessageBox_Error(string Message, MessageBoxButtons Button = MessageBoxButtons.OK)
         {
-            MessageBox.Show(Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return MessageBox.Show(Message, "Error", Button, MessageBoxIcon.Error);
         }
 
-        public static void MessageBox_Warning(string Message)
+        public static DialogResult MessageBox_Warning(string Message, MessageBoxButtons Button = MessageBoxButtons.OK)
         {
-            MessageBox.Show(Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return MessageBox.Show(Message, "Warning", Button, MessageBoxIcon.Warning);
+        }
+
+        public static DialogResult MessageBox_YesNo(string Message, MessageBoxButtons Button = MessageBoxButtons.OK)
+        {
+            return MessageBox.Show(Message, "Warning", Button, MessageBoxIcon.Information);
         }
     }
 }

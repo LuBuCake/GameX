@@ -20,8 +20,8 @@ namespace GameX.Base.Modules
             return new AppVersion()
             {
                 Current = CurName.Version,
-                VersionCheckRoute = "https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Biohazard.5/Version/latest.txt",
-                VersionFileRoute = "https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Biohazard.5/Version/latest.zip"
+                VersionCheckRoute = "https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Biohazard.Village/Version/latest.txt",
+                VersionFileRoute = "https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Biohazard.Village/Version/latest.zip"
             };
         }
 

@@ -148,6 +148,7 @@ namespace GameX
             this.ClearConsoleSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.ConsoleModeComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.ConsoleInputTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.UpdateButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -1658,17 +1659,19 @@ namespace GameX
             // 
             // LoadSaveGP
             // 
+            this.LoadSaveGP.Controls.Add(this.UpdateButton);
             this.LoadSaveGP.Controls.Add(this.LoadSettingsButton);
             this.LoadSaveGP.Controls.Add(this.SaveSettingsButton);
             this.LoadSaveGP.Location = new System.Drawing.Point(181, 30);
             this.LoadSaveGP.Name = "LoadSaveGP";
+            this.LoadSaveGP.ShowCaption = false;
             this.LoadSaveGP.Size = new System.Drawing.Size(112, 85);
             this.LoadSaveGP.TabIndex = 0;
             // 
             // LoadSettingsButton
             // 
             this.LoadSettingsButton.AllowFocus = false;
-            this.LoadSettingsButton.Location = new System.Drawing.Point(5, 57);
+            this.LoadSettingsButton.Location = new System.Drawing.Point(5, 58);
             this.LoadSettingsButton.Name = "LoadSettingsButton";
             this.LoadSettingsButton.Size = new System.Drawing.Size(102, 23);
             this.LoadSettingsButton.TabIndex = 1;
@@ -1682,7 +1685,7 @@ namespace GameX
             // 
             this.SaveSettingsButton.AllowFocus = false;
             this.SaveSettingsButton.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.SaveSettingsButton.Location = new System.Drawing.Point(5, 30);
+            this.SaveSettingsButton.Location = new System.Drawing.Point(5, 31);
             this.SaveSettingsButton.Name = "SaveSettingsButton";
             this.SaveSettingsButton.Size = new System.Drawing.Size(102, 23);
             this.SaveSettingsButton.TabIndex = 0;
@@ -1760,6 +1763,21 @@ namespace GameX
             this.ConsoleInputTextEdit.Properties.ValidateOnEnterKey = true;
             this.ConsoleInputTextEdit.Size = new System.Drawing.Size(454, 20);
             this.ConsoleInputTextEdit.TabIndex = 1;
+            // 
+            // UpdateButton
+            // 
+            this.UpdateButton.AllowFocus = false;
+            this.UpdateButton.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.UpdateButton.Location = new System.Drawing.Point(5, 4);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(102, 23);
+            this.UpdateButton.TabIndex = 2;
+            this.UpdateButton.TabStop = false;
+            this.UpdateButton.Text = "Update";
+            this.UpdateButton.ToolTip = "Checks for updates and if a new version is found, asks if you want to download it" +
+    ".";
+            this.UpdateButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.UpdateButton.ToolTipTitle = "Update";
             // 
             // App
             // 
@@ -2012,6 +2030,7 @@ namespace GameX
         private DevExpress.XtraEditors.SimpleButton WeskerInfiniteDashButton;
         private DevExpress.XtraEditors.SimpleButton WeskerSunglassesButton;
         private DevExpress.XtraEditors.GroupControl MiscExtraGP;
+        private DevExpress.XtraEditors.SimpleButton UpdateButton;
     }
 }
 

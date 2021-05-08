@@ -108,6 +108,8 @@ namespace GameX
         {
             CreatePrefabs(Enums.PrefabType.All);
             SetupControls();
+
+            Updater.CheckForUpdates(false);
         }
 
         private void Application_Update()
@@ -402,6 +404,7 @@ namespace GameX
             ConsoleModeComboBoxEdit.SelectedIndex = 0;
 
             ClearConsoleSimpleButton.Click += Terminal.ClearConsole_Click;
+            UpdateButton.Click += Update_Click;
 
             ResetHealthBars();
             SetLogo();
@@ -560,6 +563,26 @@ namespace GameX
 
             ResetHealthBars();
             SetLogo();
+        }
+
+        private async void Update_Click(object sender, EventArgs e)
+        {
+            SimpleButton SB = sender as SimpleButton;
+
+            SB.Text = "Checking";
+            SB.Enabled = false;
+
+            try
+            {
+                await Updater.CheckForUpdates(true);
+            }
+            catch (Exception Ex)
+            {
+                Terminal.WriteLine(Ex.Message);
+            }
+
+            SB.Text = "Update";
+            SB.Enabled = true;
         }
 
         // MODS //

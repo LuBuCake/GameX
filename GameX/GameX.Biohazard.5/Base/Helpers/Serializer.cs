@@ -31,6 +31,16 @@ namespace GameX.Base.Helpers
             return JsonConvert.DeserializeObject<Settings>(Data);
         }
 
+        public static string SerializeAppVersion(AppVersion Data)
+        {
+            return JsonConvert.SerializeObject(Data, Formatting.Indented);
+        }
+
+        public static AppVersion DeserializeAppVersion(string Data)
+        {
+            return JsonConvert.DeserializeObject<AppVersion>(Data);
+        }
+
         // NET DATA //
 
         public static string SerializeCharacterSelectionChanged(NetCharacterSelectionChange Data)
