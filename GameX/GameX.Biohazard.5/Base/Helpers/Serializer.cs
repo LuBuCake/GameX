@@ -11,16 +11,6 @@ namespace GameX.Base.Helpers
 
         // APP SETTINGS //
 
-        public static string SerializeGameXInfo(GameXInfo Data)
-        {
-            return JsonConvert.SerializeObject(Data, Formatting.Indented);
-        }
-
-        public static GameXInfo DeserializeGameXInfo(string Data)
-        {
-            return JsonConvert.DeserializeObject<GameXInfo>(Data);
-        }
-
         public static string SerializeSettings(Settings Data)
         {
             return JsonConvert.SerializeObject(Data, Formatting.Indented);
@@ -31,14 +21,14 @@ namespace GameX.Base.Helpers
             return JsonConvert.DeserializeObject<Settings>(Data);
         }
 
-        public static string SerializeAppVersion(AppVersion Data)
+        public static string SerializeGameXInfo(GameXInfo Data)
         {
             return JsonConvert.SerializeObject(Data, Formatting.Indented);
         }
 
-        public static AppVersion DeserializeAppVersion(string Data)
+        public static GameXInfo DeserializeGameXInfo(string Data)
         {
-            return JsonConvert.DeserializeObject<AppVersion>(Data);
+            return JsonConvert.DeserializeObject<GameXInfo>(Data);
         }
 
         // NET DATA //

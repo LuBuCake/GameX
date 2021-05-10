@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using System.Net.NetworkInformation;
+using System.Windows.Forms;
 
 namespace GameX.Launcher.Base.Helpers
 {
@@ -9,6 +11,20 @@ namespace GameX.Launcher.Base.Helpers
         public static int Clamp(int Value, int Min, int Max)
         {
             return Value > Max ? Max : Value < Min ? Min : Value;
+        }
+
+        public static bool TestConnection(string HostNameOrAddress, int Timeout = 1000)
+        {
+            try
+            {
+                Ping myPing = new Ping();
+                PingReply reply = myPing.Send(HostNameOrAddress, Timeout, new byte[32]);
+                return (reply.Status == IPStatus.Success);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public static Image GetImageFromStream(string File)
@@ -70,6 +86,21 @@ namespace GameX.Launcher.Base.Helpers
             }
 
             return outputImage;
+        }
+
+        public static DialogResult MessageBox_Information(string Message, MessageBoxButtons Button = MessageBoxButtons.OK)
+        {
+            return MessageBox.Show(Message, "Information", Button, MessageBoxIcon.Information);
+        }
+
+        public static DialogResult MessageBox_Error(string Message, MessageBoxButtons Button = MessageBoxButtons.OK)
+        {
+            return MessageBox.Show(Message, "Error", Button, MessageBoxIcon.Error);
+        }
+
+        public static DialogResult MessageBox_Warning(string Message, MessageBoxButtons Button = MessageBoxButtons.OK)
+        {
+            return MessageBox.Show(Message, "Warning", Button, MessageBoxIcon.Warning);
         }
     }
 }

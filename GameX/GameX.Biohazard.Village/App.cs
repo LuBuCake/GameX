@@ -251,10 +251,6 @@ namespace GameX
 
             MasterTabControl.SelectedPageChanged += MasterTabPage_PageChanged;
 
-            ConsoleModeComboBoxEdit.Properties.Items.AddRange(Interfaces.Available());
-            ConsoleModeComboBoxEdit.SelectedIndexChanged += Terminal.Interface_IndexChanged;
-            ConsoleModeComboBoxEdit.SelectedIndex = 0;
-
             ClearConsoleSimpleButton.Click += Terminal.ClearConsole_Click;
 
             SetLogo();
@@ -268,15 +264,19 @@ namespace GameX
             Color Window = CommonSkins.GetSkin(UserLookAndFeel.Default).TranslateColor(SystemColors.Window);
             int total = Window.R + Window.G + Window.B;
 
-            GameXInfo appinfo = Serializer.DeserializeGameXInfo(Serializer.ReadDataFile(@"addons/GameX.Biohazard.Village/appinfo.json"));
+            GameXInfo Game = new GameXInfo()
+            {
+                GameXLogo = new[] { "addons/GameX.Biohazard.Village/images/application/logo_a.eia", "addons/GameX.Biohazard.Village/images/application/logo_b.eia" },
+                GameXLogoColors = new[] { Color.FromArgb(220, 200, 0), Color.White },
+            };
 
-            Image LogoA = Utility.GetImageFromStream(appinfo.GameXLogo[0]);
-            Image LogoB = Utility.GetImageFromStream(appinfo.GameXLogo[1]);
+            Image LogoA = Utility.GetImageFromStream(Game.GameXLogo[0]);
+            Image LogoB = Utility.GetImageFromStream(Game.GameXLogo[1]);
 
             if (LogoA == null || LogoB == null)
                 return;
 
-            LogoA = LogoA.ColorReplace(appinfo.GameXLogoColors[0], true);
+            LogoA = LogoA.ColorReplace(Game.GameXLogoColors[0], true);
             LogoB = LogoB.ColorReplace(total > 380 ? Color.Black : Color.White, true);
 
             Image Logo = Utility.MergeImage(LogoA, LogoB);

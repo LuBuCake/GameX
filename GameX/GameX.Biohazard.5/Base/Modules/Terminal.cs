@@ -90,17 +90,6 @@ namespace GameX.Base.Modules
         {
             switch (Command[0])
             {
-                case "writeappinfo":
-                    GameXInfo appinfo = new GameXInfo()
-                    {
-                        GameXName = "Resident Evil 5",
-                        GameXFile = "addons/GameX.Biohazard.5/GameX.Biohazard.5.dll",
-                        GameXLogo = new[] { "addons/GameX.Biohazard.5/images/application/logo_a.eia", "addons/GameX.Biohazard.5/images/application/logo_b.eia" },
-                        GameXLogoColors = new[] { Color.DarkOrange, Color.White },
-                        Platform = "x86"
-                    };
-                    Serializer.WriteDataFile(@"addons/GameX.Biohazard.5/appinfo.json", Serializer.SerializeGameXInfo(appinfo));
-                    return true;
                 case "encodeimage":
                 {
                     string CurrentDirectory = $"{Directory.GetCurrentDirectory()}/";

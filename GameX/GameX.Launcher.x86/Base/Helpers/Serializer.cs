@@ -18,6 +18,16 @@ namespace GameX.Launcher.Base.Helpers
             return JsonConvert.DeserializeObject<GameXInfo>(Data);
         }
 
+        public static string SerializeAppVersion(AppVersion Data)
+        {
+            return JsonConvert.SerializeObject(Data, Formatting.Indented);
+        }
+
+        public static AppVersion DeserializeAppVersion(string Data)
+        {
+            return JsonConvert.DeserializeObject<AppVersion>(Data);
+        }
+
         #endregion
 
         #region File Writer

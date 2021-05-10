@@ -91,11 +91,6 @@ namespace GameX.Base.Helpers
             MEM_RELEASE = 0x00008000
         }
 
-        public enum ConsoleInterface
-        {
-            Console = 0
-        }
-
         public enum MessageBoxType
         {
             None = 0,

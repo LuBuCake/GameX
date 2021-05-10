@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using GameX.Updater.Base.Helpers;
 
 namespace GameX.Updater.Base.Modules
 {
@@ -23,15 +20,24 @@ namespace GameX.Updater.Base.Modules
             Main.ConsoleOutputMemoEdit.MaskBox?.MaskBoxScrollToCaret();
         }
 
-        public static void WriteLine(string Output)
+        public static void WriteLine(string Output, bool DownloadReport = false)
         {
-
             string Current = Main.ConsoleOutputMemoEdit.Text;
 
             if (string.IsNullOrWhiteSpace(Current))
                 Current = Output;
             else
-                Current += Environment.NewLine + Output;
+            {
+                if (DownloadReport && Current.Contains("[App] Downloading: "))
+                {
+                    string NewPercentage = Utility.StringBetween(Output, "[App] Downloading: ", "%");
+                    string OldPercentage = Utility.StringBetween(Current, "[App] Downloading: ", "%");
+
+                    Current = Current.Replace(OldPercentage, NewPercentage);
+                }
+                else
+                    Current += Environment.NewLine + Output;
+            }
 
             if (Main.ConsoleOutputMemoEdit.InvokeRequired)
             {

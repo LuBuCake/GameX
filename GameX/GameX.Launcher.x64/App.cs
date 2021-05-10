@@ -1,10 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.IO.Compression;
+using System.Net;
+using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using GameX.Launcher.Base.Content;
 using GameX.Launcher.Base.Helpers;
 using GameX.Launcher.Base.Types;
 
@@ -14,6 +19,9 @@ namespace GameX.Launcher
     {
         // App Init //
 
+        private GameXInfo[] Games { get; set; }
+        private GameXInfo Downloading { get; set; }
+
         public App()
         {
             InitializeComponent();
@@ -21,51 +29,38 @@ namespace GameX.Launcher
 
         private void App_Load(object sender, EventArgs e)
         {
+            CheckForLauncherUpdate();
             SetupControls();
         }
 
         private void SetupControls()
         {
+            Games = GameXInfos.Available();
+
             string AppDirectory = Directory.GetCurrentDirectory();
             string AddonsDirectory = AppDirectory + "/addons/";
 
             if (!Directory.Exists(AddonsDirectory))
                 Directory.CreateDirectory(AddonsDirectory);
 
-            string[] Dirs = Directory.GetDirectories(AddonsDirectory, "GameX.Biohazard.*");
-
-            if (Dirs.Length > 0)
+            foreach (GameXInfo Game in Games)
             {
-                List<GameXInfo> Versions = new List<GameXInfo>();
+                string AddonDir = AddonsDirectory + Game.GameXFile.Replace(".dll", "") + "/";
 
-                foreach (string Dir in Dirs)
+                if (!Directory.Exists(AddonDir) || !File.Exists(AddonDir + Game.GameXFile))
                 {
-                    if (File.Exists($"{Dir}/appinfo.json"))
-                    {
-                        GameXInfo Info = Serializer.DeserializeGameXInfo(File.ReadAllText($"{Dir}/appinfo.json"));
-
-                        if (Info.Platform == "x64")
-                            Versions.Add(Info);
-                    }
+                    Game.Downloaded = false;
+                    continue;
                 }
 
-                if (Versions.Count > 0)
-                {
-                    GameXComboEdit.SelectedIndexChanged += GameX_IndexChanged;
-                    GameXComboEdit.Properties.Items.AddRange(Versions);
-                    GameXComboEdit.SelectedIndex = 0;
-
-                    GameXButton.Click += GameX_Click;
-
-                    SelectorGP.Text = "Available addons";
-
-                    return;
-                }
+                Game.Downloaded = true;
             }
 
-            SelectorGP.Text = "No addons found";
-            GameXButton.Enabled = false;
-            GameXComboEdit.Enabled = false;
+            GameXComboEdit.Properties.Items.AddRange(Games);
+            GameXComboEdit.SelectedIndexChanged += GameX_IndexChanged;
+            GameXComboEdit.SelectedIndex = 0;
+
+            GameXButton.Click += GameX_Click;
         }
 
         // Event Handlers //
@@ -77,17 +72,51 @@ namespace GameX.Launcher
 
             try
             {
-                Image LogoA = Utility.GetImageFromStream(Info.GameXLogo[0]);
-                Image LogoB = Utility.GetImageFromStream(Info.GameXLogo[1]);
+                string AppDirectory = Directory.GetCurrentDirectory();
+                string AddonsDirectory = AppDirectory + "/addons/";
+                string AddonDir = AddonsDirectory + Info.GameXFile.Replace(".dll", "") + "/";
 
-                if (LogoA == null || LogoB == null)
+                if (!Info.Downloaded)
+                {
+                    GameXPictureEdit.Image = null;
+                    GameXButton.Text = "Download";
+                    GameXButton.Enabled = true;
                     return;
+                }
 
-                LogoA = await Task.Run(() => LogoA.ColorReplace(Info.GameXLogoColors[0], true));
-                LogoB = await Task.Run(() => LogoB.ColorReplace(Info.GameXLogoColors[1], true));
+                if (Info.Downloaded && !Info.Updated)
+                {
+                    Info.Current = AssemblyName.GetAssemblyName(AddonDir + Info.GameXFile).Version;
 
-                Image Logo = await Task.Run(() => Utility.MergeImage(LogoA, LogoB));
-                GameXPictureEdit.Image = Logo;
+                    GameXButton.Text = "Checking";
+                    GameXButton.Enabled = false;
+                    bool UpdateAvailable = await CheckForAddonUpdate(Info);
+                    GameXButton.Text = UpdateAvailable ? "Update" : "Launch";
+                    GameXButton.Enabled = true;
+                }
+                else
+                {
+                    GameXButton.Text = "Launch";
+                    GameXButton.Enabled = true;
+                }
+
+                if (Info.Logo == null)
+                {
+                    string ImagesDir = "addons/" + Info.GameXFile.Replace(".dll", "") + "/images/application/";
+
+                    Image LogoA = Utility.GetImageFromStream(ImagesDir + Info.GameXLogo[0] + ".eia");
+                    Image LogoB = Utility.GetImageFromStream(ImagesDir + Info.GameXLogo[1] + ".eia");
+
+                    if (LogoA == null || LogoB == null)
+                        return;
+
+                    LogoA = await Task.Run(() => LogoA.ColorReplace(Info.GameXLogoColors[0], true));
+                    LogoB = await Task.Run(() => LogoB.ColorReplace(Info.GameXLogoColors[1], true));
+
+                    Info.Logo = await Task.Run(() => Utility.MergeImage(LogoA, LogoB));
+                }
+
+                GameXPictureEdit.Image = Info.Logo;
             }
             catch (Exception)
             {
@@ -95,17 +124,153 @@ namespace GameX.Launcher
             }
         }
 
-        private void GameX_Click(object sender, EventArgs e)
+        private async void GameX_Click(object sender, EventArgs e)
         {
-            if (GameXComboEdit.Properties.Items.Count < 1)
+            SimpleButton SB = sender as SimpleButton;
+            GameXInfo Game = GameXComboEdit.SelectedItem as GameXInfo;
+
+            string AppDirectory = Directory.GetCurrentDirectory();
+
+            switch (SB.Text)
             {
-                DialogResult = DialogResult.OK;
+                case "Download":
+                case "Update":
+                    bool HasConnection = await Task.Run(() => Utility.TestConnection("8.8.8.8"));
+
+                    if (!HasConnection)
+                    {
+                        return;
+                    }
+
+                    string UpdaterDirectory = AppDirectory + "/updater/";
+
+                    if (!Directory.Exists(UpdaterDirectory))
+                        Directory.CreateDirectory(UpdaterDirectory);
+
+                    SB.Enabled = false;
+                    SB.Text = "Starting";
+
+                    WebClient Downloader = new WebClient();
+                    Downloader.DownloadProgressChanged += ReportDownloadProgress;
+                    Downloader.DownloadFileCompleted += DownloadFinished;
+                    Downloader.DownloadFileAsync(new Uri(Game.RepositoryRoute + "latest.zip"), UpdaterDirectory + "latest.zip");
+
+                    Downloading = Game;
+                    break;
+                case "Launch":
+                    Program.RuntimeDll = "addons/" + Game.GameXFile.Replace(".dll", "") + "/" + Game.GameXFile;
+                    DialogResult = DialogResult.OK;
+                    break;
+            }
+        }
+
+        private async Task<bool> CheckForAddonUpdate(GameXInfo Game)
+        {
+            bool HasConnection = await Task.Run(() => Utility.TestConnection("8.8.8.8"));
+
+            if (!HasConnection)
+            {
+                return false;
+            }
+
+            using (WebClient GitHubChecker = new WebClient())
+            {
+                string LatestVerion = await Task.Run(() => GitHubChecker.DownloadString(Game.RepositoryRoute + "latest.txt"));
+
+                int Current = int.Parse(Game.Current.ToString().Replace(".", ""));
+                int Latest = int.Parse(LatestVerion.Replace(".", ""));
+
+                return Current < Latest;
+            }
+        }
+
+        private async Task CheckForLauncherUpdate()
+        {
+            bool HasConnection = await Task.Run(() => Utility.TestConnection("8.8.8.8"));
+
+            if (!HasConnection)
+            {
                 return;
             }
 
-            GameXInfo Info = GameXComboEdit.SelectedItem as GameXInfo;
-            Program.RuntimeDll = Info.GameXFile;
-            DialogResult = DialogResult.OK;
+            using (WebClient GitHubChecker = new WebClient())
+            {
+                string LatestVerion = await Task.Run(() => GitHubChecker.DownloadString("https://raw.githubusercontent.com/LuBuCake/GameX.Versioning/main/GameX.Launcher.x64/latest.txt"));
+
+                Assembly CurApp = Assembly.GetExecutingAssembly();
+                AssemblyName CurName = new AssemblyName(CurApp.FullName);
+
+                int Current = int.Parse(CurName.Version.ToString().Replace(".", ""));
+                int Latest = int.Parse(LatestVerion.Replace(".", ""));
+
+                if (Current >= Latest)
+                {
+                    return;
+                }
+
+                AppVersion _version = new AppVersion()
+                {
+                    FileRoute = "https://raw.githubusercontent.com/LuBuCake/GameX.Versioning/main/GameX.Launcher.x64/latest.zip",
+                    StartLauncher = "x64"
+                };
+
+                if (Utility.MessageBox_Information($"A new launcher version is available. Click OK to update it.") == DialogResult.OK)
+                {
+                    string AppDirectory = Directory.GetCurrentDirectory();
+                    string UpdaterDirectory = AppDirectory + "/updater/";
+
+                    if (!Directory.Exists(UpdaterDirectory))
+                        Directory.CreateDirectory(UpdaterDirectory);
+
+                    Serializer.WriteDataFile(UpdaterDirectory + "updateapp.json", Serializer.SerializeAppVersion(_version));
+                    Process.Start(AppDirectory + "/Updater.exe");
+                    Application.Exit();
+                }
+            }
+        }
+
+        private void ReportDownloadProgress(object sender, DownloadProgressChangedEventArgs e)
+        {
+            GameXButton.Text = $"{e.ProgressPercentage}%";
+        }
+
+        private async void DownloadFinished(object sender, AsyncCompletedEventArgs e)
+        {
+            GameXButton.Text = "Extracting";
+            await ExtractLatestPackage();
+            GameXButton.Enabled = true;
+            GameXButton.Text = "Launch";
+
+            GameX_IndexChanged(GameXComboEdit, null);
+        }
+
+        private async Task ExtractLatestPackage()
+        {
+            string AppDirectory = Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar;
+            string ZipPath = AppDirectory + "/updater/latest.zip";
+
+            using (ZipArchive archive = ZipFile.OpenRead(ZipPath))
+            {
+                foreach (ZipArchiveEntry entry in archive.Entries)
+                {
+                    string destinationPath = Path.GetFullPath(Path.Combine(AppDirectory, entry.FullName));
+
+                    if (destinationPath.EndsWith(Path.DirectorySeparatorChar.ToString()))
+                    {
+                        if (!Directory.Exists(destinationPath))
+                            Directory.CreateDirectory(destinationPath);
+
+                        continue;
+                    }
+
+                    await Task.Run(() => entry.ExtractToFile(destinationPath, true));
+                }
+            }
+
+            Downloading.Downloaded = true;
+            Downloading = null;
+
+            Directory.Delete(AppDirectory + "/updater/", true);
         }
     }
 }

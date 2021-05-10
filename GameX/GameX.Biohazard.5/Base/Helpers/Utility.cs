@@ -121,10 +121,5 @@ namespace GameX.Base.Helpers
         {
             return MessageBox.Show(Message, "Warning", Button, MessageBoxIcon.Warning);
         }
-
-        public static DialogResult MessageBox_YesNo(string Message, MessageBoxButtons Button = MessageBoxButtons.OK)
-        {
-            return MessageBox.Show(Message, "Warning", Button, MessageBoxIcon.Information);
-        }
     }
 }

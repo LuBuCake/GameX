@@ -108,8 +108,6 @@ namespace GameX
         {
             CreatePrefabs(Enums.PrefabType.All);
             SetupControls();
-
-            Updater.CheckForUpdates(false);
         }
 
         private void Application_Update()
@@ -404,7 +402,6 @@ namespace GameX
             ConsoleModeComboBoxEdit.SelectedIndex = 0;
 
             ClearConsoleSimpleButton.Click += Terminal.ClearConsole_Click;
-            UpdateButton.Click += Update_Click;
 
             ResetHealthBars();
             SetLogo();
@@ -418,15 +415,19 @@ namespace GameX
             Color Window = CommonSkins.GetSkin(UserLookAndFeel.Default).TranslateColor(SystemColors.Window);
             int total = Window.R + Window.G + Window.B;
 
-            GameXInfo appinfo = Serializer.DeserializeGameXInfo(Serializer.ReadDataFile(@"addons/GameX.Biohazard.5/appinfo.json"));
+            GameXInfo Game = new GameXInfo()
+            {
+                GameXLogo = new[] { "addons/GameX.Biohazard.5/images/application/logo_a.eia", "addons/GameX.Biohazard.5/images/application/logo_b.eia" },
+                GameXLogoColors = new[] { Color.DarkOrange, Color.White },
+            };
 
-            Image LogoA = Utility.GetImageFromStream(appinfo.GameXLogo[0]);
-            Image LogoB = Utility.GetImageFromStream(appinfo.GameXLogo[1]);
+            Image LogoA = Utility.GetImageFromStream(Game.GameXLogo[0]);
+            Image LogoB = Utility.GetImageFromStream(Game.GameXLogo[1]);
 
             if (LogoA == null || LogoB == null)
                 return;
 
-            LogoA = LogoA.ColorReplace(appinfo.GameXLogoColors[0], true);
+            LogoA = LogoA.ColorReplace(Game.GameXLogoColors[0], true);
             LogoB = LogoB.ColorReplace(total > 380 ? Color.Black : Color.White, true);
 
             Image Logo = Utility.MergeImage(LogoA, LogoB);
@@ -563,26 +564,6 @@ namespace GameX
 
             ResetHealthBars();
             SetLogo();
-        }
-
-        private async void Update_Click(object sender, EventArgs e)
-        {
-            SimpleButton SB = sender as SimpleButton;
-
-            SB.Text = "Checking";
-            SB.Enabled = false;
-
-            try
-            {
-                await Updater.CheckForUpdates(true);
-            }
-            catch (Exception Ex)
-            {
-                Terminal.WriteLine(Ex.Message);
-            }
-
-            SB.Text = "Update";
-            SB.Enabled = true;
         }
 
         // MODS //

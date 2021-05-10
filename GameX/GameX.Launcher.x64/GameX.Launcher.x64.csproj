@@ -55,6 +55,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,9 +73,12 @@
     <Compile Include="App.Designer.cs">
       <DependentUpon>App.cs</DependentUpon>
     </Compile>
+    <Compile Include="Base\Content\GameXInfos.cs" />
     <Compile Include="Base\Helpers\Encoder.cs" />
     <Compile Include="Base\Helpers\Serializer.cs" />
+    <Compile Include="Base\Helpers\Threading.cs" />
     <Compile Include="Base\Helpers\Utility.cs" />
+    <Compile Include="Base\Types\AppVersion.cs" />
     <Compile Include="Base\Types\GameXInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

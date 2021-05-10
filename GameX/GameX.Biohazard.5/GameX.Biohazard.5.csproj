@@ -111,11 +111,9 @@
     <Compile Include="Base\Helpers\Encoder.cs" />
     <Compile Include="Base\Helpers\Enums.cs" />
     <Compile Include="Base\Helpers\Threading.cs" />
-    <Compile Include="Base\Modules\Updater.cs" />
     <Compile Include="Base\Types\GameXInfo.cs" />
     <Compile Include="Base\Types\Settings.cs" />
     <Compile Include="Base\Types\Client.cs" />
-    <Compile Include="Base\Types\AppVersion.cs" />
     <Compile Include="Game\Content\Items.cs" />
     <Compile Include="Game\Content\Miscellaneous.cs" />
     <Compile Include="Game\Helpers\GameEnums.cs" />

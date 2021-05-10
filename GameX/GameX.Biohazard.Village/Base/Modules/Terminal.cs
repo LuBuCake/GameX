@@ -11,31 +11,16 @@ namespace GameX.Base.Modules
     public static class Terminal
     {
         private static App Main { get; set; }
-        private static string[] ConsoleTextInterfaces { get; set; }
-        public static int ActiveInterface { get; private set; }
 
         public static void StartModule(App GameXRef)
         {
             Main = GameXRef;
-            ConsoleTextInterfaces = new string[3];
-            ActiveInterface = 0;
             WriteLine("[Console] Module started successfully.");
-        }
-
-        public static void Interface_IndexChanged(object sender, EventArgs e)
-        {
-            ComboBoxEdit CBE = sender as ComboBoxEdit;
-            ListItem Interface = CBE.SelectedItem as ListItem;
-
-            ActiveInterface = Interface.Value;
-            Main.ConsoleOutputMemoEdit.Text = ConsoleTextInterfaces[ActiveInterface];
-            ScrollToEnd();
         }
 
         public static void ClearConsole_Click(object sender, EventArgs e)
         {
-            ConsoleTextInterfaces[ActiveInterface] = "";
-            Main.ConsoleOutputMemoEdit.Text = ConsoleTextInterfaces[ActiveInterface];
+            Main.ConsoleOutputMemoEdit.Text = "";
         }
 
         public static void ScrollToEnd()
@@ -66,17 +51,6 @@ namespace GameX.Base.Modules
         {
             switch (Command[0])
             {
-                case "writeappinfo":
-                    GameXInfo appinfo = new GameXInfo()
-                    {
-                        GameXName = "Resident Evil Village",
-                        GameXFile = "addons/GameX.Biohazard.Village/GameX.Biohazard.Village.dll",
-                        GameXLogo = new[] { "addons/GameX.Biohazard.Village/images/application/logo_a.eia", "addons/GameX.Biohazard.Village/images/application/logo_b.eia" },
-                        GameXLogoColors = new[] { Color.FromArgb(220, 200, 0), Color.White },
-                        Platform = "x64"
-                    };
-                    Serializer.WriteDataFile(@"addons/GameX.Biohazard.Village/appinfo.json", Serializer.SerializeGameXInfo(appinfo));
-                    return true;
                 case "encodeimage":
                 {
                     string CurrentDirectory = $"{Directory.GetCurrentDirectory()}/";
@@ -182,12 +156,7 @@ namespace GameX.Base.Modules
 
             if (TE.Text != "")
             {
-                switch (ActiveInterface)
-                {
-                    case (int) Enums.ConsoleInterface.Console:
-                        ProcessCommand(TE.Text);
-                        break;
-                }
+                ProcessCommand(TE.Text);
             }
 
             TE.Text = "";
@@ -205,12 +174,6 @@ namespace GameX.Base.Modules
                     Message = Message.Replace("[Memory] ", "");
                 else if (Message.Contains("[Biohazard] "))
                     Message = Message.Replace("[Biohazard] ", "");
-                else if (Message.Contains("[Network] "))
-                    Message = Message.Replace("[Network] ", "");
-                else if (Message.Contains("[Server] "))
-                    Message = Message.Replace("[Server] ", "");
-                else if (Message.Contains("[Client] "))
-                    Message = Message.Replace("[Client] ", "");
                 else if (Message.Contains("[Console] "))
                     Message = Message.Replace("[Console] ", "");
 
@@ -228,26 +191,24 @@ namespace GameX.Base.Modules
                 }
             }
 
-            string Current = ConsoleTextInterfaces[(int) Enums.ConsoleInterface.Console];
+            string Current = Main.ConsoleOutputMemoEdit.Text;
 
             if (string.IsNullOrWhiteSpace(Current))
                 Current = Output;
             else
                 Current += Environment.NewLine + Output;
 
-            ConsoleTextInterfaces[(int) Enums.ConsoleInterface.Console] = Current;
-
             if (Main.ConsoleOutputMemoEdit.InvokeRequired)
             {
                 Main.ConsoleOutputMemoEdit.Invoke((MethodInvoker) delegate
                 {
-                    Main.ConsoleOutputMemoEdit.Text = ConsoleTextInterfaces[ActiveInterface];
+                    Main.ConsoleOutputMemoEdit.Text = Current;
                     ScrollToEnd();
                 });
                 return;
             }
 
-            Main.ConsoleOutputMemoEdit.Text = ConsoleTextInterfaces[ActiveInterface];
+            Main.ConsoleOutputMemoEdit.Text = Current;
             ScrollToEnd();
         }
     }
