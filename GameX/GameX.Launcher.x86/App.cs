@@ -151,8 +151,8 @@ namespace GameX.Launcher
                     SB.Text = "Starting";
 
                     WebClient Downloader = new WebClient();
-                    Downloader.DownloadProgressChanged += ReportDownloadProgress;
-                    Downloader.DownloadFileCompleted += DownloadFinished;
+                    Downloader.DownloadProgressChanged += ReportAddonDownloadProgress;
+                    Downloader.DownloadFileCompleted += AddonDownloadFinished;
                     Downloader.DownloadFileAsync(new Uri(Game.RepositoryRoute + "latest.zip"), UpdaterDirectory + "latest.zip");
 
                     Downloading = Game;
@@ -184,8 +184,16 @@ namespace GameX.Launcher
             }
         }
 
-        private async Task CheckForLauncherUpdate()
+        private async Task CheckForLauncherUpdate(bool IgnoreUpdater = false)
         {
+            if (!IgnoreUpdater)
+            {
+                bool UpdaterMustUpdate = await CheckForUpdaterUpdate();
+
+                if (UpdaterMustUpdate)
+                    return;
+            }
+
             bool HasConnection = await Task.Run(() => Utility.TestConnection("8.8.8.8"));
 
             if (!HasConnection)
@@ -229,12 +237,76 @@ namespace GameX.Launcher
             }
         }
 
-        private void ReportDownloadProgress(object sender, DownloadProgressChangedEventArgs e)
+        private async Task<bool> CheckForUpdaterUpdate()
+        {
+            bool HasConnection = await Task.Run(() => Utility.TestConnection("8.8.8.8"));
+
+            if (!HasConnection)
+            {
+                return false;
+            }
+
+            using (WebClient GitHubChecker = new WebClient())
+            {
+                string LatestVerion = await Task.Run(() => GitHubChecker.DownloadString("https://raw.githubusercontent.com/LuBuCake/GameX.Versioning/main/GameX.Updater/latest.txt"));
+                string FilePath = Directory.GetCurrentDirectory() + "/updater.exe";
+
+                AssemblyName CurName = new AssemblyName();
+
+                bool FileExists = File.Exists(FilePath);
+
+                if (FileExists)
+                {
+                    Assembly CurApp = Assembly.LoadFile(FilePath);
+                    CurName = new AssemblyName(CurApp.FullName);
+                }
+
+                int Current = int.Parse(FileExists ? CurName.Version.ToString().Replace(".", "") : "0");
+                int Latest = int.Parse(LatestVerion.Replace(".", ""));
+
+                if (Current >= Latest)
+                {
+                    return false;
+                }
+
+                string AppDirectory = Directory.GetCurrentDirectory();
+                string UpdaterDirectory = AppDirectory + "/updater/";
+
+                if (!Directory.Exists(UpdaterDirectory))
+                    Directory.CreateDirectory(UpdaterDirectory);
+
+                GameXButton.Enabled = false;
+                GameXComboEdit.Enabled = false;
+
+                GitHubChecker.DownloadProgressChanged += ReportUpdaterDownloadProgress;
+                GitHubChecker.DownloadFileCompleted += UpdaterDownloadFinished;
+                GitHubChecker.DownloadFileAsync(new Uri("https://raw.githubusercontent.com/LuBuCake/GameX.Versioning/main/GameX.Updater/latest.zip"), UpdaterDirectory + "latest.zip");
+
+                return true;
+            }
+        }
+
+        private void ReportUpdaterDownloadProgress(object sender, DownloadProgressChangedEventArgs e)
+        {
+            Text = $"GameX - Downloading Updater {e.ProgressPercentage}%";
+        }
+
+        private async void UpdaterDownloadFinished(object sender, AsyncCompletedEventArgs e)
+        {
+            Text = $"GameX - Extracting Updater";
+            await ExtractLatestPackage();
+            GameXButton.Enabled = true;
+            GameXComboEdit.Enabled = true;
+            Text = $"GameX - MT Framework";
+            CheckForLauncherUpdate(true);
+        }
+
+        private void ReportAddonDownloadProgress(object sender, DownloadProgressChangedEventArgs e)
         {
             GameXButton.Text = $"{e.ProgressPercentage}%";
         }
 
-        private async void DownloadFinished(object sender, AsyncCompletedEventArgs e)
+        private async void AddonDownloadFinished(object sender, AsyncCompletedEventArgs e)
         {
             GameXButton.Text = "Extracting";
             await ExtractLatestPackage();
@@ -263,12 +335,22 @@ namespace GameX.Launcher
                         continue;
                     }
 
-                    await Task.Run(() => entry.ExtractToFile(destinationPath, true));
+                    try
+                    {
+                        await Task.Run(() => entry.ExtractToFile(destinationPath, true));
+                    }
+                    catch (Exception)
+                    {
+                        // ignore
+                    }
                 }
             }
 
-            Downloading.Downloaded = true;
-            Downloading = null;
+            if (Downloading != null)
+            {
+                Downloading.Downloaded = true;
+                Downloading = null;
+            }
 
             Directory.Delete(AppDirectory + "/updater/", true);
         }
