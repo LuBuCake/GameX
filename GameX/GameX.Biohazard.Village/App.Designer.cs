@@ -51,6 +51,8 @@ namespace GameX
             this.ConsoleOutputMemoEdit = new DevExpress.XtraEditors.MemoEdit();
             this.ClearConsoleSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.ConsoleInputTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.FOVGP = new DevExpress.XtraEditors.GroupControl();
+            this.FOVTrackBar = new DevExpress.XtraEditors.TrackBarControl();
             ((System.ComponentModel.ISupportInitialize)(this.MasterTabControl)).BeginInit();
             this.MasterTabControl.SuspendLayout();
             this.TabPageMain.SuspendLayout();
@@ -73,6 +75,10 @@ namespace GameX
             this.ConsoleGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FOVGP)).BeginInit();
+            this.FOVGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FOVTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FOVTrackBar.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // MasterTabControl
@@ -98,6 +104,7 @@ namespace GameX
             // 
             this.TabPageMainGPApp.AppearanceCaption.Options.UseTextOptions = true;
             this.TabPageMainGPApp.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.TabPageMainGPApp.Controls.Add(this.FOVGP);
             this.TabPageMainGPApp.Controls.Add(this.CPPointsGP);
             this.TabPageMainGPApp.Location = new System.Drawing.Point(10, 10);
             this.TabPageMainGPApp.Margin = new System.Windows.Forms.Padding(10);
@@ -304,6 +311,28 @@ namespace GameX
             this.ConsoleInputTextEdit.Size = new System.Drawing.Size(544, 20);
             this.ConsoleInputTextEdit.TabIndex = 1;
             // 
+            // FOVGP
+            // 
+            this.FOVGP.Controls.Add(this.FOVTrackBar);
+            this.FOVGP.Location = new System.Drawing.Point(5, 99);
+            this.FOVGP.Name = "FOVGP";
+            this.FOVGP.Size = new System.Drawing.Size(175, 66);
+            this.FOVGP.TabIndex = 1;
+            this.FOVGP.Text = "FOV - 81";
+            // 
+            // FOVTrackBar
+            // 
+            this.FOVTrackBar.EditValue = 81;
+            this.FOVTrackBar.Location = new System.Drawing.Point(5, 30);
+            this.FOVTrackBar.Name = "FOVTrackBar";
+            this.FOVTrackBar.Properties.LabelAppearance.Options.UseTextOptions = true;
+            this.FOVTrackBar.Properties.LabelAppearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.FOVTrackBar.Properties.Maximum = 103;
+            this.FOVTrackBar.Properties.Minimum = 81;
+            this.FOVTrackBar.Size = new System.Drawing.Size(165, 45);
+            this.FOVTrackBar.TabIndex = 0;
+            this.FOVTrackBar.Value = 81;
+            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,6 +369,11 @@ namespace GameX
             this.ConsoleGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FOVGP)).EndInit();
+            this.FOVGP.ResumeLayout(false);
+            this.FOVGP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FOVTrackBar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FOVTrackBar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -367,6 +401,8 @@ namespace GameX
         private DevExpress.XtraEditors.GroupControl CPPointsGP;
         private DevExpress.XtraEditors.SimpleButton FreezeCPPointsButton;
         private DevExpress.XtraEditors.TextEdit CPPointsTextEdit;
+        private DevExpress.XtraEditors.GroupControl FOVGP;
+        private DevExpress.XtraEditors.TrackBarControl FOVTrackBar;
     }
 }
 

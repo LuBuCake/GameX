@@ -263,6 +263,8 @@ namespace GameX
 
             ClearConsoleSimpleButton.Click += Terminal.ClearConsole_Click;
 
+            FOVTrackBar.ValueChanged += TrackBar_ValueChanged;
+
             foreach (SimpleButton SB in FreezeUnfreezeButtons)
             {
                 SB.Click += FreezeUnfreeze_Click;
@@ -305,8 +307,7 @@ namespace GameX
 
         private void CheckDebugModeControls(bool DebugMode)
         {
-            if (DebugMode)
-                return;
+            FOVTrackBar.Enabled = DebugMode;
         }
 
         #endregion
@@ -403,6 +404,20 @@ namespace GameX
             SB.Text = SB.Text == "Freeze" ? "Frozen" : "Freeze";
         }
 
+        private void TrackBar_ValueChanged(object sender, EventArgs e)
+        {
+            TrackBarControl TBC = sender as TrackBarControl;
+
+            switch (TBC.Name)
+            {
+                case "FOVTrackBar":
+                {
+                    FOVGP.Text = $"FOV - {TBC.Value}";
+                    break;
+                }
+            }
+        }
+
         // MODS //
 
         private void EnableDisable_Click(object sender, EventArgs e)
@@ -415,8 +430,7 @@ namespace GameX
             {
                 case "InfiniteHealthButton":
                 {
-                    if (Initialized)
-                        Biohazard.InfiniteHealth(SB.Text == "Disable");
+                    
 
                     break;
                 }
@@ -450,6 +464,7 @@ namespace GameX
             try
             {
                 Biohazard.StartModule();
+                Biohazard.CustomFOV_Inject(true);
             }
             catch (Exception Ex)
             {
@@ -464,6 +479,7 @@ namespace GameX
                 if (!Biohazard.ModuleStarted)
                     return;
 
+                Biohazard.CustomFOV_Inject(false);
                 Biohazard.FinishModule();
             }
             catch (Exception Ex)
@@ -479,7 +495,7 @@ namespace GameX
                 if (!Biohazard.ModuleStarted)
                     return;
 
-                if (!CPPointsTextEdit.Focused)
+                if (!CPPointsTextEdit.ContainsFocus)
                 {
                     if (FreezeCPPointsButton.Text == "Frozen")
                     {
@@ -494,6 +510,7 @@ namespace GameX
                     }
                 }
 
+                Biohazard.CustomFOV_Update(FOVTrackBar.Value);
             }
             catch (Exception)
             {

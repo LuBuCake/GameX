@@ -1,4 +1,5 @@
-﻿using GameX.Base.Modules;
+﻿using System;
+using GameX.Base.Modules;
 using GameX.Base.Types;
 
 namespace GameX.Game.Modules
@@ -21,27 +22,46 @@ namespace GameX.Game.Modules
 
         /* Detour Mods */
 
-        public static void InfiniteHealth(bool Enable)
+        public static void CustomFOV_Inject(bool Enable)
         {
-            if (Enable && !Memory.DetourActive("MOD.Infinite_Health"))
+            if (Enable && !Memory.DetourActive("MOD.Custom_FOV"))
             {
                 byte[] DetourClean =
                 {
-                    0xC7, 0x41, 0x14, 0x00, 0x40, 0x1C, 0x46, 0xF3, 0x0F, 0x10, 0x41, 0x14
+                    0xF3, 0x0F, 0x10, 0x05, 0x05, 0x00, 0x00, 0x00,
+                    0xE9, 0X00, 0X00, 0X00, 0X00,
+                    0x00, 0x00, 0x00, 0x00
                 };
 
                 byte[] CallInstruction =
                 {
-                    0xF3, 0x0F, 0x10, 0x41, 0x14
+                    0xF3, 0x0F, 0x10, 0x40, 0x38
                 };
 
-                long CallAddress = Memory.ReadPointer("re8demo.exe", 0x2ED42CB);
-                Memory.CreateDetour("MOD.Infinite_Health", DetourClean, CallAddress, CallInstruction, true, 0x142ED42D0);
+                long CallAddress = Memory.ReadPointer("re8.exe", 0x147B44D);
+                Detour Custom_FOV = Memory.CreateDetour("MOD.Custom_FOV", DetourClean, CallAddress, CallInstruction);
+
+                if (Custom_FOV == null) 
+                    return;
+
+                byte[] jmp = Memory.DetourJump(Custom_FOV.Address() + 8, Custom_FOV.CallAddress() + 5, 5, 5, true);
+                Memory.WriteRawAddress(Custom_FOV.Address() + 9, jmp);
+                CustomFOV_Update(81);
 
                 return;
             }
 
-            Memory.RemoveDetour("MOD.Infinite_Health");
+            Memory.RemoveDetour("MOD.Custom_FOV");
+        }
+
+        public static void CustomFOV_Update(float Value)
+        {
+            if (!Memory.DetourActive("MOD.Custom_FOV"))
+                return;
+
+            byte[] ByteArray = BitConverter.GetBytes(Value);
+            Detour Custom_FOV = Memory.GetDetour("MOD.Custom_FOV");
+            Memory.WriteRawAddress(Custom_FOV.Address() + 13, ByteArray);
         }
 
         public static int GetPCPoints()
