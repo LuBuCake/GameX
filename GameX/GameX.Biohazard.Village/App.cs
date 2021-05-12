@@ -236,6 +236,16 @@ namespace GameX
         {
             #region Controls
 
+            SimpleButton[] FreezeUnfreezeButtons =
+            {
+                FreezeCPPointsButton
+            };
+
+            TextEdit[] TextEdits =
+            {
+                CPPointsTextEdit
+            };
+
             #endregion
 
             UpdateModeComboBoxEdit.Properties.Items.AddRange(Rates.Available());
@@ -252,6 +262,16 @@ namespace GameX
             MasterTabControl.SelectedPageChanged += MasterTabPage_PageChanged;
 
             ClearConsoleSimpleButton.Click += Terminal.ClearConsole_Click;
+
+            foreach (SimpleButton SB in FreezeUnfreezeButtons)
+            {
+                SB.Click += FreezeUnfreeze_Click;
+            }
+
+            foreach (TextEdit TE in TextEdits)
+            {
+                TE.KeyDown += TextEdit_KeyDown;
+            }
 
             SetLogo();
 
@@ -377,6 +397,12 @@ namespace GameX
             SetLogo();
         }
 
+        private void FreezeUnfreeze_Click(object sender, EventArgs e)
+        {
+            SimpleButton SB = sender as SimpleButton;
+            SB.Text = SB.Text == "Freeze" ? "Frozen" : "Freeze";
+        }
+
         // MODS //
 
         private void EnableDisable_Click(object sender, EventArgs e)
@@ -394,6 +420,24 @@ namespace GameX
 
                     break;
                 }
+            }
+        }
+
+        private void TextEdit_KeyDown(object sender, EventArgs e)
+        {
+            TextEdit TE = sender as TextEdit;
+
+            switch (TE.Name)
+            {
+                case "PCPointsTextEdit":
+                    if (Biohazard.ModuleStarted)
+                    {
+                        if (int.TryParse(CPPointsTextEdit.Text, out int PCPoints))
+                        {
+                            Biohazard.SetPCPoints(PCPoints);
+                        }
+                    }
+                    break;
             }
         }
 
@@ -434,6 +478,21 @@ namespace GameX
             {
                 if (!Biohazard.ModuleStarted)
                     return;
+
+                if (!CPPointsTextEdit.Focused)
+                {
+                    if (FreezeCPPointsButton.Text == "Frozen")
+                    {
+                        if (int.TryParse(CPPointsTextEdit.Text, out int PCPoints))
+                        {
+                            Biohazard.SetPCPoints(PCPoints);
+                        }
+                    }
+                    else
+                    {
+                        CPPointsTextEdit.Text = Biohazard.GetPCPoints().ToString();
+                    }
+                }
 
             }
             catch (Exception)

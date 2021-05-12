@@ -110,9 +110,7 @@
   <ItemGroup>
     <Content Include="system_control_panel_15843.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>mkdir C:\Users\madne\Desktop\x86\

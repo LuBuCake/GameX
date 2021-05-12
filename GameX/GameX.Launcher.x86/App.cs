@@ -27,9 +27,13 @@ namespace GameX.Launcher
             InitializeComponent();
         }
 
-        private void App_Load(object sender, EventArgs e)
+        private async void App_Load(object sender, EventArgs e)
         {
-            CheckForLauncherUpdate();
+            bool UpdaterMustUpdate = await CheckForLauncherUpdate();
+
+            if (UpdaterMustUpdate)
+                return;
+
             SetupControls();
         }
 
@@ -184,21 +188,21 @@ namespace GameX.Launcher
             }
         }
 
-        private async Task CheckForLauncherUpdate(bool IgnoreUpdater = false)
+        private async Task<bool> CheckForLauncherUpdate(bool IgnoreUpdater = false)
         {
             if (!IgnoreUpdater)
             {
                 bool UpdaterMustUpdate = await CheckForUpdaterUpdate();
 
                 if (UpdaterMustUpdate)
-                    return;
+                    return true;
             }
 
             bool HasConnection = await Task.Run(() => Utility.TestConnection("8.8.8.8"));
 
             if (!HasConnection)
             {
-                return;
+                return false;
             }
 
             using (WebClient GitHubChecker = new WebClient())
@@ -213,7 +217,7 @@ namespace GameX.Launcher
 
                 if (Current >= Latest)
                 {
-                    return;
+                    return false;
                 }
 
                 AppVersion _version = new AppVersion()
@@ -234,6 +238,8 @@ namespace GameX.Launcher
                     Process.Start(AppDirectory + "/Updater.exe");
                     Application.Exit();
                 }
+
+                return true;
             }
         }
 
@@ -299,6 +305,7 @@ namespace GameX.Launcher
             GameXComboEdit.Enabled = true;
             Text = $"GameX - MT Framework";
             CheckForLauncherUpdate(true);
+            SetupControls();
         }
 
         private void ReportAddonDownloadProgress(object sender, DownloadProgressChangedEventArgs e)

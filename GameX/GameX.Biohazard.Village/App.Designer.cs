@@ -33,6 +33,9 @@ namespace GameX
             this.MasterTabControl = new DevExpress.XtraTab.XtraTabControl();
             this.TabPageMain = new DevExpress.XtraTab.XtraTabPage();
             this.TabPageMainGPApp = new DevExpress.XtraEditors.GroupControl();
+            this.CPPointsGP = new DevExpress.XtraEditors.GroupControl();
+            this.FreezeCPPointsButton = new DevExpress.XtraEditors.SimpleButton();
+            this.CPPointsTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.TabPageSettings = new DevExpress.XtraTab.XtraTabPage();
             this.AppSettingsGP = new DevExpress.XtraEditors.GroupControl();
             this.AboutPictureEdit = new DevExpress.XtraEditors.PictureEdit();
@@ -52,6 +55,10 @@ namespace GameX
             this.MasterTabControl.SuspendLayout();
             this.TabPageMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageMainGPApp)).BeginInit();
+            this.TabPageMainGPApp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CPPointsGP)).BeginInit();
+            this.CPPointsGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CPPointsTextEdit.Properties)).BeginInit();
             this.TabPageSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AppSettingsGP)).BeginInit();
             this.AppSettingsGP.SuspendLayout();
@@ -91,11 +98,37 @@ namespace GameX
             // 
             this.TabPageMainGPApp.AppearanceCaption.Options.UseTextOptions = true;
             this.TabPageMainGPApp.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.TabPageMainGPApp.Controls.Add(this.CPPointsGP);
             this.TabPageMainGPApp.Location = new System.Drawing.Point(10, 10);
             this.TabPageMainGPApp.Margin = new System.Windows.Forms.Padding(10);
             this.TabPageMainGPApp.Name = "TabPageMainGPApp";
             this.TabPageMainGPApp.Size = new System.Drawing.Size(618, 418);
             this.TabPageMainGPApp.TabIndex = 0;
+            // 
+            // CPPointsGP
+            // 
+            this.CPPointsGP.Controls.Add(this.FreezeCPPointsButton);
+            this.CPPointsGP.Controls.Add(this.CPPointsTextEdit);
+            this.CPPointsGP.Location = new System.Drawing.Point(5, 30);
+            this.CPPointsGP.Name = "CPPointsGP";
+            this.CPPointsGP.Size = new System.Drawing.Size(175, 63);
+            this.CPPointsGP.TabIndex = 0;
+            this.CPPointsGP.Text = "PC Points";
+            // 
+            // FreezeCPPointsButton
+            // 
+            this.FreezeCPPointsButton.Location = new System.Drawing.Point(117, 32);
+            this.FreezeCPPointsButton.Name = "FreezeCPPointsButton";
+            this.FreezeCPPointsButton.Size = new System.Drawing.Size(48, 23);
+            this.FreezeCPPointsButton.TabIndex = 1;
+            this.FreezeCPPointsButton.Text = "Freeze";
+            // 
+            // CPPointsTextEdit
+            // 
+            this.CPPointsTextEdit.Location = new System.Drawing.Point(9, 34);
+            this.CPPointsTextEdit.Name = "CPPointsTextEdit";
+            this.CPPointsTextEdit.Size = new System.Drawing.Size(102, 20);
+            this.CPPointsTextEdit.TabIndex = 1;
             // 
             // TabPageSettings
             // 
@@ -118,14 +151,14 @@ namespace GameX
             // 
             // AboutPictureEdit
             // 
-            this.AboutPictureEdit.Location = new System.Drawing.Point(298, 30);
+            this.AboutPictureEdit.Location = new System.Drawing.Point(306, 38);
             this.AboutPictureEdit.Name = "AboutPictureEdit";
             this.AboutPictureEdit.Properties.AllowFocused = false;
             this.AboutPictureEdit.Properties.PictureInterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
             this.AboutPictureEdit.Properties.ReadOnly = true;
             this.AboutPictureEdit.Properties.ShowMenu = false;
             this.AboutPictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.AboutPictureEdit.Size = new System.Drawing.Size(313, 85);
+            this.AboutPictureEdit.Size = new System.Drawing.Size(298, 69);
             this.AboutPictureEdit.TabIndex = 0;
             this.AboutPictureEdit.UseDirectXPaint = DevExpress.Utils.DefaultBoolean.True;
             // 
@@ -197,7 +230,7 @@ namespace GameX
             // 
             this.UpdateRateLabelControl.Location = new System.Drawing.Point(13, 36);
             this.UpdateRateLabelControl.Name = "UpdateRateLabelControl";
-            this.UpdateRateLabelControl.Size = new System.Drawing.Size(27, 13);
+            this.UpdateRateLabelControl.Size = new System.Drawing.Size(26, 13);
             this.UpdateRateLabelControl.TabIndex = 0;
             this.UpdateRateLabelControl.Text = "Rate:";
             // 
@@ -205,7 +238,7 @@ namespace GameX
             // 
             this.PaletteLabelControl.Location = new System.Drawing.Point(13, 62);
             this.PaletteLabelControl.Name = "PaletteLabelControl";
-            this.PaletteLabelControl.Size = new System.Drawing.Size(23, 13);
+            this.PaletteLabelControl.Size = new System.Drawing.Size(25, 13);
             this.PaletteLabelControl.TabIndex = 0;
             this.PaletteLabelControl.Text = "Skin:";
             // 
@@ -288,6 +321,10 @@ namespace GameX
             this.MasterTabControl.ResumeLayout(false);
             this.TabPageMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TabPageMainGPApp)).EndInit();
+            this.TabPageMainGPApp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CPPointsGP)).EndInit();
+            this.CPPointsGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CPPointsTextEdit.Properties)).EndInit();
             this.TabPageSettings.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AppSettingsGP)).EndInit();
             this.AppSettingsGP.ResumeLayout(false);
@@ -327,6 +364,9 @@ namespace GameX
         private DevExpress.XtraEditors.LabelControl UpdateRateLabelControl;
         private DevExpress.XtraEditors.LabelControl PaletteLabelControl;
         private DevExpress.XtraEditors.ComboBoxEdit PaletteComboBoxEdit;
+        private DevExpress.XtraEditors.GroupControl CPPointsGP;
+        private DevExpress.XtraEditors.SimpleButton FreezeCPPointsButton;
+        private DevExpress.XtraEditors.TextEdit CPPointsTextEdit;
     }
 }
 

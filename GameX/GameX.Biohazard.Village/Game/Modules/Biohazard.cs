@@ -43,5 +43,15 @@ namespace GameX.Game.Modules
 
             Memory.RemoveDetour("MOD.Infinite_Health");
         }
+
+        public static int GetPCPoints()
+        {
+            return Memory.ReadInt32("re8.exe", 0x0A1B1B08, 0x60, 0x18);
+        }
+
+        public static void SetPCPoints(int Value)
+        {
+            Memory.WriteInt32(Value, "re8.exe", 0x0A1B1B08, 0x60, 0x18);
+        }
     }
 }
