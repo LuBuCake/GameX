@@ -3,6 +3,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 using GameX.Base.Modules;
 
 namespace GameX.Base.Helpers
@@ -109,17 +110,17 @@ namespace GameX.Base.Helpers
 
         public static DialogResult MessageBox_Information(string Message, MessageBoxButtons Button = MessageBoxButtons.OK)
         {
-            return MessageBox.Show(Message, "Information", Button, MessageBoxIcon.Information);
+            return XtraMessageBox.Show(Message, "Information", Button, MessageBoxIcon.Information);
         }
 
         public static DialogResult MessageBox_Error(string Message, MessageBoxButtons Button = MessageBoxButtons.OK)
         {
-            return MessageBox.Show(Message, "Error", Button, MessageBoxIcon.Error);
+            return XtraMessageBox.Show(Message, "Error", Button, MessageBoxIcon.Error);
         }
 
         public static DialogResult MessageBox_Warning(string Message, MessageBoxButtons Button = MessageBoxButtons.OK)
         {
-            return MessageBox.Show(Message, "Warning", Button, MessageBoxIcon.Warning);
+            return XtraMessageBox.Show(Message, "Warning", Button, MessageBoxIcon.Warning);
         }
     }
 }

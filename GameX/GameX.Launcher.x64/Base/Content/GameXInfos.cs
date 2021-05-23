@@ -30,7 +30,7 @@ namespace GameX.Launcher.Base.Content
                 GameXName = "Resident Evil 7",
                 GameXFile = "GameX.Biohazard.7.dll",
                 GameXLogo = new[] { "logo_a", "logo_b" },
-                GameXLogoColors = new[] { Color.FromArgb(220, 200, 0), Color.White },
+                GameXLogoColors = new[] { Color.Red, Color.White },
                 RepositoryRoute = "https://raw.githubusercontent.com/LuBuCake/GameX.Versioning/main/GameX.Biohazard.7/"
             };
 
@@ -39,7 +39,7 @@ namespace GameX.Launcher.Base.Content
                 GameXName = "Resident Evil Village",
                 GameXFile = "GameX.Biohazard.Village.dll",
                 GameXLogo = new[] { "logo_a", "logo_b" },
-                GameXLogoColors = new[] { Color.FromArgb(220, 200, 0), Color.White },
+                GameXLogoColors = new[] { Color.Red, Color.White },
                 RepositoryRoute = "https://raw.githubusercontent.com/LuBuCake/GameX.Versioning/main/GameX.Biohazard.Village/"
             };
 

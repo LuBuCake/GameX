@@ -236,14 +236,21 @@ namespace GameX
         {
             #region Controls
 
-            SimpleButton[] FreezeUnfreezeButtons =
+            SimpleButton[] SimpleButtons =
             {
-                FreezeCPPointsButton
+                FreezeCPPointsButton,
+                FreezeLeiButton,
+                InfiniteHealthButton,
+                InfiniteAmmoButton,
+                InfiniteCraftButton,
+                RecipeBypassButton,
+                FlashlightButton
             };
 
             TextEdit[] TextEdits =
             {
-                CPPointsTextEdit
+                CPPointsTextEdit,
+                LeiTextEdit
             };
 
             #endregion
@@ -263,16 +270,21 @@ namespace GameX
 
             ClearConsoleSimpleButton.Click += Terminal.ClearConsole_Click;
 
-            FOVTrackBar.ValueChanged += TrackBar_ValueChanged;
+            FOVNormalTrackBar.ValueChanged += TrackBar_ValueChanged;
+            FOVNormalTrackBar.Value = 81;
 
-            foreach (SimpleButton SB in FreezeUnfreezeButtons)
+            FOVAimingTrackBar.ValueChanged += TrackBar_ValueChanged;
+            FOVAimingTrackBar.Value = 70;
+
+            foreach (SimpleButton SB in SimpleButtons)
             {
-                SB.Click += FreezeUnfreeze_Click;
+                SB.Click += SimpleButton_Click;
             }
 
             foreach (TextEdit TE in TextEdits)
             {
-                TE.KeyDown += TextEdit_KeyDown;
+                TE.KeyPress += TextEdit_KeyEvent;
+                TE.LostFocus += TextEdit_KeyEvent;
             }
 
             SetLogo();
@@ -289,7 +301,7 @@ namespace GameX
             GameXInfo Game = new GameXInfo()
             {
                 GameXLogo = new[] { "addons/GameX.Biohazard.Village/images/application/logo_a.eia", "addons/GameX.Biohazard.Village/images/application/logo_b.eia" },
-                GameXLogoColors = new[] { Color.FromArgb(220, 200, 0), Color.White },
+                GameXLogoColors = new[] { Color.Red, Color.White },
             };
 
             Image LogoA = Utility.GetImageFromStream(Game.GameXLogo[0]);
@@ -307,7 +319,15 @@ namespace GameX
 
         private void CheckDebugModeControls(bool DebugMode)
         {
-            FOVTrackBar.Enabled = DebugMode;
+            FOVNormalTrackBar.Enabled = DebugMode;
+            FOVAimingTrackBar.Enabled = DebugMode;
+            InfiniteAmmoButton.Enabled = DebugMode;
+            InfiniteHealthButton.Enabled = DebugMode;
+            RecipeBypassButton.Enabled = DebugMode;
+
+            InfiniteAmmoButton.Text = DebugMode ? InfiniteAmmoButton.Text : "Enable";
+            InfiniteHealthButton.Text = DebugMode ? InfiniteHealthButton.Text : "Enable";
+            RecipeBypassButton.Text = DebugMode ? RecipeBypassButton.Text : "Enable";
         }
 
         #endregion
@@ -398,10 +418,33 @@ namespace GameX
             SetLogo();
         }
 
-        private void FreezeUnfreeze_Click(object sender, EventArgs e)
+        private void SimpleButton_Click(object sender, EventArgs e)
         {
             SimpleButton SB = sender as SimpleButton;
-            SB.Text = SB.Text == "Freeze" ? "Frozen" : "Freeze";
+            SB.Text = SB.Text == "Freeze" || SB.Text == "Frozen" ? SB.Text == "Freeze" ? "Frozen" : "Freeze"
+                    : SB.Text == "Enable" || SB.Text == "Disable" ? SB.Text == "Enable" ? "Disable" : "Enable" : "NaN";
+
+            if (!Biohazard.ModuleStarted)
+                return;
+
+            switch (SB.Name)
+            {
+                case "InfiniteHealthButton":
+
+                    break;
+                case "InfiniteAmmoButton":
+
+                    break;
+                case "InfiniteCraftButton":
+                    Biohazard.CraftCheck(SB.Text == "Disable");
+                    break;
+                case "RecipeBypassButton":
+
+                    break;
+                case "FlashlightButton":
+                    Biohazard.Flashlight(SB.Text == "Disable");
+                    break;
+            }
         }
 
         private void TrackBar_ValueChanged(object sender, EventArgs e)
@@ -410,46 +453,45 @@ namespace GameX
 
             switch (TBC.Name)
             {
-                case "FOVTrackBar":
+                case "FOVNormalTrackBar":
                 {
-                    FOVGP.Text = $"FOV - {TBC.Value}";
+                    FOVNormalGP.Text = $"FOV Normal - {TBC.Value}";
+
+                    if (Biohazard.ModuleStarted)
+                        Biohazard.CustomFOVNormal_SetValue(FOVNormalTrackBar.Value);
+
                     break;
                 }
-            }
-        }
-
-        // MODS //
-
-        private void EnableDisable_Click(object sender, EventArgs e)
-        {
-            SimpleButton SB = sender as SimpleButton;
-
-            SB.Text = SB.Text == "Enable" ? "Disable" : "Enable";
-
-            switch (SB.Name)
-            {
-                case "InfiniteHealthButton":
+                case "FOVAimingTrackBar":
                 {
-                    
+                    FOVAimingGP.Text = $"FOV Aiming - {TBC.Value}";
+
+                    if (Biohazard.ModuleStarted)
+                        Biohazard.CustomFOVAiming_SetValue(FOVAimingTrackBar.Value);
 
                     break;
                 }
             }
         }
 
-        private void TextEdit_KeyDown(object sender, EventArgs e)
+        private void TextEdit_KeyEvent(object sender, EventArgs e)
         {
             TextEdit TE = sender as TextEdit;
 
             switch (TE.Name)
             {
-                case "PCPointsTextEdit":
+                case "CPPointsTextEdit":
                     if (Biohazard.ModuleStarted)
                     {
-                        if (int.TryParse(CPPointsTextEdit.Text, out int PCPoints))
-                        {
-                            Biohazard.SetPCPoints(PCPoints);
-                        }
+                        if (int.TryParse(CPPointsTextEdit.Text, out int CPPoints))
+                            Biohazard.SetCPPoints(CPPoints);
+                    }
+                    break;
+                case "LeiTextEdit":
+                    if (Biohazard.ModuleStarted)
+                    {
+                        if (int.TryParse(LeiTextEdit.Text, out int Lei))
+                            Biohazard.SetLei(Lei);
                     }
                     break;
             }
@@ -459,12 +501,57 @@ namespace GameX
 
         #region GameX Calls
 
+        private void GameX_CheckControls()
+        {
+            SimpleButton[] Buttons =
+            {
+                InfiniteHealthButton,
+                InfiniteAmmoButton,
+                InfiniteCraftButton,
+                RecipeBypassButton,
+                FlashlightButton
+            };
+
+            foreach (SimpleButton SB in Buttons)
+            {
+                switch (SB.Name)
+                {
+                    case "InfiniteHealthButton":
+
+                        break;
+                    case "InfiniteAmmoButton":
+
+                        break;
+                    case "InfiniteCraftButton":
+                        if (SB.Text == "Disable")
+                            Biohazard.CraftCheck(true);
+                        break;
+                    case "RecipeBypassButton":
+
+                        break;
+                    case "FlashlightButton":
+                        if (SB.Text == "Disable")
+                            Biohazard.Flashlight(true);
+                        break;
+                }
+            }
+        }
+
+        private void GameX_ClearControls()
+        {
+            LeiTextEdit.Text = "";
+            CPPointsTextEdit.Text = "";
+        }
+
         private void GameX_Start()
         {
             try
             {
                 Biohazard.StartModule();
-                Biohazard.CustomFOV_Inject(true);
+                Biohazard.CustomFOVNormal_Inject(true);
+                Biohazard.CustomFOVAiming_Inject(true);
+
+                GameX_CheckControls();
             }
             catch (Exception Ex)
             {
@@ -479,8 +566,11 @@ namespace GameX
                 if (!Biohazard.ModuleStarted)
                     return;
 
-                Biohazard.CustomFOV_Inject(false);
+                Biohazard.CustomFOVNormal_Inject(false);
+                Biohazard.CustomFOVAiming_Inject(false);
                 Biohazard.FinishModule();
+
+                GameX_ClearControls();
             }
             catch (Exception Ex)
             {
@@ -501,16 +591,29 @@ namespace GameX
                     {
                         if (int.TryParse(CPPointsTextEdit.Text, out int PCPoints))
                         {
-                            Biohazard.SetPCPoints(PCPoints);
+                            Biohazard.SetCPPoints(PCPoints);
                         }
                     }
                     else
                     {
-                        CPPointsTextEdit.Text = Biohazard.GetPCPoints().ToString();
+                        CPPointsTextEdit.Text = Biohazard.GetCPPoints().ToString();
                     }
                 }
 
-                Biohazard.CustomFOV_Update(FOVTrackBar.Value);
+                if (!LeiTextEdit.ContainsFocus)
+                {
+                    if (FreezeLeiButton.Text == "Frozen")
+                    {
+                        if (int.TryParse(LeiTextEdit.Text, out int Lei))
+                        {
+                            Biohazard.SetLei(Lei);
+                        }
+                    }
+                    else
+                    {
+                        LeiTextEdit.Text = Biohazard.GetLei().ToString();
+                    }
+                }
             }
             catch (Exception)
             {
@@ -518,11 +621,26 @@ namespace GameX
             }
         }
 
-        private void GameX_Keyboard(int input)
+        public void GameX_Keyboard(int input)
         {
-            if (!Initialized)
-                return;
-
+            switch (input)
+            {
+                case (int)Keyboard.VK.PAGEUP:
+                    FOVNormalTrackBar.Value = Utility.Clamp(FOVNormalTrackBar.Value - 1, FOVNormalTrackBar.Properties.Minimum, FOVNormalTrackBar.Properties.Maximum);
+                    break;
+                case (int)Keyboard.VK.PAGEDOWN:
+                    FOVNormalTrackBar.Value = Utility.Clamp(FOVNormalTrackBar.Value + 1, FOVNormalTrackBar.Properties.Minimum, FOVNormalTrackBar.Properties.Maximum);
+                    break;
+                case (int)Keyboard.VK.SUBTRACT:
+                    FOVAimingTrackBar.Value = Utility.Clamp(FOVAimingTrackBar.Value - 1, FOVAimingTrackBar.Properties.Minimum, FOVAimingTrackBar.Properties.Maximum);
+                    break;
+                case (int)Keyboard.VK.ADD:
+                    FOVAimingTrackBar.Value = Utility.Clamp(FOVAimingTrackBar.Value + 1, FOVAimingTrackBar.Properties.Minimum, FOVAimingTrackBar.Properties.Maximum);
+                    break;
+                case (int)Keyboard.VK.DIVIDE:
+                    FlashlightButton.PerformClick();
+                    break;
+            }
         }
 
         #endregion

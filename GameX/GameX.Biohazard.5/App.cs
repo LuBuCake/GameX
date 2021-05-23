@@ -418,7 +418,7 @@ namespace GameX
             GameXInfo Game = new GameXInfo()
             {
                 GameXLogo = new[] { "addons/GameX.Biohazard.5/images/application/logo_a.eia", "addons/GameX.Biohazard.5/images/application/logo_b.eia" },
-                GameXLogoColors = new[] { Color.DarkOrange, Color.White },
+                GameXLogoColors = new[] { Color.Red, Color.White },
             };
 
             Image LogoA = Utility.GetImageFromStream(Game.GameXLogo[0]);

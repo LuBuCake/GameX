@@ -12,7 +12,7 @@ namespace GameX.Launcher.Base.Content
                 GameXName = "Resident Evil 5", 
                 GameXFile = "GameX.Biohazard.5.dll",
                 GameXLogo = new[] { "logo_a", "logo_b" },
-                GameXLogoColors = new [] {Color.DarkOrange, Color.White },
+                GameXLogoColors = new [] {Color.Red, Color.White },
                 RepositoryRoute = "https://raw.githubusercontent.com/LuBuCake/GameX.Versioning/main/GameX.Biohazard.5/"
             };
 
@@ -21,7 +21,7 @@ namespace GameX.Launcher.Base.Content
                 GameXName = "Resident Evil 6",
                 GameXFile = "GameX.Biohazard.6.dll",
                 GameXLogo = new[] { "logo_a", "logo_b" },
-                GameXLogoColors = new[] { Color.FromArgb(0,120,255), Color.White },
+                GameXLogoColors = new[] { Color.Red, Color.White },
                 RepositoryRoute = "https://raw.githubusercontent.com/LuBuCake/GameX.Versioning/main/GameX.Biohazard.6/"
             };
 
@@ -30,7 +30,7 @@ namespace GameX.Launcher.Base.Content
                 GameXName = "Resident Evil Revelations",
                 GameXFile = "GameX.Biohazard.Rev.1.dll",
                 GameXLogo = new[] { "logo_a", "logo_b" },
-                GameXLogoColors = new[] { Color.RoyalBlue, Color.White },
+                GameXLogoColors = new[] { Color.Red, Color.White },
                 RepositoryRoute = "https://raw.githubusercontent.com/LuBuCake/GameX.Versioning/main/GameX.Biohazard.Revelations.1/"
             };
 

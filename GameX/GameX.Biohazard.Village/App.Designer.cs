@@ -33,6 +33,21 @@ namespace GameX
             this.MasterTabControl = new DevExpress.XtraTab.XtraTabControl();
             this.TabPageMain = new DevExpress.XtraTab.XtraTabPage();
             this.TabPageMainGPApp = new DevExpress.XtraEditors.GroupControl();
+            this.FlashlightGP = new DevExpress.XtraEditors.GroupControl();
+            this.FlashlightButton = new DevExpress.XtraEditors.SimpleButton();
+            this.RecipeGP = new DevExpress.XtraEditors.GroupControl();
+            this.RecipeBypassButton = new DevExpress.XtraEditors.SimpleButton();
+            this.CraftGP = new DevExpress.XtraEditors.GroupControl();
+            this.InfiniteCraftButton = new DevExpress.XtraEditors.SimpleButton();
+            this.LeiGP = new DevExpress.XtraEditors.GroupControl();
+            this.FreezeLeiButton = new DevExpress.XtraEditors.SimpleButton();
+            this.LeiTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.AmmoGP = new DevExpress.XtraEditors.GroupControl();
+            this.InfiniteAmmoButton = new DevExpress.XtraEditors.SimpleButton();
+            this.HPGP = new DevExpress.XtraEditors.GroupControl();
+            this.InfiniteHealthButton = new DevExpress.XtraEditors.SimpleButton();
+            this.FOVNormalGP = new DevExpress.XtraEditors.GroupControl();
+            this.FOVNormalTrackBar = new DevExpress.XtraEditors.TrackBarControl();
             this.CPPointsGP = new DevExpress.XtraEditors.GroupControl();
             this.FreezeCPPointsButton = new DevExpress.XtraEditors.SimpleButton();
             this.CPPointsTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -51,13 +66,30 @@ namespace GameX
             this.ConsoleOutputMemoEdit = new DevExpress.XtraEditors.MemoEdit();
             this.ClearConsoleSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.ConsoleInputTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.FOVGP = new DevExpress.XtraEditors.GroupControl();
-            this.FOVTrackBar = new DevExpress.XtraEditors.TrackBarControl();
+            this.FOVAimingGP = new DevExpress.XtraEditors.GroupControl();
+            this.FOVAimingTrackBar = new DevExpress.XtraEditors.TrackBarControl();
             ((System.ComponentModel.ISupportInitialize)(this.MasterTabControl)).BeginInit();
             this.MasterTabControl.SuspendLayout();
             this.TabPageMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageMainGPApp)).BeginInit();
             this.TabPageMainGPApp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FlashlightGP)).BeginInit();
+            this.FlashlightGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RecipeGP)).BeginInit();
+            this.RecipeGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CraftGP)).BeginInit();
+            this.CraftGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LeiGP)).BeginInit();
+            this.LeiGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LeiTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmmoGP)).BeginInit();
+            this.AmmoGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HPGP)).BeginInit();
+            this.HPGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FOVNormalGP)).BeginInit();
+            this.FOVNormalGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FOVNormalTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FOVNormalTrackBar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CPPointsGP)).BeginInit();
             this.CPPointsGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPPointsTextEdit.Properties)).BeginInit();
@@ -75,10 +107,10 @@ namespace GameX
             this.ConsoleGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FOVGP)).BeginInit();
-            this.FOVGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FOVTrackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FOVTrackBar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FOVAimingGP)).BeginInit();
+            this.FOVAimingGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FOVAimingTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FOVAimingTrackBar.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // MasterTabControl
@@ -104,7 +136,14 @@ namespace GameX
             // 
             this.TabPageMainGPApp.AppearanceCaption.Options.UseTextOptions = true;
             this.TabPageMainGPApp.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.TabPageMainGPApp.Controls.Add(this.FOVGP);
+            this.TabPageMainGPApp.Controls.Add(this.FOVAimingGP);
+            this.TabPageMainGPApp.Controls.Add(this.FlashlightGP);
+            this.TabPageMainGPApp.Controls.Add(this.RecipeGP);
+            this.TabPageMainGPApp.Controls.Add(this.CraftGP);
+            this.TabPageMainGPApp.Controls.Add(this.LeiGP);
+            this.TabPageMainGPApp.Controls.Add(this.AmmoGP);
+            this.TabPageMainGPApp.Controls.Add(this.HPGP);
+            this.TabPageMainGPApp.Controls.Add(this.FOVNormalGP);
             this.TabPageMainGPApp.Controls.Add(this.CPPointsGP);
             this.TabPageMainGPApp.Location = new System.Drawing.Point(10, 10);
             this.TabPageMainGPApp.Margin = new System.Windows.Forms.Padding(10);
@@ -112,20 +151,172 @@ namespace GameX
             this.TabPageMainGPApp.Size = new System.Drawing.Size(618, 418);
             this.TabPageMainGPApp.TabIndex = 0;
             // 
+            // FlashlightGP
+            // 
+            this.FlashlightGP.AppearanceCaption.Options.UseTextOptions = true;
+            this.FlashlightGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.FlashlightGP.Controls.Add(this.FlashlightButton);
+            this.FlashlightGP.Location = new System.Drawing.Point(307, 96);
+            this.FlashlightGP.Name = "FlashlightGP";
+            this.FlashlightGP.Size = new System.Drawing.Size(150, 60);
+            this.FlashlightGP.TabIndex = 7;
+            this.FlashlightGP.Text = "Force Flashlight";
+            // 
+            // FlashlightButton
+            // 
+            this.FlashlightButton.Location = new System.Drawing.Point(6, 31);
+            this.FlashlightButton.Name = "FlashlightButton";
+            this.FlashlightButton.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
+            this.FlashlightButton.Size = new System.Drawing.Size(138, 23);
+            this.FlashlightButton.TabIndex = 3;
+            this.FlashlightButton.Text = "Enable";
+            // 
+            // RecipeGP
+            // 
+            this.RecipeGP.AppearanceCaption.Options.UseTextOptions = true;
+            this.RecipeGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.RecipeGP.Controls.Add(this.RecipeBypassButton);
+            this.RecipeGP.Location = new System.Drawing.Point(463, 96);
+            this.RecipeGP.Name = "RecipeGP";
+            this.RecipeGP.Size = new System.Drawing.Size(150, 60);
+            this.RecipeGP.TabIndex = 6;
+            this.RecipeGP.Text = "Recipe Bypass";
+            // 
+            // RecipeBypassButton
+            // 
+            this.RecipeBypassButton.Location = new System.Drawing.Point(6, 31);
+            this.RecipeBypassButton.Name = "RecipeBypassButton";
+            this.RecipeBypassButton.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
+            this.RecipeBypassButton.Size = new System.Drawing.Size(138, 23);
+            this.RecipeBypassButton.TabIndex = 3;
+            this.RecipeBypassButton.Text = "Enable";
+            // 
+            // CraftGP
+            // 
+            this.CraftGP.AppearanceCaption.Options.UseTextOptions = true;
+            this.CraftGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.CraftGP.Controls.Add(this.InfiniteCraftButton);
+            this.CraftGP.Location = new System.Drawing.Point(515, 30);
+            this.CraftGP.Name = "CraftGP";
+            this.CraftGP.Size = new System.Drawing.Size(98, 60);
+            this.CraftGP.TabIndex = 5;
+            this.CraftGP.Text = "∞ Crafting";
+            // 
+            // InfiniteCraftButton
+            // 
+            this.InfiniteCraftButton.Location = new System.Drawing.Point(6, 31);
+            this.InfiniteCraftButton.Name = "InfiniteCraftButton";
+            this.InfiniteCraftButton.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
+            this.InfiniteCraftButton.Size = new System.Drawing.Size(86, 23);
+            this.InfiniteCraftButton.TabIndex = 3;
+            this.InfiniteCraftButton.Text = "Enable";
+            // 
+            // LeiGP
+            // 
+            this.LeiGP.Controls.Add(this.FreezeLeiButton);
+            this.LeiGP.Controls.Add(this.LeiTextEdit);
+            this.LeiGP.Location = new System.Drawing.Point(463, 162);
+            this.LeiGP.Name = "LeiGP";
+            this.LeiGP.Size = new System.Drawing.Size(150, 63);
+            this.LeiGP.TabIndex = 4;
+            this.LeiGP.Text = "Lei";
+            // 
+            // FreezeLeiButton
+            // 
+            this.FreezeLeiButton.AllowFocus = false;
+            this.FreezeLeiButton.Location = new System.Drawing.Point(96, 32);
+            this.FreezeLeiButton.Name = "FreezeLeiButton";
+            this.FreezeLeiButton.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
+            this.FreezeLeiButton.Size = new System.Drawing.Size(48, 23);
+            this.FreezeLeiButton.TabIndex = 1;
+            this.FreezeLeiButton.Text = "Freeze";
+            // 
+            // LeiTextEdit
+            // 
+            this.LeiTextEdit.Location = new System.Drawing.Point(9, 34);
+            this.LeiTextEdit.Name = "LeiTextEdit";
+            this.LeiTextEdit.Size = new System.Drawing.Size(81, 20);
+            this.LeiTextEdit.TabIndex = 1;
+            // 
+            // AmmoGP
+            // 
+            this.AmmoGP.AppearanceCaption.Options.UseTextOptions = true;
+            this.AmmoGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.AmmoGP.Controls.Add(this.InfiniteAmmoButton);
+            this.AmmoGP.Location = new System.Drawing.Point(411, 30);
+            this.AmmoGP.Name = "AmmoGP";
+            this.AmmoGP.Size = new System.Drawing.Size(98, 60);
+            this.AmmoGP.TabIndex = 3;
+            this.AmmoGP.Text = "∞ Ammo";
+            // 
+            // InfiniteAmmoButton
+            // 
+            this.InfiniteAmmoButton.Location = new System.Drawing.Point(6, 31);
+            this.InfiniteAmmoButton.Name = "InfiniteAmmoButton";
+            this.InfiniteAmmoButton.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
+            this.InfiniteAmmoButton.Size = new System.Drawing.Size(86, 23);
+            this.InfiniteAmmoButton.TabIndex = 3;
+            this.InfiniteAmmoButton.Text = "Enable";
+            // 
+            // HPGP
+            // 
+            this.HPGP.AppearanceCaption.Options.UseTextOptions = true;
+            this.HPGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.HPGP.Controls.Add(this.InfiniteHealthButton);
+            this.HPGP.Location = new System.Drawing.Point(307, 30);
+            this.HPGP.Name = "HPGP";
+            this.HPGP.Size = new System.Drawing.Size(98, 60);
+            this.HPGP.TabIndex = 2;
+            this.HPGP.Text = "∞ Health";
+            // 
+            // InfiniteHealthButton
+            // 
+            this.InfiniteHealthButton.Location = new System.Drawing.Point(6, 31);
+            this.InfiniteHealthButton.Name = "InfiniteHealthButton";
+            this.InfiniteHealthButton.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
+            this.InfiniteHealthButton.Size = new System.Drawing.Size(86, 23);
+            this.InfiniteHealthButton.TabIndex = 3;
+            this.InfiniteHealthButton.Text = "Enable";
+            // 
+            // FOVNormalGP
+            // 
+            this.FOVNormalGP.Controls.Add(this.FOVNormalTrackBar);
+            this.FOVNormalGP.Location = new System.Drawing.Point(307, 231);
+            this.FOVNormalGP.Name = "FOVNormalGP";
+            this.FOVNormalGP.Size = new System.Drawing.Size(150, 66);
+            this.FOVNormalGP.TabIndex = 1;
+            this.FOVNormalGP.Text = "FOV Normal";
+            // 
+            // FOVNormalTrackBar
+            // 
+            this.FOVNormalTrackBar.EditValue = 103;
+            this.FOVNormalTrackBar.Location = new System.Drawing.Point(5, 30);
+            this.FOVNormalTrackBar.Name = "FOVNormalTrackBar";
+            this.FOVNormalTrackBar.Properties.LabelAppearance.Options.UseTextOptions = true;
+            this.FOVNormalTrackBar.Properties.LabelAppearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.FOVNormalTrackBar.Properties.LargeChange = 0;
+            this.FOVNormalTrackBar.Properties.Maximum = 103;
+            this.FOVNormalTrackBar.Properties.Minimum = 70;
+            this.FOVNormalTrackBar.Size = new System.Drawing.Size(140, 45);
+            this.FOVNormalTrackBar.TabIndex = 0;
+            this.FOVNormalTrackBar.Value = 103;
+            // 
             // CPPointsGP
             // 
             this.CPPointsGP.Controls.Add(this.FreezeCPPointsButton);
             this.CPPointsGP.Controls.Add(this.CPPointsTextEdit);
-            this.CPPointsGP.Location = new System.Drawing.Point(5, 30);
+            this.CPPointsGP.Location = new System.Drawing.Point(307, 162);
             this.CPPointsGP.Name = "CPPointsGP";
-            this.CPPointsGP.Size = new System.Drawing.Size(175, 63);
+            this.CPPointsGP.Size = new System.Drawing.Size(150, 63);
             this.CPPointsGP.TabIndex = 0;
-            this.CPPointsGP.Text = "PC Points";
+            this.CPPointsGP.Text = "CP Points";
             // 
             // FreezeCPPointsButton
             // 
-            this.FreezeCPPointsButton.Location = new System.Drawing.Point(117, 32);
+            this.FreezeCPPointsButton.AllowFocus = false;
+            this.FreezeCPPointsButton.Location = new System.Drawing.Point(96, 32);
             this.FreezeCPPointsButton.Name = "FreezeCPPointsButton";
+            this.FreezeCPPointsButton.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
             this.FreezeCPPointsButton.Size = new System.Drawing.Size(48, 23);
             this.FreezeCPPointsButton.TabIndex = 1;
             this.FreezeCPPointsButton.Text = "Freeze";
@@ -134,7 +325,7 @@ namespace GameX
             // 
             this.CPPointsTextEdit.Location = new System.Drawing.Point(9, 34);
             this.CPPointsTextEdit.Name = "CPPointsTextEdit";
-            this.CPPointsTextEdit.Size = new System.Drawing.Size(102, 20);
+            this.CPPointsTextEdit.Size = new System.Drawing.Size(81, 20);
             this.CPPointsTextEdit.TabIndex = 1;
             // 
             // TabPageSettings
@@ -311,27 +502,28 @@ namespace GameX
             this.ConsoleInputTextEdit.Size = new System.Drawing.Size(544, 20);
             this.ConsoleInputTextEdit.TabIndex = 1;
             // 
-            // FOVGP
+            // FOVAimingGP
             // 
-            this.FOVGP.Controls.Add(this.FOVTrackBar);
-            this.FOVGP.Location = new System.Drawing.Point(5, 99);
-            this.FOVGP.Name = "FOVGP";
-            this.FOVGP.Size = new System.Drawing.Size(175, 66);
-            this.FOVGP.TabIndex = 1;
-            this.FOVGP.Text = "FOV - 81";
+            this.FOVAimingGP.Controls.Add(this.FOVAimingTrackBar);
+            this.FOVAimingGP.Location = new System.Drawing.Point(463, 231);
+            this.FOVAimingGP.Name = "FOVAimingGP";
+            this.FOVAimingGP.Size = new System.Drawing.Size(150, 66);
+            this.FOVAimingGP.TabIndex = 8;
+            this.FOVAimingGP.Text = "FOV Aiming";
             // 
-            // FOVTrackBar
+            // FOVAimingTrackBar
             // 
-            this.FOVTrackBar.EditValue = 81;
-            this.FOVTrackBar.Location = new System.Drawing.Point(5, 30);
-            this.FOVTrackBar.Name = "FOVTrackBar";
-            this.FOVTrackBar.Properties.LabelAppearance.Options.UseTextOptions = true;
-            this.FOVTrackBar.Properties.LabelAppearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.FOVTrackBar.Properties.Maximum = 103;
-            this.FOVTrackBar.Properties.Minimum = 81;
-            this.FOVTrackBar.Size = new System.Drawing.Size(165, 45);
-            this.FOVTrackBar.TabIndex = 0;
-            this.FOVTrackBar.Value = 81;
+            this.FOVAimingTrackBar.EditValue = 103;
+            this.FOVAimingTrackBar.Location = new System.Drawing.Point(5, 30);
+            this.FOVAimingTrackBar.Name = "FOVAimingTrackBar";
+            this.FOVAimingTrackBar.Properties.LabelAppearance.Options.UseTextOptions = true;
+            this.FOVAimingTrackBar.Properties.LabelAppearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.FOVAimingTrackBar.Properties.LargeChange = 0;
+            this.FOVAimingTrackBar.Properties.Maximum = 103;
+            this.FOVAimingTrackBar.Properties.Minimum = 70;
+            this.FOVAimingTrackBar.Size = new System.Drawing.Size(140, 45);
+            this.FOVAimingTrackBar.TabIndex = 0;
+            this.FOVAimingTrackBar.Value = 103;
             // 
             // App
             // 
@@ -351,6 +543,24 @@ namespace GameX
             this.TabPageMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TabPageMainGPApp)).EndInit();
             this.TabPageMainGPApp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.FlashlightGP)).EndInit();
+            this.FlashlightGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.RecipeGP)).EndInit();
+            this.RecipeGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CraftGP)).EndInit();
+            this.CraftGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LeiGP)).EndInit();
+            this.LeiGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LeiTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmmoGP)).EndInit();
+            this.AmmoGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.HPGP)).EndInit();
+            this.HPGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.FOVNormalGP)).EndInit();
+            this.FOVNormalGP.ResumeLayout(false);
+            this.FOVNormalGP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FOVNormalTrackBar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FOVNormalTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CPPointsGP)).EndInit();
             this.CPPointsGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CPPointsTextEdit.Properties)).EndInit();
@@ -369,11 +579,11 @@ namespace GameX
             this.ConsoleGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FOVGP)).EndInit();
-            this.FOVGP.ResumeLayout(false);
-            this.FOVGP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FOVTrackBar.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FOVTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FOVAimingGP)).EndInit();
+            this.FOVAimingGP.ResumeLayout(false);
+            this.FOVAimingGP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FOVAimingTrackBar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FOVAimingTrackBar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -401,8 +611,23 @@ namespace GameX
         private DevExpress.XtraEditors.GroupControl CPPointsGP;
         private DevExpress.XtraEditors.SimpleButton FreezeCPPointsButton;
         private DevExpress.XtraEditors.TextEdit CPPointsTextEdit;
-        private DevExpress.XtraEditors.GroupControl FOVGP;
-        private DevExpress.XtraEditors.TrackBarControl FOVTrackBar;
+        private DevExpress.XtraEditors.GroupControl FOVNormalGP;
+        private DevExpress.XtraEditors.TrackBarControl FOVNormalTrackBar;
+        private DevExpress.XtraEditors.GroupControl HPGP;
+        private DevExpress.XtraEditors.SimpleButton InfiniteHealthButton;
+        private DevExpress.XtraEditors.GroupControl AmmoGP;
+        private DevExpress.XtraEditors.SimpleButton InfiniteAmmoButton;
+        private DevExpress.XtraEditors.GroupControl LeiGP;
+        private DevExpress.XtraEditors.SimpleButton FreezeLeiButton;
+        private DevExpress.XtraEditors.TextEdit LeiTextEdit;
+        private DevExpress.XtraEditors.GroupControl RecipeGP;
+        private DevExpress.XtraEditors.SimpleButton RecipeBypassButton;
+        private DevExpress.XtraEditors.GroupControl CraftGP;
+        private DevExpress.XtraEditors.SimpleButton InfiniteCraftButton;
+        private DevExpress.XtraEditors.GroupControl FlashlightGP;
+        private DevExpress.XtraEditors.SimpleButton FlashlightButton;
+        private DevExpress.XtraEditors.GroupControl FOVAimingGP;
+        private DevExpress.XtraEditors.TrackBarControl FOVAimingTrackBar;
     }
 }
 
