@@ -341,7 +341,7 @@ namespace GameX
             XtraTabControl XTC = sender as XtraTabControl;
             XtraTabPage XTP = XTC.SelectedTabPage;
 
-            if (XTP.Name != "TabPageConsole")
+            if (XTP.Name != "TabPageSettings")
                 return;
 
             Terminal.ScrollToEnd();
@@ -430,16 +430,16 @@ namespace GameX
             switch (SB.Name)
             {
                 case "InfiniteHealthButton":
-
+                    Biohazard.InfiniteHealth_Inject(SB.Text == "Disable");
                     break;
                 case "InfiniteAmmoButton":
-
+                    Biohazard.InfiniteAmmo(SB.Text == "Disable");
                     break;
                 case "InfiniteCraftButton":
                     Biohazard.CraftCheck(SB.Text == "Disable");
                     break;
                 case "RecipeBypassButton":
-
+                    Biohazard.RecipeBypassCheck_Inject(SB.Text == "Disable");
                     break;
                 case "FlashlightButton":
                     Biohazard.Flashlight(SB.Text == "Disable");
@@ -514,24 +514,25 @@ namespace GameX
 
             foreach (SimpleButton SB in Buttons)
             {
+                if (SB.Text != "Disable")
+                    continue;
+
                 switch (SB.Name)
                 {
                     case "InfiniteHealthButton":
-
+                        Biohazard.InfiniteHealth_Inject(true);
                         break;
                     case "InfiniteAmmoButton":
-
+                        Biohazard.InfiniteAmmo(true);
                         break;
                     case "InfiniteCraftButton":
-                        if (SB.Text == "Disable")
-                            Biohazard.CraftCheck(true);
+                        Biohazard.CraftCheck(true);
                         break;
                     case "RecipeBypassButton":
-
+                        Biohazard.RecipeBypassCheck_Inject(true);
                         break;
                     case "FlashlightButton":
-                        if (SB.Text == "Disable")
-                            Biohazard.Flashlight(true);
+                        Biohazard.Flashlight(true);
                         break;
                 }
             }
