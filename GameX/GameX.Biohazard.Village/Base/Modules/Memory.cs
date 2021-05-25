@@ -242,7 +242,6 @@ namespace GameX.Base.Modules
             {
                 Terminal.WriteLine("[Memory] Failed entering debug mode.");
                 Terminal.WriteLine("[Memory] WARNING: Code injection is only allowed in Admin Mode, expect limitations in User Mode.");
-                Utility.MessageBox_Warning("Code injection is only allowed in Admin Mode, expect limitations in User Mode.");
                 DebugMode = false;
                 return;
             }

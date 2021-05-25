@@ -220,6 +220,8 @@ namespace GameX
             Memory.FinishModule();
             Biohazard.FinishModule();
 
+            GameX_ClearControls();
+
             Target_Process?.Dispose();
             Target_Process = null;
             Verified = false;
@@ -570,8 +572,6 @@ namespace GameX
                 Biohazard.CustomFOVNormal_Inject(false);
                 Biohazard.CustomFOVAiming_Inject(false);
                 Biohazard.FinishModule();
-
-                GameX_ClearControls();
             }
             catch (Exception Ex)
             {
@@ -626,16 +626,16 @@ namespace GameX
         {
             switch (input)
             {
-                case (int)Keyboard.VK.PAGEUP:
+                case (int)Keyboard.VK.PAGEUP when !Memory.ModuleStarted || Memory.ModuleStarted && Memory.DebugMode:
                     FOVNormalTrackBar.Value = Utility.Clamp(FOVNormalTrackBar.Value - 1, FOVNormalTrackBar.Properties.Minimum, FOVNormalTrackBar.Properties.Maximum);
                     break;
-                case (int)Keyboard.VK.PAGEDOWN:
+                case (int)Keyboard.VK.PAGEDOWN when !Memory.ModuleStarted || Memory.ModuleStarted && Memory.DebugMode:
                     FOVNormalTrackBar.Value = Utility.Clamp(FOVNormalTrackBar.Value + 1, FOVNormalTrackBar.Properties.Minimum, FOVNormalTrackBar.Properties.Maximum);
                     break;
-                case (int)Keyboard.VK.SUBTRACT:
+                case (int)Keyboard.VK.SUBTRACT when !Memory.ModuleStarted || Memory.ModuleStarted && Memory.DebugMode:
                     FOVAimingTrackBar.Value = Utility.Clamp(FOVAimingTrackBar.Value - 1, FOVAimingTrackBar.Properties.Minimum, FOVAimingTrackBar.Properties.Maximum);
                     break;
-                case (int)Keyboard.VK.ADD:
+                case (int)Keyboard.VK.ADD when !Memory.ModuleStarted || Memory.ModuleStarted && Memory.DebugMode:
                     FOVAimingTrackBar.Value = Utility.Clamp(FOVAimingTrackBar.Value + 1, FOVAimingTrackBar.Properties.Minimum, FOVAimingTrackBar.Properties.Maximum);
                     break;
                 case (int)Keyboard.VK.DIVIDE:
