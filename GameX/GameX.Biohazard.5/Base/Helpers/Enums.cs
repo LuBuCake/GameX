@@ -93,9 +93,7 @@ namespace GameX.Base.Helpers
 
         public enum ConsoleInterface
         {
-            Console = 0,
-            Server = 1,
-            Client = 2
+            Console = 0
         }
 
         public enum MessageBoxType

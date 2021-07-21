@@ -94,31 +94,6 @@ namespace GameX
             this.P1HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.TabPageInventory = new DevExpress.XtraTab.XtraTabPage();
             this.TabPageSettings = new DevExpress.XtraTab.XtraTabPage();
-            this.NetworkMasterGP = new DevExpress.XtraEditors.GroupControl();
-            this.ServerInfoGP = new DevExpress.XtraEditors.GroupControl();
-            this.ServerStatusTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.BuddyClientsGP = new DevExpress.XtraEditors.GroupControl();
-            this.P1ClientGP = new DevExpress.XtraEditors.GroupControl();
-            this.P1DropSimpleButton = new DevExpress.XtraEditors.SimpleButton();
-            this.P1ClientLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.P2ClientGP = new DevExpress.XtraEditors.GroupControl();
-            this.P2DropSimpleButton = new DevExpress.XtraEditors.SimpleButton();
-            this.P2ClientLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.P3ClientGP = new DevExpress.XtraEditors.GroupControl();
-            this.P3DropSimpleButton = new DevExpress.XtraEditors.SimpleButton();
-            this.P3ClientLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.BuddyServerGP = new DevExpress.XtraEditors.GroupControl();
-            this.BuddyServerPortTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.BuddyServerPortLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.BuddyServerConnectionButton = new DevExpress.XtraEditors.SimpleButton();
-            this.BuddyServerIPLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.BuddyServerIPTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.NetworkModuleGP = new DevExpress.XtraEditors.GroupControl();
-            this.NetworkManagerButton = new DevExpress.XtraEditors.SimpleButton();
-            this.ServerManagerGP = new DevExpress.XtraEditors.GroupControl();
-            this.StartServerButton = new DevExpress.XtraEditors.SimpleButton();
-            this.ServerPortTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ServerPortLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.TabPageSettingsGPApp = new DevExpress.XtraEditors.GroupControl();
             this.MiscModsGP = new DevExpress.XtraEditors.GroupControl();
             this.MiscExtraGP = new DevExpress.XtraEditors.GroupControl();
@@ -208,28 +183,6 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.P1HandnessComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1HealthBar.Properties)).BeginInit();
             this.TabPageSettings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NetworkMasterGP)).BeginInit();
-            this.NetworkMasterGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ServerInfoGP)).BeginInit();
-            this.ServerInfoGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ServerStatusTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BuddyClientsGP)).BeginInit();
-            this.BuddyClientsGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P1ClientGP)).BeginInit();
-            this.P1ClientGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P2ClientGP)).BeginInit();
-            this.P2ClientGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P3ClientGP)).BeginInit();
-            this.P3ClientGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BuddyServerGP)).BeginInit();
-            this.BuddyServerGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BuddyServerPortTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BuddyServerIPTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NetworkModuleGP)).BeginInit();
-            this.NetworkModuleGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ServerManagerGP)).BeginInit();
-            this.ServerManagerGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ServerPortTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageSettingsGPApp)).BeginInit();
             this.TabPageSettingsGPApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MiscModsGP)).BeginInit();
@@ -1119,304 +1072,10 @@ namespace GameX
             // 
             // TabPageSettings
             // 
-            this.TabPageSettings.Controls.Add(this.NetworkMasterGP);
             this.TabPageSettings.Controls.Add(this.TabPageSettingsGPApp);
             this.TabPageSettings.Name = "TabPageSettings";
             this.TabPageSettings.Size = new System.Drawing.Size(638, 438);
             this.TabPageSettings.Text = "Settings";
-            // 
-            // NetworkMasterGP
-            // 
-            this.NetworkMasterGP.Controls.Add(this.ServerInfoGP);
-            this.NetworkMasterGP.Controls.Add(this.BuddyClientsGP);
-            this.NetworkMasterGP.Controls.Add(this.BuddyServerGP);
-            this.NetworkMasterGP.Controls.Add(this.NetworkModuleGP);
-            this.NetworkMasterGP.Controls.Add(this.ServerManagerGP);
-            this.NetworkMasterGP.Location = new System.Drawing.Point(8, 10);
-            this.NetworkMasterGP.Name = "NetworkMasterGP";
-            this.NetworkMasterGP.Size = new System.Drawing.Size(308, 418);
-            this.NetworkMasterGP.TabIndex = 0;
-            this.NetworkMasterGP.Text = "Networking";
-            // 
-            // ServerInfoGP
-            // 
-            this.ServerInfoGP.Controls.Add(this.ServerStatusTextEdit);
-            this.ServerInfoGP.Location = new System.Drawing.Point(5, 104);
-            this.ServerInfoGP.Name = "ServerInfoGP";
-            this.ServerInfoGP.Size = new System.Drawing.Size(298, 60);
-            this.ServerInfoGP.TabIndex = 0;
-            this.ServerInfoGP.Text = "Info";
-            // 
-            // ServerStatusTextEdit
-            // 
-            this.ServerStatusTextEdit.CausesValidation = false;
-            this.ServerStatusTextEdit.EditValue = "Server offline";
-            this.ServerStatusTextEdit.Location = new System.Drawing.Point(9, 33);
-            this.ServerStatusTextEdit.Name = "ServerStatusTextEdit";
-            this.ServerStatusTextEdit.Properties.AllowFocused = false;
-            this.ServerStatusTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.ServerStatusTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.ServerStatusTextEdit.Properties.ReadOnly = true;
-            this.ServerStatusTextEdit.Properties.UseReadOnlyAppearance = false;
-            this.ServerStatusTextEdit.Size = new System.Drawing.Size(283, 20);
-            this.ServerStatusTextEdit.TabIndex = 0;
-            this.ServerStatusTextEdit.TabStop = false;
-            this.ServerStatusTextEdit.ToolTip = "Shows the server status, type \"GetIP\" in the console to get the available IPs and" +
-    " pair it with the shown Port for a connection.";
-            this.ServerStatusTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.ServerStatusTextEdit.ToolTipTitle = "Server Info";
-            // 
-            // BuddyClientsGP
-            // 
-            this.BuddyClientsGP.Controls.Add(this.P1ClientGP);
-            this.BuddyClientsGP.Controls.Add(this.P2ClientGP);
-            this.BuddyClientsGP.Controls.Add(this.P3ClientGP);
-            this.BuddyClientsGP.Location = new System.Drawing.Point(5, 240);
-            this.BuddyClientsGP.Name = "BuddyClientsGP";
-            this.BuddyClientsGP.Size = new System.Drawing.Size(298, 173);
-            this.BuddyClientsGP.TabIndex = 0;
-            this.BuddyClientsGP.Text = "Clients";
-            // 
-            // P1ClientGP
-            // 
-            this.P1ClientGP.Controls.Add(this.P1DropSimpleButton);
-            this.P1ClientGP.Controls.Add(this.P1ClientLabelControl);
-            this.P1ClientGP.Location = new System.Drawing.Point(5, 30);
-            this.P1ClientGP.Name = "P1ClientGP";
-            this.P1ClientGP.ShowCaption = false;
-            this.P1ClientGP.Size = new System.Drawing.Size(288, 42);
-            this.P1ClientGP.TabIndex = 0;
-            // 
-            // P1DropSimpleButton
-            // 
-            this.P1DropSimpleButton.AllowFocus = false;
-            this.P1DropSimpleButton.Enabled = false;
-            this.P1DropSimpleButton.Location = new System.Drawing.Point(152, 11);
-            this.P1DropSimpleButton.Name = "P1DropSimpleButton";
-            this.P1DropSimpleButton.Size = new System.Drawing.Size(119, 20);
-            this.P1DropSimpleButton.TabIndex = 0;
-            this.P1DropSimpleButton.TabStop = false;
-            this.P1DropSimpleButton.Text = "Drop Client";
-            this.P1DropSimpleButton.ToolTip = "Drops the client from the server leaving the slot free for another client.";
-            this.P1DropSimpleButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P1DropSimpleButton.ToolTipTitle = "Drop Client";
-            // 
-            // P1ClientLabelControl
-            // 
-            this.P1ClientLabelControl.Location = new System.Drawing.Point(15, 14);
-            this.P1ClientLabelControl.Name = "P1ClientLabelControl";
-            this.P1ClientLabelControl.Size = new System.Drawing.Size(94, 13);
-            this.P1ClientLabelControl.TabIndex = 0;
-            this.P1ClientLabelControl.Text = "No client connected";
-            // 
-            // P2ClientGP
-            // 
-            this.P2ClientGP.Controls.Add(this.P2DropSimpleButton);
-            this.P2ClientGP.Controls.Add(this.P2ClientLabelControl);
-            this.P2ClientGP.Location = new System.Drawing.Point(5, 78);
-            this.P2ClientGP.Name = "P2ClientGP";
-            this.P2ClientGP.ShowCaption = false;
-            this.P2ClientGP.Size = new System.Drawing.Size(288, 42);
-            this.P2ClientGP.TabIndex = 0;
-            // 
-            // P2DropSimpleButton
-            // 
-            this.P2DropSimpleButton.AllowFocus = false;
-            this.P2DropSimpleButton.Enabled = false;
-            this.P2DropSimpleButton.Location = new System.Drawing.Point(152, 11);
-            this.P2DropSimpleButton.Name = "P2DropSimpleButton";
-            this.P2DropSimpleButton.Size = new System.Drawing.Size(119, 20);
-            this.P2DropSimpleButton.TabIndex = 0;
-            this.P2DropSimpleButton.TabStop = false;
-            this.P2DropSimpleButton.Text = "Drop Client";
-            this.P2DropSimpleButton.ToolTip = "Drops the client from the server leaving the slot free for another client.";
-            this.P2DropSimpleButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2DropSimpleButton.ToolTipTitle = "Drop Client";
-            // 
-            // P2ClientLabelControl
-            // 
-            this.P2ClientLabelControl.Location = new System.Drawing.Point(15, 14);
-            this.P2ClientLabelControl.Name = "P2ClientLabelControl";
-            this.P2ClientLabelControl.Size = new System.Drawing.Size(94, 13);
-            this.P2ClientLabelControl.TabIndex = 0;
-            this.P2ClientLabelControl.Text = "No client connected";
-            // 
-            // P3ClientGP
-            // 
-            this.P3ClientGP.Controls.Add(this.P3DropSimpleButton);
-            this.P3ClientGP.Controls.Add(this.P3ClientLabelControl);
-            this.P3ClientGP.Location = new System.Drawing.Point(5, 126);
-            this.P3ClientGP.Name = "P3ClientGP";
-            this.P3ClientGP.ShowCaption = false;
-            this.P3ClientGP.Size = new System.Drawing.Size(288, 42);
-            this.P3ClientGP.TabIndex = 0;
-            // 
-            // P3DropSimpleButton
-            // 
-            this.P3DropSimpleButton.AllowFocus = false;
-            this.P3DropSimpleButton.Enabled = false;
-            this.P3DropSimpleButton.Location = new System.Drawing.Point(152, 11);
-            this.P3DropSimpleButton.Name = "P3DropSimpleButton";
-            this.P3DropSimpleButton.Size = new System.Drawing.Size(119, 20);
-            this.P3DropSimpleButton.TabIndex = 0;
-            this.P3DropSimpleButton.TabStop = false;
-            this.P3DropSimpleButton.Text = "Drop Client";
-            this.P3DropSimpleButton.ToolTip = "Drops the client from the server leaving the slot free for another client.";
-            this.P3DropSimpleButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3DropSimpleButton.ToolTipTitle = "Drop Client";
-            // 
-            // P3ClientLabelControl
-            // 
-            this.P3ClientLabelControl.Location = new System.Drawing.Point(15, 14);
-            this.P3ClientLabelControl.Name = "P3ClientLabelControl";
-            this.P3ClientLabelControl.Size = new System.Drawing.Size(94, 13);
-            this.P3ClientLabelControl.TabIndex = 0;
-            this.P3ClientLabelControl.Text = "No client connected";
-            // 
-            // BuddyServerGP
-            // 
-            this.BuddyServerGP.Controls.Add(this.BuddyServerPortTextEdit);
-            this.BuddyServerGP.Controls.Add(this.BuddyServerPortLabelControl);
-            this.BuddyServerGP.Controls.Add(this.BuddyServerConnectionButton);
-            this.BuddyServerGP.Controls.Add(this.BuddyServerIPLabelControl);
-            this.BuddyServerGP.Controls.Add(this.BuddyServerIPTextEdit);
-            this.BuddyServerGP.Location = new System.Drawing.Point(5, 170);
-            this.BuddyServerGP.Name = "BuddyServerGP";
-            this.BuddyServerGP.Size = new System.Drawing.Size(298, 64);
-            this.BuddyServerGP.TabIndex = 0;
-            this.BuddyServerGP.Text = "Server";
-            // 
-            // BuddyServerPortTextEdit
-            // 
-            this.BuddyServerPortTextEdit.CausesValidation = false;
-            this.BuddyServerPortTextEdit.EditValue = "";
-            this.BuddyServerPortTextEdit.Location = new System.Drawing.Point(157, 35);
-            this.BuddyServerPortTextEdit.Name = "BuddyServerPortTextEdit";
-            this.BuddyServerPortTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.BuddyServerPortTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.BuddyServerPortTextEdit.Properties.ValidateOnEnterKey = true;
-            this.BuddyServerPortTextEdit.Size = new System.Drawing.Size(51, 20);
-            this.BuddyServerPortTextEdit.TabIndex = 2;
-            this.BuddyServerPortTextEdit.ToolTip = "Defines the Port for a connection.";
-            this.BuddyServerPortTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.BuddyServerPortTextEdit.ToolTipTitle = "IP Address";
-            // 
-            // BuddyServerPortLabelControl
-            // 
-            this.BuddyServerPortLabelControl.Location = new System.Drawing.Point(127, 38);
-            this.BuddyServerPortLabelControl.Name = "BuddyServerPortLabelControl";
-            this.BuddyServerPortLabelControl.Size = new System.Drawing.Size(24, 13);
-            this.BuddyServerPortLabelControl.TabIndex = 0;
-            this.BuddyServerPortLabelControl.Text = "Port:";
-            // 
-            // BuddyServerConnectionButton
-            // 
-            this.BuddyServerConnectionButton.AllowFocus = false;
-            this.BuddyServerConnectionButton.Enabled = false;
-            this.BuddyServerConnectionButton.Location = new System.Drawing.Point(214, 33);
-            this.BuddyServerConnectionButton.Name = "BuddyServerConnectionButton";
-            this.BuddyServerConnectionButton.Size = new System.Drawing.Size(78, 23);
-            this.BuddyServerConnectionButton.TabIndex = 0;
-            this.BuddyServerConnectionButton.TabStop = false;
-            this.BuddyServerConnectionButton.Text = "Connect";
-            this.BuddyServerConnectionButton.ToolTip = "Connects to a server specified by the IP and Port.";
-            this.BuddyServerConnectionButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.BuddyServerConnectionButton.ToolTipTitle = "Server connection";
-            // 
-            // BuddyServerIPLabelControl
-            // 
-            this.BuddyServerIPLabelControl.Location = new System.Drawing.Point(7, 38);
-            this.BuddyServerIPLabelControl.Name = "BuddyServerIPLabelControl";
-            this.BuddyServerIPLabelControl.Size = new System.Drawing.Size(14, 13);
-            this.BuddyServerIPLabelControl.TabIndex = 0;
-            this.BuddyServerIPLabelControl.Text = "IP:";
-            // 
-            // BuddyServerIPTextEdit
-            // 
-            this.BuddyServerIPTextEdit.CausesValidation = false;
-            this.BuddyServerIPTextEdit.EditValue = "";
-            this.BuddyServerIPTextEdit.Location = new System.Drawing.Point(25, 35);
-            this.BuddyServerIPTextEdit.Name = "BuddyServerIPTextEdit";
-            this.BuddyServerIPTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.BuddyServerIPTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.BuddyServerIPTextEdit.Properties.ValidateOnEnterKey = true;
-            this.BuddyServerIPTextEdit.Size = new System.Drawing.Size(96, 20);
-            this.BuddyServerIPTextEdit.TabIndex = 1;
-            this.BuddyServerIPTextEdit.ToolTip = "Defines the IP address for a connection.";
-            this.BuddyServerIPTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.BuddyServerIPTextEdit.ToolTipTitle = "IP Address";
-            // 
-            // NetworkModuleGP
-            // 
-            this.NetworkModuleGP.Controls.Add(this.NetworkManagerButton);
-            this.NetworkModuleGP.Location = new System.Drawing.Point(5, 30);
-            this.NetworkModuleGP.Name = "NetworkModuleGP";
-            this.NetworkModuleGP.Size = new System.Drawing.Size(120, 69);
-            this.NetworkModuleGP.TabIndex = 0;
-            this.NetworkModuleGP.Text = "Module";
-            // 
-            // NetworkManagerButton
-            // 
-            this.NetworkManagerButton.AllowFocus = false;
-            this.NetworkManagerButton.Location = new System.Drawing.Point(9, 35);
-            this.NetworkManagerButton.Name = "NetworkManagerButton";
-            this.NetworkManagerButton.Size = new System.Drawing.Size(102, 23);
-            this.NetworkManagerButton.TabIndex = 0;
-            this.NetworkManagerButton.TabStop = false;
-            this.NetworkManagerButton.Text = "Enable";
-            this.NetworkManagerButton.ToolTip = "Enables the Network module if a local connection is available.";
-            this.NetworkManagerButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.NetworkManagerButton.ToolTipTitle = "Server connection";
-            // 
-            // ServerManagerGP
-            // 
-            this.ServerManagerGP.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.ServerManagerGP.Controls.Add(this.StartServerButton);
-            this.ServerManagerGP.Controls.Add(this.ServerPortTextEdit);
-            this.ServerManagerGP.Controls.Add(this.ServerPortLabelControl);
-            this.ServerManagerGP.Location = new System.Drawing.Point(131, 30);
-            this.ServerManagerGP.Name = "ServerManagerGP";
-            this.ServerManagerGP.Size = new System.Drawing.Size(172, 69);
-            this.ServerManagerGP.TabIndex = 0;
-            this.ServerManagerGP.Text = "Server";
-            // 
-            // StartServerButton
-            // 
-            this.StartServerButton.AllowFocus = false;
-            this.StartServerButton.Enabled = false;
-            this.StartServerButton.Location = new System.Drawing.Point(93, 35);
-            this.StartServerButton.Name = "StartServerButton";
-            this.StartServerButton.Size = new System.Drawing.Size(73, 23);
-            this.StartServerButton.TabIndex = 20;
-            this.StartServerButton.TabStop = false;
-            this.StartServerButton.Text = "Open";
-            this.StartServerButton.ToolTip = "Opens a server at the specified Port.";
-            this.StartServerButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.StartServerButton.ToolTipTitle = "Server connection";
-            // 
-            // ServerPortTextEdit
-            // 
-            this.ServerPortTextEdit.CausesValidation = false;
-            this.ServerPortTextEdit.EditValue = "5004";
-            this.ServerPortTextEdit.Location = new System.Drawing.Point(36, 37);
-            this.ServerPortTextEdit.Name = "ServerPortTextEdit";
-            this.ServerPortTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.ServerPortTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.ServerPortTextEdit.Properties.ValidateOnEnterKey = true;
-            this.ServerPortTextEdit.Size = new System.Drawing.Size(51, 20);
-            this.ServerPortTextEdit.TabIndex = 0;
-            this.ServerPortTextEdit.TabStop = false;
-            this.ServerPortTextEdit.ToolTip = "Defines the port which a server would be hosted in.";
-            this.ServerPortTextEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.ServerPortTextEdit.ToolTipTitle = "Server Port";
-            // 
-            // ServerPortLabelControl
-            // 
-            this.ServerPortLabelControl.Location = new System.Drawing.Point(7, 40);
-            this.ServerPortLabelControl.Name = "ServerPortLabelControl";
-            this.ServerPortLabelControl.Size = new System.Drawing.Size(24, 13);
-            this.ServerPortLabelControl.TabIndex = 19;
-            this.ServerPortLabelControl.Text = "Port:";
             // 
             // TabPageSettingsGPApp
             // 
@@ -1590,7 +1249,7 @@ namespace GameX
             // 
             this.PlayerNameLabelControl.Location = new System.Drawing.Point(15, 10);
             this.PlayerNameLabelControl.Name = "PlayerNameLabelControl";
-            this.PlayerNameLabelControl.Size = new System.Drawing.Size(31, 13);
+            this.PlayerNameLabelControl.Size = new System.Drawing.Size(32, 13);
             this.PlayerNameLabelControl.TabIndex = 7;
             this.PlayerNameLabelControl.Text = "Name:";
             // 
@@ -1628,7 +1287,7 @@ namespace GameX
             // 
             this.UpdateRateLabelControl.Location = new System.Drawing.Point(15, 36);
             this.UpdateRateLabelControl.Name = "UpdateRateLabelControl";
-            this.UpdateRateLabelControl.Size = new System.Drawing.Size(27, 13);
+            this.UpdateRateLabelControl.Size = new System.Drawing.Size(26, 13);
             this.UpdateRateLabelControl.TabIndex = 0;
             this.UpdateRateLabelControl.Text = "Rate:";
             // 
@@ -1636,7 +1295,7 @@ namespace GameX
             // 
             this.PaletteLabelControl.Location = new System.Drawing.Point(15, 62);
             this.PaletteLabelControl.Name = "PaletteLabelControl";
-            this.PaletteLabelControl.Size = new System.Drawing.Size(23, 13);
+            this.PaletteLabelControl.Size = new System.Drawing.Size(25, 13);
             this.PaletteLabelControl.TabIndex = 0;
             this.PaletteLabelControl.Text = "Skin:";
             // 
@@ -1834,33 +1493,6 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.P1HandnessComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1HealthBar.Properties)).EndInit();
             this.TabPageSettings.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.NetworkMasterGP)).EndInit();
-            this.NetworkMasterGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ServerInfoGP)).EndInit();
-            this.ServerInfoGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ServerStatusTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BuddyClientsGP)).EndInit();
-            this.BuddyClientsGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.P1ClientGP)).EndInit();
-            this.P1ClientGP.ResumeLayout(false);
-            this.P1ClientGP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P2ClientGP)).EndInit();
-            this.P2ClientGP.ResumeLayout(false);
-            this.P2ClientGP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P3ClientGP)).EndInit();
-            this.P3ClientGP.ResumeLayout(false);
-            this.P3ClientGP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BuddyServerGP)).EndInit();
-            this.BuddyServerGP.ResumeLayout(false);
-            this.BuddyServerGP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BuddyServerPortTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BuddyServerIPTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NetworkModuleGP)).EndInit();
-            this.NetworkModuleGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ServerManagerGP)).EndInit();
-            this.ServerManagerGP.ResumeLayout(false);
-            this.ServerManagerGP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ServerPortTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageSettingsGPApp)).EndInit();
             this.TabPageSettingsGPApp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MiscModsGP)).EndInit();
@@ -1955,39 +1587,14 @@ namespace GameX
         private DevExpress.XtraEditors.CheckButton P2RapidfireButton;
         private DevExpress.XtraEditors.CheckButton P2InfiniteHPButton;
         private DevExpress.XtraEditors.CheckButton P2UntargetableButton;
-        private DevExpress.XtraEditors.GroupControl BuddyServerGP;
-        private DevExpress.XtraEditors.LabelControl BuddyServerIPLabelControl;
         private DevExpress.XtraEditors.PictureEdit AboutPictureEdit;
-        public DevExpress.XtraEditors.TextEdit BuddyServerIPTextEdit;
-        public DevExpress.XtraEditors.SimpleButton BuddyServerConnectionButton;
-        public DevExpress.XtraEditors.GroupControl NetworkMasterGP;
         private DevExpress.XtraTab.XtraTabPage TabPageConsole;
         private DevExpress.XtraEditors.GroupControl ConsoleGP;
-        public DevExpress.XtraEditors.TextEdit BuddyServerPortTextEdit;
-        private DevExpress.XtraEditors.LabelControl BuddyServerPortLabelControl;
-        private DevExpress.XtraEditors.GroupControl NetworkModuleGP;
-        private DevExpress.XtraEditors.GroupControl ServerInfoGP;
-        private DevExpress.XtraEditors.GroupControl ServerManagerGP;
-        public DevExpress.XtraEditors.TextEdit ServerPortTextEdit;
-        private DevExpress.XtraEditors.LabelControl ServerPortLabelControl;
-        private DevExpress.XtraEditors.GroupControl BuddyClientsGP;
-        public DevExpress.XtraEditors.TextEdit ServerStatusTextEdit;
-        private DevExpress.XtraEditors.GroupControl P1ClientGP;
-        private DevExpress.XtraEditors.GroupControl P2ClientGP;
-        private DevExpress.XtraEditors.GroupControl P3ClientGP;
-        public DevExpress.XtraEditors.LabelControl P1ClientLabelControl;
-        public DevExpress.XtraEditors.LabelControl P2ClientLabelControl;
-        public DevExpress.XtraEditors.LabelControl P3ClientLabelControl;
-        public DevExpress.XtraEditors.SimpleButton P1DropSimpleButton;
-        public DevExpress.XtraEditors.SimpleButton P2DropSimpleButton;
-        public DevExpress.XtraEditors.SimpleButton P3DropSimpleButton;
         private DevExpress.XtraEditors.ComboBoxEdit ConsoleModeComboBoxEdit;
         public DevExpress.XtraEditors.SimpleButton ClearConsoleSimpleButton;
         public DevExpress.XtraEditors.TextEdit PlayerNameTextEdit;
         public DevExpress.XtraEditors.TextEdit ConsoleInputTextEdit;
         public DevExpress.XtraEditors.MemoEdit ConsoleOutputMemoEdit;
-        public DevExpress.XtraEditors.SimpleButton StartServerButton;
-        private DevExpress.XtraEditors.SimpleButton NetworkManagerButton;
         public DevExpress.XtraEditors.ComboBoxEdit P1CharComboBox;
         public DevExpress.XtraEditors.ComboBoxEdit P1CosComboBox;
         public DevExpress.XtraEditors.ComboBoxEdit P4CosComboBox;

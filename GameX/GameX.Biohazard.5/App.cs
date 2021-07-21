@@ -36,13 +36,6 @@ namespace GameX
 
         #endregion
 
-        #region NET Props
-
-        private bool CharCosSelectionChangeReceived { get; set; }
-        private bool CharCosFreezeChangeReceived { get; set; }
-
-        #endregion
-
         #region Application Methods
 
         public App()
@@ -78,7 +71,6 @@ namespace GameX
             Application.Idle += null;
 
             Memory.FinishModule();
-            Network.FinishModule();
             Keyboard.RemoveHook();
 
             Target_Process?.Dispose();
@@ -324,13 +316,6 @@ namespace GameX
                 P4RapidfireButton
             };
 
-            SimpleButton[] DropButtons =
-            {
-                P1DropSimpleButton,
-                P2DropSimpleButton,
-                P3DropSimpleButton
-            };
-
             SimpleButton[] EnableDisable =
             {
                 ControllerAimButton,
@@ -375,7 +360,6 @@ namespace GameX
                 if (Index == 3)
                     continue;
 
-                DropButtons[Index].Click += Network.Server_DropClient;
                 OnOff[Index].Click += OnOff_Click;
             }
 
@@ -389,11 +373,6 @@ namespace GameX
 
             SaveSettingsButton.Click += Configuration_Save;
             LoadSettingsButton.Click += Configuration_Load;
-
-            NetworkManagerButton.Click += StartNetwork_Click;
-            StartServerButton.Click += Network.StartServer_Click;
-
-            BuddyServerConnectionButton.Click += Network.StartClient_Click;
 
             MasterTabControl.SelectedPageChanged += MasterTabPage_PageChanged;
 
@@ -621,9 +600,6 @@ namespace GameX
             if (Portrait != null)
                 CharPicBoxes[Index].Image = Portrait;
 
-            if (!CharCosSelectionChangeReceived)
-                Character_SendSelectionChange(Index, CharacterCombos[Index].SelectedIndex, CBE.SelectedIndex);
-
             if (!Initialized)
                 return;
 
@@ -659,9 +635,6 @@ namespace GameX
             CKBTN.Text = CKBTN.Checked ? "Frozen" : "Freeze";
 
             int Index = int.Parse(CKBTN.Name[1].ToString()) - 1;
-
-            if (!CharCosFreezeChangeReceived && CKBTN.Enabled)
-                Character_SendFreezeChange(Index, CKBTN.Checked);
 
             if (!Initialized)
                 return;
@@ -737,71 +710,6 @@ namespace GameX
                     break;
                 }
             }
-        }
-
-        private async void StartNetwork_Click(object sender, EventArgs e)
-        {
-            SimpleButton SB = sender as SimpleButton;
-
-            object[] ToDisable =
-            {
-                BuddyServerConnectionButton,
-                StartServerButton
-            };
-
-            SimpleButton[] DropButtons =
-            {
-                P1DropSimpleButton,
-                P2DropSimpleButton,
-                P3DropSimpleButton
-            };
-
-            LabelControl[] ClientNames =
-            {
-                P1ClientLabelControl,
-                P2ClientLabelControl,
-                P3ClientLabelControl
-            };
-
-            if (!Network.ModuleStarted)
-            {
-                SB.Enabled = false;
-                SB.Text = "Enabling";
-
-                await Task.Run(() => Network.StartModule(this));
-
-                SB.Enabled = true;
-
-                if (Network.ModuleStarted)
-                {
-                    foreach (dynamic Control in ToDisable)
-                        Control.Enabled = true;
-
-                    SB.Text = "Disable";
-                    return;
-                }
-
-                Terminal.WriteLine("[App] The connection response was either null or too slow, please check your internet and try again.", Enums.MessageBoxType.Error);
-                return;
-            }
-
-            Network.FinishModule();
-
-            foreach (dynamic Control in ToDisable)
-            {
-                Control.Enabled = false;
-
-                if (Control.Text == "Disconnect")
-                    Control.Text = "Connect";
-            }
-
-            foreach (SimpleButton SDB in DropButtons)
-                SDB.Enabled = false;
-
-            foreach (LabelControl LC in ClientNames)
-                LC.Text = "No client connected";
-
-            SB.Text = "Enable";
         }
 
         #endregion
@@ -1329,107 +1237,6 @@ namespace GameX
 
             Biohazard.SetStoryModeCharacter(Index, Character, Costume);
             Biohazard.Players[Index].SetCharacter(Character, Costume);
-        }
-
-        // NET
-
-        public void Character_SendSelectionChange(int index, int character, int costume)
-        {
-            if (!Network.ModuleStarted || Network._Server == null && Network._Client == null || Network._Server != null && Network._Server.ListClients().ToList().Count < 1)
-                return;
-
-            NetCharacterSelectionChange Change = new NetCharacterSelectionChange()
-            {
-                Index = index, Character = character, Costume = costume
-            };
-
-            string SerializedChange = $"[CHARSELECTIONCHANGE]{Serializer.SerializeCharacterSelectionChanged(Change)}";
-
-            if (Network._Server != null)
-            {
-                Network.Server_BroadcastMessage(SerializedChange, "", false, true);
-                return;
-            }
-
-            Network.Client_SendMessage(SerializedChange, false, true);
-        }
-
-        public void Character_ReceiveSelectionChange(NetCharacterSelectionChange Change, Client Client = null)
-        {
-            if (Network._Server != null && Client != null && Network._Server.ListClients().Where(x => x != Client.IP).ToList().Count > 0)
-            {
-                string SerializedChange = $"[CHARSELECTIONCHANGE]{Serializer.SerializeCharacterSelectionChanged(Change)}";
-                Network.Server_BroadcastMessage(SerializedChange, Client.IP, false, true);
-            }
-
-            ComboBoxEdit[] CharacterCombos =
-            {
-                P1CharComboBox,
-                P2CharComboBox,
-                P3CharComboBox,
-                P4CharComboBox
-            };
-
-            ComboBoxEdit[] CostumeCombos =
-            {
-                P1CosComboBox,
-                P2CosComboBox,
-                P3CosComboBox,
-                P4CosComboBox
-            };
-
-            CharCosSelectionChangeReceived = true;
-
-            Threading.SetControlPropertyThreadSafe(CharacterCombos[Change.Index], "SelectedIndex", Change.Character);
-            Threading.SetControlPropertyThreadSafe(CostumeCombos[Change.Index], "SelectedIndex", Change.Costume);
-
-            CharCosSelectionChangeReceived = false;
-        }
-
-        public void Character_SendFreezeChange(int index, bool freeze)
-        {
-            if (!Network.ModuleStarted || Network._Server == null && Network._Client == null || Network._Server != null && Network._Server.ListClients().ToList().Count < 1)
-                return;
-
-            NetCharacterFreezeChange Change = new NetCharacterFreezeChange()
-            {
-                Index = index,
-                Freeze = freeze
-            };
-
-            string SerializedChange = $"[CHARFREEZECHANGE]{Serializer.SerializeCharacterFreezeChanged(Change)}";
-
-            if (Network._Server != null)
-            {
-                Network.Server_BroadcastMessage(SerializedChange, "", false, true);
-                return;
-            }
-
-            Network.Client_SendMessage(SerializedChange, false, true);
-        }
-
-        public void Character_ReceiveFreezeChange(NetCharacterFreezeChange Change, Client Client = null)
-        {
-            if (Network._Server != null && Client != null && Network._Server.ListClients().Where(x => x != Client.IP).ToList().Count > 0)
-            {
-                string SerializedChange = $"[CHARFREEZECHANGE]{Serializer.SerializeCharacterFreezeChanged(Change)}";
-                Network.Server_BroadcastMessage(SerializedChange, Client.IP, false, true);
-            }
-
-            CheckButton[] CharCosFreezes =
-            {
-                P1FreezeCharCosButton,
-                P2FreezeCharCosButton,
-                P3FreezeCharCosButton,
-                P4FreezeCharCosButton
-            };
-
-            CharCosFreezeChangeReceived = true;
-
-            if (CharCosFreezes[Change.Index].Enabled)
-                Threading.SetControlPropertyThreadSafe(CharCosFreezes[Change.Index], "Checked", Change.Freeze);
-
-            CharCosFreezeChangeReceived = false;
         }
 
         #endregion

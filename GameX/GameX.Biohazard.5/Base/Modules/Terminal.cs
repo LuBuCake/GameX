@@ -67,16 +67,6 @@ namespace GameX.Base.Modules
                 "CurTime - Shows the elapsed time in seconds since the program opened",
                 "Exit - Closes the App.",
 
-                Environment.NewLine + "Network commands:",
-                "GetIP - Returns all available IPs to use in a connection.",
-
-                Environment.NewLine + "Server commands:",
-                "ServerClients - Lists all connected clients.",
-                "ServerStats - Shows the server's statistics.",
-
-                Environment.NewLine + "Client commands:",
-                "ClientStats - Shows the client's statistics.",
-
                 Environment.NewLine + "Biohazard commands:",
                 "GetHealth::P1/P2/P3/P4 - Gets the current health for the respective player.",
                 "SetHealth::P1/P2/P3/P4::Ammount - Sets the health for the respective player, this needs to be set between 0 and 1000."
@@ -204,90 +194,6 @@ namespace GameX.Base.Modules
             }
         }
 
-        private static bool ProcessNetworkCommand(string[] Command)
-        {
-            switch (Command[0])
-            {
-                case "getip":
-                {
-                    if (!Network.HasConnection)
-                    {
-                        WriteLine("[App] The Network module is not running, enable it before trying its commands.");
-                        return true;
-                    }
-
-                    string Output = Network.PrivateIPv4.Aggregate("[Network] Your available IPs for connection are: ", (current, IP) => current + $" ({IP})");
-
-                    WriteLine(Output);
-
-                    return true;
-                }
-                default:
-                    return false;
-            }
-        }
-
-        private static bool ProcessServerCommand(string[] Command)
-        {
-            switch (Command[0])
-            {
-                case "serverclients":
-                {
-                    if (Network._Server == null)
-                    {
-                        WriteLine("[App] There is no server running, start one before trying its commands.");
-                        return true;
-                    }
-
-                    List<string> clients = Network._Server.ListClients().ToList();
-
-                    if (clients.Count > 0)
-                    {
-                        WriteLine("[Network] Connected clients:");
-
-                        foreach (string cli in clients)
-                        {
-                            WriteLine(cli);
-                        }
-                    }
-                    else
-                    {
-                        WriteLine("[Network] No clients connected.");
-                    }
-
-                    return true;
-                }
-                case "serverstats":
-                {
-                    if (Network._Server == null)
-                    {
-                        WriteLine("[App] There is no server running, start one before trying its commands.");
-                        return true;
-                    }
-
-                    WriteLine(Network._Server.Statistics.ToString());
-                    return true;
-                }
-                default:
-                    return false;
-            }
-        }
-
-        private static bool ProcessClientCommand(string[] Command)
-        {
-            if (Command[0] != "clientstats")
-                return false;
-
-            if (Network._Server == null)
-            {
-                WriteLine("[Console] You are not connected to any server, connect to one first.");
-                return true;
-            }
-
-            WriteLine(Network._Client.Statistics.ToString());
-            return true;
-        }
-
         private static void ProcessCommand(string RawCommand)
         {
             WriteLine($"[Input] {RawCommand}");
@@ -337,7 +243,7 @@ namespace GameX.Base.Modules
                     break;
                 default:
                 {
-                    if (!ProcessDevCommand(Command) && !ProcessGameCommand(Command) && !ProcessNetworkCommand(Command) && !ProcessServerCommand(Command) && !ProcessClientCommand(Command))
+                    if (!ProcessDevCommand(Command) && !ProcessGameCommand(Command))
                         WriteLine("[Console] Unknown or incorrect use of command. Type Help to see all available commands and their syntax.");
 
                     break;
@@ -355,12 +261,6 @@ namespace GameX.Base.Modules
                 {
                     case (int) Enums.ConsoleInterface.Console:
                         ProcessCommand(TE.Text);
-                        break;
-                    case (int) Enums.ConsoleInterface.Server:
-                        Network.Server_BroadcastMessage("[CHAT]" + $"{Main.PlayerNameTextEdit.Text}: " + TE.Text, "", true, true);
-                        break;
-                    default:
-                        Network.Client_SendMessage("[CHAT]" + $"{Main.PlayerNameTextEdit.Text}: " + TE.Text, true, true);
                         break;
                 }
             }
