@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Numerics;
 using GameX.Base.Modules;
+using GameX.Game.Helpers;
 
 namespace GameX.Game.Modules
 {
@@ -133,6 +135,60 @@ namespace GameX.Game.Modules
             Memory.WriteInt32(0, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x210F);
             Memory.WriteFloat(1.3f, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x10DC, 0x120, 0x1C);
             Memory.WriteFloat(0f, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x10DC, 0x120, 0x2C);
+        }
+
+        public void SetMeleeTarget(int EntityAddress)
+        {
+            Memory.WriteInt32(EntityAddress, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2DA4);
+        }
+
+        public int GetMelee()
+        {
+            return Memory.ReadInt32("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x10E0);
+        }
+
+        public bool GetTargetedMelee()
+        {
+            Tuple<int, int> CharCos = GetCharacter();
+            int Melee = GetMelee();
+
+            switch (CharCos.Item1)
+            {
+                case (int)Characters.Chris when Melee == (int)GrabMoves.LegBack:
+                case (int)Characters.Sheva when Melee == (int)GrabMoves.LegBack || Melee == (int)GrabMoves.FinisherFront:
+                case (int)Characters.Jill when Melee == (int)GrabMoves.LegBack:
+                case (int)Characters.Josh when Melee == (int)GrabMoves.LegBack || Melee == (int)GrabMoves.FinisherFront:
+                case (int)Characters.Excella when Melee == (int)GrabMoves.LegBack || Melee == (int)GrabMoves.ReunionLegFront:
+                case (int)Characters.Barry when Melee == (int)GrabMoves.ReunionHeadFlash:
+                case (int)Characters.Rebecca when Melee == (int)GrabMoves.LegBack:
+                case (int)Characters.Irving when Melee == (int)GrabMoves.LegBack:
+                    return true;
+                default:
+                    return false;
+            }
+        }
+
+        public Vector3 GetPosition()
+        {
+            float X = Memory.ReadFloat("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2AD0);
+            float Y = Memory.ReadFloat("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2AD4);
+            float Z = Memory.ReadFloat("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2AD8);
+
+            return new Vector3(X, Y, Z);
+        }
+
+        public void SetPosition(Vector3 Position)
+        {
+            Memory.WriteFloat(Position.X, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2AD0);
+            Memory.WriteFloat(Position.Y, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2AD4);
+            Memory.WriteFloat(Position.Z, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2AD8);
+        }
+
+        public void SetMeleePosition(Vector3 Position)
+        {
+            Memory.WriteFloat(Position.X, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2E10);
+            Memory.WriteFloat(Position.Y, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2E14);
+            Memory.WriteFloat(Position.Z, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2E18);
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Numerics;
 using System.Windows.Forms;
 using DevExpress.LookAndFeel;
 using DevExpress.Skins;
@@ -98,7 +98,7 @@ namespace GameX
 
         private void Application_Load()
         {
-            CreatePrefabs(Enums.PrefabType.All);
+            CreatePrefabs(PrefabType.All);
             SetupControls();
         }
 
@@ -215,8 +215,9 @@ namespace GameX
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception Ex)
             {
+                Terminal.WriteLine(Ex.Message);
                 return false;
             }
 
@@ -322,18 +323,68 @@ namespace GameX
                 ColorFilterButton
             };
 
-            SimpleButton[] OnOff =
+            CheckEdit[] CheckUncheck =
             {
-                WeskerSunglassesButton,
-                WeskerInfiniteDashButton,
-                WeskerNoDashCostButton
+                WeskerGlassesCheckEdit,
+                WeskerInfiniteDashCheckEdit,
+                WeskerNoDashCostCheckEdit
+            };
+
+            ComboBoxEdit[] MeleeCombosA =
+            {
+                ReunionHeadFlashComboBox,
+                ReunionLegFrontComboBox,
+                FinisherFrontComboBox,
+                FinisherBackComboBox,
+                HeadFlashComboBox,
+                ArmFrontComboBox,
+                ArmBackComboBox,
+                LegFrontComboBox,
+                LegBackComboBox,
+                HelpComboBox
+            };
+
+            LabelControl[] MeleeLabelsA =
+            {
+                ReunionHeadFlashLabelControl,
+                ReunionLegFrontLabelControl,
+                FinisherFrontLabelControl,
+                FinisherBackLabelControl,
+                HeadFlashLabelControl,
+                ArmFrontLabelControl,
+                ArmBackLabelControl,
+                LegFrontLabelControl,
+                LegBackLabelControl,
+                HelpLabelControl
+            };
+
+            ComboBoxEdit[] MeleeCombosB =
+            {
+                TauntComboBox,
+                KnifeComboBox,
+                QuickTurnComboBox,
+                MoveLeftComboBox,
+                MoveRightComboBox,
+                MoveBackComboBox,
+                ReloadComboBox
+            };
+
+            LabelControl[] MeleeLabelsB =
+            {
+                TauntLabelControl,
+                KnifeLabelControl,
+                QuickTurnLabelControl,
+                MoveLeftLabelControl,
+                MoveRightLabelControl,
+                MoveBackLabelControl,
+                ReloadLabelControl
             };
 
             #endregion
 
             for (int Index = 0; Index < CharacterCombos.Length; Index++)
             {
-                CharacterCombos[Index].Properties.Items.AddRange(Characters.GetCharactersFromFolder());
+                CharacterCombos[Index].Properties.Items.AddRange(Game.Content.Characters.GetCharactersFromFolder());
                 WeaponMode[Index].Properties.Items.AddRange(Miscellaneous.WeaponMode());
                 Handness[Index].Properties.Items.AddRange(Miscellaneous.Handness());
 
@@ -360,8 +411,56 @@ namespace GameX
                 if (Index == 3)
                     continue;
 
-                OnOff[Index].Click += OnOff_Click;
+                CheckUncheck[Index].CheckedChanged += OnOff_CheckedChanged;
             }
+
+            for (int i = 0; i < MeleeCombosA.Length; i++)
+            {
+                List<Move> Damage = Moves.GetDefaultMelees(MoveType.Damage);
+
+                if (i > 1)
+                {
+                    Damage.RemoveAll(item => item.Value == 172);
+                    Damage.RemoveAll(item => item.Value == 173);
+                }
+
+                MeleeCombosA[i].Properties.Items.AddRange(Damage);
+                MeleeCombosA[i].SelectedIndexChanged += Melee_IndexChanged;
+
+                foreach(object item in MeleeCombosA[i].Properties.Items)
+                {
+                    if ((item as Move).Name == MeleeLabelsA[i].Text.Replace(":", ""))
+                        MeleeCombosA[i].SelectedItem = item;
+                }
+            }
+
+            for (int i = 0; i < MeleeCombosB.Length; i++)
+            {
+                List<Move> Damage = Moves.GetDefaultMelees(MoveType.Damage);
+                List<Move> Movement = Moves.GetDefaultMelees(MoveType.Movement);
+                List<Move> Action = Moves.GetDefaultMelees(MoveType.Action);
+
+                Damage.RemoveAll(item => item.Value == 172);
+                Damage.RemoveAll(item => item.Value == 173);
+
+                MeleeCombosB[i].Properties.Items.AddRange(Damage);
+                MeleeCombosB[i].Properties.Items.AddRange(Movement);
+                MeleeCombosB[i].Properties.Items.AddRange(Action);
+                MeleeCombosB[i].SelectedIndexChanged += Melee_IndexChanged;
+
+                foreach (object item in MeleeCombosB[i].Properties.Items)
+                {
+                    if ((item as Move).Name == MeleeLabelsB[i].Text.Replace(":", ""))
+                        MeleeCombosB[i].SelectedItem = item;
+                }
+
+                MeleeCombosB[i].Enabled = false;
+            }
+
+            MeleeAnytimeSwitch.Toggled += ToggleSwitch_Toggled;
+
+            if (MeleeAnytimeSwitch.IsOn)
+                MeleeAnytimeSwitch.Toggle();
 
             UpdateModeComboBoxEdit.Properties.Items.AddRange(Rates.Available());
             UpdateModeComboBoxEdit.SelectedIndexChanged += UpdateMode_IndexChanged;
@@ -545,7 +644,7 @@ namespace GameX
             SetLogo();
         }
 
-        // MODS //
+        // EVENTS //
 
         private void CharComboBox_IndexChanged(object sender, EventArgs e)
         {
@@ -574,14 +673,6 @@ namespace GameX
 
         private void CosComboBox_IndexChanged(object sender, EventArgs e)
         {
-            ComboBoxEdit[] CharacterCombos =
-            {
-                P1CharComboBox,
-                P2CharComboBox,
-                P3CharComboBox,
-                P4CharComboBox
-            };
-
             PictureEdit[] CharPicBoxes =
             {
                 P1CharPictureBox,
@@ -629,6 +720,15 @@ namespace GameX
             Biohazard.Players[Index].SetHandness(CBE.SelectedIndex != 0 ? new[] {(byte) (CBE.SelectedItem as ListItem).Value} : new[] {(byte) Biohazard.Players[Index].GetDefaultHandness()});
         }
 
+        private void Melee_IndexChanged(object sender, EventArgs e)
+        {
+            if (!Initialized)
+                return;
+
+            ComboBoxEdit CBE = sender as ComboBoxEdit;
+            Melee_ApplyComboBox(CBE);
+        }
+
         private void CharCosFreeze_CheckedChanged(object sender, EventArgs e)
         {
             CheckButton CKBTN = sender as CheckButton;
@@ -645,46 +745,47 @@ namespace GameX
 
         private void OnOff_CheckedChanged(object sender, EventArgs e)
         {
-            CheckButton CB = sender as CheckButton;
-
-            if (CB.Checked && CB.Text.Contains("OFF"))
-                CB.Text = CB.Text.Replace("OFF", "ON");
-
-            if (!CB.Checked && CB.Text.Contains("ON"))
-                CB.Text = CB.Text.Replace("ON", "OFF");
-
-            if (!Initialized)
-                return;
-
-            if (CB.Name.Contains("Untargetable") && !CB.Checked)
+            if (sender.GetType() == typeof(CheckEdit))
             {
-                int Player = int.Parse(CB.Name[1].ToString()) - 1;
-                Biohazard.Players[Player].SetUntargetable(false);
+                CheckEdit CE = sender as CheckEdit;
+
+                if (CE.Name.Equals("WeskerGlassesCheckEdit"))
+                {
+                    Biohazard.WeskerNoSunglassDrop(CE.Checked);
+                }
+                else if (CE.Name.Equals("WeskerNoDashCostCheckEdit"))
+                {
+                    Biohazard.WeskerNoDashCost(CE.Checked);
+                }
             }
-            else if (CB.Name.Contains("InfiniteAmmo") && !CB.Checked)
+            else if (sender.GetType() == typeof(CheckButton))
             {
-                int Player = int.Parse(CB.Name[1].ToString()) - 1;
-                Biohazard.Players[Player].SetInfiniteAmmo(false);
-            }
-            else if (CB.Name.Contains("Rapidfire") && !CB.Checked)
-            {
-                int Player = int.Parse(CB.Name[1].ToString()) - 1;
-                Biohazard.Players[Player].SetRapidFire(false);
-            }
-        }
+                CheckButton CB = sender as CheckButton;
 
-        private void OnOff_Click(object sender, EventArgs e)
-        {
-            SimpleButton SB = sender as SimpleButton;
-            SB.Text = SB.Text == "ON" ? "OFF" : "ON";
+                if (CB.Checked && CB.Text.Contains("OFF"))
+                    CB.Text = CB.Text.Replace("OFF", "ON");
 
-            if (SB.Name.Equals("WeskerSunglassesButton"))
-            {
-                Biohazard.WeskerNoSunglassDrop(SB.Text.Equals("ON"));
-            }
-            else if (SB.Name.Equals("WeskerNoDashCostButton"))
-            {
-                Biohazard.WeskerNoDashCost(SB.Text.Equals("ON"));
+                if (!CB.Checked && CB.Text.Contains("ON"))
+                    CB.Text = CB.Text.Replace("ON", "OFF");
+
+                if (!Initialized)
+                    return;
+
+                if (CB.Name.Contains("Untargetable") && !CB.Checked)
+                {
+                    int Player = int.Parse(CB.Name[1].ToString()) - 1;
+                    Biohazard.Players[Player].SetUntargetable(false);
+                }
+                else if (CB.Name.Contains("InfiniteAmmo") && !CB.Checked)
+                {
+                    int Player = int.Parse(CB.Name[1].ToString()) - 1;
+                    Biohazard.Players[Player].SetInfiniteAmmo(false);
+                }
+                else if (CB.Name.Contains("Rapidfire") && !CB.Checked)
+                {
+                    int Player = int.Parse(CB.Name[1].ToString()) - 1;
+                    Biohazard.Players[Player].SetRapidFire(false);
+                }
             }
         }
 
@@ -693,22 +794,70 @@ namespace GameX
             SimpleButton SB = sender as SimpleButton;
             SB.Text = SB.Text == "Enable" ? "Disable" : "Enable";
 
+            if (!Initialized)
+                return;
+
             switch (SB.Name)
             {
                 case "ControllerAimButton":
                 {
-                    if (Initialized)
-                        Biohazard.EnableControllerAim(SB.Text.Equals("Disable"));
-
+                    Biohazard.EnableControllerAim(SB.Text.Equals("Disable"));
                     break;
                 }
                 case "ColorFilterButton":
                 {
-                    if (Initialized)
-                        Biohazard.EnableColorFilter(SB.Text.Equals("Disable"));
-
+                    Biohazard.EnableColorFilter(SB.Text.Equals("Disable"));
                     break;
                 }
+            }
+        }
+
+        private void ToggleSwitch_Toggled(object sender, EventArgs e)
+        {
+            ToggleSwitch TS = sender as ToggleSwitch;
+
+            ComboBoxEdit[] MeleeCombos =
+            {
+                TauntComboBox,
+                KnifeComboBox,
+                QuickTurnComboBox,
+                MoveLeftComboBox,
+                MoveRightComboBox,
+                MoveBackComboBox,
+                ReloadComboBox
+            };
+
+            LabelControl[] MeleeLabels =
+            {
+                TauntLabelControl,
+                KnifeLabelControl,
+                QuickTurnLabelControl,
+                MoveLeftLabelControl,
+                MoveRightLabelControl,
+                MoveBackLabelControl,
+                ReloadLabelControl
+            };
+
+            switch (TS.Name)
+            {
+                case "MeleeAnytimeSwitch":
+                    foreach(ComboBoxEdit CBE in MeleeCombos)
+                    {
+                        CBE.Enabled = TS.IsOn;
+
+                        if (!TS.IsOn)
+                        {
+                            int index = Array.IndexOf(MeleeCombos, CBE);
+
+                            foreach (object item in MeleeCombos[index].Properties.Items)
+                            {
+                                if ((item as Move).Name == MeleeLabels[index].Text.Replace(":", ""))
+                                    MeleeCombos[index].SelectedItem = item;
+                            }
+                        }
+                    }                      
+
+                    break;
             }
         }
 
@@ -722,9 +871,35 @@ namespace GameX
             {
                 ControllerAimButton,
                 ColorFilterButton,
-                WeskerSunglassesButton,
-                WeskerNoDashCostButton
             };
+
+            CheckEdit[] CheckUncheck =
+            {
+                WeskerGlassesCheckEdit,
+                WeskerInfiniteDashCheckEdit,
+                WeskerNoDashCostCheckEdit
+            };
+
+            foreach (CheckEdit CE in CheckUncheck)
+            {
+                switch (CE.Name)
+                {
+                    case "WeskerGlassesCheckEdit":
+                        {
+                            if (CE.Checked)
+                                Biohazard.WeskerNoSunglassDrop(true);
+
+                            break;
+                        }
+                    case "WeskerNoDashCostCheckEdit":
+                        {
+                            if (CE.Checked)
+                                Biohazard.WeskerNoDashCost(true);
+
+                            break;
+                        }
+                }
+            }
 
             foreach (SimpleButton SB in EnableDisable)
             {
@@ -744,22 +919,10 @@ namespace GameX
 
                         break;
                     }
-                    case "WeskerSunglassesButton":
-                    {
-                        if (SB.Text == "ON")
-                            Biohazard.WeskerNoSunglassDrop(true);
-
-                        break;
-                    }
-                    case "WeskerNoDashCostButton":
-                    {
-                        if (SB.Text == "ON")
-                            Biohazard.WeskerNoDashCost(true);
-
-                        break;
-                    }
                 }
             }
+
+            Melee_ApplyComboBox(null, true);
         }
 
         private void GameX_Start()
@@ -769,7 +932,6 @@ namespace GameX
                 Biohazard.StartModule();
 
                 Character_Detour();
-                RickFixes_Detour();
 
                 GameX_CheckControls();
 
@@ -788,6 +950,9 @@ namespace GameX
             {
                 if (!Biohazard.ModuleStarted)
                     return;
+
+                if (MeleeAnytimeSwitch.IsOn)
+                    MeleeAnytimeSwitch.Toggle();
 
                 Biohazard.NoFileChecking(false);
                 Biohazard.OnlineCharSwapFixes(false);
@@ -827,7 +992,7 @@ namespace GameX
 
         #region External
 
-        public void CreatePrefabs(Enums.PrefabType Prefab, bool Override = false)
+        public void CreatePrefabs(PrefabType Prefab, bool Override = false)
         {
             string prefabDir = Directory.GetCurrentDirectory() + "/addons/GameX.Biohazard.5/prefabs/";
 
@@ -852,16 +1017,16 @@ namespace GameX
 
             switch (Prefab)
             {
-                case Enums.PrefabType.Character:
+                case PrefabType.Character:
                     {
                         if (CharacterFiles.Length < 9 || Override)
                         {
-                            Characters.WriteDefaultChars();
+                            Game.Content.Characters.WriteDefaultChars();
                         }
 
                         break;
                     }
-                case Enums.PrefabType.Item:
+                case PrefabType.Item:
                     {
                         if (ItemFiles.Length < 67 || Override)
                         {
@@ -870,11 +1035,11 @@ namespace GameX
 
                         break;
                     }
-                case Enums.PrefabType.All:
+                case PrefabType.All:
                     {
                         if (CharacterFiles.Length < 9 || Override)
                         {
-                            Characters.WriteDefaultChars();
+                            Game.Content.Characters.WriteDefaultChars();
                         }
 
                         if (ItemFiles.Length < 67 || Override)
@@ -888,8 +1053,6 @@ namespace GameX
         }
 
         #endregion
-
-        #region Mods
 
         #region Character
 
@@ -1241,116 +1404,65 @@ namespace GameX
 
         #endregion
 
-        #region Rick Fixes
+        #region Melee
 
-        private void RickFixes_Detour()
+        private void Melee_ApplyComboBox(ComboBoxEdit CE, bool ApplyAll = false)
         {
-            if (!Memory.DetourActive("RickFixes_Movement_1"))
+            ComboBoxEdit[] MeleeCombos =
             {
-                byte[] Function_A =
-                {
-                    0xF7, 0x84, 0x3A, 0xC8, 0x01, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00,
-                    0x0F, 0x85, 0x00, 0x00, 0x00, 0x00,
-                    0xF7, 0x84, 0x3A, 0xC4, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00
-                };
+                ReunionHeadFlashComboBox,
+                ReunionLegFrontComboBox,
+                FinisherFrontComboBox,
+                FinisherBackComboBox,
+                HeadFlashComboBox,
+                ArmFrontComboBox,
+                ArmBackComboBox,
+                LegFrontComboBox,
+                LegBackComboBox,
+                HelpComboBox,
+                TauntComboBox,
+                KnifeComboBox,
+                QuickTurnComboBox,
+                MoveLeftComboBox,
+                MoveRightComboBox,
+                MoveBackComboBox,
+                ReloadComboBox
+            };
 
-                byte[] Function_A_Original =
-                {
-                    0xF7, 0x84, 0x17, 0xC4, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00
-                };
+            LabelControl[] MeleeLabels =
+            {
+                ReunionHeadFlashLabelControl,
+                ReunionLegFrontLabelControl,
+                FinisherFrontLabelControl,
+                FinisherBackLabelControl,
+                HeadFlashLabelControl,
+                ArmFrontLabelControl,
+                ArmBackLabelControl,
+                LegFrontLabelControl,
+                LegBackLabelControl,
+                HelpLabelControl,
+                TauntLabelControl,
+                KnifeLabelControl,
+                QuickTurnLabelControl,
+                MoveLeftLabelControl,
+                MoveRightLabelControl,
+                MoveBackLabelControl,
+                ReloadLabelControl
+            };
 
-                Detour RickFixes_Movement_1 = Memory.CreateDetour("RickFixes_Movement_1", Function_A, 0x0079F66D, Function_A_Original, true, 0x0079F678);
-
-                if (RickFixes_Movement_1 != null)
-                {
-                    byte[] jne = new byte[6];
-                    jne[0] = 0x0F;
-                    jne[1] = 0x85;
-                    Memory.DetourJump(RickFixes_Movement_1.Address() + 0x0B, 0x0079F67A, 6, 6, true).CopyTo(jne, 2);
-                    Memory.WriteRawAddress(RickFixes_Movement_1.Address() + 0x0B, jne);
-                }
+            if (!ApplyAll)
+            {
+                int index = Array.IndexOf(MeleeCombos, CE);
+                Biohazard.SetMelee(MeleeLabels[index].Text.Replace(":", ""), (byte)(CE.SelectedItem as Move).Value);
             }
-
-            if (!Memory.DetourActive("RickFixes_Movement_2"))
+            else
             {
-                byte[] Function_A =
+                for(int i = 0; i < MeleeCombos.Length; i++)
                 {
-                    0xF6, 0x84, 0x3A, 0xC8, 0x01, 0x00, 0x00, 0x02,
-                    0x0F, 0x85, 0x00, 0x00, 0x00, 0x00,
-                    0x84, 0x9C, 0x3A, 0xC4, 0x01, 0x00, 0x00
-                };
-
-                byte[] Function_A_Original =
-                {
-                    0x84, 0x9C, 0x17, 0xC4, 0x01, 0x00, 0x00
-                };
-
-                Detour RickFixes_Movement_2 = Memory.CreateDetour("RickFixes_Movement_2", Function_A, 0x0079F6C1, Function_A_Original, true, 0x0079F6C8);
-
-                if (RickFixes_Movement_2 != null)
-                {
-                    byte[] jne = new byte[6];
-                    jne[0] = 0x0F;
-                    jne[1] = 0x85;
-                    Memory.DetourJump(RickFixes_Movement_2.Address() + 0x08, 0x0079F6CA, 6, 6, true).CopyTo(jne, 2);
-                    Memory.WriteRawAddress(RickFixes_Movement_2.Address() + 0x08, jne);
-                }
-            }
-
-            if (!Memory.DetourActive("RickFixes_Movement_3"))
-            {
-                byte[] Function_A =
-                {
-                    0xF7, 0x84, 0x3A, 0xC8, 0x01, 0x00, 0x00, 0x00, 0X00, 0X80, 0X00,
-                    0x0F, 0x85, 0x00, 0x00, 0x00, 0x00,
-                    0xF6, 0x84, 0x3A, 0xC4, 0x01, 0x00, 0x00, 0X40
-                };
-
-                byte[] Function_A_Original =
-                {
-                    0xF6, 0x84, 0x17, 0xC4, 0x01, 0x00, 0x00, 0X40
-                };
-
-                Detour RickFixes_Movement_3 = Memory.CreateDetour("RickFixes_Movement_3", Function_A, 0x0079F698, Function_A_Original, true, 0x0079F6A0);
-
-                if (RickFixes_Movement_3 != null)
-                {
-                    byte[] jne = new byte[6];
-                    jne[0] = 0x0F;
-                    jne[1] = 0x85;
-                    Memory.DetourJump(RickFixes_Movement_3.Address() + 0x0B, 0x0079F6A2, 6, 6, true).CopyTo(jne, 2);
-                    Memory.WriteRawAddress(RickFixes_Movement_3.Address() + 0x0B, jne);
-                }
-            }
-
-            if (!Memory.DetourActive("RickFixes_Movement_4"))
-            {
-                byte[] Function_A =
-                {
-                    0xF6, 0x84, 0x3A, 0xC8, 0x01, 0x00, 0x00, 0x10,
-                    0x0F, 0x85, 0x00, 0x00, 0x00, 0x00,
-                    0xF6, 0x84, 0x3A, 0xC4, 0x01, 0x00, 0x00, 0X80
-                };
-
-                byte[] Function_A_Original =
-                {
-                    0xF6, 0x84, 0x17, 0xC4, 0x01, 0x00, 0x00, 0X80
-                };
-
-                Detour RickFixes_Movement_4 = Memory.CreateDetour("RickFixes_Movement_4", Function_A, 0x0079F6E9, Function_A_Original, true, 0x0079F6F1);
-
-                if (RickFixes_Movement_4 != null)
-                {
-                    byte[] jne = new byte[6];
-                    jne[0] = 0x0F;
-                    jne[1] = 0x85;
-                    Memory.DetourJump(RickFixes_Movement_4.Address() + 0x08, 0x0079F6F3, 6, 6, true).CopyTo(jne, 2);
-                    Memory.WriteRawAddress(RickFixes_Movement_4.Address() + 0x08, jne);
+                    Biohazard.SetMelee(MeleeLabels[i].Text.Replace(":", ""), (byte)(MeleeCombos[i].SelectedItem as Move).Value);
                 }
             }
         }
-
-        #endregion
 
         #endregion
 
@@ -1490,8 +1602,18 @@ namespace GameX
                 if (WeaponMode[i].SelectedIndex > 0 && PlayerPresent)
                     Biohazard.Players[i].SetWeaponMode(new[] { (byte)(WeaponMode[i].SelectedItem as ListItem).Value });
 
+                // Melee Anytime Cords //
+                if (MeleeAnytimeSwitch.IsOn)
+                {
+                    Vector3 Position = Biohazard.Players[i].GetPosition();
+                    Biohazard.Players[i].SetMeleePosition(Position);
+
+                    if (!Biohazard.Players[i].GetTargetedMelee())
+                        Biohazard.Players[i].SetMeleeTarget(0);
+                }
+
                 // If versus then end the current iteration //
-                if (Biohazard.GetActiveGameMode() == (int)GameEnums.GameMode.Versus)
+                if (Biohazard.GetActiveGameMode() == (int)GameMode.Versus)
                     continue;
 
                 // Infinite HP //
@@ -1511,9 +1633,8 @@ namespace GameX
                     Biohazard.Players[i].SetRapidFire(true);
 
                 // Infinite Dash //
-                if (WeskerInfiniteDashButton.Text.Equals("ON") && PlayerPresent && Biohazard.Players[i].GetCharacter().Item1.Equals(3))
+                if (WeskerInfiniteDashCheckEdit.Checked && PlayerPresent && Biohazard.Players[i].GetCharacter().Item1 == (int)Game.Helpers.Characters.Wesker)
                     Biohazard.Players[i].ResetDash();
-
             }
         }
 

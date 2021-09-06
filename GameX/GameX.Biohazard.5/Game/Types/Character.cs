@@ -27,22 +27,4 @@ namespace GameX.Game.Types
             return Name;
         }
     }
-
-    public class NetCharacterSelectionChange
-    {
-        public int Index { get; set; }
-        public int Character { get; set; }
-        public int Costume { get; set; }
-
-        public override string ToString()
-        {
-            return base.ToString() + Index + " " + Character + " " + Costume;
-        }
-    }
-
-    public class NetCharacterFreezeChange
-    {
-        public int Index { get; set; }
-        public bool Freeze { get; set; }
-    }
 }

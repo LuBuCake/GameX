@@ -2,45 +2,58 @@
 
 namespace GameX.Game.Helpers
 {
-    public class GameEnums
+    public enum ItemGroup
     {
-        public enum ItemGroup
-        {
-            [Description("Default")] Default = 0,
+        Default,
+        Handgun,
+        Shotgun,
+        MachineGun,
+        Rifle,
+        Magnum,
+        Launcher,
+        Melee,
+        Explosive,
+        Ammunition,
+        Heal,
+        Utility,
+        Special
+    }
 
-            [Description("Handguns")] Handgun = 1,
+    public enum GameMode
+    {
+        Campaign,
+        Versus,
+        Mercenaries,
+        LIN,
+        DE,
+        Reunion,
+    }
 
-            [Description("Shotguns")] Shotgun = 2,
+    public enum MoveType
+    {
+        Movement,
+        Damage,
+        Action
+    }
 
-            [Description("Machine Guns")] MachineGun = 3,
+    public enum Characters
+    {
+        Chris,
+        Sheva,
+        Jill,
+        Wesker,
+        Josh,
+        Excella,
+        Barry,
+        Rebecca,
+        Irving = 134
+    }
 
-            [Description("Rifles")] Rifle = 4,
-
-            [Description("Magnums")] Magnum = 5,
-
-            [Description("Launchers")] Launcher = 6,
-
-            [Description("Melees")] Melee = 7,
-
-            [Description("Explosives")] Explosive = 8,
-
-            [Description("Ammunitions")] Ammunition = 9,
-
-            [Description("Heals")] Heal = 10,
-
-            [Description("Utility")] Utility = 11,
-
-            [Description("Special")] Special = 12
-        }
-
-        public enum GameMode
-        {
-            [Description("Campaign")] Campaign = 0,
-            [Description("Versus")] Versus = 1,
-            [Description("The Mercenaries")] Mercenaries = 2,
-            [Description("Lost in Nightmares")] LIN = 3,
-            [Description("Desesperate Scape")] DE = 4,
-            [Description("The Mercenaries Reunion")] Reunion = 5,
-        }
+    public enum GrabMoves
+    {
+        FinisherFront = 53,
+        LegBack = 57,
+        ReunionHeadFlash = 173,
+        ReunionLegFront = 172
     }
 }

@@ -17,8 +17,8 @@ namespace GameX.Game.Content
 
             Item Default = new Item
             {
-                Value = 0,
-                Group = (int) GameEnums.ItemGroup.Default,
+                ID = 0,
+                Group = (int) ItemGroup.Default,
                 GroupIndex = 0,
                 Name = "Nothing",
                 Portrait = "default",
@@ -33,8 +33,8 @@ namespace GameX.Game.Content
 
             Item M92F = new Item
             {
-                Value = 258,
-                Group = (int) GameEnums.ItemGroup.Handgun,
+                ID = 258,
+                Group = (int) ItemGroup.Handgun,
                 GroupIndex = 0,
                 Name = "M92F (HG)",
                 Portrait = "pistol_m92f",
@@ -49,8 +49,8 @@ namespace GameX.Game.Content
 
             Item HKP8 = new Item
             {
-                Value = 258,
-                Group = (int) GameEnums.ItemGroup.Handgun,
+                ID = 272,
+                Group = (int) ItemGroup.Handgun,
                 GroupIndex = 1,
                 Name = "H&K P8 (HG)",
                 Portrait = "pistol_h&k_p8",
@@ -65,8 +65,8 @@ namespace GameX.Game.Content
 
             Item SIGP226 = new Item
             {
-                Value = 273,
-                Group = (int) GameEnums.ItemGroup.Handgun,
+                ID = 273,
+                Group = (int) ItemGroup.Handgun,
                 GroupIndex = 2,
                 Name = "SIG P226 (HG)",
                 Portrait = "pistol_sig_p226",
@@ -81,8 +81,8 @@ namespace GameX.Game.Content
 
             Item M93R = new Item
             {
-                Value = 286,
-                Group = (int) GameEnums.ItemGroup.Handgun,
+                ID = 286,
+                Group = (int) ItemGroup.Handgun,
                 GroupIndex = 3,
                 Name = "M93R (HG)",
                 Portrait = "pistol_m93r",
@@ -97,8 +97,8 @@ namespace GameX.Game.Content
 
             Item Samurai_Edge = new Item
             {
-                Value = 297,
-                Group = (int) GameEnums.ItemGroup.Handgun,
+                ID = 297,
+                Group = (int) ItemGroup.Handgun,
                 GroupIndex = 4,
                 Name = "Samurai Edge (HG)",
                 Portrait = "pistol_samurai_edge",
@@ -113,8 +113,8 @@ namespace GameX.Game.Content
 
             Item Samurai_Edge_DLC = new Item
             {
-                Value = 274,
-                Group = (int) GameEnums.ItemGroup.Handgun,
+                ID = 274,
+                Group = (int) ItemGroup.Handgun,
                 GroupIndex = 5,
                 Name = "Samurai Edge DLC (HG)",
                 Portrait = "pistol_samurai_edge_dlc",
@@ -129,8 +129,8 @@ namespace GameX.Game.Content
 
             Item Px4 = new Item
             {
-                Value = 287,
-                Group = (int) GameEnums.ItemGroup.Handgun,
+                ID = 287,
+                Group = (int) ItemGroup.Handgun,
                 GroupIndex = 6,
                 Name = "Px4 (HG)",
                 Portrait = "pistol_px4",
@@ -145,8 +145,8 @@ namespace GameX.Game.Content
 
             Item Ithaca = new Item
             {
-                Value = 260,
-                Group = (int) GameEnums.ItemGroup.Shotgun,
+                ID = 260,
+                Group = (int) ItemGroup.Shotgun,
                 GroupIndex = 0,
                 Name = "Ithaca (SG)",
                 Portrait = "shotgun_ithaca",
@@ -161,8 +161,8 @@ namespace GameX.Game.Content
 
             Item M3 = new Item
             {
-                Value = 278,
-                Group = (int) GameEnums.ItemGroup.Shotgun,
+                ID = 278,
+                Group = (int) ItemGroup.Shotgun,
                 GroupIndex = 1,
                 Name = "M3 (SG)",
                 Portrait = "shotgun_m3",
@@ -177,8 +177,8 @@ namespace GameX.Game.Content
 
             Item JailBreaker = new Item
             {
-                Value = 279,
-                Group = (int) GameEnums.ItemGroup.Shotgun,
+                ID = 279,
+                Group = (int) ItemGroup.Shotgun,
                 GroupIndex = 2,
                 Name = "Jail Breaker (SG)",
                 Portrait = "shotgun_jailbreaker",
@@ -193,8 +193,8 @@ namespace GameX.Game.Content
 
             Item Hydra = new Item
             {
-                Value = 281,
-                Group = (int) GameEnums.ItemGroup.Shotgun,
+                ID = 281,
+                Group = (int) ItemGroup.Shotgun,
                 GroupIndex = 3,
                 Name = "Hydra (SG)",
                 Portrait = "shotgun_hydra",
@@ -209,8 +209,8 @@ namespace GameX.Game.Content
 
             Item VZ61 = new Item
             {
-                Value = 259,
-                Group = (int) GameEnums.ItemGroup.MachineGun,
+                ID = 259,
+                Group = (int) ItemGroup.MachineGun,
                 GroupIndex = 0,
                 Name = "VZ61 (MG)",
                 Portrait = "smg_vz61",
@@ -225,8 +225,8 @@ namespace GameX.Game.Content
 
             Item AK74 = new Item
             {
-                Value = 285,
-                Group = (int) GameEnums.ItemGroup.MachineGun,
+                ID = 285,
+                Group = (int) ItemGroup.MachineGun,
                 GroupIndex = 1,
                 Name = "AK74  (MG)",
                 Portrait = "smg_ak74",
@@ -241,8 +241,8 @@ namespace GameX.Game.Content
 
             Item MP5 = new Item
             {
-                Value = 275,
-                Group = (int) GameEnums.ItemGroup.MachineGun,
+                ID = 275,
+                Group = (int) ItemGroup.MachineGun,
                 GroupIndex = 2,
                 Name = "H&K MP5 (MG)",
                 Portrait = "smg_mp5",
@@ -257,8 +257,8 @@ namespace GameX.Game.Content
 
             Item SIG556 = new Item
             {
-                Value = 265,
-                Group = (int) GameEnums.ItemGroup.MachineGun,
+                ID = 265,
+                Group = (int) ItemGroup.MachineGun,
                 GroupIndex = 3,
                 Name = "SIG 556 (MG)",
                 Portrait = "smg_sig_556",
@@ -273,8 +273,8 @@ namespace GameX.Game.Content
 
             Item S75 = new Item
             {
-                Value = 261,
-                Group = (int) GameEnums.ItemGroup.Rifle,
+                ID = 261,
+                Group = (int) ItemGroup.Rifle,
                 GroupIndex = 0,
                 Name = "S75 (RIF)",
                 Portrait = "rifle_s75",
@@ -289,8 +289,8 @@ namespace GameX.Game.Content
 
             Item Dragunov = new Item
             {
-                Value = 288,
-                Group = (int) GameEnums.ItemGroup.Rifle,
+                ID = 288,
+                Group = (int) ItemGroup.Rifle,
                 GroupIndex = 1,
                 Name = "Dragunov SVD (RIF)",
                 Portrait = "rifle_dragunov",
@@ -305,8 +305,8 @@ namespace GameX.Game.Content
 
             Item PSG1 = new Item
             {
-                Value = 284,
-                Group = (int) GameEnums.ItemGroup.Rifle,
+                ID = 284,
+                Group = (int) ItemGroup.Rifle,
                 GroupIndex = 2,
                 Name = "H&K PSG-1 (RIF)",
                 Portrait = "rifle_h&k_psg1",
@@ -321,8 +321,8 @@ namespace GameX.Game.Content
 
             Item SEWM29 = new Item
             {
-                Value = 267,
-                Group = (int) GameEnums.ItemGroup.Magnum,
+                ID = 267,
+                Group = (int) ItemGroup.Magnum,
                 GroupIndex = 0,
                 Name = "S&W M29 (MAG)",
                 Portrait = "magnum_s&w_m29",
@@ -337,8 +337,8 @@ namespace GameX.Game.Content
 
             Item LHAWK = new Item
             {
-                Value = 282,
-                Group = (int) GameEnums.ItemGroup.Magnum,
+                ID = 282,
+                Group = (int) ItemGroup.Magnum,
                 GroupIndex = 1,
                 Name = "L. Hawk (MAG)",
                 Portrait = "magnum_L_hawk",
@@ -353,8 +353,8 @@ namespace GameX.Game.Content
 
             Item SEWM500 = new Item
             {
-                Value = 283,
-                Group = (int) GameEnums.ItemGroup.Magnum,
+                ID = 283,
+                Group = (int) ItemGroup.Magnum,
                 GroupIndex = 2,
                 Name = "S&W M500 (MAG)",
                 Portrait = "magnum_s&w_m500",
@@ -369,8 +369,8 @@ namespace GameX.Game.Content
 
             Item GL_ICE = new Item
             {
-                Value = 295,
-                Group = (int) GameEnums.ItemGroup.Launcher,
+                ID = 295,
+                Group = (int) ItemGroup.Launcher,
                 GroupIndex = 0,
                 Name = "Grenade Launcher (ICE)",
                 Portrait = "launcher_ice",
@@ -385,8 +385,8 @@ namespace GameX.Game.Content
 
             Item GL_FLM = new Item
             {
-                Value = 313,
-                Group = (int) GameEnums.ItemGroup.Launcher,
+                ID = 313,
+                Group = (int) ItemGroup.Launcher,
                 GroupIndex = 1,
                 Name = "Grenade Launcher (FLM)",
                 Portrait = "launcher_flm",
@@ -401,8 +401,8 @@ namespace GameX.Game.Content
 
             Item GL_ACD = new Item
             {
-                Value = 294,
-                Group = (int) GameEnums.ItemGroup.Launcher,
+                ID = 294,
+                Group = (int) ItemGroup.Launcher,
                 GroupIndex = 2,
                 Name = "Grenade Launcher (ACD)",
                 Portrait = "launcher_acd",
@@ -417,8 +417,8 @@ namespace GameX.Game.Content
 
             Item GL_EXP = new Item
             {
-                Value = 293,
-                Group = (int) GameEnums.ItemGroup.Launcher,
+                ID = 293,
+                Group = (int) ItemGroup.Launcher,
                 GroupIndex = 3,
                 Name = "Grenade Launcher (EXP)",
                 Portrait = "launcher_exp",
@@ -433,8 +433,8 @@ namespace GameX.Game.Content
 
             Item GL_FLS = new Item
             {
-                Value = 314,
-                Group = (int) GameEnums.ItemGroup.Launcher,
+                ID = 314,
+                Group = (int) ItemGroup.Launcher,
                 GroupIndex = 4,
                 Name = "Grenade Launcher (FLS)",
                 Portrait = "launcher_fls",
@@ -449,8 +449,8 @@ namespace GameX.Game.Content
 
             Item GL_ELC = new Item
             {
-                Value = 315,
-                Group = (int) GameEnums.ItemGroup.Launcher,
+                ID = 315,
+                Group = (int) ItemGroup.Launcher,
                 GroupIndex = 5,
                 Name = "Grenade Launcher (ELC)",
                 Portrait = "launcher_elc",
@@ -465,8 +465,8 @@ namespace GameX.Game.Content
 
             Item RPG = new Item
             {
-                Value = 269,
-                Group = (int) GameEnums.ItemGroup.Launcher,
+                ID = 269,
+                Group = (int) ItemGroup.Launcher,
                 GroupIndex = 6,
                 Name = "Rocket Launcher",
                 Portrait = "rocket_launcher",
@@ -481,8 +481,8 @@ namespace GameX.Game.Content
 
             Item Stunrod = new Item
             {
-                Value = 290,
-                Group = (int) GameEnums.ItemGroup.Melee,
+                ID = 290,
+                Group = (int) ItemGroup.Melee,
                 GroupIndex = 0,
                 Name = "Stun Rod",
                 Portrait = "stunrod",
@@ -497,8 +497,8 @@ namespace GameX.Game.Content
 
             Item KnifeChris = new Item
             {
-                Value = 257,
-                Group = (int) GameEnums.ItemGroup.Melee,
+                ID = 257,
+                Group = (int) ItemGroup.Melee,
                 GroupIndex = 1,
                 Name = "Knife (Chris)",
                 Portrait = "knife_chris",
@@ -513,8 +513,8 @@ namespace GameX.Game.Content
 
             Item KnifeSheva = new Item
             {
-                Value = 270,
-                Group = (int) GameEnums.ItemGroup.Melee,
+                ID = 270,
+                Group = (int) ItemGroup.Melee,
                 GroupIndex = 2,
                 Name = "Knife (Sheva)",
                 Portrait = "knife_sheva",
@@ -529,8 +529,8 @@ namespace GameX.Game.Content
 
             Item KnifeJill = new Item
             {
-                Value = 292,
-                Group = (int) GameEnums.ItemGroup.Melee,
+                ID = 292,
+                Group = (int) ItemGroup.Melee,
                 GroupIndex = 3,
                 Name = "Knife (Jill)",
                 Portrait = "knife_jill",
@@ -545,8 +545,8 @@ namespace GameX.Game.Content
 
             Item KnifeJillDLC = new Item
             {
-                Value = 276,
-                Group = (int) GameEnums.ItemGroup.Melee,
+                ID = 276,
+                Group = (int) ItemGroup.Melee,
                 GroupIndex = 4,
                 Name = "Knife (Jill) (DLC)",
                 Portrait = "knife_jill_dlc",
@@ -561,8 +561,8 @@ namespace GameX.Game.Content
 
             Item KnifeWesker = new Item
             {
-                Value = 291,
-                Group = (int) GameEnums.ItemGroup.Melee,
+                ID = 291,
+                Group = (int) ItemGroup.Melee,
                 GroupIndex = 5,
                 Name = "Knife (Wesker)",
                 Portrait = "knife_wesker",
@@ -577,8 +577,8 @@ namespace GameX.Game.Content
 
             Item G_EXP = new Item
             {
-                Value = 262,
-                Group = (int) GameEnums.ItemGroup.Explosive,
+                ID = 262,
+                Group = (int) ItemGroup.Explosive,
                 GroupIndex = 0,
                 Name = "Hand Grenade",
                 Portrait = "grenade_exp",
@@ -593,8 +593,8 @@ namespace GameX.Game.Content
 
             Item G_FLM = new Item
             {
-                Value = 263,
-                Group = (int) GameEnums.ItemGroup.Explosive,
+                ID = 263,
+                Group = (int) ItemGroup.Explosive,
                 GroupIndex = 1,
                 Name = "Incendiary Grenade",
                 Portrait = "grenade_flm",
@@ -609,8 +609,8 @@ namespace GameX.Game.Content
 
             Item G_FLS = new Item
             {
-                Value = 264,
-                Group = (int) GameEnums.ItemGroup.Explosive,
+                ID = 264,
+                Group = (int) ItemGroup.Explosive,
                 GroupIndex = 2,
                 Name = "Flash Grenade",
                 Portrait = "grenade_fls",
@@ -625,8 +625,8 @@ namespace GameX.Game.Content
 
             Item ProximityBomb = new Item
             {
-                Value = 266,
-                Group = (int) GameEnums.ItemGroup.Explosive,
+                ID = 266,
+                Group = (int) ItemGroup.Explosive,
                 GroupIndex = 3,
                 Name = "Proximity Bomb",
                 Portrait = "proximity_bomb",
@@ -641,8 +641,8 @@ namespace GameX.Game.Content
 
             Item HG_Ammo = new Item
             {
-                Value = 513,
-                Group = (int) GameEnums.ItemGroup.Ammunition,
+                ID = 513,
+                Group = (int) ItemGroup.Ammunition,
                 GroupIndex = 0,
                 Name = "Handgun Ammo",
                 Portrait = "ammo_handgun",
@@ -657,8 +657,8 @@ namespace GameX.Game.Content
 
             Item MG_Ammo = new Item
             {
-                Value = 514,
-                Group = (int) GameEnums.ItemGroup.Ammunition,
+                ID = 514,
+                Group = (int) ItemGroup.Ammunition,
                 GroupIndex = 1,
                 Name = "Machinegun Ammo",
                 Portrait = "ammo_machinegun",
@@ -673,8 +673,8 @@ namespace GameX.Game.Content
 
             Item SG_Ammo = new Item
             {
-                Value = 515,
-                Group = (int) GameEnums.ItemGroup.Ammunition,
+                ID = 515,
+                Group = (int) ItemGroup.Ammunition,
                 GroupIndex = 2,
                 Name = "Shotgun Ammo",
                 Portrait = "ammo_shotgun",
@@ -689,8 +689,8 @@ namespace GameX.Game.Content
 
             Item RIF_Ammo = new Item
             {
-                Value = 516,
-                Group = (int) GameEnums.ItemGroup.Ammunition,
+                ID = 516,
+                Group = (int) ItemGroup.Ammunition,
                 GroupIndex = 3,
                 Name = "Rifle Ammo",
                 Portrait = "ammo_rifle",
@@ -705,8 +705,8 @@ namespace GameX.Game.Content
 
             Item MAG_Ammo = new Item
             {
-                Value = 521,
-                Group = (int) GameEnums.ItemGroup.Ammunition,
+                ID = 521,
+                Group = (int) ItemGroup.Ammunition,
                 GroupIndex = 4,
                 Name = "Magnum Ammo",
                 Portrait = "ammo_magnum",
@@ -721,8 +721,8 @@ namespace GameX.Game.Content
 
             Item Rounds_ICE = new Item
             {
-                Value = 520,
-                Group = (int) GameEnums.ItemGroup.Ammunition,
+                ID = 520,
+                Group = (int) ItemGroup.Ammunition,
                 GroupIndex = 5,
                 Name = "Nitrogen Rounds",
                 Portrait = "rounds_ice",
@@ -737,8 +737,8 @@ namespace GameX.Game.Content
 
             Item Rounds_FLM = new Item
             {
-                Value = 526,
-                Group = (int) GameEnums.ItemGroup.Ammunition,
+                ID = 526,
+                Group = (int) ItemGroup.Ammunition,
                 GroupIndex = 6,
                 Name = "Incendiary Rounds",
                 Portrait = "rounds_flm",
@@ -753,8 +753,8 @@ namespace GameX.Game.Content
 
             Item Rounds_ACD = new Item
             {
-                Value = 519,
-                Group = (int) GameEnums.ItemGroup.Ammunition,
+                ID = 519,
+                Group = (int) ItemGroup.Ammunition,
                 GroupIndex = 7,
                 Name = "Acid Rounds",
                 Portrait = "rounds_acd",
@@ -769,8 +769,8 @@ namespace GameX.Game.Content
 
             Item Rounds_EXP = new Item
             {
-                Value = 518,
-                Group = (int) GameEnums.ItemGroup.Ammunition,
+                ID = 518,
+                Group = (int) ItemGroup.Ammunition,
                 GroupIndex = 8,
                 Name = "Explosive Rounds",
                 Portrait = "rounds_exp",
@@ -785,8 +785,8 @@ namespace GameX.Game.Content
 
             Item Rounds_FLS = new Item
             {
-                Value = 527,
-                Group = (int) GameEnums.ItemGroup.Ammunition,
+                ID = 527,
+                Group = (int) ItemGroup.Ammunition,
                 GroupIndex = 9,
                 Name = "Flash Rounds",
                 Portrait = "rounds_fls",
@@ -801,8 +801,8 @@ namespace GameX.Game.Content
 
             Item Rounds_ELC = new Item
             {
-                Value = 528,
-                Group = (int) GameEnums.ItemGroup.Ammunition,
+                ID = 528,
+                Group = (int) ItemGroup.Ammunition,
                 GroupIndex = 10,
                 Name = "Eletric Rounds",
                 Portrait = "rounds_elc",
@@ -817,8 +817,8 @@ namespace GameX.Game.Content
 
             Item FirstAidSpray = new Item
             {
-                Value = 772,
-                Group = (int) GameEnums.ItemGroup.Heal,
+                ID = 772,
+                Group = (int) ItemGroup.Heal,
                 GroupIndex = 0,
                 Name = "First Aid Spray",
                 Portrait = "item_firstaidspray",
@@ -833,8 +833,8 @@ namespace GameX.Game.Content
 
             Item Herb_G = new Item
             {
-                Value = 773,
-                Group = (int) GameEnums.ItemGroup.Heal,
+                ID = 773,
+                Group = (int) ItemGroup.Heal,
                 GroupIndex = 1,
                 Name = "Herb (Green)",
                 Portrait = "herb_g",
@@ -849,8 +849,8 @@ namespace GameX.Game.Content
 
             Item Herb_R = new Item
             {
-                Value = 774,
-                Group = (int) GameEnums.ItemGroup.Heal,
+                ID = 774,
+                Group = (int) ItemGroup.Heal,
                 GroupIndex = 2,
                 Name = "Herb (Red)",
                 Portrait = "herb_r",
@@ -865,8 +865,8 @@ namespace GameX.Game.Content
 
             Item Herb_GG = new Item
             {
-                Value = 775,
-                Group = (int) GameEnums.ItemGroup.Heal,
+                ID = 775,
+                Group = (int) ItemGroup.Heal,
                 GroupIndex = 3,
                 Name = "Herb (G+G)",
                 Portrait = "herb_gg",
@@ -881,8 +881,8 @@ namespace GameX.Game.Content
 
             Item Herb_GR = new Item
             {
-                Value = 777,
-                Group = (int) GameEnums.ItemGroup.Heal,
+                ID = 777,
+                Group = (int) ItemGroup.Heal,
                 GroupIndex = 4,
                 Name = "Herb (G+R)",
                 Portrait = "herb_gr",
@@ -897,8 +897,8 @@ namespace GameX.Game.Content
 
             Item Egg_R = new Item
             {
-                Value = 310,
-                Group = (int) GameEnums.ItemGroup.Heal,
+                ID = 310,
+                Group = (int) ItemGroup.Heal,
                 GroupIndex = 5,
                 Name = "Egg (Rotten)",
                 Portrait = "egg_rotten",
@@ -913,8 +913,8 @@ namespace GameX.Game.Content
 
             Item Egg_W = new Item
             {
-                Value = 316,
-                Group = (int) GameEnums.ItemGroup.Heal,
+                ID = 316,
+                Group = (int) ItemGroup.Heal,
                 GroupIndex = 6,
                 Name = "Egg (White)",
                 Portrait = "egg_white",
@@ -929,8 +929,8 @@ namespace GameX.Game.Content
 
             Item Egg_B = new Item
             {
-                Value = 317,
-                Group = (int) GameEnums.ItemGroup.Heal,
+                ID = 317,
+                Group = (int) ItemGroup.Heal,
                 GroupIndex = 7,
                 Name = "Egg (Brown)",
                 Portrait = "egg_brown",
@@ -945,8 +945,8 @@ namespace GameX.Game.Content
 
             Item Egg_G = new Item
             {
-                Value = 318,
-                Group = (int) GameEnums.ItemGroup.Heal,
+                ID = 318,
+                Group = (int) ItemGroup.Heal,
                 GroupIndex = 8,
                 Name = "Egg (Golden)",
                 Portrait = "egg_golden",
@@ -961,8 +961,8 @@ namespace GameX.Game.Content
 
             Item Melee_Vest = new Item
             {
-                Value = 1537,
-                Group = (int) GameEnums.ItemGroup.Utility,
+                ID = 1537,
+                Group = (int) ItemGroup.Utility,
                 GroupIndex = 0,
                 Name = "Melee Vest",
                 Portrait = "vest_melee",
@@ -977,8 +977,8 @@ namespace GameX.Game.Content
 
             Item BulletProof_Vest = new Item
             {
-                Value = 1542,
-                Group = (int) GameEnums.ItemGroup.Utility,
+                ID = 1542,
+                Group = (int) ItemGroup.Utility,
                 GroupIndex = 1,
                 Name = "Bulletproof Vest",
                 Portrait = "vest_bulletproof",
@@ -993,8 +993,8 @@ namespace GameX.Game.Content
 
             Item RPG7 = new Item
             {
-                Value = 309,
-                Group = (int) GameEnums.ItemGroup.Special,
+                ID = 309,
+                Group = (int) ItemGroup.Special,
                 GroupIndex = 0,
                 Name = "RPG-7 NVS",
                 Portrait = "rocket_launcher_special",
@@ -1009,8 +1009,8 @@ namespace GameX.Game.Content
 
             Item LTD = new Item
             {
-                Value = 308,
-                Group = (int) GameEnums.ItemGroup.Special,
+                ID = 308,
+                Group = (int) ItemGroup.Special,
                 GroupIndex = 1,
                 Name = "L.T.D",
                 Portrait = "ltd",
@@ -1025,8 +1025,8 @@ namespace GameX.Game.Content
 
             Item GatlingGun = new Item
             {
-                Value = 277,
-                Group = (int) GameEnums.ItemGroup.Special,
+                ID = 277,
+                Group = (int) ItemGroup.Special,
                 GroupIndex = 2,
                 Name = "Gatling Gun",
                 Portrait = "gatling_gun",
@@ -1041,8 +1041,8 @@ namespace GameX.Game.Content
 
             Item LongBow = new Item
             {
-                Value = 271,
-                Group = (int) GameEnums.ItemGroup.Special,
+                ID = 271,
+                Group = (int) ItemGroup.Special,
                 GroupIndex = 3,
                 Name = "Long Bow",
                 Portrait = "longbow",
@@ -1057,8 +1057,8 @@ namespace GameX.Game.Content
 
             Item Lantern = new Item
             {
-                Value = 304,
-                Group = (int) GameEnums.ItemGroup.Special,
+                ID = 304,
+                Group = (int) ItemGroup.Special,
                 GroupIndex = 4,
                 Name = "Lantern",
                 Portrait = "lantern",
@@ -1073,8 +1073,8 @@ namespace GameX.Game.Content
 
             Item Flametrower = new Item
             {
-                Value = 289,
-                Group = (int) GameEnums.ItemGroup.Special,
+                ID = 289,
+                Group = (int) ItemGroup.Special,
                 GroupIndex = 4,
                 Name = "Flametrower",
                 Portrait = "flametrower",

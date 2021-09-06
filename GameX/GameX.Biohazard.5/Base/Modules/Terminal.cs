@@ -148,7 +148,7 @@ namespace GameX.Base.Modules
                     return true;
                 }
 
-                if (Biohazard.GetActiveGameMode() == (int)GameEnums.GameMode.Versus)
+                if (Biohazard.GetActiveGameMode() == (int)GameMode.Versus)
                 {
                     WriteLine("[Biohazard] Versus mode detected, operation ignored.");
                     return true;
@@ -221,10 +221,10 @@ namespace GameX.Base.Modules
             switch (Command[0])
             {
                 case "writejson" when Utility.RemoveWhiteSpace(Command[1].ToLower()) == "chars":
-                    Main.CreatePrefabs(Enums.PrefabType.Character, true);
+                    Main.CreatePrefabs(PrefabType.Character, true);
                     break;
                 case "writejson" when Utility.RemoveWhiteSpace(Command[1].ToLower()) == "items":
-                    Main.CreatePrefabs(Enums.PrefabType.Item, true);
+                    Main.CreatePrefabs(PrefabType.Item, true);
                     break;
                 case "help":
                     ShowCommands();
@@ -259,7 +259,7 @@ namespace GameX.Base.Modules
             {
                 switch (ActiveInterface)
                 {
-                    case (int) Enums.ConsoleInterface.Console:
+                    case (int) ConsoleInterface.Console:
                         ProcessCommand(TE.Text);
                         break;
                 }
@@ -296,9 +296,9 @@ namespace GameX.Base.Modules
             ScrollToEnd();
         }
 
-        public static void WriteLine(string Output, Enums.MessageBoxType MessageBox = Enums.MessageBoxType.None)
+        public static void WriteLine(string Output, MessageBoxType MessageBox = MessageBoxType.None)
         {
-            if (MessageBox != Enums.MessageBoxType.None)
+            if (MessageBox != MessageBoxType.None)
             {
                 string Message = Output;
 
@@ -319,26 +319,26 @@ namespace GameX.Base.Modules
 
                 switch (MessageBox)
                 {
-                    case Enums.MessageBoxType.Error:
+                    case MessageBoxType.Error:
                         Utility.MessageBox_Error(Message);
                         break;
-                    case Enums.MessageBoxType.Information:
+                    case MessageBoxType.Information:
                         Utility.MessageBox_Information(Message);
                         break;
-                    case Enums.MessageBoxType.Warning:
+                    case MessageBoxType.Warning:
                         Utility.MessageBox_Warning(Message);
                         break;
                 }
             }
 
-            string Current = ConsoleTextInterfaces[(int) Enums.ConsoleInterface.Console];
+            string Current = ConsoleTextInterfaces[(int) ConsoleInterface.Console];
 
             if (string.IsNullOrWhiteSpace(Current))
                 Current = Output;
             else
                 Current += Environment.NewLine + Output;
 
-            ConsoleTextInterfaces[(int) Enums.ConsoleInterface.Console] = Current;
+            ConsoleTextInterfaces[(int) ConsoleInterface.Console] = Current;
 
             if (Main.ConsoleOutputMemoEdit.InvokeRequired)
             {

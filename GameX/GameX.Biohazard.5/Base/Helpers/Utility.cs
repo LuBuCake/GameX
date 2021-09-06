@@ -108,6 +108,8 @@ namespace GameX.Base.Helpers
             return outputImage;
         }
 
+        /* OBS: DevExpress MessageBoxes can cause problems if used logically in a lopped routine */
+
         public static DialogResult MessageBox_Information(string Message, MessageBoxButtons Button = MessageBoxButtons.OK)
         {
             return XtraMessageBox.Show(Message, "Information", Button, MessageBoxIcon.Information);

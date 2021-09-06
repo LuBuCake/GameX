@@ -31,30 +31,6 @@ namespace GameX.Base.Helpers
             return JsonConvert.DeserializeObject<GameXInfo>(Data);
         }
 
-        // NET DATA //
-
-        public static string SerializeCharacterSelectionChanged(NetCharacterSelectionChange Data)
-        {
-            return JsonConvert.SerializeObject(Data);
-        }
-
-        public static NetCharacterSelectionChange DeserializeCharacterSelectionChanged(string Data)
-        {
-            return JsonConvert.DeserializeObject<NetCharacterSelectionChange>(Data);
-        }
-
-        public static string SerializeCharacterFreezeChanged(NetCharacterFreezeChange Data)
-        {
-            return JsonConvert.SerializeObject(Data);
-        }
-
-        public static NetCharacterFreezeChange DeserializeCharacterFreezeChanged(string Data)
-        {
-            return JsonConvert.DeserializeObject<NetCharacterFreezeChange>(Data);
-        }
-
-        // CLIENT OBJECTS //
-
         public static string SerializeCharacter(Character Data)
         {
             return JsonConvert.SerializeObject(Data, Formatting.Indented);

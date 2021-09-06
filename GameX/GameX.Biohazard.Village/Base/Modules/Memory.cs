@@ -105,7 +105,7 @@ namespace GameX.Base.Modules
         private static IntPtr Target_Handle { get; set; }
         public static bool DebugMode { get; private set; }
 
-        public static void StartModule(Process Target, Enums.MEMORY_ACCESS AccessLevel = Enums.MEMORY_ACCESS.PROCESS_ALL_ACCESS)
+        public static void StartModule(Process Target, MEMORY_ACCESS AccessLevel = MEMORY_ACCESS.PROCESS_ALL_ACCESS)
         {
             Target_Process = Target;
             Target_Handle = OpenProcess((int) AccessLevel, false, Target_Process.Id);
@@ -345,7 +345,7 @@ namespace GameX.Base.Modules
 
             Terminal.WriteLine($"[Memory] Patching {CallAddress:X} for {DetourName}.");
 
-            long DetourAddress = VirtualAllocEx(Target_Handle, (long)FindFreeBlockForRegion(new UIntPtr((ulong)CallAddress), (uint)DetourContent.Length).ToUInt64(), DetourContent.Length, (int)Enums.MEMORY_INFORMATION.MEM_COMMIT | (int)Enums.MEMORY_INFORMATION.MEM_RESERVE, (int)Enums.MEMORY_PROTECTION.PAGE_EXECUTE_READ);
+            long DetourAddress = VirtualAllocEx(Target_Handle, (long)FindFreeBlockForRegion(new UIntPtr((ulong)CallAddress), (uint)DetourContent.Length).ToUInt64(), DetourContent.Length, (int)MEMORY_INFORMATION.MEM_COMMIT | (int)MEMORY_INFORMATION.MEM_RESERVE, (int)MEMORY_PROTECTION.PAGE_EXECUTE_READ);
 
             if (DetourAddress == 0)
             {
@@ -377,7 +377,7 @@ namespace GameX.Base.Modules
 
             Detour Detour = GetDetour(DetourName);
             WriteRawAddress(Detour.CallAddress(), Detour.CallInstruction());
-            VirtualFreeEx(Target_Handle, Detour.Address(), 0, (int) Enums.MEMORY_INFORMATION.MEM_RELEASE);
+            VirtualFreeEx(Target_Handle, Detour.Address(), 0, (int) MEMORY_INFORMATION.MEM_RELEASE);
             Detours.Remove(DetourName);
             Terminal.WriteLine($"[Memory] {DetourName} removed sucessfully.");
             return true;
@@ -409,7 +409,7 @@ namespace GameX.Base.Modules
                 if ((long)mbi.BaseAddress > (long)maxAddress)
                     return UIntPtr.Zero;
 
-                if (mbi.State == (uint)Enums.MEMORY_INFORMATION.MEM_FREE && mbi.RegionSize > size)
+                if (mbi.State == (uint)MEMORY_INFORMATION.MEM_FREE && mbi.RegionSize > size)
                 {
                     UIntPtr tmpAddress;
                     if ((long)mbi.BaseAddress % si.allocationGranularity > 0)

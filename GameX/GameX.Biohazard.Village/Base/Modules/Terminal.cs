@@ -162,9 +162,9 @@ namespace GameX.Base.Modules
             TE.Text = "";
         }
 
-        public static void WriteLine(string Output, Enums.MessageBoxType MessageBox = Enums.MessageBoxType.None)
+        public static void WriteLine(string Output, MessageBoxType MessageBox = MessageBoxType.None)
         {
-            if (MessageBox != Enums.MessageBoxType.None)
+            if (MessageBox != MessageBoxType.None)
             {
                 string Message = Output;
 
@@ -179,13 +179,13 @@ namespace GameX.Base.Modules
 
                 switch (MessageBox)
                 {
-                    case Enums.MessageBoxType.Error:
+                    case MessageBoxType.Error:
                         Utility.MessageBox_Error(Message);
                         break;
-                    case Enums.MessageBoxType.Information:
+                    case MessageBoxType.Information:
                         Utility.MessageBox_Information(Message);
                         break;
-                    case Enums.MessageBoxType.Warning:
+                    case MessageBoxType.Warning:
                         Utility.MessageBox_Warning(Message);
                         break;
                 }

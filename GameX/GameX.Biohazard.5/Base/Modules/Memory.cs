@@ -45,7 +45,7 @@ namespace GameX.Base.Modules
         private static IntPtr Target_Handle { get; set; }
         public static bool DebugMode { get; private set; }
 
-        public static void StartModule(Process Target, Enums.MEMORY_ACCESS AccessLevel = Enums.MEMORY_ACCESS.PROCESS_ALL_ACCESS)
+        public static void StartModule(Process Target, MEMORY_ACCESS AccessLevel = MEMORY_ACCESS.PROCESS_ALL_ACCESS)
         {
             Target_Process = Target;
             Target_Handle = OpenProcess((int)AccessLevel, false, Target_Process.Id);
@@ -168,7 +168,7 @@ namespace GameX.Base.Modules
             WriteRawAddress(Address, BitConverter.GetBytes(Value));
         }
 
-        /*MEMORY INJECTION (REQUIRES DEBUGMODE)*/
+        /*MEMORY MANAGMENT (REQUIRES DEBUGMODE)*/
 
         private static Dictionary<string, Detour> Detours { get; set; }
 
@@ -181,8 +181,6 @@ namespace GameX.Base.Modules
             catch (Win32Exception)
             {
                 Terminal.WriteLine("[Memory] Failed entering debug mode.");
-                Terminal.WriteLine("[Memory] WARNING: Code injection is only allowed in Admin Mode, expect limitations in User Mode.");
-                Utility.MessageBox_Warning("Code injection is only allowed in Admin Mode, expect limitations in User Mode.");
                 DebugMode = false;
                 return;
             }
@@ -286,7 +284,7 @@ namespace GameX.Base.Modules
 
             Terminal.WriteLine($"[Memory] Patching {CallAddress:X} for {DetourName}.");
 
-            int DetourAddress = VirtualAllocEx(Target_Handle, 0, DetourContent.Length, (int) Enums.MEMORY_INFORMATION.MEM_COMMIT | (int) Enums.MEMORY_INFORMATION.MEM_RESERVE, (int) Enums.MEMORY_PROTECTION.PAGE_EXECUTE_READ);
+            int DetourAddress = VirtualAllocEx(Target_Handle, 0, DetourContent.Length, (int) MEMORY_INFORMATION.MEM_COMMIT | (int) MEMORY_INFORMATION.MEM_RESERVE, (int) MEMORY_PROTECTION.PAGE_EXECUTE_READ);
 
             if (DetourAddress == 0)
             {
@@ -294,7 +292,7 @@ namespace GameX.Base.Modules
                 return null;
             }
 
-            Terminal.WriteLine($"[Memory] {DetourName} patched! Memory allocated at {DetourAddress:X}.");
+            Terminal.WriteLine($"[Memory] {DetourName} applyed! Memory allocated at {DetourAddress:X}.");
 
             WriteRawAddress(CallAddress, DetourJump(CallAddress, DetourAddress, CallInstruction.Length));
             WriteRawAddress(DetourAddress, DetourContent);
@@ -318,7 +316,7 @@ namespace GameX.Base.Modules
 
             Detour Detour = GetDetour(DetourName);
             WriteRawAddress(Detour.CallAddress(), Detour.CallInstruction());
-            VirtualFreeEx(Target_Handle, Detour.Address(), 0, (int) Enums.MEMORY_INFORMATION.MEM_RELEASE);
+            VirtualFreeEx(Target_Handle, Detour.Address(), 0, (int) MEMORY_INFORMATION.MEM_RELEASE);
             Detours.Remove(DetourName);
             Terminal.WriteLine($"[Memory] {DetourName} removed sucessfully.");
             return true;

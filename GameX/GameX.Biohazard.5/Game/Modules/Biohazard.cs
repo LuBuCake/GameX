@@ -1,4 +1,5 @@
-﻿using GameX.Base.Modules;
+﻿using GameX.Base.Helpers;
+using GameX.Base.Modules;
 
 namespace GameX.Game.Modules
 {
@@ -109,6 +110,77 @@ namespace GameX.Game.Modules
         public static bool InGame()
         {
             return Memory.ReadInt32("re5dx9.exe", 0x00E39D44, 0x220) == 1;
+        }
+
+        public static void SetMelee(string Name, byte Value)
+        {
+            int Address;
+
+            switch(Name)
+            {
+                case "Reunion Head / Flash":
+                    Address = 0x00B5D583;
+                    break;
+                case "Reunion Leg Front":
+                    Address = 0x00B5D463;
+                    break;
+                case "Head / Flash":
+                    Address = 0x00B5D4F3;
+                    break;
+                case "Arm Back":
+                    Address = 0x00B5D613;
+                    break;
+                case "Arm Front":
+                    Address = 0x00B5D343;
+                    break;
+                case "Leg Back":
+                    Address = 0x00B5D733;
+                    break;
+                case "Leg Front":
+                    Address = 0x00B5D3D3;
+                    break;
+                case "Finisher Back":
+                    Address = 0x00B6C2BF;
+                    break;
+                case "Finisher Front":
+                    Address = 0x00B6C37F;
+                    break;
+                case "Taunt":
+                    Address = 0x00B5D2C7;
+                    break;
+                case "Knife":
+                    Address = 0x00B77C6D;
+                    break;
+                case "Help":
+                    Address = 0x00B5D6A3;
+                    break;
+                case "Quick Turn":
+                    Address = 0x00B5D072;
+                    break;
+                case "Partner Command":
+                    Address = 0x00B5F1FD;
+                    break;
+                case "Move Left":
+                    Address = 0x00B5CD97;
+                    break;
+                case "Move Right":
+                    Address = 0x00B5CE17;
+                    break;
+                case "Move Back":
+                    Address = 0x00B5CEFD;
+                    break;
+                case "Reload":
+                    Address = 0x00B6BCB2;
+                    break;
+                default:
+                    Address = 0;
+                    break;
+            }
+
+            if (Address > 0)
+            {
+                Memory.WriteBytes(new[] { Value }, "", Address);
+            }
         }
     }
 }

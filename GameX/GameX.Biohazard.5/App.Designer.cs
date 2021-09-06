@@ -92,15 +92,37 @@ namespace GameX
             this.P1InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P1UntargetableButton = new DevExpress.XtraEditors.CheckButton();
             this.P1HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
+            this.TabPageMelee = new DevExpress.XtraTab.XtraTabPage();
+            this.WeskerGP = new DevExpress.XtraEditors.GroupControl();
+            this.WeskerNoDashCostCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.WeskerInfiniteDashCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.WeskerGlassesCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.MeleeAnytimeGP = new DevExpress.XtraEditors.GroupControl();
+            this.MeleeSwapGP = new DevExpress.XtraEditors.GroupControl();
+            this.ReunionLegFrontLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.HelpLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.FinisherBackLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.ArmBackComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.ReunionLegFrontComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.HelpComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.FinisherBackComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.LegBackLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.ArmBackLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.LegBackComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.ReunionHeadFlashLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.HeadFlashLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.FinisherFrontLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.ArmFrontComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.ReunionHeadFlashComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.HeadFlashComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.FinisherFrontComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.LegFrontLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.ArmFrontLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.LegFrontComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.TabPageInventory = new DevExpress.XtraTab.XtraTabPage();
             this.TabPageSettings = new DevExpress.XtraTab.XtraTabPage();
             this.TabPageSettingsGPApp = new DevExpress.XtraEditors.GroupControl();
             this.MiscModsGP = new DevExpress.XtraEditors.GroupControl();
-            this.MiscExtraGP = new DevExpress.XtraEditors.GroupControl();
-            this.WeskerGP = new DevExpress.XtraEditors.GroupControl();
-            this.WeskerNoDashCostButton = new DevExpress.XtraEditors.SimpleButton();
-            this.WeskerInfiniteDashButton = new DevExpress.XtraEditors.SimpleButton();
-            this.WeskerSunglassesButton = new DevExpress.XtraEditors.SimpleButton();
             this.ColorFilterGP = new DevExpress.XtraEditors.GroupControl();
             this.ColorFilterButton = new DevExpress.XtraEditors.SimpleButton();
             this.ControllerAimGP = new DevExpress.XtraEditors.GroupControl();
@@ -123,6 +145,21 @@ namespace GameX
             this.ClearConsoleSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.ConsoleModeComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.ConsoleInputTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.MoveRightLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.MoveLeftLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.QuickTurnLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.TauntComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.MoveRightComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.MoveLeftComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.QuickTurnComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.KnifeLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.TauntLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.KnifeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.ReloadLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.ReloadComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.MeleeAnytimeSwitch = new DevExpress.XtraEditors.ToggleSwitch();
+            this.MoveBackLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.MoveBackComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -182,14 +219,31 @@ namespace GameX
             this.P1HandnessGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.P1HandnessComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1HealthBar.Properties)).BeginInit();
+            this.TabPageMelee.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.WeskerGP)).BeginInit();
+            this.WeskerGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.WeskerNoDashCostCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeskerInfiniteDashCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeskerGlassesCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MeleeAnytimeGP)).BeginInit();
+            this.MeleeAnytimeGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MeleeSwapGP)).BeginInit();
+            this.MeleeSwapGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ArmBackComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReunionLegFrontComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FinisherBackComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LegBackComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ArmFrontComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReunionHeadFlashComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HeadFlashComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FinisherFrontComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LegFrontComboBox.Properties)).BeginInit();
             this.TabPageSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageSettingsGPApp)).BeginInit();
             this.TabPageSettingsGPApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MiscModsGP)).BeginInit();
             this.MiscModsGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MiscExtraGP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WeskerGP)).BeginInit();
-            this.WeskerGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ColorFilterGP)).BeginInit();
             this.ColorFilterGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ControllerAimGP)).BeginInit();
@@ -210,6 +264,14 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleModeComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TauntComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoveRightComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoveLeftComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuickTurnComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KnifeComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReloadComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MeleeAnytimeSwitch.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoveBackComboBox.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // P1CosComboBox
@@ -275,6 +337,7 @@ namespace GameX
             this.MasterTabControl.TabIndex = 18;
             this.MasterTabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.TabPageChar,
+            this.TabPageMelee,
             this.TabPageInventory,
             this.TabPageSettings,
             this.TabPageConsole});
@@ -1064,6 +1127,354 @@ namespace GameX
             this.P1HealthBar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P1HealthBar.ToolTipTitle = "Player Health";
             // 
+            // TabPageMelee
+            // 
+            this.TabPageMelee.Controls.Add(this.WeskerGP);
+            this.TabPageMelee.Controls.Add(this.MeleeAnytimeGP);
+            this.TabPageMelee.Controls.Add(this.MeleeSwapGP);
+            this.TabPageMelee.Name = "TabPageMelee";
+            this.TabPageMelee.Size = new System.Drawing.Size(638, 438);
+            this.TabPageMelee.Text = "Melee";
+            // 
+            // WeskerGP
+            // 
+            this.WeskerGP.Controls.Add(this.WeskerNoDashCostCheckEdit);
+            this.WeskerGP.Controls.Add(this.WeskerInfiniteDashCheckEdit);
+            this.WeskerGP.Controls.Add(this.WeskerGlassesCheckEdit);
+            this.WeskerGP.Location = new System.Drawing.Point(317, 312);
+            this.WeskerGP.Name = "WeskerGP";
+            this.WeskerGP.Size = new System.Drawing.Size(313, 116);
+            this.WeskerGP.TabIndex = 3;
+            this.WeskerGP.Text = "Wesker";
+            // 
+            // WeskerNoDashCostCheckEdit
+            // 
+            this.WeskerNoDashCostCheckEdit.Location = new System.Drawing.Point(12, 87);
+            this.WeskerNoDashCostCheckEdit.Name = "WeskerNoDashCostCheckEdit";
+            this.WeskerNoDashCostCheckEdit.Properties.AllowFocused = false;
+            this.WeskerNoDashCostCheckEdit.Properties.Caption = "No Dash HP Cost";
+            this.WeskerNoDashCostCheckEdit.Size = new System.Drawing.Size(118, 20);
+            this.WeskerNoDashCostCheckEdit.TabIndex = 7;
+            // 
+            // WeskerInfiniteDashCheckEdit
+            // 
+            this.WeskerInfiniteDashCheckEdit.Location = new System.Drawing.Point(12, 61);
+            this.WeskerInfiniteDashCheckEdit.Name = "WeskerInfiniteDashCheckEdit";
+            this.WeskerInfiniteDashCheckEdit.Properties.AllowFocused = false;
+            this.WeskerInfiniteDashCheckEdit.Properties.Caption = "Infinite Dash";
+            this.WeskerInfiniteDashCheckEdit.Size = new System.Drawing.Size(118, 20);
+            this.WeskerInfiniteDashCheckEdit.TabIndex = 6;
+            // 
+            // WeskerGlassesCheckEdit
+            // 
+            this.WeskerGlassesCheckEdit.Location = new System.Drawing.Point(12, 35);
+            this.WeskerGlassesCheckEdit.Name = "WeskerGlassesCheckEdit";
+            this.WeskerGlassesCheckEdit.Properties.AllowFocused = false;
+            this.WeskerGlassesCheckEdit.Properties.Caption = "No Sunglass Drop";
+            this.WeskerGlassesCheckEdit.Size = new System.Drawing.Size(118, 20);
+            this.WeskerGlassesCheckEdit.TabIndex = 5;
+            // 
+            // MeleeAnytimeGP
+            // 
+            this.MeleeAnytimeGP.Controls.Add(this.ReloadLabelControl);
+            this.MeleeAnytimeGP.Controls.Add(this.MoveBackLabelControl);
+            this.MeleeAnytimeGP.Controls.Add(this.MeleeAnytimeSwitch);
+            this.MeleeAnytimeGP.Controls.Add(this.ReloadComboBox);
+            this.MeleeAnytimeGP.Controls.Add(this.MoveRightLabelControl);
+            this.MeleeAnytimeGP.Controls.Add(this.MoveLeftLabelControl);
+            this.MeleeAnytimeGP.Controls.Add(this.QuickTurnLabelControl);
+            this.MeleeAnytimeGP.Controls.Add(this.MoveBackComboBox);
+            this.MeleeAnytimeGP.Controls.Add(this.TauntComboBox);
+            this.MeleeAnytimeGP.Controls.Add(this.MoveRightComboBox);
+            this.MeleeAnytimeGP.Controls.Add(this.MoveLeftComboBox);
+            this.MeleeAnytimeGP.Controls.Add(this.QuickTurnComboBox);
+            this.MeleeAnytimeGP.Controls.Add(this.KnifeLabelControl);
+            this.MeleeAnytimeGP.Controls.Add(this.TauntLabelControl);
+            this.MeleeAnytimeGP.Controls.Add(this.KnifeComboBox);
+            this.MeleeAnytimeGP.Location = new System.Drawing.Point(8, 206);
+            this.MeleeAnytimeGP.Name = "MeleeAnytimeGP";
+            this.MeleeAnytimeGP.Size = new System.Drawing.Size(303, 222);
+            this.MeleeAnytimeGP.TabIndex = 1;
+            this.MeleeAnytimeGP.Text = "Anytime";
+            // 
+            // MeleeSwapGP
+            // 
+            this.MeleeSwapGP.Controls.Add(this.ReunionLegFrontLabelControl);
+            this.MeleeSwapGP.Controls.Add(this.HelpLabelControl);
+            this.MeleeSwapGP.Controls.Add(this.FinisherBackLabelControl);
+            this.MeleeSwapGP.Controls.Add(this.ArmBackComboBox);
+            this.MeleeSwapGP.Controls.Add(this.ReunionLegFrontComboBox);
+            this.MeleeSwapGP.Controls.Add(this.HelpComboBox);
+            this.MeleeSwapGP.Controls.Add(this.FinisherBackComboBox);
+            this.MeleeSwapGP.Controls.Add(this.LegBackLabelControl);
+            this.MeleeSwapGP.Controls.Add(this.ArmBackLabelControl);
+            this.MeleeSwapGP.Controls.Add(this.LegBackComboBox);
+            this.MeleeSwapGP.Controls.Add(this.ReunionHeadFlashLabelControl);
+            this.MeleeSwapGP.Controls.Add(this.HeadFlashLabelControl);
+            this.MeleeSwapGP.Controls.Add(this.FinisherFrontLabelControl);
+            this.MeleeSwapGP.Controls.Add(this.ArmFrontComboBox);
+            this.MeleeSwapGP.Controls.Add(this.ReunionHeadFlashComboBox);
+            this.MeleeSwapGP.Controls.Add(this.HeadFlashComboBox);
+            this.MeleeSwapGP.Controls.Add(this.FinisherFrontComboBox);
+            this.MeleeSwapGP.Controls.Add(this.LegFrontLabelControl);
+            this.MeleeSwapGP.Controls.Add(this.ArmFrontLabelControl);
+            this.MeleeSwapGP.Controls.Add(this.LegFrontComboBox);
+            this.MeleeSwapGP.Location = new System.Drawing.Point(8, 10);
+            this.MeleeSwapGP.Name = "MeleeSwapGP";
+            this.MeleeSwapGP.Size = new System.Drawing.Size(622, 190);
+            this.MeleeSwapGP.TabIndex = 0;
+            this.MeleeSwapGP.Text = "Swap";
+            // 
+            // ReunionLegFrontLabelControl
+            // 
+            this.ReunionLegFrontLabelControl.Location = new System.Drawing.Point(321, 152);
+            this.ReunionLegFrontLabelControl.Name = "ReunionLegFrontLabelControl";
+            this.ReunionLegFrontLabelControl.Size = new System.Drawing.Size(99, 13);
+            this.ReunionLegFrontLabelControl.TabIndex = 20;
+            this.ReunionLegFrontLabelControl.Text = "Reunion Leg Front:";
+            // 
+            // HelpLabelControl
+            // 
+            this.HelpLabelControl.Location = new System.Drawing.Point(321, 126);
+            this.HelpLabelControl.Name = "HelpLabelControl";
+            this.HelpLabelControl.Size = new System.Drawing.Size(27, 13);
+            this.HelpLabelControl.TabIndex = 19;
+            this.HelpLabelControl.Text = "Help:";
+            // 
+            // FinisherBackLabelControl
+            // 
+            this.FinisherBackLabelControl.Location = new System.Drawing.Point(321, 100);
+            this.FinisherBackLabelControl.Name = "FinisherBackLabelControl";
+            this.FinisherBackLabelControl.Size = new System.Drawing.Size(70, 13);
+            this.FinisherBackLabelControl.TabIndex = 18;
+            this.FinisherBackLabelControl.Text = "Finisher Back:";
+            // 
+            // ArmBackComboBox
+            // 
+            this.ArmBackComboBox.Location = new System.Drawing.Point(456, 45);
+            this.ArmBackComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.ArmBackComboBox.Name = "ArmBackComboBox";
+            this.ArmBackComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.ArmBackComboBox.Properties.AllowFocused = false;
+            this.ArmBackComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.ArmBackComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.ArmBackComboBox.Size = new System.Drawing.Size(145, 20);
+            this.ArmBackComboBox.TabIndex = 17;
+            this.ArmBackComboBox.TabStop = false;
+            this.ArmBackComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.ArmBackComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.ArmBackComboBox.ToolTipTitle = "Handness";
+            // 
+            // ReunionLegFrontComboBox
+            // 
+            this.ReunionLegFrontComboBox.Location = new System.Drawing.Point(456, 149);
+            this.ReunionLegFrontComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.ReunionLegFrontComboBox.Name = "ReunionLegFrontComboBox";
+            this.ReunionLegFrontComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.ReunionLegFrontComboBox.Properties.AllowFocused = false;
+            this.ReunionLegFrontComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.ReunionLegFrontComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.ReunionLegFrontComboBox.Size = new System.Drawing.Size(145, 20);
+            this.ReunionLegFrontComboBox.TabIndex = 16;
+            this.ReunionLegFrontComboBox.TabStop = false;
+            this.ReunionLegFrontComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.ReunionLegFrontComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.ReunionLegFrontComboBox.ToolTipTitle = "Handness";
+            // 
+            // HelpComboBox
+            // 
+            this.HelpComboBox.Location = new System.Drawing.Point(456, 123);
+            this.HelpComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.HelpComboBox.Name = "HelpComboBox";
+            this.HelpComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.HelpComboBox.Properties.AllowFocused = false;
+            this.HelpComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.HelpComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.HelpComboBox.Size = new System.Drawing.Size(145, 20);
+            this.HelpComboBox.TabIndex = 15;
+            this.HelpComboBox.TabStop = false;
+            this.HelpComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.HelpComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.HelpComboBox.ToolTipTitle = "Handness";
+            // 
+            // FinisherBackComboBox
+            // 
+            this.FinisherBackComboBox.Location = new System.Drawing.Point(456, 97);
+            this.FinisherBackComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.FinisherBackComboBox.Name = "FinisherBackComboBox";
+            this.FinisherBackComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.FinisherBackComboBox.Properties.AllowFocused = false;
+            this.FinisherBackComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.FinisherBackComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.FinisherBackComboBox.Size = new System.Drawing.Size(145, 20);
+            this.FinisherBackComboBox.TabIndex = 14;
+            this.FinisherBackComboBox.TabStop = false;
+            this.FinisherBackComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.FinisherBackComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.FinisherBackComboBox.ToolTipTitle = "Handness";
+            // 
+            // LegBackLabelControl
+            // 
+            this.LegBackLabelControl.Location = new System.Drawing.Point(321, 74);
+            this.LegBackLabelControl.Name = "LegBackLabelControl";
+            this.LegBackLabelControl.Size = new System.Drawing.Size(47, 13);
+            this.LegBackLabelControl.TabIndex = 13;
+            this.LegBackLabelControl.Text = "Leg Back:";
+            // 
+            // ArmBackLabelControl
+            // 
+            this.ArmBackLabelControl.Location = new System.Drawing.Point(321, 48);
+            this.ArmBackLabelControl.Name = "ArmBackLabelControl";
+            this.ArmBackLabelControl.Size = new System.Drawing.Size(49, 13);
+            this.ArmBackLabelControl.TabIndex = 12;
+            this.ArmBackLabelControl.Text = "Arm Back:";
+            // 
+            // LegBackComboBox
+            // 
+            this.LegBackComboBox.Location = new System.Drawing.Point(456, 71);
+            this.LegBackComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.LegBackComboBox.Name = "LegBackComboBox";
+            this.LegBackComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.LegBackComboBox.Properties.AllowFocused = false;
+            this.LegBackComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LegBackComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.LegBackComboBox.Size = new System.Drawing.Size(145, 20);
+            this.LegBackComboBox.TabIndex = 11;
+            this.LegBackComboBox.TabStop = false;
+            this.LegBackComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.LegBackComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.LegBackComboBox.ToolTipTitle = "Handness";
+            // 
+            // ReunionHeadFlashLabelControl
+            // 
+            this.ReunionHeadFlashLabelControl.Location = new System.Drawing.Point(23, 152);
+            this.ReunionHeadFlashLabelControl.Name = "ReunionHeadFlashLabelControl";
+            this.ReunionHeadFlashLabelControl.Size = new System.Drawing.Size(114, 13);
+            this.ReunionHeadFlashLabelControl.TabIndex = 10;
+            this.ReunionHeadFlashLabelControl.Text = "Reunion Head / Flash:";
+            // 
+            // HeadFlashLabelControl
+            // 
+            this.HeadFlashLabelControl.Location = new System.Drawing.Point(23, 126);
+            this.HeadFlashLabelControl.Name = "HeadFlashLabelControl";
+            this.HeadFlashLabelControl.Size = new System.Drawing.Size(67, 13);
+            this.HeadFlashLabelControl.TabIndex = 9;
+            this.HeadFlashLabelControl.Text = "Head / Flash:";
+            // 
+            // FinisherFrontLabelControl
+            // 
+            this.FinisherFrontLabelControl.Location = new System.Drawing.Point(23, 100);
+            this.FinisherFrontLabelControl.Name = "FinisherFrontLabelControl";
+            this.FinisherFrontLabelControl.Size = new System.Drawing.Size(75, 13);
+            this.FinisherFrontLabelControl.TabIndex = 8;
+            this.FinisherFrontLabelControl.Text = "Finisher Front:";
+            // 
+            // ArmFrontComboBox
+            // 
+            this.ArmFrontComboBox.Location = new System.Drawing.Point(158, 45);
+            this.ArmFrontComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.ArmFrontComboBox.Name = "ArmFrontComboBox";
+            this.ArmFrontComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.ArmFrontComboBox.Properties.AllowFocused = false;
+            this.ArmFrontComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.ArmFrontComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.ArmFrontComboBox.Size = new System.Drawing.Size(145, 20);
+            this.ArmFrontComboBox.TabIndex = 7;
+            this.ArmFrontComboBox.TabStop = false;
+            this.ArmFrontComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.ArmFrontComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.ArmFrontComboBox.ToolTipTitle = "Handness";
+            // 
+            // ReunionHeadFlashComboBox
+            // 
+            this.ReunionHeadFlashComboBox.Location = new System.Drawing.Point(158, 149);
+            this.ReunionHeadFlashComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.ReunionHeadFlashComboBox.Name = "ReunionHeadFlashComboBox";
+            this.ReunionHeadFlashComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.ReunionHeadFlashComboBox.Properties.AllowFocused = false;
+            this.ReunionHeadFlashComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.ReunionHeadFlashComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.ReunionHeadFlashComboBox.Size = new System.Drawing.Size(145, 20);
+            this.ReunionHeadFlashComboBox.TabIndex = 6;
+            this.ReunionHeadFlashComboBox.TabStop = false;
+            this.ReunionHeadFlashComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.ReunionHeadFlashComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.ReunionHeadFlashComboBox.ToolTipTitle = "Handness";
+            // 
+            // HeadFlashComboBox
+            // 
+            this.HeadFlashComboBox.Location = new System.Drawing.Point(158, 123);
+            this.HeadFlashComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.HeadFlashComboBox.Name = "HeadFlashComboBox";
+            this.HeadFlashComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.HeadFlashComboBox.Properties.AllowFocused = false;
+            this.HeadFlashComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.HeadFlashComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.HeadFlashComboBox.Size = new System.Drawing.Size(145, 20);
+            this.HeadFlashComboBox.TabIndex = 5;
+            this.HeadFlashComboBox.TabStop = false;
+            this.HeadFlashComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.HeadFlashComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.HeadFlashComboBox.ToolTipTitle = "Handness";
+            // 
+            // FinisherFrontComboBox
+            // 
+            this.FinisherFrontComboBox.Location = new System.Drawing.Point(158, 97);
+            this.FinisherFrontComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.FinisherFrontComboBox.Name = "FinisherFrontComboBox";
+            this.FinisherFrontComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.FinisherFrontComboBox.Properties.AllowFocused = false;
+            this.FinisherFrontComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.FinisherFrontComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.FinisherFrontComboBox.Size = new System.Drawing.Size(145, 20);
+            this.FinisherFrontComboBox.TabIndex = 4;
+            this.FinisherFrontComboBox.TabStop = false;
+            this.FinisherFrontComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.FinisherFrontComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.FinisherFrontComboBox.ToolTipTitle = "Handness";
+            // 
+            // LegFrontLabelControl
+            // 
+            this.LegFrontLabelControl.Location = new System.Drawing.Point(23, 74);
+            this.LegFrontLabelControl.Name = "LegFrontLabelControl";
+            this.LegFrontLabelControl.Size = new System.Drawing.Size(52, 13);
+            this.LegFrontLabelControl.TabIndex = 3;
+            this.LegFrontLabelControl.Text = "Leg Front:";
+            // 
+            // ArmFrontLabelControl
+            // 
+            this.ArmFrontLabelControl.Location = new System.Drawing.Point(23, 48);
+            this.ArmFrontLabelControl.Name = "ArmFrontLabelControl";
+            this.ArmFrontLabelControl.Size = new System.Drawing.Size(54, 13);
+            this.ArmFrontLabelControl.TabIndex = 2;
+            this.ArmFrontLabelControl.Text = "Arm Front:";
+            // 
+            // LegFrontComboBox
+            // 
+            this.LegFrontComboBox.Location = new System.Drawing.Point(158, 71);
+            this.LegFrontComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.LegFrontComboBox.Name = "LegFrontComboBox";
+            this.LegFrontComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.LegFrontComboBox.Properties.AllowFocused = false;
+            this.LegFrontComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LegFrontComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.LegFrontComboBox.Size = new System.Drawing.Size(145, 20);
+            this.LegFrontComboBox.TabIndex = 1;
+            this.LegFrontComboBox.TabStop = false;
+            this.LegFrontComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.LegFrontComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.LegFrontComboBox.ToolTipTitle = "Handness";
+            // 
             // TabPageInventory
             // 
             this.TabPageInventory.Name = "TabPageInventory";
@@ -1084,16 +1495,13 @@ namespace GameX
             this.TabPageSettingsGPApp.Controls.Add(this.MiscModsGP);
             this.TabPageSettingsGPApp.Controls.Add(this.AboutPictureEdit);
             this.TabPageSettingsGPApp.Controls.Add(this.AppSettingsGP);
-            this.TabPageSettingsGPApp.Location = new System.Drawing.Point(322, 10);
-            this.TabPageSettingsGPApp.Margin = new System.Windows.Forms.Padding(10);
+            this.TabPageSettingsGPApp.Location = new System.Drawing.Point(8, 10);
             this.TabPageSettingsGPApp.Name = "TabPageSettingsGPApp";
-            this.TabPageSettingsGPApp.Size = new System.Drawing.Size(308, 418);
+            this.TabPageSettingsGPApp.Size = new System.Drawing.Size(622, 418);
             this.TabPageSettingsGPApp.TabIndex = 0;
             // 
             // MiscModsGP
             // 
-            this.MiscModsGP.Controls.Add(this.MiscExtraGP);
-            this.MiscModsGP.Controls.Add(this.WeskerGP);
             this.MiscModsGP.Controls.Add(this.ColorFilterGP);
             this.MiscModsGP.Controls.Add(this.ControllerAimGP);
             this.MiscModsGP.Location = new System.Drawing.Point(5, 105);
@@ -1101,64 +1509,6 @@ namespace GameX
             this.MiscModsGP.Size = new System.Drawing.Size(298, 182);
             this.MiscModsGP.TabIndex = 1;
             this.MiscModsGP.Text = "Miscellaneous";
-            // 
-            // MiscExtraGP
-            // 
-            this.MiscExtraGP.Location = new System.Drawing.Point(123, 30);
-            this.MiscExtraGP.Name = "MiscExtraGP";
-            this.MiscExtraGP.ShowCaption = false;
-            this.MiscExtraGP.Size = new System.Drawing.Size(170, 70);
-            this.MiscExtraGP.TabIndex = 3;
-            // 
-            // WeskerGP
-            // 
-            this.WeskerGP.Controls.Add(this.WeskerNoDashCostButton);
-            this.WeskerGP.Controls.Add(this.WeskerInfiniteDashButton);
-            this.WeskerGP.Controls.Add(this.WeskerSunglassesButton);
-            this.WeskerGP.Location = new System.Drawing.Point(123, 106);
-            this.WeskerGP.Name = "WeskerGP";
-            this.WeskerGP.Size = new System.Drawing.Size(170, 71);
-            this.WeskerGP.TabIndex = 2;
-            this.WeskerGP.Text = "Wesker";
-            // 
-            // WeskerNoDashCostButton
-            // 
-            this.WeskerNoDashCostButton.AllowFocus = false;
-            this.WeskerNoDashCostButton.Location = new System.Drawing.Point(115, 36);
-            this.WeskerNoDashCostButton.Name = "WeskerNoDashCostButton";
-            this.WeskerNoDashCostButton.Size = new System.Drawing.Size(48, 23);
-            this.WeskerNoDashCostButton.TabIndex = 4;
-            this.WeskerNoDashCostButton.TabStop = false;
-            this.WeskerNoDashCostButton.Text = "OFF";
-            this.WeskerNoDashCostButton.ToolTip = "Removes dash\'s HP cost.";
-            this.WeskerNoDashCostButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.WeskerNoDashCostButton.ToolTipTitle = "Dash No HP Cost";
-            // 
-            // WeskerInfiniteDashButton
-            // 
-            this.WeskerInfiniteDashButton.AllowFocus = false;
-            this.WeskerInfiniteDashButton.Location = new System.Drawing.Point(61, 36);
-            this.WeskerInfiniteDashButton.Name = "WeskerInfiniteDashButton";
-            this.WeskerInfiniteDashButton.Size = new System.Drawing.Size(48, 23);
-            this.WeskerInfiniteDashButton.TabIndex = 3;
-            this.WeskerInfiniteDashButton.TabStop = false;
-            this.WeskerInfiniteDashButton.Text = "OFF";
-            this.WeskerInfiniteDashButton.ToolTip = "Removes Wesker\'s dash turn penalties and makes it infinite.";
-            this.WeskerInfiniteDashButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.WeskerInfiniteDashButton.ToolTipTitle = "Infinite Dash";
-            // 
-            // WeskerSunglassesButton
-            // 
-            this.WeskerSunglassesButton.AllowFocus = false;
-            this.WeskerSunglassesButton.Location = new System.Drawing.Point(7, 36);
-            this.WeskerSunglassesButton.Name = "WeskerSunglassesButton";
-            this.WeskerSunglassesButton.Size = new System.Drawing.Size(48, 23);
-            this.WeskerSunglassesButton.TabIndex = 2;
-            this.WeskerSunglassesButton.TabStop = false;
-            this.WeskerSunglassesButton.Text = "OFF";
-            this.WeskerSunglassesButton.ToolTip = "Wesker no longer drops his sunglasses after being hit.";
-            this.WeskerSunglassesButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.WeskerSunglassesButton.ToolTipTitle = "Never Drop Sunglasses";
             // 
             // ColorFilterGP
             // 
@@ -1420,6 +1770,195 @@ namespace GameX
             this.ConsoleInputTextEdit.Size = new System.Drawing.Size(454, 20);
             this.ConsoleInputTextEdit.TabIndex = 1;
             // 
+            // MoveRightLabelControl
+            // 
+            this.MoveRightLabelControl.Location = new System.Drawing.Point(23, 142);
+            this.MoveRightLabelControl.Name = "MoveRightLabelControl";
+            this.MoveRightLabelControl.Size = new System.Drawing.Size(62, 13);
+            this.MoveRightLabelControl.TabIndex = 20;
+            this.MoveRightLabelControl.Text = "Move Right:";
+            // 
+            // MoveLeftLabelControl
+            // 
+            this.MoveLeftLabelControl.Location = new System.Drawing.Point(23, 116);
+            this.MoveLeftLabelControl.Name = "MoveLeftLabelControl";
+            this.MoveLeftLabelControl.Size = new System.Drawing.Size(53, 13);
+            this.MoveLeftLabelControl.TabIndex = 19;
+            this.MoveLeftLabelControl.Text = "Move Left:";
+            // 
+            // QuickTurnLabelControl
+            // 
+            this.QuickTurnLabelControl.Location = new System.Drawing.Point(23, 90);
+            this.QuickTurnLabelControl.Name = "QuickTurnLabelControl";
+            this.QuickTurnLabelControl.Size = new System.Drawing.Size(59, 13);
+            this.QuickTurnLabelControl.TabIndex = 18;
+            this.QuickTurnLabelControl.Text = "Quick Turn:";
+            // 
+            // TauntComboBox
+            // 
+            this.TauntComboBox.Location = new System.Drawing.Point(134, 35);
+            this.TauntComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.TauntComboBox.Name = "TauntComboBox";
+            this.TauntComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.TauntComboBox.Properties.AllowFocused = false;
+            this.TauntComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.TauntComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.TauntComboBox.Size = new System.Drawing.Size(145, 20);
+            this.TauntComboBox.TabIndex = 17;
+            this.TauntComboBox.TabStop = false;
+            this.TauntComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.TauntComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.TauntComboBox.ToolTipTitle = "Handness";
+            // 
+            // MoveRightComboBox
+            // 
+            this.MoveRightComboBox.Location = new System.Drawing.Point(134, 139);
+            this.MoveRightComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.MoveRightComboBox.Name = "MoveRightComboBox";
+            this.MoveRightComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.MoveRightComboBox.Properties.AllowFocused = false;
+            this.MoveRightComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.MoveRightComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.MoveRightComboBox.Size = new System.Drawing.Size(145, 20);
+            this.MoveRightComboBox.TabIndex = 16;
+            this.MoveRightComboBox.TabStop = false;
+            this.MoveRightComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.MoveRightComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.MoveRightComboBox.ToolTipTitle = "Handness";
+            // 
+            // MoveLeftComboBox
+            // 
+            this.MoveLeftComboBox.Location = new System.Drawing.Point(134, 113);
+            this.MoveLeftComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.MoveLeftComboBox.Name = "MoveLeftComboBox";
+            this.MoveLeftComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.MoveLeftComboBox.Properties.AllowFocused = false;
+            this.MoveLeftComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.MoveLeftComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.MoveLeftComboBox.Size = new System.Drawing.Size(145, 20);
+            this.MoveLeftComboBox.TabIndex = 15;
+            this.MoveLeftComboBox.TabStop = false;
+            this.MoveLeftComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.MoveLeftComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.MoveLeftComboBox.ToolTipTitle = "Handness";
+            // 
+            // QuickTurnComboBox
+            // 
+            this.QuickTurnComboBox.Location = new System.Drawing.Point(134, 87);
+            this.QuickTurnComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.QuickTurnComboBox.Name = "QuickTurnComboBox";
+            this.QuickTurnComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.QuickTurnComboBox.Properties.AllowFocused = false;
+            this.QuickTurnComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.QuickTurnComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.QuickTurnComboBox.Size = new System.Drawing.Size(145, 20);
+            this.QuickTurnComboBox.TabIndex = 14;
+            this.QuickTurnComboBox.TabStop = false;
+            this.QuickTurnComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.QuickTurnComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.QuickTurnComboBox.ToolTipTitle = "Handness";
+            // 
+            // KnifeLabelControl
+            // 
+            this.KnifeLabelControl.Location = new System.Drawing.Point(23, 64);
+            this.KnifeLabelControl.Name = "KnifeLabelControl";
+            this.KnifeLabelControl.Size = new System.Drawing.Size(29, 13);
+            this.KnifeLabelControl.TabIndex = 13;
+            this.KnifeLabelControl.Text = "Knife:";
+            // 
+            // TauntLabelControl
+            // 
+            this.TauntLabelControl.Location = new System.Drawing.Point(23, 38);
+            this.TauntLabelControl.Name = "TauntLabelControl";
+            this.TauntLabelControl.Size = new System.Drawing.Size(33, 13);
+            this.TauntLabelControl.TabIndex = 12;
+            this.TauntLabelControl.Text = "Taunt:";
+            // 
+            // KnifeComboBox
+            // 
+            this.KnifeComboBox.Location = new System.Drawing.Point(134, 61);
+            this.KnifeComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.KnifeComboBox.Name = "KnifeComboBox";
+            this.KnifeComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.KnifeComboBox.Properties.AllowFocused = false;
+            this.KnifeComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.KnifeComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.KnifeComboBox.Size = new System.Drawing.Size(145, 20);
+            this.KnifeComboBox.TabIndex = 11;
+            this.KnifeComboBox.TabStop = false;
+            this.KnifeComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.KnifeComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.KnifeComboBox.ToolTipTitle = "Handness";
+            // 
+            // ReloadLabelControl
+            // 
+            this.ReloadLabelControl.Location = new System.Drawing.Point(23, 194);
+            this.ReloadLabelControl.Name = "ReloadLabelControl";
+            this.ReloadLabelControl.Size = new System.Drawing.Size(39, 13);
+            this.ReloadLabelControl.TabIndex = 22;
+            this.ReloadLabelControl.Text = "Reload:";
+            // 
+            // ReloadComboBox
+            // 
+            this.ReloadComboBox.Location = new System.Drawing.Point(134, 191);
+            this.ReloadComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.ReloadComboBox.Name = "ReloadComboBox";
+            this.ReloadComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.ReloadComboBox.Properties.AllowFocused = false;
+            this.ReloadComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.ReloadComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.ReloadComboBox.Size = new System.Drawing.Size(145, 20);
+            this.ReloadComboBox.TabIndex = 21;
+            this.ReloadComboBox.TabStop = false;
+            this.ReloadComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.ReloadComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.ReloadComboBox.ToolTipTitle = "Handness";
+            // 
+            // MeleeAnytimeSwitch
+            // 
+            this.MeleeAnytimeSwitch.Location = new System.Drawing.Point(220, 3);
+            this.MeleeAnytimeSwitch.Name = "MeleeAnytimeSwitch";
+            this.MeleeAnytimeSwitch.Properties.AllowFocused = false;
+            this.MeleeAnytimeSwitch.Properties.OffText = "Off";
+            this.MeleeAnytimeSwitch.Properties.OnText = "On";
+            this.MeleeAnytimeSwitch.Size = new System.Drawing.Size(95, 21);
+            this.MeleeAnytimeSwitch.TabIndex = 23;
+            this.MeleeAnytimeSwitch.ToolTip = "Enables melee anytime giving the player the ability to perform a list of attacks " +
+    "with a press of a button.";
+            this.MeleeAnytimeSwitch.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.MeleeAnytimeSwitch.ToolTipTitle = "Melee Anytime";
+            // 
+            // MoveBackLabelControl
+            // 
+            this.MoveBackLabelControl.Location = new System.Drawing.Point(23, 168);
+            this.MoveBackLabelControl.Name = "MoveBackLabelControl";
+            this.MoveBackLabelControl.Size = new System.Drawing.Size(57, 13);
+            this.MoveBackLabelControl.TabIndex = 25;
+            this.MoveBackLabelControl.Text = "Move Back:";
+            // 
+            // MoveBackComboBox
+            // 
+            this.MoveBackComboBox.Location = new System.Drawing.Point(134, 165);
+            this.MoveBackComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.MoveBackComboBox.Name = "MoveBackComboBox";
+            this.MoveBackComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.MoveBackComboBox.Properties.AllowFocused = false;
+            this.MoveBackComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.MoveBackComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.MoveBackComboBox.Size = new System.Drawing.Size(145, 20);
+            this.MoveBackComboBox.TabIndex = 24;
+            this.MoveBackComboBox.TabStop = false;
+            this.MoveBackComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.MoveBackComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.MoveBackComboBox.ToolTipTitle = "Handness";
+            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1492,14 +2031,33 @@ namespace GameX
             this.P1HandnessGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.P1HandnessComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1HealthBar.Properties)).EndInit();
+            this.TabPageMelee.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.WeskerGP)).EndInit();
+            this.WeskerGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.WeskerNoDashCostCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeskerInfiniteDashCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeskerGlassesCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MeleeAnytimeGP)).EndInit();
+            this.MeleeAnytimeGP.ResumeLayout(false);
+            this.MeleeAnytimeGP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MeleeSwapGP)).EndInit();
+            this.MeleeSwapGP.ResumeLayout(false);
+            this.MeleeSwapGP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ArmBackComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReunionLegFrontComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FinisherBackComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LegBackComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ArmFrontComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReunionHeadFlashComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HeadFlashComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FinisherFrontComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LegFrontComboBox.Properties)).EndInit();
             this.TabPageSettings.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TabPageSettingsGPApp)).EndInit();
             this.TabPageSettingsGPApp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MiscModsGP)).EndInit();
             this.MiscModsGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.MiscExtraGP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WeskerGP)).EndInit();
-            this.WeskerGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ColorFilterGP)).EndInit();
             this.ColorFilterGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ControllerAimGP)).EndInit();
@@ -1521,6 +2079,14 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleModeComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TauntComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoveRightComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoveLeftComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuickTurnComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KnifeComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReloadComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MeleeAnytimeSwitch.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoveBackComboBox.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1614,11 +2180,48 @@ namespace GameX
         private DevExpress.XtraEditors.SimpleButton ControllerAimButton;
         private DevExpress.XtraEditors.GroupControl ColorFilterGP;
         private DevExpress.XtraEditors.SimpleButton ColorFilterButton;
+        private DevExpress.XtraTab.XtraTabPage TabPageMelee;
+        private DevExpress.XtraEditors.GroupControl MeleeSwapGP;
+        private DevExpress.XtraEditors.LabelControl ReunionHeadFlashLabelControl;
+        private DevExpress.XtraEditors.LabelControl HeadFlashLabelControl;
+        private DevExpress.XtraEditors.LabelControl FinisherFrontLabelControl;
+        private DevExpress.XtraEditors.ComboBoxEdit ArmFrontComboBox;
+        private DevExpress.XtraEditors.ComboBoxEdit ReunionHeadFlashComboBox;
+        private DevExpress.XtraEditors.ComboBoxEdit HeadFlashComboBox;
+        private DevExpress.XtraEditors.ComboBoxEdit FinisherFrontComboBox;
+        private DevExpress.XtraEditors.LabelControl LegFrontLabelControl;
+        private DevExpress.XtraEditors.LabelControl ArmFrontLabelControl;
+        private DevExpress.XtraEditors.ComboBoxEdit LegFrontComboBox;
+        private DevExpress.XtraEditors.LabelControl ReunionLegFrontLabelControl;
+        private DevExpress.XtraEditors.LabelControl HelpLabelControl;
+        private DevExpress.XtraEditors.LabelControl FinisherBackLabelControl;
+        private DevExpress.XtraEditors.ComboBoxEdit ArmBackComboBox;
+        private DevExpress.XtraEditors.ComboBoxEdit ReunionLegFrontComboBox;
+        private DevExpress.XtraEditors.ComboBoxEdit HelpComboBox;
+        private DevExpress.XtraEditors.ComboBoxEdit FinisherBackComboBox;
+        private DevExpress.XtraEditors.LabelControl LegBackLabelControl;
+        private DevExpress.XtraEditors.LabelControl ArmBackLabelControl;
+        private DevExpress.XtraEditors.ComboBoxEdit LegBackComboBox;
         private DevExpress.XtraEditors.GroupControl WeskerGP;
-        private DevExpress.XtraEditors.SimpleButton WeskerNoDashCostButton;
-        private DevExpress.XtraEditors.SimpleButton WeskerInfiniteDashButton;
-        private DevExpress.XtraEditors.SimpleButton WeskerSunglassesButton;
-        private DevExpress.XtraEditors.GroupControl MiscExtraGP;
+        private DevExpress.XtraEditors.GroupControl MeleeAnytimeGP;
+        private DevExpress.XtraEditors.CheckEdit WeskerNoDashCostCheckEdit;
+        private DevExpress.XtraEditors.CheckEdit WeskerInfiniteDashCheckEdit;
+        private DevExpress.XtraEditors.CheckEdit WeskerGlassesCheckEdit;
+        private DevExpress.XtraEditors.LabelControl ReloadLabelControl;
+        private DevExpress.XtraEditors.ComboBoxEdit ReloadComboBox;
+        private DevExpress.XtraEditors.LabelControl MoveRightLabelControl;
+        private DevExpress.XtraEditors.LabelControl MoveLeftLabelControl;
+        private DevExpress.XtraEditors.LabelControl QuickTurnLabelControl;
+        private DevExpress.XtraEditors.ComboBoxEdit TauntComboBox;
+        private DevExpress.XtraEditors.ComboBoxEdit MoveRightComboBox;
+        private DevExpress.XtraEditors.ComboBoxEdit MoveLeftComboBox;
+        private DevExpress.XtraEditors.ComboBoxEdit QuickTurnComboBox;
+        private DevExpress.XtraEditors.LabelControl KnifeLabelControl;
+        private DevExpress.XtraEditors.LabelControl TauntLabelControl;
+        private DevExpress.XtraEditors.ComboBoxEdit KnifeComboBox;
+        private DevExpress.XtraEditors.LabelControl MoveBackLabelControl;
+        private DevExpress.XtraEditors.ToggleSwitch MeleeAnytimeSwitch;
+        private DevExpress.XtraEditors.ComboBoxEdit MoveBackComboBox;
     }
 }
 
