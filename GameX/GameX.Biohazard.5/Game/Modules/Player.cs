@@ -76,7 +76,7 @@ namespace GameX.Game.Modules
 
             switch (Char.Item1)
             {
-                case 1:
+                case (int)Characters.Sheva:
                     return 1;
                 default:
                     return 0;
@@ -89,11 +89,11 @@ namespace GameX.Game.Modules
 
             switch (Char.Item1)
             {
-                case 0:
-                case 3:
-                case 4:
-                case 6:
-                case 134:
+                case (int)Characters.Chris:
+                case (int)Characters.Wesker:
+                case (int)Characters.Josh:
+                case (int)Characters.Barry:
+                case (int)Characters.Irving:
                     return 0;
                 default:
                     return 1;
@@ -137,6 +137,11 @@ namespace GameX.Game.Modules
             Memory.WriteFloat(0f, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x10DC, 0x120, 0x2C);
         }
 
+        public int GetMeleeTarget()
+        {
+            return Memory.ReadInt32("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2DA4);
+        }
+
         public void SetMeleeTarget(int EntityAddress)
         {
             Memory.WriteInt32(EntityAddress, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2DA4);
@@ -147,7 +152,7 @@ namespace GameX.Game.Modules
             return Memory.ReadInt32("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x10E0);
         }
 
-        public bool GetTargetedMelee()
+        public bool DoingGrabMelee()
         {
             Tuple<int, int> CharCos = GetCharacter();
             int Melee = GetMelee();
@@ -162,6 +167,26 @@ namespace GameX.Game.Modules
                 case (int)Characters.Barry when Melee == (int)GrabMoves.ReunionHeadFlash:
                 case (int)Characters.Rebecca when Melee == (int)GrabMoves.LegBack:
                 case (int)Characters.Irving when Melee == (int)GrabMoves.LegBack:
+                    return true;
+                default:
+                    return false;
+            }
+        }
+
+        public bool DoingIdleMove()
+        {
+            int Melee = GetMelee();
+
+            switch (Melee)
+            {
+                case (int)IdleMoves.StandStill:
+                case (int)IdleMoves.MoveFront:
+                case (int)IdleMoves.MoveBack:
+                case (int)IdleMoves.MoveLeft:
+                case (int)IdleMoves.MoveRight:
+                case (int)IdleMoves.QuickTurn:
+                case (int)IdleMoves.Idle:
+                case (int)IdleMoves.Running:
                     return true;
                 default:
                     return false;

@@ -98,6 +98,21 @@ namespace GameX
             this.WeskerInfiniteDashCheckEdit = new DevExpress.XtraEditors.CheckEdit();
             this.WeskerGlassesCheckEdit = new DevExpress.XtraEditors.CheckEdit();
             this.MeleeAnytimeGP = new DevExpress.XtraEditors.GroupControl();
+            this.ReloadLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.MoveBackLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.MeleeAnytimeSwitch = new DevExpress.XtraEditors.ToggleSwitch();
+            this.ReloadComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.MoveRightLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.MoveLeftLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.QuickTurnLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.MoveBackComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.TauntComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.MoveRightComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.MoveLeftComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.QuickTurnComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.KnifeLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.TauntLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.KnifeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.MeleeSwapGP = new DevExpress.XtraEditors.GroupControl();
             this.ReunionLegFrontLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.HelpLabelControl = new DevExpress.XtraEditors.LabelControl();
@@ -145,21 +160,12 @@ namespace GameX
             this.ClearConsoleSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.ConsoleModeComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.ConsoleInputTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.MoveRightLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.MoveLeftLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.QuickTurnLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.TauntComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.MoveRightComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.MoveLeftComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.QuickTurnComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.KnifeLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.TauntLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.KnifeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.ReloadLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.ReloadComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.MeleeAnytimeSwitch = new DevExpress.XtraEditors.ToggleSwitch();
-            this.MoveBackLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.MoveBackComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.MiscMeleeGP = new DevExpress.XtraEditors.GroupControl();
+            this.WeaponPlacementComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.WeaponPlacementLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.WeaponPlacementGP = new DevExpress.XtraEditors.GroupControl();
+            this.MeleeCameraCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.ReunionSpecialMovesCheckEdit = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -227,6 +233,14 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.WeskerGlassesCheckEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MeleeAnytimeGP)).BeginInit();
             this.MeleeAnytimeGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MeleeAnytimeSwitch.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReloadComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoveBackComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TauntComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoveRightComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoveLeftComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuickTurnComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KnifeComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MeleeSwapGP)).BeginInit();
             this.MeleeSwapGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ArmBackComboBox.Properties)).BeginInit();
@@ -264,14 +278,13 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleModeComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TauntComboBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MoveRightComboBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MoveLeftComboBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.QuickTurnComboBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.KnifeComboBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReloadComboBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MeleeAnytimeSwitch.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MoveBackComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscMeleeGP)).BeginInit();
+            this.MiscMeleeGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.WeaponPlacementComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeaponPlacementGP)).BeginInit();
+            this.WeaponPlacementGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MeleeCameraCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReunionSpecialMovesCheckEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // P1CosComboBox
@@ -1129,6 +1142,7 @@ namespace GameX
             // 
             // TabPageMelee
             // 
+            this.TabPageMelee.Controls.Add(this.MiscMeleeGP);
             this.TabPageMelee.Controls.Add(this.WeskerGP);
             this.TabPageMelee.Controls.Add(this.MeleeAnytimeGP);
             this.TabPageMelee.Controls.Add(this.MeleeSwapGP);
@@ -1149,7 +1163,7 @@ namespace GameX
             // 
             // WeskerNoDashCostCheckEdit
             // 
-            this.WeskerNoDashCostCheckEdit.Location = new System.Drawing.Point(12, 87);
+            this.WeskerNoDashCostCheckEdit.Location = new System.Drawing.Point(12, 61);
             this.WeskerNoDashCostCheckEdit.Name = "WeskerNoDashCostCheckEdit";
             this.WeskerNoDashCostCheckEdit.Properties.AllowFocused = false;
             this.WeskerNoDashCostCheckEdit.Properties.Caption = "No Dash HP Cost";
@@ -1158,7 +1172,7 @@ namespace GameX
             // 
             // WeskerInfiniteDashCheckEdit
             // 
-            this.WeskerInfiniteDashCheckEdit.Location = new System.Drawing.Point(12, 61);
+            this.WeskerInfiniteDashCheckEdit.Location = new System.Drawing.Point(12, 87);
             this.WeskerInfiniteDashCheckEdit.Name = "WeskerInfiniteDashCheckEdit";
             this.WeskerInfiniteDashCheckEdit.Properties.AllowFocused = false;
             this.WeskerInfiniteDashCheckEdit.Properties.Caption = "Infinite Dash";
@@ -1196,6 +1210,195 @@ namespace GameX
             this.MeleeAnytimeGP.Size = new System.Drawing.Size(303, 222);
             this.MeleeAnytimeGP.TabIndex = 1;
             this.MeleeAnytimeGP.Text = "Anytime";
+            // 
+            // ReloadLabelControl
+            // 
+            this.ReloadLabelControl.Location = new System.Drawing.Point(23, 194);
+            this.ReloadLabelControl.Name = "ReloadLabelControl";
+            this.ReloadLabelControl.Size = new System.Drawing.Size(39, 13);
+            this.ReloadLabelControl.TabIndex = 22;
+            this.ReloadLabelControl.Text = "Reload:";
+            // 
+            // MoveBackLabelControl
+            // 
+            this.MoveBackLabelControl.Location = new System.Drawing.Point(23, 168);
+            this.MoveBackLabelControl.Name = "MoveBackLabelControl";
+            this.MoveBackLabelControl.Size = new System.Drawing.Size(57, 13);
+            this.MoveBackLabelControl.TabIndex = 25;
+            this.MoveBackLabelControl.Text = "Move Back:";
+            // 
+            // MeleeAnytimeSwitch
+            // 
+            this.MeleeAnytimeSwitch.Location = new System.Drawing.Point(220, 3);
+            this.MeleeAnytimeSwitch.Name = "MeleeAnytimeSwitch";
+            this.MeleeAnytimeSwitch.Properties.AllowFocused = false;
+            this.MeleeAnytimeSwitch.Properties.OffText = "Off";
+            this.MeleeAnytimeSwitch.Properties.OnText = "On";
+            this.MeleeAnytimeSwitch.Size = new System.Drawing.Size(95, 21);
+            this.MeleeAnytimeSwitch.TabIndex = 23;
+            this.MeleeAnytimeSwitch.ToolTip = "Enables melee anytime giving the player the ability to perform a list of attacks " +
+    "with a press of a button.";
+            this.MeleeAnytimeSwitch.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.MeleeAnytimeSwitch.ToolTipTitle = "Melee Anytime";
+            // 
+            // ReloadComboBox
+            // 
+            this.ReloadComboBox.Location = new System.Drawing.Point(134, 191);
+            this.ReloadComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.ReloadComboBox.Name = "ReloadComboBox";
+            this.ReloadComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.ReloadComboBox.Properties.AllowFocused = false;
+            this.ReloadComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.ReloadComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.ReloadComboBox.Size = new System.Drawing.Size(145, 20);
+            this.ReloadComboBox.TabIndex = 21;
+            this.ReloadComboBox.TabStop = false;
+            this.ReloadComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.ReloadComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.ReloadComboBox.ToolTipTitle = "Handness";
+            // 
+            // MoveRightLabelControl
+            // 
+            this.MoveRightLabelControl.Location = new System.Drawing.Point(23, 142);
+            this.MoveRightLabelControl.Name = "MoveRightLabelControl";
+            this.MoveRightLabelControl.Size = new System.Drawing.Size(62, 13);
+            this.MoveRightLabelControl.TabIndex = 20;
+            this.MoveRightLabelControl.Text = "Move Right:";
+            // 
+            // MoveLeftLabelControl
+            // 
+            this.MoveLeftLabelControl.Location = new System.Drawing.Point(23, 116);
+            this.MoveLeftLabelControl.Name = "MoveLeftLabelControl";
+            this.MoveLeftLabelControl.Size = new System.Drawing.Size(53, 13);
+            this.MoveLeftLabelControl.TabIndex = 19;
+            this.MoveLeftLabelControl.Text = "Move Left:";
+            // 
+            // QuickTurnLabelControl
+            // 
+            this.QuickTurnLabelControl.Location = new System.Drawing.Point(23, 90);
+            this.QuickTurnLabelControl.Name = "QuickTurnLabelControl";
+            this.QuickTurnLabelControl.Size = new System.Drawing.Size(59, 13);
+            this.QuickTurnLabelControl.TabIndex = 18;
+            this.QuickTurnLabelControl.Text = "Quick Turn:";
+            // 
+            // MoveBackComboBox
+            // 
+            this.MoveBackComboBox.Location = new System.Drawing.Point(134, 165);
+            this.MoveBackComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.MoveBackComboBox.Name = "MoveBackComboBox";
+            this.MoveBackComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.MoveBackComboBox.Properties.AllowFocused = false;
+            this.MoveBackComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.MoveBackComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.MoveBackComboBox.Size = new System.Drawing.Size(145, 20);
+            this.MoveBackComboBox.TabIndex = 24;
+            this.MoveBackComboBox.TabStop = false;
+            this.MoveBackComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.MoveBackComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.MoveBackComboBox.ToolTipTitle = "Handness";
+            // 
+            // TauntComboBox
+            // 
+            this.TauntComboBox.Location = new System.Drawing.Point(134, 35);
+            this.TauntComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.TauntComboBox.Name = "TauntComboBox";
+            this.TauntComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.TauntComboBox.Properties.AllowFocused = false;
+            this.TauntComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.TauntComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.TauntComboBox.Size = new System.Drawing.Size(145, 20);
+            this.TauntComboBox.TabIndex = 17;
+            this.TauntComboBox.TabStop = false;
+            this.TauntComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.TauntComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.TauntComboBox.ToolTipTitle = "Handness";
+            // 
+            // MoveRightComboBox
+            // 
+            this.MoveRightComboBox.Location = new System.Drawing.Point(134, 139);
+            this.MoveRightComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.MoveRightComboBox.Name = "MoveRightComboBox";
+            this.MoveRightComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.MoveRightComboBox.Properties.AllowFocused = false;
+            this.MoveRightComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.MoveRightComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.MoveRightComboBox.Size = new System.Drawing.Size(145, 20);
+            this.MoveRightComboBox.TabIndex = 16;
+            this.MoveRightComboBox.TabStop = false;
+            this.MoveRightComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.MoveRightComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.MoveRightComboBox.ToolTipTitle = "Handness";
+            // 
+            // MoveLeftComboBox
+            // 
+            this.MoveLeftComboBox.Location = new System.Drawing.Point(134, 113);
+            this.MoveLeftComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.MoveLeftComboBox.Name = "MoveLeftComboBox";
+            this.MoveLeftComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.MoveLeftComboBox.Properties.AllowFocused = false;
+            this.MoveLeftComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.MoveLeftComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.MoveLeftComboBox.Size = new System.Drawing.Size(145, 20);
+            this.MoveLeftComboBox.TabIndex = 15;
+            this.MoveLeftComboBox.TabStop = false;
+            this.MoveLeftComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.MoveLeftComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.MoveLeftComboBox.ToolTipTitle = "Handness";
+            // 
+            // QuickTurnComboBox
+            // 
+            this.QuickTurnComboBox.Location = new System.Drawing.Point(134, 87);
+            this.QuickTurnComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.QuickTurnComboBox.Name = "QuickTurnComboBox";
+            this.QuickTurnComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.QuickTurnComboBox.Properties.AllowFocused = false;
+            this.QuickTurnComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.QuickTurnComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.QuickTurnComboBox.Size = new System.Drawing.Size(145, 20);
+            this.QuickTurnComboBox.TabIndex = 14;
+            this.QuickTurnComboBox.TabStop = false;
+            this.QuickTurnComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.QuickTurnComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.QuickTurnComboBox.ToolTipTitle = "Handness";
+            // 
+            // KnifeLabelControl
+            // 
+            this.KnifeLabelControl.Location = new System.Drawing.Point(23, 64);
+            this.KnifeLabelControl.Name = "KnifeLabelControl";
+            this.KnifeLabelControl.Size = new System.Drawing.Size(29, 13);
+            this.KnifeLabelControl.TabIndex = 13;
+            this.KnifeLabelControl.Text = "Knife:";
+            // 
+            // TauntLabelControl
+            // 
+            this.TauntLabelControl.Location = new System.Drawing.Point(23, 38);
+            this.TauntLabelControl.Name = "TauntLabelControl";
+            this.TauntLabelControl.Size = new System.Drawing.Size(33, 13);
+            this.TauntLabelControl.TabIndex = 12;
+            this.TauntLabelControl.Text = "Taunt:";
+            // 
+            // KnifeComboBox
+            // 
+            this.KnifeComboBox.Location = new System.Drawing.Point(134, 61);
+            this.KnifeComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.KnifeComboBox.Name = "KnifeComboBox";
+            this.KnifeComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.KnifeComboBox.Properties.AllowFocused = false;
+            this.KnifeComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.KnifeComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.KnifeComboBox.Size = new System.Drawing.Size(145, 20);
+            this.KnifeComboBox.TabIndex = 11;
+            this.KnifeComboBox.TabStop = false;
+            this.KnifeComboBox.ToolTip = "Sets the player\'s handness, left or right.";
+            this.KnifeComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.KnifeComboBox.ToolTipTitle = "Handness";
             // 
             // MeleeSwapGP
             // 
@@ -1770,194 +1973,76 @@ namespace GameX
             this.ConsoleInputTextEdit.Size = new System.Drawing.Size(454, 20);
             this.ConsoleInputTextEdit.TabIndex = 1;
             // 
-            // MoveRightLabelControl
+            // MiscMeleeGP
             // 
-            this.MoveRightLabelControl.Location = new System.Drawing.Point(23, 142);
-            this.MoveRightLabelControl.Name = "MoveRightLabelControl";
-            this.MoveRightLabelControl.Size = new System.Drawing.Size(62, 13);
-            this.MoveRightLabelControl.TabIndex = 20;
-            this.MoveRightLabelControl.Text = "Move Right:";
+            this.MiscMeleeGP.Controls.Add(this.ReunionSpecialMovesCheckEdit);
+            this.MiscMeleeGP.Controls.Add(this.MeleeCameraCheckEdit);
+            this.MiscMeleeGP.Controls.Add(this.WeaponPlacementGP);
+            this.MiscMeleeGP.Location = new System.Drawing.Point(317, 206);
+            this.MiscMeleeGP.Name = "MiscMeleeGP";
+            this.MiscMeleeGP.Size = new System.Drawing.Size(313, 100);
+            this.MiscMeleeGP.TabIndex = 4;
+            this.MiscMeleeGP.Text = "Miscellaneous";
             // 
-            // MoveLeftLabelControl
+            // WeaponPlacementComboBox
             // 
-            this.MoveLeftLabelControl.Location = new System.Drawing.Point(23, 116);
-            this.MoveLeftLabelControl.Name = "MoveLeftLabelControl";
-            this.MoveLeftLabelControl.Size = new System.Drawing.Size(53, 13);
-            this.MoveLeftLabelControl.TabIndex = 19;
-            this.MoveLeftLabelControl.Text = "Move Left:";
-            // 
-            // QuickTurnLabelControl
-            // 
-            this.QuickTurnLabelControl.Location = new System.Drawing.Point(23, 90);
-            this.QuickTurnLabelControl.Name = "QuickTurnLabelControl";
-            this.QuickTurnLabelControl.Size = new System.Drawing.Size(59, 13);
-            this.QuickTurnLabelControl.TabIndex = 18;
-            this.QuickTurnLabelControl.Text = "Quick Turn:";
-            // 
-            // TauntComboBox
-            // 
-            this.TauntComboBox.Location = new System.Drawing.Point(134, 35);
-            this.TauntComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.TauntComboBox.Name = "TauntComboBox";
-            this.TauntComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.TauntComboBox.Properties.AllowFocused = false;
-            this.TauntComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.WeaponPlacementComboBox.Location = new System.Drawing.Point(9, 33);
+            this.WeaponPlacementComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.WeaponPlacementComboBox.Name = "WeaponPlacementComboBox";
+            this.WeaponPlacementComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.WeaponPlacementComboBox.Properties.AllowFocused = false;
+            this.WeaponPlacementComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.TauntComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.TauntComboBox.Size = new System.Drawing.Size(145, 20);
-            this.TauntComboBox.TabIndex = 17;
-            this.TauntComboBox.TabStop = false;
-            this.TauntComboBox.ToolTip = "Sets the player\'s handness, left or right.";
-            this.TauntComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.TauntComboBox.ToolTipTitle = "Handness";
+            this.WeaponPlacementComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.WeaponPlacementComboBox.Size = new System.Drawing.Size(117, 20);
+            this.WeaponPlacementComboBox.TabIndex = 17;
+            this.WeaponPlacementComboBox.TabStop = false;
+            this.WeaponPlacementComboBox.ToolTip = "Changes the player\'s weapon placement position in the back.";
+            this.WeaponPlacementComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.WeaponPlacementComboBox.ToolTipTitle = "Weapon Placement";
             // 
-            // MoveRightComboBox
+            // WeaponPlacementLabelControl
             // 
-            this.MoveRightComboBox.Location = new System.Drawing.Point(134, 139);
-            this.MoveRightComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.MoveRightComboBox.Name = "MoveRightComboBox";
-            this.MoveRightComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.MoveRightComboBox.Properties.AllowFocused = false;
-            this.MoveRightComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.MoveRightComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.MoveRightComboBox.Size = new System.Drawing.Size(145, 20);
-            this.MoveRightComboBox.TabIndex = 16;
-            this.MoveRightComboBox.TabStop = false;
-            this.MoveRightComboBox.ToolTip = "Sets the player\'s handness, left or right.";
-            this.MoveRightComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.MoveRightComboBox.ToolTipTitle = "Handness";
+            this.WeaponPlacementLabelControl.Location = new System.Drawing.Point(18, 10);
+            this.WeaponPlacementLabelControl.Name = "WeaponPlacementLabelControl";
+            this.WeaponPlacementLabelControl.Size = new System.Drawing.Size(99, 13);
+            this.WeaponPlacementLabelControl.TabIndex = 18;
+            this.WeaponPlacementLabelControl.Text = "Weapon Placement";
             // 
-            // MoveLeftComboBox
+            // WeaponPlacementGP
             // 
-            this.MoveLeftComboBox.Location = new System.Drawing.Point(134, 113);
-            this.MoveLeftComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.MoveLeftComboBox.Name = "MoveLeftComboBox";
-            this.MoveLeftComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.MoveLeftComboBox.Properties.AllowFocused = false;
-            this.MoveLeftComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.MoveLeftComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.MoveLeftComboBox.Size = new System.Drawing.Size(145, 20);
-            this.MoveLeftComboBox.TabIndex = 15;
-            this.MoveLeftComboBox.TabStop = false;
-            this.MoveLeftComboBox.ToolTip = "Sets the player\'s handness, left or right.";
-            this.MoveLeftComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.MoveLeftComboBox.ToolTipTitle = "Handness";
+            this.WeaponPlacementGP.Controls.Add(this.WeaponPlacementComboBox);
+            this.WeaponPlacementGP.Controls.Add(this.WeaponPlacementLabelControl);
+            this.WeaponPlacementGP.Location = new System.Drawing.Point(172, 30);
+            this.WeaponPlacementGP.Name = "WeaponPlacementGP";
+            this.WeaponPlacementGP.ShowCaption = false;
+            this.WeaponPlacementGP.Size = new System.Drawing.Size(136, 65);
+            this.WeaponPlacementGP.TabIndex = 19;
             // 
-            // QuickTurnComboBox
+            // MeleeCameraCheckEdit
             // 
-            this.QuickTurnComboBox.Location = new System.Drawing.Point(134, 87);
-            this.QuickTurnComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.QuickTurnComboBox.Name = "QuickTurnComboBox";
-            this.QuickTurnComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.QuickTurnComboBox.Properties.AllowFocused = false;
-            this.QuickTurnComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.QuickTurnComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.QuickTurnComboBox.Size = new System.Drawing.Size(145, 20);
-            this.QuickTurnComboBox.TabIndex = 14;
-            this.QuickTurnComboBox.TabStop = false;
-            this.QuickTurnComboBox.ToolTip = "Sets the player\'s handness, left or right.";
-            this.QuickTurnComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.QuickTurnComboBox.ToolTipTitle = "Handness";
+            this.MeleeCameraCheckEdit.Location = new System.Drawing.Point(12, 37);
+            this.MeleeCameraCheckEdit.Name = "MeleeCameraCheckEdit";
+            this.MeleeCameraCheckEdit.Properties.AllowFocused = false;
+            this.MeleeCameraCheckEdit.Properties.Caption = "Disable Melee Camera";
+            this.MeleeCameraCheckEdit.Size = new System.Drawing.Size(141, 20);
+            this.MeleeCameraCheckEdit.TabIndex = 20;
+            this.MeleeCameraCheckEdit.ToolTip = "Removes all camera animation from melee moves.";
+            this.MeleeCameraCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.MeleeCameraCheckEdit.ToolTipTitle = "No Melee Camera";
             // 
-            // KnifeLabelControl
+            // ReunionSpecialMovesCheckEdit
             // 
-            this.KnifeLabelControl.Location = new System.Drawing.Point(23, 64);
-            this.KnifeLabelControl.Name = "KnifeLabelControl";
-            this.KnifeLabelControl.Size = new System.Drawing.Size(29, 13);
-            this.KnifeLabelControl.TabIndex = 13;
-            this.KnifeLabelControl.Text = "Knife:";
-            // 
-            // TauntLabelControl
-            // 
-            this.TauntLabelControl.Location = new System.Drawing.Point(23, 38);
-            this.TauntLabelControl.Name = "TauntLabelControl";
-            this.TauntLabelControl.Size = new System.Drawing.Size(33, 13);
-            this.TauntLabelControl.TabIndex = 12;
-            this.TauntLabelControl.Text = "Taunt:";
-            // 
-            // KnifeComboBox
-            // 
-            this.KnifeComboBox.Location = new System.Drawing.Point(134, 61);
-            this.KnifeComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.KnifeComboBox.Name = "KnifeComboBox";
-            this.KnifeComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.KnifeComboBox.Properties.AllowFocused = false;
-            this.KnifeComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.KnifeComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.KnifeComboBox.Size = new System.Drawing.Size(145, 20);
-            this.KnifeComboBox.TabIndex = 11;
-            this.KnifeComboBox.TabStop = false;
-            this.KnifeComboBox.ToolTip = "Sets the player\'s handness, left or right.";
-            this.KnifeComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.KnifeComboBox.ToolTipTitle = "Handness";
-            // 
-            // ReloadLabelControl
-            // 
-            this.ReloadLabelControl.Location = new System.Drawing.Point(23, 194);
-            this.ReloadLabelControl.Name = "ReloadLabelControl";
-            this.ReloadLabelControl.Size = new System.Drawing.Size(39, 13);
-            this.ReloadLabelControl.TabIndex = 22;
-            this.ReloadLabelControl.Text = "Reload:";
-            // 
-            // ReloadComboBox
-            // 
-            this.ReloadComboBox.Location = new System.Drawing.Point(134, 191);
-            this.ReloadComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.ReloadComboBox.Name = "ReloadComboBox";
-            this.ReloadComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.ReloadComboBox.Properties.AllowFocused = false;
-            this.ReloadComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ReloadComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.ReloadComboBox.Size = new System.Drawing.Size(145, 20);
-            this.ReloadComboBox.TabIndex = 21;
-            this.ReloadComboBox.TabStop = false;
-            this.ReloadComboBox.ToolTip = "Sets the player\'s handness, left or right.";
-            this.ReloadComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.ReloadComboBox.ToolTipTitle = "Handness";
-            // 
-            // MeleeAnytimeSwitch
-            // 
-            this.MeleeAnytimeSwitch.Location = new System.Drawing.Point(220, 3);
-            this.MeleeAnytimeSwitch.Name = "MeleeAnytimeSwitch";
-            this.MeleeAnytimeSwitch.Properties.AllowFocused = false;
-            this.MeleeAnytimeSwitch.Properties.OffText = "Off";
-            this.MeleeAnytimeSwitch.Properties.OnText = "On";
-            this.MeleeAnytimeSwitch.Size = new System.Drawing.Size(95, 21);
-            this.MeleeAnytimeSwitch.TabIndex = 23;
-            this.MeleeAnytimeSwitch.ToolTip = "Enables melee anytime giving the player the ability to perform a list of attacks " +
-    "with a press of a button.";
-            this.MeleeAnytimeSwitch.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.MeleeAnytimeSwitch.ToolTipTitle = "Melee Anytime";
-            // 
-            // MoveBackLabelControl
-            // 
-            this.MoveBackLabelControl.Location = new System.Drawing.Point(23, 168);
-            this.MoveBackLabelControl.Name = "MoveBackLabelControl";
-            this.MoveBackLabelControl.Size = new System.Drawing.Size(57, 13);
-            this.MoveBackLabelControl.TabIndex = 25;
-            this.MoveBackLabelControl.Text = "Move Back:";
-            // 
-            // MoveBackComboBox
-            // 
-            this.MoveBackComboBox.Location = new System.Drawing.Point(134, 165);
-            this.MoveBackComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.MoveBackComboBox.Name = "MoveBackComboBox";
-            this.MoveBackComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.MoveBackComboBox.Properties.AllowFocused = false;
-            this.MoveBackComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.MoveBackComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.MoveBackComboBox.Size = new System.Drawing.Size(145, 20);
-            this.MoveBackComboBox.TabIndex = 24;
-            this.MoveBackComboBox.TabStop = false;
-            this.MoveBackComboBox.ToolTip = "Sets the player\'s handness, left or right.";
-            this.MoveBackComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.MoveBackComboBox.ToolTipTitle = "Handness";
+            this.ReunionSpecialMovesCheckEdit.Location = new System.Drawing.Point(12, 63);
+            this.ReunionSpecialMovesCheckEdit.Name = "ReunionSpecialMovesCheckEdit";
+            this.ReunionSpecialMovesCheckEdit.Properties.AllowFocused = false;
+            this.ReunionSpecialMovesCheckEdit.Properties.Caption = "Reunion Special Moves";
+            this.ReunionSpecialMovesCheckEdit.Size = new System.Drawing.Size(141, 20);
+            this.ReunionSpecialMovesCheckEdit.TabIndex = 21;
+            this.ReunionSpecialMovesCheckEdit.ToolTip = "This will enable Maluc\'s \"Reunion Melee Overall\" mod and remove the HP check from" +
+    " it.";
+            this.ReunionSpecialMovesCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.ReunionSpecialMovesCheckEdit.ToolTipTitle = "Reunion Melee Overall";
             // 
             // App
             // 
@@ -2040,6 +2125,14 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.MeleeAnytimeGP)).EndInit();
             this.MeleeAnytimeGP.ResumeLayout(false);
             this.MeleeAnytimeGP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MeleeAnytimeSwitch.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReloadComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoveBackComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TauntComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoveRightComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoveLeftComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuickTurnComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KnifeComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MeleeSwapGP)).EndInit();
             this.MeleeSwapGP.ResumeLayout(false);
             this.MeleeSwapGP.PerformLayout();
@@ -2079,14 +2172,14 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleModeComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TauntComboBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MoveRightComboBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MoveLeftComboBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.QuickTurnComboBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.KnifeComboBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReloadComboBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MeleeAnytimeSwitch.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MoveBackComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscMeleeGP)).EndInit();
+            this.MiscMeleeGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.WeaponPlacementComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeaponPlacementGP)).EndInit();
+            this.WeaponPlacementGP.ResumeLayout(false);
+            this.WeaponPlacementGP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MeleeCameraCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReunionSpecialMovesCheckEdit.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2222,6 +2315,12 @@ namespace GameX
         private DevExpress.XtraEditors.LabelControl MoveBackLabelControl;
         private DevExpress.XtraEditors.ToggleSwitch MeleeAnytimeSwitch;
         private DevExpress.XtraEditors.ComboBoxEdit MoveBackComboBox;
+        private DevExpress.XtraEditors.GroupControl MiscMeleeGP;
+        private DevExpress.XtraEditors.ComboBoxEdit WeaponPlacementComboBox;
+        private DevExpress.XtraEditors.LabelControl WeaponPlacementLabelControl;
+        private DevExpress.XtraEditors.GroupControl WeaponPlacementGP;
+        private DevExpress.XtraEditors.CheckEdit MeleeCameraCheckEdit;
+        private DevExpress.XtraEditors.CheckEdit ReunionSpecialMovesCheckEdit;
     }
 }
 

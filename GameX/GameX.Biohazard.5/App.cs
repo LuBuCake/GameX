@@ -98,7 +98,6 @@ namespace GameX
 
         private void Application_Load()
         {
-            CreatePrefabs(PrefabType.All);
             SetupControls();
         }
 
@@ -384,15 +383,15 @@ namespace GameX
 
             for (int Index = 0; Index < CharacterCombos.Length; Index++)
             {
-                CharacterCombos[Index].Properties.Items.AddRange(Game.Content.Characters.GetCharactersFromFolder());
+                CharacterCombos[Index].Properties.Items.AddRange(Game.Content.Characters.GetDefaultChars());
                 WeaponMode[Index].Properties.Items.AddRange(Miscellaneous.WeaponMode());
                 Handness[Index].Properties.Items.AddRange(Miscellaneous.Handness());
 
                 CharCosFreezes[Index].CheckedChanged += CharCosFreeze_CheckedChanged;
-                InfiniteHP[Index].CheckedChanged += OnOff_CheckedChanged;
-                Untargetable[Index].CheckedChanged += OnOff_CheckedChanged;
-                InfiniteAmmo[Index].CheckedChanged += OnOff_CheckedChanged;
-                Rapidfire[Index].CheckedChanged += OnOff_CheckedChanged;
+                InfiniteHP[Index].CheckedChanged += EnableDisable_StateChanged;
+                Untargetable[Index].CheckedChanged += EnableDisable_StateChanged;
+                InfiniteAmmo[Index].CheckedChanged += EnableDisable_StateChanged;
+                Rapidfire[Index].CheckedChanged += EnableDisable_StateChanged;
 
                 CharacterCombos[Index].SelectedIndexChanged += CharComboBox_IndexChanged;
                 CostumeCombos[Index].SelectedIndexChanged += CosComboBox_IndexChanged;
@@ -405,13 +404,13 @@ namespace GameX
 
                 if (Index < EnableDisable.Length)
                 {
-                    EnableDisable[Index].Click += EnableDisable_Click;
+                    EnableDisable[Index].Click += EnableDisable_StateChanged;
                 }
 
                 if (Index == 3)
                     continue;
 
-                CheckUncheck[Index].CheckedChanged += OnOff_CheckedChanged;
+                CheckUncheck[Index].CheckedChanged += EnableDisable_StateChanged;
             }
 
             for (int i = 0; i < MeleeCombosA.Length; i++)
@@ -439,13 +438,22 @@ namespace GameX
                 List<Move> Damage = Moves.GetDefaultMelees(MoveType.Damage);
                 List<Move> Movement = Moves.GetDefaultMelees(MoveType.Movement);
                 List<Move> Action = Moves.GetDefaultMelees(MoveType.Action);
+                List<Move> Dash = Moves.GetDefaultMelees(MoveType.Dash);
 
                 Damage.RemoveAll(item => item.Value == 172);
                 Damage.RemoveAll(item => item.Value == 173);
 
+                foreach (Move move in Movement)
+                    if (move.Name == MeleeLabelsB[i].Text.Replace(":", ""))
+                        MeleeCombosB[i].Properties.Items.Add(move);
+
+                foreach (Move move in Action)
+                    if (move.Name == MeleeLabelsB[i].Text.Replace(":", ""))
+                        MeleeCombosB[i].Properties.Items.Add(move);
+
                 MeleeCombosB[i].Properties.Items.AddRange(Damage);
-                MeleeCombosB[i].Properties.Items.AddRange(Movement);
-                MeleeCombosB[i].Properties.Items.AddRange(Action);
+                MeleeCombosB[i].Properties.Items.AddRange(Dash);
+
                 MeleeCombosB[i].SelectedIndexChanged += Melee_IndexChanged;
 
                 foreach (object item in MeleeCombosB[i].Properties.Items)
@@ -478,6 +486,13 @@ namespace GameX
             ConsoleModeComboBoxEdit.Properties.Items.AddRange(Interfaces.Available());
             ConsoleModeComboBoxEdit.SelectedIndexChanged += Terminal.Interface_IndexChanged;
             ConsoleModeComboBoxEdit.SelectedIndex = 0;
+
+            WeaponPlacementComboBox.Properties.Items.AddRange(Miscellaneous.WeaponPlacement());
+            WeaponPlacementComboBox.SelectedIndexChanged += WeaponPlacement_IndexChanged;
+            WeaponPlacementComboBox.SelectedIndex = 0;
+
+            MeleeCameraCheckEdit.CheckedChanged += EnableDisable_StateChanged;
+            ReunionSpecialMovesCheckEdit.CheckedChanged += EnableDisable_StateChanged;
 
             ClearConsoleSimpleButton.Click += Terminal.ClearConsole_Click;
 
@@ -711,20 +726,27 @@ namespace GameX
 
         private void Handness_IndexChanged(object sender, EventArgs e)
         {
-            if (!Initialized)
-                return;
-
             ComboBoxEdit CBE = sender as ComboBoxEdit;
             int Index = int.Parse(CBE.Name[1].ToString()) - 1;
+
+            if (!Initialized)
+                return;
 
             Biohazard.Players[Index].SetHandness(CBE.SelectedIndex != 0 ? new[] {(byte) (CBE.SelectedItem as ListItem).Value} : new[] {(byte) Biohazard.Players[Index].GetDefaultHandness()});
         }
 
-        private void Melee_IndexChanged(object sender, EventArgs e)
+        private void WeaponPlacement_IndexChanged(object sender, EventArgs e)
         {
+            ComboBoxEdit CBE = sender as ComboBoxEdit;
+
             if (!Initialized)
                 return;
 
+            Biohazard.SetWeaponPlacement((CBE.SelectedItem as ListItem).Value);
+        }
+
+        private void Melee_IndexChanged(object sender, EventArgs e)
+        {
             ComboBoxEdit CBE = sender as ComboBoxEdit;
             Melee_ApplyComboBox(CBE);
         }
@@ -743,11 +765,14 @@ namespace GameX
             Character_ApplyCharacters(Index);
         }
 
-        private void OnOff_CheckedChanged(object sender, EventArgs e)
+        private void EnableDisable_StateChanged(object sender, EventArgs e)
         {
             if (sender.GetType() == typeof(CheckEdit))
             {
                 CheckEdit CE = sender as CheckEdit;
+
+                if (!Initialized)
+                    return;
 
                 if (CE.Name.Equals("WeskerGlassesCheckEdit"))
                 {
@@ -756,6 +781,14 @@ namespace GameX
                 else if (CE.Name.Equals("WeskerNoDashCostCheckEdit"))
                 {
                     Biohazard.WeskerNoDashCost(CE.Checked);
+                }
+                else if (CE.Name.Equals("MeleeCameraCheckEdit"))
+                {
+                    Biohazard.DisableMeleeCamera(CE.Checked);
+                }
+                else if (CE.Name.Equals("ReunionSpecialMovesCheckEdit"))
+                {
+                    Biohazard.EnableReunionSpecialMoves(CE.Checked);
                 }
             }
             else if (sender.GetType() == typeof(CheckButton))
@@ -787,27 +820,22 @@ namespace GameX
                     Biohazard.Players[Player].SetRapidFire(false);
                 }
             }
-        }
-
-        private void EnableDisable_Click(object sender, EventArgs e)
-        {
-            SimpleButton SB = sender as SimpleButton;
-            SB.Text = SB.Text == "Enable" ? "Disable" : "Enable";
-
-            if (!Initialized)
-                return;
-
-            switch (SB.Name)
+            else if (sender.GetType() == typeof(SimpleButton))
             {
-                case "ControllerAimButton":
+                SimpleButton SB = sender as SimpleButton;
+                SB.Text = SB.Text == "Enable" ? "Disable" : "Enable";
+
+                if (!Initialized)
+                    return;
+
+                switch (SB.Name)
                 {
-                    Biohazard.EnableControllerAim(SB.Text.Equals("Disable"));
-                    break;
-                }
-                case "ColorFilterButton":
-                {
-                    Biohazard.EnableColorFilter(SB.Text.Equals("Disable"));
-                    break;
+                    case "ControllerAimButton":
+                        Biohazard.EnableControllerAim(SB.Text.Equals("Disable"));
+                        break;
+                    case "ColorFilterButton":
+                        Biohazard.EnableColorFilter(SB.Text.Equals("Disable"));
+                        break;
                 }
             }
         }
@@ -876,8 +904,9 @@ namespace GameX
             CheckEdit[] CheckUncheck =
             {
                 WeskerGlassesCheckEdit,
-                WeskerInfiniteDashCheckEdit,
-                WeskerNoDashCostCheckEdit
+                WeskerNoDashCostCheckEdit,
+                MeleeCameraCheckEdit,
+                ReunionSpecialMovesCheckEdit
             };
 
             foreach (CheckEdit CE in CheckUncheck)
@@ -885,19 +914,25 @@ namespace GameX
                 switch (CE.Name)
                 {
                     case "WeskerGlassesCheckEdit":
-                        {
-                            if (CE.Checked)
-                                Biohazard.WeskerNoSunglassDrop(true);
+                        if (CE.Checked)
+                            Biohazard.WeskerNoSunglassDrop(true);
 
-                            break;
-                        }
+                        break;
                     case "WeskerNoDashCostCheckEdit":
-                        {
-                            if (CE.Checked)
-                                Biohazard.WeskerNoDashCost(true);
+                        if (CE.Checked)
+                            Biohazard.WeskerNoDashCost(true);
 
-                            break;
-                        }
+                        break;
+                    case "MeleeCameraCheckEdit":
+                        if (CE.Checked)
+                            Biohazard.DisableMeleeCamera(true);
+
+                        break;
+                    case "ReunionSpecialMovesCheckEdit":
+                        if (CE.Checked)
+                            Biohazard.EnableReunionSpecialMoves(true);
+
+                        break;
                 }
             }
 
@@ -923,6 +958,7 @@ namespace GameX
             }
 
             Melee_ApplyComboBox(null, true);
+            WeaponPlacement_IndexChanged(WeaponPlacementComboBox, null);
         }
 
         private void GameX_Start()
@@ -960,6 +996,9 @@ namespace GameX
                 Biohazard.EnableColorFilter(false);
                 Biohazard.WeskerNoSunglassDrop(false);
                 Biohazard.WeskerNoDashCost(false);
+                Biohazard.SetWeaponPlacement(0);
+                Biohazard.DisableMeleeCamera(false);
+                Biohazard.EnableReunionSpecialMoves(false);
 
                 Biohazard.FinishModule();
             }
@@ -1450,6 +1489,9 @@ namespace GameX
                 ReloadLabelControl
             };
 
+            if (!Initialized)
+                return;
+
             if (!ApplyAll)
             {
                 int index = Array.IndexOf(MeleeCombos, CE);
@@ -1603,12 +1645,12 @@ namespace GameX
                     Biohazard.Players[i].SetWeaponMode(new[] { (byte)(WeaponMode[i].SelectedItem as ListItem).Value });
 
                 // Melee Anytime Cords //
-                if (MeleeAnytimeSwitch.IsOn)
+                if (MeleeAnytimeSwitch.IsOn && PlayerPresent)
                 {
                     Vector3 Position = Biohazard.Players[i].GetPosition();
                     Biohazard.Players[i].SetMeleePosition(Position);
 
-                    if (!Biohazard.Players[i].GetTargetedMelee())
+                    if (Biohazard.Players[i].GetMeleeTarget() != 0 && Biohazard.Players[i].DoingIdleMove())
                         Biohazard.Players[i].SetMeleeTarget(0);
                 }
 

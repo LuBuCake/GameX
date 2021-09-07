@@ -1,5 +1,5 @@
-﻿using GameX.Base.Helpers;
-using GameX.Base.Modules;
+﻿using GameX.Base.Modules;
+using System;
 
 namespace GameX.Game.Modules
 {
@@ -181,6 +181,61 @@ namespace GameX.Game.Modules
             {
                 Memory.WriteBytes(new[] { Value }, "", Address);
             }
+        }
+
+        public static void SetWeaponPlacement(int Mode)
+        {
+            switch (Mode)
+            {
+                case 0:
+                    Memory.WriteBytes(new[] { (byte)0x75 }, "re5dx9.exe", 0x84D0AC);
+                    Memory.WriteBytes(new[] { (byte)0x01 }, "re5dx9.exe", 0x84D0D9);
+                    Memory.WriteBytes(new[] { (byte)0x75 }, "re5dx9.exe", 0x84D164);
+                    Memory.WriteBytes(new[] { (byte)0x02 }, "re5dx9.exe", 0x84D196);
+                    break;
+                case 1:
+                    Memory.WriteBytes(new[] { (byte)0xEB }, "re5dx9.exe", 0x84D0AC);
+                    Memory.WriteBytes(new[] { (byte)0x03 }, "re5dx9.exe", 0x84D0D9);
+                    Memory.WriteBytes(new[] { (byte)0x75 }, "re5dx9.exe", 0x84D164);
+                    Memory.WriteBytes(new[] { (byte)0x02 }, "re5dx9.exe", 0x84D196);
+                    break;
+                case 2:
+                    Memory.WriteBytes(new[] { (byte)0x75 }, "re5dx9.exe", 0x84D0AC);
+                    Memory.WriteBytes(new[] { (byte)0x01 }, "re5dx9.exe", 0x84D0D9);
+                    Memory.WriteBytes(new[] { (byte)0xEB }, "re5dx9.exe", 0x84D164);
+                    Memory.WriteBytes(new[] { (byte)0x02 }, "re5dx9.exe", 0x84D196);
+                    break;
+            }
+        }
+
+        public static void DisableMeleeCamera(bool Enable)
+        {
+            Memory.WriteBytes(new[] { Enable ? (byte)0xEB : (byte)0x76 }, "re5dx9.exe", 0x446331);
+        }
+
+        public static void EnableReunionSpecialMoves(bool Enable)
+        {
+            uint bytes_a = 0x7AA23840 - 5 - 0x007EA500;
+            uint bytes_b = 0x7AA237F0 - 5 - 0x007E9D58;
+
+            byte[] jmp_a = new byte[5];
+            byte[] jmp_b = new byte[6];
+
+            jmp_a[0] = 0xE9;
+            jmp_b[0] = 0xE9;
+            jmp_b[5] = 0x90;
+
+            byte[] original_a = { 0xA1, 0x6C, 0x98, 0x23, 0x01 };
+            byte[] original_b = { 0x83, 0x7A, 0x58, 0x05, 0x74, 0x14 };
+
+            BitConverter.GetBytes(bytes_a).CopyTo(jmp_a, 1);
+            BitConverter.GetBytes(bytes_b).CopyTo(jmp_b, 1);
+
+            Memory.WriteBytes(Enable ? jmp_a : original_a, "", 0x007EA500);
+            Memory.WriteBytes(Enable ? jmp_b : original_b, "", 0x007E9D58);
+
+            Memory.WriteBytes(Enable ? new[] { (byte)0xEB } : new[] { (byte)0x73 }, "", 0x7AA23879);
+            Memory.WriteBytes(Enable ? new[] { (byte)0xEB } : new[] { (byte)0x73 }, "", 0x7AA23829);
         }
     }
 }

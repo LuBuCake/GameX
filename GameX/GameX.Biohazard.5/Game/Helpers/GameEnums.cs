@@ -33,7 +33,8 @@ namespace GameX.Game.Helpers
     {
         Movement,
         Damage,
-        Action
+        Action,
+        Dash
     }
 
     public enum Characters
@@ -55,5 +56,17 @@ namespace GameX.Game.Helpers
         LegBack = 57,
         ReunionHeadFlash = 173,
         ReunionLegFront = 172
+    }
+
+    public enum IdleMoves
+    {
+        StandStill,
+        Idle,
+        MoveFront,
+        MoveLeft,
+        MoveRight,
+        Running,
+        MoveBack,
+        QuickTurn = 9
     }
 }

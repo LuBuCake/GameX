@@ -23,5 +23,15 @@ namespace GameX.Game.Content
                 new ListItem("Female", 1)
             };
         }
+
+        public static ListItem[] WeaponPlacement()
+        {
+            return new ListItem[]
+            {
+                new ListItem("Default", 0),
+                new ListItem("Removed", 1),
+                new ListItem("Diagonal", 2)
+            };
+        }
     }
 }

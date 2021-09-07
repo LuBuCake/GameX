@@ -135,7 +135,7 @@
     <Compile Include="Base\Modules\Memory.cs" />
     <Compile Include="Game\Types\Item.cs" />
     <Compile Include="Game\Types\InventoryItem.cs" />
-    <Compile Include="Game\Types\Melee.cs" />
+    <Compile Include="Game\Types\Move.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Base\Types\Detour.cs" />
     <Compile Include="Base\Types\ListItem.cs" />

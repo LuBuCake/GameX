@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("GameX - Resident Evil 5")]
 [assembly: AssemblyDescription("A fancy and trustful trainer to make your gameplay way more fun!")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Singullaritys")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("GameX")]
 [assembly: AssemblyCopyright("Copyright © LuBuCake 2021")]
 [assembly: AssemblyTrademark("")]

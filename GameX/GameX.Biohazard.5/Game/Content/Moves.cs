@@ -265,13 +265,7 @@ namespace GameX.Game.Content
                         MoveBack,
                         MoveRight,
                         MoveLeft,
-                        QuickTurn,
-                        DashStart,
-                        DashStop,
-                        Dashing,
-                        DashRight,
-                        DashLeft,
-                        DashBack
+                        QuickTurn
                     };
                 case MoveType.Damage:
                     return new List<Move>()
@@ -303,6 +297,16 @@ namespace GameX.Game.Content
                         Taunt,
                         Knife,
                         Partner
+                    };
+                case MoveType.Dash:
+                    return new List<Move>()
+                    {
+                        DashStart,
+                        DashStop,
+                        Dashing,
+                        DashRight,
+                        DashLeft,
+                        DashBack
                     };
                 default:
                     return new List<Move>();
