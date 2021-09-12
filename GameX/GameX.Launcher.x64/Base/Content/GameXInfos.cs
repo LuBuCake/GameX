@@ -43,10 +43,7 @@ namespace GameX.Launcher.Base.Content
                 RepositoryRoute = "https://raw.githubusercontent.com/LuBuCake/GameX.Versioning/main/GameX.Biohazard.Village/"
             };
 
-            return new[]
-            {
-                Biohazard_8
-            };
+            return null;
         }
     }
 }
