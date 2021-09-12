@@ -13,7 +13,7 @@ namespace GameX.Launcher.Base.Content
                 GameXFile = "GameX.Biohazard.2.dll",
                 GameXLogo = new[] { "logo_a", "logo_b" },
                 GameXLogoColors = new[] { Color.Red, Color.White },
-                RepositoryRoute = "https://raw.githubusercontent.com/LuBuCake/GameX.Versioning/main/GameX.Biohazard.2/"
+                RepositoryRoute = "https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Biohazard.2/"
             };
 
             GameXInfo Biohazard_3 = new GameXInfo()
@@ -22,7 +22,7 @@ namespace GameX.Launcher.Base.Content
                 GameXFile = "GameX.Biohazard.3.dll",
                 GameXLogo = new[] { "logo_a", "logo_b" },
                 GameXLogoColors = new[] { Color.Red, Color.White },
-                RepositoryRoute = "https://raw.githubusercontent.com/LuBuCake/GameX.Versioning/main/GameX.Biohazard.3/"
+                RepositoryRoute = "https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Biohazard.3/"
             };
 
             GameXInfo Biohazard_7 = new GameXInfo()
@@ -31,7 +31,7 @@ namespace GameX.Launcher.Base.Content
                 GameXFile = "GameX.Biohazard.7.dll",
                 GameXLogo = new[] { "logo_a", "logo_b" },
                 GameXLogoColors = new[] { Color.Red, Color.White },
-                RepositoryRoute = "https://raw.githubusercontent.com/LuBuCake/GameX.Versioning/main/GameX.Biohazard.7/"
+                RepositoryRoute = "https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Biohazard.7/"
             };
 
             GameXInfo Biohazard_8 = new GameXInfo()
@@ -40,7 +40,7 @@ namespace GameX.Launcher.Base.Content
                 GameXFile = "GameX.Biohazard.Village.dll",
                 GameXLogo = new[] { "logo_a", "logo_b" },
                 GameXLogoColors = new[] { Color.Red, Color.White },
-                RepositoryRoute = "https://raw.githubusercontent.com/LuBuCake/GameX.Versioning/main/GameX.Biohazard.Village/"
+                RepositoryRoute = "https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Biohazard.Village/"
             };
 
             return null;

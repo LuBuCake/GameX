@@ -207,7 +207,7 @@ namespace GameX.Launcher
 
             using (WebClient GitHubChecker = new WebClient())
             {
-                string LatestVerion = await Task.Run(() => GitHubChecker.DownloadString("https://raw.githubusercontent.com/LuBuCake/GameX.Versioning/main/GameX.Launcher.x64/latest.txt"));
+                string LatestVerion = await Task.Run(() => GitHubChecker.DownloadString("https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Launcher.x64/latest.txt"));
 
                 Assembly CurApp = Assembly.GetExecutingAssembly();
                 AssemblyName CurName = new AssemblyName(CurApp.FullName);
@@ -222,7 +222,7 @@ namespace GameX.Launcher
 
                 AppVersion _version = new AppVersion()
                 {
-                    FileRoute = "https://raw.githubusercontent.com/LuBuCake/GameX.Versioning/main/GameX.Launcher.x64/latest.zip",
+                    FileRoute = "https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Launcher.x64/latest.zip",
                     StartLauncher = "x64"
                 };
 
@@ -254,7 +254,7 @@ namespace GameX.Launcher
 
             using (WebClient GitHubChecker = new WebClient())
             {
-                string LatestVerion = await Task.Run(() => GitHubChecker.DownloadString("https://raw.githubusercontent.com/LuBuCake/GameX.Versioning/main/GameX.Updater/latest.txt"));
+                string LatestVerion = await Task.Run(() => GitHubChecker.DownloadString("https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Updater/latest.txt"));
                 string FilePath = Directory.GetCurrentDirectory() + "/updater.exe";
 
                 AssemblyName CurName = new AssemblyName();
@@ -286,7 +286,7 @@ namespace GameX.Launcher
 
                 GitHubChecker.DownloadProgressChanged += ReportUpdaterDownloadProgress;
                 GitHubChecker.DownloadFileCompleted += UpdaterDownloadFinished;
-                GitHubChecker.DownloadFileAsync(new Uri("https://raw.githubusercontent.com/LuBuCake/GameX.Versioning/main/GameX.Updater/latest.zip"), UpdaterDirectory + "latest.zip");
+                GitHubChecker.DownloadFileAsync(new Uri("https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Updater/latest.zip"), UpdaterDirectory + "latest.zip");
 
                 return true;
             }
