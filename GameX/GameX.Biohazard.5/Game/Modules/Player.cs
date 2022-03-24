@@ -2,162 +2,159 @@
 using System.Numerics;
 using GameX.Base.Modules;
 using GameX.Game.Helpers;
+using Newtonsoft.Json.Linq;
 
 namespace GameX.Game.Modules
 {
     public class Player
     {
-        private int _INDEX { get; set; }
-        public Inventory _Inventory { get; set; }
+        private int Index { get; set; }
+        public Inventory Inventory { get; set; }
 
         public Player(int Index)
         {
-            _INDEX = Index;
-            _Inventory = new Inventory(Index);
+            this.Index = Index;
+            Inventory = new Inventory(Index);
         }
 
-        public int GetBaseAddress()
+        #region Props
+
+        public int Address
         {
-            return Memory.ReadInt16("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX));
+            get { return Memory.Read<int>("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index)); }
         }
 
-        public bool IsActive()
+        public int Character
         {
-            return GetBaseAddress() != 0;
+            get { return Memory.Read<int>("re5dx9.exe", 0xDA383C, 0x6FE08 + (0x50 * Index)); }
+            set { Memory.Write(value, "re5dx9.exe", 0xDA383C, 0x6FE08 + (0x50 * Index)); }
         }
 
-        public Tuple<int, int> GetCharacter()
+        public int Costume
         {
-            int Character = Memory.ReadInt32("re5dx9.exe", 0xDA383C, 0x6FE08 + (0x50 * _INDEX));
-            int Costume = Memory.ReadInt32("re5dx9.exe", 0xDA383C, 0x6FE0C + (0x50 * _INDEX));
-
-            return new Tuple<int, int>(Character, Costume);
+            get { return Memory.Read<int>("re5dx9.exe", 0xDA383C, 0x6FE0C + (0x50 * Index)); }
+            set { Memory.Write(value, "re5dx9.exe", 0xDA383C, 0x6FE0C + (0x50 * Index)); }
         }
 
-        public void SetCharacter(int Character, int Costume)
+        public bool Invulnerable
         {
-            Memory.WriteInt32(Character, "re5dx9.exe", 0xDA383C, 0x6FE08 + (0x50 * _INDEX));
-            Memory.WriteInt32(Costume, "re5dx9.exe", 0xDA383C, 0x6FE0C + (0x50 * _INDEX));
+            get { return Memory.Read<byte>("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x135C) == 0; }
+            set { Memory.Write(!value, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x135C); }
         }
 
-        public short GetHealth()
+        public bool AI
         {
-            return Memory.ReadInt16("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1364);
+            get { return Memory.Read<byte>("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x135C) == 1; }
+            set { Memory.Write(value, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x135C); }
         }
 
-        public void SetHealth(short Value)
+        public short Health
         {
-            Memory.WriteInt16(Value, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1364);
+            get { return Memory.Read<short>("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x1364); }
+            set { Memory.Write(value, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x1364); }
         }
 
-        public short GetMaxHealth()
+        public short MaxHealth
         {
-            return Memory.ReadInt16("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1366);
+            get { return Memory.Read<short>("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x1366); }
+            set { Memory.Write(value, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x1366); }
         }
 
-        public void SetMaxHealth(short Value)
+        public byte Handness
         {
-            Memory.WriteInt16(Value, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1366);
+            get { return Memory.Read<byte>("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x1AF9); }
+            set { Memory.Write(value, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x1AF9); }
         }
 
-        public void SetUntargetable(bool Invulnerable)
+        public byte WeaponMode
         {
-            Memory.WriteInt16(Invulnerable ? 0 : 1, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x135C);
+            get { return Memory.Read<byte>("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x1AF8); }
+            set { Memory.Write(value, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x1AF8); }
         }
 
-        public bool IsAI()
+        public int Melee
         {
-            return Memory.ReadInt32("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2DA8) == 1;
+            get { return Memory.Read<int>("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x10E0); }
+            set { Memory.Write(value, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x10E0); }
         }
+
+        public int MeleeTarget
+        {
+            get { return Memory.Read<int>("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x2DA4); }
+            set { Memory.Write(value, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x2DA4); }
+        }
+
+        public Vector3 Position
+        {
+            get
+            {
+                float X = Memory.Read<float>("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x2AD0);
+                float Y = Memory.Read<float>("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x2AD4);
+                float Z = Memory.Read<float>("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x2AD8);
+
+                return new Vector3(X, Y, Z);
+            }
+            set
+            {
+                Memory.Write(value.X, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x2AD0);
+                Memory.Write(value.Y, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x2AD4);
+                Memory.Write(value.Z, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x2AD8);
+            }
+        }
+
+        public Vector3 MeleePosition
+        {
+            get
+            {
+                float X = Memory.Read<float>("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x2E10);
+                float Y = Memory.Read<float>("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x2E14);
+                float Z = Memory.Read<float>("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x2E18);
+
+                return new Vector3(X, Y, Z);
+            }
+            set
+            {
+                Memory.Write(value.X, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x2E10);
+                Memory.Write(value.Y, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x2E14);
+                Memory.Write(value.Z, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x2E18);
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        public bool IsActive() => Address != 0;
 
         public int GetDefaultHandness()
         {
-            Tuple<int, int> Char = GetCharacter();
-
-            switch (Char.Item1)
+            switch (Character)
             {
                 case (int)Characters.Sheva:
-                    return 1;
+                    return (int)Helpers.Handness.Left;
                 default:
-                    return 0;
+                    return (int)Helpers.Handness.Right;
             }
         }
 
         public int GetDefaultWeaponMode()
         {
-            Tuple<int, int> Char = GetCharacter();
-
-            switch (Char.Item1)
+            switch (Character)
             {
                 case (int)Characters.Chris:
                 case (int)Characters.Wesker:
                 case (int)Characters.Josh:
                 case (int)Characters.Barry:
                 case (int)Characters.Irving:
-                    return 0;
+                    return (int)Helpers.WeaponMode.Male;
                 default:
-                    return 1;
+                    return (int)Helpers.WeaponMode.Female;
             }
-        }
-
-        public void SetHandness(byte[] Mode)
-        {
-            // 0 = Right 1 = Left
-
-            Memory.WriteBytes(Mode, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1AF9);
-        }
-
-        public void SetWeaponMode(byte[] Mode)
-        {
-            // 0 = Male 1 = Female
-
-            Memory.WriteBytes(Mode, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x1AF8);
-        }
-
-        public void SetRapidFire(bool Enable)
-        {
-            for (int slot = 0; slot < 9; slot++)
-            {
-                Memory.WriteBytes(Enable ? new byte[] {0x01} : new byte[] {0x00}, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x21C5 + (+0x48 * slot));
-            }
-        }
-
-        public void SetInfiniteAmmo(bool Enable)
-        {
-            for (int slot = 0; slot < 9; slot++)
-            {
-                Memory.WriteBytes(Enable ? new byte[] {0x80} : new byte[] {0x00}, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x21C7 + (+0x48 * slot));
-            }
-        }
-
-        public void ResetDash()
-        {
-            Memory.WriteInt32(0, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x210F);
-            Memory.WriteFloat(1.3f, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x10DC, 0x120, 0x1C);
-            Memory.WriteFloat(0f, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x10DC, 0x120, 0x2C);
-        }
-
-        public int GetMeleeTarget()
-        {
-            return Memory.ReadInt32("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2DA4);
-        }
-
-        public void SetMeleeTarget(int EntityAddress)
-        {
-            Memory.WriteInt32(EntityAddress, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2DA4);
-        }
-
-        public int GetMelee()
-        {
-            return Memory.ReadInt32("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x10E0);
         }
 
         public bool DoingGrabMelee()
         {
-            Tuple<int, int> CharCos = GetCharacter();
-            int Melee = GetMelee();
-
-            switch (CharCos.Item1)
+            switch (Character)
             {
                 case (int)Characters.Chris when Melee == (int)GrabMoves.LegBack:
                 case (int)Characters.Sheva when Melee == (int)GrabMoves.LegBack || Melee == (int)GrabMoves.FinisherFront:
@@ -175,8 +172,6 @@ namespace GameX.Game.Modules
 
         public bool DoingIdleMove()
         {
-            int Melee = GetMelee();
-
             switch (Melee)
             {
                 case (int)IdleMoves.StandStill:
@@ -193,27 +188,29 @@ namespace GameX.Game.Modules
             }
         }
 
-        public Vector3 GetPosition()
+        public void SetRapidFire(bool Enable)
         {
-            float X = Memory.ReadFloat("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2AD0);
-            float Y = Memory.ReadFloat("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2AD4);
-            float Z = Memory.ReadFloat("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2AD8);
-
-            return new Vector3(X, Y, Z);
+            for (int slot = 0; slot < 9; slot++)
+            {
+                Memory.WriteBytes(Enable ? new byte[] { 0x01 } : new byte[] { 0x00 }, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x21C5 + (+0x48 * slot));
+            }
         }
 
-        public void SetPosition(Vector3 Position)
+        public void SetInfiniteAmmo(bool Enable)
         {
-            Memory.WriteFloat(Position.X, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2AD0);
-            Memory.WriteFloat(Position.Y, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2AD4);
-            Memory.WriteFloat(Position.Z, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2AD8);
+            for (int slot = 0; slot < 9; slot++)
+            {
+                Memory.WriteBytes(Enable ? new byte[] { 0x80 } : new byte[] { 0x00 }, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x21C7 + (+0x48 * slot));
+            }
         }
 
-        public void SetMeleePosition(Vector3 Position)
+        public void ResetDash()
         {
-            Memory.WriteFloat(Position.X, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2E10);
-            Memory.WriteFloat(Position.Y, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2E14);
-            Memory.WriteFloat(Position.Z, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * _INDEX), 0x2E18);
+            Memory.Write(0, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x210F);
+            Memory.Write(1.3f, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x10DC, 0x120, 0x1C);
+            Memory.Write(0f, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x10DC, 0x120, 0x2C);
         }
+
+        #endregion
     }
 }

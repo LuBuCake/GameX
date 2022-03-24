@@ -37,6 +37,18 @@ namespace GameX.Game.Helpers
         Dash
     }
 
+    public enum Handness
+    {
+        Right,
+        Left 
+    }
+
+    public enum WeaponMode
+    {
+        Male,
+        Female
+    }
+
     public enum Characters
     {
         Chris,

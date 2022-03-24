@@ -28,19 +28,6 @@ namespace GameX.Launcher.Base.Helpers
             }
         }
 
-        public static Image GetImageFromStream(string File)
-        {
-            try
-            {
-                Image img = Image.FromStream(new MemoryStream(Encoder.GetDecodedStream(File)));
-                return img;
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
         public static Image ColorReplace(this Image inputImage, Color NewColor, bool IgnoreAlpha = false)
         {
             Bitmap outputImage = new Bitmap(inputImage.Width, inputImage.Height);

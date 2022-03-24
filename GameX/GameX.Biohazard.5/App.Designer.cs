@@ -93,6 +93,12 @@ namespace GameX
             this.P1UntargetableButton = new DevExpress.XtraEditors.CheckButton();
             this.P1HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.TabPageMelee = new DevExpress.XtraTab.XtraTabPage();
+            this.MiscMeleeGP = new DevExpress.XtraEditors.GroupControl();
+            this.ReunionSpecialMovesCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.MeleeCameraCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.WeaponPlacementGP = new DevExpress.XtraEditors.GroupControl();
+            this.WeaponPlacementComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.WeaponPlacementLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.WeskerGP = new DevExpress.XtraEditors.GroupControl();
             this.WeskerNoDashCostCheckEdit = new DevExpress.XtraEditors.CheckEdit();
             this.WeskerInfiniteDashCheckEdit = new DevExpress.XtraEditors.CheckEdit();
@@ -140,8 +146,6 @@ namespace GameX
             this.MiscModsGP = new DevExpress.XtraEditors.GroupControl();
             this.ColorFilterGP = new DevExpress.XtraEditors.GroupControl();
             this.ColorFilterButton = new DevExpress.XtraEditors.SimpleButton();
-            this.ControllerAimGP = new DevExpress.XtraEditors.GroupControl();
-            this.ControllerAimButton = new DevExpress.XtraEditors.SimpleButton();
             this.AboutPictureEdit = new DevExpress.XtraEditors.PictureEdit();
             this.AppSettingsGP = new DevExpress.XtraEditors.GroupControl();
             this.MiscSettingsGP = new DevExpress.XtraEditors.GroupControl();
@@ -160,12 +164,6 @@ namespace GameX
             this.ClearConsoleSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.ConsoleModeComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.ConsoleInputTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.MiscMeleeGP = new DevExpress.XtraEditors.GroupControl();
-            this.WeaponPlacementComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.WeaponPlacementLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.WeaponPlacementGP = new DevExpress.XtraEditors.GroupControl();
-            this.MeleeCameraCheckEdit = new DevExpress.XtraEditors.CheckEdit();
-            this.ReunionSpecialMovesCheckEdit = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -226,6 +224,13 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.P1HandnessComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1HealthBar.Properties)).BeginInit();
             this.TabPageMelee.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscMeleeGP)).BeginInit();
+            this.MiscMeleeGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ReunionSpecialMovesCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MeleeCameraCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeaponPlacementGP)).BeginInit();
+            this.WeaponPlacementGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.WeaponPlacementComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeskerGP)).BeginInit();
             this.WeskerGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WeskerNoDashCostCheckEdit.Properties)).BeginInit();
@@ -260,8 +265,6 @@ namespace GameX
             this.MiscModsGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ColorFilterGP)).BeginInit();
             this.ColorFilterGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ControllerAimGP)).BeginInit();
-            this.ControllerAimGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AboutPictureEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AppSettingsGP)).BeginInit();
             this.AppSettingsGP.SuspendLayout();
@@ -278,13 +281,6 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleModeComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MiscMeleeGP)).BeginInit();
-            this.MiscMeleeGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.WeaponPlacementComboBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WeaponPlacementGP)).BeginInit();
-            this.WeaponPlacementGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MeleeCameraCheckEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReunionSpecialMovesCheckEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // P1CosComboBox
@@ -1150,6 +1146,77 @@ namespace GameX
             this.TabPageMelee.Size = new System.Drawing.Size(638, 438);
             this.TabPageMelee.Text = "Melee";
             // 
+            // MiscMeleeGP
+            // 
+            this.MiscMeleeGP.Controls.Add(this.ReunionSpecialMovesCheckEdit);
+            this.MiscMeleeGP.Controls.Add(this.MeleeCameraCheckEdit);
+            this.MiscMeleeGP.Controls.Add(this.WeaponPlacementGP);
+            this.MiscMeleeGP.Location = new System.Drawing.Point(317, 206);
+            this.MiscMeleeGP.Name = "MiscMeleeGP";
+            this.MiscMeleeGP.Size = new System.Drawing.Size(313, 100);
+            this.MiscMeleeGP.TabIndex = 4;
+            this.MiscMeleeGP.Text = "Miscellaneous";
+            // 
+            // ReunionSpecialMovesCheckEdit
+            // 
+            this.ReunionSpecialMovesCheckEdit.Location = new System.Drawing.Point(12, 63);
+            this.ReunionSpecialMovesCheckEdit.Name = "ReunionSpecialMovesCheckEdit";
+            this.ReunionSpecialMovesCheckEdit.Properties.AllowFocused = false;
+            this.ReunionSpecialMovesCheckEdit.Properties.Caption = "Reunion Special Moves";
+            this.ReunionSpecialMovesCheckEdit.Size = new System.Drawing.Size(141, 20);
+            this.ReunionSpecialMovesCheckEdit.TabIndex = 21;
+            this.ReunionSpecialMovesCheckEdit.ToolTip = "This will enable Maluc\'s \"Reunion Melee Overall\" mod and remove the HP check from" +
+    " it.";
+            this.ReunionSpecialMovesCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.ReunionSpecialMovesCheckEdit.ToolTipTitle = "Reunion Melee Overall";
+            // 
+            // MeleeCameraCheckEdit
+            // 
+            this.MeleeCameraCheckEdit.Location = new System.Drawing.Point(12, 37);
+            this.MeleeCameraCheckEdit.Name = "MeleeCameraCheckEdit";
+            this.MeleeCameraCheckEdit.Properties.AllowFocused = false;
+            this.MeleeCameraCheckEdit.Properties.Caption = "Disable Melee Camera";
+            this.MeleeCameraCheckEdit.Size = new System.Drawing.Size(141, 20);
+            this.MeleeCameraCheckEdit.TabIndex = 20;
+            this.MeleeCameraCheckEdit.ToolTip = "Removes all camera animation from melee moves.";
+            this.MeleeCameraCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.MeleeCameraCheckEdit.ToolTipTitle = "No Melee Camera";
+            // 
+            // WeaponPlacementGP
+            // 
+            this.WeaponPlacementGP.Controls.Add(this.WeaponPlacementComboBox);
+            this.WeaponPlacementGP.Controls.Add(this.WeaponPlacementLabelControl);
+            this.WeaponPlacementGP.Location = new System.Drawing.Point(172, 30);
+            this.WeaponPlacementGP.Name = "WeaponPlacementGP";
+            this.WeaponPlacementGP.ShowCaption = false;
+            this.WeaponPlacementGP.Size = new System.Drawing.Size(136, 65);
+            this.WeaponPlacementGP.TabIndex = 19;
+            // 
+            // WeaponPlacementComboBox
+            // 
+            this.WeaponPlacementComboBox.Location = new System.Drawing.Point(9, 33);
+            this.WeaponPlacementComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.WeaponPlacementComboBox.Name = "WeaponPlacementComboBox";
+            this.WeaponPlacementComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.WeaponPlacementComboBox.Properties.AllowFocused = false;
+            this.WeaponPlacementComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.WeaponPlacementComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.WeaponPlacementComboBox.Size = new System.Drawing.Size(117, 20);
+            this.WeaponPlacementComboBox.TabIndex = 17;
+            this.WeaponPlacementComboBox.TabStop = false;
+            this.WeaponPlacementComboBox.ToolTip = "Changes the player\'s weapon placement position in the back.";
+            this.WeaponPlacementComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.WeaponPlacementComboBox.ToolTipTitle = "Weapon Placement";
+            // 
+            // WeaponPlacementLabelControl
+            // 
+            this.WeaponPlacementLabelControl.Location = new System.Drawing.Point(18, 10);
+            this.WeaponPlacementLabelControl.Name = "WeaponPlacementLabelControl";
+            this.WeaponPlacementLabelControl.Size = new System.Drawing.Size(92, 13);
+            this.WeaponPlacementLabelControl.TabIndex = 18;
+            this.WeaponPlacementLabelControl.Text = "Weapon Placement";
+            // 
             // WeskerGP
             // 
             this.WeskerGP.Controls.Add(this.WeskerNoDashCostCheckEdit);
@@ -1215,7 +1282,7 @@ namespace GameX
             // 
             this.ReloadLabelControl.Location = new System.Drawing.Point(23, 194);
             this.ReloadLabelControl.Name = "ReloadLabelControl";
-            this.ReloadLabelControl.Size = new System.Drawing.Size(39, 13);
+            this.ReloadLabelControl.Size = new System.Drawing.Size(37, 13);
             this.ReloadLabelControl.TabIndex = 22;
             this.ReloadLabelControl.Text = "Reload:";
             // 
@@ -1223,7 +1290,7 @@ namespace GameX
             // 
             this.MoveBackLabelControl.Location = new System.Drawing.Point(23, 168);
             this.MoveBackLabelControl.Name = "MoveBackLabelControl";
-            this.MoveBackLabelControl.Size = new System.Drawing.Size(57, 13);
+            this.MoveBackLabelControl.Size = new System.Drawing.Size(55, 13);
             this.MoveBackLabelControl.TabIndex = 25;
             this.MoveBackLabelControl.Text = "Move Back:";
             // 
@@ -1234,7 +1301,7 @@ namespace GameX
             this.MeleeAnytimeSwitch.Properties.AllowFocused = false;
             this.MeleeAnytimeSwitch.Properties.OffText = "Off";
             this.MeleeAnytimeSwitch.Properties.OnText = "On";
-            this.MeleeAnytimeSwitch.Size = new System.Drawing.Size(95, 21);
+            this.MeleeAnytimeSwitch.Size = new System.Drawing.Size(95, 20);
             this.MeleeAnytimeSwitch.TabIndex = 23;
             this.MeleeAnytimeSwitch.ToolTip = "Enables melee anytime giving the player the ability to perform a list of attacks " +
     "with a press of a button.";
@@ -1262,7 +1329,7 @@ namespace GameX
             // 
             this.MoveRightLabelControl.Location = new System.Drawing.Point(23, 142);
             this.MoveRightLabelControl.Name = "MoveRightLabelControl";
-            this.MoveRightLabelControl.Size = new System.Drawing.Size(62, 13);
+            this.MoveRightLabelControl.Size = new System.Drawing.Size(58, 13);
             this.MoveRightLabelControl.TabIndex = 20;
             this.MoveRightLabelControl.Text = "Move Right:";
             // 
@@ -1270,7 +1337,7 @@ namespace GameX
             // 
             this.MoveLeftLabelControl.Location = new System.Drawing.Point(23, 116);
             this.MoveLeftLabelControl.Name = "MoveLeftLabelControl";
-            this.MoveLeftLabelControl.Size = new System.Drawing.Size(53, 13);
+            this.MoveLeftLabelControl.Size = new System.Drawing.Size(52, 13);
             this.MoveLeftLabelControl.TabIndex = 19;
             this.MoveLeftLabelControl.Text = "Move Left:";
             // 
@@ -1278,7 +1345,7 @@ namespace GameX
             // 
             this.QuickTurnLabelControl.Location = new System.Drawing.Point(23, 90);
             this.QuickTurnLabelControl.Name = "QuickTurnLabelControl";
-            this.QuickTurnLabelControl.Size = new System.Drawing.Size(59, 13);
+            this.QuickTurnLabelControl.Size = new System.Drawing.Size(55, 13);
             this.QuickTurnLabelControl.TabIndex = 18;
             this.QuickTurnLabelControl.Text = "Quick Turn:";
             // 
@@ -1371,7 +1438,7 @@ namespace GameX
             // 
             this.KnifeLabelControl.Location = new System.Drawing.Point(23, 64);
             this.KnifeLabelControl.Name = "KnifeLabelControl";
-            this.KnifeLabelControl.Size = new System.Drawing.Size(29, 13);
+            this.KnifeLabelControl.Size = new System.Drawing.Size(28, 13);
             this.KnifeLabelControl.TabIndex = 13;
             this.KnifeLabelControl.Text = "Knife:";
             // 
@@ -1379,7 +1446,7 @@ namespace GameX
             // 
             this.TauntLabelControl.Location = new System.Drawing.Point(23, 38);
             this.TauntLabelControl.Name = "TauntLabelControl";
-            this.TauntLabelControl.Size = new System.Drawing.Size(33, 13);
+            this.TauntLabelControl.Size = new System.Drawing.Size(32, 13);
             this.TauntLabelControl.TabIndex = 12;
             this.TauntLabelControl.Text = "Taunt:";
             // 
@@ -1432,7 +1499,7 @@ namespace GameX
             // 
             this.ReunionLegFrontLabelControl.Location = new System.Drawing.Point(321, 152);
             this.ReunionLegFrontLabelControl.Name = "ReunionLegFrontLabelControl";
-            this.ReunionLegFrontLabelControl.Size = new System.Drawing.Size(99, 13);
+            this.ReunionLegFrontLabelControl.Size = new System.Drawing.Size(92, 13);
             this.ReunionLegFrontLabelControl.TabIndex = 20;
             this.ReunionLegFrontLabelControl.Text = "Reunion Leg Front:";
             // 
@@ -1440,7 +1507,7 @@ namespace GameX
             // 
             this.HelpLabelControl.Location = new System.Drawing.Point(321, 126);
             this.HelpLabelControl.Name = "HelpLabelControl";
-            this.HelpLabelControl.Size = new System.Drawing.Size(27, 13);
+            this.HelpLabelControl.Size = new System.Drawing.Size(25, 13);
             this.HelpLabelControl.TabIndex = 19;
             this.HelpLabelControl.Text = "Help:";
             // 
@@ -1448,7 +1515,7 @@ namespace GameX
             // 
             this.FinisherBackLabelControl.Location = new System.Drawing.Point(321, 100);
             this.FinisherBackLabelControl.Name = "FinisherBackLabelControl";
-            this.FinisherBackLabelControl.Size = new System.Drawing.Size(70, 13);
+            this.FinisherBackLabelControl.Size = new System.Drawing.Size(66, 13);
             this.FinisherBackLabelControl.TabIndex = 18;
             this.FinisherBackLabelControl.Text = "Finisher Back:";
             // 
@@ -1524,7 +1591,7 @@ namespace GameX
             // 
             this.LegBackLabelControl.Location = new System.Drawing.Point(321, 74);
             this.LegBackLabelControl.Name = "LegBackLabelControl";
-            this.LegBackLabelControl.Size = new System.Drawing.Size(47, 13);
+            this.LegBackLabelControl.Size = new System.Drawing.Size(46, 13);
             this.LegBackLabelControl.TabIndex = 13;
             this.LegBackLabelControl.Text = "Leg Back:";
             // 
@@ -1532,7 +1599,7 @@ namespace GameX
             // 
             this.ArmBackLabelControl.Location = new System.Drawing.Point(321, 48);
             this.ArmBackLabelControl.Name = "ArmBackLabelControl";
-            this.ArmBackLabelControl.Size = new System.Drawing.Size(49, 13);
+            this.ArmBackLabelControl.Size = new System.Drawing.Size(48, 13);
             this.ArmBackLabelControl.TabIndex = 12;
             this.ArmBackLabelControl.Text = "Arm Back:";
             // 
@@ -1557,7 +1624,7 @@ namespace GameX
             // 
             this.ReunionHeadFlashLabelControl.Location = new System.Drawing.Point(23, 152);
             this.ReunionHeadFlashLabelControl.Name = "ReunionHeadFlashLabelControl";
-            this.ReunionHeadFlashLabelControl.Size = new System.Drawing.Size(114, 13);
+            this.ReunionHeadFlashLabelControl.Size = new System.Drawing.Size(106, 13);
             this.ReunionHeadFlashLabelControl.TabIndex = 10;
             this.ReunionHeadFlashLabelControl.Text = "Reunion Head / Flash:";
             // 
@@ -1565,7 +1632,7 @@ namespace GameX
             // 
             this.HeadFlashLabelControl.Location = new System.Drawing.Point(23, 126);
             this.HeadFlashLabelControl.Name = "HeadFlashLabelControl";
-            this.HeadFlashLabelControl.Size = new System.Drawing.Size(67, 13);
+            this.HeadFlashLabelControl.Size = new System.Drawing.Size(64, 13);
             this.HeadFlashLabelControl.TabIndex = 9;
             this.HeadFlashLabelControl.Text = "Head / Flash:";
             // 
@@ -1573,7 +1640,7 @@ namespace GameX
             // 
             this.FinisherFrontLabelControl.Location = new System.Drawing.Point(23, 100);
             this.FinisherFrontLabelControl.Name = "FinisherFrontLabelControl";
-            this.FinisherFrontLabelControl.Size = new System.Drawing.Size(75, 13);
+            this.FinisherFrontLabelControl.Size = new System.Drawing.Size(70, 13);
             this.FinisherFrontLabelControl.TabIndex = 8;
             this.FinisherFrontLabelControl.Text = "Finisher Front:";
             // 
@@ -1649,7 +1716,7 @@ namespace GameX
             // 
             this.LegFrontLabelControl.Location = new System.Drawing.Point(23, 74);
             this.LegFrontLabelControl.Name = "LegFrontLabelControl";
-            this.LegFrontLabelControl.Size = new System.Drawing.Size(52, 13);
+            this.LegFrontLabelControl.Size = new System.Drawing.Size(50, 13);
             this.LegFrontLabelControl.TabIndex = 3;
             this.LegFrontLabelControl.Text = "Leg Front:";
             // 
@@ -1657,7 +1724,7 @@ namespace GameX
             // 
             this.ArmFrontLabelControl.Location = new System.Drawing.Point(23, 48);
             this.ArmFrontLabelControl.Name = "ArmFrontLabelControl";
-            this.ArmFrontLabelControl.Size = new System.Drawing.Size(54, 13);
+            this.ArmFrontLabelControl.Size = new System.Drawing.Size(52, 13);
             this.ArmFrontLabelControl.TabIndex = 2;
             this.ArmFrontLabelControl.Text = "Arm Front:";
             // 
@@ -1706,7 +1773,6 @@ namespace GameX
             // MiscModsGP
             // 
             this.MiscModsGP.Controls.Add(this.ColorFilterGP);
-            this.MiscModsGP.Controls.Add(this.ControllerAimGP);
             this.MiscModsGP.Location = new System.Drawing.Point(5, 105);
             this.MiscModsGP.Name = "MiscModsGP";
             this.MiscModsGP.Size = new System.Drawing.Size(298, 182);
@@ -1736,30 +1802,6 @@ namespace GameX
             this.ColorFilterButton.ToolTip = "Enables the true color filter disabling the default ones.";
             this.ColorFilterButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.ColorFilterButton.ToolTipTitle = "Color Filter";
-            // 
-            // ControllerAimGP
-            // 
-            this.ControllerAimGP.AppearanceCaption.Options.UseTextOptions = true;
-            this.ControllerAimGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.ControllerAimGP.Controls.Add(this.ControllerAimButton);
-            this.ControllerAimGP.Location = new System.Drawing.Point(5, 30);
-            this.ControllerAimGP.Name = "ControllerAimGP";
-            this.ControllerAimGP.Size = new System.Drawing.Size(112, 71);
-            this.ControllerAimGP.TabIndex = 0;
-            this.ControllerAimGP.Text = "Controller Aim";
-            // 
-            // ControllerAimButton
-            // 
-            this.ControllerAimButton.AllowFocus = false;
-            this.ControllerAimButton.Location = new System.Drawing.Point(15, 36);
-            this.ControllerAimButton.Name = "ControllerAimButton";
-            this.ControllerAimButton.Size = new System.Drawing.Size(82, 23);
-            this.ControllerAimButton.TabIndex = 1;
-            this.ControllerAimButton.TabStop = false;
-            this.ControllerAimButton.Text = "Enable";
-            this.ControllerAimButton.ToolTip = "Enables the controller aim type for mouse and keyboard.";
-            this.ControllerAimButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.ControllerAimButton.ToolTipTitle = "Controller Aim";
             // 
             // AboutPictureEdit
             // 
@@ -1802,7 +1844,7 @@ namespace GameX
             // 
             this.PlayerNameLabelControl.Location = new System.Drawing.Point(15, 10);
             this.PlayerNameLabelControl.Name = "PlayerNameLabelControl";
-            this.PlayerNameLabelControl.Size = new System.Drawing.Size(32, 13);
+            this.PlayerNameLabelControl.Size = new System.Drawing.Size(31, 13);
             this.PlayerNameLabelControl.TabIndex = 7;
             this.PlayerNameLabelControl.Text = "Name:";
             // 
@@ -1840,7 +1882,7 @@ namespace GameX
             // 
             this.UpdateRateLabelControl.Location = new System.Drawing.Point(15, 36);
             this.UpdateRateLabelControl.Name = "UpdateRateLabelControl";
-            this.UpdateRateLabelControl.Size = new System.Drawing.Size(26, 13);
+            this.UpdateRateLabelControl.Size = new System.Drawing.Size(27, 13);
             this.UpdateRateLabelControl.TabIndex = 0;
             this.UpdateRateLabelControl.Text = "Rate:";
             // 
@@ -1848,7 +1890,7 @@ namespace GameX
             // 
             this.PaletteLabelControl.Location = new System.Drawing.Point(15, 62);
             this.PaletteLabelControl.Name = "PaletteLabelControl";
-            this.PaletteLabelControl.Size = new System.Drawing.Size(25, 13);
+            this.PaletteLabelControl.Size = new System.Drawing.Size(23, 13);
             this.PaletteLabelControl.TabIndex = 0;
             this.PaletteLabelControl.Text = "Skin:";
             // 
@@ -1973,77 +2015,6 @@ namespace GameX
             this.ConsoleInputTextEdit.Size = new System.Drawing.Size(454, 20);
             this.ConsoleInputTextEdit.TabIndex = 1;
             // 
-            // MiscMeleeGP
-            // 
-            this.MiscMeleeGP.Controls.Add(this.ReunionSpecialMovesCheckEdit);
-            this.MiscMeleeGP.Controls.Add(this.MeleeCameraCheckEdit);
-            this.MiscMeleeGP.Controls.Add(this.WeaponPlacementGP);
-            this.MiscMeleeGP.Location = new System.Drawing.Point(317, 206);
-            this.MiscMeleeGP.Name = "MiscMeleeGP";
-            this.MiscMeleeGP.Size = new System.Drawing.Size(313, 100);
-            this.MiscMeleeGP.TabIndex = 4;
-            this.MiscMeleeGP.Text = "Miscellaneous";
-            // 
-            // WeaponPlacementComboBox
-            // 
-            this.WeaponPlacementComboBox.Location = new System.Drawing.Point(9, 33);
-            this.WeaponPlacementComboBox.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.WeaponPlacementComboBox.Name = "WeaponPlacementComboBox";
-            this.WeaponPlacementComboBox.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.WeaponPlacementComboBox.Properties.AllowFocused = false;
-            this.WeaponPlacementComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.WeaponPlacementComboBox.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.WeaponPlacementComboBox.Size = new System.Drawing.Size(117, 20);
-            this.WeaponPlacementComboBox.TabIndex = 17;
-            this.WeaponPlacementComboBox.TabStop = false;
-            this.WeaponPlacementComboBox.ToolTip = "Changes the player\'s weapon placement position in the back.";
-            this.WeaponPlacementComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.WeaponPlacementComboBox.ToolTipTitle = "Weapon Placement";
-            // 
-            // WeaponPlacementLabelControl
-            // 
-            this.WeaponPlacementLabelControl.Location = new System.Drawing.Point(18, 10);
-            this.WeaponPlacementLabelControl.Name = "WeaponPlacementLabelControl";
-            this.WeaponPlacementLabelControl.Size = new System.Drawing.Size(99, 13);
-            this.WeaponPlacementLabelControl.TabIndex = 18;
-            this.WeaponPlacementLabelControl.Text = "Weapon Placement";
-            // 
-            // WeaponPlacementGP
-            // 
-            this.WeaponPlacementGP.Controls.Add(this.WeaponPlacementComboBox);
-            this.WeaponPlacementGP.Controls.Add(this.WeaponPlacementLabelControl);
-            this.WeaponPlacementGP.Location = new System.Drawing.Point(172, 30);
-            this.WeaponPlacementGP.Name = "WeaponPlacementGP";
-            this.WeaponPlacementGP.ShowCaption = false;
-            this.WeaponPlacementGP.Size = new System.Drawing.Size(136, 65);
-            this.WeaponPlacementGP.TabIndex = 19;
-            // 
-            // MeleeCameraCheckEdit
-            // 
-            this.MeleeCameraCheckEdit.Location = new System.Drawing.Point(12, 37);
-            this.MeleeCameraCheckEdit.Name = "MeleeCameraCheckEdit";
-            this.MeleeCameraCheckEdit.Properties.AllowFocused = false;
-            this.MeleeCameraCheckEdit.Properties.Caption = "Disable Melee Camera";
-            this.MeleeCameraCheckEdit.Size = new System.Drawing.Size(141, 20);
-            this.MeleeCameraCheckEdit.TabIndex = 20;
-            this.MeleeCameraCheckEdit.ToolTip = "Removes all camera animation from melee moves.";
-            this.MeleeCameraCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.MeleeCameraCheckEdit.ToolTipTitle = "No Melee Camera";
-            // 
-            // ReunionSpecialMovesCheckEdit
-            // 
-            this.ReunionSpecialMovesCheckEdit.Location = new System.Drawing.Point(12, 63);
-            this.ReunionSpecialMovesCheckEdit.Name = "ReunionSpecialMovesCheckEdit";
-            this.ReunionSpecialMovesCheckEdit.Properties.AllowFocused = false;
-            this.ReunionSpecialMovesCheckEdit.Properties.Caption = "Reunion Special Moves";
-            this.ReunionSpecialMovesCheckEdit.Size = new System.Drawing.Size(141, 20);
-            this.ReunionSpecialMovesCheckEdit.TabIndex = 21;
-            this.ReunionSpecialMovesCheckEdit.ToolTip = "This will enable Maluc\'s \"Reunion Melee Overall\" mod and remove the HP check from" +
-    " it.";
-            this.ReunionSpecialMovesCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.ReunionSpecialMovesCheckEdit.ToolTipTitle = "Reunion Melee Overall";
-            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2117,6 +2088,14 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.P1HandnessComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1HealthBar.Properties)).EndInit();
             this.TabPageMelee.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MiscMeleeGP)).EndInit();
+            this.MiscMeleeGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ReunionSpecialMovesCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MeleeCameraCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeaponPlacementGP)).EndInit();
+            this.WeaponPlacementGP.ResumeLayout(false);
+            this.WeaponPlacementGP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.WeaponPlacementComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeskerGP)).EndInit();
             this.WeskerGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.WeskerNoDashCostCheckEdit.Properties)).EndInit();
@@ -2153,8 +2132,6 @@ namespace GameX
             this.MiscModsGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ColorFilterGP)).EndInit();
             this.ColorFilterGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ControllerAimGP)).EndInit();
-            this.ControllerAimGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AboutPictureEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AppSettingsGP)).EndInit();
             this.AppSettingsGP.ResumeLayout(false);
@@ -2172,14 +2149,6 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleModeComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MiscMeleeGP)).EndInit();
-            this.MiscMeleeGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.WeaponPlacementComboBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WeaponPlacementGP)).EndInit();
-            this.WeaponPlacementGP.ResumeLayout(false);
-            this.WeaponPlacementGP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MeleeCameraCheckEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReunionSpecialMovesCheckEdit.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2269,8 +2238,6 @@ namespace GameX
         public DevExpress.XtraEditors.CheckButton P2FreezeCharCosButton;
         private DevExpress.XtraEditors.GroupControl MiscModsGP;
         private DevExpress.XtraTab.XtraTabPage TabPageInventory;
-        private DevExpress.XtraEditors.GroupControl ControllerAimGP;
-        private DevExpress.XtraEditors.SimpleButton ControllerAimButton;
         private DevExpress.XtraEditors.GroupControl ColorFilterGP;
         private DevExpress.XtraEditors.SimpleButton ColorFilterButton;
         private DevExpress.XtraTab.XtraTabPage TabPageMelee;

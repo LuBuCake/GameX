@@ -80,44 +80,8 @@ namespace GameX.Base.Modules
         {
             switch (Command[0])
             {
-                case "encodeimage":
-                {
-                    string CurrentDirectory = $"{Directory.GetCurrentDirectory()}/";
-                    DirectoryInfo DirInfor = new DirectoryInfo(CurrentDirectory);
-                    FileInfo[] ImageFiles = DirInfor.GetFiles("*.png");
-
-                    if (ImageFiles.Length <= 0)
-                    {
-                        WriteLine("[App] No files found with the specified extension.");
-                        return true;
-                    }
-
-                    foreach (FileInfo ImageFile in ImageFiles)
-                    {
-                        Encoder.EncodeFile(CurrentDirectory + ImageFile.Name, ".png");
-                    }
-
-                    return true;
-                }
-                case "decodeimage":
-                {
-                    string CurrentDirectory = $"{Directory.GetCurrentDirectory()}/";
-                    DirectoryInfo DirInfor = new DirectoryInfo(CurrentDirectory);
-                    FileInfo[] ImageFiles = DirInfor.GetFiles("*.eia");
-
-                    if (ImageFiles.Length <= 0)
-                    {
-                        WriteLine("[App] No files found with the specified extension.");
-                        return true;
-                    }
-
-                    foreach (FileInfo ImageFile in ImageFiles)
-                    {
-                        Encoder.DecodeFile(CurrentDirectory + ImageFile.Name, ".eia");
-                    }
-
-                    return true;
-                }
+                default:
+                    break;
             }
 
             return false;
@@ -160,8 +124,8 @@ namespace GameX.Base.Modules
                     return true;
                 }
 
-                short TargetHP = (short) Utility.Clamp(HP, 0, Biohazard.Players[Player - 1].GetMaxHealth());
-                Biohazard.Players[Player - 1].SetHealth(TargetHP);
+                short TargetHP = (short) Utility.Clamp(HP, 0, Biohazard.Players[Player - 1].MaxHealth);
+                Biohazard.Players[Player - 1].Health = TargetHP;
                 WriteLine($"Player {Player} health set to {TargetHP}.");
 
                 return true;
@@ -189,7 +153,7 @@ namespace GameX.Base.Modules
                     return true;
                 }
 
-                WriteLine($"The player {Player} has {Biohazard.Players[Player - 1].GetHealth()} health points.");
+                WriteLine($"The player {Player} has {Biohazard.Players[Player - 1].Health} health points.");
                 return true;
             }
         }

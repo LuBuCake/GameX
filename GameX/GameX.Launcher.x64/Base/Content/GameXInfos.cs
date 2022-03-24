@@ -11,7 +11,7 @@ namespace GameX.Launcher.Base.Content
             {
                 GameXName = "Resident Evil 2 Remake",
                 GameXFile = "GameX.Biohazard.2.dll",
-                GameXLogo = new[] { "logo_a", "logo_b" },
+                GameXLogo = new[] { "logo_a.png", "logo_b.png" },
                 GameXLogoColors = new[] { Color.Red, Color.White },
                 RepositoryRoute = "https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Biohazard.2/"
             };
@@ -20,7 +20,7 @@ namespace GameX.Launcher.Base.Content
             {
                 GameXName = "Resident Evil 3 Remake",
                 GameXFile = "GameX.Biohazard.3.dll",
-                GameXLogo = new[] { "logo_a", "logo_b" },
+                GameXLogo = new[] { "logo_a.png", "logo_b.png" },
                 GameXLogoColors = new[] { Color.Red, Color.White },
                 RepositoryRoute = "https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Biohazard.3/"
             };
@@ -29,7 +29,7 @@ namespace GameX.Launcher.Base.Content
             {
                 GameXName = "Resident Evil 7",
                 GameXFile = "GameX.Biohazard.7.dll",
-                GameXLogo = new[] { "logo_a", "logo_b" },
+                GameXLogo = new[] { "logo_a.png", "logo_b.png" },
                 GameXLogoColors = new[] { Color.Red, Color.White },
                 RepositoryRoute = "https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Biohazard.7/"
             };
@@ -38,12 +38,12 @@ namespace GameX.Launcher.Base.Content
             {
                 GameXName = "Resident Evil Village",
                 GameXFile = "GameX.Biohazard.Village.dll",
-                GameXLogo = new[] { "logo_a", "logo_b" },
+                GameXLogo = new[] { "logo_a.png", "logo_b.png" },
                 GameXLogoColors = new[] { Color.Red, Color.White },
                 RepositoryRoute = "https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Biohazard.Village/"
             };
 
-            return null;
+            return new GameXInfo[0];
         }
     }
 }

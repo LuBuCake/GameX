@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Numerics;
 using System.Windows.Forms;
 using DevExpress.LookAndFeel;
 using DevExpress.Skins;
@@ -318,7 +317,6 @@ namespace GameX
 
             SimpleButton[] EnableDisable =
             {
-                ControllerAimButton,
                 ColorFilterButton
             };
 
@@ -510,12 +508,12 @@ namespace GameX
 
             GameXInfo Game = new GameXInfo()
             {
-                GameXLogo = new[] { "addons/GameX.Biohazard.5/images/application/logo_a.eia", "addons/GameX.Biohazard.5/images/application/logo_b.eia" },
+                GameXLogo = new[] { "addons/GameX.Biohazard.5/images/application/logo_a.png", "addons/GameX.Biohazard.5/images/application/logo_b.png" },
                 GameXLogoColors = new[] { Color.Red, Color.White },
             };
 
-            Image LogoA = Utility.GetImageFromStream(Game.GameXLogo[0]);
-            Image LogoB = Utility.GetImageFromStream(Game.GameXLogo[1]);
+            Image LogoA = Image.FromFile(Game.GameXLogo[0]);
+            Image LogoB = Image.FromFile(Game.GameXLogo[1]);
 
             if (LogoA == null || LogoB == null)
                 return;
@@ -721,7 +719,7 @@ namespace GameX
             ComboBoxEdit CBE = sender as ComboBoxEdit;
             int Index = int.Parse(CBE.Name[1].ToString()) - 1;
 
-            Biohazard.Players[Index].SetWeaponMode(CBE.SelectedIndex != 0 ? new[] {(byte) (CBE.SelectedItem as ListItem).Value} : new[] {(byte) Biohazard.Players[Index].GetDefaultWeaponMode()});
+            Biohazard.Players[Index].WeaponMode = CBE.SelectedIndex != 0 ? (byte)(CBE.SelectedItem as ListItem).Value : (byte)Biohazard.Players[Index].GetDefaultWeaponMode();
         }
 
         private void Handness_IndexChanged(object sender, EventArgs e)
@@ -732,7 +730,7 @@ namespace GameX
             if (!Initialized)
                 return;
 
-            Biohazard.Players[Index].SetHandness(CBE.SelectedIndex != 0 ? new[] {(byte) (CBE.SelectedItem as ListItem).Value} : new[] {(byte) Biohazard.Players[Index].GetDefaultHandness()});
+            Biohazard.Players[Index].Handness = CBE.SelectedIndex != 0 ? (byte)(CBE.SelectedItem as ListItem).Value : (byte)Biohazard.Players[Index].GetDefaultHandness();
         }
 
         private void WeaponPlacement_IndexChanged(object sender, EventArgs e)
@@ -807,7 +805,7 @@ namespace GameX
                 if (CB.Name.Contains("Untargetable") && !CB.Checked)
                 {
                     int Player = int.Parse(CB.Name[1].ToString()) - 1;
-                    Biohazard.Players[Player].SetUntargetable(false);
+                    Biohazard.Players[Player].Invulnerable = false;
                 }
                 else if (CB.Name.Contains("InfiniteAmmo") && !CB.Checked)
                 {
@@ -830,9 +828,6 @@ namespace GameX
 
                 switch (SB.Name)
                 {
-                    case "ControllerAimButton":
-                        Biohazard.EnableControllerAim(SB.Text.Equals("Disable"));
-                        break;
                     case "ColorFilterButton":
                         Biohazard.EnableColorFilter(SB.Text.Equals("Disable"));
                         break;
@@ -897,7 +892,6 @@ namespace GameX
         {
             SimpleButton[] EnableDisable =
             {
-                ControllerAimButton,
                 ColorFilterButton,
             };
 
@@ -940,13 +934,6 @@ namespace GameX
             {
                 switch (SB.Name)
                 {
-                    case "ControllerAimButton":
-                    {
-                        if (SB.Text == "Disable")
-                            Biohazard.EnableControllerAim(true);
-
-                        break;
-                    }
                     case "ColorFilterButton":
                     {
                         if (SB.Text == "Disable")
@@ -968,11 +955,10 @@ namespace GameX
                 Biohazard.StartModule();
 
                 Character_Detour();
-
                 GameX_CheckControls();
 
-                Biohazard.NoFileChecking(true);
-                Biohazard.OnlineCharSwapFixes(true);
+                //Biohazard.NoFileChecking(true);
+                //Biohazard.OnlineCharSwapFixes(true);
             }
             catch (Exception Ex)
             {
@@ -990,9 +976,8 @@ namespace GameX
                 if (MeleeAnytimeSwitch.IsOn)
                     MeleeAnytimeSwitch.Toggle();
 
-                Biohazard.NoFileChecking(false);
-                Biohazard.OnlineCharSwapFixes(false);
-                Biohazard.EnableControllerAim(false);
+                //Biohazard.NoFileChecking(false);
+                //Biohazard.OnlineCharSwapFixes(false);
                 Biohazard.EnableColorFilter(false);
                 Biohazard.WeskerNoSunglassDrop(false);
                 Biohazard.WeskerNoDashCost(false);
@@ -1438,7 +1423,8 @@ namespace GameX
             int Costume = (CostumeCombos[Index].SelectedItem as Costume).Value;
 
             Biohazard.SetStoryModeCharacter(Index, Character, Costume);
-            Biohazard.Players[Index].SetCharacter(Character, Costume);
+            Biohazard.Players[Index].Character = Character;
+            Biohazard.Players[Index].Costume = Costume;
         }
 
         #endregion
@@ -1609,49 +1595,46 @@ namespace GameX
                 // Characters & Costumes //
                 if (!CheckButtons[i].Checked && !CharacterCombos[i].IsPopupOpen && !CostumeCombos[i].IsPopupOpen)
                 {
-                    Tuple<int, int> CharCos = Biohazard.Players[i].GetCharacter();
-
                     foreach (object Char in CharacterCombos[i].Properties.Items)
                     {
-                        if ((Char as Character).Value == CharCos.Item1)
+                        if ((Char as Character).Value == Biohazard.Players[i].Character)
                             CharacterCombos[i].SelectedItem = Char;
                     }
 
                     foreach (object Cos in CostumeCombos[i].Properties.Items)
                     {
-                        if ((Cos as Costume).Value == CharCos.Item2)
+                        if ((Cos as Costume).Value == Biohazard.Players[i].Costume)
                             CostumeCombos[i].SelectedItem = Cos;
                     }
                 }
 
                 bool PlayerPresent = Biohazard.Players[i].IsActive();
-                double PlayerHealthPercent = PlayerPresent ? (double)Biohazard.Players[i].GetHealth() / Biohazard.Players[i].GetMaxHealth() : 1.0;
+                double PlayerHealthPercent = PlayerPresent ? (double)Biohazard.Players[i].Health / Biohazard.Players[i].MaxHealth : 1.0;
 
                 // Health Bar //
-                HealthBars[i].Properties.Maximum = PlayerPresent ? Biohazard.Players[i].GetMaxHealth() : 1;
-                HealthBars[i].EditValue = PlayerPresent ? Biohazard.Players[i].GetHealth() : 1;
+                HealthBars[i].Properties.Maximum = PlayerPresent ? Biohazard.Players[i].MaxHealth : 1;
+                HealthBars[i].EditValue = PlayerPresent ? Biohazard.Players[i].Health : 1;
                 HealthBars[i].Properties.StartColor = PlayerPresent ? Color.FromArgb((int)(255.0 - 155.0 * PlayerHealthPercent), (int)(0.0 + 255.0 * PlayerHealthPercent), 0) : Color.FromArgb(0, 0, 0, 0);
                 HealthBars[i].Properties.EndColor = PlayerPresent ? Color.FromArgb((int)(255.0 - 155.0 * PlayerHealthPercent), (int)(0.0 + 255.0 * PlayerHealthPercent), 0) : Color.FromArgb(0, 0, 0, 0);
 
                 // Player Name //
-                PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (Biohazard.InGame() ? i == Biohazard.LocalPlayer() ? Biohazard.LocalPlayerNick() : PlayerPresent ? Biohazard.Players[i].IsAI() ? "CPU AI" : "Connected" : "Disconnected" : "Disconnected");
+                PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (Biohazard.InGame() ? i == Biohazard.LocalPlayer() ? Biohazard.LocalPlayerNick() : PlayerPresent ? Biohazard.Players[i].AI ? "CPU AI" : "Connected" : "Disconnected" : "Disconnected");
 
                 // Handness //
                 if (Handness[i].SelectedIndex > 0 && PlayerPresent)
-                    Biohazard.Players[i].SetHandness(new[] { (byte)(Handness[i].SelectedItem as ListItem).Value });
+                    Biohazard.Players[i].Handness = (byte)(Handness[i].SelectedItem as ListItem).Value;
 
                 // Weapon Mode //
                 if (WeaponMode[i].SelectedIndex > 0 && PlayerPresent)
-                    Biohazard.Players[i].SetWeaponMode(new[] { (byte)(WeaponMode[i].SelectedItem as ListItem).Value });
+                    Biohazard.Players[i].WeaponMode = (byte)(WeaponMode[i].SelectedItem as ListItem).Value;
 
                 // Melee Anytime Cords //
                 if (MeleeAnytimeSwitch.IsOn && PlayerPresent)
                 {
-                    Vector3 Position = Biohazard.Players[i].GetPosition();
-                    Biohazard.Players[i].SetMeleePosition(Position);
+                    Biohazard.Players[i].MeleePosition = Biohazard.Players[i].Position;
 
-                    if (Biohazard.Players[i].GetMeleeTarget() != 0 && Biohazard.Players[i].DoingIdleMove())
-                        Biohazard.Players[i].SetMeleeTarget(0);
+                    if (Biohazard.Players[i].MeleeTarget != 0 && Biohazard.Players[i].DoingIdleMove())
+                        Biohazard.Players[i].MeleeTarget = 0;
                 }
 
                 // If versus then end the current iteration //
@@ -1660,11 +1643,11 @@ namespace GameX
 
                 // Infinite HP //
                 if (InfiniteHP[i].Checked && PlayerPresent)
-                    Biohazard.Players[i].SetHealth(Biohazard.Players[i].GetMaxHealth());
+                    Biohazard.Players[i].Health = Biohazard.Players[i].MaxHealth;
 
                 // Untergetable //
                 if (Untargetable[i].Checked && PlayerPresent)
-                    Biohazard.Players[i].SetUntargetable(true);
+                    Biohazard.Players[i].Invulnerable = true;
 
                 // Infinite Ammo //
                 if (InfiniteAmmo[i].Checked && PlayerPresent)
@@ -1675,7 +1658,7 @@ namespace GameX
                     Biohazard.Players[i].SetRapidFire(true);
 
                 // Infinite Dash //
-                if (WeskerInfiniteDashCheckEdit.Checked && PlayerPresent && Biohazard.Players[i].GetCharacter().Item1 == (int)Game.Helpers.Characters.Wesker)
+                if (WeskerInfiniteDashCheckEdit.Checked && PlayerPresent && Biohazard.Players[i].Character == (int)Game.Helpers.Characters.Wesker)
                     Biohazard.Players[i].ResetDash();
             }
         }

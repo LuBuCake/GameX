@@ -53,25 +53,8 @@ namespace GameX.Game.Modules
             if (Index > 1)
                 return;
 
-            Memory.WriteInt32(Character, "re5dx9.exe", 0xDA383C, 0x71398 + (0x50 * Index));
-            Memory.WriteInt32(Costume, "re5dx9.exe", 0xDA383C, 0x7139C + (0x50 * Index));
-        }
-
-        public static void EnableControllerAim(bool Enable)
-        {
-            Memory.WriteRawAddress(0x00B66ACD, Enable ? new byte[] { 0xEB } : new byte[] { 0x75 });
-            Memory.WriteRawAddress(0x00B67FD0, Enable ? new byte[] { 0x90, 0X90 } : new byte[] { 0x74, 0x18 });
-            Memory.WriteRawAddress(0x00B84D79, Enable ? new byte[] { 0x90, 0X90 } : new byte[] { 0x74, 0X3A });
-            Memory.WriteRawAddress(0x00B74940, Enable ? new byte[] { 0xE9, 0xC5, 0x01, 0x00, 0x00, 0x90 } : new byte[] { 0x0F, 0x85, 0xC4, 0x01, 0x00, 0x00 });
-            Memory.WriteRawAddress(0x00B85A80, Enable ? new byte[] { 0x90, 0x90, 0x90, 0x90, 0x90, 0x90 } : new byte[] { 0x0F, 0x84, 0xC4, 0x06, 0x00, 0x00 });
-            Memory.WriteRawAddress(0x00B85AEA, Enable ? new byte[] { 0x90, 0x90, 0x90, 0x90, 0x90, 0x90 } : new byte[] { 0x0F, 0x84, 0x44, 0x03, 0x00, 0x00 });
-            Memory.WriteRawAddress(0x00B877DB, Enable ? new byte[] { 0x90, 0x90 } : new byte[] { 0x75, 0x16 });
-            Memory.WriteRawAddress(0x00B87869, Enable ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x24 });
-            Memory.WriteRawAddress(0x00B87640, Enable ? new byte[] { 0xEB } : new byte[] { 0x74 });
-            Memory.WriteRawAddress(0x00B87710, Enable ? new byte[] { 0x90, 0x90 } : new byte[] { 0x75, 0x16 });
-            Memory.WriteRawAddress(0x00B877AC, Enable ? new byte[] { 0xEB } : new byte[] { 0x74 });
-            Memory.WriteRawAddress(0x00B8721A, Enable ? new byte[] { 0xEB } : new byte[] { 0x74 });
-            Memory.WriteRawAddress(0x00B692C1, Enable ? new byte[] { 0x80, 0xC2, 0x01 } : new byte[] { 0x80, 0xC2, 0x02 });
+            Memory.Write(Character, "re5dx9.exe", 0xDA383C, 0x71398 + (0x50 * Index));
+            Memory.Write(Costume, "re5dx9.exe", 0xDA383C, 0x7139C + (0x50 * Index));
         }
 
         public static void WeskerNoSunglassDrop(bool Enable)
@@ -81,17 +64,17 @@ namespace GameX.Game.Modules
 
         public static void WeskerNoDashCost(bool Enable)
         {
-            Memory.WriteInt32(Enable ? 0 : 100, "re5dx9.exe", 0xDA3814, 0x80);
+            Memory.Write(Enable ? 0 : 100, "re5dx9.exe", 0xDA3814, 0x80);
         }
 
         public static int GetActiveGameMode()
         {
-            return Memory.ReadInt32("re5dx9.exe", 0x00DA383C, 0x954, 0x2088);
+            return Memory.Read<int>("re5dx9.exe", 0x00DA383C, 0x954, 0x2088);
         }
 
         public static int LocalPlayer()
         {
-            return Memory.ReadInt32("re5dx9.exe", 0x00DA383C, 0x954, 0x24B0);
+            return Memory.Read<int>("re5dx9.exe", 0x00DA383C, 0x954, 0x24B0);
         }
 
         public static string LocalPlayerNick()
@@ -104,12 +87,12 @@ namespace GameX.Game.Modules
 
         public static int ActivePlayers()
         {
-            return Memory.ReadInt32("re5dx9.exe", 0x00DA383C, 0x34);
+            return Memory.Read<int>("re5dx9.exe", 0x00DA383C, 0x34);
         }
 
         public static bool InGame()
         {
-            return Memory.ReadInt32("re5dx9.exe", 0x00E39D44, 0x220) == 1;
+            return Memory.Read<int>("re5dx9.exe", 0x00E39D44, 0x220) == 1;
         }
 
         public static void SetMelee(string Name, byte Value)

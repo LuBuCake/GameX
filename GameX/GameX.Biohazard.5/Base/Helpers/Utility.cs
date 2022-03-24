@@ -15,6 +15,16 @@ namespace GameX.Base.Helpers
             return Value > Max ? Max : Value < Min ? Min : Value;
         }
 
+        public static float Lerp(float Delta, float From, float To)
+        {
+            return From * (1 - Delta) + To * Delta;
+        }
+
+        public static double Lerp(double Delta, double From, double To)
+        {
+            return From * (1 - Delta) + To * Delta;
+        }
+
         public static bool CompareByteArray(byte[] Array1, byte[] Array2, int Length)
         {
             if (Array1.Length != Array2.Length)
@@ -37,20 +47,6 @@ namespace GameX.Base.Helpers
             try
             {
                 Image img = Image.FromFile(File);
-                return img;
-            }
-            catch (Exception)
-            {
-                Terminal.WriteLine($"Image file not found: {File}");
-                return null;
-            }
-        }
-
-        public static Image GetImageFromStream(string File)
-        {
-            try
-            {
-                Image img = Image.FromStream(new MemoryStream(Encoder.GetDecodedStream(File)));
                 return img;
             }
             catch (Exception)

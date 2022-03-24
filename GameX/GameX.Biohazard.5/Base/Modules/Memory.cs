@@ -10,6 +10,8 @@ namespace GameX.Base.Modules
 {
     public static class Memory
     {
+        #region Imports
+
         [DllImport("kernel32.dll")]
         public static extern IntPtr OpenProcess(int dwDesiredAccess, bool bInheritHandle, int dwProcessId);
 
@@ -40,17 +42,25 @@ namespace GameX.Base.Modules
         [DllImport("user32.dll")]
         public static extern bool SetForegroundWindow(IntPtr hWnd);
 
+        #endregion
+
+        #region Props
+
         public static bool ModuleStarted { get; set; }
-        private static Process Target_Process { get; set; }
-        private static IntPtr Target_Handle { get; set; }
         public static bool DebugMode { get; private set; }
+        private static Process _Process { get; set; }
+        private static IntPtr _Handle { get; set; }
+
+        #endregion
+
+        #region Module
 
         public static void StartModule(Process Target, MEMORY_ACCESS AccessLevel = MEMORY_ACCESS.PROCESS_ALL_ACCESS)
         {
-            Target_Process = Target;
-            Target_Handle = OpenProcess((int)AccessLevel, false, Target_Process.Id);
+            _Process = Target;
+            _Handle = OpenProcess((int)AccessLevel, false, _Process.Id);
             EnterDebugMode();
-            SetForegroundWindow(Target_Process.MainWindowHandle);
+            SetForegroundWindow(_Process.MainWindowHandle);
             ModuleStarted = true;
             Terminal.WriteLine("[Memory] Module started successfully.");
         }
@@ -58,23 +68,25 @@ namespace GameX.Base.Modules
         public static void FinishModule()
         {
             ExitDebugMode();
-            CloseHandle(Target_Handle);
-            Target_Process?.Dispose();
-            Target_Process = null;
-            Target_Handle = IntPtr.Zero;
+            CloseHandle(_Handle);
+            _Process?.Dispose();
+            _Process = null;
+            _Handle = IntPtr.Zero;
             SetForegroundWindow(Process.GetCurrentProcess().MainWindowHandle);
             ModuleStarted = false;
             Terminal.WriteLine("[Memory] Module finished successfully.");
         }
 
-        /*READ WRITE*/
+        #endregion
+
+        #region Read / Write
 
         public static byte[] ReadRawAddress(int Address, int Size = 4)
         {
             byte[] buffer = new byte[Size];
             int bytesread = 0;
 
-            ReadProcessMemory(Target_Handle, Address, buffer, buffer.Length, ref bytesread);
+            ReadProcessMemory(_Handle, Address, buffer, buffer.Length, ref bytesread);
 
             return buffer;
         }
@@ -82,7 +94,7 @@ namespace GameX.Base.Modules
         public static bool WriteRawAddress(int Address, byte[] Value)
         {
             int byteswritten = 0;
-            bool write = WriteProcessMemory(Target_Handle, Address, Value, Value.Length, ref byteswritten);
+            bool write = WriteProcessMemory(_Handle, Address, Value, Value.Length, ref byteswritten);
 
             return write && byteswritten > 0;
         }
@@ -93,7 +105,7 @@ namespace GameX.Base.Modules
 
             if (ModuleName != "")
             {
-                IntPtr ModuleBaseAddress = Processes.GetBaseAddressFromModule(Target_Process, ModuleName);
+                IntPtr ModuleBaseAddress = Processes.GetBaseAddressFromModule(_Process, ModuleName);
 
                 if (ModuleBaseAddress != IntPtr.Zero)
                     PointerResult += ModuleBaseAddress.ToInt32();
@@ -109,33 +121,20 @@ namespace GameX.Base.Modules
             return PointerResult;
         }
 
+        public static T Read<T>(string ModuleName, int BaseAddress, params int[] Offsets)
+        {
+            return MarshalType<T>.ByteArrayToObject(ReadRawAddress(ReadPointer(ModuleName, BaseAddress, Offsets), MarshalType<T>.Size));
+        }
+
         public static byte[] ReadBytes(int NumOfBytes, string ModuleName, int BaseAddress, params int[] Offsets)
         {
             return ReadRawAddress(ReadPointer(ModuleName, BaseAddress, Offsets), NumOfBytes);
         }
 
-        public static short ReadInt16(string ModuleName, int BaseAddress, params int[] Offsets)
+        public static void Write<T>(T Value, string ModuleName, int BaseAddress, params int[] Offsets)
         {
-            byte[] result = ReadRawAddress(ReadPointer(ModuleName, BaseAddress, Offsets), 2);
-            return BitConverter.ToInt16(result, 0);
-        }
-
-        public static int ReadInt32(string ModuleName, int BaseAddress, params int[] Offsets)
-        {
-            byte[] result = ReadRawAddress(ReadPointer(ModuleName, BaseAddress, Offsets));
-            return BitConverter.ToInt32(result, 0);
-        }
-
-        public static uint ReadUInt32(string ModuleName, int BaseAddress, params int[] Offsets)
-        {
-            byte[] result = ReadRawAddress(ReadPointer(ModuleName, BaseAddress, Offsets));
-            return BitConverter.ToUInt32(result, 0);
-        }
-
-        public static float ReadFloat(string ModuleName, int BaseAddress, params int[] Offsets)
-        {
-            byte[] result = ReadRawAddress(ReadPointer(ModuleName, BaseAddress, Offsets));
-            return BitConverter.ToSingle(result, 0);
+            int Address = ReadPointer(ModuleName, BaseAddress, Offsets);
+            WriteRawAddress(Address, MarshalType<T>.ObjectToByteArray(Value));
         }
 
         public static void WriteBytes(byte[] Value, string ModuleName, int BaseAddress, params int[] Offsets)
@@ -144,31 +143,9 @@ namespace GameX.Base.Modules
             WriteRawAddress(Address, Value);
         }
 
-        public static void WriteInt16(int Value, string ModuleName, int BaseAddress, params int[] Offsets)
-        {
-            int Address = ReadPointer(ModuleName, BaseAddress, Offsets);
-            WriteRawAddress(Address, BitConverter.GetBytes((short) Value));
-        }
+        #endregion
 
-        public static void WriteInt32(int Value, string ModuleName, int BaseAddress, params int[] Offsets)
-        {
-            int Address = ReadPointer(ModuleName, BaseAddress, Offsets);
-            WriteRawAddress(Address, BitConverter.GetBytes(Value));
-        }
-
-        public static void WriteUint32(uint Value, string ModuleName, int BaseAddress, params int[] Offsets)
-        {
-            int Address = ReadPointer(ModuleName, BaseAddress, Offsets);
-            WriteRawAddress(Address, BitConverter.GetBytes(Value));
-        }
-
-        public static void WriteFloat(float Value, string ModuleName, int BaseAddress, params int[] Offsets)
-        {
-            int Address = ReadPointer(ModuleName, BaseAddress, Offsets);
-            WriteRawAddress(Address, BitConverter.GetBytes(Value));
-        }
-
-        /*MEMORY MANAGMENT (REQUIRES DEBUGMODE)*/
+        #region MEMORY MANAGMENT (REQUIRES DEBUGMODE)
 
         private static Dictionary<string, Detour> Detours { get; set; }
 
@@ -207,7 +184,7 @@ namespace GameX.Base.Modules
 
         public static int ChangeProtection(int lpBaseAddress, int dwSize, int flNewProtect)
         {
-            bool Changed = VirtualProtectEx(Target_Handle, lpBaseAddress, dwSize, flNewProtect, out int lpflOldProtect);
+            bool Changed = VirtualProtectEx(_Handle, lpBaseAddress, dwSize, flNewProtect, out int lpflOldProtect);
 
             if (Changed)
                 Terminal.WriteLine($"[Memory] Protection successfully changed at {lpBaseAddress:X}.");
@@ -222,7 +199,7 @@ namespace GameX.Base.Modules
             if (Detours == null)
                 return;
 
-            if (!Target_Process.HasExited)
+            if (!_Process.HasExited)
             {
                 List<string> DetourNames = new List<string>();
 
@@ -284,7 +261,7 @@ namespace GameX.Base.Modules
 
             Terminal.WriteLine($"[Memory] Patching {CallAddress:X} for {DetourName}.");
 
-            int DetourAddress = VirtualAllocEx(Target_Handle, 0, DetourContent.Length, (int) MEMORY_INFORMATION.MEM_COMMIT | (int) MEMORY_INFORMATION.MEM_RESERVE, (int) MEMORY_PROTECTION.PAGE_EXECUTE_READ);
+            int DetourAddress = VirtualAllocEx(_Handle, 0, DetourContent.Length, (int) MEMORY_INFORMATION.MEM_COMMIT | (int) MEMORY_INFORMATION.MEM_RESERVE, (int) MEMORY_PROTECTION.PAGE_EXECUTE_READ);
 
             if (DetourAddress == 0)
             {
@@ -316,10 +293,12 @@ namespace GameX.Base.Modules
 
             Detour Detour = GetDetour(DetourName);
             WriteRawAddress(Detour.CallAddress(), Detour.CallInstruction());
-            VirtualFreeEx(Target_Handle, Detour.Address(), 0, (int) MEMORY_INFORMATION.MEM_RELEASE);
+            VirtualFreeEx(_Handle, Detour.Address(), 0, (int) MEMORY_INFORMATION.MEM_RELEASE);
             Detours.Remove(DetourName);
             Terminal.WriteLine($"[Memory] {DetourName} removed sucessfully.");
             return true;
         }
+
+        #endregion
     }
 }

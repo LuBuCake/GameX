@@ -108,8 +108,8 @@ namespace GameX.Launcher
                 {
                     string ImagesDir = "addons/" + Info.GameXFile.Replace(".dll", "") + "/images/application/";
 
-                    Image LogoA = Utility.GetImageFromStream(ImagesDir + Info.GameXLogo[0] + ".eia");
-                    Image LogoB = Utility.GetImageFromStream(ImagesDir + Info.GameXLogo[1] + ".eia");
+                    Image LogoA = Image.FromFile(ImagesDir + Info.GameXLogo[0]);
+                    Image LogoB = Image.FromFile(ImagesDir + Info.GameXLogo[1]);
 
                     if (LogoA == null || LogoB == null)
                         return;
@@ -179,12 +179,19 @@ namespace GameX.Launcher
 
             using (WebClient GitHubChecker = new WebClient())
             {
-                string LatestVerion = await Task.Run(() => GitHubChecker.DownloadString(Game.RepositoryRoute + "latest.txt"));
+                try
+                {
+                    string LatestVerion = await Task.Run(() => GitHubChecker.DownloadString(Game.RepositoryRoute + "latest.txt"));
 
-                int Current = int.Parse(Game.Current.ToString().Replace(".", ""));
-                int Latest = int.Parse(LatestVerion.Replace(".", ""));
+                    int Current = int.Parse(Game.Current.ToString().Replace(".", ""));
+                    int Latest = int.Parse(LatestVerion.Replace(".", ""));
 
-                return Current < Latest;
+                    return Current < Latest;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
             }
         }
 
@@ -207,39 +214,46 @@ namespace GameX.Launcher
 
             using (WebClient GitHubChecker = new WebClient())
             {
-                string LatestVerion = await Task.Run(() => GitHubChecker.DownloadString("https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Launcher.x64/latest.txt"));
+                try
+                {
+                    string LatestVerion = await Task.Run(() => GitHubChecker.DownloadString("https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Launcher.x64/latest.txt"));
 
-                Assembly CurApp = Assembly.GetExecutingAssembly();
-                AssemblyName CurName = new AssemblyName(CurApp.FullName);
+                    Assembly CurApp = Assembly.GetExecutingAssembly();
+                    AssemblyName CurName = new AssemblyName(CurApp.FullName);
 
-                int Current = int.Parse(CurName.Version.ToString().Replace(".", ""));
-                int Latest = int.Parse(LatestVerion.Replace(".", ""));
+                    int Current = int.Parse(CurName.Version.ToString().Replace(".", ""));
+                    int Latest = int.Parse(LatestVerion.Replace(".", ""));
 
-                if (Current >= Latest)
+                    if (Current >= Latest)
+                    {
+                        return false;
+                    }
+
+                    AppVersion _version = new AppVersion()
+                    {
+                        FileRoute = "https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Launcher.x64/latest.zip",
+                        StartLauncher = "x64"
+                    };
+
+                    if (Utility.MessageBox_Information($"A new launcher version is available. Click OK to update it.") == DialogResult.OK)
+                    {
+                        string AppDirectory = Directory.GetCurrentDirectory();
+                        string UpdaterDirectory = AppDirectory + "/updater/";
+
+                        if (!Directory.Exists(UpdaterDirectory))
+                            Directory.CreateDirectory(UpdaterDirectory);
+
+                        Serializer.WriteDataFile(UpdaterDirectory + "updateapp.json", Serializer.SerializeAppVersion(_version));
+                        Process.Start(AppDirectory + "/Updater.exe");
+                        Application.Exit();
+                    }
+
+                    return true;
+                }
+                catch (Exception)
                 {
                     return false;
                 }
-
-                AppVersion _version = new AppVersion()
-                {
-                    FileRoute = "https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Launcher.x64/latest.zip",
-                    StartLauncher = "x64"
-                };
-
-                if (Utility.MessageBox_Information($"A new launcher version is available. Click OK to update it.") == DialogResult.OK)
-                {
-                    string AppDirectory = Directory.GetCurrentDirectory();
-                    string UpdaterDirectory = AppDirectory + "/updater/";
-
-                    if (!Directory.Exists(UpdaterDirectory))
-                        Directory.CreateDirectory(UpdaterDirectory);
-
-                    Serializer.WriteDataFile(UpdaterDirectory + "updateapp.json", Serializer.SerializeAppVersion(_version));
-                    Process.Start(AppDirectory + "/Updater.exe");
-                    Application.Exit();
-                }
-
-                return true;
             }
         }
 
@@ -254,41 +268,48 @@ namespace GameX.Launcher
 
             using (WebClient GitHubChecker = new WebClient())
             {
-                string LatestVerion = await Task.Run(() => GitHubChecker.DownloadString("https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Updater/latest.txt"));
-                string FilePath = Directory.GetCurrentDirectory() + "/updater.exe";
-
-                AssemblyName CurName = new AssemblyName();
-
-                bool FileExists = File.Exists(FilePath);
-
-                if (FileExists)
+                try
                 {
-                    Assembly CurApp = Assembly.LoadFile(FilePath);
-                    CurName = new AssemblyName(CurApp.FullName);
+                    string LatestVerion = await Task.Run(() => GitHubChecker.DownloadString("https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Updater/latest.txt"));
+                    string FilePath = Directory.GetCurrentDirectory() + "/updater.exe";
+
+                    AssemblyName CurName = new AssemblyName();
+
+                    bool FileExists = File.Exists(FilePath);
+
+                    if (FileExists)
+                    {
+                        Assembly CurApp = Assembly.LoadFile(FilePath);
+                        CurName = new AssemblyName(CurApp.FullName);
+                    }
+
+                    int Current = int.Parse(FileExists ? CurName.Version.ToString().Replace(".", "") : "0");
+                    int Latest = int.Parse(LatestVerion.Replace(".", ""));
+
+                    if (Current >= Latest)
+                    {
+                        return false;
+                    }
+
+                    string AppDirectory = Directory.GetCurrentDirectory();
+                    string UpdaterDirectory = AppDirectory + "/updater/";
+
+                    if (!Directory.Exists(UpdaterDirectory))
+                        Directory.CreateDirectory(UpdaterDirectory);
+
+                    GameXButton.Enabled = false;
+                    GameXComboEdit.Enabled = false;
+
+                    GitHubChecker.DownloadProgressChanged += ReportUpdaterDownloadProgress;
+                    GitHubChecker.DownloadFileCompleted += UpdaterDownloadFinished;
+                    GitHubChecker.DownloadFileAsync(new Uri("https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Updater/latest.zip"), UpdaterDirectory + "latest.zip");
+
+                    return true;
                 }
-
-                int Current = int.Parse(FileExists ? CurName.Version.ToString().Replace(".", "") : "0");
-                int Latest = int.Parse(LatestVerion.Replace(".", ""));
-
-                if (Current >= Latest)
+                catch (Exception)
                 {
                     return false;
                 }
-
-                string AppDirectory = Directory.GetCurrentDirectory();
-                string UpdaterDirectory = AppDirectory + "/updater/";
-
-                if (!Directory.Exists(UpdaterDirectory))
-                    Directory.CreateDirectory(UpdaterDirectory);
-
-                GameXButton.Enabled = false;
-                GameXComboEdit.Enabled = false;
-
-                GitHubChecker.DownloadProgressChanged += ReportUpdaterDownloadProgress;
-                GitHubChecker.DownloadFileCompleted += UpdaterDownloadFinished;
-                GitHubChecker.DownloadFileAsync(new Uri("https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Updater/latest.zip"), UpdaterDirectory + "latest.zip");
-
-                return true;
             }
         }
 
