@@ -9,14 +9,14 @@ using DevExpress.LookAndFeel;
 using DevExpress.Skins;
 using DevExpress.XtraEditors;
 using DevExpress.XtraTab;
-using GameX.Base.Content;
-using GameX.Base.Helpers;
-using GameX.Base.Modules;
-using GameX.Base.Types;
-using GameX.Game.Content;
-using GameX.Game.Helpers;
-using GameX.Game.Modules;
-using GameX.Game.Types;
+using GameX.Helpers;
+using GameX.Modules;
+using GameX.Database;
+using GameX.Enum;
+using GameX.Database.Type;
+using System.Reflection;
+using DevExpress.Data.Helpers;
+using GameX.Database.ViewBag;
 
 namespace GameX
 {
@@ -32,6 +32,27 @@ namespace GameX
         public double FramesPerSecond { get; private set; }
         public bool Verified { get; private set; }
         public bool Initialized { get; private set; }
+        public bool ExceptionStop { get; private set; }
+
+        #endregion
+
+        #region Indexer
+
+        public object this[string PropName]
+        {
+            get
+            {
+                Type myType = typeof(App);
+                PropertyInfo myPropInfo = myType.GetProperty(PropName);
+                return myPropInfo.GetValue(this, null);
+            }
+            set
+            {
+                Type myType = typeof(App);
+                PropertyInfo myPropInfo = myType.GetProperty(PropName);
+                myPropInfo.SetValue(this, value, null);
+            }
+        }
 
         #endregion
 
@@ -92,7 +113,8 @@ namespace GameX
             Application.ApplicationExit += Application_ApplicationExit;
 
             Terminal.StartModule(this);
-            ConsoleInputTextEdit.Validating += Terminal.ValidateInput;
+
+            Biohazard.Setup(this);
         }
 
         private void Application_Load()
@@ -123,7 +145,7 @@ namespace GameX
 
         private void Application_DoWork()
         {
-            if (Target_Handle() && Initialized)
+            if (Target_Handle() && Initialized && !ExceptionStop)
                 GameX_Update();
         }
 
@@ -181,13 +203,13 @@ namespace GameX
                 Target_Process.Exited += Target_Exited;
                 Verified = true;
                 Initialized = true;
-                Text = "GameX - Resident Evil 5 - " + (Memory.DebugMode ? "Running in Admin Mode" : "Running in User Mode");
+                Text = "GameX - Resident Evil 5 - " + (Memory.DebugMode ? "Running as administrator" : "Running as normal user");
 
                 return Verified;
             }
 
             Terminal.WriteLine("[App] Failed validating, unsupported version.");
-            Terminal.WriteLine("[App] Follow the guide on https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
+            Terminal.WriteLine("[App] Follow the guide at https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
 
             Target_Process.EnableRaisingEvents = true;
             Target_Process.Exited += Target_Exited;
@@ -377,13 +399,197 @@ namespace GameX
                 ReloadLabelControl
             };
 
+            ComboBoxEdit[] ItemCombos =
+            {
+                P1Slot1ItemCB,
+                P1Slot2ItemCB,
+                P1Slot3ItemCB,
+                P1Slot4ItemCB,
+                P1Slot5ItemCB,
+                P1Slot6ItemCB,
+                P1Slot7ItemCB,
+                P1Slot8ItemCB,
+                P1Slot9ItemCB,
+                P1SlotKnifeItemCB
+            };
+
+            TextEdit[] QuantityTextEdits =
+            {
+                P1Slot1QuantityTE,
+                P1Slot2QuantityTE,
+                P1Slot3QuantityTE,
+                P1Slot4QuantityTE,
+                P1Slot5QuantityTE,
+                P1Slot6QuantityTE,
+                P1Slot7QuantityTE,
+                P1Slot8QuantityTE,
+                P1Slot9QuantityTE,
+                P1SlotKnifeQuantityTE
+            };
+
+            TextEdit[] MaxQuantityTextEdits =
+            {
+                P1Slot1MaxQuantityTE,
+                P1Slot2MaxQuantityTE,
+                P1Slot3MaxQuantityTE,
+                P1Slot4MaxQuantityTE,
+                P1Slot5MaxQuantityTE,
+                P1Slot6MaxQuantityTE,
+                P1Slot7MaxQuantityTE,
+                P1Slot8MaxQuantityTE,
+                P1Slot9MaxQuantityTE,
+                P1SlotKnifeMaxQuantityTE
+            };
+
+            SpinEdit[] FirepowerSpins =
+            {
+                P1Slot1FirepowerSE,
+                P1Slot2FirepowerSE,
+                P1Slot3FirepowerSE,
+                P1Slot4FirepowerSE,
+                P1Slot5FirepowerSE,
+                P1Slot6FirepowerSE,
+                P1Slot7FirepowerSE,
+                P1Slot8FirepowerSE,
+                P1Slot9FirepowerSE,
+                P1SlotKnifeFirepowerSE
+            };
+
+            SpinEdit[] ReloadSpeedSpins =
+            {
+                P1Slot1ReloadSpeedSE,
+                P1Slot2ReloadSpeedSE,
+                P1Slot3ReloadSpeedSE,
+                P1Slot4ReloadSpeedSE,
+                P1Slot5ReloadSpeedSE,
+                P1Slot6ReloadSpeedSE,
+                P1Slot7ReloadSpeedSE,
+                P1Slot8ReloadSpeedSE,
+                P1Slot9ReloadSpeedSE,
+                P1SlotKnifeReloadSpeedSE
+            };
+
+            SpinEdit[] CapacitySpins =
+            {
+                P1Slot1CapacitySE,
+                P1Slot2CapacitySE,
+                P1Slot3CapacitySE,
+                P1Slot4CapacitySE,
+                P1Slot5CapacitySE,
+                P1Slot6CapacitySE,
+                P1Slot7CapacitySE,
+                P1Slot8CapacitySE,
+                P1Slot9CapacitySE,
+                P1SlotKnifeCapacitySE
+            };
+
+            SpinEdit[] CriticalSpins =
+            {
+                P1Slot1CriticalSE,
+                P1Slot2CriticalSE,
+                P1Slot3CriticalSE,
+                P1Slot4CriticalSE,
+                P1Slot5CriticalSE,
+                P1Slot6CriticalSE,
+                P1Slot7CriticalSE,
+                P1Slot8CriticalSE,
+                P1Slot9CriticalSE,
+                P1SlotKnifeCriticalSE
+            };
+
+            SpinEdit[] PiercingSpins =
+            {
+                P1Slot1PiercingSE,
+                P1Slot2PiercingSE,
+                P1Slot3PiercingSE,
+                P1Slot4PiercingSE,
+                P1Slot5PiercingSE,
+                P1Slot6PiercingSE,
+                P1Slot7PiercingSE,
+                P1Slot8PiercingSE,
+                P1Slot9PiercingSE,
+                P1SlotKnifePiercingSE
+            };
+
+            SpinEdit[] RangeSpins =
+            {
+                P1Slot1RangeSE,
+                P1Slot2RangeSE,
+                P1Slot3RangeSE,
+                P1Slot4RangeSE,
+                P1Slot5RangeSE,
+                P1Slot6RangeSE,
+                P1Slot7RangeSE,
+                P1Slot8RangeSE,
+                P1Slot9RangeSE,
+                P1SlotKnifeRangeSE
+            };
+
+            SpinEdit[] ScopeSpins =
+            {
+                P1Slot1ScopeSE,
+                P1Slot2ScopeSE,
+                P1Slot3ScopeSE,
+                P1Slot4ScopeSE,
+                P1Slot5ScopeSE,
+                P1Slot6ScopeSE,
+                P1Slot7ScopeSE,
+                P1Slot8ScopeSE,
+                P1Slot9ScopeSE,
+                P1SlotKnifeScopeSE
+            };
+
+            CheckEdit[] InfiniteAmmoChecks =
+            {
+                P1Slot1InfiniteAmmoCheckEdit,
+                P1Slot2InfiniteAmmoCheckEdit,
+                P1Slot3InfiniteAmmoCheckEdit,
+                P1Slot4InfiniteAmmoCheckEdit,
+                P1Slot5InfiniteAmmoCheckEdit,
+                P1Slot6InfiniteAmmoCheckEdit,
+                P1Slot7InfiniteAmmoCheckEdit,
+                P1Slot8InfiniteAmmoCheckEdit,
+                P1Slot9InfiniteAmmoCheckEdit,
+                P1SlotKnifeInfiniteAmmoCheckEdit
+            };
+
+            CheckEdit[] RapidfireChecks =
+            {
+                P1Slot1RapidFireCheckEdit,
+                P1Slot2RapidFireCheckEdit,
+                P1Slot3RapidFireCheckEdit,
+                P1Slot4RapidFireCheckEdit,
+                P1Slot5RapidFireCheckEdit,
+                P1Slot6RapidFireCheckEdit,
+                P1Slot7RapidFireCheckEdit,
+                P1Slot8RapidFireCheckEdit,
+                P1Slot9RapidFireCheckEdit,
+                P1SlotKnifeRapidFireCheckEdit
+            };
+
+            CheckEdit[] FrozenChecks =
+            {
+                P1Slot1FrozenCheckEdit,
+                P1Slot2FrozenCheckEdit,
+                P1Slot3FrozenCheckEdit,
+                P1Slot4FrozenCheckEdit,
+                P1Slot5FrozenCheckEdit,
+                P1Slot6FrozenCheckEdit,
+                P1Slot7FrozenCheckEdit,
+                P1Slot8FrozenCheckEdit,
+                P1Slot9FrozenCheckEdit,
+                P1SlotKnifeFrozenCheckEdit
+            };
+
             #endregion
+
+            DB db = DBContext.GetDatabase();
 
             for (int Index = 0; Index < CharacterCombos.Length; Index++)
             {
-                CharacterCombos[Index].Properties.Items.AddRange(Game.Content.Characters.GetDefaultChars());
-                WeaponMode[Index].Properties.Items.AddRange(Miscellaneous.WeaponMode());
-                Handness[Index].Properties.Items.AddRange(Miscellaneous.Handness());
+                CharacterCombos[Index].Properties.Items.AddRange(db.Characters);
+                WeaponMode[Index].Properties.Items.AddRange(db.WeaponMode);
+                Handness[Index].Properties.Items.AddRange(db.Handness);
 
                 CharCosFreezes[Index].CheckedChanged += CharCosFreeze_CheckedChanged;
                 InfiniteHP[Index].CheckedChanged += EnableDisable_StateChanged;
@@ -413,7 +619,7 @@ namespace GameX
 
             for (int i = 0; i < MeleeCombosA.Length; i++)
             {
-                List<Move> Damage = Moves.GetDefaultMelees(MoveType.Damage);
+                List<Move> Damage = db.DamageMoves;
 
                 if (i > 1)
                 {
@@ -433,10 +639,10 @@ namespace GameX
 
             for (int i = 0; i < MeleeCombosB.Length; i++)
             {
-                List<Move> Damage = Moves.GetDefaultMelees(MoveType.Damage);
-                List<Move> Movement = Moves.GetDefaultMelees(MoveType.Movement);
-                List<Move> Action = Moves.GetDefaultMelees(MoveType.Action);
-                List<Move> Dash = Moves.GetDefaultMelees(MoveType.Dash);
+                List<Move> Damage = db.DamageMoves;
+                List<Move> Movement = db.MovementMoves;
+                List<Move> Action = db.ActionMoves;
+                List<Move> Dash = db.DashMoves;
 
                 Damage.RemoveAll(item => item.Value == 172);
                 Damage.RemoveAll(item => item.Value == 173);
@@ -463,16 +669,38 @@ namespace GameX
                 MeleeCombosB[i].Enabled = false;
             }
 
+            for (int i = 0; i < 10; i++)
+            {
+                ItemCombos[i].Properties.Items.AddRange(db.Items);
+                ItemCombos[i].SelectedIndexChanged += InventoryComboBox_IndexChanged;
+                ItemCombos[i].SelectedIndex = 0;
+
+                QuantityTextEdits[i].EditValueChanging += InventoryTextEditNumeric_EditValueChanging;
+                QuantityTextEdits[i].Text = "0";
+                MaxQuantityTextEdits[i].EditValueChanging += InventoryTextEditNumeric_EditValueChanging;
+                MaxQuantityTextEdits[i].Text = "0";
+
+                FirepowerSpins[i].Spin += SpinEdit_Spin;
+                ReloadSpeedSpins[i].Spin += SpinEdit_Spin;
+                CapacitySpins[i].Spin += SpinEdit_Spin;
+                CriticalSpins[i].Spin += SpinEdit_Spin;
+                PiercingSpins[i].Spin += SpinEdit_Spin;
+                RangeSpins[i].Spin += SpinEdit_Spin;
+                ScopeSpins[i].Spin += SpinEdit_Spin;
+            }
+
+            P1FreezeAllCheckEdit.CheckedChanged += EnableDisable_StateChanged;
+
             MeleeAnytimeSwitch.Toggled += ToggleSwitch_Toggled;
 
             if (MeleeAnytimeSwitch.IsOn)
                 MeleeAnytimeSwitch.Toggle();
 
-            UpdateModeComboBoxEdit.Properties.Items.AddRange(Rates.Available());
+            UpdateModeComboBoxEdit.Properties.Items.AddRange(db.Rates);
             UpdateModeComboBoxEdit.SelectedIndexChanged += UpdateMode_IndexChanged;
             UpdateModeComboBoxEdit.SelectedIndex = 1;
 
-            PaletteComboBoxEdit.Properties.Items.AddRange(Design.AllPaletts("The Bezier"));
+            PaletteComboBoxEdit.Properties.Items.AddRange(db.Palettes);
             PaletteComboBoxEdit.SelectedIndexChanged += Palette_IndexChanged;
             PaletteComboBoxEdit.SelectedIndex = 0;
 
@@ -480,49 +708,55 @@ namespace GameX
             LoadSettingsButton.Click += Configuration_Load;
 
             MasterTabControl.SelectedPageChanged += MasterTabPage_PageChanged;
+            MasterTabPage_PageChanged(MasterTabControl, null);
 
-            ConsoleModeComboBoxEdit.Properties.Items.AddRange(Interfaces.Available());
-            ConsoleModeComboBoxEdit.SelectedIndexChanged += Terminal.Interface_IndexChanged;
-            ConsoleModeComboBoxEdit.SelectedIndex = 0;
-
-            WeaponPlacementComboBox.Properties.Items.AddRange(Miscellaneous.WeaponPlacement());
+            WeaponPlacementComboBox.Properties.Items.AddRange(db.WeaponPlacement);
             WeaponPlacementComboBox.SelectedIndexChanged += WeaponPlacement_IndexChanged;
             WeaponPlacementComboBox.SelectedIndex = 0;
 
             MeleeCameraCheckEdit.CheckedChanged += EnableDisable_StateChanged;
             ReunionSpecialMovesCheckEdit.CheckedChanged += EnableDisable_StateChanged;
 
+            ConsoleInputTextEdit.Validating += Terminal.ValidateInput;
             ClearConsoleSimpleButton.Click += Terminal.ClearConsole_Click;
 
+            InventoryPlayerSelectionRG.EditValueChanged += RadioGroup_EditValueChanged;
+
+            LoadoutExportButton.Click += SimpleButton_Click;
+            LoadoutImportButton.Click += SimpleButton_Click;
+
             ResetHealthBars();
-            SetLogo();
+            SetupImages();
 
             Terminal.WriteLine("[App] App initialized.");
             Configuration_Load(null, null);
         }
 
-        private void SetLogo()
+        private void SetupImages()
         {
             Color Window = CommonSkins.GetSkin(UserLookAndFeel.Default).TranslateColor(SystemColors.Window);
             int total = Window.R + Window.G + Window.B;
 
-            GameXInfo Game = new GameXInfo()
+            Addon Game = new Addon()
             {
-                GameXLogo = new[] { "addons/GameX.Biohazard.5/images/application/logo_a.png", "addons/GameX.Biohazard.5/images/application/logo_b.png" },
-                GameXLogoColors = new[] { Color.Red, Color.White },
+                Images = new[] { "addons/GameX.Biohazard.5/images/application/logo_a.png", "addons/GameX.Biohazard.5/images/application/logo_b.png" },
+                ImageColors = new[] { Color.Red, Color.White },
             };
 
-            Image LogoA = Image.FromFile(Game.GameXLogo[0]);
-            Image LogoB = Image.FromFile(Game.GameXLogo[1]);
+            Image LogoA = Image.FromFile(Game.Images[0]);
+            Image LogoB = Image.FromFile(Game.Images[1]);
 
             if (LogoA == null || LogoB == null)
                 return;
 
-            LogoA = LogoA.ColorReplace(Game.GameXLogoColors[0], true);
+            LogoA = LogoA.ColorReplace(Game.ImageColors[0], true);
             LogoB = LogoB.ColorReplace(total > 380 ? Color.Black : Color.White, true);
 
             Image Logo = Utility.MergeImage(LogoA, LogoB);
             AboutPictureEdit.Image = Logo;
+
+            Image InventoryBG = Image.FromFile("addons/GameX.Biohazard.5/images/inventory/background.png");
+            InventoryBGPictureBox.Image = InventoryBG;
         }
 
         private void ResetHealthBars()
@@ -550,36 +784,58 @@ namespace GameX
         {
             if (DebugMode)
                 return;
+        }
 
-            CheckButton[] CheckButtons =
+        public object GetInventoryControl(int Player, int Slot, string ControlName)
+        {
+            switch (Player)
             {
-                P1FreezeCharCosButton,
-                P2FreezeCharCosButton,
-                P3FreezeCharCosButton,
-                P4FreezeCharCosButton
-            };
-
-            foreach (CheckButton CB in CheckButtons)
-            {
-                CB.Enabled = false;
-                CB.Checked = false;
+                case 0:
+                    return ((GroupControl)P1InventoryTab.Controls[Slot != 9 ? $"P1Slot{Slot + 1}EditGP" : "P1SlotKnifeEditGP"]).Controls[ControlName];
+                case 1:
+                    return ((GroupControl)P1InventoryTab.Controls[Slot != 9 ? $"P1Slot{Slot + 1}EditGP" : "P1SlotKnifeEditGP"]).Controls[ControlName];
+                case 2:
+                    return ((GroupControl)P1InventoryTab.Controls[Slot != 9 ? $"P1Slot{Slot + 1}EditGP" : "P1SlotKnifeEditGP"]).Controls[ControlName];
+                case 3:
+                    return ((GroupControl)P1InventoryTab.Controls[Slot != 9 ? $"P1Slot{Slot + 1}EditGP" : "P1SlotKnifeEditGP"]).Controls[ControlName];
             }
+
+            return null;
         }
 
         #endregion
 
         #region Event Handlers
 
-        // CONTROLLERS //
+        // Form //
+
         private void MasterTabPage_PageChanged(object sender, EventArgs e)
         {
             XtraTabControl XTC = sender as XtraTabControl;
             XtraTabPage XTP = XTC.SelectedTabPage;
 
-            if (XTP.Name != "TabPageConsole")
-                return;
+            if (XTP.Name == "TabPageInventory")
+            {
+                Width = 1250;
+                Height = 523;
+                MasterTabControl.Width = 1225;
+                MasterTabControl.Height = 467;
+                TabInventoryGP.Width = 1206;
+                TabInventoryGP.Height = 418;
+            }
+            else
+            {
+                Width = 664;
+                Height = 523;
+                MasterTabControl.Width = 640;
+                MasterTabControl.Height = 467;
+                TabInventoryGP.Width = 622;
+                TabInventoryGP.Height = 418;
+            }
 
-            Terminal.ScrollToEnd();
+            if (XTP.Name == "TabPageConsole")
+                Terminal.ScrollToEnd();
+
         }
 
         private void Configuration_Save(object sender, EventArgs e)
@@ -587,13 +843,12 @@ namespace GameX
             Settings Setts = new Settings()
             {
                 UpdateRate = UpdateModeComboBoxEdit.SelectedIndex,
-                PlayerName = PlayerNameTextEdit.Text,
                 SkinName = UserLookAndFeel.Default.ActiveSvgPaletteName
             };
 
             try
             {
-                Serializer.WriteDataFile(@"addons/GameX.Biohazard.5/appsettings.json", Serializer.SerializeSettings(Setts));
+                Serializer.WriteDataFile(@"addons/GameX.Biohazard.5/appsettings.json", Serializer.Serialize(Setts));
             }
             catch (Exception Ex)
             {
@@ -611,14 +866,13 @@ namespace GameX
             Settings Setts = new Settings()
             {
                 UpdateRate = 1,
-                PlayerName = "Player",
                 SkinName = "VS Dark"
             };
 
             try
             {
                 if (File.Exists(@"addons/GameX.Biohazard.5/appsettings.json"))
-                    Setts = Serializer.DeserializeSettings(File.ReadAllText(@"addons/GameX.Biohazard.5/appsettings.json"));
+                    Setts = Serializer.Deserialize<Settings>(File.ReadAllText(@"addons/GameX.Biohazard.5/appsettings.json"));
             }
             catch (Exception Ex)
             {
@@ -627,9 +881,8 @@ namespace GameX
             }
 
             UpdateModeComboBoxEdit.SelectedIndex = Utility.Clamp(Setts.UpdateRate, 0, 2);
-            PlayerNameTextEdit.Text = Setts.PlayerName;
 
-            foreach (ListItem Pallete in PaletteComboBoxEdit.Properties.Items)
+            foreach (Simple Pallete in PaletteComboBoxEdit.Properties.Items)
             {
                 if (Pallete.Text == Setts.SkinName)
                     PaletteComboBoxEdit.SelectedItem = Pallete;
@@ -643,7 +896,7 @@ namespace GameX
 
         private void UpdateMode_IndexChanged(object sender, EventArgs e)
         {
-            UpdateMode = 1.0 / (UpdateModeComboBoxEdit.SelectedItem as ListItem).Value;
+            UpdateMode = 1.0 / (UpdateModeComboBoxEdit.SelectedItem as Simple).Value;
         }
 
         private void Palette_IndexChanged(object sender, EventArgs e)
@@ -654,10 +907,192 @@ namespace GameX
             UserLookAndFeel.Default.SetSkinStyle(UserLookAndFeel.Default.ActiveSkinName, PaletteComboBoxEdit.Text);
 
             ResetHealthBars();
-            SetLogo();
+            SetupImages();
         }
 
-        // EVENTS //
+        // Functionalities //
+
+        private void SimpleButton_Click(object sender, EventArgs e)
+        {
+            SimpleButton SB = sender as SimpleButton;
+
+            if (SB.Name.Equals("LoadoutExportButton"))
+            {
+                using (SaveFileDialog SFD = new SaveFileDialog())
+                {
+                    SFD.Filter = "Loadout Json (*.json)|*.json";
+                    SFD.Title = "Export Loadout";
+                    SFD.RestoreDirectory = true;
+
+                    if (SFD.ShowDialog() == DialogResult.OK)
+                    {
+                        int SelectedPlayer = (int)InventoryPlayerSelectionRG.EditValue;
+
+                        LoadoutViewBag Loadout = new LoadoutViewBag();
+                        Loadout.Name = Path.GetFileNameWithoutExtension(SFD.FileName);
+                        Loadout.Slots = new TemporaryItemViewBag[10];
+
+                        for (int i = 0; i < 10; i++)
+                            Loadout.Slots[i] = Biohazard.Players[SelectedPlayer].Inventory.Slots[i].ToMemory;
+
+                        Serializer.WriteDataFile(SFD.FileName, Serializer.Serialize(Loadout));
+
+                        Terminal.WriteLine($"[App] Loadout \"{Loadout.Name}\" saved successfully at {SFD.FileName}.");
+                        Utility.MessageBox_Information($"Loadout \"{Loadout.Name}\" saved successfully!");
+                    }
+                }
+            }
+            else if (SB.Name.Equals("LoadoutImportButton"))
+            {
+                using (OpenFileDialog OFD = new OpenFileDialog())
+                {
+                    OFD.Filter = "Loadout Json (*.json)|*.json";
+                    OFD.Title = "Import Loadout";
+                    OFD.RestoreDirectory = true;
+
+                    if (OFD.ShowDialog() == DialogResult.OK)
+                    {
+                        int SelectedPlayer = (int)InventoryPlayerSelectionRG.EditValue;
+
+                        LoadoutViewBag Loadout = Serializer.Deserialize<LoadoutViewBag>(Serializer.ReadDataFile(OFD.FileName));
+
+                        for (int i = 0; i < 10; i++)
+                            Biohazard.Players[SelectedPlayer].Inventory.Slots[i].SetFromLoadoutTemporaryItem(Loadout.Slots[i], Initialized);
+
+                        Terminal.WriteLine($"[App] Loadout \"{Loadout.Name}\" applied successfully on P{SelectedPlayer + 1}'s inventory.");
+                        Utility.MessageBox_Information($"Loadout \"{Loadout.Name}\" applied successfully!");
+                    }
+                }
+            }
+        }
+
+        private void SpinEdit_Spin(object sender, DevExpress.XtraEditors.Controls.SpinEventArgs e)
+        {
+            ComboBoxEdit[] ItemCombos =
+            {
+                P1Slot1ItemCB,
+                P1Slot2ItemCB,
+                P1Slot3ItemCB,
+                P1Slot4ItemCB,
+                P1Slot5ItemCB,
+                P1Slot6ItemCB,
+                P1Slot7ItemCB,
+                P1Slot8ItemCB,
+                P1Slot9ItemCB,
+                P1SlotKnifeItemCB
+            };
+
+            SpinEdit SE = sender as SpinEdit;
+            int Index = !SE.Name.Contains("Knife") ? int.Parse(SE.Name[6].ToString()) - 1 : 9;
+            int SelectedPlayer = (int)InventoryPlayerSelectionRG.EditValue;
+
+            Item SelectedItem = ItemCombos[Index].SelectedItem as Item;
+
+            dynamic PropArray = null;
+
+            if (SE.Name.Contains("Firepower"))
+                PropArray = SelectedItem.Firepower;
+            else if (SE.Name.Contains("ReloadSpeed"))
+                PropArray = SelectedItem.ReloadSpeed;
+            else if (SE.Name.Contains("Capacity"))
+                PropArray = SelectedItem.Capacity;
+            else if (SE.Name.Contains("Critical"))
+                PropArray = SelectedItem.Critical;
+            else if (SE.Name.Contains("Piercing"))
+                PropArray = SelectedItem.Piercing;
+            else if (SE.Name.Contains("Range"))
+                PropArray = SelectedItem.Range;
+            else if (SE.Name.Contains("Scope"))
+                PropArray = SelectedItem.Scope;
+
+            int OldValueIndex = SE.Name.Contains("ReloadSpeed") ? Array.IndexOf(SelectedItem.ReloadSpeed, double.Parse(SE.Text)) : Array.IndexOf(PropArray, int.Parse(SE.Text));
+            int NewValueIndex = e.IsSpinUp ? OldValueIndex + 1 : OldValueIndex - 1;
+
+            Slot[] SlotCollection = Biohazard.Players[SelectedPlayer].Inventory.Slots;
+
+            if (!SE.Name.Contains("ReloadSpeed"))
+            {
+                SpinEdit ReloadSpeedSE = (SpinEdit)GetInventoryControl(SelectedPlayer, Index, $"P{SelectedPlayer + 1}Slot" + (Index != 9 ? (Index + 1).ToString() : "Knife") + "ReloadSpeedSE");
+                ReloadSpeedSE.Text = ((decimal)SlotCollection[Index].ToMemoryItem.ReloadSpeed[SlotCollection[Index].ReloadSpeed]).ToString("F");
+            }
+
+            if ((e.IsSpinUp && PropArray.Length > NewValueIndex) || (!e.IsSpinUp && NewValueIndex >= 0))
+            {
+                SE.Text = SE.Name.Contains("ReloadSpeed") ? ((decimal)PropArray[NewValueIndex]).ToString("F") : PropArray[NewValueIndex].ToString();
+                SlotCollection[Index].UpdateItemToMemory(Initialized);
+            }
+            else
+                e.Handled = true;
+        }
+
+        private void InventoryTextEditNumeric_EditValueChanging(object sender, DevExpress.XtraEditors.Controls.ChangingEventArgs e)
+        {
+            bool IsValid = int.TryParse(e.NewValue.ToString(), out _);
+
+            if (!IsValid)
+                e.NewValue = "0";
+
+            TextEdit TE = sender as TextEdit;
+            int Index = !TE.Name.Contains("Knife") ? int.Parse(TE.Name[6].ToString()) - 1 : 9;
+
+            int SelectedPlayer = (int)InventoryPlayerSelectionRG.EditValue;
+            Slot[] SlotCollection = Biohazard.Players[SelectedPlayer].Inventory.Slots;
+
+            if (TE.Name.Contains("MaxQuantity"))
+                SlotCollection[Index].ToMemory.MaxQuantity = short.Parse(e.NewValue.ToString());
+            else if (TE.Name.Contains("Quantity"))
+                SlotCollection[Index].ToMemory.Quantity = short.Parse(e.NewValue.ToString());
+            else
+                return;
+
+            if (!Initialized)
+                return;
+
+            SlotCollection[Index].SetItem(SlotCollection[Index].ToMemory);
+        }
+
+        private void InventoryComboBox_IndexChanged(object sender, EventArgs e)
+        {
+            PictureEdit[] SlotPicBoxes =
+            {
+                Slot1PictureBox,
+                Slot2PictureBox,
+                Slot3PictureBox,
+                Slot4PictureBox,
+                Slot5PictureBox,
+                Slot6PictureBox,
+                Slot7PictureBox,
+                Slot8PictureBox,
+                Slot9PictureBox,
+                SlotKnifePictureBox,
+            };
+
+            ComboBoxEdit CBE = sender as ComboBoxEdit;
+            int Index = !CBE.Name.Contains("Knife") ? int.Parse(CBE.Name[6].ToString()) - 1 : 9;
+
+            Item SelectedItem = CBE.SelectedItem as Item;
+
+            Image Final = Image.FromFile(@"addons/GameX.Biohazard.5/images/inventory/slot.png");
+            SlotPicBoxes[Index].Image = Final;
+
+            int SelectedPlayer = (int)InventoryPlayerSelectionRG.EditValue;
+            Slot[] SlotCollection = Biohazard.Players[SelectedPlayer].Inventory.Slots;
+            
+            if (SlotCollection[Index].BeingUpdatedOnGUI)
+                return;
+
+            ((TextEdit)GetInventoryControl(SelectedPlayer, Index, Index != 9 ? $"P{SelectedPlayer + 1}Slot{Index + 1}QuantityTE" : $"P{SelectedPlayer + 1}SlotKnifeQuantityTE")).Text = SelectedItem.Capacity[0].ToString();
+            ((TextEdit)GetInventoryControl(SelectedPlayer, Index, Index != 9 ? $"P{SelectedPlayer + 1}Slot{Index + 1}MaxQuantityTE" : $"P{SelectedPlayer + 1}SlotKnifeMaxQuantityTE")).Text = SelectedItem.Capacity[0].ToString();
+            ((SpinEdit)GetInventoryControl(SelectedPlayer, Index, Index != 9 ? $"P{SelectedPlayer + 1}Slot{Index + 1}FirepowerSE" : $"P{SelectedPlayer + 1}SlotKnifeFirepowerSE")).Text = SelectedItem.Firepower[0].ToString();
+            ((SpinEdit)GetInventoryControl(SelectedPlayer, Index, Index != 9 ? $"P{SelectedPlayer + 1}Slot{Index + 1}ReloadSpeedSE" : $"P{SelectedPlayer + 1}SlotKnifeReloadSpeedSE")).Text = ((decimal)SelectedItem.ReloadSpeed[0]).ToString("F");
+            ((SpinEdit)GetInventoryControl(SelectedPlayer, Index, Index != 9 ? $"P{SelectedPlayer + 1}Slot{Index + 1}CapacitySE" : $"P{SelectedPlayer + 1}SlotKnifeCapacitySE")).Text = SelectedItem.Capacity[0].ToString();
+            ((SpinEdit)GetInventoryControl(SelectedPlayer, Index, Index != 9 ? $"P{SelectedPlayer + 1}Slot{Index + 1}CriticalSE" : $"P{SelectedPlayer + 1}SlotKnifeCriticalSE")).Text = SelectedItem.Critical[0].ToString();
+            ((SpinEdit)GetInventoryControl(SelectedPlayer, Index, Index != 9 ? $"P{SelectedPlayer + 1}Slot{Index + 1}PiercingSE" : $"P{SelectedPlayer + 1}SlotKnifePiercingSE")).Text = SelectedItem.Piercing[0].ToString();
+            ((SpinEdit)GetInventoryControl(SelectedPlayer, Index, Index != 9 ? $"P{SelectedPlayer + 1}Slot{Index + 1}RangeSE" : $"P{SelectedPlayer + 1}SlotKnifeRangeSE")).Text = SelectedItem.Range[0].ToString();
+            ((SpinEdit)GetInventoryControl(SelectedPlayer, Index, Index != 9 ? $"P{SelectedPlayer + 1}Slot{Index + 1}ScopeSE" : $"P{SelectedPlayer + 1}SlotKnifeScopeSE")).Text = SelectedItem.Scope[0].ToString();
+
+            Biohazard.Players[SelectedPlayer].Inventory.Slots[Index].UpdateItemToMemory(Initialized);
+        }
 
         private void CharComboBox_IndexChanged(object sender, EventArgs e)
         {
@@ -677,15 +1112,21 @@ namespace GameX
             CostumeCombos[Index].Properties.Items.Clear();
 
             foreach (Costume Cos in CBEChar.Costumes)
-            {
                 CostumeCombos[Index].Properties.Items.Add(Cos);
-            }
 
             CostumeCombos[Index].SelectedIndex = 0;
         }
 
         private void CosComboBox_IndexChanged(object sender, EventArgs e)
         {
+            ComboBoxEdit[] CharacterCombos =
+            {
+                P1CharComboBox,
+                P2CharComboBox,
+                P3CharComboBox,
+                P4CharComboBox
+            };
+
             PictureEdit[] CharPicBoxes =
             {
                 P1CharPictureBox,
@@ -695,9 +1136,10 @@ namespace GameX
             };
 
             ComboBoxEdit CBE = sender as ComboBoxEdit;
-            Costume CBECos = CBE.SelectedItem as Costume;
-
             int Index = int.Parse(CBE.Name[1].ToString()) - 1;
+
+            Character CBEChar = CharacterCombos[Index].SelectedItem as Character;
+            Costume CBECos = CBE.SelectedItem as Costume;
 
             Image Portrait = Utility.GetImageFromFile(@"addons/GameX.Biohazard.5/images/character/" + CBECos.Portrait);
 
@@ -707,8 +1149,8 @@ namespace GameX
             if (!Initialized)
                 return;
 
-            Character_ApplyCharacters(Index);
-            Character_DetourValueUpdate();
+            Biohazard.Players[Index].Character = CBEChar.Value;
+            Biohazard.Players[Index].Costume = CBECos.Value;
         }
 
         private void WeaponMode_IndexChanged(object sender, EventArgs e)
@@ -719,7 +1161,7 @@ namespace GameX
             ComboBoxEdit CBE = sender as ComboBoxEdit;
             int Index = int.Parse(CBE.Name[1].ToString()) - 1;
 
-            Biohazard.Players[Index].WeaponMode = CBE.SelectedIndex != 0 ? (byte)(CBE.SelectedItem as ListItem).Value : (byte)Biohazard.Players[Index].GetDefaultWeaponMode();
+            Biohazard.Players[Index].WeaponMode = CBE.SelectedIndex != 0 ? (byte)(CBE.SelectedItem as Simple).Value : (byte)Biohazard.Players[Index].GetDefaultWeaponMode();
         }
 
         private void Handness_IndexChanged(object sender, EventArgs e)
@@ -730,7 +1172,7 @@ namespace GameX
             if (!Initialized)
                 return;
 
-            Biohazard.Players[Index].Handness = CBE.SelectedIndex != 0 ? (byte)(CBE.SelectedItem as ListItem).Value : (byte)Biohazard.Players[Index].GetDefaultHandness();
+            Biohazard.Players[Index].Handness = CBE.SelectedIndex != 0 ? (byte)(CBE.SelectedItem as Simple).Value : (byte)Biohazard.Players[Index].GetDefaultHandness();
         }
 
         private void WeaponPlacement_IndexChanged(object sender, EventArgs e)
@@ -740,7 +1182,7 @@ namespace GameX
             if (!Initialized)
                 return;
 
-            Biohazard.SetWeaponPlacement((CBE.SelectedItem as ListItem).Value);
+            Biohazard.SetWeaponPlacement((CBE.SelectedItem as Simple).Value);
         }
 
         private void Melee_IndexChanged(object sender, EventArgs e)
@@ -753,40 +1195,51 @@ namespace GameX
         {
             CheckButton CKBTN = sender as CheckButton;
             CKBTN.Text = CKBTN.Checked ? "Frozen" : "Freeze";
-
-            int Index = int.Parse(CKBTN.Name[1].ToString()) - 1;
-
-            if (!Initialized)
-                return;
-
-            Character_DetourUpdate();
-            Character_ApplyCharacters(Index);
         }
 
-        private void EnableDisable_StateChanged(object sender, EventArgs e)
+        public void EnableDisable_StateChanged(object sender, EventArgs e)
         {
             if (sender.GetType() == typeof(CheckEdit))
             {
                 CheckEdit CE = sender as CheckEdit;
 
-                if (!Initialized)
-                    return;
-
                 if (CE.Name.Equals("WeskerGlassesCheckEdit"))
                 {
+                    if (!Initialized)
+                        return;
+
                     Biohazard.WeskerNoSunglassDrop(CE.Checked);
                 }
                 else if (CE.Name.Equals("WeskerNoDashCostCheckEdit"))
                 {
+                    if (!Initialized)
+                        return;
+
                     Biohazard.WeskerNoDashCost(CE.Checked);
                 }
                 else if (CE.Name.Equals("MeleeCameraCheckEdit"))
                 {
+                    if (!Initialized)
+                        return;
+
                     Biohazard.DisableMeleeCamera(CE.Checked);
                 }
                 else if (CE.Name.Equals("ReunionSpecialMovesCheckEdit"))
                 {
+                    if (!Initialized)
+                        return;
+
                     Biohazard.EnableReunionSpecialMoves(CE.Checked);
+                }
+                else if (CE.Name.Contains("FreezeAllCheckEdit"))
+                {
+                    int Index = int.Parse(CE.Name[1].ToString()) - 1;
+
+                    for (int i = 0; i < 10; i++)
+                    {
+                        CheckEdit CheckAllCE = (CheckEdit)GetInventoryControl(Index, i, i != 9 ? $"P{Index + 1}Slot{i + 1}FrozenCheckEdit" : $"P{Index + 1}SlotKnifeFrozenCheckEdit");
+                        CheckAllCE.Checked = CE.Checked;
+                    }
                 }
             }
             else if (sender.GetType() == typeof(CheckButton))
@@ -799,21 +1252,27 @@ namespace GameX
                 if (!CB.Checked && CB.Text.Contains("ON"))
                     CB.Text = CB.Text.Replace("ON", "OFF");
 
-                if (!Initialized)
-                    return;
-
                 if (CB.Name.Contains("Untargetable") && !CB.Checked)
                 {
+                    if (!Initialized)
+                        return;
+
                     int Player = int.Parse(CB.Name[1].ToString()) - 1;
                     Biohazard.Players[Player].Invulnerable = false;
                 }
                 else if (CB.Name.Contains("InfiniteAmmo") && !CB.Checked)
                 {
+                    if (!Initialized)
+                        return;
+
                     int Player = int.Parse(CB.Name[1].ToString()) - 1;
                     Biohazard.Players[Player].SetInfiniteAmmo(false);
                 }
                 else if (CB.Name.Contains("Rapidfire") && !CB.Checked)
                 {
+                    if (!Initialized)
+                        return;
+
                     int Player = int.Parse(CB.Name[1].ToString()) - 1;
                     Biohazard.Players[Player].SetRapidFire(false);
                 }
@@ -823,15 +1282,23 @@ namespace GameX
                 SimpleButton SB = sender as SimpleButton;
                 SB.Text = SB.Text == "Enable" ? "Disable" : "Enable";
 
-                if (!Initialized)
-                    return;
-
-                switch (SB.Name)
+                if (SB.Name.Equals("ColorFilterButton"))
                 {
-                    case "ColorFilterButton":
-                        Biohazard.EnableColorFilter(SB.Text.Equals("Disable"));
-                        break;
+                    if (!Initialized)
+                        return;
+
+                    Biohazard.EnableColorFilter(SB.Text.Equals("Disable"));
                 }
+            }
+        }
+
+        private void RadioGroup_EditValueChanged(object sender, EventArgs e)
+        {
+            RadioGroup RG = sender as RadioGroup;
+
+            if (RG.Name.Equals("InventoryPlayerSelectionRG"))
+            {
+                PlayerInventoryTabControl.SelectedTabPageIndex = (int)InventoryPlayerSelectionRG.EditValue;
             }
         }
 
@@ -881,6 +1348,67 @@ namespace GameX
                     }                      
 
                     break;
+            }
+        }
+
+        private void Melee_ApplyComboBox(ComboBoxEdit CE, bool ApplyAll = false)
+        {
+            ComboBoxEdit[] MeleeCombos =
+            {
+                ReunionHeadFlashComboBox,
+                ReunionLegFrontComboBox,
+                FinisherFrontComboBox,
+                FinisherBackComboBox,
+                HeadFlashComboBox,
+                ArmFrontComboBox,
+                ArmBackComboBox,
+                LegFrontComboBox,
+                LegBackComboBox,
+                HelpComboBox,
+                TauntComboBox,
+                KnifeComboBox,
+                QuickTurnComboBox,
+                MoveLeftComboBox,
+                MoveRightComboBox,
+                MoveBackComboBox,
+                ReloadComboBox
+            };
+
+            LabelControl[] MeleeLabels =
+            {
+                ReunionHeadFlashLabelControl,
+                ReunionLegFrontLabelControl,
+                FinisherFrontLabelControl,
+                FinisherBackLabelControl,
+                HeadFlashLabelControl,
+                ArmFrontLabelControl,
+                ArmBackLabelControl,
+                LegFrontLabelControl,
+                LegBackLabelControl,
+                HelpLabelControl,
+                TauntLabelControl,
+                KnifeLabelControl,
+                QuickTurnLabelControl,
+                MoveLeftLabelControl,
+                MoveRightLabelControl,
+                MoveBackLabelControl,
+                ReloadLabelControl
+            };
+
+            if (!Initialized)
+                return;
+
+            if (!ApplyAll)
+            {
+                int index = Array.IndexOf(MeleeCombos, CE);
+                Biohazard.SetMelee(MeleeLabels[index].Text.Replace(":", ""), (byte)(CE.SelectedItem as Move).Value);
+            }
+            else
+            {
+                for (int i = 0; i < MeleeCombos.Length; i++)
+                {
+                    Biohazard.SetMelee(MeleeLabels[i].Text.Replace(":", ""), (byte)(MeleeCombos[i].SelectedItem as Move).Value);
+                }
             }
         }
 
@@ -954,7 +1482,6 @@ namespace GameX
             {
                 Biohazard.StartModule();
 
-                Character_Detour();
                 GameX_CheckControls();
 
                 //Biohazard.NoFileChecking(true);
@@ -1002,494 +1529,14 @@ namespace GameX
 
                 Character_Update();
             }
-            catch (Exception)
+            catch (Exception Ex)
             {
-                // ignore
+                Terminal.WriteLine(Ex.ToString());
             }
         }
 
         private static void GameX_Keyboard(int input)
         {
-        }
-
-        #endregion
-
-        #region External
-
-        public void CreatePrefabs(PrefabType Prefab, bool Override = false)
-        {
-            string prefabDir = Directory.GetCurrentDirectory() + "/addons/GameX.Biohazard.5/prefabs/";
-
-            if (!Directory.Exists(prefabDir))
-                Directory.CreateDirectory(prefabDir);
-
-            string charDir = prefabDir + "character/";
-
-            if (!Directory.Exists(charDir))
-                Directory.CreateDirectory(charDir);
-
-            string itemDir = prefabDir + "item/";
-
-            if (!Directory.Exists(itemDir))
-                Directory.CreateDirectory(itemDir);
-
-            DirectoryInfo CharactersFolder = new DirectoryInfo(charDir);
-            DirectoryInfo ItemsFolder = new DirectoryInfo(itemDir);
-
-            FileInfo[] CharacterFiles = CharactersFolder.GetFiles("*.json");
-            FileInfo[] ItemFiles = ItemsFolder.GetFiles("*.json");
-
-            switch (Prefab)
-            {
-                case PrefabType.Character:
-                    {
-                        if (CharacterFiles.Length < 9 || Override)
-                        {
-                            Game.Content.Characters.WriteDefaultChars();
-                        }
-
-                        break;
-                    }
-                case PrefabType.Item:
-                    {
-                        if (ItemFiles.Length < 67 || Override)
-                        {
-                            Items.WriteDefaultItems();
-                        }
-
-                        break;
-                    }
-                case PrefabType.All:
-                    {
-                        if (CharacterFiles.Length < 9 || Override)
-                        {
-                            Game.Content.Characters.WriteDefaultChars();
-                        }
-
-                        if (ItemFiles.Length < 67 || Override)
-                        {
-                            Items.WriteDefaultItems();
-                        }
-
-                        break;
-                    }
-            }
-        }
-
-        #endregion
-
-        #region Character
-
-        private void Character_Detour()
-        {
-            if (!Memory.DetourActive("Character_Global"))
-            {
-                byte[] DetourClean =
-                {
-                    0x81, 0xFE, 0x00, 0x00, 0x00, 0x00,
-                    0x74, 0x2D,
-                    0x0F, 0x1F, 0x40, 0x00,
-                    0x81, 0xFE, 0x00, 0x00, 0x00, 0x00,
-                    0x74, 0x30,
-                    0x0F, 0x1F, 0x40, 0x00,
-                    0x81, 0xFE, 0x00, 0x00, 0x00, 0x00,
-                    0x74, 0x33,
-                    0x0F, 0x1F, 0x40, 0x00,
-                    0x81, 0xFE, 0x00, 0x00, 0x00, 0x00,
-                    0x74, 0x36,
-                    0x0F, 0x1F, 0x40, 0x00,
-                    0xEB, 0x3F,
-                    0x0F, 0x1F, 0x00,
-                    0xBB, 0x00, 0x00, 0x00, 0x00,
-                    0xBF, 0x00, 0x00, 0x00, 0x00,
-                    0xEB, 0x30,
-                    0x0F, 0x1F, 0x00,
-                    0xBB, 0x00, 0x00, 0x00, 0x00,
-                    0xBF, 0x00, 0x00, 0x00, 0x00,
-                    0xEB, 0x21,
-                    0x0F, 0x1F, 0x00,
-                    0xBB, 0x00, 0x00, 0x00, 0x00,
-                    0xBF, 0x00, 0x00, 0x00, 0x00,
-                    0xEB, 0x12,
-                    0x0F, 0x1F, 0x00,
-                    0xBB, 0x00, 0x00, 0x00, 0x00,
-                    0xBF, 0x00, 0x00, 0x00, 0x00,
-                    0xEB, 0x03,
-                    0x0F, 0x1F, 0x00,
-                    0x89, 0x5E, 0x08,
-                    0x89, 0x7E, 0x0C
-                };
-
-                byte[] CallInstruction =
-                {
-                    0x89, 0x5E, 0x08,
-                    0x89, 0x7E, 0x0C
-                };
-
-                Detour Character_Global = Memory.CreateDetour("Character_Global", DetourClean, 0x00C91A88, CallInstruction, true, 0x00C91A8E);
-
-                if (Character_Global == null)
-                    return;
-            }
-
-            if (!Memory.DetourActive("Character_StoryChar"))
-            {
-                byte[] DetourClean =
-                {
-                    0x81, 0xFE, 0x00, 0x00, 0x00, 0x00,
-                    0x74, 0x15,
-                    0x0F, 0x1F, 0x40, 0x00,
-                    0x81, 0xFE, 0x00, 0x00, 0x00, 0x00,
-                    0x74, 0x13,
-                    0x0F, 0x1F, 0x40, 0x00,
-                    0xEB, 0x17,
-                    0x0F, 0x1F, 0x00,
-                    0xB9, 0x00, 0x00, 0x00, 0x00,
-                    0xEB, 0x0D,
-                    0x0F, 0x1F, 0x00,
-                    0xB9, 0x00, 0x00, 0x00, 0x00,
-                    0xEB, 0x03,
-                    0x0F, 0x1F, 0x00,
-                    0x89, 0x4E, 0x08,
-                    0x8B, 0x17
-                };
-
-                byte[] CallInstruction =
-                {
-                    0x89, 0x4E, 0x08,
-                    0x8B, 0x17
-                };
-
-                Detour Character_StoryChar = Memory.CreateDetour("Character_StoryChar", DetourClean, 0x00C9200D, CallInstruction, true, 0x00C92012);
-
-                if (Character_StoryChar == null)
-                    return;
-            }
-
-            if (!Memory.DetourActive("Character_StoryCos"))
-            {
-                byte[] DetourClean =
-                {
-                    0x81, 0xFE, 0x00, 0x00, 0x00, 0x00,
-                    0x74, 0x15,
-                    0x0F, 0x1F, 0x40, 0x00,
-                    0x81, 0xFE, 0x00, 0x00, 0x00, 0x00,
-                    0x74, 0x13,
-                    0x0F, 0x1F, 0x40, 0x00,
-                    0xEB, 0x17,
-                    0x0F, 0x1F, 0x00,
-                    0xB9, 0x00, 0x00, 0x00, 0x00,
-                    0xEB, 0x0D,
-                    0x0F, 0x1F, 0x00,
-                    0xB9, 0x00, 0x00, 0x00, 0x00,
-                    0xEB, 0x03,
-                    0x0F, 0x1F, 0x00,
-                    0x89, 0x4E, 0x0C,
-                    0x0F, 0xBF, 0x97, 0x64, 0x13, 0x00, 0x00
-                };
-
-                byte[] CallInstruction =
-                {
-                    0x89, 0x4E, 0x0C,
-                    0x0F, 0xBF, 0X97, 0x64, 0x13, 0x00, 0x00
-                };
-
-                Detour Character_StoryCos = Memory.CreateDetour("Character_StoryCos", DetourClean, 0x00C9201D, CallInstruction, true, 0x00C92027);
-
-                if (Character_StoryCos == null)
-                    return;
-            }
-
-            if (!Memory.DetourActive("Character_StorySave"))
-            {
-                byte[] DetourClean =
-                {
-                    0x81, 0xFF, 0x00, 0x00, 0x00, 0x00,
-                    0x74, 0x09,
-                    0x0F, 0x1F, 0x40, 0x00,
-                    0xEB, 0x3D,
-                    0x0F, 0x1F, 0x00,
-                    0xB0, 0x01,
-                    0x3C, 0x00,
-                    0x75, 0x17,
-                    0x0F, 0x1F, 0x40, 0x00,
-                    0xC7, 0x47, 0x08, 0x00, 0x00, 0x00, 0x00,
-                    0xC7, 0x47, 0x0C, 0x00, 0x00, 0x00, 0x00,
-                    0xEB, 0x03,
-                    0x0F, 0x1F, 0x00,
-                    0xB0, 0x01,
-                    0x3C, 0x00,
-                    0x75, 0x17,
-                    0x0F, 0x1F, 0x40, 0x00,
-                    0xC7, 0x47, 0x58, 0x00, 0x00, 0x00, 0x00,
-                    0xC7, 0x47, 0x5C, 0x00, 0x00, 0x00, 0x00,
-                    0xEB, 0x03,
-                    0x0F, 0x1F, 0x00,
-                    0x8D, 0xB6, 0x80, 0x00, 0x00, 0x00
-                };
-
-                byte[] CallInstruction =
-                {
-                    0x8D, 0xB6, 0x80, 0X00, 0X00, 0X00
-                };
-
-                Detour Character_StorySave = Memory.CreateDetour("Character_StorySave", DetourClean, 0x00E6E0BE, CallInstruction, true, 0x00E6E0C4);
-
-                if (Character_StorySave == null)
-                    return;
-            }
-
-            if (!Memory.DetourActive("Character_StoryCosPersistent"))
-            {
-                byte[] DetourClean =
-                {
-                    0x81, 0xFF, 0x00, 0x00, 0x00, 0x00,
-                    0x74, 0x1D,
-                    0x0F, 0x1F, 0x40, 0x00,
-                    0x81, 0xFF, 0x00, 0x00, 0x00, 0x00,
-                    0x74, 0x1B,
-                    0x0F, 0x1F, 0x40, 0x00,
-                    0x0F, 0xBE, 0x84, 0x2A, 0x70, 0xC9, 0x0C, 0x01,
-                    0xEB, 0x17,
-                    0x0F, 0x1F, 0x00,
-                    0xB8, 0x00, 0x00, 0x00, 0x00,
-                    0xEB, 0x0D,
-                    0x0F, 0x1F, 0x00,
-                    0xB8, 0x00, 0x00, 0x00, 0x00,
-                    0xEB, 0x03,
-                    0x0F, 0x1F, 0x00
-                };
-
-                byte[] CallInstruction =
-                {
-                    0x0F, 0xBE, 0x84, 0x2A, 0x70, 0xC9, 0x0C, 0x01
-                };
-
-                Detour Character_StoryCosPersistent = Memory.CreateDetour("Character_StoryCosPersistent", DetourClean, 0x0072FAB5, CallInstruction, true, 0x0072FABD);
-
-                if (Character_StoryCosPersistent == null)
-                    return;
-            }
-
-            Character_DetourValueUpdate();
-            Character_DetourUpdate();
-        }
-
-        private void Character_DetourUpdate()
-        {
-            if (!Memory.DetourActive("Character_Global") || !Memory.DetourActive("Character_StoryChar") || !Memory.DetourActive("Character_StoryCos") || !Memory.DetourActive("Character_StorySave") || !Memory.DetourActive("Character_StoryCosPersistent"))
-                return;
-
-            Detour DetourBase = Memory.GetDetour("Character_Global");
-            int DetourBase_Address = DetourBase.Address();
-
-            Memory.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x2D});
-            Memory.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x30});
-            Memory.WriteRawAddress(DetourBase_Address + 30, !P3FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x33});
-            Memory.WriteRawAddress(DetourBase_Address + 42, !P4FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x36});
-
-            DetourBase = Memory.GetDetour("Character_StoryChar");
-            DetourBase_Address = DetourBase.Address();
-
-            Memory.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x15});
-            Memory.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x13});
-
-            DetourBase = Memory.GetDetour("Character_StoryCos");
-            DetourBase_Address = DetourBase.Address();
-
-            Memory.WriteRawAddress(DetourBase_Address + 6, !P1FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x15});
-            Memory.WriteRawAddress(DetourBase_Address + 18, !P2FreezeCharCosButton.Checked ? new byte[] {0x90, 0x90} : new byte[] {0x74, 0x13});
-
-            DetourBase = Memory.GetDetour("Character_StorySave");
-            DetourBase_Address = DetourBase.Address();
-
-            Memory.WriteRawAddress(DetourBase_Address + 20, P1FreezeCharCosButton.Checked ? new byte[] {0x01} : new byte[] {0x00});
-            Memory.WriteRawAddress(DetourBase_Address + 49, P2FreezeCharCosButton.Checked ? new byte[] {0x01} : new byte[] {0x00});
-
-            DetourBase = Memory.GetDetour("Character_StoryCosPersistent");
-            DetourBase_Address = DetourBase.Address();
-
-            Memory.WriteRawAddress(DetourBase_Address + 6, P1FreezeCharCosButton.Checked ? new byte[] {0x74, 0x1D} : new byte[] {0x90, 0x90});
-            Memory.WriteRawAddress(DetourBase_Address + 18, P2FreezeCharCosButton.Checked ? new byte[] {0x74, 0x1B} : new byte[] {0x90, 0x90});
-        }
-
-        private void Character_DetourValueUpdate()
-        {
-            if (!Memory.DetourActive("Character_Global") || !Memory.DetourActive("Character_StoryChar") || !Memory.DetourActive("Character_StoryCos") || !Memory.DetourActive("Character_StorySave") || !Memory.DetourActive("Character_StoryCosPersistent"))
-                return;
-
-            int CHAR1A = Memory.ReadPointer("re5dx9.exe", 0xDA383C, 0x6FE00);
-            int CHAR2A = Memory.ReadPointer("re5dx9.exe", 0xDA383C, 0x6FE50);
-            int CHAR3A = Memory.ReadPointer("re5dx9.exe", 0xDA383C, 0x6FEA0);
-            int CHAR4A = Memory.ReadPointer("re5dx9.exe", 0xDA383C, 0x6FEF0);
-
-            byte[] Char1A = BitConverter.GetBytes(CHAR1A);
-            byte[] Char2A = BitConverter.GetBytes(CHAR2A);
-            byte[] Char3A = BitConverter.GetBytes(CHAR3A);
-            byte[] Char4A = BitConverter.GetBytes(CHAR4A);
-
-            int intCharacter1 = (P1CharComboBox.SelectedItem as Character).Value;
-            int intCostume1 = (P1CosComboBox.SelectedItem as Costume).Value;
-            int intCharacter2 = (P2CharComboBox.SelectedItem as Character).Value;
-            int intCostume2 = (P2CosComboBox.SelectedItem as Costume).Value;
-            int intCharacter3 = (P3CharComboBox.SelectedItem as Character).Value;
-            int intCostume3 = (P3CosComboBox.SelectedItem as Costume).Value;
-            int intCharacter4 = (P4CharComboBox.SelectedItem as Character).Value;
-            int intCostume4 = (P4CosComboBox.SelectedItem as Costume).Value;
-
-            byte[] Character1 = BitConverter.GetBytes(intCharacter1);
-            byte[] Costume1 = BitConverter.GetBytes(intCostume1);
-            byte[] Character2 = BitConverter.GetBytes(intCharacter2);
-            byte[] Costume2 = BitConverter.GetBytes(intCostume2);
-            byte[] Character3 = BitConverter.GetBytes(intCharacter3);
-            byte[] Costume3 = BitConverter.GetBytes(intCostume3);
-            byte[] Character4 = BitConverter.GetBytes(intCharacter4);
-            byte[] Costume4 = BitConverter.GetBytes(intCostume4);
-
-            Detour DetourBase = Memory.GetDetour("Character_Global");
-            int DetourBase_Address = DetourBase.Address();
-
-            Memory.WriteRawAddress(DetourBase_Address + 2, Char1A);
-            Memory.WriteRawAddress(DetourBase_Address + 14, Char2A);
-            Memory.WriteRawAddress(DetourBase_Address + 26, Char3A);
-            Memory.WriteRawAddress(DetourBase_Address + 38, Char4A);
-
-            Memory.WriteRawAddress(DetourBase_Address + 54, Character1);
-            Memory.WriteRawAddress(DetourBase_Address + 59, Costume1);
-            Memory.WriteRawAddress(DetourBase_Address + 69, Character2);
-            Memory.WriteRawAddress(DetourBase_Address + 74, Costume2);
-            Memory.WriteRawAddress(DetourBase_Address + 84, Character3);
-            Memory.WriteRawAddress(DetourBase_Address + 89, Costume3);
-            Memory.WriteRawAddress(DetourBase_Address + 99, Character4);
-            Memory.WriteRawAddress(DetourBase_Address + 104, Costume4);
-
-            DetourBase = Memory.GetDetour("Character_StoryChar");
-            DetourBase_Address = DetourBase.Address();
-
-            Memory.WriteRawAddress(DetourBase_Address + 2, Char1A);
-            Memory.WriteRawAddress(DetourBase_Address + 14, Char2A);
-
-            Memory.WriteRawAddress(DetourBase_Address + 30, Character1);
-            Memory.WriteRawAddress(DetourBase_Address + 40, Character2);
-
-            DetourBase = Memory.GetDetour("Character_StoryCos");
-            DetourBase_Address = DetourBase.Address();
-
-            Memory.WriteRawAddress(DetourBase_Address + 2, Char1A);
-            Memory.WriteRawAddress(DetourBase_Address + 14, Char2A);
-
-            Memory.WriteRawAddress(DetourBase_Address + 30, Costume1);
-            Memory.WriteRawAddress(DetourBase_Address + 40, Costume2);
-
-            DetourBase = Memory.GetDetour("Character_StorySave");
-            DetourBase_Address = DetourBase.Address();
-
-            Memory.WriteRawAddress(DetourBase_Address + 2, Char1A);
-
-            Memory.WriteRawAddress(DetourBase_Address + 30, Character1);
-            Memory.WriteRawAddress(DetourBase_Address + 37, Costume1);
-            Memory.WriteRawAddress(DetourBase_Address + 59, Character2);
-            Memory.WriteRawAddress(DetourBase_Address + 66, Costume2);
-
-            DetourBase = Memory.GetDetour("Character_StoryCosPersistent");
-            DetourBase_Address = DetourBase.Address();
-
-            Memory.WriteRawAddress(DetourBase_Address + 2, Char1A);
-            Memory.WriteRawAddress(DetourBase_Address + 14, Char2A);
-
-            Memory.WriteRawAddress(DetourBase_Address + 38, Costume1);
-            Memory.WriteRawAddress(DetourBase_Address + 48, Costume2);
-        }
-
-        private void Character_ApplyCharacters(int Index)
-        {
-            ComboBoxEdit[] CharacterCombos =
-            {
-                P1CharComboBox,
-                P2CharComboBox,
-                P3CharComboBox,
-                P4CharComboBox
-            };
-
-            ComboBoxEdit[] CostumeCombos =
-            {
-                P1CosComboBox,
-                P2CosComboBox,
-                P3CosComboBox,
-                P4CosComboBox
-            };
-
-            int Character = (CharacterCombos[Index].SelectedItem as Character).Value;
-            int Costume = (CostumeCombos[Index].SelectedItem as Costume).Value;
-
-            Biohazard.SetStoryModeCharacter(Index, Character, Costume);
-            Biohazard.Players[Index].Character = Character;
-            Biohazard.Players[Index].Costume = Costume;
-        }
-
-        #endregion
-
-        #region Melee
-
-        private void Melee_ApplyComboBox(ComboBoxEdit CE, bool ApplyAll = false)
-        {
-            ComboBoxEdit[] MeleeCombos =
-            {
-                ReunionHeadFlashComboBox,
-                ReunionLegFrontComboBox,
-                FinisherFrontComboBox,
-                FinisherBackComboBox,
-                HeadFlashComboBox,
-                ArmFrontComboBox,
-                ArmBackComboBox,
-                LegFrontComboBox,
-                LegBackComboBox,
-                HelpComboBox,
-                TauntComboBox,
-                KnifeComboBox,
-                QuickTurnComboBox,
-                MoveLeftComboBox,
-                MoveRightComboBox,
-                MoveBackComboBox,
-                ReloadComboBox
-            };
-
-            LabelControl[] MeleeLabels =
-            {
-                ReunionHeadFlashLabelControl,
-                ReunionLegFrontLabelControl,
-                FinisherFrontLabelControl,
-                FinisherBackLabelControl,
-                HeadFlashLabelControl,
-                ArmFrontLabelControl,
-                ArmBackLabelControl,
-                LegFrontLabelControl,
-                LegBackLabelControl,
-                HelpLabelControl,
-                TauntLabelControl,
-                KnifeLabelControl,
-                QuickTurnLabelControl,
-                MoveLeftLabelControl,
-                MoveRightLabelControl,
-                MoveBackLabelControl,
-                ReloadLabelControl
-            };
-
-            if (!Initialized)
-                return;
-
-            if (!ApplyAll)
-            {
-                int index = Array.IndexOf(MeleeCombos, CE);
-                Biohazard.SetMelee(MeleeLabels[index].Text.Replace(":", ""), (byte)(CE.SelectedItem as Move).Value);
-            }
-            else
-            {
-                for(int i = 0; i < MeleeCombos.Length; i++)
-                {
-                    Biohazard.SetMelee(MeleeLabels[i].Text.Replace(":", ""), (byte)(MeleeCombos[i].SelectedItem as Move).Value);
-                }
-            }
         }
 
         #endregion
@@ -1592,41 +1639,62 @@ namespace GameX
 
             for (int i = 0; i < 4; i++)
             {
-                // Characters & Costumes //
-                if (!CheckButtons[i].Checked && !CharacterCombos[i].IsPopupOpen && !CostumeCombos[i].IsPopupOpen)
-                {
-                    foreach (object Char in CharacterCombos[i].Properties.Items)
-                    {
-                        if ((Char as Character).Value == Biohazard.Players[i].Character)
-                            CharacterCombos[i].SelectedItem = Char;
-                    }
+                bool PlayerPresent = Biohazard.Players[i].IsActive();
 
-                    foreach (object Cos in CostumeCombos[i].Properties.Items)
+                // Characters & Costumes //
+                if (!CharacterCombos[i].IsPopupOpen && !CostumeCombos[i].IsPopupOpen)
+                {
+                    if (!CheckButtons[i].Checked)
                     {
-                        if ((Cos as Costume).Value == Biohazard.Players[i].Costume)
-                            CostumeCombos[i].SelectedItem = Cos;
+                        int CurrentChar = Biohazard.Players[i].Character;
+                        int CurrentCostume = Biohazard.Players[i].Costume;
+
+                        foreach (object Char in CharacterCombos[i].Properties.Items)
+                        {
+                            if ((Char as Character).Value == CurrentChar)
+                                CharacterCombos[i].SelectedItem = Char;
+                        }
+
+                        foreach (object Cos in CostumeCombos[i].Properties.Items)
+                        {
+                            if ((Cos as Costume).Value == CurrentCostume)
+                                CostumeCombos[i].SelectedItem = Cos;
+                        }
+                    }
+                    else
+                    {
+                        Biohazard.Players[i].Character = (CharacterCombos[i].SelectedItem as Character).Value;
+                        Biohazard.Players[i].Costume = (CostumeCombos[i].SelectedItem as Costume).Value;
                     }
                 }
 
-                bool PlayerPresent = Biohazard.Players[i].IsActive();
-                double PlayerHealthPercent = PlayerPresent ? (double)Biohazard.Players[i].Health / Biohazard.Players[i].MaxHealth : 1.0;
+                // Inventory //
+                for (int slot = 0; slot < 10; slot++)
+                {
+                    if (i != 0)
+                        continue;
+
+                    Biohazard.Players[i].Inventory.Slots[slot].Update();
+                }
 
                 // Health Bar //
+                double PlayerHealthPercent = PlayerPresent ? (double)Biohazard.Players[i].Health / Biohazard.Players[i].MaxHealth : 1.0;
+
                 HealthBars[i].Properties.Maximum = PlayerPresent ? Biohazard.Players[i].MaxHealth : 1;
                 HealthBars[i].EditValue = PlayerPresent ? Biohazard.Players[i].Health : 1;
                 HealthBars[i].Properties.StartColor = PlayerPresent ? Color.FromArgb((int)(255.0 - 155.0 * PlayerHealthPercent), (int)(0.0 + 255.0 * PlayerHealthPercent), 0) : Color.FromArgb(0, 0, 0, 0);
                 HealthBars[i].Properties.EndColor = PlayerPresent ? Color.FromArgb((int)(255.0 - 155.0 * PlayerHealthPercent), (int)(0.0 + 255.0 * PlayerHealthPercent), 0) : Color.FromArgb(0, 0, 0, 0);
 
                 // Player Name //
-                PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (Biohazard.InGame() ? i == Biohazard.LocalPlayer() ? Biohazard.LocalPlayerNick() : PlayerPresent ? Biohazard.Players[i].AI ? "CPU AI" : "Connected" : "Disconnected" : "Disconnected");
+                PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (Biohazard.InGame ? i == Biohazard.LocalPlayer ? Biohazard.LocalPlayerName : PlayerPresent ? Biohazard.Players[i].AI ? "CPU AI" : "Connected" : "Disconnected" : "Disconnected");
 
                 // Handness //
                 if (Handness[i].SelectedIndex > 0 && PlayerPresent)
-                    Biohazard.Players[i].Handness = (byte)(Handness[i].SelectedItem as ListItem).Value;
+                    Biohazard.Players[i].Handness = (byte)(Handness[i].SelectedItem as Simple).Value;
 
                 // Weapon Mode //
                 if (WeaponMode[i].SelectedIndex > 0 && PlayerPresent)
-                    Biohazard.Players[i].WeaponMode = (byte)(WeaponMode[i].SelectedItem as ListItem).Value;
+                    Biohazard.Players[i].WeaponMode = (byte)(WeaponMode[i].SelectedItem as Simple).Value;
 
                 // Melee Anytime Cords //
                 if (MeleeAnytimeSwitch.IsOn && PlayerPresent)
@@ -1638,7 +1706,7 @@ namespace GameX
                 }
 
                 // If versus then end the current iteration //
-                if (Biohazard.GetActiveGameMode() == (int)GameMode.Versus)
+                if (Biohazard.GameMode == (int)GameModeEnum.Versus)
                     continue;
 
                 // Infinite HP //
@@ -1658,7 +1726,7 @@ namespace GameX
                     Biohazard.Players[i].SetRapidFire(true);
 
                 // Infinite Dash //
-                if (WeskerInfiniteDashCheckEdit.Checked && PlayerPresent && Biohazard.Players[i].Character == (int)Game.Helpers.Characters.Wesker)
+                if (WeskerInfiniteDashCheckEdit.Checked && PlayerPresent && Biohazard.Players[i].Character == (int)CharacterEnum.Wesker)
                     Biohazard.Players[i].ResetDash();
             }
         }

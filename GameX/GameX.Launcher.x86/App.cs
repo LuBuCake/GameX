@@ -277,19 +277,17 @@ namespace GameX.Launcher
 
                     bool FileExists = File.Exists(FilePath);
 
-                    if (FileExists)
-                    {
-                        Assembly CurApp = Assembly.LoadFile(FilePath);
-                        CurName = new AssemblyName(CurApp.FullName);
-                    }
+                    if (!FileExists)
+                        return false;
+
+                    Assembly CurApp = Assembly.LoadFile(FilePath);
+                    CurName = new AssemblyName(CurApp.FullName);
 
                     int Current = int.Parse(FileExists ? CurName.Version.ToString().Replace(".", "") : "0");
                     int Latest = int.Parse(LatestVerion.Replace(".", ""));
 
                     if (Current >= Latest)
-                    {
                         return false;
-                    }
 
                     string AppDirectory = Directory.GetCurrentDirectory();
                     string UpdaterDirectory = AppDirectory + "/updater/";

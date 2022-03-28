@@ -241,42 +241,57 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\Content\Interfaces.cs" />
-    <Compile Include="Base\Content\Rates.cs" />
-    <Compile Include="Base\Content\Design.cs" />
-    <Compile Include="Base\Helpers\Enums.cs" />
-    <Compile Include="Base\Helpers\MarshalType.cs" />
-    <Compile Include="Base\Helpers\Threading.cs" />
-    <Compile Include="Base\Types\GameXInfo.cs" />
-    <Compile Include="Base\Types\Settings.cs" />
-    <Compile Include="Game\Content\Items.cs" />
-    <Compile Include="Game\Content\Moves.cs" />
-    <Compile Include="Game\Content\Miscellaneous.cs" />
-    <Compile Include="Game\Helpers\GameEnums.cs" />
-    <Compile Include="Game\Modules\Biohazard.cs" />
-    <Compile Include="Game\Modules\Inventory.cs" />
-    <Compile Include="Game\Modules\Player.cs" />
-    <Compile Include="Game\Content\Characters.cs" />
-    <Compile Include="Game\Types\Character.cs" />
-    <Compile Include="Base\Helpers\Utility.cs" />
-    <Compile Include="Base\Helpers\Processes.cs" />
+    <Compile Include="Database\Content\HandnessContent.cs" />
+    <Compile Include="Database\Content\ItemContent.cs" />
+    <Compile Include="Database\Content\MoveContent.cs" />
+    <Compile Include="Database\Content\PaletteContent.cs" />
+    <Compile Include="Database\Content\RateContent.cs" />
+    <Compile Include="Database\Content\WeaponModeContent.cs" />
+    <Compile Include="Database\Content\WeaponPlacementContent.cs" />
+    <Compile Include="Database\ViewBag\LoadoutViewBag.cs" />
+    <Compile Include="Enum\CharacterEnum.cs" />
+    <Compile Include="Enum\GameModeEnum.cs" />
+    <Compile Include="Enum\GrabMoveEnum.cs" />
+    <Compile Include="Enum\HandnessEnum.cs" />
+    <Compile Include="Enum\IdleMoveEnum.cs" />
+    <Compile Include="Enum\ItemGroupEnum.cs" />
+    <Compile Include="Enum\MemoryAccessEnum.cs" />
+    <Compile Include="Enum\MemoryInformationEnum.cs" />
+    <Compile Include="Enum\MemoryProtectionEnum.cs" />
+    <Compile Include="Enum\MessageBoxTypeEnum.cs" />
+    <Compile Include="Enum\MoveTypeEnum.cs" />
+    <Compile Include="Enum\WeaponModeEnum.cs" />
+    <Compile Include="Database\Type\Simple.cs" />
+    <Compile Include="Database\ViewBag\TemporaryItemViewBag.cs" />
+    <Compile Include="Helpers\MarshalType.cs" />
+    <Compile Include="Helpers\Threading.cs" />
+    <Compile Include="Database\Type\Settings.cs" />
+    <Compile Include="Database\Content\CharacterContent.cs" />
+    <Compile Include="Database\DBContext.cs" />
+    <Compile Include="Database\Type\Addon.cs" />
+    <Compile Include="Database\Type\Character.cs" />
+    <Compile Include="Database\Type\Costume.cs" />
+    <Compile Include="Database\Type\Item.cs" />
+    <Compile Include="Database\Type\Move.cs" />
+    <Compile Include="Modules\Biohazard.cs" />
+    <Compile Include="Database\Type\Inventory.cs" />
+    <Compile Include="Database\Type\Player.cs" />
+    <Compile Include="Helpers\Utility.cs" />
+    <Compile Include="Helpers\Processes.cs" />
     <Compile Include="App.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="App.Designer.cs">
       <DependentUpon>App.cs</DependentUpon>
     </Compile>
-    <Compile Include="Base\Helpers\Peaker.cs" />
-    <Compile Include="Base\Helpers\Serializer.cs" />
-    <Compile Include="Base\Modules\Terminal.cs" />
-    <Compile Include="Base\Modules\Keyboard.cs" />
-    <Compile Include="Base\Modules\Memory.cs" />
-    <Compile Include="Game\Types\Item.cs" />
-    <Compile Include="Game\Types\InventoryItem.cs" />
-    <Compile Include="Game\Types\Move.cs" />
+    <Compile Include="Helpers\Peaker.cs" />
+    <Compile Include="Helpers\Serializer.cs" />
+    <Compile Include="Modules\Terminal.cs" />
+    <Compile Include="Modules\Keyboard.cs" />
+    <Compile Include="Modules\Memory.cs" />
+    <Compile Include="Database\Type\Slot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Base\Types\Detour.cs" />
-    <Compile Include="Base\Types\ListItem.cs" />
+    <Compile Include="Database\Type\Detour.cs" />
     <EmbeddedResource Include="App.resx">
       <DependentUpon>App.cs</DependentUpon>
     </EmbeddedResource>
@@ -306,102 +321,102 @@
   <ItemGroup>
     <PublishFile Include="DevExpress.BonusSkins.v21.2">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="DevExpress.Data.Desktop.v21.2">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="DevExpress.Data.v21.2">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="DevExpress.Pdf.v21.2.Core">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="DevExpress.Pdf.v21.2.Drawing">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="DevExpress.Printing.v21.2.Core">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="DevExpress.Sparkline.v21.2.Core">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="DevExpress.Utils.v21.2">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="DevExpress.XtraBars.v21.2">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="DevExpress.XtraEditors.v21.2">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>

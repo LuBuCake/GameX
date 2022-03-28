@@ -1,0 +1,75 @@
+﻿using System.Collections.Generic;
+using System.IO;
+using GameX.Enum;
+using GameX.Database.Content;
+using GameX.Database.Type;
+
+namespace GameX.Database
+{
+    public class DB
+    {
+        public List<Character> Characters { get; set; }
+        public List<Item> Items { get; set; }
+        public List<Move> MovementMoves { get; set; }
+        public List<Move> DamageMoves { get; set; }
+        public List<Move> ActionMoves { get; set; }
+        public List<Move> DashMoves { get; set; }
+        public List<Simple> Palettes { get; set; }
+        public List<Simple> Rates { get; set; }
+        public List<Simple> Handness { get; set; }
+        public List<Simple> WeaponMode { get; set; }
+        public List<Simple> WeaponPlacement { get; set; }
+    }
+
+    public static class DBContext
+    {
+        private static DB Database { get; set; }
+
+        private static void BuildDatabase()
+        {
+            Database = new DB();
+
+            bool WriteChars = false;
+            bool WriteItems = false;
+
+            string prefabDir = Directory.GetCurrentDirectory() + "/addons/GameX.Biohazard.5/prefabs/";
+            string charDir = prefabDir + "character/";
+            string itemDir = prefabDir + "item/";
+
+            if (!Directory.Exists(prefabDir))
+                Directory.CreateDirectory(prefabDir);
+
+            if (!Directory.Exists(charDir))
+            {
+                Directory.CreateDirectory(charDir);
+                WriteChars = true;
+            }
+
+            if (!Directory.Exists(itemDir))
+            {
+                Directory.CreateDirectory(itemDir);
+                WriteItems = true;
+            }
+
+            Database.Characters = CharacterContent.GetCollection(WriteChars);
+            Database.Items = ItemContent.GetCollection(WriteItems);
+            Database.MovementMoves = MoveContent.GetCollection(MoveTypeEnum.Movement);
+            Database.DamageMoves = MoveContent.GetCollection(MoveTypeEnum.Damage);
+            Database.ActionMoves = MoveContent.GetCollection(MoveTypeEnum.Action);
+            Database.DashMoves = MoveContent.GetCollection(MoveTypeEnum.Dash);
+            Database.Palettes = PaletteContent.GetCollection("The Bezier");
+            Database.Rates = RateContent.GetCollection();
+            Database.Handness = HandnessContent.GetCollection();
+            Database.WeaponMode = WeaponModeContent.GetCollection();
+            Database.WeaponPlacement = WeaponPlacementContent.GetCollection();
+        }
+
+        public static DB GetDatabase()
+        {
+            if (Database == null)
+                BuildDatabase();
+
+            return Database;
+        }
+    }
+}

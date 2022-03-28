@@ -261,16 +261,8 @@
 xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\x86 /y
 xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\x86 /y
 
-mkdir C:\Users\madne\Desktop\x64\
-
-xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\x64 /y
-xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\x64 /y
-
 xcopy $(TargetDir)\$(TargetFileName) $(SolutionDir)\GameX.Launcher.x86\$(OutDir) /y
-xcopy $(TargetDir)\$(TargetFileName).config $(SolutionDir)\GameX.Launcher.x86\$(OutDir) /y
-
-xcopy $(TargetDir)\$(TargetFileName) $(SolutionDir)\GameX.Launcher.x64\$(OutDir) /y
-xcopy $(TargetDir)\$(TargetFileName).config $(SolutionDir)\GameX.Launcher.x64\$(OutDir) /y</PostBuildEvent>
+xcopy $(TargetDir)\$(TargetFileName).config $(SolutionDir)\GameX.Launcher.x86\$(OutDir) /y</PostBuildEvent>
   </PropertyGroup>
   <Import Project="..\packages\Fody.6.5.5\build\Fody.targets" Condition="Exists('..\packages\Fody.6.5.5\build\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
