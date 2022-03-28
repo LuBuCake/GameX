@@ -32,7 +32,7 @@ namespace GameX.Database.Type
 
         public Player Partner
         {
-            get { return Biohazard.Players.Where(x => x.Address == PartnerAddress).FirstOrDefault(); }
+            get { return Biohazard.Players.Where(x => x.Address != 0 && x.Address == PartnerAddress).FirstOrDefault(); }
             set { PartnerAddress = value.Address; }
         }
 

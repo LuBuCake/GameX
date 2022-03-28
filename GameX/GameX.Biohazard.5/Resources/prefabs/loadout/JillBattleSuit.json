@@ -1,0 +1,125 @@
+{
+  "Name": "JillBattleSuit",
+  "Slots": [
+    {
+      "ID": 514,
+      "Quantity": 150,
+      "MaxQuantity": 150,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 262,
+      "Quantity": 3,
+      "MaxQuantity": 1,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 516,
+      "Quantity": 30,
+      "MaxQuantity": 30,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 259,
+      "Quantity": 300,
+      "MaxQuantity": 0,
+      "Firepower": 3,
+      "ReloadSpeed": 0,
+      "Capacity": 13,
+      "Critical": 1,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 0,
+      "Quantity": 0,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 284,
+      "Quantity": 9,
+      "MaxQuantity": 0,
+      "Firepower": 7,
+      "ReloadSpeed": 5,
+      "Capacity": 3,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 2
+    },
+    {
+      "ID": 0,
+      "Quantity": 0,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 775,
+      "Quantity": 1,
+      "MaxQuantity": 1,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 0,
+      "Quantity": 0,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 292,
+      "Quantity": 1,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    }
+  ]
+}

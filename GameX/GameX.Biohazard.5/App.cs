@@ -15,7 +15,6 @@ using GameX.Database;
 using GameX.Enum;
 using GameX.Database.Type;
 using System.Reflection;
-using DevExpress.Data.Helpers;
 using GameX.Database.ViewBag;
 
 namespace GameX
@@ -188,7 +187,7 @@ namespace GameX
                 return Verified;
             }
 
-            if (Verified || !Target_Process.WaitForInputIdle())
+            if (Verified || Target_Process.MainWindowHandle == IntPtr.Zero || !Target_Process.WaitForInputIdle())
                 return Verified;
 
             if (Target_Validate())
@@ -539,6 +538,7 @@ namespace GameX
                 P1SlotKnifeScopeSE
             };
 
+
             CheckEdit[] InfiniteAmmoChecks =
             {
                 P1Slot1InfiniteAmmoCheckEdit,
@@ -687,6 +687,10 @@ namespace GameX
                 PiercingSpins[i].Spin += SpinEdit_Spin;
                 RangeSpins[i].Spin += SpinEdit_Spin;
                 ScopeSpins[i].Spin += SpinEdit_Spin;
+
+                InfiniteAmmoChecks[i].CheckedChanged += EnableDisable_StateChanged;
+                RapidfireChecks[i].CheckedChanged += EnableDisable_StateChanged;
+                FrozenChecks[i].CheckedChanged += EnableDisable_StateChanged;
             }
 
             P1FreezeAllCheckEdit.CheckedChanged += EnableDisable_StateChanged;
@@ -1077,7 +1081,7 @@ namespace GameX
 
             int SelectedPlayer = (int)InventoryPlayerSelectionRG.EditValue;
             Slot[] SlotCollection = Biohazard.Players[SelectedPlayer].Inventory.Slots;
-            
+
             if (SlotCollection[Index].BeingUpdatedOnGUI)
                 return;
 
@@ -1229,7 +1233,9 @@ namespace GameX
                     if (!Initialized)
                         return;
 
-                    Biohazard.EnableReunionSpecialMoves(CE.Checked);
+                    CE.CheckedChanged -= EnableDisable_StateChanged;
+                    CE.Checked = Biohazard.EnableReunionSpecialMoves(CE.Checked);
+                    CE.CheckedChanged += EnableDisable_StateChanged;
                 }
                 else if (CE.Name.Contains("FreezeAllCheckEdit"))
                 {
@@ -1240,6 +1246,12 @@ namespace GameX
                         CheckEdit CheckAllCE = (CheckEdit)GetInventoryControl(Index, i, i != 9 ? $"P{Index + 1}Slot{i + 1}FrozenCheckEdit" : $"P{Index + 1}SlotKnifeFrozenCheckEdit");
                         CheckAllCE.Checked = CE.Checked;
                     }
+                }
+                else if (CE.Name.Contains("Slot"))
+                {
+                    int Index = !CE.Name.Contains("Knife") ? int.Parse(CE.Name[6].ToString()) - 1 : 9;
+                    int SelectedPlayer = (int)InventoryPlayerSelectionRG.EditValue;
+                    Biohazard.Players[SelectedPlayer].Inventory.Slots[Index].UpdateItemToMemory(Initialized);
                 }
             }
             else if (sender.GetType() == typeof(CheckButton))
@@ -1452,7 +1464,11 @@ namespace GameX
                         break;
                     case "ReunionSpecialMovesCheckEdit":
                         if (CE.Checked)
-                            Biohazard.EnableReunionSpecialMoves(true);
+                        {
+                            CE.CheckedChanged -= EnableDisable_StateChanged;
+                            CE.Checked = Biohazard.EnableReunionSpecialMoves(true);
+                            CE.CheckedChanged += EnableDisable_StateChanged;
+                        }
 
                         break;
                 }
@@ -1678,12 +1694,13 @@ namespace GameX
                 }
 
                 // Health Bar //
-                double PlayerHealthPercent = PlayerPresent ? (double)Biohazard.Players[i].Health / Biohazard.Players[i].MaxHealth : 1.0;
+                double PlayerHealthPercent = PlayerPresent ? Utility.Clamp((double)Biohazard.Players[i].Health / Biohazard.Players[i].MaxHealth, 0.0, 1.0) : 1.0;
+                PlayerHealthPercent = double.IsNaN(PlayerHealthPercent) ? 0.0 : PlayerHealthPercent;
 
                 HealthBars[i].Properties.Maximum = PlayerPresent ? Biohazard.Players[i].MaxHealth : 1;
                 HealthBars[i].EditValue = PlayerPresent ? Biohazard.Players[i].Health : 1;
-                HealthBars[i].Properties.StartColor = PlayerPresent ? Color.FromArgb((int)(255.0 - 155.0 * PlayerHealthPercent), (int)(0.0 + 255.0 * PlayerHealthPercent), 0) : Color.FromArgb(0, 0, 0, 0);
-                HealthBars[i].Properties.EndColor = PlayerPresent ? Color.FromArgb((int)(255.0 - 155.0 * PlayerHealthPercent), (int)(0.0 + 255.0 * PlayerHealthPercent), 0) : Color.FromArgb(0, 0, 0, 0);
+                HealthBars[i].Properties.StartColor = PlayerPresent ? Color.FromArgb((int)(255.0 - (155.0 * PlayerHealthPercent)), (int)(0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(0, 0, 0, 0);
+                HealthBars[i].Properties.EndColor = PlayerPresent ? Color.FromArgb((int)(255.0 - (155.0 * PlayerHealthPercent)), (int)(0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(0, 0, 0, 0);
 
                 // Player Name //
                 PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (Biohazard.InGame ? i == Biohazard.LocalPlayer ? Biohazard.LocalPlayerName : PlayerPresent ? Biohazard.Players[i].AI ? "CPU AI" : "Connected" : "Disconnected" : "Disconnected");

@@ -1,0 +1,125 @@
+{
+  "Name": "ExcellaTricell",
+  "Slots": [
+    {
+      "ID": 513,
+      "Quantity": 50,
+      "MaxQuantity": 50,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 314,
+      "Quantity": 12,
+      "MaxQuantity": 12,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 514,
+      "Quantity": 150,
+      "MaxQuantity": 150,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 286,
+      "Quantity": 30,
+      "MaxQuantity": 30,
+      "Firepower": 11,
+      "ReloadSpeed": 3,
+      "Capacity": 9,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 0,
+      "Quantity": 0,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 285,
+      "Quantity": 50,
+      "MaxQuantity": 50,
+      "Firepower": 13,
+      "ReloadSpeed": 1,
+      "Capacity": 4,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 0,
+      "Quantity": 0,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 772,
+      "Quantity": 1,
+      "MaxQuantity": 1,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 0,
+      "Quantity": 0,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 276,
+      "Quantity": 1,
+      "MaxQuantity": 1,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    }
+  ]
+}

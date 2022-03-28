@@ -224,7 +224,7 @@ namespace GameX.Modules
             Memory.WriteBytes(new[] { Enable ? (byte)0xEB : (byte)0x76 }, "re5dx9.exe", 0x446331);
         }
 
-        public static void EnableReunionSpecialMoves(bool Enable)
+        public static bool EnableReunionSpecialMoves(bool Enable)
         {
             int FunctionAddressA = Memory.ReadPointer("maluc.dll", 0x3840);
             int FunctionAddressB = Memory.ReadPointer("maluc.dll", 0x37F0);
@@ -235,7 +235,7 @@ namespace GameX.Modules
             {
                 Terminal.WriteLine("[App] Unsupported patch version for \"Reunion Special Moves\" functionality.");
                 Terminal.WriteLine("[App] Follow the guide at https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
-                return;
+                return false;
             }
 
             uint bytes_a = (uint)FunctionAddressA - 5 - 0x007EA500;
@@ -259,6 +259,8 @@ namespace GameX.Modules
 
             Memory.WriteBytes(Enable ? new[] { (byte)0xEB } : new[] { (byte)0x73 }, "maluc.dll", 0x3879);
             Memory.WriteBytes(Enable ? new[] { (byte)0xEB } : new[] { (byte)0x73 }, "maluc.dll", 0x3829);
+
+            return true;
         }
 
         #endregion

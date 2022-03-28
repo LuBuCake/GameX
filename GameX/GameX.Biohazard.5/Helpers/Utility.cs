@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
@@ -11,6 +10,11 @@ namespace GameX.Helpers
     public static class Utility
     {
         public static int Clamp(int Value, int Min, int Max)
+        {
+            return Value > Max ? Max : Value < Min ? Min : Value;
+        }
+
+        public static double Clamp(double Value, double Min, double Max)
         {
             return Value > Max ? Max : Value < Min ? Min : Value;
         }

@@ -100,7 +100,7 @@ namespace GameX.Database.Type
 
         public int Address
         {
-            get { return Memory.Read<int>("re5dx9.exe", 0x00DA383C) + 0x6FF40 + (0x420 * PlayerIndex) + (0x2C * Index); }
+            get { return Memory.ReadPointer("re5dx9.exe", 0x00DA383C, 0x6FF40 + (0x420 * PlayerIndex) + (0x2C * Index)); }
         }
 
         public int ID
@@ -131,7 +131,7 @@ namespace GameX.Database.Type
         public byte Capacity
         {
             get { return Memory.Read<byte>("", Address + 0x1F); }
-            set { Memory.Write((byte)(value + (byte)(InfiniteAmmoCheckEdit.Checked ? 0x80 : 0)), "", Address + 0x1F); }
+            set { Memory.Write(value, "", Address + 0x1F); }
         }
         public byte Critical
         {
@@ -282,7 +282,7 @@ namespace GameX.Database.Type
             MaxQuantity = item.MaxQuantity;
             Firepower = item.Firepower;
             ReloadSpeed = item.ReloadSpeed;
-            Capacity = item.Capacity;
+            Capacity = (byte)(item.Capacity + (byte)(InfiniteAmmoCheckEdit.Checked ? 0x80 : 0));
             Critical = item.Critical;
             Piercing = item.Piercing;
             Range = item.Range;
@@ -314,11 +314,37 @@ namespace GameX.Database.Type
         {
             Firepower = (byte)Utility.Clamp(Firepower, 0, item.Firepower.Length - 1);
             ReloadSpeed = (byte)Utility.Clamp(ReloadSpeed, 0, item.ReloadSpeed.Length - 1);
-            Capacity = (byte)Utility.Clamp(Capacity, 0, item.Capacity.Length - 1);
             Critical = (byte)Utility.Clamp(Critical, 0, item.Critical.Length - 1);
             Piercing = (byte)Utility.Clamp(Piercing, 0, item.Piercing.Length - 1);
             Range = (byte)Utility.Clamp(Range, 0, item.Range.Length - 1);
             Scope = (byte)Utility.Clamp(Scope, 0, item.Scope.Length - 1);
+
+            if (Capacity > 13)
+            {
+                int CP = (byte)Utility.Clamp(Capacity > 13 ? (Capacity - 0x80) : Capacity, 0, item.Capacity.Length - 1);
+                Capacity = (byte)(CP + 0x80);
+
+                if (!InfiniteAmmoCheckEdit.Checked)
+                    InfiniteAmmoCheckEdit.Checked = true;
+            }
+            else
+            {
+                if (InfiniteAmmoCheckEdit.Checked)
+                    InfiniteAmmoCheckEdit.Checked = false;
+
+                Capacity = (byte)Utility.Clamp(Capacity, 0, item.Capacity.Length - 1);
+            }
+
+            if (!RapidFire)
+            {
+                if (RapidFireCheckEdit.Checked)
+                    RapidFireCheckEdit.Checked = false;
+            }
+            else
+            {
+                if (!RapidFireCheckEdit.Checked)
+                    RapidFireCheckEdit.Checked = true;
+            }
 
             if (item.Name.Equals("Nothing"))
             {
@@ -343,6 +369,8 @@ namespace GameX.Database.Type
 
             ValidateItemInMemory(item);
 
+            int CP = Capacity > 13 ? Capacity - 0x80 : Capacity;
+
             ToMemoryItem = item;
             FromMemoryItem = item;
 
@@ -351,7 +379,7 @@ namespace GameX.Database.Type
             FromMemory.MaxQuantity = MaxQuantity;
             FromMemory.Firepower = Firepower;
             FromMemory.ReloadSpeed = ReloadSpeed;
-            FromMemory.Capacity = Capacity;
+            FromMemory.Capacity = (byte)CP;
             FromMemory.Critical = Critical;
             FromMemory.Piercing = Piercing;
             FromMemory.Range = Range;
@@ -362,7 +390,7 @@ namespace GameX.Database.Type
             ToMemory.MaxQuantity = MaxQuantity;
             ToMemory.Firepower = Firepower;
             ToMemory.ReloadSpeed = ReloadSpeed;
-            ToMemory.Capacity = Capacity;
+            ToMemory.Capacity = (byte)CP;
             ToMemory.Critical = Critical;
             ToMemory.Piercing = Piercing;
             ToMemory.Range = Range;
@@ -386,13 +414,13 @@ namespace GameX.Database.Type
             if (!MaxQuantityTE.Focused)
                 MaxQuantityTE.Text = MaxQuantity.ToString();
 
-            FirepowerSE.Text = FromMemoryItem.Firepower[Firepower].ToString();
-            ReloadSpeedSE.Text = ((decimal)FromMemoryItem.ReloadSpeed[ReloadSpeed]).ToString("F");
-            CapacitySE.Text = FromMemoryItem.Capacity[Capacity].ToString();
-            CriticalSE.Text = FromMemoryItem.Critical[Critical].ToString();
-            PiercingSE.Text = FromMemoryItem.Piercing[Piercing].ToString();
-            RangeSE.Text = FromMemoryItem.Range[Range].ToString();
-            ScopeSE.Text = FromMemoryItem.Scope[Scope].ToString();
+            FirepowerSE.Text = FromMemoryItem.Firepower[FromMemory.Firepower].ToString();
+            ReloadSpeedSE.Text = ((decimal)FromMemoryItem.ReloadSpeed[FromMemory.ReloadSpeed]).ToString("F");
+            CapacitySE.Text = FromMemoryItem.Capacity[CP].ToString();
+            CriticalSE.Text = FromMemoryItem.Critical[FromMemory.Critical].ToString();
+            PiercingSE.Text = FromMemoryItem.Piercing[FromMemory.Piercing].ToString();
+            RangeSE.Text = FromMemoryItem.Range[FromMemory.Range].ToString();
+            ScopeSE.Text = FromMemoryItem.Scope[FromMemory.Scope].ToString();
 
             BeingUpdatedOnGUI = false;
         }
@@ -412,7 +440,7 @@ namespace GameX.Database.Type
             ToMemory.Range = (byte)Array.IndexOf(ToMemoryItem.Range, int.Parse(RangeSE.Text));
             ToMemory.Scope = (byte)Array.IndexOf(ToMemoryItem.Scope, int.Parse(ScopeSE.Text));
 
-            if (!WriteOnMemory)
+            if (!WriteOnMemory || FrozenCheckEdit.Checked)
                 return;
 
             SetItem(ToMemory);

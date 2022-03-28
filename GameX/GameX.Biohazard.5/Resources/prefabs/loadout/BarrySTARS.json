@@ -1,0 +1,125 @@
+{
+  "Name": "BarrySTARS",
+  "Slots": [
+    {
+      "ID": 274,
+      "Quantity": 30,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 267,
+      "Quantity": 12,
+      "MaxQuantity": 0,
+      "Firepower": 6,
+      "ReloadSpeed": 3,
+      "Capacity": 6,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 288,
+      "Quantity": 18,
+      "MaxQuantity": 0,
+      "Firepower": 9,
+      "ReloadSpeed": 3,
+      "Capacity": 7,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 513,
+      "Quantity": 50,
+      "MaxQuantity": 50,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 521,
+      "Quantity": 6,
+      "MaxQuantity": 12,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 0,
+      "Quantity": 0,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 0,
+      "Quantity": 0,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 0,
+      "Quantity": 0,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 0,
+      "Quantity": 0,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 276,
+      "Quantity": 1,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    }
+  ]
+}
