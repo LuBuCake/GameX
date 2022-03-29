@@ -242,16 +242,34 @@ namespace GameX.Database.Type
         public void SetRapidFire(bool Enable)
         {
             for (int slot = 0; slot < 9; slot++)
-            {
-                Memory.WriteBytes(Enable ? new byte[] { 0x01 } : new byte[] { 0x00 }, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x21C5 + (+0x48 * slot));
-            }
+                Inventory.RealTimeSlots[slot].RapidFire = Enable;
         }
 
         public void SetInfiniteAmmo(bool Enable)
         {
+            DB db = DBContext.GetDatabase();
+
             for (int slot = 0; slot < 9; slot++)
             {
-                Memory.WriteBytes(Enable ? new byte[] { 0x80 } : new byte[] { 0x00 }, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x21C7 + (+0x48 * slot));
+                int CurrentCapacity = Inventory.RealTimeSlots[slot].Capacity;
+
+                if (CurrentCapacity > 13)
+                    CurrentCapacity -= 0x80;
+
+                Item dbItem = (from x in db.Items
+                               where x.ID == Inventory.RealTimeSlots[slot].ID || (Inventory.RealTimeSlots[slot].ID == 256 && x.ID == 0)
+                               select x).FirstOrDefault();
+
+                if (dbItem == null)
+                {
+                    dbItem = db.Items.Where(x => x.Name == "Nothing").FirstOrDefault();
+                    Inventory.RealTimeSlots[slot].SetItem(dbItem);
+                }
+
+                CurrentCapacity = (byte)Utility.Clamp(CurrentCapacity, 0, dbItem.Capacity.Length - 1);
+
+                Inventory.RealTimeSlots[slot].MaxQuantity = dbItem.Capacity[CurrentCapacity];
+                Inventory.RealTimeSlots[slot].Capacity = (byte)(CurrentCapacity + (Enable ? 0x80 : 0x00));
             }
         }
 

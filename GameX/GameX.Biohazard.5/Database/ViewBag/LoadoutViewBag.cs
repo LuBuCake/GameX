@@ -10,5 +10,10 @@ namespace GameX.Database.ViewBag
     {
         public string Name { get; set; }
         public TemporaryItemViewBag[] Slots { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

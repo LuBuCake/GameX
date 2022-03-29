@@ -10,7 +10,7 @@ namespace GameX.Database.ViewBag
     {
         public int ID { get; set; }
         public int Quantity { get; set; }
-        public short MaxQuantity { get; set; }
+        public int MaxQuantity { get; set; }
         public byte Firepower { get; set; }
         public byte ReloadSpeed { get; set; }
         public byte Capacity { get; set; }

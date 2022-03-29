@@ -224,6 +224,13 @@ namespace GameX.Modules
             Memory.WriteBytes(new[] { Enable ? (byte)0xEB : (byte)0x76 }, "re5dx9.exe", 0x446331);
         }
 
+        public static void DisableHandTremor(bool Enable)
+        {
+            Memory.WriteBytes(Enable ? new byte[] { 0x31, 0xD2, 0xEB, 0x02, 0x90, 0x90 } : new byte[] { 0x8B, 0x90, 0x28, 0x01, 0x00, 0x00 }, "re5dx9.exe", 0x76DFBD);
+            Memory.WriteBytes(Enable ? new byte[] { 0x31, 0xF6, 0xEB, 0x02, 0x90, 0x90 } : new byte[] { 0x8B, 0xB0, 0x28, 0x01, 0x00, 0x00 }, "re5dx9.exe", 0x76E03E);
+            Memory.WriteBytes(Enable ? new byte[] { 0x0F, 0x57, 0xC0, 0xEB, 0x03, 0x90, 0x90, 0x90 } : new byte[] { 0xF3, 0x0F, 0x10, 0x83, 0xAC, 0x00, 0x00, 0x00 }, "re5dx9.exe", 0x7866C6);
+        }
+
         public static bool EnableReunionSpecialMoves(bool Enable)
         {
             int FunctionAddressA = Memory.ReadPointer("maluc.dll", 0x3840);
@@ -231,11 +238,25 @@ namespace GameX.Modules
             int FunctionStartA = Memory.Read<int>("", FunctionAddressA);
             int FunctionStartB = Memory.Read<int>("", FunctionAddressB);
 
+            int HealthCheckAddressA = 0x3879;
+            int HealthCheckAddressB = 0x3829;
+
             if (FunctionStartA != 69485707 || FunctionStartB != 539251851)
             {
-                Terminal.WriteLine("[App] Unsupported patch version for \"Reunion Special Moves\" functionality.");
-                Terminal.WriteLine("[App] Follow the guide at https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
-                return false;
+                FunctionAddressA = Memory.ReadPointer("maluc.dll", 0x1F70);
+                FunctionAddressB = Memory.ReadPointer("maluc.dll", 0x1F20);
+                FunctionStartA = Memory.Read<int>("", FunctionAddressA);
+                FunctionStartB = Memory.Read<int>("", FunctionAddressB);
+
+                if (FunctionStartA != 69485707 || FunctionStartB != 539251851)
+                {
+                    Terminal.WriteLine("[App] Unsupported patch version for \"Reunion Special Moves\" functionality.");
+                    Terminal.WriteLine("[App] Follow the guide at https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
+                    return false;
+                }
+
+                HealthCheckAddressA = 0x1FA9;
+                HealthCheckAddressB = 0x1F59;
             }
 
             uint bytes_a = (uint)FunctionAddressA - 5 - 0x007EA500;
@@ -257,8 +278,8 @@ namespace GameX.Modules
             Memory.WriteBytes(Enable ? jmp_a : original_a, "", 0x007EA500);
             Memory.WriteBytes(Enable ? jmp_b : original_b, "", 0x007E9D58);
 
-            Memory.WriteBytes(Enable ? new[] { (byte)0xEB } : new[] { (byte)0x73 }, "maluc.dll", 0x3879);
-            Memory.WriteBytes(Enable ? new[] { (byte)0xEB } : new[] { (byte)0x73 }, "maluc.dll", 0x3829);
+            Memory.WriteBytes(Enable ? new[] { (byte)0xEB } : new[] { (byte)0x73 }, "maluc.dll", HealthCheckAddressA);
+            Memory.WriteBytes(Enable ? new[] { (byte)0xEB } : new[] { (byte)0x73 }, "maluc.dll", HealthCheckAddressB);
 
             return true;
         }

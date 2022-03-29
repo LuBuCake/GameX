@@ -10,6 +10,7 @@ namespace GameX.Database.Type
 {
     public class Slot
     {
+        private SlotType Mode { get; set; }
         private App GUI { get; set; }
         private int PlayerIndex { get; set; }
         private int Index { get; set; }
@@ -19,8 +20,9 @@ namespace GameX.Database.Type
         public Item FromMemoryItem { get; set; }
         public Item ToMemoryItem { get; set; }
 
-        public Slot(App GUI, int PlayerIndex, int Index)
+        public Slot(SlotType Mode, App GUI, int PlayerIndex, int Index)
         {
+            this.Mode = Mode;
             this.GUI = GUI;
             this.PlayerIndex = PlayerIndex;
             this.Index = Index;
@@ -100,7 +102,18 @@ namespace GameX.Database.Type
 
         public int Address
         {
-            get { return Memory.ReadPointer("re5dx9.exe", 0x00DA383C, 0x6FF40 + (0x420 * PlayerIndex) + (0x2C * Index)); }
+            get
+            {
+                switch (Mode)
+                {
+                    case SlotType.Loadout:
+                        return Memory.ReadPointer("re5dx9.exe", 0x00DA383C, 0x6FF40 + (0x420 * PlayerIndex) + (0x2C * Index));
+                    case SlotType.RealTime:
+                        return Memory.ReadPointer("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * PlayerIndex), 0x21A8 + (0x30 * Index));
+                }
+
+                return 0;
+            }
         }
 
         public int ID
@@ -113,9 +126,9 @@ namespace GameX.Database.Type
             get { return Memory.Read<int>("", Address + 0x04); }
             set { Memory.Write(value, "", Address + 0x04); }
         }
-        public short MaxQuantity
+        public int MaxQuantity
         {
-            get { return Memory.Read<short>("", Address + 0x08); }
+            get { return Memory.Read<int>("", Address + 0x08); }
             set { Memory.Write(value, "", Address + 0x08); }
         }
         public byte Firepower
@@ -244,7 +257,7 @@ namespace GameX.Database.Type
         {
             ID = item.ID;
             Quantity = item.Capacity[0];
-            MaxQuantity = (short)item.Capacity[0];
+            MaxQuantity = item.Capacity[0];
             Firepower = 0;
             ReloadSpeed = 0;
             Capacity = 0;
@@ -265,7 +278,7 @@ namespace GameX.Database.Type
 
             FromMemory.ID = item.ID;
             FromMemory.Quantity = item.Capacity[0];
-            FromMemory.MaxQuantity = (short)item.Capacity[0];
+            FromMemory.MaxQuantity = item.Capacity[0];
             FromMemory.Firepower = 0;
             FromMemory.ReloadSpeed = 0;
             FromMemory.Capacity = 0;
@@ -431,7 +444,7 @@ namespace GameX.Database.Type
 
             ToMemory.ID = ToMemoryItem.ID;
             ToMemory.Quantity = int.Parse(QuantityTE.Text);
-            ToMemory.MaxQuantity = short.Parse(MaxQuantityTE.Text);
+            ToMemory.MaxQuantity = int.Parse(MaxQuantityTE.Text);
             ToMemory.Firepower = (byte)Array.IndexOf(ToMemoryItem.Firepower, int.Parse(FirepowerSE.Text));
             ToMemory.ReloadSpeed = (byte)Array.IndexOf(ToMemoryItem.ReloadSpeed, double.Parse(ReloadSpeedSE.Text));
             ToMemory.Capacity = (byte)Array.IndexOf(ToMemoryItem.Capacity, int.Parse(CapacitySE.Text));

@@ -5,6 +5,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Reflection;
 using DevExpress.LookAndFeel;
 using DevExpress.Skins;
 using DevExpress.XtraEditors;
@@ -14,7 +15,6 @@ using GameX.Modules;
 using GameX.Database;
 using GameX.Enum;
 using GameX.Database.Type;
-using System.Reflection;
 using GameX.Database.ViewBag;
 
 namespace GameX
@@ -937,7 +937,7 @@ namespace GameX
                         Loadout.Slots = new TemporaryItemViewBag[10];
 
                         for (int i = 0; i < 10; i++)
-                            Loadout.Slots[i] = Biohazard.Players[SelectedPlayer].Inventory.Slots[i].ToMemory;
+                            Loadout.Slots[i] = Biohazard.Players[SelectedPlayer].Inventory.LoadoutSlots[i].ToMemory;
 
                         Serializer.WriteDataFile(SFD.FileName, Serializer.Serialize(Loadout));
 
@@ -961,7 +961,7 @@ namespace GameX
                         LoadoutViewBag Loadout = Serializer.Deserialize<LoadoutViewBag>(Serializer.ReadDataFile(OFD.FileName));
 
                         for (int i = 0; i < 10; i++)
-                            Biohazard.Players[SelectedPlayer].Inventory.Slots[i].SetFromLoadoutTemporaryItem(Loadout.Slots[i], Initialized);
+                            Biohazard.Players[SelectedPlayer].Inventory.LoadoutSlots[i].SetFromLoadoutTemporaryItem(Loadout.Slots[i], Initialized);
 
                         Terminal.WriteLine($"[App] Loadout \"{Loadout.Name}\" applied successfully on P{SelectedPlayer + 1}'s inventory.");
                         Utility.MessageBox_Information($"Loadout \"{Loadout.Name}\" applied successfully!");
@@ -1012,7 +1012,7 @@ namespace GameX
             int OldValueIndex = SE.Name.Contains("ReloadSpeed") ? Array.IndexOf(SelectedItem.ReloadSpeed, double.Parse(SE.Text)) : Array.IndexOf(PropArray, int.Parse(SE.Text));
             int NewValueIndex = e.IsSpinUp ? OldValueIndex + 1 : OldValueIndex - 1;
 
-            Slot[] SlotCollection = Biohazard.Players[SelectedPlayer].Inventory.Slots;
+            Slot[] SlotCollection = Biohazard.Players[SelectedPlayer].Inventory.LoadoutSlots;
 
             if (!SE.Name.Contains("ReloadSpeed"))
             {
@@ -1040,12 +1040,12 @@ namespace GameX
             int Index = !TE.Name.Contains("Knife") ? int.Parse(TE.Name[6].ToString()) - 1 : 9;
 
             int SelectedPlayer = (int)InventoryPlayerSelectionRG.EditValue;
-            Slot[] SlotCollection = Biohazard.Players[SelectedPlayer].Inventory.Slots;
+            Slot[] SlotCollection = Biohazard.Players[SelectedPlayer].Inventory.LoadoutSlots;
 
             if (TE.Name.Contains("MaxQuantity"))
-                SlotCollection[Index].ToMemory.MaxQuantity = short.Parse(e.NewValue.ToString());
+                SlotCollection[Index].ToMemory.MaxQuantity = int.Parse(e.NewValue.ToString());
             else if (TE.Name.Contains("Quantity"))
-                SlotCollection[Index].ToMemory.Quantity = short.Parse(e.NewValue.ToString());
+                SlotCollection[Index].ToMemory.Quantity = int.Parse(e.NewValue.ToString());
             else
                 return;
 
@@ -1080,7 +1080,7 @@ namespace GameX
             SlotPicBoxes[Index].Image = Final;
 
             int SelectedPlayer = (int)InventoryPlayerSelectionRG.EditValue;
-            Slot[] SlotCollection = Biohazard.Players[SelectedPlayer].Inventory.Slots;
+            Slot[] SlotCollection = Biohazard.Players[SelectedPlayer].Inventory.LoadoutSlots;
 
             if (SlotCollection[Index].BeingUpdatedOnGUI)
                 return;
@@ -1095,7 +1095,7 @@ namespace GameX
             ((SpinEdit)GetInventoryControl(SelectedPlayer, Index, Index != 9 ? $"P{SelectedPlayer + 1}Slot{Index + 1}RangeSE" : $"P{SelectedPlayer + 1}SlotKnifeRangeSE")).Text = SelectedItem.Range[0].ToString();
             ((SpinEdit)GetInventoryControl(SelectedPlayer, Index, Index != 9 ? $"P{SelectedPlayer + 1}Slot{Index + 1}ScopeSE" : $"P{SelectedPlayer + 1}SlotKnifeScopeSE")).Text = SelectedItem.Scope[0].ToString();
 
-            Biohazard.Players[SelectedPlayer].Inventory.Slots[Index].UpdateItemToMemory(Initialized);
+            Biohazard.Players[SelectedPlayer].Inventory.LoadoutSlots[Index].UpdateItemToMemory(Initialized);
         }
 
         private void CharComboBox_IndexChanged(object sender, EventArgs e)
@@ -1251,7 +1251,7 @@ namespace GameX
                 {
                     int Index = !CE.Name.Contains("Knife") ? int.Parse(CE.Name[6].ToString()) - 1 : 9;
                     int SelectedPlayer = (int)InventoryPlayerSelectionRG.EditValue;
-                    Biohazard.Players[SelectedPlayer].Inventory.Slots[Index].UpdateItemToMemory(Initialized);
+                    Biohazard.Players[SelectedPlayer].Inventory.LoadoutSlots[Index].UpdateItemToMemory(Initialized);
                 }
             }
             else if (sender.GetType() == typeof(CheckButton))
@@ -1500,8 +1500,8 @@ namespace GameX
 
                 GameX_CheckControls();
 
-                //Biohazard.NoFileChecking(true);
-                //Biohazard.OnlineCharSwapFixes(true);
+                Biohazard.NoFileChecking(true);
+                Biohazard.OnlineCharSwapFixes(true);
             }
             catch (Exception Ex)
             {
@@ -1519,8 +1519,8 @@ namespace GameX
                 if (MeleeAnytimeSwitch.IsOn)
                     MeleeAnytimeSwitch.Toggle();
 
-                //Biohazard.NoFileChecking(false);
-                //Biohazard.OnlineCharSwapFixes(false);
+                Biohazard.NoFileChecking(false);
+                Biohazard.OnlineCharSwapFixes(false);
                 Biohazard.EnableColorFilter(false);
                 Biohazard.WeskerNoSunglassDrop(false);
                 Biohazard.WeskerNoDashCost(false);
@@ -1690,7 +1690,7 @@ namespace GameX
                     if (i != 0)
                         continue;
 
-                    Biohazard.Players[i].Inventory.Slots[slot].Update();
+                    Biohazard.Players[i].Inventory.LoadoutSlots[slot].Update();
                 }
 
                 // Health Bar //
