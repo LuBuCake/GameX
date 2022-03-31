@@ -31,7 +31,6 @@ namespace GameX
         public double FramesPerSecond { get; private set; }
         public bool Verified { get; private set; }
         public bool Initialized { get; private set; }
-        public bool ExceptionStop { get; private set; }
 
         #endregion
 
@@ -50,10 +49,7 @@ namespace GameX
 
         private void Application_Idle(object sender, EventArgs e)
         {
-            while (Helpers.Message.IsApplicationIdle())
-            {
-                Application_Update();
-            }
+            Application_Update();
         }
 
         private void Application_ApplicationExit(object sender, EventArgs e)
@@ -92,7 +88,6 @@ namespace GameX
             Application.ApplicationExit += Application_ApplicationExit;
 
             Terminal.StartModule(this);
-
             Biohazard.Setup(this);
         }
 
@@ -738,12 +733,7 @@ namespace GameX
             FramesPerSecond = 1.0 / Elapsed.TotalSeconds;
             FrameTime = 1.0 / FramesPerSecond;
 
-            Application_DoWork();
-        }
-
-        private void Application_DoWork()
-        {
-            if (Target_Handle() && Initialized && !ExceptionStop)
+            if (Target_Handle() && Initialized)
                 GameX_Update();
         }
 
@@ -881,6 +871,8 @@ namespace GameX
 
             Image Logo = ImageHelper.MergeImage(LogoA, LogoB);
             AboutPictureEdit.Image = Logo;
+
+            TabPageConsoleButton.ImageOptions.Image = Properties.Resources.consoleunread;
         }
 
         private void ResetHealthBars()
@@ -956,8 +948,10 @@ namespace GameX
             }
 
             if (XTP.Name == "TabPageConsole")
+            {
                 Terminal.ScrollToEnd();
-
+                TabPageConsoleButton.ImageOptions.Image = Properties.Resources.consoleread;
+            }
         }
 
         private void MasterTabPageButton_Click(object sender, EventArgs e)

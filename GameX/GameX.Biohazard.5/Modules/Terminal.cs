@@ -5,17 +5,18 @@ using GameX.Helpers;
 using GameX.Modules;
 using GameX.Enum;
 using System.Diagnostics;
+using System.Linq;
 
 namespace GameX.Modules
 {
     public static class Terminal
     {
-        private static App Main { get; set; }
+        private static App GUI { get; set; }
         private static string DisplayedText { get; set; }
 
         public static void StartModule(App Instance)
         {
-            Main = Instance;
+            GUI = Instance;
             DisplayedText = "";
             WriteLine("[Console] Module started successfully.");
         }
@@ -23,13 +24,13 @@ namespace GameX.Modules
         public static void ClearConsole_Click(object sender, EventArgs e)
         {
             DisplayedText = "";
-            Main.ConsoleOutputMemoEdit.Text = DisplayedText;
+            GUI.ConsoleOutputMemoEdit.Text = DisplayedText;
         }
 
         public static void ScrollToEnd()
         {
-            Main.ConsoleOutputMemoEdit.SelectionStart = Main.ConsoleOutputMemoEdit.Text.Length;
-            Main.ConsoleOutputMemoEdit.MaskBox?.MaskBoxScrollToCaret();
+            GUI.ConsoleOutputMemoEdit.SelectionStart = GUI.ConsoleOutputMemoEdit.Text.Length;
+            GUI.ConsoleOutputMemoEdit.MaskBox?.MaskBoxScrollToCaret();
         }
 
         private static void ShowCommands()
@@ -75,7 +76,7 @@ namespace GameX.Modules
                 if (Command[0] != "sethealth" || Command.Length != 3)
                     return false;
 
-                if (!Main.Initialized || !Biohazard.ModuleStarted)
+                if (!GUI.Initialized || !Biohazard.ModuleStarted)
                 {
                     WriteLine("[App] The game is not running.");
                     return true;
@@ -113,7 +114,7 @@ namespace GameX.Modules
             }
             else
             {
-                if (!Main.Initialized || !Biohazard.ModuleStarted)
+                if (!GUI.Initialized || !Biohazard.ModuleStarted)
                 {
                     WriteLine("[App] The game is not running.");
                     return true;
@@ -169,13 +170,13 @@ namespace GameX.Modules
                     ShowCommands();
                     break;
                 case "fps":
-                    WriteLine($"[App] {Main.FramesPerSecond.ToString().Substring(0, 5)}");
+                    WriteLine($"[App] {GUI.FramesPerSecond.ToString().Substring(0, 5)}");
                     break;
                 case "frametime":
-                    WriteLine($"[App] {Main.FrameTime.ToString().Substring(0, 5)}");
+                    WriteLine($"[App] {GUI.FrameTime.ToString().Substring(0, 5)}");
                     break;
                 case "curtime":
-                    WriteLine($"[App] {(int) Main.CurTime}");
+                    WriteLine($"[App] {(int) GUI.CurTime}");
                     break;
                 case "exit":
                     Application.Exit();
@@ -213,18 +214,28 @@ namespace GameX.Modules
 
             DisplayedText = Current;
 
-            if (Main.ConsoleOutputMemoEdit.InvokeRequired)
+            if (GUI.ConsoleOutputMemoEdit.InvokeRequired)
             {
-                Main.ConsoleOutputMemoEdit.Invoke((MethodInvoker)delegate
+                GUI.ConsoleOutputMemoEdit.Invoke((MethodInvoker)delegate
                 {
-                    Main.ConsoleOutputMemoEdit.Text = DisplayedText;
+                    GUI.ConsoleOutputMemoEdit.Text = DisplayedText;
                     ScrollToEnd();
                 });
+
+                GUI.MasterTabControl.Invoke((MethodInvoker)delegate
+                {
+                    if (GUI.MasterTabControl.SelectedTabPage != GUI.MasterTabControl.TabPages.Where(x => x.Name == "TabPageConsole").FirstOrDefault())
+                        GUI.TabPageConsoleButton.ImageOptions.Image = Properties.Resources.consoleunread;
+                });
+
                 return;
             }
 
-            Main.ConsoleOutputMemoEdit.Text = DisplayedText;
+            GUI.ConsoleOutputMemoEdit.Text = DisplayedText;
             ScrollToEnd();
+
+            if (GUI.MasterTabControl.SelectedTabPage != GUI.MasterTabControl.TabPages.Where(x => x.Name == "TabPageConsole").FirstOrDefault())
+                GUI.TabPageConsoleButton.ImageOptions.Image = Properties.Resources.consoleunread;
         }
 
         public static void WriteLine(string Input, MessageBoxTypeEnum MessageBox = MessageBoxTypeEnum.None)
@@ -271,18 +282,28 @@ namespace GameX.Modules
 
             DisplayedText = Current;
 
-            if (Main.ConsoleOutputMemoEdit.InvokeRequired)
+            if (GUI.ConsoleOutputMemoEdit.InvokeRequired)
             {
-                Main.ConsoleOutputMemoEdit.Invoke((MethodInvoker) delegate
+                GUI.ConsoleOutputMemoEdit.Invoke((MethodInvoker)delegate
                 {
-                    Main.ConsoleOutputMemoEdit.Text = DisplayedText;
+                    GUI.ConsoleOutputMemoEdit.Text = DisplayedText;
                     ScrollToEnd();
                 });
+
+                GUI.MasterTabControl.Invoke((MethodInvoker)delegate
+                {
+                    if (GUI.MasterTabControl.SelectedTabPage != GUI.MasterTabControl.TabPages.Where(x => x.Name == "TabPageConsole").FirstOrDefault())
+                        GUI.TabPageConsoleButton.ImageOptions.Image = Properties.Resources.consoleunread;
+                });
+
                 return;
             }
 
-            Main.ConsoleOutputMemoEdit.Text = DisplayedText;
+            GUI.ConsoleOutputMemoEdit.Text = DisplayedText;
             ScrollToEnd();
+
+            if (GUI.MasterTabControl.SelectedTabPage != GUI.MasterTabControl.TabPages.Where(x => x.Name == "TabPageConsole").FirstOrDefault())
+                GUI.TabPageConsoleButton.ImageOptions.Image = Properties.Resources.consoleunread;
         }
     }
 }

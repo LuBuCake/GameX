@@ -8580,7 +8580,6 @@ namespace GameX
             // TabPageConsoleButton
             // 
             this.TabPageConsoleButton.AllowFocus = false;
-            this.TabPageConsoleButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("TabPageConsoleButton.ImageOptions.Image")));
             this.TabPageConsoleButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.TabPageConsoleButton.Location = new System.Drawing.Point(148, 4);
             this.TabPageConsoleButton.Margin = new System.Windows.Forms.Padding(1);
@@ -9065,7 +9064,6 @@ namespace GameX
 
         #endregion
         private DevExpress.XtraEditors.PictureEdit P1CharPictureBox;
-        private DevExpress.XtraTab.XtraTabControl MasterTabControl;
         private DevExpress.XtraTab.XtraTabPage TabPageChar;
         private DevExpress.XtraEditors.GroupControl TabPageCharGPPlayer4;
         private DevExpress.XtraEditors.GroupControl TabPageCharGPPlayer3;
@@ -9375,7 +9373,6 @@ namespace GameX
         private DevExpress.XtraEditors.SimpleButton TabPageMeleeButton;
         private DevExpress.XtraEditors.SimpleButton TabPageInventoryButton;
         private DevExpress.XtraEditors.SimpleButton TabPageSettingsButton;
-        private DevExpress.XtraEditors.SimpleButton TabPageConsoleButton;
         public DevExpress.XtraEditors.CheckEdit P2FreezeAllCheckEdit;
         private DevExpress.XtraEditors.LabelControl P2ScopeLB;
         private DevExpress.XtraEditors.LabelControl P2RangeLB;
@@ -9526,6 +9523,8 @@ namespace GameX
         public DevExpress.XtraEditors.TextEdit P2Slot9QuantityTE;
         public DevExpress.XtraEditors.ComboBoxEdit P2Slot9ItemCB;
         public DevExpress.XtraEditors.SpinEdit P2Slot9FirepowerSE;
+        public DevExpress.XtraEditors.SimpleButton TabPageConsoleButton;
+        public DevExpress.XtraTab.XtraTabControl MasterTabControl;
     }
 }
 

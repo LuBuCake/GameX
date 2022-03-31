@@ -286,7 +286,6 @@
     <Compile Include="App.Designer.cs">
       <DependentUpon>App.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\Message.cs" />
     <Compile Include="Helpers\Serializer.cs" />
     <Compile Include="Modules\Terminal.cs" />
     <Compile Include="Modules\Keyboard.cs" />
@@ -423,6 +422,8 @@
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Icons\consoleread.png" />
+    <None Include="Icons\consoleunread.png" />
     <Content Include="system_control_panel_15843.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -445,6 +446,7 @@ mkdir C:\Users\madne\Desktop\x86\addons\
 mkdir C:\Users\madne\Desktop\x86\addons\GameX.Biohazard.5\
 
 xcopy $(ProjectDir)\Resources C:\Users\madne\Desktop\x86\addons\GameX.Biohazard.5\ /e /y
+xcopy $(ProjectDir)\Icons\inventory\items C:\Users\madne\Desktop\x86\addons\GameX.Biohazard.5\images\inventory\ /e /y
 
 xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\x86\addons\GameX.Biohazard.5\ /y
 xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\x86\addons\GameX.Biohazard.5\ /y
