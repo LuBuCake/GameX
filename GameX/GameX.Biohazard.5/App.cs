@@ -5,7 +5,6 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using System.Reflection;
 using DevExpress.LookAndFeel;
 using DevExpress.Skins;
 using DevExpress.XtraEditors;
@@ -16,6 +15,7 @@ using GameX.Database;
 using GameX.Enum;
 using GameX.Database.Type;
 using GameX.Database.ViewBag;
+using DevExpress.XtraEditors.Controls;
 
 namespace GameX
 {
@@ -35,26 +35,6 @@ namespace GameX
 
         #endregion
 
-        #region Indexer
-
-        public object this[string PropName]
-        {
-            get
-            {
-                Type myType = typeof(App);
-                PropertyInfo myPropInfo = myType.GetProperty(PropName);
-                return myPropInfo.GetValue(this, null);
-            }
-            set
-            {
-                Type myType = typeof(App);
-                PropertyInfo myPropInfo = myType.GetProperty(PropName);
-                myPropInfo.SetValue(this, value, null);
-            }
-        }
-
-        #endregion
-
         #region Application Methods
 
         public App()
@@ -70,7 +50,7 @@ namespace GameX
 
         private void Application_Idle(object sender, EventArgs e)
         {
-            while (Peaker.IsApplicationIdle())
+            while (Helpers.Message.IsApplicationIdle())
             {
                 Application_Update();
             }
@@ -118,151 +98,16 @@ namespace GameX
 
         private void Application_Load()
         {
-            SetupControls();
-        }
-
-        private void Application_Update()
-        {
-            if (!FrameElapser.IsRunning)
-                FrameElapser.Start();
-
-            CurTime = CurTimeElapser.Elapsed.TotalSeconds;
-
-            TimeSpan Elapsed = FrameElapser.Elapsed;
-
-            if (Elapsed.TotalSeconds < UpdateMode)
-                return;
-
-            FrameElapser.Stop();
-            FrameElapser.Reset();
-
-            FramesPerSecond = 1.0 / Elapsed.TotalSeconds;
-            FrameTime = 1.0 / FramesPerSecond;
-
-            Application_DoWork();
-        }
-
-        private void Application_DoWork()
-        {
-            if (Target_Handle() && Initialized && !ExceptionStop)
-                GameX_Update();
-        }
-
-        #endregion
-
-        #region Target Processing
-
-        private string Target { get; set; }
-        private string Target_Version { get; set; }
-        private Process Target_Process { get; set; }
-        private List<string> Target_Modules { get; set; }
-
-        private void Target_Setup()
-        {
-            Target = "re5dx9.exe";
-            Target_Version = "1.0.0.129";
-            Target_Modules = new List<string>()
-            {
-                "steam_api.dll", "maluc.dll"
-            };
-        }
-
-        private bool Target_Handle()
-        {
-            if (Target_Process == null)
-            {
-                ResetHealthBars();
-
-                Target_Process = Processes.GetProcessByName(Target);
-                Verified = false;
-                Initialized = false;
-                Text = "GameX - Resident Evil 5 - Waiting game";
-
-                if (Target_Process == null)
-                    return Verified;
-
-                Terminal.WriteLine("[App] Game found, validating.");
-                Text = "GameX - Resident Evil 5 - Validanting";
-
-                return Verified;
-            }
-
-            if (Verified || Target_Process.MainWindowHandle == IntPtr.Zero || !Target_Process.WaitForInputIdle())
-                return Verified;
-
-            if (Target_Validate())
-            {
-                Terminal.WriteLine("[App] Game validated.");
-
-                Memory.StartModule(Target_Process);
-                CheckDebugModeControls(Memory.DebugMode);
-                GameX_Start();
-
-                Target_Process.EnableRaisingEvents = true;
-                Target_Process.Exited += Target_Exited;
-                Verified = true;
-                Initialized = true;
-                Text = "GameX - Resident Evil 5 - " + (Memory.DebugMode ? "Running as administrator" : "Running as normal user");
-
-                return Verified;
-            }
-
-            Terminal.WriteLine("[App] Failed validating, unsupported version.");
-            Terminal.WriteLine("[App] Follow the guide at https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
-
-            Target_Process.EnableRaisingEvents = true;
-            Target_Process.Exited += Target_Exited;
-            Verified = true;
-            Initialized = false;
-            Text = "GameX - Resident Evil 5 - Unsupported Version";
-
-            return Verified;
-        }
-
-        private bool Target_Validate()
-        {
-            try
-            {
-                if (Target_Version != "" && (Target_Process.MainModule == null || !Target_Process.MainModule.FileVersionInfo.ToString().Contains(Target_Version)))
-                    return false;
-
-                if (Target_Modules.Count > 0)
-                {
-                    if (Target_Modules.Any(Module => !Processes.ProcessHasModule(Target_Process, Module)))
-                    {
-                        return false;
-                    }
-                }
-            }
-            catch (Exception Ex)
-            {
-                Terminal.WriteLine(Ex.Message);
-                return false;
-            }
-
-            return true;
-        }
-
-        private void Target_Exited(object sender, EventArgs e)
-        {
-            Memory.FinishModule();
-            Biohazard.FinishModule();
-
-            Target_Process?.Dispose();
-            Target_Process = null;
-            Verified = false;
-            Initialized = false;
-
-            Terminal.WriteLine("[App] Runtime cleared successfully.");
-        }
-
-        #endregion
-
-        #region Controllers
-
-        private void SetupControls()
-        {
             #region Controls
+
+            SimpleButton[] MasterTabButtons =
+            {
+                TabPageCharButton,
+                TabPageMeleeButton,
+                TabPageInventoryButton,
+                TabPageSettingsButton,
+                TabPageConsoleButton
+            };
 
             ComboBoxEdit[] CharacterCombos =
             {
@@ -409,7 +254,17 @@ namespace GameX
                 P1Slot7ItemCB,
                 P1Slot8ItemCB,
                 P1Slot9ItemCB,
-                P1SlotKnifeItemCB
+                P1SlotKnifeItemCB,
+                P2Slot1ItemCB,
+                P2Slot2ItemCB,
+                P2Slot3ItemCB,
+                P2Slot4ItemCB,
+                P2Slot5ItemCB,
+                P2Slot6ItemCB,
+                P2Slot7ItemCB,
+                P2Slot8ItemCB,
+                P2Slot9ItemCB,
+                P2SlotKnifeItemCB
             };
 
             TextEdit[] QuantityTextEdits =
@@ -423,7 +278,17 @@ namespace GameX
                 P1Slot7QuantityTE,
                 P1Slot8QuantityTE,
                 P1Slot9QuantityTE,
-                P1SlotKnifeQuantityTE
+                P1SlotKnifeQuantityTE,
+                P2Slot1QuantityTE,
+                P2Slot2QuantityTE,
+                P2Slot3QuantityTE,
+                P2Slot4QuantityTE,
+                P2Slot5QuantityTE,
+                P2Slot6QuantityTE,
+                P2Slot7QuantityTE,
+                P2Slot8QuantityTE,
+                P2Slot9QuantityTE,
+                P2SlotKnifeQuantityTE
             };
 
             TextEdit[] MaxQuantityTextEdits =
@@ -437,7 +302,17 @@ namespace GameX
                 P1Slot7MaxQuantityTE,
                 P1Slot8MaxQuantityTE,
                 P1Slot9MaxQuantityTE,
-                P1SlotKnifeMaxQuantityTE
+                P1SlotKnifeMaxQuantityTE,
+                P2Slot1MaxQuantityTE,
+                P2Slot2MaxQuantityTE,
+                P2Slot3MaxQuantityTE,
+                P2Slot4MaxQuantityTE,
+                P2Slot5MaxQuantityTE,
+                P2Slot6MaxQuantityTE,
+                P2Slot7MaxQuantityTE,
+                P2Slot8MaxQuantityTE,
+                P2Slot9MaxQuantityTE,
+                P2SlotKnifeMaxQuantityTE
             };
 
             SpinEdit[] FirepowerSpins =
@@ -451,7 +326,17 @@ namespace GameX
                 P1Slot7FirepowerSE,
                 P1Slot8FirepowerSE,
                 P1Slot9FirepowerSE,
-                P1SlotKnifeFirepowerSE
+                P1SlotKnifeFirepowerSE,
+                P2Slot1FirepowerSE,
+                P2Slot2FirepowerSE,
+                P2Slot3FirepowerSE,
+                P2Slot4FirepowerSE,
+                P2Slot5FirepowerSE,
+                P2Slot6FirepowerSE,
+                P2Slot7FirepowerSE,
+                P2Slot8FirepowerSE,
+                P2Slot9FirepowerSE,
+                P2SlotKnifeFirepowerSE
             };
 
             SpinEdit[] ReloadSpeedSpins =
@@ -465,7 +350,17 @@ namespace GameX
                 P1Slot7ReloadSpeedSE,
                 P1Slot8ReloadSpeedSE,
                 P1Slot9ReloadSpeedSE,
-                P1SlotKnifeReloadSpeedSE
+                P1SlotKnifeReloadSpeedSE,
+                P2Slot1ReloadSpeedSE,
+                P2Slot2ReloadSpeedSE,
+                P2Slot3ReloadSpeedSE,
+                P2Slot4ReloadSpeedSE,
+                P2Slot5ReloadSpeedSE,
+                P2Slot6ReloadSpeedSE,
+                P2Slot7ReloadSpeedSE,
+                P2Slot8ReloadSpeedSE,
+                P2Slot9ReloadSpeedSE,
+                P2SlotKnifeReloadSpeedSE
             };
 
             SpinEdit[] CapacitySpins =
@@ -479,7 +374,17 @@ namespace GameX
                 P1Slot7CapacitySE,
                 P1Slot8CapacitySE,
                 P1Slot9CapacitySE,
-                P1SlotKnifeCapacitySE
+                P1SlotKnifeCapacitySE,
+                P2Slot1CapacitySE,
+                P2Slot2CapacitySE,
+                P2Slot3CapacitySE,
+                P2Slot4CapacitySE,
+                P2Slot5CapacitySE,
+                P2Slot6CapacitySE,
+                P2Slot7CapacitySE,
+                P2Slot8CapacitySE,
+                P2Slot9CapacitySE,
+                P2SlotKnifeCapacitySE
             };
 
             SpinEdit[] CriticalSpins =
@@ -493,7 +398,17 @@ namespace GameX
                 P1Slot7CriticalSE,
                 P1Slot8CriticalSE,
                 P1Slot9CriticalSE,
-                P1SlotKnifeCriticalSE
+                P1SlotKnifeCriticalSE,
+                P2Slot1CriticalSE,
+                P2Slot2CriticalSE,
+                P2Slot3CriticalSE,
+                P2Slot4CriticalSE,
+                P2Slot5CriticalSE,
+                P2Slot6CriticalSE,
+                P2Slot7CriticalSE,
+                P2Slot8CriticalSE,
+                P2Slot9CriticalSE,
+                P2SlotKnifeCriticalSE
             };
 
             SpinEdit[] PiercingSpins =
@@ -507,7 +422,17 @@ namespace GameX
                 P1Slot7PiercingSE,
                 P1Slot8PiercingSE,
                 P1Slot9PiercingSE,
-                P1SlotKnifePiercingSE
+                P1SlotKnifePiercingSE,
+                P2Slot1PiercingSE,
+                P2Slot2PiercingSE,
+                P2Slot3PiercingSE,
+                P2Slot4PiercingSE,
+                P2Slot5PiercingSE,
+                P2Slot6PiercingSE,
+                P2Slot7PiercingSE,
+                P2Slot8PiercingSE,
+                P2Slot9PiercingSE,
+                P2SlotKnifePiercingSE
             };
 
             SpinEdit[] RangeSpins =
@@ -521,7 +446,17 @@ namespace GameX
                 P1Slot7RangeSE,
                 P1Slot8RangeSE,
                 P1Slot9RangeSE,
-                P1SlotKnifeRangeSE
+                P1SlotKnifeRangeSE,
+                P2Slot1RangeSE,
+                P2Slot2RangeSE,
+                P2Slot3RangeSE,
+                P2Slot4RangeSE,
+                P2Slot5RangeSE,
+                P2Slot6RangeSE,
+                P2Slot7RangeSE,
+                P2Slot8RangeSE,
+                P2Slot9RangeSE,
+                P2SlotKnifeRangeSE
             };
 
             SpinEdit[] ScopeSpins =
@@ -535,7 +470,17 @@ namespace GameX
                 P1Slot7ScopeSE,
                 P1Slot8ScopeSE,
                 P1Slot9ScopeSE,
-                P1SlotKnifeScopeSE
+                P1SlotKnifeScopeSE,
+                P2Slot1ScopeSE,
+                P2Slot2ScopeSE,
+                P2Slot3ScopeSE,
+                P2Slot4ScopeSE,
+                P2Slot5ScopeSE,
+                P2Slot6ScopeSE,
+                P2Slot7ScopeSE,
+                P2Slot8ScopeSE,
+                P2Slot9ScopeSE,
+                P2SlotKnifeScopeSE
             };
 
 
@@ -550,7 +495,17 @@ namespace GameX
                 P1Slot7InfiniteAmmoCheckEdit,
                 P1Slot8InfiniteAmmoCheckEdit,
                 P1Slot9InfiniteAmmoCheckEdit,
-                P1SlotKnifeInfiniteAmmoCheckEdit
+                P1SlotKnifeInfiniteAmmoCheckEdit,
+                P2Slot1InfiniteAmmoCheckEdit,
+                P2Slot2InfiniteAmmoCheckEdit,
+                P2Slot3InfiniteAmmoCheckEdit,
+                P2Slot4InfiniteAmmoCheckEdit,
+                P2Slot5InfiniteAmmoCheckEdit,
+                P2Slot6InfiniteAmmoCheckEdit,
+                P2Slot7InfiniteAmmoCheckEdit,
+                P2Slot8InfiniteAmmoCheckEdit,
+                P2Slot9InfiniteAmmoCheckEdit,
+                P2SlotKnifeInfiniteAmmoCheckEdit
             };
 
             CheckEdit[] RapidfireChecks =
@@ -564,7 +519,17 @@ namespace GameX
                 P1Slot7RapidFireCheckEdit,
                 P1Slot8RapidFireCheckEdit,
                 P1Slot9RapidFireCheckEdit,
-                P1SlotKnifeRapidFireCheckEdit
+                P1SlotKnifeRapidFireCheckEdit,
+                P2Slot1RapidFireCheckEdit,
+                P2Slot2RapidFireCheckEdit,
+                P2Slot3RapidFireCheckEdit,
+                P2Slot4RapidFireCheckEdit,
+                P2Slot5RapidFireCheckEdit,
+                P2Slot6RapidFireCheckEdit,
+                P2Slot7RapidFireCheckEdit,
+                P2Slot8RapidFireCheckEdit,
+                P2Slot9RapidFireCheckEdit,
+                P2SlotKnifeRapidFireCheckEdit
             };
 
             CheckEdit[] FrozenChecks =
@@ -578,43 +543,58 @@ namespace GameX
                 P1Slot7FrozenCheckEdit,
                 P1Slot8FrozenCheckEdit,
                 P1Slot9FrozenCheckEdit,
-                P1SlotKnifeFrozenCheckEdit
+                P1SlotKnifeFrozenCheckEdit,
+                P2Slot1FrozenCheckEdit,
+                P2Slot2FrozenCheckEdit,
+                P2Slot3FrozenCheckEdit,
+                P2Slot4FrozenCheckEdit,
+                P2Slot5FrozenCheckEdit,
+                P2Slot6FrozenCheckEdit,
+                P2Slot7FrozenCheckEdit,
+                P2Slot8FrozenCheckEdit,
+                P2Slot9FrozenCheckEdit,
+                P2SlotKnifeFrozenCheckEdit
             };
 
             #endregion
 
             DB db = DBContext.GetDatabase();
 
-            for (int Index = 0; Index < CharacterCombos.Length; Index++)
+            for (int i = 0; i < MasterTabButtons.Length; i++)
             {
-                CharacterCombos[Index].Properties.Items.AddRange(db.Characters);
-                WeaponMode[Index].Properties.Items.AddRange(db.WeaponMode);
-                Handness[Index].Properties.Items.AddRange(db.Handness);
+                MasterTabButtons[i].Click += MasterTabPageButton_Click;
+            }
 
-                CharCosFreezes[Index].CheckedChanged += CharCosFreeze_CheckedChanged;
-                InfiniteHP[Index].CheckedChanged += EnableDisable_StateChanged;
-                Untargetable[Index].CheckedChanged += EnableDisable_StateChanged;
-                InfiniteAmmo[Index].CheckedChanged += EnableDisable_StateChanged;
-                Rapidfire[Index].CheckedChanged += EnableDisable_StateChanged;
+            for (int i = 0; i < CharacterCombos.Length; i++)
+            {
+                CharacterCombos[i].Properties.Items.AddRange(db.Characters);
+                WeaponMode[i].Properties.Items.AddRange(db.WeaponMode);
+                Handness[i].Properties.Items.AddRange(db.Handness);
 
-                CharacterCombos[Index].SelectedIndexChanged += CharComboBox_IndexChanged;
-                CostumeCombos[Index].SelectedIndexChanged += CosComboBox_IndexChanged;
-                WeaponMode[Index].SelectedIndexChanged += WeaponMode_IndexChanged;
-                Handness[Index].SelectedIndexChanged += Handness_IndexChanged;
+                CharCosFreezes[i].CheckedChanged += CharCosFreeze_CheckedChanged;
+                InfiniteHP[i].CheckedChanged += EnableDisable_StateChanged;
+                Untargetable[i].CheckedChanged += EnableDisable_StateChanged;
+                InfiniteAmmo[i].CheckedChanged += EnableDisable_StateChanged;
+                Rapidfire[i].CheckedChanged += EnableDisable_StateChanged;
 
-                CharacterCombos[Index].SelectedIndex = 0;
-                WeaponMode[Index].SelectedIndex = 0;
-                Handness[Index].SelectedIndex = 0;
+                CharacterCombos[i].SelectedIndexChanged += CharComboBox_IndexChanged;
+                CostumeCombos[i].SelectedIndexChanged += CosComboBox_IndexChanged;
+                WeaponMode[i].SelectedIndexChanged += WeaponMode_IndexChanged;
+                Handness[i].SelectedIndexChanged += Handness_IndexChanged;
 
-                if (Index < EnableDisable.Length)
+                CharacterCombos[i].SelectedIndex = 0;
+                WeaponMode[i].SelectedIndex = 0;
+                Handness[i].SelectedIndex = 0;
+
+                if (i < EnableDisable.Length)
                 {
-                    EnableDisable[Index].Click += EnableDisable_StateChanged;
+                    EnableDisable[i].Click += EnableDisable_StateChanged;
                 }
 
-                if (Index == 3)
+                if (i == 3)
                     continue;
 
-                CheckUncheck[Index].CheckedChanged += EnableDisable_StateChanged;
+                CheckUncheck[i].CheckedChanged += EnableDisable_StateChanged;
             }
 
             for (int i = 0; i < MeleeCombosA.Length; i++)
@@ -630,7 +610,7 @@ namespace GameX
                 MeleeCombosA[i].Properties.Items.AddRange(Damage);
                 MeleeCombosA[i].SelectedIndexChanged += Melee_IndexChanged;
 
-                foreach(object item in MeleeCombosA[i].Properties.Items)
+                foreach (object item in MeleeCombosA[i].Properties.Items)
                 {
                     if ((item as Move).Name == MeleeLabelsA[i].Text.Replace(":", ""))
                         MeleeCombosA[i].SelectedItem = item;
@@ -669,9 +649,9 @@ namespace GameX
                 MeleeCombosB[i].Enabled = false;
             }
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 20; i++)
             {
-                ItemCombos[i].Properties.Items.AddRange(db.Items);
+                ItemCombos[i].Properties.Items.AddRange(db.ComboBoxItems);
                 ItemCombos[i].SelectedIndexChanged += InventoryComboBox_IndexChanged;
                 ItemCombos[i].SelectedIndex = 0;
 
@@ -694,6 +674,7 @@ namespace GameX
             }
 
             P1FreezeAllCheckEdit.CheckedChanged += EnableDisable_StateChanged;
+            P2FreezeAllCheckEdit.CheckedChanged += EnableDisable_StateChanged;
 
             MeleeAnytimeSwitch.Toggled += ToggleSwitch_Toggled;
 
@@ -720,11 +701,14 @@ namespace GameX
 
             MeleeCameraCheckEdit.CheckedChanged += EnableDisable_StateChanged;
             ReunionSpecialMovesCheckEdit.CheckedChanged += EnableDisable_StateChanged;
+            HandTremorCheckEdit.CheckedChanged += EnableDisable_StateChanged;
 
             ConsoleInputTextEdit.Validating += Terminal.ValidateInput;
             ClearConsoleSimpleButton.Click += Terminal.ClearConsole_Click;
 
             InventoryPlayerSelectionRG.EditValueChanged += RadioGroup_EditValueChanged;
+
+            ControllerAimButton.Click += EnableDisable_StateChanged;
 
             LoadoutExportButton.Click += SimpleButton_Click;
             LoadoutImportButton.Click += SimpleButton_Click;
@@ -735,6 +719,145 @@ namespace GameX
             Terminal.WriteLine("[App] App initialized.");
             Configuration_Load(null, null);
         }
+
+        private void Application_Update()
+        {
+            if (!FrameElapser.IsRunning)
+                FrameElapser.Start();
+
+            CurTime = CurTimeElapser.Elapsed.TotalSeconds;
+
+            TimeSpan Elapsed = FrameElapser.Elapsed;
+
+            if (Elapsed.TotalSeconds < UpdateMode)
+                return;
+
+            FrameElapser.Stop();
+            FrameElapser.Reset();
+
+            FramesPerSecond = 1.0 / Elapsed.TotalSeconds;
+            FrameTime = 1.0 / FramesPerSecond;
+
+            Application_DoWork();
+        }
+
+        private void Application_DoWork()
+        {
+            if (Target_Handle() && Initialized && !ExceptionStop)
+                GameX_Update();
+        }
+
+        #endregion
+
+        #region Target Processing
+
+        private string Target { get; set; }
+        private string Target_Version { get; set; }
+        private Process Target_Process { get; set; }
+        private List<string> Target_Modules { get; set; }
+
+        private void Target_Setup()
+        {
+            Target = "re5dx9.exe";
+            Target_Version = "1.0.0.129";
+            Target_Modules = new List<string>()
+            {
+                "steam_api.dll", "maluc.dll"
+            };
+        }
+
+        private bool Target_Handle()
+        {
+            if (Target_Process == null)
+            {
+                ResetHealthBars();
+
+                Target_Process = ProcessHelper.GetProcessByName(Target);
+                Verified = false;
+                Initialized = false;
+                Text = "GameX - Resident Evil 5 - Waiting game";
+
+                if (Target_Process == null)
+                    return Verified;
+
+                Terminal.WriteLine("[App] Game found, validating.");
+                Text = "GameX - Resident Evil 5 - Validanting";
+
+                return Verified;
+            }
+
+            if (Verified || Target_Process.MainWindowHandle == IntPtr.Zero || !Target_Process.WaitForInputIdle())
+                return Verified;
+
+            if (Target_Validate())
+            {
+                Terminal.WriteLine("[App] Game validated.");
+
+                Memory.StartModule(Target_Process);
+                CheckDebugModeControls(Memory.DebugMode);
+                GameX_Start();
+
+                Target_Process.EnableRaisingEvents = true;
+                Target_Process.Exited += Target_Exited;
+                Verified = true;
+                Initialized = true;
+                Text = "GameX - Resident Evil 5 - " + (Memory.DebugMode ? "Running as administrator" : "Running as normal user");
+
+                return Verified;
+            }
+
+            Terminal.WriteLine("[App] Failed validating, unsupported version.");
+            Terminal.WriteLine("[App] Follow the guide at https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
+
+            Target_Process.EnableRaisingEvents = true;
+            Target_Process.Exited += Target_Exited;
+            Verified = true;
+            Initialized = false;
+            Text = "GameX - Resident Evil 5 - Unsupported Version";
+
+            return Verified;
+        }
+
+        private bool Target_Validate()
+        {
+            try
+            {
+                if (Target_Version != "" && (Target_Process.MainModule == null || !Target_Process.MainModule.FileVersionInfo.ToString().Contains(Target_Version)))
+                    return false;
+
+                if (Target_Modules.Count > 0)
+                {
+                    if (Target_Modules.Any(Module => !ProcessHelper.ProcessHasModule(Target_Process, Module)))
+                    {
+                        return false;
+                    }
+                }
+            }
+            catch (Exception Ex)
+            {
+                Terminal.WriteLine(Ex);
+                return false;
+            }
+
+            return true;
+        }
+
+        private void Target_Exited(object sender, EventArgs e)
+        {
+            Memory.FinishModule();
+            Biohazard.FinishModule();
+
+            Target_Process?.Dispose();
+            Target_Process = null;
+            Verified = false;
+            Initialized = false;
+
+            Terminal.WriteLine("[App] Runtime cleared successfully.");
+        }
+
+        #endregion
+
+        #region Helpers
 
         private void SetupImages()
         {
@@ -756,11 +879,8 @@ namespace GameX
             LogoA = LogoA.ColorReplace(Game.ImageColors[0], true);
             LogoB = LogoB.ColorReplace(total > 380 ? Color.Black : Color.White, true);
 
-            Image Logo = Utility.MergeImage(LogoA, LogoB);
+            Image Logo = ImageHelper.MergeImage(LogoA, LogoB);
             AboutPictureEdit.Image = Logo;
-
-            Image InventoryBG = Image.FromFile("addons/GameX.Biohazard.5/images/inventory/background.png");
-            InventoryBGPictureBox.Image = InventoryBG;
         }
 
         private void ResetHealthBars()
@@ -797,11 +917,11 @@ namespace GameX
                 case 0:
                     return ((GroupControl)P1InventoryTab.Controls[Slot != 9 ? $"P1Slot{Slot + 1}EditGP" : "P1SlotKnifeEditGP"]).Controls[ControlName];
                 case 1:
-                    return ((GroupControl)P1InventoryTab.Controls[Slot != 9 ? $"P1Slot{Slot + 1}EditGP" : "P1SlotKnifeEditGP"]).Controls[ControlName];
+                    return ((GroupControl)P2InventoryTab.Controls[Slot != 9 ? $"P2Slot{Slot + 1}EditGP" : "P2SlotKnifeEditGP"]).Controls[ControlName];
                 case 2:
-                    return ((GroupControl)P1InventoryTab.Controls[Slot != 9 ? $"P1Slot{Slot + 1}EditGP" : "P1SlotKnifeEditGP"]).Controls[ControlName];
+                    return ((GroupControl)P3InventoryTab.Controls[Slot != 9 ? $"P3Slot{Slot + 1}EditGP" : "P3SlotKnifeEditGP"]).Controls[ControlName];
                 case 3:
-                    return ((GroupControl)P1InventoryTab.Controls[Slot != 9 ? $"P1Slot{Slot + 1}EditGP" : "P1SlotKnifeEditGP"]).Controls[ControlName];
+                    return ((GroupControl)P4InventoryTab.Controls[Slot != 9 ? $"P4Slot{Slot + 1}EditGP" : "P4SlotKnifeEditGP"]).Controls[ControlName];
             }
 
             return null;
@@ -810,8 +930,6 @@ namespace GameX
         #endregion
 
         #region Event Handlers
-
-        // Form //
 
         private void MasterTabPage_PageChanged(object sender, EventArgs e)
         {
@@ -823,7 +941,7 @@ namespace GameX
                 Width = 1250;
                 Height = 523;
                 MasterTabControl.Width = 1225;
-                MasterTabControl.Height = 467;
+                MasterTabControl.Height = 439; //467
                 TabInventoryGP.Width = 1206;
                 TabInventoryGP.Height = 418;
             }
@@ -832,7 +950,7 @@ namespace GameX
                 Width = 664;
                 Height = 523;
                 MasterTabControl.Width = 640;
-                MasterTabControl.Height = 467;
+                MasterTabControl.Height = 439; //467
                 TabInventoryGP.Width = 622;
                 TabInventoryGP.Height = 418;
             }
@@ -840,6 +958,18 @@ namespace GameX
             if (XTP.Name == "TabPageConsole")
                 Terminal.ScrollToEnd();
 
+        }
+
+        private void MasterTabPageButton_Click(object sender, EventArgs e)
+        {
+            SimpleButton SB = sender as SimpleButton;
+
+            XtraTabPage Page = MasterTabControl.TabPages.Where(x => x.Name == SB.Name.Replace("Button", "")).FirstOrDefault();
+
+            if (Page == null)
+                return;
+
+            MasterTabControl.SelectedTabPage = Page;
         }
 
         private void Configuration_Save(object sender, EventArgs e)
@@ -856,7 +986,7 @@ namespace GameX
             }
             catch (Exception Ex)
             {
-                Terminal.WriteLine(Ex.Message);
+                Terminal.WriteLine(Ex);
                 throw;
             }
 
@@ -880,7 +1010,7 @@ namespace GameX
             }
             catch (Exception Ex)
             {
-                Terminal.WriteLine(Ex.Message);
+                Terminal.WriteLine(Ex);
                 throw;
             }
 
@@ -913,8 +1043,6 @@ namespace GameX
             ResetHealthBars();
             SetupImages();
         }
-
-        // Functionalities //
 
         private void SimpleButton_Click(object sender, EventArgs e)
         {
@@ -970,27 +1098,14 @@ namespace GameX
             }
         }
 
-        private void SpinEdit_Spin(object sender, DevExpress.XtraEditors.Controls.SpinEventArgs e)
+        private void SpinEdit_Spin(object sender, SpinEventArgs e)
         {
-            ComboBoxEdit[] ItemCombos =
-            {
-                P1Slot1ItemCB,
-                P1Slot2ItemCB,
-                P1Slot3ItemCB,
-                P1Slot4ItemCB,
-                P1Slot5ItemCB,
-                P1Slot6ItemCB,
-                P1Slot7ItemCB,
-                P1Slot8ItemCB,
-                P1Slot9ItemCB,
-                P1SlotKnifeItemCB
-            };
-
             SpinEdit SE = sender as SpinEdit;
             int Index = !SE.Name.Contains("Knife") ? int.Parse(SE.Name[6].ToString()) - 1 : 9;
-            int SelectedPlayer = (int)InventoryPlayerSelectionRG.EditValue;
+            int SelectedPlayer = int.Parse(SE.Name[1].ToString()) - 1;
 
-            Item SelectedItem = ItemCombos[Index].SelectedItem as Item;
+            ComboBoxEdit ItemCombo = (ComboBoxEdit)GetInventoryControl(SelectedPlayer, Index, $"P{SelectedPlayer + 1}Slot" + (Index != 9 ? (Index + 1).ToString() : "Knife") + "ItemCB");
+            Item SelectedItem = ItemCombo.SelectedItem as Item;
 
             dynamic PropArray = null;
 
@@ -1023,13 +1138,23 @@ namespace GameX
             if ((e.IsSpinUp && PropArray.Length > NewValueIndex) || (!e.IsSpinUp && NewValueIndex >= 0))
             {
                 SE.Text = SE.Name.Contains("ReloadSpeed") ? ((decimal)PropArray[NewValueIndex]).ToString("F") : PropArray[NewValueIndex].ToString();
+
+                if (SE.Name.Contains("Capacity"))
+                {
+                    TextEdit QuantityTE = (TextEdit)GetInventoryControl(SelectedPlayer, Index, $"P{SelectedPlayer + 1}Slot" + (Index != 9 ? (Index + 1).ToString() : "Knife") + "QuantityTE");
+                    TextEdit MaxQuantityTE = (TextEdit)GetInventoryControl(SelectedPlayer, Index, $"P{SelectedPlayer + 1}Slot" + (Index != 9 ? (Index + 1).ToString() : "Knife") + "MaxQuantityTE");
+
+                    QuantityTE.Text = PropArray[NewValueIndex].ToString();
+                    MaxQuantityTE.Text = PropArray[NewValueIndex].ToString();
+                }
+
                 SlotCollection[Index].UpdateItemToMemory(Initialized);
             }
             else
                 e.Handled = true;
         }
 
-        private void InventoryTextEditNumeric_EditValueChanging(object sender, DevExpress.XtraEditors.Controls.ChangingEventArgs e)
+        private void InventoryTextEditNumeric_EditValueChanging(object sender, ChangingEventArgs e)
         {
             bool IsValid = int.TryParse(e.NewValue.ToString(), out _);
 
@@ -1038,14 +1163,20 @@ namespace GameX
 
             TextEdit TE = sender as TextEdit;
             int Index = !TE.Name.Contains("Knife") ? int.Parse(TE.Name[6].ToString()) - 1 : 9;
+            int SelectedPlayer = int.Parse(TE.Name[1].ToString()) - 1;
 
-            int SelectedPlayer = (int)InventoryPlayerSelectionRG.EditValue;
             Slot[] SlotCollection = Biohazard.Players[SelectedPlayer].Inventory.LoadoutSlots;
 
+            ComboBoxEdit CBE = (ComboBoxEdit)GetInventoryControl(SelectedPlayer, Index, Index != 9 ? $"P{SelectedPlayer + 1}Slot{Index + 1}ItemCB" : $"P{SelectedPlayer + 1}SlotKnifeItemCB");
+            Item SelectedItem = CBE.SelectedItem as Item;
+
+            int NewValue = int.Parse(e.NewValue.ToString());
+            NewValue = Utility.Clamp(NewValue, 0, SelectedItem.Capacity[SelectedItem.Capacity.Length - 1]);
+
             if (TE.Name.Contains("MaxQuantity"))
-                SlotCollection[Index].ToMemory.MaxQuantity = int.Parse(e.NewValue.ToString());
+                SlotCollection[Index].ToMemory.MaxQuantity = NewValue;
             else if (TE.Name.Contains("Quantity"))
-                SlotCollection[Index].ToMemory.Quantity = int.Parse(e.NewValue.ToString());
+                SlotCollection[Index].ToMemory.Quantity = NewValue;
             else
                 return;
 
@@ -1073,14 +1204,16 @@ namespace GameX
 
             ComboBoxEdit CBE = sender as ComboBoxEdit;
             int Index = !CBE.Name.Contains("Knife") ? int.Parse(CBE.Name[6].ToString()) - 1 : 9;
+            int SelectedPlayer = int.Parse(CBE.Name[1].ToString()) - 1;
+            Slot[] SlotCollection = Biohazard.Players[SelectedPlayer].Inventory.LoadoutSlots;
 
             Item SelectedItem = CBE.SelectedItem as Item;
 
-            Image Final = Image.FromFile(@"addons/GameX.Biohazard.5/images/inventory/slot.png");
-            SlotPicBoxes[Index].Image = Final;
-
-            int SelectedPlayer = (int)InventoryPlayerSelectionRG.EditValue;
-            Slot[] SlotCollection = Biohazard.Players[SelectedPlayer].Inventory.LoadoutSlots;
+            if ((int)InventoryPlayerSelectionRG.EditValue == SelectedPlayer)
+            {
+                Image Final = ImageHelper.GetImageFromFile(@"addons/GameX.Biohazard.5/images/inventory/" + SelectedItem.Alias + ".png");
+                SlotPicBoxes[Index].Image = Final;
+            }
 
             if (SlotCollection[Index].BeingUpdatedOnGUI)
                 return;
@@ -1145,7 +1278,7 @@ namespace GameX
             Character CBEChar = CharacterCombos[Index].SelectedItem as Character;
             Costume CBECos = CBE.SelectedItem as Costume;
 
-            Image Portrait = Utility.GetImageFromFile(@"addons/GameX.Biohazard.5/images/character/" + CBECos.Portrait);
+            Image Portrait = ImageHelper.GetImageFromFile(@"addons/GameX.Biohazard.5/images/character/" + CBECos.Portrait);
 
             if (Portrait != null)
                 CharPicBoxes[Index].Image = Portrait;
@@ -1250,8 +1383,15 @@ namespace GameX
                 else if (CE.Name.Contains("Slot"))
                 {
                     int Index = !CE.Name.Contains("Knife") ? int.Parse(CE.Name[6].ToString()) - 1 : 9;
-                    int SelectedPlayer = (int)InventoryPlayerSelectionRG.EditValue;
+                    int SelectedPlayer = int.Parse(CE.Name[1].ToString()) - 1;
                     Biohazard.Players[SelectedPlayer].Inventory.LoadoutSlots[Index].UpdateItemToMemory(Initialized);
+                }
+                else if (CE.Name.Equals("HandTremorCheckEdit"))
+                {
+                    if (!Initialized)
+                        return;
+
+                    Biohazard.DisableHandTremor(CE.Checked);
                 }
             }
             else if (sender.GetType() == typeof(CheckButton))
@@ -1301,6 +1441,13 @@ namespace GameX
 
                     Biohazard.EnableColorFilter(SB.Text.Equals("Disable"));
                 }
+                else if (SB.Name.Equals("ControllerAimButton"))
+                {
+                    if (!Initialized)
+                        return;
+
+                    Biohazard.EnableControllerAim(SB.Text.Equals("Disable"));
+                }
             }
         }
 
@@ -1310,7 +1457,20 @@ namespace GameX
 
             if (RG.Name.Equals("InventoryPlayerSelectionRG"))
             {
-                PlayerInventoryTabControl.SelectedTabPageIndex = (int)InventoryPlayerSelectionRG.EditValue;
+                int SelectedPlayer = (int)InventoryPlayerSelectionRG.EditValue;
+                Slot[] SlotCollection = Biohazard.Players[SelectedPlayer].Inventory.LoadoutSlots;
+
+                PlayerInventoryTabControl.SelectedTabPageIndex = SelectedPlayer;
+
+                for (int i = 0; i < 10; i++)
+                {
+                    SlotCollection[i].BeingUpdatedOnGUI = true;
+
+                    ComboBoxEdit CBE = (ComboBoxEdit)GetInventoryControl(SelectedPlayer, i, i != 9 ? $"P{SelectedPlayer + 1}Slot{i + 1}ItemCB" : $"P{SelectedPlayer + 1}SlotKnifeItemCB");
+                    InventoryComboBox_IndexChanged(CBE, null);
+
+                    SlotCollection[i].BeingUpdatedOnGUI = false;
+                }
             }
         }
 
@@ -1362,6 +1522,148 @@ namespace GameX
                     break;
             }
         }
+
+        #endregion
+
+        #region GameX Calls
+
+        private void GameX_CheckControls()
+        {
+            SimpleButton[] EnableDisable =
+            {
+                ColorFilterButton,
+                ControllerAimButton
+            };
+
+            CheckEdit[] CheckUncheck =
+            {
+                WeskerGlassesCheckEdit,
+                WeskerNoDashCostCheckEdit,
+                MeleeCameraCheckEdit,
+                ReunionSpecialMovesCheckEdit,
+                HandTremorCheckEdit
+            };
+
+            foreach (CheckEdit CE in CheckUncheck)
+            {
+                switch (CE.Name)
+                {
+                    case "WeskerGlassesCheckEdit":
+                        if (CE.Checked)
+                            Biohazard.WeskerNoSunglassDrop(true);
+                        break;
+                    case "WeskerNoDashCostCheckEdit":
+                        if (CE.Checked)
+                            Biohazard.WeskerNoDashCost(true);
+                        break;
+                    case "MeleeCameraCheckEdit":
+                        if (CE.Checked)
+                            Biohazard.DisableMeleeCamera(true);
+                        break;
+                    case "ReunionSpecialMovesCheckEdit":
+                        if (CE.Checked)
+                        {
+                            CE.CheckedChanged -= EnableDisable_StateChanged;
+                            CE.Checked = Biohazard.EnableReunionSpecialMoves(true);
+                            CE.CheckedChanged += EnableDisable_StateChanged;
+                        }
+                        break;
+                    case "HandTremorCheckEdit":
+                        if (CE.Checked)
+                            Biohazard.DisableHandTremor(true);
+                        break;
+                }
+            }
+
+            foreach (SimpleButton SB in EnableDisable)
+            {
+                switch (SB.Name)
+                {
+                    case "ColorFilterButton":
+                        if (SB.Text == "Disable")
+                            Biohazard.EnableColorFilter(true);
+
+                        break;
+                    case "ControllerAimButton":
+                        if (SB.Text == "Disable")
+                            Biohazard.EnableControllerAim(true);
+
+                        break;
+                }
+            }
+
+            Melee_ApplyComboBox(null, true);
+            WeaponPlacement_IndexChanged(WeaponPlacementComboBox, null);
+        }
+
+        private void GameX_Start()
+        {
+            try
+            {
+                Biohazard.StartModule();
+
+                GameX_CheckControls();
+
+                Biohazard.NoFileChecking(true);
+                Biohazard.OnlineCharSwapFixes(true);
+            }
+            catch (Exception Ex)
+            {
+                Terminal.WriteLine(Ex);
+            }
+        }
+
+        private void GameX_End()
+        {
+            try
+            {
+                if (!Biohazard.ModuleStarted)
+                    return;
+
+                if (MeleeAnytimeSwitch.IsOn)
+                    MeleeAnytimeSwitch.Toggle();
+
+                Biohazard.NoFileChecking(false);
+                Biohazard.OnlineCharSwapFixes(false);
+                Biohazard.EnableColorFilter(false);
+                Biohazard.WeskerNoSunglassDrop(false);
+                Biohazard.WeskerNoDashCost(false);
+                Biohazard.SetWeaponPlacement(0);
+                Biohazard.DisableMeleeCamera(false);
+                Biohazard.EnableReunionSpecialMoves(false);
+                Biohazard.EnableControllerAim(false);
+
+                Biohazard.FinishModule();
+            }
+            catch (Exception Ex)
+            {
+                Terminal.WriteLine(Ex);
+            }
+        }
+
+        private void GameX_Update()
+        {
+            try
+            {
+                if (!Biohazard.ModuleStarted)
+                    return;
+
+                Character_Update();
+            }
+            catch (Exception Ex)
+            {
+                Terminal.WriteLine(Ex);
+            }
+        }
+
+        private static void GameX_Keyboard(int input)
+        {
+
+        }
+
+        #endregion
+
+        #region Methods
 
         private void Melee_ApplyComboBox(ComboBoxEdit CE, bool ApplyAll = false)
         {
@@ -1423,141 +1725,6 @@ namespace GameX
                 }
             }
         }
-
-        #endregion
-
-        #region GameX Calls
-
-        private void GameX_CheckControls()
-        {
-            SimpleButton[] EnableDisable =
-            {
-                ColorFilterButton,
-            };
-
-            CheckEdit[] CheckUncheck =
-            {
-                WeskerGlassesCheckEdit,
-                WeskerNoDashCostCheckEdit,
-                MeleeCameraCheckEdit,
-                ReunionSpecialMovesCheckEdit
-            };
-
-            foreach (CheckEdit CE in CheckUncheck)
-            {
-                switch (CE.Name)
-                {
-                    case "WeskerGlassesCheckEdit":
-                        if (CE.Checked)
-                            Biohazard.WeskerNoSunglassDrop(true);
-
-                        break;
-                    case "WeskerNoDashCostCheckEdit":
-                        if (CE.Checked)
-                            Biohazard.WeskerNoDashCost(true);
-
-                        break;
-                    case "MeleeCameraCheckEdit":
-                        if (CE.Checked)
-                            Biohazard.DisableMeleeCamera(true);
-
-                        break;
-                    case "ReunionSpecialMovesCheckEdit":
-                        if (CE.Checked)
-                        {
-                            CE.CheckedChanged -= EnableDisable_StateChanged;
-                            CE.Checked = Biohazard.EnableReunionSpecialMoves(true);
-                            CE.CheckedChanged += EnableDisable_StateChanged;
-                        }
-
-                        break;
-                }
-            }
-
-            foreach (SimpleButton SB in EnableDisable)
-            {
-                switch (SB.Name)
-                {
-                    case "ColorFilterButton":
-                    {
-                        if (SB.Text == "Disable")
-                            Biohazard.EnableColorFilter(true);
-
-                        break;
-                    }
-                }
-            }
-
-            Melee_ApplyComboBox(null, true);
-            WeaponPlacement_IndexChanged(WeaponPlacementComboBox, null);
-        }
-
-        private void GameX_Start()
-        {
-            try
-            {
-                Biohazard.StartModule();
-
-                GameX_CheckControls();
-
-                Biohazard.NoFileChecking(true);
-                Biohazard.OnlineCharSwapFixes(true);
-            }
-            catch (Exception Ex)
-            {
-                Terminal.WriteLine(Ex.Message);
-            }
-        }
-
-        private void GameX_End()
-        {
-            try
-            {
-                if (!Biohazard.ModuleStarted)
-                    return;
-
-                if (MeleeAnytimeSwitch.IsOn)
-                    MeleeAnytimeSwitch.Toggle();
-
-                Biohazard.NoFileChecking(false);
-                Biohazard.OnlineCharSwapFixes(false);
-                Biohazard.EnableColorFilter(false);
-                Biohazard.WeskerNoSunglassDrop(false);
-                Biohazard.WeskerNoDashCost(false);
-                Biohazard.SetWeaponPlacement(0);
-                Biohazard.DisableMeleeCamera(false);
-                Biohazard.EnableReunionSpecialMoves(false);
-
-                Biohazard.FinishModule();
-            }
-            catch (Exception Ex)
-            {
-                Terminal.WriteLine(Ex.Message);
-            }
-        }
-
-        private void GameX_Update()
-        {
-            try
-            {
-                if (!Biohazard.ModuleStarted)
-                    return;
-
-                Character_Update();
-            }
-            catch (Exception Ex)
-            {
-                Terminal.WriteLine(Ex.ToString());
-            }
-        }
-
-        private static void GameX_Keyboard(int input)
-        {
-        }
-
-        #endregion
-
-        #region General Read/Write
 
         private void Character_Update()
         {
@@ -1687,7 +1854,7 @@ namespace GameX
                 // Inventory //
                 for (int slot = 0; slot < 10; slot++)
                 {
-                    if (i != 0)
+                    if (i > 1)
                         continue;
 
                     Biohazard.Players[i].Inventory.LoadoutSlots[slot].Update();

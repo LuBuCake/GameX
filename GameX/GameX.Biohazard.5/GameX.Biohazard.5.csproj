@@ -264,6 +264,7 @@
     <Compile Include="Enum\WeaponModeEnum.cs" />
     <Compile Include="Database\Type\Simple.cs" />
     <Compile Include="Database\ViewBag\TemporaryItemViewBag.cs" />
+    <Compile Include="Helpers\ImageHelper.cs" />
     <Compile Include="Helpers\MarshalType.cs" />
     <Compile Include="Helpers\Threading.cs" />
     <Compile Include="Database\Type\Settings.cs" />
@@ -278,14 +279,14 @@
     <Compile Include="Database\Type\Inventory.cs" />
     <Compile Include="Database\Type\Player.cs" />
     <Compile Include="Helpers\Utility.cs" />
-    <Compile Include="Helpers\Processes.cs" />
+    <Compile Include="Helpers\ProcessHelper.cs" />
     <Compile Include="App.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="App.Designer.cs">
       <DependentUpon>App.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\Peaker.cs" />
+    <Compile Include="Helpers\Message.cs" />
     <Compile Include="Helpers\Serializer.cs" />
     <Compile Include="Modules\Terminal.cs" />
     <Compile Include="Modules\Keyboard.cs" />

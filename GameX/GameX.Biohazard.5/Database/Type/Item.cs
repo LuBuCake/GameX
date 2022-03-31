@@ -8,7 +8,7 @@ namespace GameX.Database.Type
         public ItemGroupEnum Group { get; set; }
         public int GroupIndex { get; set; }
         public string Name { get; set; }
-        public string Portrait { get; set; }
+        public string Alias { get; set; }
         public int[] Firepower { get; set; }
         public double[] ReloadSpeed { get; set; }
         public int[] Capacity { get; set; }

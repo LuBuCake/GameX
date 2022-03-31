@@ -4,27 +4,26 @@ using DevExpress.XtraEditors;
 using GameX.Helpers;
 using GameX.Modules;
 using GameX.Enum;
+using System.Diagnostics;
 
 namespace GameX.Modules
 {
     public static class Terminal
     {
         private static App Main { get; set; }
-        private static string OutPut { get; set; }
-        public static int ActiveInterface { get; private set; }
+        private static string DisplayedText { get; set; }
 
         public static void StartModule(App Instance)
         {
             Main = Instance;
-            OutPut = "";
-            ActiveInterface = 0;
+            DisplayedText = "";
             WriteLine("[Console] Module started successfully.");
         }
 
         public static void ClearConsole_Click(object sender, EventArgs e)
         {
-            OutPut = "";
-            Main.ConsoleOutputMemoEdit.Text = OutPut;
+            DisplayedText = "";
+            Main.ConsoleOutputMemoEdit.Text = DisplayedText;
         }
 
         public static void ScrollToEnd()
@@ -201,39 +200,38 @@ namespace GameX.Modules
             TE.Text = "";
         }
 
-        public static void WriteMessage(string Message, int Interface)
+        public static void WriteLine(Exception Ex)
         {
-            string Current = OutPut;
+            string Input = $"[Stack][{Ex.GetType().Name}] {new StackTrace(Ex).GetFrame(0).GetMethod().Name}: {Ex.Message}";
+
+            string Current = DisplayedText;
 
             if (string.IsNullOrWhiteSpace(Current))
-                Current = Message;
+                Current = Input;
             else
-                Current += Environment.NewLine + Message;
+                Current += Environment.NewLine + Input;
 
-            OutPut = Current;
-
-            if (Interface != ActiveInterface)
-                return;
+            DisplayedText = Current;
 
             if (Main.ConsoleOutputMemoEdit.InvokeRequired)
             {
-                Main.ConsoleOutputMemoEdit.Invoke((MethodInvoker) delegate
+                Main.ConsoleOutputMemoEdit.Invoke((MethodInvoker)delegate
                 {
-                    Main.ConsoleOutputMemoEdit.Text = OutPut;
+                    Main.ConsoleOutputMemoEdit.Text = DisplayedText;
                     ScrollToEnd();
                 });
                 return;
             }
 
-            Main.ConsoleOutputMemoEdit.Text = OutPut;
+            Main.ConsoleOutputMemoEdit.Text = DisplayedText;
             ScrollToEnd();
         }
 
-        public static void WriteLine(string Output, MessageBoxTypeEnum MessageBox = MessageBoxTypeEnum.None)
+        public static void WriteLine(string Input, MessageBoxTypeEnum MessageBox = MessageBoxTypeEnum.None)
         {
             if (MessageBox != MessageBoxTypeEnum.None)
             {
-                string Message = Output;
+                string Message = Input;
 
                 if (Message.Contains("[App] "))
                     Message = Message.Replace("[App] ", "");
@@ -264,26 +262,26 @@ namespace GameX.Modules
                 }
             }
 
-            string Current = OutPut;
+            string Current = DisplayedText;
 
             if (string.IsNullOrWhiteSpace(Current))
-                Current = Output;
+                Current = Input;
             else
-                Current += Environment.NewLine + Output;
+                Current += Environment.NewLine + Input;
 
-            OutPut = Current;
+            DisplayedText = Current;
 
             if (Main.ConsoleOutputMemoEdit.InvokeRequired)
             {
                 Main.ConsoleOutputMemoEdit.Invoke((MethodInvoker) delegate
                 {
-                    Main.ConsoleOutputMemoEdit.Text = OutPut;
+                    Main.ConsoleOutputMemoEdit.Text = DisplayedText;
                     ScrollToEnd();
                 });
                 return;
             }
 
-            Main.ConsoleOutputMemoEdit.Text = OutPut;
+            Main.ConsoleOutputMemoEdit.Text = DisplayedText;
             ScrollToEnd();
         }
     }

@@ -106,7 +106,7 @@ namespace GameX.Modules
 
             if (!string.IsNullOrEmpty(ModuleName))
             {
-                IntPtr ModuleBaseAddress = Processes.GetBaseAddressFromModule(_Process, ModuleName);
+                IntPtr ModuleBaseAddress = ProcessHelper.GetBaseAddressFromModule(_Process, ModuleName);
 
                 if (ModuleBaseAddress != IntPtr.Zero)
                     PointerResult += ModuleBaseAddress.ToInt32();

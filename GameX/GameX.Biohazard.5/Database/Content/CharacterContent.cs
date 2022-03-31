@@ -29,7 +29,7 @@ namespace GameX.Database.Content
                 }
                 catch (Exception Ex)
                 {
-                    Terminal.WriteLine(Ex.Message);
+                    Terminal.WriteLine(Ex);
                     return new List<Character>();
                 }
             }
@@ -292,7 +292,7 @@ namespace GameX.Database.Content
             }
             catch (Exception Ex)
             {
-                Terminal.WriteLine(Ex.Message);
+                Terminal.WriteLine(Ex);
             }
 
             return obj;

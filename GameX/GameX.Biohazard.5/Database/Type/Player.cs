@@ -213,26 +213,26 @@ namespace GameX.Database.Type
             switch (Character)
             {
                 case (int)CharacterEnum.Chris:
-                    Default = db.Items.Where(x => x.Name == "Knife (Chris)").FirstOrDefault();
+                    Default = db.AllItems.Where(x => x.Name == "Knife (Chris)").FirstOrDefault();
                     break;
                 case (int)CharacterEnum.Sheva:
-                    Default = db.Items.Where(x => x.Name == "Knife (Sheva)").FirstOrDefault();
+                    Default = db.AllItems.Where(x => x.Name == "Knife (Sheva)").FirstOrDefault();
                     break;
                 case (int)CharacterEnum.Jill:
-                    Default = db.Items.Where(x => x.Name == "Knife (Jill)").FirstOrDefault();
+                    Default = db.AllItems.Where(x => x.Name == "Knife (Jill)").FirstOrDefault();
                     break;
                 case (int)CharacterEnum.Wesker:
-                    Default = db.Items.Where(x => x.Name == "Knife (Wesker)").FirstOrDefault();
+                    Default = db.AllItems.Where(x => x.Name == "Knife (Wesker)").FirstOrDefault();
                     break;
                 case (int)CharacterEnum.Josh:
                 case (int)CharacterEnum.Excella:
                 case (int)CharacterEnum.Barry:
                 case (int)CharacterEnum.Rebecca:
                 case (int)CharacterEnum.Irving:
-                    Default = db.Items.Where(x => x.Name == "Knife (Jill) (DLC)").FirstOrDefault();
+                    Default = db.AllItems.Where(x => x.Name == "Knife (Jill) (DLC)").FirstOrDefault();
                     break;
                 default:
-                    Default = db.Items.Where(x => x.Name == "Knife (Chris)").FirstOrDefault();
+                    Default = db.AllItems.Where(x => x.Name == "Knife (Chris)").FirstOrDefault();
                     break;
             }
 
@@ -241,7 +241,7 @@ namespace GameX.Database.Type
 
         public void SetRapidFire(bool Enable)
         {
-            for (int slot = 0; slot < 9; slot++)
+            for (int slot = 0; slot < 11; slot++)
                 Inventory.RealTimeSlots[slot].RapidFire = Enable;
         }
 
@@ -249,25 +249,33 @@ namespace GameX.Database.Type
         {
             DB db = DBContext.GetDatabase();
 
-            for (int slot = 0; slot < 9; slot++)
+            for (int slot = 0; slot < 11; slot++)
             {
+                Item dbItem = (from x in db.AllItems
+                               where x.ID == Inventory.RealTimeSlots[slot].ID
+                               select x).FirstOrDefault();
+
+                if (dbItem == null)
+                {
+                    dbItem = db.AllItems.Where(x => x.Name == "Nothing").FirstOrDefault();
+                    Inventory.RealTimeSlots[slot].SetItem(dbItem);
+                }
+
+                if (dbItem.Group == ItemGroupEnum.Default ||
+                    dbItem.Group == ItemGroupEnum.Melee ||
+                    dbItem.Group == ItemGroupEnum.Explosive ||
+                    dbItem.Group == ItemGroupEnum.Ammunition ||
+                    dbItem.Group == ItemGroupEnum.Heal)
+                    continue;
+
                 int CurrentCapacity = Inventory.RealTimeSlots[slot].Capacity;
 
                 if (CurrentCapacity > 13)
                     CurrentCapacity -= 0x80;
 
-                Item dbItem = (from x in db.Items
-                               where x.ID == Inventory.RealTimeSlots[slot].ID || (Inventory.RealTimeSlots[slot].ID == 256 && x.ID == 0)
-                               select x).FirstOrDefault();
-
-                if (dbItem == null)
-                {
-                    dbItem = db.Items.Where(x => x.Name == "Nothing").FirstOrDefault();
-                    Inventory.RealTimeSlots[slot].SetItem(dbItem);
-                }
-
                 CurrentCapacity = (byte)Utility.Clamp(CurrentCapacity, 0, dbItem.Capacity.Length - 1);
 
+                Inventory.RealTimeSlots[slot].Quantity = dbItem.Capacity[CurrentCapacity];
                 Inventory.RealTimeSlots[slot].MaxQuantity = dbItem.Capacity[CurrentCapacity];
                 Inventory.RealTimeSlots[slot].Capacity = (byte)(CurrentCapacity + (Enable ? 0x80 : 0x00));
             }

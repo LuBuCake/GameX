@@ -12,11 +12,13 @@ namespace GameX.Database.Type
         {
             this.PlayerIndex = PlayerIndex;
             LoadoutSlots = new Slot[10];
-            RealTimeSlots = new Slot[10];
+            RealTimeSlots = new Slot[11];
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 11; i++)
             {
-                LoadoutSlots[i] = new Slot(SlotType.Loadout, GUI, PlayerIndex, i);
+                if (i < 10)
+                    LoadoutSlots[i] = new Slot(SlotType.Loadout, GUI, PlayerIndex, i);
+
                 RealTimeSlots[i] = new Slot(SlotType.RealTime, GUI, PlayerIndex, i);
             }
         }

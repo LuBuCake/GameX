@@ -31,8 +31,8 @@ namespace GameX.Database.Type
             ToMemory = new TemporaryItemViewBag();
 
             DB db = DBContext.GetDatabase();
-            FromMemoryItem = db.Items.Where(x => x.Name == "Nothing").FirstOrDefault();
-            ToMemoryItem = db.Items.Where(x => x.Name == "Nothing").FirstOrDefault();
+            FromMemoryItem = db.AllItems.Where(x => x.Name == "Nothing").FirstOrDefault();
+            ToMemoryItem = db.AllItems.Where(x => x.Name == "Nothing").FirstOrDefault();
         }
 
         private ComboBoxEdit ItemCB
@@ -200,12 +200,12 @@ namespace GameX.Database.Type
         {
             DB db = DBContext.GetDatabase();
 
-            Item dbItem = (from x in db.Items
+            Item dbItem = (from x in db.AllItems
                            where x.ID == item.ID
                            select x).FirstOrDefault();
 
             if (dbItem == null)
-                dbItem = db.Items.Where(x => x.Name == "Nothing").FirstOrDefault();
+                dbItem = db.AllItems.Where(x => x.Name == "Nothing").FirstOrDefault();
 
             item = ValidateTemporaryItem(item, dbItem);
 
@@ -265,11 +265,11 @@ namespace GameX.Database.Type
             Piercing = 0;
             Range = 0;
             Scope = 0;
-            RapidFire = RapidFireCheckEdit.Checked;
+            RapidFire = Mode == SlotType.Loadout ? RapidFireCheckEdit.Checked : false;
 
             DB db = DBContext.GetDatabase();
 
-            Item dbItem = (from x in db.Items
+            Item dbItem = (from x in db.AllItems
                            where x.ID == item.ID
                            select x).FirstOrDefault();
 
@@ -300,11 +300,11 @@ namespace GameX.Database.Type
             Piercing = item.Piercing;
             Range = item.Range;
             Scope = item.Scope;
-            RapidFire = RapidFireCheckEdit.Checked;
+            RapidFire = Mode == SlotType.Loadout ? RapidFireCheckEdit.Checked : false;
 
             DB db = DBContext.GetDatabase();
 
-            Item dbItem = (from x in db.Items
+            Item dbItem = (from x in db.AllItems
                            where x.ID == item.ID
                            select x).FirstOrDefault();
 
@@ -370,13 +370,13 @@ namespace GameX.Database.Type
         {
             DB db = DBContext.GetDatabase();
 
-            Item item = (from x in db.Items
+            Item item = (from x in db.AllItems
                          where x.ID == ID
                          select x).FirstOrDefault();
 
             if (item == null)
             {
-                item = db.Items.Where(x => x.Name == "Nothing").FirstOrDefault();
+                item = db.AllItems.Where(x => x.Name == "Nothing").FirstOrDefault();
                 SetItem(item);
             }
 

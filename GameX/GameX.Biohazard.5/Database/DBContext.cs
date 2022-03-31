@@ -3,13 +3,15 @@ using System.IO;
 using GameX.Enum;
 using GameX.Database.Content;
 using GameX.Database.Type;
+using DevExpress.Office.Utils;
 
 namespace GameX.Database
 {
     public class DB
     {
         public List<Character> Characters { get; set; }
-        public List<Item> Items { get; set; }
+        public List<Item> AllItems { get; set; }
+        public List<Item> ComboBoxItems { get; set; }
         public List<Move> MovementMoves { get; set; }
         public List<Move> DamageMoves { get; set; }
         public List<Move> ActionMoves { get; set; }
@@ -52,7 +54,12 @@ namespace GameX.Database
             }
 
             Database.Characters = CharacterContent.GetCollection(WriteChars);
-            Database.Items = ItemContent.GetCollection(WriteItems);
+            Database.AllItems = ItemContent.GetCollection(WriteItems);
+
+            List<Item> ComboBoxItems = new List<Item>(Database.AllItems);
+            ComboBoxItems.RemoveAll(x => x.Name == "Hand To Hand");
+
+            Database.ComboBoxItems = ComboBoxItems;
             Database.MovementMoves = MoveContent.GetCollection(MoveTypeEnum.Movement);
             Database.DamageMoves = MoveContent.GetCollection(MoveTypeEnum.Damage);
             Database.ActionMoves = MoveContent.GetCollection(MoveTypeEnum.Action);

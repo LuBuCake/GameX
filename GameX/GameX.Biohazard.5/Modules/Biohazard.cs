@@ -81,6 +81,30 @@ namespace GameX.Modules
             }
         }
 
+        public static float Timer
+        {
+            get { return Memory.Read<float>("re5dx9.exe", 0x00DA2D6C, 0x614, 0x4DC); }
+            set { Memory.Write(value, "re5dx9.exe", 0x00DA2D6C, 0x614, 0x4DC); }
+        }
+
+        public static float ComboTimer
+        {
+            get { return Memory.Read<float>("re5dx9.exe", 0x00DA383C, 0x954, 0x26D0); }
+            set { Memory.Write(value, "re5dx9.exe", 0x00DA383C, 0x954, 0x26D0); }
+        }
+
+        public static float ComboBonusTimer
+        {
+            get { return Memory.Read<float>("re5dx9.exe", 0x00DA383C, 0x954, 0x26D8); }
+            set { Memory.Write(value, "re5dx9.exe", 0x00DA383C, 0x954, 0x26D8); }
+        }
+
+        public static byte MeleeKillSeconds
+        {
+            get { return Memory.Read<byte>("re5dx9.exe", 0x329736); }
+            set { Memory.Write(value, "re5dx9.exe", 0x329736); }
+        }
+
         #endregion
 
         #region Methods
@@ -194,6 +218,23 @@ namespace GameX.Modules
             }
         }
 
+        public static void EnableControllerAim(bool Enable)
+        {
+            Memory.WriteRawAddress(0x00B66ACD, Enable ? new byte[] { 0xEB } : new byte[] { 0x75 });
+            Memory.WriteRawAddress(0x00B67FD0, Enable ? new byte[] { 0x90, 0X90 } : new byte[] { 0x74, 0x18 });
+            Memory.WriteRawAddress(0x00B84D79, Enable ? new byte[] { 0x90, 0X90 } : new byte[] { 0x74, 0X3A });
+            Memory.WriteRawAddress(0x00B74940, Enable ? new byte[] { 0xE9, 0xC5, 0x01, 0x00, 0x00, 0x90 } : new byte[] { 0x0F, 0x85, 0xC4, 0x01, 0x00, 0x00 });
+            Memory.WriteRawAddress(0x00B85A80, Enable ? new byte[] { 0x90, 0x90, 0x90, 0x90, 0x90, 0x90 } : new byte[] { 0x0F, 0x84, 0xC4, 0x06, 0x00, 0x00 });
+            Memory.WriteRawAddress(0x00B85AEA, Enable ? new byte[] { 0x90, 0x90, 0x90, 0x90, 0x90, 0x90 } : new byte[] { 0x0F, 0x84, 0x44, 0x03, 0x00, 0x00 });
+            Memory.WriteRawAddress(0x00B877DB, Enable ? new byte[] { 0x90, 0x90 } : new byte[] { 0x75, 0x16 });
+            Memory.WriteRawAddress(0x00B87869, Enable ? new byte[] { 0x90, 0x90 } : new byte[] { 0x74, 0x24 });
+            Memory.WriteRawAddress(0x00B87640, Enable ? new byte[] { 0xEB } : new byte[] { 0x74 });
+            Memory.WriteRawAddress(0x00B87710, Enable ? new byte[] { 0x90, 0x90 } : new byte[] { 0x75, 0x16 });
+            Memory.WriteRawAddress(0x00B877AC, Enable ? new byte[] { 0xEB } : new byte[] { 0x74 });
+            Memory.WriteRawAddress(0x00B8721A, Enable ? new byte[] { 0xEB } : new byte[] { 0x74 });
+            Memory.WriteRawAddress(0x00B692C1, Enable ? new byte[] { 0x80, 0xC2, 0x01 } : new byte[] { 0x80, 0xC2, 0x02 });
+        }
+
         public static void SetWeaponPlacement(int Mode)
         {
             switch (Mode)
@@ -229,6 +270,11 @@ namespace GameX.Modules
             Memory.WriteBytes(Enable ? new byte[] { 0x31, 0xD2, 0xEB, 0x02, 0x90, 0x90 } : new byte[] { 0x8B, 0x90, 0x28, 0x01, 0x00, 0x00 }, "re5dx9.exe", 0x76DFBD);
             Memory.WriteBytes(Enable ? new byte[] { 0x31, 0xF6, 0xEB, 0x02, 0x90, 0x90 } : new byte[] { 0x8B, 0xB0, 0x28, 0x01, 0x00, 0x00 }, "re5dx9.exe", 0x76E03E);
             Memory.WriteBytes(Enable ? new byte[] { 0x0F, 0x57, 0xC0, 0xEB, 0x03, 0x90, 0x90, 0x90 } : new byte[] { 0xF3, 0x0F, 0x10, 0x83, 0xAC, 0x00, 0x00, 0x00 }, "re5dx9.exe", 0x7866C6);
+        }
+
+        public static void EnableStunRodMeleeKill(bool Enable)
+        {
+            Memory.WriteBytes(Enable ? new byte[] { 0x90, 0x90 } : new byte[] { 0x75, 0x39 }, "re5dx9.exe", 0x7BB2CD);
         }
 
         public static bool EnableReunionSpecialMoves(bool Enable)

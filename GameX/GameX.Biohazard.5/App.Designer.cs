@@ -38,14 +38,14 @@ namespace GameX
             this.TabPageChar = new DevExpress.XtraTab.XtraTabPage();
             this.TabPageCharGPPlayer4 = new DevExpress.XtraEditors.GroupControl();
             this.P4MiscGP = new DevExpress.XtraEditors.GroupControl();
-            this.P4WeaponModeGP = new DevExpress.XtraEditors.GroupControl();
-            this.P4WeaponModeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.P4HandnessGP = new DevExpress.XtraEditors.GroupControl();
-            this.P4HandnessComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P4InfiniteAmmoButton = new DevExpress.XtraEditors.CheckButton();
             this.P4RapidfireButton = new DevExpress.XtraEditors.CheckButton();
             this.P4InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P4UntargetableButton = new DevExpress.XtraEditors.CheckButton();
+            this.P4WeaponModeGP = new DevExpress.XtraEditors.GroupControl();
+            this.P4WeaponModeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P4HandnessGP = new DevExpress.XtraEditors.GroupControl();
+            this.P4HandnessComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P4FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
             this.P4HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.P4CharPictureBox = new DevExpress.XtraEditors.PictureEdit();
@@ -53,14 +53,14 @@ namespace GameX
             this.P4CharComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.TabPageCharGPPlayer3 = new DevExpress.XtraEditors.GroupControl();
             this.P3MiscGP = new DevExpress.XtraEditors.GroupControl();
-            this.P3WeaponModeGP = new DevExpress.XtraEditors.GroupControl();
-            this.P3WeaponModeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.P3HandnessGP = new DevExpress.XtraEditors.GroupControl();
-            this.P3HandnessComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P3InfiniteAmmoButton = new DevExpress.XtraEditors.CheckButton();
             this.P3RapidfireButton = new DevExpress.XtraEditors.CheckButton();
             this.P3InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P3UntargetableButton = new DevExpress.XtraEditors.CheckButton();
+            this.P3WeaponModeGP = new DevExpress.XtraEditors.GroupControl();
+            this.P3WeaponModeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P3HandnessGP = new DevExpress.XtraEditors.GroupControl();
+            this.P3HandnessComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P3FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
             this.P3HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.P3CharPictureBox = new DevExpress.XtraEditors.PictureEdit();
@@ -68,14 +68,14 @@ namespace GameX
             this.P3CharComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.TabPageCharGPPlayer2 = new DevExpress.XtraEditors.GroupControl();
             this.P2MiscGP = new DevExpress.XtraEditors.GroupControl();
-            this.P2WeaponModeGP = new DevExpress.XtraEditors.GroupControl();
-            this.P2WeaponModeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.P2HandnessGP = new DevExpress.XtraEditors.GroupControl();
-            this.P2HandnessComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P2InfiniteAmmoButton = new DevExpress.XtraEditors.CheckButton();
             this.P2RapidfireButton = new DevExpress.XtraEditors.CheckButton();
             this.P2InfiniteHPButton = new DevExpress.XtraEditors.CheckButton();
             this.P2UntargetableButton = new DevExpress.XtraEditors.CheckButton();
+            this.P2WeaponModeGP = new DevExpress.XtraEditors.GroupControl();
+            this.P2WeaponModeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P2HandnessGP = new DevExpress.XtraEditors.GroupControl();
+            this.P2HandnessComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P2FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
             this.P2HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.P2CharPictureBox = new DevExpress.XtraEditors.PictureEdit();
@@ -295,6 +295,156 @@ namespace GameX
             this.P1Slot9ItemCB = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P1Slot9FirepowerSE = new DevExpress.XtraEditors.SpinEdit();
             this.P2InventoryTab = new DevExpress.XtraTab.XtraTabPage();
+            this.P2FreezeAllCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2ScopeLB = new DevExpress.XtraEditors.LabelControl();
+            this.P2RangeLB = new DevExpress.XtraEditors.LabelControl();
+            this.P2Slot1EditGP = new DevExpress.XtraEditors.GroupControl();
+            this.P2Slot1FrozenCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot1RapidFireCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot1ScopeSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot1InfiniteAmmoCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot1RangeSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot1PiercingSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot1CriticalSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot1CapacitySE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot1ReloadSpeedSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot1MaxQuantityTE = new DevExpress.XtraEditors.TextEdit();
+            this.P2Slot1QuantityTE = new DevExpress.XtraEditors.TextEdit();
+            this.P2Slot1ItemCB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P2Slot1FirepowerSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2PiercingLB = new DevExpress.XtraEditors.LabelControl();
+            this.P2Slot2EditGP = new DevExpress.XtraEditors.GroupControl();
+            this.P2Slot2FrozenCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot2RapidFireCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot2InfiniteAmmoCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot2ScopeSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot2RangeSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot2PiercingSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot2CriticalSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot2CapacitySE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot2ReloadSpeedSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot2MaxQuantityTE = new DevExpress.XtraEditors.TextEdit();
+            this.P2Slot2QuantityTE = new DevExpress.XtraEditors.TextEdit();
+            this.P2Slot2ItemCB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P2Slot2FirepowerSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2CriticalLB = new DevExpress.XtraEditors.LabelControl();
+            this.P2Slot3EditGP = new DevExpress.XtraEditors.GroupControl();
+            this.P2Slot3FrozenCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot3RapidFireCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot3InfiniteAmmoCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot3ScopeSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot3RangeSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot3PiercingSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot3CriticalSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot3CapacitySE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot3ReloadSpeedSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot3MaxQuantityTE = new DevExpress.XtraEditors.TextEdit();
+            this.P2Slot3QuantityTE = new DevExpress.XtraEditors.TextEdit();
+            this.P2Slot3ItemCB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P2Slot3FirepowerSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2CapacityLB = new DevExpress.XtraEditors.LabelControl();
+            this.P2Slot4EditGP = new DevExpress.XtraEditors.GroupControl();
+            this.P2Slot4FrozenCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot4RapidFireCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot4InfiniteAmmoCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot4ScopeSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot4RangeSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot4PiercingSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot4CriticalSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot4CapacitySE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot4ReloadSpeedSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot4MaxQuantityTE = new DevExpress.XtraEditors.TextEdit();
+            this.P2Slot4QuantityTE = new DevExpress.XtraEditors.TextEdit();
+            this.P2Slot4ItemCB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P2Slot4FirepowerSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2ReloadSpeedLB = new DevExpress.XtraEditors.LabelControl();
+            this.P2Slot5EditGP = new DevExpress.XtraEditors.GroupControl();
+            this.P2Slot5FrozenCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot5RapidFireCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot5InfiniteAmmoCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot5ScopeSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot5RangeSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot5PiercingSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot5CriticalSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot5CapacitySE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot5ReloadSpeedSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot5MaxQuantityTE = new DevExpress.XtraEditors.TextEdit();
+            this.P2Slot5QuantityTE = new DevExpress.XtraEditors.TextEdit();
+            this.P2Slot5ItemCB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P2Slot5FirepowerSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2FirepowerLB = new DevExpress.XtraEditors.LabelControl();
+            this.P2Slot6EditGP = new DevExpress.XtraEditors.GroupControl();
+            this.P2Slot6FrozenCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot6ScopeSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot6RapidFireCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot6RangeSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot6InfiniteAmmoCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot6PiercingSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot6CriticalSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot6CapacitySE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot6ReloadSpeedSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot6MaxQuantityTE = new DevExpress.XtraEditors.TextEdit();
+            this.P2Slot6QuantityTE = new DevExpress.XtraEditors.TextEdit();
+            this.P2Slot6ItemCB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P2Slot6FirepowerSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2MaxQuantityLB = new DevExpress.XtraEditors.LabelControl();
+            this.P2Slot7EditGP = new DevExpress.XtraEditors.GroupControl();
+            this.P2Slot7FrozenCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot7ScopeSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot7RapidFireCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot7RangeSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot7InfiniteAmmoCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot7PiercingSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot7CriticalSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot7CapacitySE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot7ReloadSpeedSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot7MaxQuantityTE = new DevExpress.XtraEditors.TextEdit();
+            this.P2Slot7QuantityTE = new DevExpress.XtraEditors.TextEdit();
+            this.P2Slot7ItemCB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P2Slot7FirepowerSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2QuantityLB = new DevExpress.XtraEditors.LabelControl();
+            this.P2Slot8EditGP = new DevExpress.XtraEditors.GroupControl();
+            this.P2Slot8FrozenCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot8ScopeSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot8RapidFireCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot8RangeSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot8InfiniteAmmoCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot8PiercingSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot8CriticalSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot8CapacitySE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot8ReloadSpeedSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot8MaxQuantityTE = new DevExpress.XtraEditors.TextEdit();
+            this.P2Slot8QuantityTE = new DevExpress.XtraEditors.TextEdit();
+            this.P2Slot8ItemCB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P2Slot8FirepowerSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2SlotKnifeEditGP = new DevExpress.XtraEditors.GroupControl();
+            this.P2SlotKnifeFrozenCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2SlotKnifeScopeSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2SlotKnifeRapidFireCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2SlotKnifeRangeSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2SlotKnifeInfiniteAmmoCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2SlotKnifePiercingSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2SlotKnifeCriticalSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2SlotKnifeCapacitySE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2SlotKnifeReloadSpeedSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2SlotKnifeMaxQuantityTE = new DevExpress.XtraEditors.TextEdit();
+            this.P2SlotKnifeQuantityTE = new DevExpress.XtraEditors.TextEdit();
+            this.P2SlotKnifeFirepowerSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2SlotKnifeItemCB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P2Slot9EditGP = new DevExpress.XtraEditors.GroupControl();
+            this.P2Slot9FrozenCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot9ScopeSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot9RapidFireCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot9RangeSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot9InfiniteAmmoCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.P2Slot9PiercingSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot9CriticalSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot9CapacitySE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot9ReloadSpeedSE = new DevExpress.XtraEditors.SpinEdit();
+            this.P2Slot9MaxQuantityTE = new DevExpress.XtraEditors.TextEdit();
+            this.P2Slot9QuantityTE = new DevExpress.XtraEditors.TextEdit();
+            this.P2Slot9ItemCB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.P2Slot9FirepowerSE = new DevExpress.XtraEditors.SpinEdit();
             this.P3InventoryTab = new DevExpress.XtraTab.XtraTabPage();
             this.P4InventoryTab = new DevExpress.XtraTab.XtraTabPage();
             this.SlotsGP = new DevExpress.XtraEditors.GroupControl();
@@ -316,6 +466,10 @@ namespace GameX
             this.TabPageSettings = new DevExpress.XtraTab.XtraTabPage();
             this.TabPageSettingsGP = new DevExpress.XtraEditors.GroupControl();
             this.MiscModsGP = new DevExpress.XtraEditors.GroupControl();
+            this.MiscMiscGP = new DevExpress.XtraEditors.GroupControl();
+            this.HandTremorCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.ControllerAimGP = new DevExpress.XtraEditors.GroupControl();
+            this.ControllerAimButton = new DevExpress.XtraEditors.SimpleButton();
             this.ColorFilterGP = new DevExpress.XtraEditors.GroupControl();
             this.ColorFilterButton = new DevExpress.XtraEditors.SimpleButton();
             this.AboutPictureEdit = new DevExpress.XtraEditors.PictureEdit();
@@ -333,6 +487,11 @@ namespace GameX
             this.ConsoleOutputMemoEdit = new DevExpress.XtraEditors.MemoEdit();
             this.ClearConsoleSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.ConsoleInputTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.TabPageCharButton = new DevExpress.XtraEditors.SimpleButton();
+            this.TabPageMeleeButton = new DevExpress.XtraEditors.SimpleButton();
+            this.TabPageInventoryButton = new DevExpress.XtraEditors.SimpleButton();
+            this.TabPageSettingsButton = new DevExpress.XtraEditors.SimpleButton();
+            this.TabPageConsoleButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -584,6 +743,158 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.P1Slot9QuantityTE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1Slot9ItemCB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1Slot9FirepowerSE.Properties)).BeginInit();
+            this.P2InventoryTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2FreezeAllCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1EditGP)).BeginInit();
+            this.P2Slot1EditGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1FrozenCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1RapidFireCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1ScopeSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1InfiniteAmmoCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1RangeSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1PiercingSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1CriticalSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1CapacitySE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1ReloadSpeedSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1MaxQuantityTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1QuantityTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1ItemCB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1FirepowerSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2EditGP)).BeginInit();
+            this.P2Slot2EditGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2FrozenCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2RapidFireCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2InfiniteAmmoCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2ScopeSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2RangeSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2PiercingSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2CriticalSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2CapacitySE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2ReloadSpeedSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2MaxQuantityTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2QuantityTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2ItemCB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2FirepowerSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3EditGP)).BeginInit();
+            this.P2Slot3EditGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3FrozenCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3RapidFireCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3InfiniteAmmoCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3ScopeSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3RangeSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3PiercingSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3CriticalSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3CapacitySE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3ReloadSpeedSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3MaxQuantityTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3QuantityTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3ItemCB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3FirepowerSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4EditGP)).BeginInit();
+            this.P2Slot4EditGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4FrozenCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4RapidFireCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4InfiniteAmmoCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4ScopeSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4RangeSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4PiercingSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4CriticalSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4CapacitySE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4ReloadSpeedSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4MaxQuantityTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4QuantityTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4ItemCB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4FirepowerSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5EditGP)).BeginInit();
+            this.P2Slot5EditGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5FrozenCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5RapidFireCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5InfiniteAmmoCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5ScopeSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5RangeSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5PiercingSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5CriticalSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5CapacitySE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5ReloadSpeedSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5MaxQuantityTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5QuantityTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5ItemCB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5FirepowerSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6EditGP)).BeginInit();
+            this.P2Slot6EditGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6FrozenCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6ScopeSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6RapidFireCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6RangeSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6InfiniteAmmoCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6PiercingSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6CriticalSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6CapacitySE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6ReloadSpeedSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6MaxQuantityTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6QuantityTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6ItemCB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6FirepowerSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7EditGP)).BeginInit();
+            this.P2Slot7EditGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7FrozenCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7ScopeSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7RapidFireCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7RangeSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7InfiniteAmmoCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7PiercingSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7CriticalSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7CapacitySE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7ReloadSpeedSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7MaxQuantityTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7QuantityTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7ItemCB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7FirepowerSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8EditGP)).BeginInit();
+            this.P2Slot8EditGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8FrozenCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8ScopeSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8RapidFireCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8RangeSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8InfiniteAmmoCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8PiercingSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8CriticalSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8CapacitySE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8ReloadSpeedSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8MaxQuantityTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8QuantityTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8ItemCB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8FirepowerSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeEditGP)).BeginInit();
+            this.P2SlotKnifeEditGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeFrozenCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeScopeSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeRapidFireCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeRangeSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeInfiniteAmmoCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifePiercingSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeCriticalSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeCapacitySE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeReloadSpeedSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeMaxQuantityTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeQuantityTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeFirepowerSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeItemCB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9EditGP)).BeginInit();
+            this.P2Slot9EditGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9FrozenCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9ScopeSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9RapidFireCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9RangeSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9InfiniteAmmoCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9PiercingSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9CriticalSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9CapacitySE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9ReloadSpeedSE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9MaxQuantityTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9QuantityTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9ItemCB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9FirepowerSE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SlotsGP)).BeginInit();
             this.SlotsGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SlotKnifePictureBox.Properties)).BeginInit();
@@ -605,6 +916,11 @@ namespace GameX
             this.TabPageSettingsGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MiscModsGP)).BeginInit();
             this.MiscModsGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscMiscGP)).BeginInit();
+            this.MiscMiscGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HandTremorCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ControllerAimGP)).BeginInit();
+            this.ControllerAimGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ColorFilterGP)).BeginInit();
             this.ColorFilterGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AboutPictureEdit.Properties)).BeginInit();
@@ -679,10 +995,11 @@ namespace GameX
             // MasterTabControl
             // 
             this.MasterTabControl.HeaderAutoFill = DevExpress.Utils.DefaultBoolean.True;
-            this.MasterTabControl.Location = new System.Drawing.Point(12, 12);
+            this.MasterTabControl.Location = new System.Drawing.Point(12, 40);
             this.MasterTabControl.Name = "MasterTabControl";
             this.MasterTabControl.SelectedTabPage = this.TabPageChar;
-            this.MasterTabControl.Size = new System.Drawing.Size(1225, 467);
+            this.MasterTabControl.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
+            this.MasterTabControl.Size = new System.Drawing.Size(1225, 439);
             this.MasterTabControl.TabIndex = 18;
             this.MasterTabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.TabPageChar,
@@ -698,7 +1015,7 @@ namespace GameX
             this.TabPageChar.Controls.Add(this.TabPageCharGPPlayer2);
             this.TabPageChar.Controls.Add(this.TabPageCharGPPlayer1);
             this.TabPageChar.Name = "TabPageChar";
-            this.TabPageChar.Size = new System.Drawing.Size(1223, 438);
+            this.TabPageChar.Size = new System.Drawing.Size(1223, 437);
             this.TabPageChar.Text = "Character";
             // 
             // TabPageCharGPPlayer4
@@ -718,17 +1035,73 @@ namespace GameX
             // 
             // P4MiscGP
             // 
-            this.P4MiscGP.Controls.Add(this.P4WeaponModeGP);
-            this.P4MiscGP.Controls.Add(this.P4HandnessGP);
             this.P4MiscGP.Controls.Add(this.P4InfiniteAmmoButton);
             this.P4MiscGP.Controls.Add(this.P4RapidfireButton);
             this.P4MiscGP.Controls.Add(this.P4InfiniteHPButton);
             this.P4MiscGP.Controls.Add(this.P4UntargetableButton);
+            this.P4MiscGP.Controls.Add(this.P4WeaponModeGP);
+            this.P4MiscGP.Controls.Add(this.P4HandnessGP);
             this.P4MiscGP.Location = new System.Drawing.Point(179, 30);
             this.P4MiscGP.Name = "P4MiscGP";
             this.P4MiscGP.ShowCaption = false;
             this.P4MiscGP.Size = new System.Drawing.Size(122, 168);
             this.P4MiscGP.TabIndex = 0;
+            // 
+            // P4InfiniteAmmoButton
+            // 
+            this.P4InfiniteAmmoButton.AllowFocus = false;
+            this.P4InfiniteAmmoButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("P4InfiniteAmmoButton.ImageOptions.Image")));
+            this.P4InfiniteAmmoButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.P4InfiniteAmmoButton.Location = new System.Drawing.Point(64, 5);
+            this.P4InfiniteAmmoButton.Name = "P4InfiniteAmmoButton";
+            this.P4InfiniteAmmoButton.Size = new System.Drawing.Size(53, 31);
+            this.P4InfiniteAmmoButton.TabIndex = 1;
+            this.P4InfiniteAmmoButton.TabStop = false;
+            this.P4InfiniteAmmoButton.ToolTip = "Enables the infinite ammo flag for every weapon in the real-time inventory.";
+            this.P4InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P4InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
+            // 
+            // P4RapidfireButton
+            // 
+            this.P4RapidfireButton.AllowFocus = false;
+            this.P4RapidfireButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("P4RapidfireButton.ImageOptions.Image")));
+            this.P4RapidfireButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.P4RapidfireButton.Location = new System.Drawing.Point(64, 42);
+            this.P4RapidfireButton.Name = "P4RapidfireButton";
+            this.P4RapidfireButton.Size = new System.Drawing.Size(53, 27);
+            this.P4RapidfireButton.TabIndex = 2;
+            this.P4RapidfireButton.TabStop = false;
+            this.P4RapidfireButton.ToolTip = "Enables the rapidfire flag for every item in the real-time inventory.";
+            this.P4RapidfireButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P4RapidfireButton.ToolTipTitle = "Rapidfire";
+            // 
+            // P4InfiniteHPButton
+            // 
+            this.P4InfiniteHPButton.AllowFocus = false;
+            this.P4InfiniteHPButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("P4InfiniteHPButton.ImageOptions.Image")));
+            this.P4InfiniteHPButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.P4InfiniteHPButton.Location = new System.Drawing.Point(5, 5);
+            this.P4InfiniteHPButton.Name = "P4InfiniteHPButton";
+            this.P4InfiniteHPButton.Size = new System.Drawing.Size(53, 31);
+            this.P4InfiniteHPButton.TabIndex = 3;
+            this.P4InfiniteHPButton.TabStop = false;
+            this.P4InfiniteHPButton.ToolTip = "Keeps the health at its maximun value.";
+            this.P4InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P4InfiniteHPButton.ToolTipTitle = "Infinite HP";
+            // 
+            // P4UntargetableButton
+            // 
+            this.P4UntargetableButton.AllowFocus = false;
+            this.P4UntargetableButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("P4UntargetableButton.ImageOptions.Image")));
+            this.P4UntargetableButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.P4UntargetableButton.Location = new System.Drawing.Point(5, 42);
+            this.P4UntargetableButton.Name = "P4UntargetableButton";
+            this.P4UntargetableButton.Size = new System.Drawing.Size(53, 27);
+            this.P4UntargetableButton.TabIndex = 4;
+            this.P4UntargetableButton.TabStop = false;
+            this.P4UntargetableButton.ToolTip = "Disables damage collision.";
+            this.P4UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P4UntargetableButton.ToolTipTitle = "Untargetable";
             // 
             // P4WeaponModeGP
             // 
@@ -781,58 +1154,6 @@ namespace GameX
             this.P4HandnessComboBox.ToolTip = "Sets the player\'s handness, left or right.";
             this.P4HandnessComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P4HandnessComboBox.ToolTipTitle = "Handness";
-            // 
-            // P4InfiniteAmmoButton
-            // 
-            this.P4InfiniteAmmoButton.AllowFocus = false;
-            this.P4InfiniteAmmoButton.Location = new System.Drawing.Point(64, 13);
-            this.P4InfiniteAmmoButton.Name = "P4InfiniteAmmoButton";
-            this.P4InfiniteAmmoButton.Size = new System.Drawing.Size(39, 23);
-            this.P4InfiniteAmmoButton.TabIndex = 0;
-            this.P4InfiniteAmmoButton.TabStop = false;
-            this.P4InfiniteAmmoButton.Text = "OFF";
-            this.P4InfiniteAmmoButton.ToolTip = "Enables the infinite ammo flag for every item in the real-time inventory.";
-            this.P4InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P4InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
-            // 
-            // P4RapidfireButton
-            // 
-            this.P4RapidfireButton.AllowFocus = false;
-            this.P4RapidfireButton.Location = new System.Drawing.Point(64, 42);
-            this.P4RapidfireButton.Name = "P4RapidfireButton";
-            this.P4RapidfireButton.Size = new System.Drawing.Size(39, 23);
-            this.P4RapidfireButton.TabIndex = 0;
-            this.P4RapidfireButton.TabStop = false;
-            this.P4RapidfireButton.Text = "OFF";
-            this.P4RapidfireButton.ToolTip = "Enables the rapidfire flag for every item in the real-time inventory.";
-            this.P4RapidfireButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P4RapidfireButton.ToolTipTitle = "Rapidfire";
-            // 
-            // P4InfiniteHPButton
-            // 
-            this.P4InfiniteHPButton.AllowFocus = false;
-            this.P4InfiniteHPButton.Location = new System.Drawing.Point(19, 13);
-            this.P4InfiniteHPButton.Name = "P4InfiniteHPButton";
-            this.P4InfiniteHPButton.Size = new System.Drawing.Size(39, 23);
-            this.P4InfiniteHPButton.TabIndex = 0;
-            this.P4InfiniteHPButton.TabStop = false;
-            this.P4InfiniteHPButton.Text = "OFF";
-            this.P4InfiniteHPButton.ToolTip = "Keeps the health at its maximun value.";
-            this.P4InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P4InfiniteHPButton.ToolTipTitle = "Infinite HP";
-            // 
-            // P4UntargetableButton
-            // 
-            this.P4UntargetableButton.AllowFocus = false;
-            this.P4UntargetableButton.Location = new System.Drawing.Point(19, 42);
-            this.P4UntargetableButton.Name = "P4UntargetableButton";
-            this.P4UntargetableButton.Size = new System.Drawing.Size(39, 23);
-            this.P4UntargetableButton.TabIndex = 0;
-            this.P4UntargetableButton.TabStop = false;
-            this.P4UntargetableButton.Text = "OFF";
-            this.P4UntargetableButton.ToolTip = "Disables damage collision.";
-            this.P4UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P4UntargetableButton.ToolTipTitle = "Untargetable";
             // 
             // P4FreezeCharCosButton
             // 
@@ -925,17 +1246,73 @@ namespace GameX
             // 
             // P3MiscGP
             // 
-            this.P3MiscGP.Controls.Add(this.P3WeaponModeGP);
-            this.P3MiscGP.Controls.Add(this.P3HandnessGP);
             this.P3MiscGP.Controls.Add(this.P3InfiniteAmmoButton);
             this.P3MiscGP.Controls.Add(this.P3RapidfireButton);
             this.P3MiscGP.Controls.Add(this.P3InfiniteHPButton);
             this.P3MiscGP.Controls.Add(this.P3UntargetableButton);
+            this.P3MiscGP.Controls.Add(this.P3WeaponModeGP);
+            this.P3MiscGP.Controls.Add(this.P3HandnessGP);
             this.P3MiscGP.Location = new System.Drawing.Point(179, 30);
             this.P3MiscGP.Name = "P3MiscGP";
             this.P3MiscGP.ShowCaption = false;
             this.P3MiscGP.Size = new System.Drawing.Size(122, 168);
             this.P3MiscGP.TabIndex = 0;
+            // 
+            // P3InfiniteAmmoButton
+            // 
+            this.P3InfiniteAmmoButton.AllowFocus = false;
+            this.P3InfiniteAmmoButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("P3InfiniteAmmoButton.ImageOptions.Image")));
+            this.P3InfiniteAmmoButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.P3InfiniteAmmoButton.Location = new System.Drawing.Point(64, 5);
+            this.P3InfiniteAmmoButton.Name = "P3InfiniteAmmoButton";
+            this.P3InfiniteAmmoButton.Size = new System.Drawing.Size(53, 31);
+            this.P3InfiniteAmmoButton.TabIndex = 1;
+            this.P3InfiniteAmmoButton.TabStop = false;
+            this.P3InfiniteAmmoButton.ToolTip = "Enables the infinite ammo flag for every weapon in the real-time inventory.";
+            this.P3InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
+            // 
+            // P3RapidfireButton
+            // 
+            this.P3RapidfireButton.AllowFocus = false;
+            this.P3RapidfireButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("P3RapidfireButton.ImageOptions.Image")));
+            this.P3RapidfireButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.P3RapidfireButton.Location = new System.Drawing.Point(64, 42);
+            this.P3RapidfireButton.Name = "P3RapidfireButton";
+            this.P3RapidfireButton.Size = new System.Drawing.Size(53, 27);
+            this.P3RapidfireButton.TabIndex = 2;
+            this.P3RapidfireButton.TabStop = false;
+            this.P3RapidfireButton.ToolTip = "Enables the rapidfire flag for every item in the real-time inventory.";
+            this.P3RapidfireButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3RapidfireButton.ToolTipTitle = "Rapidfire";
+            // 
+            // P3InfiniteHPButton
+            // 
+            this.P3InfiniteHPButton.AllowFocus = false;
+            this.P3InfiniteHPButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("P3InfiniteHPButton.ImageOptions.Image")));
+            this.P3InfiniteHPButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.P3InfiniteHPButton.Location = new System.Drawing.Point(5, 5);
+            this.P3InfiniteHPButton.Name = "P3InfiniteHPButton";
+            this.P3InfiniteHPButton.Size = new System.Drawing.Size(53, 31);
+            this.P3InfiniteHPButton.TabIndex = 3;
+            this.P3InfiniteHPButton.TabStop = false;
+            this.P3InfiniteHPButton.ToolTip = "Keeps the health at its maximun value.";
+            this.P3InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3InfiniteHPButton.ToolTipTitle = "Infinite HP";
+            // 
+            // P3UntargetableButton
+            // 
+            this.P3UntargetableButton.AllowFocus = false;
+            this.P3UntargetableButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("P3UntargetableButton.ImageOptions.Image")));
+            this.P3UntargetableButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.P3UntargetableButton.Location = new System.Drawing.Point(5, 42);
+            this.P3UntargetableButton.Name = "P3UntargetableButton";
+            this.P3UntargetableButton.Size = new System.Drawing.Size(53, 27);
+            this.P3UntargetableButton.TabIndex = 4;
+            this.P3UntargetableButton.TabStop = false;
+            this.P3UntargetableButton.ToolTip = "Disables damage collision.";
+            this.P3UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P3UntargetableButton.ToolTipTitle = "Untargetable";
             // 
             // P3WeaponModeGP
             // 
@@ -988,58 +1365,6 @@ namespace GameX
             this.P3HandnessComboBox.ToolTip = "Sets the player\'s handness, left or right.";
             this.P3HandnessComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P3HandnessComboBox.ToolTipTitle = "Handness";
-            // 
-            // P3InfiniteAmmoButton
-            // 
-            this.P3InfiniteAmmoButton.AllowFocus = false;
-            this.P3InfiniteAmmoButton.Location = new System.Drawing.Point(64, 13);
-            this.P3InfiniteAmmoButton.Name = "P3InfiniteAmmoButton";
-            this.P3InfiniteAmmoButton.Size = new System.Drawing.Size(39, 23);
-            this.P3InfiniteAmmoButton.TabIndex = 0;
-            this.P3InfiniteAmmoButton.TabStop = false;
-            this.P3InfiniteAmmoButton.Text = "OFF";
-            this.P3InfiniteAmmoButton.ToolTip = "Enables the infinite ammo flag for every item in the real-time inventory.";
-            this.P3InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
-            // 
-            // P3RapidfireButton
-            // 
-            this.P3RapidfireButton.AllowFocus = false;
-            this.P3RapidfireButton.Location = new System.Drawing.Point(64, 42);
-            this.P3RapidfireButton.Name = "P3RapidfireButton";
-            this.P3RapidfireButton.Size = new System.Drawing.Size(39, 23);
-            this.P3RapidfireButton.TabIndex = 0;
-            this.P3RapidfireButton.TabStop = false;
-            this.P3RapidfireButton.Text = "OFF";
-            this.P3RapidfireButton.ToolTip = "Enables the rapidfire flag for every item in the real-time inventory.";
-            this.P3RapidfireButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3RapidfireButton.ToolTipTitle = "Rapidfire";
-            // 
-            // P3InfiniteHPButton
-            // 
-            this.P3InfiniteHPButton.AllowFocus = false;
-            this.P3InfiniteHPButton.Location = new System.Drawing.Point(19, 13);
-            this.P3InfiniteHPButton.Name = "P3InfiniteHPButton";
-            this.P3InfiniteHPButton.Size = new System.Drawing.Size(39, 23);
-            this.P3InfiniteHPButton.TabIndex = 0;
-            this.P3InfiniteHPButton.TabStop = false;
-            this.P3InfiniteHPButton.Text = "OFF";
-            this.P3InfiniteHPButton.ToolTip = "Keeps the health at its maximun value.";
-            this.P3InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3InfiniteHPButton.ToolTipTitle = "Infinite HP";
-            // 
-            // P3UntargetableButton
-            // 
-            this.P3UntargetableButton.AllowFocus = false;
-            this.P3UntargetableButton.Location = new System.Drawing.Point(19, 42);
-            this.P3UntargetableButton.Name = "P3UntargetableButton";
-            this.P3UntargetableButton.Size = new System.Drawing.Size(39, 23);
-            this.P3UntargetableButton.TabIndex = 0;
-            this.P3UntargetableButton.TabStop = false;
-            this.P3UntargetableButton.Text = "OFF";
-            this.P3UntargetableButton.ToolTip = "Disables damage collision.";
-            this.P3UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P3UntargetableButton.ToolTipTitle = "Untargetable";
             // 
             // P3FreezeCharCosButton
             // 
@@ -1132,17 +1457,73 @@ namespace GameX
             // 
             // P2MiscGP
             // 
-            this.P2MiscGP.Controls.Add(this.P2WeaponModeGP);
-            this.P2MiscGP.Controls.Add(this.P2HandnessGP);
             this.P2MiscGP.Controls.Add(this.P2InfiniteAmmoButton);
             this.P2MiscGP.Controls.Add(this.P2RapidfireButton);
             this.P2MiscGP.Controls.Add(this.P2InfiniteHPButton);
             this.P2MiscGP.Controls.Add(this.P2UntargetableButton);
+            this.P2MiscGP.Controls.Add(this.P2WeaponModeGP);
+            this.P2MiscGP.Controls.Add(this.P2HandnessGP);
             this.P2MiscGP.Location = new System.Drawing.Point(179, 30);
             this.P2MiscGP.Name = "P2MiscGP";
             this.P2MiscGP.ShowCaption = false;
             this.P2MiscGP.Size = new System.Drawing.Size(122, 168);
             this.P2MiscGP.TabIndex = 0;
+            // 
+            // P2InfiniteAmmoButton
+            // 
+            this.P2InfiniteAmmoButton.AllowFocus = false;
+            this.P2InfiniteAmmoButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("P2InfiniteAmmoButton.ImageOptions.Image")));
+            this.P2InfiniteAmmoButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.P2InfiniteAmmoButton.Location = new System.Drawing.Point(64, 5);
+            this.P2InfiniteAmmoButton.Name = "P2InfiniteAmmoButton";
+            this.P2InfiniteAmmoButton.Size = new System.Drawing.Size(53, 31);
+            this.P2InfiniteAmmoButton.TabIndex = 1;
+            this.P2InfiniteAmmoButton.TabStop = false;
+            this.P2InfiniteAmmoButton.ToolTip = "Enables the infinite ammo flag for every weapon in the real-time inventory.";
+            this.P2InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
+            // 
+            // P2RapidfireButton
+            // 
+            this.P2RapidfireButton.AllowFocus = false;
+            this.P2RapidfireButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("P2RapidfireButton.ImageOptions.Image")));
+            this.P2RapidfireButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.P2RapidfireButton.Location = new System.Drawing.Point(64, 42);
+            this.P2RapidfireButton.Name = "P2RapidfireButton";
+            this.P2RapidfireButton.Size = new System.Drawing.Size(53, 27);
+            this.P2RapidfireButton.TabIndex = 2;
+            this.P2RapidfireButton.TabStop = false;
+            this.P2RapidfireButton.ToolTip = "Enables the rapidfire flag for every item in the real-time inventory.";
+            this.P2RapidfireButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2RapidfireButton.ToolTipTitle = "Rapidfire";
+            // 
+            // P2InfiniteHPButton
+            // 
+            this.P2InfiniteHPButton.AllowFocus = false;
+            this.P2InfiniteHPButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("P2InfiniteHPButton.ImageOptions.Image")));
+            this.P2InfiniteHPButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.P2InfiniteHPButton.Location = new System.Drawing.Point(5, 5);
+            this.P2InfiniteHPButton.Name = "P2InfiniteHPButton";
+            this.P2InfiniteHPButton.Size = new System.Drawing.Size(53, 31);
+            this.P2InfiniteHPButton.TabIndex = 3;
+            this.P2InfiniteHPButton.TabStop = false;
+            this.P2InfiniteHPButton.ToolTip = "Keeps the health at its maximun value.";
+            this.P2InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2InfiniteHPButton.ToolTipTitle = "Infinite HP";
+            // 
+            // P2UntargetableButton
+            // 
+            this.P2UntargetableButton.AllowFocus = false;
+            this.P2UntargetableButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("P2UntargetableButton.ImageOptions.Image")));
+            this.P2UntargetableButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.P2UntargetableButton.Location = new System.Drawing.Point(5, 42);
+            this.P2UntargetableButton.Name = "P2UntargetableButton";
+            this.P2UntargetableButton.Size = new System.Drawing.Size(53, 27);
+            this.P2UntargetableButton.TabIndex = 4;
+            this.P2UntargetableButton.TabStop = false;
+            this.P2UntargetableButton.ToolTip = "Disables damage collision.";
+            this.P2UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2UntargetableButton.ToolTipTitle = "Untargetable";
             // 
             // P2WeaponModeGP
             // 
@@ -1195,58 +1576,6 @@ namespace GameX
             this.P2HandnessComboBox.ToolTip = "Sets the player\'s handness, left or right.";
             this.P2HandnessComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P2HandnessComboBox.ToolTipTitle = "Handness";
-            // 
-            // P2InfiniteAmmoButton
-            // 
-            this.P2InfiniteAmmoButton.AllowFocus = false;
-            this.P2InfiniteAmmoButton.Location = new System.Drawing.Point(64, 13);
-            this.P2InfiniteAmmoButton.Name = "P2InfiniteAmmoButton";
-            this.P2InfiniteAmmoButton.Size = new System.Drawing.Size(39, 23);
-            this.P2InfiniteAmmoButton.TabIndex = 0;
-            this.P2InfiniteAmmoButton.TabStop = false;
-            this.P2InfiniteAmmoButton.Text = "OFF";
-            this.P2InfiniteAmmoButton.ToolTip = "Enables the infinite ammo flag for every item in the real-time inventory.";
-            this.P2InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
-            // 
-            // P2RapidfireButton
-            // 
-            this.P2RapidfireButton.AllowFocus = false;
-            this.P2RapidfireButton.Location = new System.Drawing.Point(64, 42);
-            this.P2RapidfireButton.Name = "P2RapidfireButton";
-            this.P2RapidfireButton.Size = new System.Drawing.Size(39, 23);
-            this.P2RapidfireButton.TabIndex = 0;
-            this.P2RapidfireButton.TabStop = false;
-            this.P2RapidfireButton.Text = "OFF";
-            this.P2RapidfireButton.ToolTip = "Enables the rapidfire flag for every item in the real-time inventory.";
-            this.P2RapidfireButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2RapidfireButton.ToolTipTitle = "Rapidfire";
-            // 
-            // P2InfiniteHPButton
-            // 
-            this.P2InfiniteHPButton.AllowFocus = false;
-            this.P2InfiniteHPButton.Location = new System.Drawing.Point(19, 13);
-            this.P2InfiniteHPButton.Name = "P2InfiniteHPButton";
-            this.P2InfiniteHPButton.Size = new System.Drawing.Size(39, 23);
-            this.P2InfiniteHPButton.TabIndex = 0;
-            this.P2InfiniteHPButton.TabStop = false;
-            this.P2InfiniteHPButton.Text = "OFF";
-            this.P2InfiniteHPButton.ToolTip = "Keeps the health at its maximun value.";
-            this.P2InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2InfiniteHPButton.ToolTipTitle = "Infinite HP";
-            // 
-            // P2UntargetableButton
-            // 
-            this.P2UntargetableButton.AllowFocus = false;
-            this.P2UntargetableButton.Location = new System.Drawing.Point(19, 42);
-            this.P2UntargetableButton.Name = "P2UntargetableButton";
-            this.P2UntargetableButton.Size = new System.Drawing.Size(39, 23);
-            this.P2UntargetableButton.TabIndex = 0;
-            this.P2UntargetableButton.TabStop = false;
-            this.P2UntargetableButton.Text = "OFF";
-            this.P2UntargetableButton.ToolTip = "Disables damage collision.";
-            this.P2UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.P2UntargetableButton.ToolTipTitle = "Untargetable";
             // 
             // P2FreezeCharCosButton
             // 
@@ -1406,25 +1735,27 @@ namespace GameX
             // P1InfiniteAmmoButton
             // 
             this.P1InfiniteAmmoButton.AllowFocus = false;
-            this.P1InfiniteAmmoButton.Location = new System.Drawing.Point(64, 13);
+            this.P1InfiniteAmmoButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("P1InfiniteAmmoButton.ImageOptions.Image")));
+            this.P1InfiniteAmmoButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.P1InfiniteAmmoButton.Location = new System.Drawing.Point(64, 5);
             this.P1InfiniteAmmoButton.Name = "P1InfiniteAmmoButton";
-            this.P1InfiniteAmmoButton.Size = new System.Drawing.Size(39, 23);
+            this.P1InfiniteAmmoButton.Size = new System.Drawing.Size(53, 31);
             this.P1InfiniteAmmoButton.TabIndex = 0;
             this.P1InfiniteAmmoButton.TabStop = false;
-            this.P1InfiniteAmmoButton.Text = "OFF";
-            this.P1InfiniteAmmoButton.ToolTip = "Enables the infinite ammo flag for every item in the real-time inventory.";
+            this.P1InfiniteAmmoButton.ToolTip = "Enables the infinite ammo flag for every weapon in the real-time inventory.";
             this.P1InfiniteAmmoButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P1InfiniteAmmoButton.ToolTipTitle = "Infinite Ammo";
             // 
             // P1RapidfireButton
             // 
             this.P1RapidfireButton.AllowFocus = false;
+            this.P1RapidfireButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("P1RapidfireButton.ImageOptions.Image")));
+            this.P1RapidfireButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.P1RapidfireButton.Location = new System.Drawing.Point(64, 42);
             this.P1RapidfireButton.Name = "P1RapidfireButton";
-            this.P1RapidfireButton.Size = new System.Drawing.Size(39, 23);
+            this.P1RapidfireButton.Size = new System.Drawing.Size(53, 27);
             this.P1RapidfireButton.TabIndex = 0;
             this.P1RapidfireButton.TabStop = false;
-            this.P1RapidfireButton.Text = "OFF";
             this.P1RapidfireButton.ToolTip = "Enables the rapidfire flag for every item in the real-time inventory.";
             this.P1RapidfireButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P1RapidfireButton.ToolTipTitle = "Rapidfire";
@@ -1432,12 +1763,13 @@ namespace GameX
             // P1InfiniteHPButton
             // 
             this.P1InfiniteHPButton.AllowFocus = false;
-            this.P1InfiniteHPButton.Location = new System.Drawing.Point(19, 13);
+            this.P1InfiniteHPButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("P1InfiniteHPButton.ImageOptions.Image")));
+            this.P1InfiniteHPButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.P1InfiniteHPButton.Location = new System.Drawing.Point(5, 5);
             this.P1InfiniteHPButton.Name = "P1InfiniteHPButton";
-            this.P1InfiniteHPButton.Size = new System.Drawing.Size(39, 23);
+            this.P1InfiniteHPButton.Size = new System.Drawing.Size(53, 31);
             this.P1InfiniteHPButton.TabIndex = 0;
             this.P1InfiniteHPButton.TabStop = false;
-            this.P1InfiniteHPButton.Text = "OFF";
             this.P1InfiniteHPButton.ToolTip = "Keeps the health at its maximun value.";
             this.P1InfiniteHPButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P1InfiniteHPButton.ToolTipTitle = "Infinite HP";
@@ -1445,12 +1777,13 @@ namespace GameX
             // P1UntargetableButton
             // 
             this.P1UntargetableButton.AllowFocus = false;
-            this.P1UntargetableButton.Location = new System.Drawing.Point(19, 42);
+            this.P1UntargetableButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("P1UntargetableButton.ImageOptions.Image")));
+            this.P1UntargetableButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.P1UntargetableButton.Location = new System.Drawing.Point(5, 42);
             this.P1UntargetableButton.Name = "P1UntargetableButton";
-            this.P1UntargetableButton.Size = new System.Drawing.Size(39, 23);
+            this.P1UntargetableButton.Size = new System.Drawing.Size(53, 27);
             this.P1UntargetableButton.TabIndex = 0;
             this.P1UntargetableButton.TabStop = false;
-            this.P1UntargetableButton.Text = "OFF";
             this.P1UntargetableButton.ToolTip = "Disables damage collision.";
             this.P1UntargetableButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.P1UntargetableButton.ToolTipTitle = "Untargetable";
@@ -1483,7 +1816,7 @@ namespace GameX
             this.TabPageMelee.Controls.Add(this.MeleeAnytimeGP);
             this.TabPageMelee.Controls.Add(this.MeleeSwapGP);
             this.TabPageMelee.Name = "TabPageMelee";
-            this.TabPageMelee.Size = new System.Drawing.Size(1223, 438);
+            this.TabPageMelee.Size = new System.Drawing.Size(1223, 437);
             this.TabPageMelee.Text = "Melee";
             // 
             // MiscMeleeGP
@@ -2089,7 +2422,7 @@ namespace GameX
             // 
             this.TabPageInventory.Controls.Add(this.TabInventoryGP);
             this.TabPageInventory.Name = "TabPageInventory";
-            this.TabPageInventory.Size = new System.Drawing.Size(1223, 438);
+            this.TabPageInventory.Size = new System.Drawing.Size(1223, 437);
             this.TabPageInventory.Text = "Inventory";
             // 
             // TabInventoryGP
@@ -4906,8 +5239,2792 @@ namespace GameX
             // 
             // P2InventoryTab
             // 
+            this.P2InventoryTab.Controls.Add(this.P2FreezeAllCheckEdit);
+            this.P2InventoryTab.Controls.Add(this.P2ScopeLB);
+            this.P2InventoryTab.Controls.Add(this.P2RangeLB);
+            this.P2InventoryTab.Controls.Add(this.P2Slot1EditGP);
+            this.P2InventoryTab.Controls.Add(this.P2PiercingLB);
+            this.P2InventoryTab.Controls.Add(this.P2Slot2EditGP);
+            this.P2InventoryTab.Controls.Add(this.P2CriticalLB);
+            this.P2InventoryTab.Controls.Add(this.P2Slot3EditGP);
+            this.P2InventoryTab.Controls.Add(this.P2CapacityLB);
+            this.P2InventoryTab.Controls.Add(this.P2Slot4EditGP);
+            this.P2InventoryTab.Controls.Add(this.P2ReloadSpeedLB);
+            this.P2InventoryTab.Controls.Add(this.P2Slot5EditGP);
+            this.P2InventoryTab.Controls.Add(this.P2FirepowerLB);
+            this.P2InventoryTab.Controls.Add(this.P2Slot6EditGP);
+            this.P2InventoryTab.Controls.Add(this.P2MaxQuantityLB);
+            this.P2InventoryTab.Controls.Add(this.P2Slot7EditGP);
+            this.P2InventoryTab.Controls.Add(this.P2QuantityLB);
+            this.P2InventoryTab.Controls.Add(this.P2Slot8EditGP);
+            this.P2InventoryTab.Controls.Add(this.P2SlotKnifeEditGP);
+            this.P2InventoryTab.Controls.Add(this.P2Slot9EditGP);
             this.P2InventoryTab.Name = "P2InventoryTab";
             this.P2InventoryTab.Size = new System.Drawing.Size(972, 381);
+            // 
+            // P2FreezeAllCheckEdit
+            // 
+            this.P2FreezeAllCheckEdit.Location = new System.Drawing.Point(900, 2);
+            this.P2FreezeAllCheckEdit.Name = "P2FreezeAllCheckEdit";
+            this.P2FreezeAllCheckEdit.Properties.AllowFocused = false;
+            this.P2FreezeAllCheckEdit.Properties.Caption = "F. All";
+            this.P2FreezeAllCheckEdit.Size = new System.Drawing.Size(58, 20);
+            this.P2FreezeAllCheckEdit.TabIndex = 39;
+            this.P2FreezeAllCheckEdit.ToolTip = "Sets all values to be persistent.";
+            this.P2FreezeAllCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2FreezeAllCheckEdit.ToolTipTitle = "Frozen";
+            // 
+            // P2ScopeLB
+            // 
+            this.P2ScopeLB.Location = new System.Drawing.Point(686, 5);
+            this.P2ScopeLB.Name = "P2ScopeLB";
+            this.P2ScopeLB.Size = new System.Drawing.Size(31, 13);
+            this.P2ScopeLB.TabIndex = 38;
+            this.P2ScopeLB.Text = "Scope";
+            // 
+            // P2RangeLB
+            // 
+            this.P2RangeLB.Location = new System.Drawing.Point(626, 5);
+            this.P2RangeLB.Name = "P2RangeLB";
+            this.P2RangeLB.Size = new System.Drawing.Size(33, 13);
+            this.P2RangeLB.TabIndex = 37;
+            this.P2RangeLB.Text = "Range";
+            // 
+            // P2Slot1EditGP
+            // 
+            this.P2Slot1EditGP.Controls.Add(this.P2Slot1FrozenCheckEdit);
+            this.P2Slot1EditGP.Controls.Add(this.P2Slot1RapidFireCheckEdit);
+            this.P2Slot1EditGP.Controls.Add(this.P2Slot1ScopeSE);
+            this.P2Slot1EditGP.Controls.Add(this.P2Slot1InfiniteAmmoCheckEdit);
+            this.P2Slot1EditGP.Controls.Add(this.P2Slot1RangeSE);
+            this.P2Slot1EditGP.Controls.Add(this.P2Slot1PiercingSE);
+            this.P2Slot1EditGP.Controls.Add(this.P2Slot1CriticalSE);
+            this.P2Slot1EditGP.Controls.Add(this.P2Slot1CapacitySE);
+            this.P2Slot1EditGP.Controls.Add(this.P2Slot1ReloadSpeedSE);
+            this.P2Slot1EditGP.Controls.Add(this.P2Slot1MaxQuantityTE);
+            this.P2Slot1EditGP.Controls.Add(this.P2Slot1QuantityTE);
+            this.P2Slot1EditGP.Controls.Add(this.P2Slot1ItemCB);
+            this.P2Slot1EditGP.Controls.Add(this.P2Slot1FirepowerSE);
+            this.P2Slot1EditGP.Location = new System.Drawing.Point(3, 24);
+            this.P2Slot1EditGP.Name = "P2Slot1EditGP";
+            this.P2Slot1EditGP.ShowCaption = false;
+            this.P2Slot1EditGP.Size = new System.Drawing.Size(965, 30);
+            this.P2Slot1EditGP.TabIndex = 20;
+            // 
+            // P2Slot1FrozenCheckEdit
+            // 
+            this.P2Slot1FrozenCheckEdit.Location = new System.Drawing.Point(897, 5);
+            this.P2Slot1FrozenCheckEdit.Name = "P2Slot1FrozenCheckEdit";
+            this.P2Slot1FrozenCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot1FrozenCheckEdit.Properties.Caption = "Frozen";
+            this.P2Slot1FrozenCheckEdit.Size = new System.Drawing.Size(58, 20);
+            this.P2Slot1FrozenCheckEdit.TabIndex = 12;
+            this.P2Slot1FrozenCheckEdit.ToolTip = "Sets all values to be persistent.";
+            this.P2Slot1FrozenCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot1FrozenCheckEdit.ToolTipTitle = "Frozen";
+            // 
+            // P2Slot1RapidFireCheckEdit
+            // 
+            this.P2Slot1RapidFireCheckEdit.Location = new System.Drawing.Point(814, 5);
+            this.P2Slot1RapidFireCheckEdit.Name = "P2Slot1RapidFireCheckEdit";
+            this.P2Slot1RapidFireCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot1RapidFireCheckEdit.Properties.Caption = "Rapid Fire";
+            this.P2Slot1RapidFireCheckEdit.Size = new System.Drawing.Size(77, 20);
+            this.P2Slot1RapidFireCheckEdit.TabIndex = 11;
+            this.P2Slot1RapidFireCheckEdit.ToolTip = "Sets the rapid fire flag for the respective item.";
+            this.P2Slot1RapidFireCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot1RapidFireCheckEdit.ToolTipTitle = "Rapid Fire";
+            // 
+            // P2Slot1ScopeSE
+            // 
+            this.P2Slot1ScopeSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot1ScopeSE.Location = new System.Drawing.Point(673, 5);
+            this.P2Slot1ScopeSE.Name = "P2Slot1ScopeSE";
+            this.P2Slot1ScopeSE.Properties.AllowFocused = false;
+            this.P2Slot1ScopeSE.Properties.AllowMouseWheel = false;
+            this.P2Slot1ScopeSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot1ScopeSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot1ScopeSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot1ScopeSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot1ScopeSE.TabIndex = 10;
+            this.P2Slot1ScopeSE.ToolTip = "Scope";
+            this.P2Slot1ScopeSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot1InfiniteAmmoCheckEdit
+            // 
+            this.P2Slot1InfiniteAmmoCheckEdit.Location = new System.Drawing.Point(731, 5);
+            this.P2Slot1InfiniteAmmoCheckEdit.Name = "P2Slot1InfiniteAmmoCheckEdit";
+            this.P2Slot1InfiniteAmmoCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot1InfiniteAmmoCheckEdit.Properties.Caption = "Inf. Ammo";
+            this.P2Slot1InfiniteAmmoCheckEdit.Size = new System.Drawing.Size(77, 20);
+            this.P2Slot1InfiniteAmmoCheckEdit.TabIndex = 1;
+            this.P2Slot1InfiniteAmmoCheckEdit.ToolTip = "Sets the infinite ammo flag for the respective item.";
+            this.P2Slot1InfiniteAmmoCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot1InfiniteAmmoCheckEdit.ToolTipTitle = "Infinite Ammo";
+            // 
+            // P2Slot1RangeSE
+            // 
+            this.P2Slot1RangeSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot1RangeSE.Location = new System.Drawing.Point(615, 5);
+            this.P2Slot1RangeSE.Name = "P2Slot1RangeSE";
+            this.P2Slot1RangeSE.Properties.AllowFocused = false;
+            this.P2Slot1RangeSE.Properties.AllowMouseWheel = false;
+            this.P2Slot1RangeSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot1RangeSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot1RangeSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot1RangeSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot1RangeSE.TabIndex = 9;
+            this.P2Slot1RangeSE.ToolTip = "Range";
+            this.P2Slot1RangeSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot1PiercingSE
+            // 
+            this.P2Slot1PiercingSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot1PiercingSE.Location = new System.Drawing.Point(557, 5);
+            this.P2Slot1PiercingSE.Name = "P2Slot1PiercingSE";
+            this.P2Slot1PiercingSE.Properties.AllowFocused = false;
+            this.P2Slot1PiercingSE.Properties.AllowMouseWheel = false;
+            this.P2Slot1PiercingSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot1PiercingSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot1PiercingSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot1PiercingSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot1PiercingSE.TabIndex = 8;
+            this.P2Slot1PiercingSE.ToolTip = "Piercing";
+            this.P2Slot1PiercingSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot1CriticalSE
+            // 
+            this.P2Slot1CriticalSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot1CriticalSE.Location = new System.Drawing.Point(499, 5);
+            this.P2Slot1CriticalSE.Name = "P2Slot1CriticalSE";
+            this.P2Slot1CriticalSE.Properties.AllowFocused = false;
+            this.P2Slot1CriticalSE.Properties.AllowMouseWheel = false;
+            this.P2Slot1CriticalSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot1CriticalSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot1CriticalSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot1CriticalSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot1CriticalSE.TabIndex = 7;
+            this.P2Slot1CriticalSE.ToolTip = "Critical";
+            this.P2Slot1CriticalSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot1CapacitySE
+            // 
+            this.P2Slot1CapacitySE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot1CapacitySE.Location = new System.Drawing.Point(441, 5);
+            this.P2Slot1CapacitySE.Name = "P2Slot1CapacitySE";
+            this.P2Slot1CapacitySE.Properties.AllowFocused = false;
+            this.P2Slot1CapacitySE.Properties.AllowMouseWheel = false;
+            this.P2Slot1CapacitySE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot1CapacitySE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot1CapacitySE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot1CapacitySE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot1CapacitySE.TabIndex = 6;
+            this.P2Slot1CapacitySE.ToolTip = "Capacity";
+            this.P2Slot1CapacitySE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot1ReloadSpeedSE
+            // 
+            this.P2Slot1ReloadSpeedSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot1ReloadSpeedSE.Location = new System.Drawing.Point(383, 5);
+            this.P2Slot1ReloadSpeedSE.Name = "P2Slot1ReloadSpeedSE";
+            this.P2Slot1ReloadSpeedSE.Properties.AllowFocused = false;
+            this.P2Slot1ReloadSpeedSE.Properties.AllowMouseWheel = false;
+            this.P2Slot1ReloadSpeedSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot1ReloadSpeedSE.Properties.DisplayFormat.FormatString = "F";
+            this.P2Slot1ReloadSpeedSE.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.P2Slot1ReloadSpeedSE.Properties.EditFormat.FormatString = "F";
+            this.P2Slot1ReloadSpeedSE.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.P2Slot1ReloadSpeedSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot1ReloadSpeedSE.Properties.IsFloatValue = false;
+            this.P2Slot1ReloadSpeedSE.Properties.MaskSettings.Set("mask", "f2");
+            this.P2Slot1ReloadSpeedSE.Properties.MaskSettings.Set("hideInsignificantZeros", true);
+            this.P2Slot1ReloadSpeedSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot1ReloadSpeedSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot1ReloadSpeedSE.TabIndex = 5;
+            this.P2Slot1ReloadSpeedSE.ToolTip = "Reload Speed";
+            this.P2Slot1ReloadSpeedSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot1MaxQuantityTE
+            // 
+            this.P2Slot1MaxQuantityTE.EditValue = "0";
+            this.P2Slot1MaxQuantityTE.Location = new System.Drawing.Point(252, 5);
+            this.P2Slot1MaxQuantityTE.Name = "P2Slot1MaxQuantityTE";
+            this.P2Slot1MaxQuantityTE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot1MaxQuantityTE.TabIndex = 4;
+            this.P2Slot1MaxQuantityTE.ToolTip = "Max Quantity";
+            this.P2Slot1MaxQuantityTE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot1QuantityTE
+            // 
+            this.P2Slot1QuantityTE.EditValue = "0";
+            this.P2Slot1QuantityTE.Location = new System.Drawing.Point(194, 5);
+            this.P2Slot1QuantityTE.Name = "P2Slot1QuantityTE";
+            this.P2Slot1QuantityTE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot1QuantityTE.TabIndex = 3;
+            this.P2Slot1QuantityTE.ToolTip = "Quantity";
+            this.P2Slot1QuantityTE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot1ItemCB
+            // 
+            this.P2Slot1ItemCB.Location = new System.Drawing.Point(5, 5);
+            this.P2Slot1ItemCB.Name = "P2Slot1ItemCB";
+            this.P2Slot1ItemCB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P2Slot1ItemCB.Properties.AllowFocused = false;
+            this.P2Slot1ItemCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot1ItemCB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot1ItemCB.Size = new System.Drawing.Size(183, 20);
+            this.P2Slot1ItemCB.TabIndex = 2;
+            this.P2Slot1ItemCB.TabStop = false;
+            this.P2Slot1ItemCB.ToolTip = "Sets the item of the respective slot.";
+            this.P2Slot1ItemCB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot1ItemCB.ToolTipTitle = "Item";
+            // 
+            // P2Slot1FirepowerSE
+            // 
+            this.P2Slot1FirepowerSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot1FirepowerSE.Location = new System.Drawing.Point(310, 5);
+            this.P2Slot1FirepowerSE.Name = "P2Slot1FirepowerSE";
+            this.P2Slot1FirepowerSE.Properties.AllowFocused = false;
+            this.P2Slot1FirepowerSE.Properties.AllowMouseWheel = false;
+            this.P2Slot1FirepowerSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot1FirepowerSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot1FirepowerSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot1FirepowerSE.Size = new System.Drawing.Size(67, 20);
+            this.P2Slot1FirepowerSE.TabIndex = 1;
+            this.P2Slot1FirepowerSE.ToolTip = "Firepower";
+            this.P2Slot1FirepowerSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2PiercingLB
+            // 
+            this.P2PiercingLB.Location = new System.Drawing.Point(565, 5);
+            this.P2PiercingLB.Name = "P2PiercingLB";
+            this.P2PiercingLB.Size = new System.Drawing.Size(41, 13);
+            this.P2PiercingLB.TabIndex = 36;
+            this.P2PiercingLB.Text = "Piercing";
+            // 
+            // P2Slot2EditGP
+            // 
+            this.P2Slot2EditGP.Controls.Add(this.P2Slot2FrozenCheckEdit);
+            this.P2Slot2EditGP.Controls.Add(this.P2Slot2RapidFireCheckEdit);
+            this.P2Slot2EditGP.Controls.Add(this.P2Slot2InfiniteAmmoCheckEdit);
+            this.P2Slot2EditGP.Controls.Add(this.P2Slot2ScopeSE);
+            this.P2Slot2EditGP.Controls.Add(this.P2Slot2RangeSE);
+            this.P2Slot2EditGP.Controls.Add(this.P2Slot2PiercingSE);
+            this.P2Slot2EditGP.Controls.Add(this.P2Slot2CriticalSE);
+            this.P2Slot2EditGP.Controls.Add(this.P2Slot2CapacitySE);
+            this.P2Slot2EditGP.Controls.Add(this.P2Slot2ReloadSpeedSE);
+            this.P2Slot2EditGP.Controls.Add(this.P2Slot2MaxQuantityTE);
+            this.P2Slot2EditGP.Controls.Add(this.P2Slot2QuantityTE);
+            this.P2Slot2EditGP.Controls.Add(this.P2Slot2ItemCB);
+            this.P2Slot2EditGP.Controls.Add(this.P2Slot2FirepowerSE);
+            this.P2Slot2EditGP.Location = new System.Drawing.Point(3, 60);
+            this.P2Slot2EditGP.Name = "P2Slot2EditGP";
+            this.P2Slot2EditGP.ShowCaption = false;
+            this.P2Slot2EditGP.Size = new System.Drawing.Size(965, 30);
+            this.P2Slot2EditGP.TabIndex = 21;
+            // 
+            // P2Slot2FrozenCheckEdit
+            // 
+            this.P2Slot2FrozenCheckEdit.Location = new System.Drawing.Point(897, 5);
+            this.P2Slot2FrozenCheckEdit.Name = "P2Slot2FrozenCheckEdit";
+            this.P2Slot2FrozenCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot2FrozenCheckEdit.Properties.Caption = "Frozen";
+            this.P2Slot2FrozenCheckEdit.Size = new System.Drawing.Size(58, 20);
+            this.P2Slot2FrozenCheckEdit.TabIndex = 15;
+            this.P2Slot2FrozenCheckEdit.ToolTip = "Sets all values to be persistent.";
+            this.P2Slot2FrozenCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot2FrozenCheckEdit.ToolTipTitle = "Frozen";
+            // 
+            // P2Slot2RapidFireCheckEdit
+            // 
+            this.P2Slot2RapidFireCheckEdit.Location = new System.Drawing.Point(814, 5);
+            this.P2Slot2RapidFireCheckEdit.Name = "P2Slot2RapidFireCheckEdit";
+            this.P2Slot2RapidFireCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot2RapidFireCheckEdit.Properties.Caption = "Rapid Fire";
+            this.P2Slot2RapidFireCheckEdit.Size = new System.Drawing.Size(77, 20);
+            this.P2Slot2RapidFireCheckEdit.TabIndex = 14;
+            this.P2Slot2RapidFireCheckEdit.ToolTip = "Sets the rapid fire flag for the respective item.";
+            this.P2Slot2RapidFireCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot2RapidFireCheckEdit.ToolTipTitle = "Rapid Fire";
+            // 
+            // P2Slot2InfiniteAmmoCheckEdit
+            // 
+            this.P2Slot2InfiniteAmmoCheckEdit.Location = new System.Drawing.Point(731, 5);
+            this.P2Slot2InfiniteAmmoCheckEdit.Name = "P2Slot2InfiniteAmmoCheckEdit";
+            this.P2Slot2InfiniteAmmoCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot2InfiniteAmmoCheckEdit.Properties.Caption = "Inf. Ammo";
+            this.P2Slot2InfiniteAmmoCheckEdit.Size = new System.Drawing.Size(77, 20);
+            this.P2Slot2InfiniteAmmoCheckEdit.TabIndex = 13;
+            this.P2Slot2InfiniteAmmoCheckEdit.ToolTip = "Sets the infinite ammo flag for the respective item.";
+            this.P2Slot2InfiniteAmmoCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot2InfiniteAmmoCheckEdit.ToolTipTitle = "Infinite Ammo";
+            // 
+            // P2Slot2ScopeSE
+            // 
+            this.P2Slot2ScopeSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot2ScopeSE.Location = new System.Drawing.Point(673, 5);
+            this.P2Slot2ScopeSE.Name = "P2Slot2ScopeSE";
+            this.P2Slot2ScopeSE.Properties.AllowFocused = false;
+            this.P2Slot2ScopeSE.Properties.AllowMouseWheel = false;
+            this.P2Slot2ScopeSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot2ScopeSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot2ScopeSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot2ScopeSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot2ScopeSE.TabIndex = 10;
+            this.P2Slot2ScopeSE.ToolTip = "Scope";
+            this.P2Slot2ScopeSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot2RangeSE
+            // 
+            this.P2Slot2RangeSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot2RangeSE.Location = new System.Drawing.Point(615, 5);
+            this.P2Slot2RangeSE.Name = "P2Slot2RangeSE";
+            this.P2Slot2RangeSE.Properties.AllowFocused = false;
+            this.P2Slot2RangeSE.Properties.AllowMouseWheel = false;
+            this.P2Slot2RangeSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot2RangeSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot2RangeSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot2RangeSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot2RangeSE.TabIndex = 9;
+            this.P2Slot2RangeSE.ToolTip = "Range";
+            this.P2Slot2RangeSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot2PiercingSE
+            // 
+            this.P2Slot2PiercingSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot2PiercingSE.Location = new System.Drawing.Point(557, 5);
+            this.P2Slot2PiercingSE.Name = "P2Slot2PiercingSE";
+            this.P2Slot2PiercingSE.Properties.AllowFocused = false;
+            this.P2Slot2PiercingSE.Properties.AllowMouseWheel = false;
+            this.P2Slot2PiercingSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot2PiercingSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot2PiercingSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot2PiercingSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot2PiercingSE.TabIndex = 8;
+            this.P2Slot2PiercingSE.ToolTip = "Piercing";
+            this.P2Slot2PiercingSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot2CriticalSE
+            // 
+            this.P2Slot2CriticalSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot2CriticalSE.Location = new System.Drawing.Point(499, 5);
+            this.P2Slot2CriticalSE.Name = "P2Slot2CriticalSE";
+            this.P2Slot2CriticalSE.Properties.AllowFocused = false;
+            this.P2Slot2CriticalSE.Properties.AllowMouseWheel = false;
+            this.P2Slot2CriticalSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot2CriticalSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot2CriticalSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot2CriticalSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot2CriticalSE.TabIndex = 7;
+            this.P2Slot2CriticalSE.ToolTip = "Critical";
+            this.P2Slot2CriticalSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot2CapacitySE
+            // 
+            this.P2Slot2CapacitySE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot2CapacitySE.Location = new System.Drawing.Point(441, 5);
+            this.P2Slot2CapacitySE.Name = "P2Slot2CapacitySE";
+            this.P2Slot2CapacitySE.Properties.AllowFocused = false;
+            this.P2Slot2CapacitySE.Properties.AllowMouseWheel = false;
+            this.P2Slot2CapacitySE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot2CapacitySE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot2CapacitySE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot2CapacitySE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot2CapacitySE.TabIndex = 6;
+            this.P2Slot2CapacitySE.ToolTip = "Capacity";
+            this.P2Slot2CapacitySE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot2ReloadSpeedSE
+            // 
+            this.P2Slot2ReloadSpeedSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot2ReloadSpeedSE.Location = new System.Drawing.Point(383, 5);
+            this.P2Slot2ReloadSpeedSE.Name = "P2Slot2ReloadSpeedSE";
+            this.P2Slot2ReloadSpeedSE.Properties.AllowFocused = false;
+            this.P2Slot2ReloadSpeedSE.Properties.AllowMouseWheel = false;
+            this.P2Slot2ReloadSpeedSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot2ReloadSpeedSE.Properties.DisplayFormat.FormatString = "F";
+            this.P2Slot2ReloadSpeedSE.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.P2Slot2ReloadSpeedSE.Properties.EditFormat.FormatString = "F";
+            this.P2Slot2ReloadSpeedSE.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.P2Slot2ReloadSpeedSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot2ReloadSpeedSE.Properties.IsFloatValue = false;
+            this.P2Slot2ReloadSpeedSE.Properties.MaskSettings.Set("mask", "f2");
+            this.P2Slot2ReloadSpeedSE.Properties.MaskSettings.Set("hideInsignificantZeros", true);
+            this.P2Slot2ReloadSpeedSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot2ReloadSpeedSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot2ReloadSpeedSE.TabIndex = 5;
+            this.P2Slot2ReloadSpeedSE.ToolTip = "Reload Speed";
+            this.P2Slot2ReloadSpeedSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot2MaxQuantityTE
+            // 
+            this.P2Slot2MaxQuantityTE.EditValue = "0";
+            this.P2Slot2MaxQuantityTE.Location = new System.Drawing.Point(252, 5);
+            this.P2Slot2MaxQuantityTE.Name = "P2Slot2MaxQuantityTE";
+            this.P2Slot2MaxQuantityTE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot2MaxQuantityTE.TabIndex = 4;
+            this.P2Slot2MaxQuantityTE.ToolTip = "Max Quantity";
+            this.P2Slot2MaxQuantityTE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot2QuantityTE
+            // 
+            this.P2Slot2QuantityTE.EditValue = "0";
+            this.P2Slot2QuantityTE.Location = new System.Drawing.Point(194, 5);
+            this.P2Slot2QuantityTE.Name = "P2Slot2QuantityTE";
+            this.P2Slot2QuantityTE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot2QuantityTE.TabIndex = 3;
+            this.P2Slot2QuantityTE.ToolTip = "Quantity";
+            this.P2Slot2QuantityTE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot2ItemCB
+            // 
+            this.P2Slot2ItemCB.Location = new System.Drawing.Point(5, 5);
+            this.P2Slot2ItemCB.Name = "P2Slot2ItemCB";
+            this.P2Slot2ItemCB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P2Slot2ItemCB.Properties.AllowFocused = false;
+            this.P2Slot2ItemCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot2ItemCB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot2ItemCB.Size = new System.Drawing.Size(183, 20);
+            this.P2Slot2ItemCB.TabIndex = 2;
+            this.P2Slot2ItemCB.TabStop = false;
+            this.P2Slot2ItemCB.ToolTip = "Sets the item of the respective slot.";
+            this.P2Slot2ItemCB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot2ItemCB.ToolTipTitle = "Item";
+            // 
+            // P2Slot2FirepowerSE
+            // 
+            this.P2Slot2FirepowerSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot2FirepowerSE.Location = new System.Drawing.Point(310, 5);
+            this.P2Slot2FirepowerSE.Name = "P2Slot2FirepowerSE";
+            this.P2Slot2FirepowerSE.Properties.AllowFocused = false;
+            this.P2Slot2FirepowerSE.Properties.AllowMouseWheel = false;
+            this.P2Slot2FirepowerSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot2FirepowerSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot2FirepowerSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot2FirepowerSE.Size = new System.Drawing.Size(67, 20);
+            this.P2Slot2FirepowerSE.TabIndex = 1;
+            this.P2Slot2FirepowerSE.ToolTip = "Firepower";
+            this.P2Slot2FirepowerSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2CriticalLB
+            // 
+            this.P2CriticalLB.Location = new System.Drawing.Point(510, 5);
+            this.P2CriticalLB.Name = "P2CriticalLB";
+            this.P2CriticalLB.Size = new System.Drawing.Size(35, 13);
+            this.P2CriticalLB.TabIndex = 35;
+            this.P2CriticalLB.Text = "Critical";
+            // 
+            // P2Slot3EditGP
+            // 
+            this.P2Slot3EditGP.Controls.Add(this.P2Slot3FrozenCheckEdit);
+            this.P2Slot3EditGP.Controls.Add(this.P2Slot3RapidFireCheckEdit);
+            this.P2Slot3EditGP.Controls.Add(this.P2Slot3InfiniteAmmoCheckEdit);
+            this.P2Slot3EditGP.Controls.Add(this.P2Slot3ScopeSE);
+            this.P2Slot3EditGP.Controls.Add(this.P2Slot3RangeSE);
+            this.P2Slot3EditGP.Controls.Add(this.P2Slot3PiercingSE);
+            this.P2Slot3EditGP.Controls.Add(this.P2Slot3CriticalSE);
+            this.P2Slot3EditGP.Controls.Add(this.P2Slot3CapacitySE);
+            this.P2Slot3EditGP.Controls.Add(this.P2Slot3ReloadSpeedSE);
+            this.P2Slot3EditGP.Controls.Add(this.P2Slot3MaxQuantityTE);
+            this.P2Slot3EditGP.Controls.Add(this.P2Slot3QuantityTE);
+            this.P2Slot3EditGP.Controls.Add(this.P2Slot3ItemCB);
+            this.P2Slot3EditGP.Controls.Add(this.P2Slot3FirepowerSE);
+            this.P2Slot3EditGP.Location = new System.Drawing.Point(3, 96);
+            this.P2Slot3EditGP.Name = "P2Slot3EditGP";
+            this.P2Slot3EditGP.ShowCaption = false;
+            this.P2Slot3EditGP.Size = new System.Drawing.Size(965, 30);
+            this.P2Slot3EditGP.TabIndex = 22;
+            // 
+            // P2Slot3FrozenCheckEdit
+            // 
+            this.P2Slot3FrozenCheckEdit.Location = new System.Drawing.Point(897, 5);
+            this.P2Slot3FrozenCheckEdit.Name = "P2Slot3FrozenCheckEdit";
+            this.P2Slot3FrozenCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot3FrozenCheckEdit.Properties.Caption = "Frozen";
+            this.P2Slot3FrozenCheckEdit.Size = new System.Drawing.Size(58, 20);
+            this.P2Slot3FrozenCheckEdit.TabIndex = 15;
+            this.P2Slot3FrozenCheckEdit.ToolTip = "Sets all values to be persistent.";
+            this.P2Slot3FrozenCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot3FrozenCheckEdit.ToolTipTitle = "Frozen";
+            // 
+            // P2Slot3RapidFireCheckEdit
+            // 
+            this.P2Slot3RapidFireCheckEdit.Location = new System.Drawing.Point(814, 5);
+            this.P2Slot3RapidFireCheckEdit.Name = "P2Slot3RapidFireCheckEdit";
+            this.P2Slot3RapidFireCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot3RapidFireCheckEdit.Properties.Caption = "Rapid Fire";
+            this.P2Slot3RapidFireCheckEdit.Size = new System.Drawing.Size(77, 20);
+            this.P2Slot3RapidFireCheckEdit.TabIndex = 14;
+            this.P2Slot3RapidFireCheckEdit.ToolTip = "Sets the rapid fire flag for the respective item.";
+            this.P2Slot3RapidFireCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot3RapidFireCheckEdit.ToolTipTitle = "Rapid Fire";
+            // 
+            // P2Slot3InfiniteAmmoCheckEdit
+            // 
+            this.P2Slot3InfiniteAmmoCheckEdit.Location = new System.Drawing.Point(731, 5);
+            this.P2Slot3InfiniteAmmoCheckEdit.Name = "P2Slot3InfiniteAmmoCheckEdit";
+            this.P2Slot3InfiniteAmmoCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot3InfiniteAmmoCheckEdit.Properties.Caption = "Inf. Ammo";
+            this.P2Slot3InfiniteAmmoCheckEdit.Size = new System.Drawing.Size(77, 20);
+            this.P2Slot3InfiniteAmmoCheckEdit.TabIndex = 13;
+            this.P2Slot3InfiniteAmmoCheckEdit.ToolTip = "Sets the infinite ammo flag for the respective item.";
+            this.P2Slot3InfiniteAmmoCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot3InfiniteAmmoCheckEdit.ToolTipTitle = "Infinite Ammo";
+            // 
+            // P2Slot3ScopeSE
+            // 
+            this.P2Slot3ScopeSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot3ScopeSE.Location = new System.Drawing.Point(673, 5);
+            this.P2Slot3ScopeSE.Name = "P2Slot3ScopeSE";
+            this.P2Slot3ScopeSE.Properties.AllowFocused = false;
+            this.P2Slot3ScopeSE.Properties.AllowMouseWheel = false;
+            this.P2Slot3ScopeSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot3ScopeSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot3ScopeSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot3ScopeSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot3ScopeSE.TabIndex = 10;
+            this.P2Slot3ScopeSE.ToolTip = "Scope";
+            this.P2Slot3ScopeSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot3RangeSE
+            // 
+            this.P2Slot3RangeSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot3RangeSE.Location = new System.Drawing.Point(615, 5);
+            this.P2Slot3RangeSE.Name = "P2Slot3RangeSE";
+            this.P2Slot3RangeSE.Properties.AllowFocused = false;
+            this.P2Slot3RangeSE.Properties.AllowMouseWheel = false;
+            this.P2Slot3RangeSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot3RangeSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot3RangeSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot3RangeSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot3RangeSE.TabIndex = 9;
+            this.P2Slot3RangeSE.ToolTip = "Range";
+            this.P2Slot3RangeSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot3PiercingSE
+            // 
+            this.P2Slot3PiercingSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot3PiercingSE.Location = new System.Drawing.Point(557, 5);
+            this.P2Slot3PiercingSE.Name = "P2Slot3PiercingSE";
+            this.P2Slot3PiercingSE.Properties.AllowFocused = false;
+            this.P2Slot3PiercingSE.Properties.AllowMouseWheel = false;
+            this.P2Slot3PiercingSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot3PiercingSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot3PiercingSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot3PiercingSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot3PiercingSE.TabIndex = 8;
+            this.P2Slot3PiercingSE.ToolTip = "Piercing";
+            this.P2Slot3PiercingSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot3CriticalSE
+            // 
+            this.P2Slot3CriticalSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot3CriticalSE.Location = new System.Drawing.Point(499, 5);
+            this.P2Slot3CriticalSE.Name = "P2Slot3CriticalSE";
+            this.P2Slot3CriticalSE.Properties.AllowFocused = false;
+            this.P2Slot3CriticalSE.Properties.AllowMouseWheel = false;
+            this.P2Slot3CriticalSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot3CriticalSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot3CriticalSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot3CriticalSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot3CriticalSE.TabIndex = 7;
+            this.P2Slot3CriticalSE.ToolTip = "Critical";
+            this.P2Slot3CriticalSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot3CapacitySE
+            // 
+            this.P2Slot3CapacitySE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot3CapacitySE.Location = new System.Drawing.Point(441, 5);
+            this.P2Slot3CapacitySE.Name = "P2Slot3CapacitySE";
+            this.P2Slot3CapacitySE.Properties.AllowFocused = false;
+            this.P2Slot3CapacitySE.Properties.AllowMouseWheel = false;
+            this.P2Slot3CapacitySE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot3CapacitySE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot3CapacitySE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot3CapacitySE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot3CapacitySE.TabIndex = 6;
+            this.P2Slot3CapacitySE.ToolTip = "Capacity";
+            this.P2Slot3CapacitySE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot3ReloadSpeedSE
+            // 
+            this.P2Slot3ReloadSpeedSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot3ReloadSpeedSE.Location = new System.Drawing.Point(383, 5);
+            this.P2Slot3ReloadSpeedSE.Name = "P2Slot3ReloadSpeedSE";
+            this.P2Slot3ReloadSpeedSE.Properties.AllowFocused = false;
+            this.P2Slot3ReloadSpeedSE.Properties.AllowMouseWheel = false;
+            this.P2Slot3ReloadSpeedSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot3ReloadSpeedSE.Properties.DisplayFormat.FormatString = "F";
+            this.P2Slot3ReloadSpeedSE.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.P2Slot3ReloadSpeedSE.Properties.EditFormat.FormatString = "F";
+            this.P2Slot3ReloadSpeedSE.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.P2Slot3ReloadSpeedSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot3ReloadSpeedSE.Properties.IsFloatValue = false;
+            this.P2Slot3ReloadSpeedSE.Properties.MaskSettings.Set("mask", "f2");
+            this.P2Slot3ReloadSpeedSE.Properties.MaskSettings.Set("hideInsignificantZeros", true);
+            this.P2Slot3ReloadSpeedSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot3ReloadSpeedSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot3ReloadSpeedSE.TabIndex = 5;
+            this.P2Slot3ReloadSpeedSE.ToolTip = "Reload Speed";
+            this.P2Slot3ReloadSpeedSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot3MaxQuantityTE
+            // 
+            this.P2Slot3MaxQuantityTE.EditValue = "0";
+            this.P2Slot3MaxQuantityTE.Location = new System.Drawing.Point(252, 5);
+            this.P2Slot3MaxQuantityTE.Name = "P2Slot3MaxQuantityTE";
+            this.P2Slot3MaxQuantityTE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot3MaxQuantityTE.TabIndex = 4;
+            this.P2Slot3MaxQuantityTE.ToolTip = "Max Quantity";
+            this.P2Slot3MaxQuantityTE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot3QuantityTE
+            // 
+            this.P2Slot3QuantityTE.EditValue = "0";
+            this.P2Slot3QuantityTE.Location = new System.Drawing.Point(194, 5);
+            this.P2Slot3QuantityTE.Name = "P2Slot3QuantityTE";
+            this.P2Slot3QuantityTE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot3QuantityTE.TabIndex = 3;
+            this.P2Slot3QuantityTE.ToolTip = "Quantity";
+            this.P2Slot3QuantityTE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot3ItemCB
+            // 
+            this.P2Slot3ItemCB.Location = new System.Drawing.Point(5, 5);
+            this.P2Slot3ItemCB.Name = "P2Slot3ItemCB";
+            this.P2Slot3ItemCB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P2Slot3ItemCB.Properties.AllowFocused = false;
+            this.P2Slot3ItemCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot3ItemCB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot3ItemCB.Size = new System.Drawing.Size(183, 20);
+            this.P2Slot3ItemCB.TabIndex = 2;
+            this.P2Slot3ItemCB.TabStop = false;
+            this.P2Slot3ItemCB.ToolTip = "Sets the item of the respective slot.";
+            this.P2Slot3ItemCB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot3ItemCB.ToolTipTitle = "Item";
+            // 
+            // P2Slot3FirepowerSE
+            // 
+            this.P2Slot3FirepowerSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot3FirepowerSE.Location = new System.Drawing.Point(310, 5);
+            this.P2Slot3FirepowerSE.Name = "P2Slot3FirepowerSE";
+            this.P2Slot3FirepowerSE.Properties.AllowFocused = false;
+            this.P2Slot3FirepowerSE.Properties.AllowMouseWheel = false;
+            this.P2Slot3FirepowerSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot3FirepowerSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot3FirepowerSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot3FirepowerSE.Size = new System.Drawing.Size(67, 20);
+            this.P2Slot3FirepowerSE.TabIndex = 1;
+            this.P2Slot3FirepowerSE.ToolTip = "Firepower";
+            this.P2Slot3FirepowerSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2CapacityLB
+            // 
+            this.P2CapacityLB.Location = new System.Drawing.Point(448, 5);
+            this.P2CapacityLB.Name = "P2CapacityLB";
+            this.P2CapacityLB.Size = new System.Drawing.Size(43, 13);
+            this.P2CapacityLB.TabIndex = 34;
+            this.P2CapacityLB.Text = "Capacity";
+            // 
+            // P2Slot4EditGP
+            // 
+            this.P2Slot4EditGP.Controls.Add(this.P2Slot4FrozenCheckEdit);
+            this.P2Slot4EditGP.Controls.Add(this.P2Slot4RapidFireCheckEdit);
+            this.P2Slot4EditGP.Controls.Add(this.P2Slot4InfiniteAmmoCheckEdit);
+            this.P2Slot4EditGP.Controls.Add(this.P2Slot4ScopeSE);
+            this.P2Slot4EditGP.Controls.Add(this.P2Slot4RangeSE);
+            this.P2Slot4EditGP.Controls.Add(this.P2Slot4PiercingSE);
+            this.P2Slot4EditGP.Controls.Add(this.P2Slot4CriticalSE);
+            this.P2Slot4EditGP.Controls.Add(this.P2Slot4CapacitySE);
+            this.P2Slot4EditGP.Controls.Add(this.P2Slot4ReloadSpeedSE);
+            this.P2Slot4EditGP.Controls.Add(this.P2Slot4MaxQuantityTE);
+            this.P2Slot4EditGP.Controls.Add(this.P2Slot4QuantityTE);
+            this.P2Slot4EditGP.Controls.Add(this.P2Slot4ItemCB);
+            this.P2Slot4EditGP.Controls.Add(this.P2Slot4FirepowerSE);
+            this.P2Slot4EditGP.Location = new System.Drawing.Point(3, 132);
+            this.P2Slot4EditGP.Name = "P2Slot4EditGP";
+            this.P2Slot4EditGP.ShowCaption = false;
+            this.P2Slot4EditGP.Size = new System.Drawing.Size(965, 30);
+            this.P2Slot4EditGP.TabIndex = 23;
+            // 
+            // P2Slot4FrozenCheckEdit
+            // 
+            this.P2Slot4FrozenCheckEdit.Location = new System.Drawing.Point(897, 5);
+            this.P2Slot4FrozenCheckEdit.Name = "P2Slot4FrozenCheckEdit";
+            this.P2Slot4FrozenCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot4FrozenCheckEdit.Properties.Caption = "Frozen";
+            this.P2Slot4FrozenCheckEdit.Size = new System.Drawing.Size(58, 20);
+            this.P2Slot4FrozenCheckEdit.TabIndex = 15;
+            this.P2Slot4FrozenCheckEdit.ToolTip = "Sets all values to be persistent.";
+            this.P2Slot4FrozenCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot4FrozenCheckEdit.ToolTipTitle = "Frozen";
+            // 
+            // P2Slot4RapidFireCheckEdit
+            // 
+            this.P2Slot4RapidFireCheckEdit.Location = new System.Drawing.Point(814, 5);
+            this.P2Slot4RapidFireCheckEdit.Name = "P2Slot4RapidFireCheckEdit";
+            this.P2Slot4RapidFireCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot4RapidFireCheckEdit.Properties.Caption = "Rapid Fire";
+            this.P2Slot4RapidFireCheckEdit.Size = new System.Drawing.Size(77, 20);
+            this.P2Slot4RapidFireCheckEdit.TabIndex = 14;
+            this.P2Slot4RapidFireCheckEdit.ToolTip = "Sets the rapid fire flag for the respective item.";
+            this.P2Slot4RapidFireCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot4RapidFireCheckEdit.ToolTipTitle = "Rapid Fire";
+            // 
+            // P2Slot4InfiniteAmmoCheckEdit
+            // 
+            this.P2Slot4InfiniteAmmoCheckEdit.Location = new System.Drawing.Point(731, 5);
+            this.P2Slot4InfiniteAmmoCheckEdit.Name = "P2Slot4InfiniteAmmoCheckEdit";
+            this.P2Slot4InfiniteAmmoCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot4InfiniteAmmoCheckEdit.Properties.Caption = "Inf. Ammo";
+            this.P2Slot4InfiniteAmmoCheckEdit.Size = new System.Drawing.Size(77, 20);
+            this.P2Slot4InfiniteAmmoCheckEdit.TabIndex = 13;
+            this.P2Slot4InfiniteAmmoCheckEdit.ToolTip = "Sets the infinite ammo flag for the respective item.";
+            this.P2Slot4InfiniteAmmoCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot4InfiniteAmmoCheckEdit.ToolTipTitle = "Infinite Ammo";
+            // 
+            // P2Slot4ScopeSE
+            // 
+            this.P2Slot4ScopeSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot4ScopeSE.Location = new System.Drawing.Point(673, 5);
+            this.P2Slot4ScopeSE.Name = "P2Slot4ScopeSE";
+            this.P2Slot4ScopeSE.Properties.AllowFocused = false;
+            this.P2Slot4ScopeSE.Properties.AllowMouseWheel = false;
+            this.P2Slot4ScopeSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot4ScopeSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot4ScopeSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot4ScopeSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot4ScopeSE.TabIndex = 10;
+            this.P2Slot4ScopeSE.ToolTip = "Scope";
+            this.P2Slot4ScopeSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot4RangeSE
+            // 
+            this.P2Slot4RangeSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot4RangeSE.Location = new System.Drawing.Point(615, 5);
+            this.P2Slot4RangeSE.Name = "P2Slot4RangeSE";
+            this.P2Slot4RangeSE.Properties.AllowFocused = false;
+            this.P2Slot4RangeSE.Properties.AllowMouseWheel = false;
+            this.P2Slot4RangeSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot4RangeSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot4RangeSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot4RangeSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot4RangeSE.TabIndex = 9;
+            this.P2Slot4RangeSE.ToolTip = "Range";
+            this.P2Slot4RangeSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot4PiercingSE
+            // 
+            this.P2Slot4PiercingSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot4PiercingSE.Location = new System.Drawing.Point(557, 5);
+            this.P2Slot4PiercingSE.Name = "P2Slot4PiercingSE";
+            this.P2Slot4PiercingSE.Properties.AllowFocused = false;
+            this.P2Slot4PiercingSE.Properties.AllowMouseWheel = false;
+            this.P2Slot4PiercingSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot4PiercingSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot4PiercingSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot4PiercingSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot4PiercingSE.TabIndex = 8;
+            this.P2Slot4PiercingSE.ToolTip = "Piercing";
+            this.P2Slot4PiercingSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot4CriticalSE
+            // 
+            this.P2Slot4CriticalSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot4CriticalSE.Location = new System.Drawing.Point(499, 5);
+            this.P2Slot4CriticalSE.Name = "P2Slot4CriticalSE";
+            this.P2Slot4CriticalSE.Properties.AllowFocused = false;
+            this.P2Slot4CriticalSE.Properties.AllowMouseWheel = false;
+            this.P2Slot4CriticalSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot4CriticalSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot4CriticalSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot4CriticalSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot4CriticalSE.TabIndex = 7;
+            this.P2Slot4CriticalSE.ToolTip = "Critical";
+            this.P2Slot4CriticalSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot4CapacitySE
+            // 
+            this.P2Slot4CapacitySE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot4CapacitySE.Location = new System.Drawing.Point(441, 5);
+            this.P2Slot4CapacitySE.Name = "P2Slot4CapacitySE";
+            this.P2Slot4CapacitySE.Properties.AllowFocused = false;
+            this.P2Slot4CapacitySE.Properties.AllowMouseWheel = false;
+            this.P2Slot4CapacitySE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot4CapacitySE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot4CapacitySE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot4CapacitySE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot4CapacitySE.TabIndex = 6;
+            this.P2Slot4CapacitySE.ToolTip = "Capacity";
+            this.P2Slot4CapacitySE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot4ReloadSpeedSE
+            // 
+            this.P2Slot4ReloadSpeedSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot4ReloadSpeedSE.Location = new System.Drawing.Point(383, 5);
+            this.P2Slot4ReloadSpeedSE.Name = "P2Slot4ReloadSpeedSE";
+            this.P2Slot4ReloadSpeedSE.Properties.AllowFocused = false;
+            this.P2Slot4ReloadSpeedSE.Properties.AllowMouseWheel = false;
+            this.P2Slot4ReloadSpeedSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot4ReloadSpeedSE.Properties.DisplayFormat.FormatString = "F";
+            this.P2Slot4ReloadSpeedSE.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.P2Slot4ReloadSpeedSE.Properties.EditFormat.FormatString = "F";
+            this.P2Slot4ReloadSpeedSE.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.P2Slot4ReloadSpeedSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot4ReloadSpeedSE.Properties.IsFloatValue = false;
+            this.P2Slot4ReloadSpeedSE.Properties.MaskSettings.Set("mask", "f2");
+            this.P2Slot4ReloadSpeedSE.Properties.MaskSettings.Set("hideInsignificantZeros", true);
+            this.P2Slot4ReloadSpeedSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot4ReloadSpeedSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot4ReloadSpeedSE.TabIndex = 5;
+            this.P2Slot4ReloadSpeedSE.ToolTip = "Reload Speed";
+            this.P2Slot4ReloadSpeedSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot4MaxQuantityTE
+            // 
+            this.P2Slot4MaxQuantityTE.EditValue = "0";
+            this.P2Slot4MaxQuantityTE.Location = new System.Drawing.Point(252, 5);
+            this.P2Slot4MaxQuantityTE.Name = "P2Slot4MaxQuantityTE";
+            this.P2Slot4MaxQuantityTE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot4MaxQuantityTE.TabIndex = 4;
+            this.P2Slot4MaxQuantityTE.ToolTip = "Max Quantity";
+            this.P2Slot4MaxQuantityTE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot4QuantityTE
+            // 
+            this.P2Slot4QuantityTE.EditValue = "0";
+            this.P2Slot4QuantityTE.Location = new System.Drawing.Point(194, 5);
+            this.P2Slot4QuantityTE.Name = "P2Slot4QuantityTE";
+            this.P2Slot4QuantityTE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot4QuantityTE.TabIndex = 3;
+            this.P2Slot4QuantityTE.ToolTip = "Quantity";
+            this.P2Slot4QuantityTE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot4ItemCB
+            // 
+            this.P2Slot4ItemCB.Location = new System.Drawing.Point(5, 5);
+            this.P2Slot4ItemCB.Name = "P2Slot4ItemCB";
+            this.P2Slot4ItemCB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P2Slot4ItemCB.Properties.AllowFocused = false;
+            this.P2Slot4ItemCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot4ItemCB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot4ItemCB.Size = new System.Drawing.Size(183, 20);
+            this.P2Slot4ItemCB.TabIndex = 2;
+            this.P2Slot4ItemCB.TabStop = false;
+            this.P2Slot4ItemCB.ToolTip = "Sets the item of the respective slot.";
+            this.P2Slot4ItemCB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot4ItemCB.ToolTipTitle = "Item";
+            // 
+            // P2Slot4FirepowerSE
+            // 
+            this.P2Slot4FirepowerSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot4FirepowerSE.Location = new System.Drawing.Point(310, 5);
+            this.P2Slot4FirepowerSE.Name = "P2Slot4FirepowerSE";
+            this.P2Slot4FirepowerSE.Properties.AllowFocused = false;
+            this.P2Slot4FirepowerSE.Properties.AllowMouseWheel = false;
+            this.P2Slot4FirepowerSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot4FirepowerSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot4FirepowerSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot4FirepowerSE.Size = new System.Drawing.Size(67, 20);
+            this.P2Slot4FirepowerSE.TabIndex = 1;
+            this.P2Slot4FirepowerSE.ToolTip = "Firepower";
+            this.P2Slot4FirepowerSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2ReloadSpeedLB
+            // 
+            this.P2ReloadSpeedLB.Location = new System.Drawing.Point(389, 5);
+            this.P2ReloadSpeedLB.Name = "P2ReloadSpeedLB";
+            this.P2ReloadSpeedLB.Size = new System.Drawing.Size(45, 13);
+            this.P2ReloadSpeedLB.TabIndex = 33;
+            this.P2ReloadSpeedLB.Text = "R. Speed";
+            // 
+            // P2Slot5EditGP
+            // 
+            this.P2Slot5EditGP.Controls.Add(this.P2Slot5FrozenCheckEdit);
+            this.P2Slot5EditGP.Controls.Add(this.P2Slot5RapidFireCheckEdit);
+            this.P2Slot5EditGP.Controls.Add(this.P2Slot5InfiniteAmmoCheckEdit);
+            this.P2Slot5EditGP.Controls.Add(this.P2Slot5ScopeSE);
+            this.P2Slot5EditGP.Controls.Add(this.P2Slot5RangeSE);
+            this.P2Slot5EditGP.Controls.Add(this.P2Slot5PiercingSE);
+            this.P2Slot5EditGP.Controls.Add(this.P2Slot5CriticalSE);
+            this.P2Slot5EditGP.Controls.Add(this.P2Slot5CapacitySE);
+            this.P2Slot5EditGP.Controls.Add(this.P2Slot5ReloadSpeedSE);
+            this.P2Slot5EditGP.Controls.Add(this.P2Slot5MaxQuantityTE);
+            this.P2Slot5EditGP.Controls.Add(this.P2Slot5QuantityTE);
+            this.P2Slot5EditGP.Controls.Add(this.P2Slot5ItemCB);
+            this.P2Slot5EditGP.Controls.Add(this.P2Slot5FirepowerSE);
+            this.P2Slot5EditGP.Location = new System.Drawing.Point(3, 168);
+            this.P2Slot5EditGP.Name = "P2Slot5EditGP";
+            this.P2Slot5EditGP.ShowCaption = false;
+            this.P2Slot5EditGP.Size = new System.Drawing.Size(965, 30);
+            this.P2Slot5EditGP.TabIndex = 24;
+            // 
+            // P2Slot5FrozenCheckEdit
+            // 
+            this.P2Slot5FrozenCheckEdit.Location = new System.Drawing.Point(897, 5);
+            this.P2Slot5FrozenCheckEdit.Name = "P2Slot5FrozenCheckEdit";
+            this.P2Slot5FrozenCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot5FrozenCheckEdit.Properties.Caption = "Frozen";
+            this.P2Slot5FrozenCheckEdit.Size = new System.Drawing.Size(58, 20);
+            this.P2Slot5FrozenCheckEdit.TabIndex = 15;
+            this.P2Slot5FrozenCheckEdit.ToolTip = "Sets all values to be persistent.";
+            this.P2Slot5FrozenCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot5FrozenCheckEdit.ToolTipTitle = "Frozen";
+            // 
+            // P2Slot5RapidFireCheckEdit
+            // 
+            this.P2Slot5RapidFireCheckEdit.Location = new System.Drawing.Point(814, 5);
+            this.P2Slot5RapidFireCheckEdit.Name = "P2Slot5RapidFireCheckEdit";
+            this.P2Slot5RapidFireCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot5RapidFireCheckEdit.Properties.Caption = "Rapid Fire";
+            this.P2Slot5RapidFireCheckEdit.Size = new System.Drawing.Size(77, 20);
+            this.P2Slot5RapidFireCheckEdit.TabIndex = 14;
+            this.P2Slot5RapidFireCheckEdit.ToolTip = "Sets the rapid fire flag for the respective item.";
+            this.P2Slot5RapidFireCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot5RapidFireCheckEdit.ToolTipTitle = "Rapid Fire";
+            // 
+            // P2Slot5InfiniteAmmoCheckEdit
+            // 
+            this.P2Slot5InfiniteAmmoCheckEdit.Location = new System.Drawing.Point(731, 5);
+            this.P2Slot5InfiniteAmmoCheckEdit.Name = "P2Slot5InfiniteAmmoCheckEdit";
+            this.P2Slot5InfiniteAmmoCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot5InfiniteAmmoCheckEdit.Properties.Caption = "Inf. Ammo";
+            this.P2Slot5InfiniteAmmoCheckEdit.Size = new System.Drawing.Size(77, 20);
+            this.P2Slot5InfiniteAmmoCheckEdit.TabIndex = 13;
+            this.P2Slot5InfiniteAmmoCheckEdit.ToolTip = "Sets the infinite ammo flag for the respective item.";
+            this.P2Slot5InfiniteAmmoCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot5InfiniteAmmoCheckEdit.ToolTipTitle = "Infinite Ammo";
+            // 
+            // P2Slot5ScopeSE
+            // 
+            this.P2Slot5ScopeSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot5ScopeSE.Location = new System.Drawing.Point(673, 5);
+            this.P2Slot5ScopeSE.Name = "P2Slot5ScopeSE";
+            this.P2Slot5ScopeSE.Properties.AllowFocused = false;
+            this.P2Slot5ScopeSE.Properties.AllowMouseWheel = false;
+            this.P2Slot5ScopeSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot5ScopeSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot5ScopeSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot5ScopeSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot5ScopeSE.TabIndex = 10;
+            this.P2Slot5ScopeSE.ToolTip = "Scope";
+            this.P2Slot5ScopeSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot5RangeSE
+            // 
+            this.P2Slot5RangeSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot5RangeSE.Location = new System.Drawing.Point(615, 5);
+            this.P2Slot5RangeSE.Name = "P2Slot5RangeSE";
+            this.P2Slot5RangeSE.Properties.AllowFocused = false;
+            this.P2Slot5RangeSE.Properties.AllowMouseWheel = false;
+            this.P2Slot5RangeSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot5RangeSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot5RangeSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot5RangeSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot5RangeSE.TabIndex = 9;
+            this.P2Slot5RangeSE.ToolTip = "Range";
+            this.P2Slot5RangeSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot5PiercingSE
+            // 
+            this.P2Slot5PiercingSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot5PiercingSE.Location = new System.Drawing.Point(557, 5);
+            this.P2Slot5PiercingSE.Name = "P2Slot5PiercingSE";
+            this.P2Slot5PiercingSE.Properties.AllowFocused = false;
+            this.P2Slot5PiercingSE.Properties.AllowMouseWheel = false;
+            this.P2Slot5PiercingSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot5PiercingSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot5PiercingSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot5PiercingSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot5PiercingSE.TabIndex = 8;
+            this.P2Slot5PiercingSE.ToolTip = "Piercing";
+            this.P2Slot5PiercingSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot5CriticalSE
+            // 
+            this.P2Slot5CriticalSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot5CriticalSE.Location = new System.Drawing.Point(499, 5);
+            this.P2Slot5CriticalSE.Name = "P2Slot5CriticalSE";
+            this.P2Slot5CriticalSE.Properties.AllowFocused = false;
+            this.P2Slot5CriticalSE.Properties.AllowMouseWheel = false;
+            this.P2Slot5CriticalSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot5CriticalSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot5CriticalSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot5CriticalSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot5CriticalSE.TabIndex = 7;
+            this.P2Slot5CriticalSE.ToolTip = "Critical";
+            this.P2Slot5CriticalSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot5CapacitySE
+            // 
+            this.P2Slot5CapacitySE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot5CapacitySE.Location = new System.Drawing.Point(441, 5);
+            this.P2Slot5CapacitySE.Name = "P2Slot5CapacitySE";
+            this.P2Slot5CapacitySE.Properties.AllowFocused = false;
+            this.P2Slot5CapacitySE.Properties.AllowMouseWheel = false;
+            this.P2Slot5CapacitySE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot5CapacitySE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot5CapacitySE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot5CapacitySE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot5CapacitySE.TabIndex = 6;
+            this.P2Slot5CapacitySE.ToolTip = "Capacity";
+            this.P2Slot5CapacitySE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot5ReloadSpeedSE
+            // 
+            this.P2Slot5ReloadSpeedSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot5ReloadSpeedSE.Location = new System.Drawing.Point(383, 5);
+            this.P2Slot5ReloadSpeedSE.Name = "P2Slot5ReloadSpeedSE";
+            this.P2Slot5ReloadSpeedSE.Properties.AllowFocused = false;
+            this.P2Slot5ReloadSpeedSE.Properties.AllowMouseWheel = false;
+            this.P2Slot5ReloadSpeedSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot5ReloadSpeedSE.Properties.DisplayFormat.FormatString = "F";
+            this.P2Slot5ReloadSpeedSE.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.P2Slot5ReloadSpeedSE.Properties.EditFormat.FormatString = "F";
+            this.P2Slot5ReloadSpeedSE.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.P2Slot5ReloadSpeedSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot5ReloadSpeedSE.Properties.IsFloatValue = false;
+            this.P2Slot5ReloadSpeedSE.Properties.MaskSettings.Set("mask", "f2");
+            this.P2Slot5ReloadSpeedSE.Properties.MaskSettings.Set("hideInsignificantZeros", true);
+            this.P2Slot5ReloadSpeedSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot5ReloadSpeedSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot5ReloadSpeedSE.TabIndex = 5;
+            this.P2Slot5ReloadSpeedSE.ToolTip = "Reload Speed";
+            this.P2Slot5ReloadSpeedSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot5MaxQuantityTE
+            // 
+            this.P2Slot5MaxQuantityTE.EditValue = "0";
+            this.P2Slot5MaxQuantityTE.Location = new System.Drawing.Point(252, 5);
+            this.P2Slot5MaxQuantityTE.Name = "P2Slot5MaxQuantityTE";
+            this.P2Slot5MaxQuantityTE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot5MaxQuantityTE.TabIndex = 4;
+            this.P2Slot5MaxQuantityTE.ToolTip = "Max Quantity";
+            this.P2Slot5MaxQuantityTE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot5QuantityTE
+            // 
+            this.P2Slot5QuantityTE.EditValue = "0";
+            this.P2Slot5QuantityTE.Location = new System.Drawing.Point(194, 5);
+            this.P2Slot5QuantityTE.Name = "P2Slot5QuantityTE";
+            this.P2Slot5QuantityTE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot5QuantityTE.TabIndex = 3;
+            this.P2Slot5QuantityTE.ToolTip = "Quantity";
+            this.P2Slot5QuantityTE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot5ItemCB
+            // 
+            this.P2Slot5ItemCB.Location = new System.Drawing.Point(5, 5);
+            this.P2Slot5ItemCB.Name = "P2Slot5ItemCB";
+            this.P2Slot5ItemCB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P2Slot5ItemCB.Properties.AllowFocused = false;
+            this.P2Slot5ItemCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot5ItemCB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot5ItemCB.Size = new System.Drawing.Size(183, 20);
+            this.P2Slot5ItemCB.TabIndex = 2;
+            this.P2Slot5ItemCB.TabStop = false;
+            this.P2Slot5ItemCB.ToolTip = "Sets the item of the respective slot.";
+            this.P2Slot5ItemCB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot5ItemCB.ToolTipTitle = "Item";
+            // 
+            // P2Slot5FirepowerSE
+            // 
+            this.P2Slot5FirepowerSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot5FirepowerSE.Location = new System.Drawing.Point(310, 5);
+            this.P2Slot5FirepowerSE.Name = "P2Slot5FirepowerSE";
+            this.P2Slot5FirepowerSE.Properties.AllowFocused = false;
+            this.P2Slot5FirepowerSE.Properties.AllowMouseWheel = false;
+            this.P2Slot5FirepowerSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot5FirepowerSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot5FirepowerSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot5FirepowerSE.Size = new System.Drawing.Size(67, 20);
+            this.P2Slot5FirepowerSE.TabIndex = 1;
+            this.P2Slot5FirepowerSE.ToolTip = "Firepower";
+            this.P2Slot5FirepowerSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2FirepowerLB
+            // 
+            this.P2FirepowerLB.Location = new System.Drawing.Point(320, 5);
+            this.P2FirepowerLB.Name = "P2FirepowerLB";
+            this.P2FirepowerLB.Size = new System.Drawing.Size(52, 13);
+            this.P2FirepowerLB.TabIndex = 32;
+            this.P2FirepowerLB.Text = "Firepower";
+            // 
+            // P2Slot6EditGP
+            // 
+            this.P2Slot6EditGP.Controls.Add(this.P2Slot6FrozenCheckEdit);
+            this.P2Slot6EditGP.Controls.Add(this.P2Slot6ScopeSE);
+            this.P2Slot6EditGP.Controls.Add(this.P2Slot6RapidFireCheckEdit);
+            this.P2Slot6EditGP.Controls.Add(this.P2Slot6RangeSE);
+            this.P2Slot6EditGP.Controls.Add(this.P2Slot6InfiniteAmmoCheckEdit);
+            this.P2Slot6EditGP.Controls.Add(this.P2Slot6PiercingSE);
+            this.P2Slot6EditGP.Controls.Add(this.P2Slot6CriticalSE);
+            this.P2Slot6EditGP.Controls.Add(this.P2Slot6CapacitySE);
+            this.P2Slot6EditGP.Controls.Add(this.P2Slot6ReloadSpeedSE);
+            this.P2Slot6EditGP.Controls.Add(this.P2Slot6MaxQuantityTE);
+            this.P2Slot6EditGP.Controls.Add(this.P2Slot6QuantityTE);
+            this.P2Slot6EditGP.Controls.Add(this.P2Slot6ItemCB);
+            this.P2Slot6EditGP.Controls.Add(this.P2Slot6FirepowerSE);
+            this.P2Slot6EditGP.Location = new System.Drawing.Point(3, 204);
+            this.P2Slot6EditGP.Name = "P2Slot6EditGP";
+            this.P2Slot6EditGP.ShowCaption = false;
+            this.P2Slot6EditGP.Size = new System.Drawing.Size(965, 30);
+            this.P2Slot6EditGP.TabIndex = 25;
+            // 
+            // P2Slot6FrozenCheckEdit
+            // 
+            this.P2Slot6FrozenCheckEdit.Location = new System.Drawing.Point(897, 5);
+            this.P2Slot6FrozenCheckEdit.Name = "P2Slot6FrozenCheckEdit";
+            this.P2Slot6FrozenCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot6FrozenCheckEdit.Properties.Caption = "Frozen";
+            this.P2Slot6FrozenCheckEdit.Size = new System.Drawing.Size(58, 20);
+            this.P2Slot6FrozenCheckEdit.TabIndex = 18;
+            this.P2Slot6FrozenCheckEdit.ToolTip = "Sets all values to be persistent.";
+            this.P2Slot6FrozenCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot6FrozenCheckEdit.ToolTipTitle = "Frozen";
+            // 
+            // P2Slot6ScopeSE
+            // 
+            this.P2Slot6ScopeSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot6ScopeSE.Location = new System.Drawing.Point(673, 5);
+            this.P2Slot6ScopeSE.Name = "P2Slot6ScopeSE";
+            this.P2Slot6ScopeSE.Properties.AllowFocused = false;
+            this.P2Slot6ScopeSE.Properties.AllowMouseWheel = false;
+            this.P2Slot6ScopeSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot6ScopeSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot6ScopeSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot6ScopeSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot6ScopeSE.TabIndex = 10;
+            this.P2Slot6ScopeSE.ToolTip = "Scope";
+            this.P2Slot6ScopeSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot6RapidFireCheckEdit
+            // 
+            this.P2Slot6RapidFireCheckEdit.Location = new System.Drawing.Point(814, 5);
+            this.P2Slot6RapidFireCheckEdit.Name = "P2Slot6RapidFireCheckEdit";
+            this.P2Slot6RapidFireCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot6RapidFireCheckEdit.Properties.Caption = "Rapid Fire";
+            this.P2Slot6RapidFireCheckEdit.Size = new System.Drawing.Size(77, 20);
+            this.P2Slot6RapidFireCheckEdit.TabIndex = 17;
+            this.P2Slot6RapidFireCheckEdit.ToolTip = "Sets the rapid fire flag for the respective item.";
+            this.P2Slot6RapidFireCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot6RapidFireCheckEdit.ToolTipTitle = "Rapid Fire";
+            // 
+            // P2Slot6RangeSE
+            // 
+            this.P2Slot6RangeSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot6RangeSE.Location = new System.Drawing.Point(615, 5);
+            this.P2Slot6RangeSE.Name = "P2Slot6RangeSE";
+            this.P2Slot6RangeSE.Properties.AllowFocused = false;
+            this.P2Slot6RangeSE.Properties.AllowMouseWheel = false;
+            this.P2Slot6RangeSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot6RangeSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot6RangeSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot6RangeSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot6RangeSE.TabIndex = 9;
+            this.P2Slot6RangeSE.ToolTip = "Range";
+            this.P2Slot6RangeSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot6InfiniteAmmoCheckEdit
+            // 
+            this.P2Slot6InfiniteAmmoCheckEdit.Location = new System.Drawing.Point(731, 5);
+            this.P2Slot6InfiniteAmmoCheckEdit.Name = "P2Slot6InfiniteAmmoCheckEdit";
+            this.P2Slot6InfiniteAmmoCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot6InfiniteAmmoCheckEdit.Properties.Caption = "Inf. Ammo";
+            this.P2Slot6InfiniteAmmoCheckEdit.Size = new System.Drawing.Size(77, 20);
+            this.P2Slot6InfiniteAmmoCheckEdit.TabIndex = 16;
+            this.P2Slot6InfiniteAmmoCheckEdit.ToolTip = "Sets the infinite ammo flag for the respective item.";
+            this.P2Slot6InfiniteAmmoCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot6InfiniteAmmoCheckEdit.ToolTipTitle = "Infinite Ammo";
+            // 
+            // P2Slot6PiercingSE
+            // 
+            this.P2Slot6PiercingSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot6PiercingSE.Location = new System.Drawing.Point(557, 5);
+            this.P2Slot6PiercingSE.Name = "P2Slot6PiercingSE";
+            this.P2Slot6PiercingSE.Properties.AllowFocused = false;
+            this.P2Slot6PiercingSE.Properties.AllowMouseWheel = false;
+            this.P2Slot6PiercingSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot6PiercingSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot6PiercingSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot6PiercingSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot6PiercingSE.TabIndex = 8;
+            this.P2Slot6PiercingSE.ToolTip = "Piercing";
+            this.P2Slot6PiercingSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot6CriticalSE
+            // 
+            this.P2Slot6CriticalSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot6CriticalSE.Location = new System.Drawing.Point(499, 5);
+            this.P2Slot6CriticalSE.Name = "P2Slot6CriticalSE";
+            this.P2Slot6CriticalSE.Properties.AllowFocused = false;
+            this.P2Slot6CriticalSE.Properties.AllowMouseWheel = false;
+            this.P2Slot6CriticalSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot6CriticalSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot6CriticalSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot6CriticalSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot6CriticalSE.TabIndex = 7;
+            this.P2Slot6CriticalSE.ToolTip = "Critical";
+            this.P2Slot6CriticalSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot6CapacitySE
+            // 
+            this.P2Slot6CapacitySE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot6CapacitySE.Location = new System.Drawing.Point(441, 5);
+            this.P2Slot6CapacitySE.Name = "P2Slot6CapacitySE";
+            this.P2Slot6CapacitySE.Properties.AllowFocused = false;
+            this.P2Slot6CapacitySE.Properties.AllowMouseWheel = false;
+            this.P2Slot6CapacitySE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot6CapacitySE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot6CapacitySE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot6CapacitySE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot6CapacitySE.TabIndex = 6;
+            this.P2Slot6CapacitySE.ToolTip = "Capacity";
+            this.P2Slot6CapacitySE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot6ReloadSpeedSE
+            // 
+            this.P2Slot6ReloadSpeedSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot6ReloadSpeedSE.Location = new System.Drawing.Point(383, 5);
+            this.P2Slot6ReloadSpeedSE.Name = "P2Slot6ReloadSpeedSE";
+            this.P2Slot6ReloadSpeedSE.Properties.AllowFocused = false;
+            this.P2Slot6ReloadSpeedSE.Properties.AllowMouseWheel = false;
+            this.P2Slot6ReloadSpeedSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot6ReloadSpeedSE.Properties.DisplayFormat.FormatString = "F";
+            this.P2Slot6ReloadSpeedSE.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.P2Slot6ReloadSpeedSE.Properties.EditFormat.FormatString = "F";
+            this.P2Slot6ReloadSpeedSE.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.P2Slot6ReloadSpeedSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot6ReloadSpeedSE.Properties.IsFloatValue = false;
+            this.P2Slot6ReloadSpeedSE.Properties.MaskSettings.Set("mask", "f2");
+            this.P2Slot6ReloadSpeedSE.Properties.MaskSettings.Set("hideInsignificantZeros", true);
+            this.P2Slot6ReloadSpeedSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot6ReloadSpeedSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot6ReloadSpeedSE.TabIndex = 5;
+            this.P2Slot6ReloadSpeedSE.ToolTip = "Reload Speed";
+            this.P2Slot6ReloadSpeedSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot6MaxQuantityTE
+            // 
+            this.P2Slot6MaxQuantityTE.EditValue = "0";
+            this.P2Slot6MaxQuantityTE.Location = new System.Drawing.Point(252, 5);
+            this.P2Slot6MaxQuantityTE.Name = "P2Slot6MaxQuantityTE";
+            this.P2Slot6MaxQuantityTE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot6MaxQuantityTE.TabIndex = 4;
+            this.P2Slot6MaxQuantityTE.ToolTip = "Max Quantity";
+            this.P2Slot6MaxQuantityTE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot6QuantityTE
+            // 
+            this.P2Slot6QuantityTE.EditValue = "0";
+            this.P2Slot6QuantityTE.Location = new System.Drawing.Point(194, 5);
+            this.P2Slot6QuantityTE.Name = "P2Slot6QuantityTE";
+            this.P2Slot6QuantityTE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot6QuantityTE.TabIndex = 3;
+            this.P2Slot6QuantityTE.ToolTip = "Quantity";
+            this.P2Slot6QuantityTE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot6ItemCB
+            // 
+            this.P2Slot6ItemCB.Location = new System.Drawing.Point(5, 5);
+            this.P2Slot6ItemCB.Name = "P2Slot6ItemCB";
+            this.P2Slot6ItemCB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P2Slot6ItemCB.Properties.AllowFocused = false;
+            this.P2Slot6ItemCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot6ItemCB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot6ItemCB.Size = new System.Drawing.Size(183, 20);
+            this.P2Slot6ItemCB.TabIndex = 2;
+            this.P2Slot6ItemCB.TabStop = false;
+            this.P2Slot6ItemCB.ToolTip = "Sets the item of the respective slot.";
+            this.P2Slot6ItemCB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot6ItemCB.ToolTipTitle = "Item";
+            // 
+            // P2Slot6FirepowerSE
+            // 
+            this.P2Slot6FirepowerSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot6FirepowerSE.Location = new System.Drawing.Point(310, 5);
+            this.P2Slot6FirepowerSE.Name = "P2Slot6FirepowerSE";
+            this.P2Slot6FirepowerSE.Properties.AllowFocused = false;
+            this.P2Slot6FirepowerSE.Properties.AllowMouseWheel = false;
+            this.P2Slot6FirepowerSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot6FirepowerSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot6FirepowerSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot6FirepowerSE.Size = new System.Drawing.Size(67, 20);
+            this.P2Slot6FirepowerSE.TabIndex = 1;
+            this.P2Slot6FirepowerSE.ToolTip = "Firepower";
+            this.P2Slot6FirepowerSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2MaxQuantityLB
+            // 
+            this.P2MaxQuantityLB.Location = new System.Drawing.Point(260, 5);
+            this.P2MaxQuantityLB.Name = "P2MaxQuantityLB";
+            this.P2MaxQuantityLB.Size = new System.Drawing.Size(40, 13);
+            this.P2MaxQuantityLB.TabIndex = 31;
+            this.P2MaxQuantityLB.Text = "M. Qua.";
+            // 
+            // P2Slot7EditGP
+            // 
+            this.P2Slot7EditGP.Controls.Add(this.P2Slot7FrozenCheckEdit);
+            this.P2Slot7EditGP.Controls.Add(this.P2Slot7ScopeSE);
+            this.P2Slot7EditGP.Controls.Add(this.P2Slot7RapidFireCheckEdit);
+            this.P2Slot7EditGP.Controls.Add(this.P2Slot7RangeSE);
+            this.P2Slot7EditGP.Controls.Add(this.P2Slot7InfiniteAmmoCheckEdit);
+            this.P2Slot7EditGP.Controls.Add(this.P2Slot7PiercingSE);
+            this.P2Slot7EditGP.Controls.Add(this.P2Slot7CriticalSE);
+            this.P2Slot7EditGP.Controls.Add(this.P2Slot7CapacitySE);
+            this.P2Slot7EditGP.Controls.Add(this.P2Slot7ReloadSpeedSE);
+            this.P2Slot7EditGP.Controls.Add(this.P2Slot7MaxQuantityTE);
+            this.P2Slot7EditGP.Controls.Add(this.P2Slot7QuantityTE);
+            this.P2Slot7EditGP.Controls.Add(this.P2Slot7ItemCB);
+            this.P2Slot7EditGP.Controls.Add(this.P2Slot7FirepowerSE);
+            this.P2Slot7EditGP.Location = new System.Drawing.Point(3, 240);
+            this.P2Slot7EditGP.Name = "P2Slot7EditGP";
+            this.P2Slot7EditGP.ShowCaption = false;
+            this.P2Slot7EditGP.Size = new System.Drawing.Size(965, 30);
+            this.P2Slot7EditGP.TabIndex = 26;
+            // 
+            // P2Slot7FrozenCheckEdit
+            // 
+            this.P2Slot7FrozenCheckEdit.Location = new System.Drawing.Point(897, 5);
+            this.P2Slot7FrozenCheckEdit.Name = "P2Slot7FrozenCheckEdit";
+            this.P2Slot7FrozenCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot7FrozenCheckEdit.Properties.Caption = "Frozen";
+            this.P2Slot7FrozenCheckEdit.Size = new System.Drawing.Size(58, 20);
+            this.P2Slot7FrozenCheckEdit.TabIndex = 21;
+            this.P2Slot7FrozenCheckEdit.ToolTip = "Sets all values to be persistent.";
+            this.P2Slot7FrozenCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot7FrozenCheckEdit.ToolTipTitle = "Frozen";
+            // 
+            // P2Slot7ScopeSE
+            // 
+            this.P2Slot7ScopeSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot7ScopeSE.Location = new System.Drawing.Point(673, 5);
+            this.P2Slot7ScopeSE.Name = "P2Slot7ScopeSE";
+            this.P2Slot7ScopeSE.Properties.AllowFocused = false;
+            this.P2Slot7ScopeSE.Properties.AllowMouseWheel = false;
+            this.P2Slot7ScopeSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot7ScopeSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot7ScopeSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot7ScopeSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot7ScopeSE.TabIndex = 10;
+            this.P2Slot7ScopeSE.ToolTip = "Scope";
+            this.P2Slot7ScopeSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot7RapidFireCheckEdit
+            // 
+            this.P2Slot7RapidFireCheckEdit.Location = new System.Drawing.Point(814, 5);
+            this.P2Slot7RapidFireCheckEdit.Name = "P2Slot7RapidFireCheckEdit";
+            this.P2Slot7RapidFireCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot7RapidFireCheckEdit.Properties.Caption = "Rapid Fire";
+            this.P2Slot7RapidFireCheckEdit.Size = new System.Drawing.Size(77, 20);
+            this.P2Slot7RapidFireCheckEdit.TabIndex = 20;
+            this.P2Slot7RapidFireCheckEdit.ToolTip = "Sets the rapid fire flag for the respective item.";
+            this.P2Slot7RapidFireCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot7RapidFireCheckEdit.ToolTipTitle = "Rapid Fire";
+            // 
+            // P2Slot7RangeSE
+            // 
+            this.P2Slot7RangeSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot7RangeSE.Location = new System.Drawing.Point(615, 5);
+            this.P2Slot7RangeSE.Name = "P2Slot7RangeSE";
+            this.P2Slot7RangeSE.Properties.AllowFocused = false;
+            this.P2Slot7RangeSE.Properties.AllowMouseWheel = false;
+            this.P2Slot7RangeSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot7RangeSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot7RangeSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot7RangeSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot7RangeSE.TabIndex = 9;
+            this.P2Slot7RangeSE.ToolTip = "Range";
+            this.P2Slot7RangeSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot7InfiniteAmmoCheckEdit
+            // 
+            this.P2Slot7InfiniteAmmoCheckEdit.Location = new System.Drawing.Point(731, 5);
+            this.P2Slot7InfiniteAmmoCheckEdit.Name = "P2Slot7InfiniteAmmoCheckEdit";
+            this.P2Slot7InfiniteAmmoCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot7InfiniteAmmoCheckEdit.Properties.Caption = "Inf. Ammo";
+            this.P2Slot7InfiniteAmmoCheckEdit.Size = new System.Drawing.Size(77, 20);
+            this.P2Slot7InfiniteAmmoCheckEdit.TabIndex = 19;
+            this.P2Slot7InfiniteAmmoCheckEdit.ToolTip = "Sets the infinite ammo flag for the respective item.";
+            this.P2Slot7InfiniteAmmoCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot7InfiniteAmmoCheckEdit.ToolTipTitle = "Infinite Ammo";
+            // 
+            // P2Slot7PiercingSE
+            // 
+            this.P2Slot7PiercingSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot7PiercingSE.Location = new System.Drawing.Point(557, 5);
+            this.P2Slot7PiercingSE.Name = "P2Slot7PiercingSE";
+            this.P2Slot7PiercingSE.Properties.AllowFocused = false;
+            this.P2Slot7PiercingSE.Properties.AllowMouseWheel = false;
+            this.P2Slot7PiercingSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot7PiercingSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot7PiercingSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot7PiercingSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot7PiercingSE.TabIndex = 8;
+            this.P2Slot7PiercingSE.ToolTip = "Piercing";
+            this.P2Slot7PiercingSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot7CriticalSE
+            // 
+            this.P2Slot7CriticalSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot7CriticalSE.Location = new System.Drawing.Point(499, 5);
+            this.P2Slot7CriticalSE.Name = "P2Slot7CriticalSE";
+            this.P2Slot7CriticalSE.Properties.AllowFocused = false;
+            this.P2Slot7CriticalSE.Properties.AllowMouseWheel = false;
+            this.P2Slot7CriticalSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot7CriticalSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot7CriticalSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot7CriticalSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot7CriticalSE.TabIndex = 7;
+            this.P2Slot7CriticalSE.ToolTip = "Critical";
+            this.P2Slot7CriticalSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot7CapacitySE
+            // 
+            this.P2Slot7CapacitySE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot7CapacitySE.Location = new System.Drawing.Point(441, 5);
+            this.P2Slot7CapacitySE.Name = "P2Slot7CapacitySE";
+            this.P2Slot7CapacitySE.Properties.AllowFocused = false;
+            this.P2Slot7CapacitySE.Properties.AllowMouseWheel = false;
+            this.P2Slot7CapacitySE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot7CapacitySE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot7CapacitySE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot7CapacitySE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot7CapacitySE.TabIndex = 6;
+            this.P2Slot7CapacitySE.ToolTip = "Capacity";
+            this.P2Slot7CapacitySE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot7ReloadSpeedSE
+            // 
+            this.P2Slot7ReloadSpeedSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot7ReloadSpeedSE.Location = new System.Drawing.Point(383, 5);
+            this.P2Slot7ReloadSpeedSE.Name = "P2Slot7ReloadSpeedSE";
+            this.P2Slot7ReloadSpeedSE.Properties.AllowFocused = false;
+            this.P2Slot7ReloadSpeedSE.Properties.AllowMouseWheel = false;
+            this.P2Slot7ReloadSpeedSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot7ReloadSpeedSE.Properties.DisplayFormat.FormatString = "F";
+            this.P2Slot7ReloadSpeedSE.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.P2Slot7ReloadSpeedSE.Properties.EditFormat.FormatString = "F";
+            this.P2Slot7ReloadSpeedSE.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.P2Slot7ReloadSpeedSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot7ReloadSpeedSE.Properties.IsFloatValue = false;
+            this.P2Slot7ReloadSpeedSE.Properties.MaskSettings.Set("mask", "f2");
+            this.P2Slot7ReloadSpeedSE.Properties.MaskSettings.Set("hideInsignificantZeros", true);
+            this.P2Slot7ReloadSpeedSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot7ReloadSpeedSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot7ReloadSpeedSE.TabIndex = 5;
+            this.P2Slot7ReloadSpeedSE.ToolTip = "Reload Speed";
+            this.P2Slot7ReloadSpeedSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot7MaxQuantityTE
+            // 
+            this.P2Slot7MaxQuantityTE.EditValue = "0";
+            this.P2Slot7MaxQuantityTE.Location = new System.Drawing.Point(252, 5);
+            this.P2Slot7MaxQuantityTE.Name = "P2Slot7MaxQuantityTE";
+            this.P2Slot7MaxQuantityTE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot7MaxQuantityTE.TabIndex = 4;
+            this.P2Slot7MaxQuantityTE.ToolTip = "Max Quantity";
+            this.P2Slot7MaxQuantityTE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot7QuantityTE
+            // 
+            this.P2Slot7QuantityTE.EditValue = "0";
+            this.P2Slot7QuantityTE.Location = new System.Drawing.Point(194, 5);
+            this.P2Slot7QuantityTE.Name = "P2Slot7QuantityTE";
+            this.P2Slot7QuantityTE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot7QuantityTE.TabIndex = 3;
+            this.P2Slot7QuantityTE.ToolTip = "Quantity";
+            this.P2Slot7QuantityTE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot7ItemCB
+            // 
+            this.P2Slot7ItemCB.Location = new System.Drawing.Point(5, 5);
+            this.P2Slot7ItemCB.Name = "P2Slot7ItemCB";
+            this.P2Slot7ItemCB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P2Slot7ItemCB.Properties.AllowFocused = false;
+            this.P2Slot7ItemCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot7ItemCB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot7ItemCB.Size = new System.Drawing.Size(183, 20);
+            this.P2Slot7ItemCB.TabIndex = 2;
+            this.P2Slot7ItemCB.TabStop = false;
+            this.P2Slot7ItemCB.ToolTip = "Sets the item of the respective slot.";
+            this.P2Slot7ItemCB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot7ItemCB.ToolTipTitle = "Item";
+            // 
+            // P2Slot7FirepowerSE
+            // 
+            this.P2Slot7FirepowerSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot7FirepowerSE.Location = new System.Drawing.Point(310, 5);
+            this.P2Slot7FirepowerSE.Name = "P2Slot7FirepowerSE";
+            this.P2Slot7FirepowerSE.Properties.AllowFocused = false;
+            this.P2Slot7FirepowerSE.Properties.AllowMouseWheel = false;
+            this.P2Slot7FirepowerSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot7FirepowerSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot7FirepowerSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot7FirepowerSE.Size = new System.Drawing.Size(67, 20);
+            this.P2Slot7FirepowerSE.TabIndex = 1;
+            this.P2Slot7FirepowerSE.ToolTip = "Firepower";
+            this.P2Slot7FirepowerSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2QuantityLB
+            // 
+            this.P2QuantityLB.Location = new System.Drawing.Point(200, 5);
+            this.P2QuantityLB.Name = "P2QuantityLB";
+            this.P2QuantityLB.Size = new System.Drawing.Size(44, 13);
+            this.P2QuantityLB.TabIndex = 30;
+            this.P2QuantityLB.Text = "Quantity";
+            // 
+            // P2Slot8EditGP
+            // 
+            this.P2Slot8EditGP.Controls.Add(this.P2Slot8FrozenCheckEdit);
+            this.P2Slot8EditGP.Controls.Add(this.P2Slot8ScopeSE);
+            this.P2Slot8EditGP.Controls.Add(this.P2Slot8RapidFireCheckEdit);
+            this.P2Slot8EditGP.Controls.Add(this.P2Slot8RangeSE);
+            this.P2Slot8EditGP.Controls.Add(this.P2Slot8InfiniteAmmoCheckEdit);
+            this.P2Slot8EditGP.Controls.Add(this.P2Slot8PiercingSE);
+            this.P2Slot8EditGP.Controls.Add(this.P2Slot8CriticalSE);
+            this.P2Slot8EditGP.Controls.Add(this.P2Slot8CapacitySE);
+            this.P2Slot8EditGP.Controls.Add(this.P2Slot8ReloadSpeedSE);
+            this.P2Slot8EditGP.Controls.Add(this.P2Slot8MaxQuantityTE);
+            this.P2Slot8EditGP.Controls.Add(this.P2Slot8QuantityTE);
+            this.P2Slot8EditGP.Controls.Add(this.P2Slot8ItemCB);
+            this.P2Slot8EditGP.Controls.Add(this.P2Slot8FirepowerSE);
+            this.P2Slot8EditGP.Location = new System.Drawing.Point(3, 276);
+            this.P2Slot8EditGP.Name = "P2Slot8EditGP";
+            this.P2Slot8EditGP.ShowCaption = false;
+            this.P2Slot8EditGP.Size = new System.Drawing.Size(965, 30);
+            this.P2Slot8EditGP.TabIndex = 27;
+            // 
+            // P2Slot8FrozenCheckEdit
+            // 
+            this.P2Slot8FrozenCheckEdit.Location = new System.Drawing.Point(897, 5);
+            this.P2Slot8FrozenCheckEdit.Name = "P2Slot8FrozenCheckEdit";
+            this.P2Slot8FrozenCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot8FrozenCheckEdit.Properties.Caption = "Frozen";
+            this.P2Slot8FrozenCheckEdit.Size = new System.Drawing.Size(58, 20);
+            this.P2Slot8FrozenCheckEdit.TabIndex = 24;
+            this.P2Slot8FrozenCheckEdit.ToolTip = "Sets all values to be persistent.";
+            this.P2Slot8FrozenCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot8FrozenCheckEdit.ToolTipTitle = "Frozen";
+            // 
+            // P2Slot8ScopeSE
+            // 
+            this.P2Slot8ScopeSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot8ScopeSE.Location = new System.Drawing.Point(673, 5);
+            this.P2Slot8ScopeSE.Name = "P2Slot8ScopeSE";
+            this.P2Slot8ScopeSE.Properties.AllowFocused = false;
+            this.P2Slot8ScopeSE.Properties.AllowMouseWheel = false;
+            this.P2Slot8ScopeSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot8ScopeSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot8ScopeSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot8ScopeSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot8ScopeSE.TabIndex = 10;
+            this.P2Slot8ScopeSE.ToolTip = "Scope";
+            this.P2Slot8ScopeSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot8RapidFireCheckEdit
+            // 
+            this.P2Slot8RapidFireCheckEdit.Location = new System.Drawing.Point(814, 5);
+            this.P2Slot8RapidFireCheckEdit.Name = "P2Slot8RapidFireCheckEdit";
+            this.P2Slot8RapidFireCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot8RapidFireCheckEdit.Properties.Caption = "Rapid Fire";
+            this.P2Slot8RapidFireCheckEdit.Size = new System.Drawing.Size(77, 20);
+            this.P2Slot8RapidFireCheckEdit.TabIndex = 23;
+            this.P2Slot8RapidFireCheckEdit.ToolTip = "Sets the rapid fire flag for the respective item.";
+            this.P2Slot8RapidFireCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot8RapidFireCheckEdit.ToolTipTitle = "Rapid Fire";
+            // 
+            // P2Slot8RangeSE
+            // 
+            this.P2Slot8RangeSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot8RangeSE.Location = new System.Drawing.Point(615, 5);
+            this.P2Slot8RangeSE.Name = "P2Slot8RangeSE";
+            this.P2Slot8RangeSE.Properties.AllowFocused = false;
+            this.P2Slot8RangeSE.Properties.AllowMouseWheel = false;
+            this.P2Slot8RangeSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot8RangeSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot8RangeSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot8RangeSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot8RangeSE.TabIndex = 9;
+            this.P2Slot8RangeSE.ToolTip = "Range";
+            this.P2Slot8RangeSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot8InfiniteAmmoCheckEdit
+            // 
+            this.P2Slot8InfiniteAmmoCheckEdit.Location = new System.Drawing.Point(731, 5);
+            this.P2Slot8InfiniteAmmoCheckEdit.Name = "P2Slot8InfiniteAmmoCheckEdit";
+            this.P2Slot8InfiniteAmmoCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot8InfiniteAmmoCheckEdit.Properties.Caption = "Inf. Ammo";
+            this.P2Slot8InfiniteAmmoCheckEdit.Size = new System.Drawing.Size(77, 20);
+            this.P2Slot8InfiniteAmmoCheckEdit.TabIndex = 22;
+            this.P2Slot8InfiniteAmmoCheckEdit.ToolTip = "Sets the infinite ammo flag for the respective item.";
+            this.P2Slot8InfiniteAmmoCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot8InfiniteAmmoCheckEdit.ToolTipTitle = "Infinite Ammo";
+            // 
+            // P2Slot8PiercingSE
+            // 
+            this.P2Slot8PiercingSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot8PiercingSE.Location = new System.Drawing.Point(557, 5);
+            this.P2Slot8PiercingSE.Name = "P2Slot8PiercingSE";
+            this.P2Slot8PiercingSE.Properties.AllowFocused = false;
+            this.P2Slot8PiercingSE.Properties.AllowMouseWheel = false;
+            this.P2Slot8PiercingSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot8PiercingSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot8PiercingSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot8PiercingSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot8PiercingSE.TabIndex = 8;
+            this.P2Slot8PiercingSE.ToolTip = "Piercing";
+            this.P2Slot8PiercingSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot8CriticalSE
+            // 
+            this.P2Slot8CriticalSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot8CriticalSE.Location = new System.Drawing.Point(499, 5);
+            this.P2Slot8CriticalSE.Name = "P2Slot8CriticalSE";
+            this.P2Slot8CriticalSE.Properties.AllowFocused = false;
+            this.P2Slot8CriticalSE.Properties.AllowMouseWheel = false;
+            this.P2Slot8CriticalSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot8CriticalSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot8CriticalSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot8CriticalSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot8CriticalSE.TabIndex = 7;
+            this.P2Slot8CriticalSE.ToolTip = "Critical";
+            this.P2Slot8CriticalSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot8CapacitySE
+            // 
+            this.P2Slot8CapacitySE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot8CapacitySE.Location = new System.Drawing.Point(441, 5);
+            this.P2Slot8CapacitySE.Name = "P2Slot8CapacitySE";
+            this.P2Slot8CapacitySE.Properties.AllowFocused = false;
+            this.P2Slot8CapacitySE.Properties.AllowMouseWheel = false;
+            this.P2Slot8CapacitySE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot8CapacitySE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot8CapacitySE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot8CapacitySE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot8CapacitySE.TabIndex = 6;
+            this.P2Slot8CapacitySE.ToolTip = "Capacity";
+            this.P2Slot8CapacitySE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot8ReloadSpeedSE
+            // 
+            this.P2Slot8ReloadSpeedSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot8ReloadSpeedSE.Location = new System.Drawing.Point(383, 5);
+            this.P2Slot8ReloadSpeedSE.Name = "P2Slot8ReloadSpeedSE";
+            this.P2Slot8ReloadSpeedSE.Properties.AllowFocused = false;
+            this.P2Slot8ReloadSpeedSE.Properties.AllowMouseWheel = false;
+            this.P2Slot8ReloadSpeedSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot8ReloadSpeedSE.Properties.DisplayFormat.FormatString = "F";
+            this.P2Slot8ReloadSpeedSE.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.P2Slot8ReloadSpeedSE.Properties.EditFormat.FormatString = "F";
+            this.P2Slot8ReloadSpeedSE.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.P2Slot8ReloadSpeedSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot8ReloadSpeedSE.Properties.IsFloatValue = false;
+            this.P2Slot8ReloadSpeedSE.Properties.MaskSettings.Set("mask", "f2");
+            this.P2Slot8ReloadSpeedSE.Properties.MaskSettings.Set("hideInsignificantZeros", true);
+            this.P2Slot8ReloadSpeedSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot8ReloadSpeedSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot8ReloadSpeedSE.TabIndex = 5;
+            this.P2Slot8ReloadSpeedSE.ToolTip = "Reload Speed";
+            this.P2Slot8ReloadSpeedSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot8MaxQuantityTE
+            // 
+            this.P2Slot8MaxQuantityTE.EditValue = "0";
+            this.P2Slot8MaxQuantityTE.Location = new System.Drawing.Point(252, 5);
+            this.P2Slot8MaxQuantityTE.Name = "P2Slot8MaxQuantityTE";
+            this.P2Slot8MaxQuantityTE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot8MaxQuantityTE.TabIndex = 4;
+            this.P2Slot8MaxQuantityTE.ToolTip = "Max Quantity";
+            this.P2Slot8MaxQuantityTE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot8QuantityTE
+            // 
+            this.P2Slot8QuantityTE.EditValue = "0";
+            this.P2Slot8QuantityTE.Location = new System.Drawing.Point(194, 5);
+            this.P2Slot8QuantityTE.Name = "P2Slot8QuantityTE";
+            this.P2Slot8QuantityTE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot8QuantityTE.TabIndex = 3;
+            this.P2Slot8QuantityTE.ToolTip = "Quantity";
+            this.P2Slot8QuantityTE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot8ItemCB
+            // 
+            this.P2Slot8ItemCB.Location = new System.Drawing.Point(5, 5);
+            this.P2Slot8ItemCB.Name = "P2Slot8ItemCB";
+            this.P2Slot8ItemCB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P2Slot8ItemCB.Properties.AllowFocused = false;
+            this.P2Slot8ItemCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot8ItemCB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot8ItemCB.Size = new System.Drawing.Size(183, 20);
+            this.P2Slot8ItemCB.TabIndex = 2;
+            this.P2Slot8ItemCB.TabStop = false;
+            this.P2Slot8ItemCB.ToolTip = "Sets the item of the respective slot.";
+            this.P2Slot8ItemCB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot8ItemCB.ToolTipTitle = "Item";
+            // 
+            // P2Slot8FirepowerSE
+            // 
+            this.P2Slot8FirepowerSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot8FirepowerSE.Location = new System.Drawing.Point(310, 5);
+            this.P2Slot8FirepowerSE.Name = "P2Slot8FirepowerSE";
+            this.P2Slot8FirepowerSE.Properties.AllowFocused = false;
+            this.P2Slot8FirepowerSE.Properties.AllowMouseWheel = false;
+            this.P2Slot8FirepowerSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot8FirepowerSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot8FirepowerSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot8FirepowerSE.Size = new System.Drawing.Size(67, 20);
+            this.P2Slot8FirepowerSE.TabIndex = 1;
+            this.P2Slot8FirepowerSE.ToolTip = "Firepower";
+            this.P2Slot8FirepowerSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2SlotKnifeEditGP
+            // 
+            this.P2SlotKnifeEditGP.Controls.Add(this.P2SlotKnifeFrozenCheckEdit);
+            this.P2SlotKnifeEditGP.Controls.Add(this.P2SlotKnifeScopeSE);
+            this.P2SlotKnifeEditGP.Controls.Add(this.P2SlotKnifeRapidFireCheckEdit);
+            this.P2SlotKnifeEditGP.Controls.Add(this.P2SlotKnifeRangeSE);
+            this.P2SlotKnifeEditGP.Controls.Add(this.P2SlotKnifeInfiniteAmmoCheckEdit);
+            this.P2SlotKnifeEditGP.Controls.Add(this.P2SlotKnifePiercingSE);
+            this.P2SlotKnifeEditGP.Controls.Add(this.P2SlotKnifeCriticalSE);
+            this.P2SlotKnifeEditGP.Controls.Add(this.P2SlotKnifeCapacitySE);
+            this.P2SlotKnifeEditGP.Controls.Add(this.P2SlotKnifeReloadSpeedSE);
+            this.P2SlotKnifeEditGP.Controls.Add(this.P2SlotKnifeMaxQuantityTE);
+            this.P2SlotKnifeEditGP.Controls.Add(this.P2SlotKnifeQuantityTE);
+            this.P2SlotKnifeEditGP.Controls.Add(this.P2SlotKnifeFirepowerSE);
+            this.P2SlotKnifeEditGP.Controls.Add(this.P2SlotKnifeItemCB);
+            this.P2SlotKnifeEditGP.Location = new System.Drawing.Point(3, 348);
+            this.P2SlotKnifeEditGP.Name = "P2SlotKnifeEditGP";
+            this.P2SlotKnifeEditGP.ShowCaption = false;
+            this.P2SlotKnifeEditGP.Size = new System.Drawing.Size(965, 30);
+            this.P2SlotKnifeEditGP.TabIndex = 29;
+            // 
+            // P2SlotKnifeFrozenCheckEdit
+            // 
+            this.P2SlotKnifeFrozenCheckEdit.Location = new System.Drawing.Point(897, 5);
+            this.P2SlotKnifeFrozenCheckEdit.Name = "P2SlotKnifeFrozenCheckEdit";
+            this.P2SlotKnifeFrozenCheckEdit.Properties.AllowFocused = false;
+            this.P2SlotKnifeFrozenCheckEdit.Properties.Caption = "Frozen";
+            this.P2SlotKnifeFrozenCheckEdit.Size = new System.Drawing.Size(58, 20);
+            this.P2SlotKnifeFrozenCheckEdit.TabIndex = 39;
+            this.P2SlotKnifeFrozenCheckEdit.ToolTip = "Sets all values to be persistent.";
+            this.P2SlotKnifeFrozenCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2SlotKnifeFrozenCheckEdit.ToolTipTitle = "Frozen";
+            // 
+            // P2SlotKnifeScopeSE
+            // 
+            this.P2SlotKnifeScopeSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2SlotKnifeScopeSE.Location = new System.Drawing.Point(673, 5);
+            this.P2SlotKnifeScopeSE.Name = "P2SlotKnifeScopeSE";
+            this.P2SlotKnifeScopeSE.Properties.AllowFocused = false;
+            this.P2SlotKnifeScopeSE.Properties.AllowMouseWheel = false;
+            this.P2SlotKnifeScopeSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2SlotKnifeScopeSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2SlotKnifeScopeSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2SlotKnifeScopeSE.Size = new System.Drawing.Size(52, 20);
+            this.P2SlotKnifeScopeSE.TabIndex = 36;
+            this.P2SlotKnifeScopeSE.ToolTip = "Scope";
+            this.P2SlotKnifeScopeSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2SlotKnifeRapidFireCheckEdit
+            // 
+            this.P2SlotKnifeRapidFireCheckEdit.Location = new System.Drawing.Point(814, 5);
+            this.P2SlotKnifeRapidFireCheckEdit.Name = "P2SlotKnifeRapidFireCheckEdit";
+            this.P2SlotKnifeRapidFireCheckEdit.Properties.AllowFocused = false;
+            this.P2SlotKnifeRapidFireCheckEdit.Properties.Caption = "Rapid Fire";
+            this.P2SlotKnifeRapidFireCheckEdit.Size = new System.Drawing.Size(77, 20);
+            this.P2SlotKnifeRapidFireCheckEdit.TabIndex = 38;
+            this.P2SlotKnifeRapidFireCheckEdit.ToolTip = "Sets the rapid fire flag for the respective item.";
+            this.P2SlotKnifeRapidFireCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2SlotKnifeRapidFireCheckEdit.ToolTipTitle = "Rapid Fire";
+            // 
+            // P2SlotKnifeRangeSE
+            // 
+            this.P2SlotKnifeRangeSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2SlotKnifeRangeSE.Location = new System.Drawing.Point(615, 5);
+            this.P2SlotKnifeRangeSE.Name = "P2SlotKnifeRangeSE";
+            this.P2SlotKnifeRangeSE.Properties.AllowFocused = false;
+            this.P2SlotKnifeRangeSE.Properties.AllowMouseWheel = false;
+            this.P2SlotKnifeRangeSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2SlotKnifeRangeSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2SlotKnifeRangeSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2SlotKnifeRangeSE.Size = new System.Drawing.Size(52, 20);
+            this.P2SlotKnifeRangeSE.TabIndex = 35;
+            this.P2SlotKnifeRangeSE.ToolTip = "Range";
+            this.P2SlotKnifeRangeSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2SlotKnifeInfiniteAmmoCheckEdit
+            // 
+            this.P2SlotKnifeInfiniteAmmoCheckEdit.Location = new System.Drawing.Point(731, 5);
+            this.P2SlotKnifeInfiniteAmmoCheckEdit.Name = "P2SlotKnifeInfiniteAmmoCheckEdit";
+            this.P2SlotKnifeInfiniteAmmoCheckEdit.Properties.AllowFocused = false;
+            this.P2SlotKnifeInfiniteAmmoCheckEdit.Properties.Caption = "Inf. Ammo";
+            this.P2SlotKnifeInfiniteAmmoCheckEdit.Size = new System.Drawing.Size(77, 20);
+            this.P2SlotKnifeInfiniteAmmoCheckEdit.TabIndex = 37;
+            this.P2SlotKnifeInfiniteAmmoCheckEdit.ToolTip = "Sets the infinite ammo flag for the respective item.";
+            this.P2SlotKnifeInfiniteAmmoCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2SlotKnifeInfiniteAmmoCheckEdit.ToolTipTitle = "Infinite Ammo";
+            // 
+            // P2SlotKnifePiercingSE
+            // 
+            this.P2SlotKnifePiercingSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2SlotKnifePiercingSE.Location = new System.Drawing.Point(557, 5);
+            this.P2SlotKnifePiercingSE.Name = "P2SlotKnifePiercingSE";
+            this.P2SlotKnifePiercingSE.Properties.AllowFocused = false;
+            this.P2SlotKnifePiercingSE.Properties.AllowMouseWheel = false;
+            this.P2SlotKnifePiercingSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2SlotKnifePiercingSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2SlotKnifePiercingSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2SlotKnifePiercingSE.Size = new System.Drawing.Size(52, 20);
+            this.P2SlotKnifePiercingSE.TabIndex = 34;
+            this.P2SlotKnifePiercingSE.ToolTip = "Piercing";
+            this.P2SlotKnifePiercingSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2SlotKnifeCriticalSE
+            // 
+            this.P2SlotKnifeCriticalSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2SlotKnifeCriticalSE.Location = new System.Drawing.Point(499, 5);
+            this.P2SlotKnifeCriticalSE.Name = "P2SlotKnifeCriticalSE";
+            this.P2SlotKnifeCriticalSE.Properties.AllowFocused = false;
+            this.P2SlotKnifeCriticalSE.Properties.AllowMouseWheel = false;
+            this.P2SlotKnifeCriticalSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2SlotKnifeCriticalSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2SlotKnifeCriticalSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2SlotKnifeCriticalSE.Size = new System.Drawing.Size(52, 20);
+            this.P2SlotKnifeCriticalSE.TabIndex = 33;
+            this.P2SlotKnifeCriticalSE.ToolTip = "Critical";
+            this.P2SlotKnifeCriticalSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2SlotKnifeCapacitySE
+            // 
+            this.P2SlotKnifeCapacitySE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2SlotKnifeCapacitySE.Location = new System.Drawing.Point(441, 5);
+            this.P2SlotKnifeCapacitySE.Name = "P2SlotKnifeCapacitySE";
+            this.P2SlotKnifeCapacitySE.Properties.AllowFocused = false;
+            this.P2SlotKnifeCapacitySE.Properties.AllowMouseWheel = false;
+            this.P2SlotKnifeCapacitySE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2SlotKnifeCapacitySE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2SlotKnifeCapacitySE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2SlotKnifeCapacitySE.Size = new System.Drawing.Size(52, 20);
+            this.P2SlotKnifeCapacitySE.TabIndex = 32;
+            this.P2SlotKnifeCapacitySE.ToolTip = "Capacity";
+            this.P2SlotKnifeCapacitySE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2SlotKnifeReloadSpeedSE
+            // 
+            this.P2SlotKnifeReloadSpeedSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2SlotKnifeReloadSpeedSE.Location = new System.Drawing.Point(383, 5);
+            this.P2SlotKnifeReloadSpeedSE.Name = "P2SlotKnifeReloadSpeedSE";
+            this.P2SlotKnifeReloadSpeedSE.Properties.AllowFocused = false;
+            this.P2SlotKnifeReloadSpeedSE.Properties.AllowMouseWheel = false;
+            this.P2SlotKnifeReloadSpeedSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2SlotKnifeReloadSpeedSE.Properties.DisplayFormat.FormatString = "F";
+            this.P2SlotKnifeReloadSpeedSE.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.P2SlotKnifeReloadSpeedSE.Properties.EditFormat.FormatString = "F";
+            this.P2SlotKnifeReloadSpeedSE.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.P2SlotKnifeReloadSpeedSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2SlotKnifeReloadSpeedSE.Properties.IsFloatValue = false;
+            this.P2SlotKnifeReloadSpeedSE.Properties.MaskSettings.Set("mask", "f2");
+            this.P2SlotKnifeReloadSpeedSE.Properties.MaskSettings.Set("hideInsignificantZeros", true);
+            this.P2SlotKnifeReloadSpeedSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2SlotKnifeReloadSpeedSE.Size = new System.Drawing.Size(52, 20);
+            this.P2SlotKnifeReloadSpeedSE.TabIndex = 31;
+            this.P2SlotKnifeReloadSpeedSE.ToolTip = "Reload Speed";
+            this.P2SlotKnifeReloadSpeedSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2SlotKnifeMaxQuantityTE
+            // 
+            this.P2SlotKnifeMaxQuantityTE.EditValue = "0";
+            this.P2SlotKnifeMaxQuantityTE.Location = new System.Drawing.Point(252, 5);
+            this.P2SlotKnifeMaxQuantityTE.Name = "P2SlotKnifeMaxQuantityTE";
+            this.P2SlotKnifeMaxQuantityTE.Size = new System.Drawing.Size(52, 20);
+            this.P2SlotKnifeMaxQuantityTE.TabIndex = 30;
+            this.P2SlotKnifeMaxQuantityTE.ToolTip = "Max Quantity";
+            this.P2SlotKnifeMaxQuantityTE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2SlotKnifeQuantityTE
+            // 
+            this.P2SlotKnifeQuantityTE.EditValue = "0";
+            this.P2SlotKnifeQuantityTE.Location = new System.Drawing.Point(194, 5);
+            this.P2SlotKnifeQuantityTE.Name = "P2SlotKnifeQuantityTE";
+            this.P2SlotKnifeQuantityTE.Size = new System.Drawing.Size(52, 20);
+            this.P2SlotKnifeQuantityTE.TabIndex = 29;
+            this.P2SlotKnifeQuantityTE.ToolTip = "Quantity";
+            this.P2SlotKnifeQuantityTE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2SlotKnifeFirepowerSE
+            // 
+            this.P2SlotKnifeFirepowerSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2SlotKnifeFirepowerSE.Location = new System.Drawing.Point(310, 5);
+            this.P2SlotKnifeFirepowerSE.Name = "P2SlotKnifeFirepowerSE";
+            this.P2SlotKnifeFirepowerSE.Properties.AllowFocused = false;
+            this.P2SlotKnifeFirepowerSE.Properties.AllowMouseWheel = false;
+            this.P2SlotKnifeFirepowerSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2SlotKnifeFirepowerSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2SlotKnifeFirepowerSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2SlotKnifeFirepowerSE.Size = new System.Drawing.Size(67, 20);
+            this.P2SlotKnifeFirepowerSE.TabIndex = 28;
+            this.P2SlotKnifeFirepowerSE.ToolTip = "Firepower";
+            this.P2SlotKnifeFirepowerSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2SlotKnifeItemCB
+            // 
+            this.P2SlotKnifeItemCB.Location = new System.Drawing.Point(5, 5);
+            this.P2SlotKnifeItemCB.Name = "P2SlotKnifeItemCB";
+            this.P2SlotKnifeItemCB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P2SlotKnifeItemCB.Properties.AllowFocused = false;
+            this.P2SlotKnifeItemCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2SlotKnifeItemCB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2SlotKnifeItemCB.Size = new System.Drawing.Size(183, 20);
+            this.P2SlotKnifeItemCB.TabIndex = 2;
+            this.P2SlotKnifeItemCB.TabStop = false;
+            this.P2SlotKnifeItemCB.ToolTip = "Sets the item of the respective slot.";
+            this.P2SlotKnifeItemCB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2SlotKnifeItemCB.ToolTipTitle = "Item";
+            // 
+            // P2Slot9EditGP
+            // 
+            this.P2Slot9EditGP.Controls.Add(this.P2Slot9FrozenCheckEdit);
+            this.P2Slot9EditGP.Controls.Add(this.P2Slot9ScopeSE);
+            this.P2Slot9EditGP.Controls.Add(this.P2Slot9RapidFireCheckEdit);
+            this.P2Slot9EditGP.Controls.Add(this.P2Slot9RangeSE);
+            this.P2Slot9EditGP.Controls.Add(this.P2Slot9InfiniteAmmoCheckEdit);
+            this.P2Slot9EditGP.Controls.Add(this.P2Slot9PiercingSE);
+            this.P2Slot9EditGP.Controls.Add(this.P2Slot9CriticalSE);
+            this.P2Slot9EditGP.Controls.Add(this.P2Slot9CapacitySE);
+            this.P2Slot9EditGP.Controls.Add(this.P2Slot9ReloadSpeedSE);
+            this.P2Slot9EditGP.Controls.Add(this.P2Slot9MaxQuantityTE);
+            this.P2Slot9EditGP.Controls.Add(this.P2Slot9QuantityTE);
+            this.P2Slot9EditGP.Controls.Add(this.P2Slot9ItemCB);
+            this.P2Slot9EditGP.Controls.Add(this.P2Slot9FirepowerSE);
+            this.P2Slot9EditGP.Location = new System.Drawing.Point(3, 312);
+            this.P2Slot9EditGP.Name = "P2Slot9EditGP";
+            this.P2Slot9EditGP.ShowCaption = false;
+            this.P2Slot9EditGP.Size = new System.Drawing.Size(965, 30);
+            this.P2Slot9EditGP.TabIndex = 28;
+            // 
+            // P2Slot9FrozenCheckEdit
+            // 
+            this.P2Slot9FrozenCheckEdit.Location = new System.Drawing.Point(897, 5);
+            this.P2Slot9FrozenCheckEdit.Name = "P2Slot9FrozenCheckEdit";
+            this.P2Slot9FrozenCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot9FrozenCheckEdit.Properties.Caption = "Frozen";
+            this.P2Slot9FrozenCheckEdit.Size = new System.Drawing.Size(58, 20);
+            this.P2Slot9FrozenCheckEdit.TabIndex = 27;
+            this.P2Slot9FrozenCheckEdit.ToolTip = "Sets all values to be persistent.";
+            this.P2Slot9FrozenCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot9FrozenCheckEdit.ToolTipTitle = "Frozen";
+            // 
+            // P2Slot9ScopeSE
+            // 
+            this.P2Slot9ScopeSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot9ScopeSE.Location = new System.Drawing.Point(673, 5);
+            this.P2Slot9ScopeSE.Name = "P2Slot9ScopeSE";
+            this.P2Slot9ScopeSE.Properties.AllowFocused = false;
+            this.P2Slot9ScopeSE.Properties.AllowMouseWheel = false;
+            this.P2Slot9ScopeSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot9ScopeSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot9ScopeSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot9ScopeSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot9ScopeSE.TabIndex = 10;
+            this.P2Slot9ScopeSE.ToolTip = "Scope";
+            this.P2Slot9ScopeSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot9RapidFireCheckEdit
+            // 
+            this.P2Slot9RapidFireCheckEdit.Location = new System.Drawing.Point(814, 5);
+            this.P2Slot9RapidFireCheckEdit.Name = "P2Slot9RapidFireCheckEdit";
+            this.P2Slot9RapidFireCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot9RapidFireCheckEdit.Properties.Caption = "Rapid Fire";
+            this.P2Slot9RapidFireCheckEdit.Size = new System.Drawing.Size(77, 20);
+            this.P2Slot9RapidFireCheckEdit.TabIndex = 26;
+            this.P2Slot9RapidFireCheckEdit.ToolTip = "Sets the rapid fire flag for the respective item.";
+            this.P2Slot9RapidFireCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot9RapidFireCheckEdit.ToolTipTitle = "Rapid Fire";
+            // 
+            // P2Slot9RangeSE
+            // 
+            this.P2Slot9RangeSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot9RangeSE.Location = new System.Drawing.Point(615, 5);
+            this.P2Slot9RangeSE.Name = "P2Slot9RangeSE";
+            this.P2Slot9RangeSE.Properties.AllowFocused = false;
+            this.P2Slot9RangeSE.Properties.AllowMouseWheel = false;
+            this.P2Slot9RangeSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot9RangeSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot9RangeSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot9RangeSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot9RangeSE.TabIndex = 9;
+            this.P2Slot9RangeSE.ToolTip = "Range";
+            this.P2Slot9RangeSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot9InfiniteAmmoCheckEdit
+            // 
+            this.P2Slot9InfiniteAmmoCheckEdit.Location = new System.Drawing.Point(731, 5);
+            this.P2Slot9InfiniteAmmoCheckEdit.Name = "P2Slot9InfiniteAmmoCheckEdit";
+            this.P2Slot9InfiniteAmmoCheckEdit.Properties.AllowFocused = false;
+            this.P2Slot9InfiniteAmmoCheckEdit.Properties.Caption = "Inf. Ammo";
+            this.P2Slot9InfiniteAmmoCheckEdit.Size = new System.Drawing.Size(77, 20);
+            this.P2Slot9InfiniteAmmoCheckEdit.TabIndex = 25;
+            this.P2Slot9InfiniteAmmoCheckEdit.ToolTip = "Sets the infinite ammo flag for the respective item.";
+            this.P2Slot9InfiniteAmmoCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot9InfiniteAmmoCheckEdit.ToolTipTitle = "Infinite Ammo";
+            // 
+            // P2Slot9PiercingSE
+            // 
+            this.P2Slot9PiercingSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot9PiercingSE.Location = new System.Drawing.Point(557, 5);
+            this.P2Slot9PiercingSE.Name = "P2Slot9PiercingSE";
+            this.P2Slot9PiercingSE.Properties.AllowFocused = false;
+            this.P2Slot9PiercingSE.Properties.AllowMouseWheel = false;
+            this.P2Slot9PiercingSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot9PiercingSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot9PiercingSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot9PiercingSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot9PiercingSE.TabIndex = 8;
+            this.P2Slot9PiercingSE.ToolTip = "Piercing";
+            this.P2Slot9PiercingSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot9CriticalSE
+            // 
+            this.P2Slot9CriticalSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot9CriticalSE.Location = new System.Drawing.Point(499, 5);
+            this.P2Slot9CriticalSE.Name = "P2Slot9CriticalSE";
+            this.P2Slot9CriticalSE.Properties.AllowFocused = false;
+            this.P2Slot9CriticalSE.Properties.AllowMouseWheel = false;
+            this.P2Slot9CriticalSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot9CriticalSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot9CriticalSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot9CriticalSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot9CriticalSE.TabIndex = 7;
+            this.P2Slot9CriticalSE.ToolTip = "Critical";
+            this.P2Slot9CriticalSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot9CapacitySE
+            // 
+            this.P2Slot9CapacitySE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot9CapacitySE.Location = new System.Drawing.Point(441, 5);
+            this.P2Slot9CapacitySE.Name = "P2Slot9CapacitySE";
+            this.P2Slot9CapacitySE.Properties.AllowFocused = false;
+            this.P2Slot9CapacitySE.Properties.AllowMouseWheel = false;
+            this.P2Slot9CapacitySE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot9CapacitySE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot9CapacitySE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot9CapacitySE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot9CapacitySE.TabIndex = 6;
+            this.P2Slot9CapacitySE.ToolTip = "Capacity";
+            this.P2Slot9CapacitySE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot9ReloadSpeedSE
+            // 
+            this.P2Slot9ReloadSpeedSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot9ReloadSpeedSE.Location = new System.Drawing.Point(383, 5);
+            this.P2Slot9ReloadSpeedSE.Name = "P2Slot9ReloadSpeedSE";
+            this.P2Slot9ReloadSpeedSE.Properties.AllowFocused = false;
+            this.P2Slot9ReloadSpeedSE.Properties.AllowMouseWheel = false;
+            this.P2Slot9ReloadSpeedSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot9ReloadSpeedSE.Properties.DisplayFormat.FormatString = "F";
+            this.P2Slot9ReloadSpeedSE.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.P2Slot9ReloadSpeedSE.Properties.EditFormat.FormatString = "F";
+            this.P2Slot9ReloadSpeedSE.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.P2Slot9ReloadSpeedSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot9ReloadSpeedSE.Properties.IsFloatValue = false;
+            this.P2Slot9ReloadSpeedSE.Properties.MaskSettings.Set("mask", "f2");
+            this.P2Slot9ReloadSpeedSE.Properties.MaskSettings.Set("hideInsignificantZeros", true);
+            this.P2Slot9ReloadSpeedSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot9ReloadSpeedSE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot9ReloadSpeedSE.TabIndex = 5;
+            this.P2Slot9ReloadSpeedSE.ToolTip = "Reload Speed";
+            this.P2Slot9ReloadSpeedSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot9MaxQuantityTE
+            // 
+            this.P2Slot9MaxQuantityTE.EditValue = "0";
+            this.P2Slot9MaxQuantityTE.Location = new System.Drawing.Point(252, 5);
+            this.P2Slot9MaxQuantityTE.Name = "P2Slot9MaxQuantityTE";
+            this.P2Slot9MaxQuantityTE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot9MaxQuantityTE.TabIndex = 4;
+            this.P2Slot9MaxQuantityTE.ToolTip = "Max Quantity";
+            this.P2Slot9MaxQuantityTE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot9QuantityTE
+            // 
+            this.P2Slot9QuantityTE.EditValue = "0";
+            this.P2Slot9QuantityTE.Location = new System.Drawing.Point(194, 5);
+            this.P2Slot9QuantityTE.Name = "P2Slot9QuantityTE";
+            this.P2Slot9QuantityTE.Size = new System.Drawing.Size(52, 20);
+            this.P2Slot9QuantityTE.TabIndex = 3;
+            this.P2Slot9QuantityTE.ToolTip = "Quantity";
+            this.P2Slot9QuantityTE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // P2Slot9ItemCB
+            // 
+            this.P2Slot9ItemCB.Location = new System.Drawing.Point(5, 5);
+            this.P2Slot9ItemCB.Name = "P2Slot9ItemCB";
+            this.P2Slot9ItemCB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.P2Slot9ItemCB.Properties.AllowFocused = false;
+            this.P2Slot9ItemCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot9ItemCB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot9ItemCB.Size = new System.Drawing.Size(183, 20);
+            this.P2Slot9ItemCB.TabIndex = 2;
+            this.P2Slot9ItemCB.TabStop = false;
+            this.P2Slot9ItemCB.ToolTip = "Sets the item of the respective slot.";
+            this.P2Slot9ItemCB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.P2Slot9ItemCB.ToolTipTitle = "Item";
+            // 
+            // P2Slot9FirepowerSE
+            // 
+            this.P2Slot9FirepowerSE.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot9FirepowerSE.Location = new System.Drawing.Point(310, 5);
+            this.P2Slot9FirepowerSE.Name = "P2Slot9FirepowerSE";
+            this.P2Slot9FirepowerSE.Properties.AllowFocused = false;
+            this.P2Slot9FirepowerSE.Properties.AllowMouseWheel = false;
+            this.P2Slot9FirepowerSE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.P2Slot9FirepowerSE.Properties.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.P2Slot9FirepowerSE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.P2Slot9FirepowerSE.Size = new System.Drawing.Size(67, 20);
+            this.P2Slot9FirepowerSE.TabIndex = 1;
+            this.P2Slot9FirepowerSE.ToolTip = "Firepower";
+            this.P2Slot9FirepowerSE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
             // P3InventoryTab
             // 
@@ -5128,6 +8245,7 @@ namespace GameX
             // 
             // InventoryBGPictureBox
             // 
+            this.InventoryBGPictureBox.EditValue = ((object)(resources.GetObject("InventoryBGPictureBox.EditValue")));
             this.InventoryBGPictureBox.Location = new System.Drawing.Point(5, 5);
             this.InventoryBGPictureBox.Name = "InventoryBGPictureBox";
             this.InventoryBGPictureBox.Properties.AllowFocused = false;
@@ -5142,7 +8260,7 @@ namespace GameX
             // 
             this.TabPageSettings.Controls.Add(this.TabPageSettingsGP);
             this.TabPageSettings.Name = "TabPageSettings";
-            this.TabPageSettings.Size = new System.Drawing.Size(1223, 438);
+            this.TabPageSettings.Size = new System.Drawing.Size(1223, 437);
             this.TabPageSettings.Text = "Settings";
             // 
             // TabPageSettingsGP
@@ -5159,12 +8277,59 @@ namespace GameX
             // 
             // MiscModsGP
             // 
+            this.MiscModsGP.Controls.Add(this.MiscMiscGP);
+            this.MiscModsGP.Controls.Add(this.ControllerAimGP);
             this.MiscModsGP.Controls.Add(this.ColorFilterGP);
             this.MiscModsGP.Location = new System.Drawing.Point(5, 105);
             this.MiscModsGP.Name = "MiscModsGP";
             this.MiscModsGP.Size = new System.Drawing.Size(298, 182);
             this.MiscModsGP.TabIndex = 1;
             this.MiscModsGP.Text = "Miscellaneous";
+            // 
+            // MiscMiscGP
+            // 
+            this.MiscMiscGP.Controls.Add(this.HandTremorCheckEdit);
+            this.MiscMiscGP.Location = new System.Drawing.Point(121, 29);
+            this.MiscMiscGP.Name = "MiscMiscGP";
+            this.MiscMiscGP.ShowCaption = false;
+            this.MiscMiscGP.Size = new System.Drawing.Size(172, 148);
+            this.MiscMiscGP.TabIndex = 3;
+            // 
+            // HandTremorCheckEdit
+            // 
+            this.HandTremorCheckEdit.Location = new System.Drawing.Point(15, 16);
+            this.HandTremorCheckEdit.Name = "HandTremorCheckEdit";
+            this.HandTremorCheckEdit.Properties.AllowFocused = false;
+            this.HandTremorCheckEdit.Properties.Caption = "No Hand Tremors";
+            this.HandTremorCheckEdit.Size = new System.Drawing.Size(141, 20);
+            this.HandTremorCheckEdit.TabIndex = 21;
+            this.HandTremorCheckEdit.ToolTip = "Removes all camera animation from melee moves.";
+            this.HandTremorCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.HandTremorCheckEdit.ToolTipTitle = "No Melee Camera";
+            // 
+            // ControllerAimGP
+            // 
+            this.ControllerAimGP.AppearanceCaption.Options.UseTextOptions = true;
+            this.ControllerAimGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ControllerAimGP.Controls.Add(this.ControllerAimButton);
+            this.ControllerAimGP.Location = new System.Drawing.Point(5, 29);
+            this.ControllerAimGP.Name = "ControllerAimGP";
+            this.ControllerAimGP.Size = new System.Drawing.Size(112, 71);
+            this.ControllerAimGP.TabIndex = 2;
+            this.ControllerAimGP.Text = "Controller Aim";
+            // 
+            // ControllerAimButton
+            // 
+            this.ControllerAimButton.AllowFocus = false;
+            this.ControllerAimButton.Location = new System.Drawing.Point(15, 36);
+            this.ControllerAimButton.Name = "ControllerAimButton";
+            this.ControllerAimButton.Size = new System.Drawing.Size(82, 23);
+            this.ControllerAimButton.TabIndex = 1;
+            this.ControllerAimButton.TabStop = false;
+            this.ControllerAimButton.Text = "Enable";
+            this.ControllerAimButton.ToolTip = "Enables controller aim style.";
+            this.ControllerAimButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.ControllerAimButton.ToolTipTitle = "Controller Aim";
             // 
             // ColorFilterGP
             // 
@@ -5313,7 +8478,7 @@ namespace GameX
             // 
             this.TabPageConsole.Controls.Add(this.ConsoleGP);
             this.TabPageConsole.Name = "TabPageConsole";
-            this.TabPageConsole.Size = new System.Drawing.Size(1223, 438);
+            this.TabPageConsole.Size = new System.Drawing.Size(1223, 437);
             this.TabPageConsole.Text = "Console";
             // 
             // ConsoleGP
@@ -5360,11 +8525,81 @@ namespace GameX
             this.ConsoleInputTextEdit.Size = new System.Drawing.Size(571, 20);
             this.ConsoleInputTextEdit.TabIndex = 1;
             // 
+            // TabPageCharButton
+            // 
+            this.TabPageCharButton.AllowFocus = false;
+            this.TabPageCharButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("TabPageCharButton.ImageOptions.Image")));
+            this.TabPageCharButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.TabPageCharButton.Location = new System.Drawing.Point(12, 4);
+            this.TabPageCharButton.Margin = new System.Windows.Forms.Padding(1);
+            this.TabPageCharButton.Name = "TabPageCharButton";
+            this.TabPageCharButton.Size = new System.Drawing.Size(32, 32);
+            this.TabPageCharButton.TabIndex = 19;
+            this.TabPageCharButton.TabStop = false;
+            this.TabPageCharButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // TabPageMeleeButton
+            // 
+            this.TabPageMeleeButton.AllowFocus = false;
+            this.TabPageMeleeButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("TabPageMeleeButton.ImageOptions.Image")));
+            this.TabPageMeleeButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.TabPageMeleeButton.Location = new System.Drawing.Point(46, 4);
+            this.TabPageMeleeButton.Margin = new System.Windows.Forms.Padding(1);
+            this.TabPageMeleeButton.Name = "TabPageMeleeButton";
+            this.TabPageMeleeButton.Size = new System.Drawing.Size(32, 32);
+            this.TabPageMeleeButton.TabIndex = 20;
+            this.TabPageMeleeButton.TabStop = false;
+            this.TabPageMeleeButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // TabPageInventoryButton
+            // 
+            this.TabPageInventoryButton.AllowFocus = false;
+            this.TabPageInventoryButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("TabPageInventoryButton.ImageOptions.Image")));
+            this.TabPageInventoryButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.TabPageInventoryButton.Location = new System.Drawing.Point(80, 4);
+            this.TabPageInventoryButton.Margin = new System.Windows.Forms.Padding(1);
+            this.TabPageInventoryButton.Name = "TabPageInventoryButton";
+            this.TabPageInventoryButton.Size = new System.Drawing.Size(32, 32);
+            this.TabPageInventoryButton.TabIndex = 21;
+            this.TabPageInventoryButton.TabStop = false;
+            this.TabPageInventoryButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // TabPageSettingsButton
+            // 
+            this.TabPageSettingsButton.AllowFocus = false;
+            this.TabPageSettingsButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("TabPageSettingsButton.ImageOptions.Image")));
+            this.TabPageSettingsButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.TabPageSettingsButton.Location = new System.Drawing.Point(114, 4);
+            this.TabPageSettingsButton.Margin = new System.Windows.Forms.Padding(1);
+            this.TabPageSettingsButton.Name = "TabPageSettingsButton";
+            this.TabPageSettingsButton.Size = new System.Drawing.Size(32, 32);
+            this.TabPageSettingsButton.TabIndex = 22;
+            this.TabPageSettingsButton.TabStop = false;
+            this.TabPageSettingsButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // TabPageConsoleButton
+            // 
+            this.TabPageConsoleButton.AllowFocus = false;
+            this.TabPageConsoleButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("TabPageConsoleButton.ImageOptions.Image")));
+            this.TabPageConsoleButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.TabPageConsoleButton.Location = new System.Drawing.Point(148, 4);
+            this.TabPageConsoleButton.Margin = new System.Windows.Forms.Padding(1);
+            this.TabPageConsoleButton.Name = "TabPageConsoleButton";
+            this.TabPageConsoleButton.Size = new System.Drawing.Size(32, 32);
+            this.TabPageConsoleButton.TabIndex = 23;
+            this.TabPageConsoleButton.TabStop = false;
+            this.TabPageConsoleButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1250, 493);
+            this.Controls.Add(this.TabPageConsoleButton);
+            this.Controls.Add(this.TabPageSettingsButton);
+            this.Controls.Add(this.TabPageInventoryButton);
+            this.Controls.Add(this.TabPageMeleeButton);
+            this.Controls.Add(this.TabPageCharButton);
             this.Controls.Add(this.MasterTabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("App.IconOptions.Image")));
@@ -5628,6 +8863,159 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.P1Slot9QuantityTE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1Slot9ItemCB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1Slot9FirepowerSE.Properties)).EndInit();
+            this.P2InventoryTab.ResumeLayout(false);
+            this.P2InventoryTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.P2FreezeAllCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1EditGP)).EndInit();
+            this.P2Slot1EditGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1FrozenCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1RapidFireCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1ScopeSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1InfiniteAmmoCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1RangeSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1PiercingSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1CriticalSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1CapacitySE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1ReloadSpeedSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1MaxQuantityTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1QuantityTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1ItemCB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot1FirepowerSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2EditGP)).EndInit();
+            this.P2Slot2EditGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2FrozenCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2RapidFireCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2InfiniteAmmoCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2ScopeSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2RangeSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2PiercingSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2CriticalSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2CapacitySE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2ReloadSpeedSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2MaxQuantityTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2QuantityTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2ItemCB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot2FirepowerSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3EditGP)).EndInit();
+            this.P2Slot3EditGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3FrozenCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3RapidFireCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3InfiniteAmmoCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3ScopeSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3RangeSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3PiercingSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3CriticalSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3CapacitySE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3ReloadSpeedSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3MaxQuantityTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3QuantityTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3ItemCB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot3FirepowerSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4EditGP)).EndInit();
+            this.P2Slot4EditGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4FrozenCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4RapidFireCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4InfiniteAmmoCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4ScopeSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4RangeSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4PiercingSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4CriticalSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4CapacitySE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4ReloadSpeedSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4MaxQuantityTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4QuantityTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4ItemCB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot4FirepowerSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5EditGP)).EndInit();
+            this.P2Slot5EditGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5FrozenCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5RapidFireCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5InfiniteAmmoCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5ScopeSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5RangeSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5PiercingSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5CriticalSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5CapacitySE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5ReloadSpeedSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5MaxQuantityTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5QuantityTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5ItemCB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot5FirepowerSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6EditGP)).EndInit();
+            this.P2Slot6EditGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6FrozenCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6ScopeSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6RapidFireCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6RangeSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6InfiniteAmmoCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6PiercingSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6CriticalSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6CapacitySE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6ReloadSpeedSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6MaxQuantityTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6QuantityTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6ItemCB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot6FirepowerSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7EditGP)).EndInit();
+            this.P2Slot7EditGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7FrozenCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7ScopeSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7RapidFireCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7RangeSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7InfiniteAmmoCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7PiercingSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7CriticalSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7CapacitySE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7ReloadSpeedSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7MaxQuantityTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7QuantityTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7ItemCB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot7FirepowerSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8EditGP)).EndInit();
+            this.P2Slot8EditGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8FrozenCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8ScopeSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8RapidFireCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8RangeSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8InfiniteAmmoCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8PiercingSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8CriticalSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8CapacitySE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8ReloadSpeedSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8MaxQuantityTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8QuantityTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8ItemCB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot8FirepowerSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeEditGP)).EndInit();
+            this.P2SlotKnifeEditGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeFrozenCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeScopeSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeRapidFireCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeRangeSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeInfiniteAmmoCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifePiercingSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeCriticalSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeCapacitySE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeReloadSpeedSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeMaxQuantityTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeQuantityTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeFirepowerSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2SlotKnifeItemCB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9EditGP)).EndInit();
+            this.P2Slot9EditGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9FrozenCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9ScopeSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9RapidFireCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9RangeSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9InfiniteAmmoCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9PiercingSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9CriticalSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9CapacitySE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9ReloadSpeedSE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9MaxQuantityTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9QuantityTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9ItemCB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P2Slot9FirepowerSE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SlotsGP)).EndInit();
             this.SlotsGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SlotKnifePictureBox.Properties)).EndInit();
@@ -5649,6 +9037,11 @@ namespace GameX
             this.TabPageSettingsGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MiscModsGP)).EndInit();
             this.MiscModsGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MiscMiscGP)).EndInit();
+            this.MiscMiscGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.HandTremorCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ControllerAimGP)).EndInit();
+            this.ControllerAimGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ColorFilterGP)).EndInit();
             this.ColorFilterGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AboutPictureEdit.Properties)).EndInit();
@@ -5710,28 +9103,16 @@ namespace GameX
         private DevExpress.XtraEditors.ComboBoxEdit P4WeaponModeComboBox;
         private DevExpress.XtraEditors.GroupControl P4HandnessGP;
         private DevExpress.XtraEditors.ComboBoxEdit P4HandnessComboBox;
-        private DevExpress.XtraEditors.CheckButton P4InfiniteAmmoButton;
-        private DevExpress.XtraEditors.CheckButton P4RapidfireButton;
-        private DevExpress.XtraEditors.CheckButton P4InfiniteHPButton;
-        private DevExpress.XtraEditors.CheckButton P4UntargetableButton;
         private DevExpress.XtraEditors.GroupControl P3MiscGP;
         private DevExpress.XtraEditors.GroupControl P3WeaponModeGP;
         private DevExpress.XtraEditors.ComboBoxEdit P3WeaponModeComboBox;
         private DevExpress.XtraEditors.GroupControl P3HandnessGP;
         private DevExpress.XtraEditors.ComboBoxEdit P3HandnessComboBox;
-        private DevExpress.XtraEditors.CheckButton P3InfiniteAmmoButton;
-        private DevExpress.XtraEditors.CheckButton P3RapidfireButton;
-        private DevExpress.XtraEditors.CheckButton P3InfiniteHPButton;
-        private DevExpress.XtraEditors.CheckButton P3UntargetableButton;
         private DevExpress.XtraEditors.GroupControl P2MiscGP;
         private DevExpress.XtraEditors.GroupControl P2WeaponModeGP;
         private DevExpress.XtraEditors.ComboBoxEdit P2WeaponModeComboBox;
         private DevExpress.XtraEditors.GroupControl P2HandnessGP;
         private DevExpress.XtraEditors.ComboBoxEdit P2HandnessComboBox;
-        private DevExpress.XtraEditors.CheckButton P2InfiniteAmmoButton;
-        private DevExpress.XtraEditors.CheckButton P2RapidfireButton;
-        private DevExpress.XtraEditors.CheckButton P2InfiniteHPButton;
-        private DevExpress.XtraEditors.CheckButton P2UntargetableButton;
         private DevExpress.XtraEditors.PictureEdit AboutPictureEdit;
         private DevExpress.XtraTab.XtraTabPage TabPageConsole;
         private DevExpress.XtraEditors.GroupControl ConsoleGP;
@@ -5974,6 +9355,177 @@ namespace GameX
         private DevExpress.XtraTab.XtraTabPage P3InventoryTab;
         private DevExpress.XtraTab.XtraTabPage P4InventoryTab;
         public DevExpress.XtraEditors.CheckEdit P1FreezeAllCheckEdit;
+        private DevExpress.XtraEditors.GroupControl ControllerAimGP;
+        private DevExpress.XtraEditors.SimpleButton ControllerAimButton;
+        private DevExpress.XtraEditors.GroupControl MiscMiscGP;
+        private DevExpress.XtraEditors.CheckEdit HandTremorCheckEdit;
+        private DevExpress.XtraEditors.CheckButton P4InfiniteAmmoButton;
+        private DevExpress.XtraEditors.CheckButton P4RapidfireButton;
+        private DevExpress.XtraEditors.CheckButton P4InfiniteHPButton;
+        private DevExpress.XtraEditors.CheckButton P4UntargetableButton;
+        private DevExpress.XtraEditors.CheckButton P3InfiniteAmmoButton;
+        private DevExpress.XtraEditors.CheckButton P3RapidfireButton;
+        private DevExpress.XtraEditors.CheckButton P3InfiniteHPButton;
+        private DevExpress.XtraEditors.CheckButton P3UntargetableButton;
+        private DevExpress.XtraEditors.CheckButton P2InfiniteAmmoButton;
+        private DevExpress.XtraEditors.CheckButton P2RapidfireButton;
+        private DevExpress.XtraEditors.CheckButton P2InfiniteHPButton;
+        private DevExpress.XtraEditors.CheckButton P2UntargetableButton;
+        private DevExpress.XtraEditors.SimpleButton TabPageCharButton;
+        private DevExpress.XtraEditors.SimpleButton TabPageMeleeButton;
+        private DevExpress.XtraEditors.SimpleButton TabPageInventoryButton;
+        private DevExpress.XtraEditors.SimpleButton TabPageSettingsButton;
+        private DevExpress.XtraEditors.SimpleButton TabPageConsoleButton;
+        public DevExpress.XtraEditors.CheckEdit P2FreezeAllCheckEdit;
+        private DevExpress.XtraEditors.LabelControl P2ScopeLB;
+        private DevExpress.XtraEditors.LabelControl P2RangeLB;
+        private DevExpress.XtraEditors.GroupControl P2Slot1EditGP;
+        public DevExpress.XtraEditors.CheckEdit P2Slot1FrozenCheckEdit;
+        public DevExpress.XtraEditors.CheckEdit P2Slot1RapidFireCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2Slot1ScopeSE;
+        public DevExpress.XtraEditors.CheckEdit P2Slot1InfiniteAmmoCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2Slot1RangeSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot1PiercingSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot1CriticalSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot1CapacitySE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot1ReloadSpeedSE;
+        public DevExpress.XtraEditors.TextEdit P2Slot1MaxQuantityTE;
+        public DevExpress.XtraEditors.TextEdit P2Slot1QuantityTE;
+        public DevExpress.XtraEditors.ComboBoxEdit P2Slot1ItemCB;
+        public DevExpress.XtraEditors.SpinEdit P2Slot1FirepowerSE;
+        private DevExpress.XtraEditors.LabelControl P2PiercingLB;
+        private DevExpress.XtraEditors.GroupControl P2Slot2EditGP;
+        public DevExpress.XtraEditors.CheckEdit P2Slot2FrozenCheckEdit;
+        public DevExpress.XtraEditors.CheckEdit P2Slot2RapidFireCheckEdit;
+        public DevExpress.XtraEditors.CheckEdit P2Slot2InfiniteAmmoCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2Slot2ScopeSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot2RangeSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot2PiercingSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot2CriticalSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot2CapacitySE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot2ReloadSpeedSE;
+        public DevExpress.XtraEditors.TextEdit P2Slot2MaxQuantityTE;
+        public DevExpress.XtraEditors.TextEdit P2Slot2QuantityTE;
+        public DevExpress.XtraEditors.ComboBoxEdit P2Slot2ItemCB;
+        public DevExpress.XtraEditors.SpinEdit P2Slot2FirepowerSE;
+        private DevExpress.XtraEditors.LabelControl P2CriticalLB;
+        private DevExpress.XtraEditors.GroupControl P2Slot3EditGP;
+        public DevExpress.XtraEditors.CheckEdit P2Slot3FrozenCheckEdit;
+        public DevExpress.XtraEditors.CheckEdit P2Slot3RapidFireCheckEdit;
+        public DevExpress.XtraEditors.CheckEdit P2Slot3InfiniteAmmoCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2Slot3ScopeSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot3RangeSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot3PiercingSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot3CriticalSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot3CapacitySE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot3ReloadSpeedSE;
+        public DevExpress.XtraEditors.TextEdit P2Slot3MaxQuantityTE;
+        public DevExpress.XtraEditors.TextEdit P2Slot3QuantityTE;
+        public DevExpress.XtraEditors.ComboBoxEdit P2Slot3ItemCB;
+        public DevExpress.XtraEditors.SpinEdit P2Slot3FirepowerSE;
+        private DevExpress.XtraEditors.LabelControl P2CapacityLB;
+        private DevExpress.XtraEditors.GroupControl P2Slot4EditGP;
+        public DevExpress.XtraEditors.CheckEdit P2Slot4FrozenCheckEdit;
+        public DevExpress.XtraEditors.CheckEdit P2Slot4RapidFireCheckEdit;
+        public DevExpress.XtraEditors.CheckEdit P2Slot4InfiniteAmmoCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2Slot4ScopeSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot4RangeSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot4PiercingSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot4CriticalSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot4CapacitySE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot4ReloadSpeedSE;
+        public DevExpress.XtraEditors.TextEdit P2Slot4MaxQuantityTE;
+        public DevExpress.XtraEditors.TextEdit P2Slot4QuantityTE;
+        public DevExpress.XtraEditors.ComboBoxEdit P2Slot4ItemCB;
+        public DevExpress.XtraEditors.SpinEdit P2Slot4FirepowerSE;
+        private DevExpress.XtraEditors.LabelControl P2ReloadSpeedLB;
+        private DevExpress.XtraEditors.GroupControl P2Slot5EditGP;
+        public DevExpress.XtraEditors.CheckEdit P2Slot5FrozenCheckEdit;
+        public DevExpress.XtraEditors.CheckEdit P2Slot5RapidFireCheckEdit;
+        public DevExpress.XtraEditors.CheckEdit P2Slot5InfiniteAmmoCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2Slot5ScopeSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot5RangeSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot5PiercingSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot5CriticalSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot5CapacitySE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot5ReloadSpeedSE;
+        public DevExpress.XtraEditors.TextEdit P2Slot5MaxQuantityTE;
+        public DevExpress.XtraEditors.TextEdit P2Slot5QuantityTE;
+        public DevExpress.XtraEditors.ComboBoxEdit P2Slot5ItemCB;
+        public DevExpress.XtraEditors.SpinEdit P2Slot5FirepowerSE;
+        private DevExpress.XtraEditors.LabelControl P2FirepowerLB;
+        private DevExpress.XtraEditors.GroupControl P2Slot6EditGP;
+        public DevExpress.XtraEditors.CheckEdit P2Slot6FrozenCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2Slot6ScopeSE;
+        public DevExpress.XtraEditors.CheckEdit P2Slot6RapidFireCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2Slot6RangeSE;
+        public DevExpress.XtraEditors.CheckEdit P2Slot6InfiniteAmmoCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2Slot6PiercingSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot6CriticalSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot6CapacitySE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot6ReloadSpeedSE;
+        public DevExpress.XtraEditors.TextEdit P2Slot6MaxQuantityTE;
+        public DevExpress.XtraEditors.TextEdit P2Slot6QuantityTE;
+        public DevExpress.XtraEditors.ComboBoxEdit P2Slot6ItemCB;
+        public DevExpress.XtraEditors.SpinEdit P2Slot6FirepowerSE;
+        private DevExpress.XtraEditors.LabelControl P2MaxQuantityLB;
+        private DevExpress.XtraEditors.GroupControl P2Slot7EditGP;
+        public DevExpress.XtraEditors.CheckEdit P2Slot7FrozenCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2Slot7ScopeSE;
+        public DevExpress.XtraEditors.CheckEdit P2Slot7RapidFireCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2Slot7RangeSE;
+        public DevExpress.XtraEditors.CheckEdit P2Slot7InfiniteAmmoCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2Slot7PiercingSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot7CriticalSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot7CapacitySE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot7ReloadSpeedSE;
+        public DevExpress.XtraEditors.TextEdit P2Slot7MaxQuantityTE;
+        public DevExpress.XtraEditors.TextEdit P2Slot7QuantityTE;
+        public DevExpress.XtraEditors.ComboBoxEdit P2Slot7ItemCB;
+        public DevExpress.XtraEditors.SpinEdit P2Slot7FirepowerSE;
+        private DevExpress.XtraEditors.LabelControl P2QuantityLB;
+        private DevExpress.XtraEditors.GroupControl P2Slot8EditGP;
+        public DevExpress.XtraEditors.CheckEdit P2Slot8FrozenCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2Slot8ScopeSE;
+        public DevExpress.XtraEditors.CheckEdit P2Slot8RapidFireCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2Slot8RangeSE;
+        public DevExpress.XtraEditors.CheckEdit P2Slot8InfiniteAmmoCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2Slot8PiercingSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot8CriticalSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot8CapacitySE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot8ReloadSpeedSE;
+        public DevExpress.XtraEditors.TextEdit P2Slot8MaxQuantityTE;
+        public DevExpress.XtraEditors.TextEdit P2Slot8QuantityTE;
+        public DevExpress.XtraEditors.ComboBoxEdit P2Slot8ItemCB;
+        public DevExpress.XtraEditors.SpinEdit P2Slot8FirepowerSE;
+        private DevExpress.XtraEditors.GroupControl P2SlotKnifeEditGP;
+        public DevExpress.XtraEditors.CheckEdit P2SlotKnifeFrozenCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2SlotKnifeScopeSE;
+        public DevExpress.XtraEditors.CheckEdit P2SlotKnifeRapidFireCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2SlotKnifeRangeSE;
+        public DevExpress.XtraEditors.CheckEdit P2SlotKnifeInfiniteAmmoCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2SlotKnifePiercingSE;
+        public DevExpress.XtraEditors.SpinEdit P2SlotKnifeCriticalSE;
+        public DevExpress.XtraEditors.SpinEdit P2SlotKnifeCapacitySE;
+        public DevExpress.XtraEditors.SpinEdit P2SlotKnifeReloadSpeedSE;
+        public DevExpress.XtraEditors.TextEdit P2SlotKnifeMaxQuantityTE;
+        public DevExpress.XtraEditors.TextEdit P2SlotKnifeQuantityTE;
+        public DevExpress.XtraEditors.SpinEdit P2SlotKnifeFirepowerSE;
+        public DevExpress.XtraEditors.ComboBoxEdit P2SlotKnifeItemCB;
+        private DevExpress.XtraEditors.GroupControl P2Slot9EditGP;
+        public DevExpress.XtraEditors.CheckEdit P2Slot9FrozenCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2Slot9ScopeSE;
+        public DevExpress.XtraEditors.CheckEdit P2Slot9RapidFireCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2Slot9RangeSE;
+        public DevExpress.XtraEditors.CheckEdit P2Slot9InfiniteAmmoCheckEdit;
+        public DevExpress.XtraEditors.SpinEdit P2Slot9PiercingSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot9CriticalSE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot9CapacitySE;
+        public DevExpress.XtraEditors.SpinEdit P2Slot9ReloadSpeedSE;
+        public DevExpress.XtraEditors.TextEdit P2Slot9MaxQuantityTE;
+        public DevExpress.XtraEditors.TextEdit P2Slot9QuantityTE;
+        public DevExpress.XtraEditors.ComboBoxEdit P2Slot9ItemCB;
+        public DevExpress.XtraEditors.SpinEdit P2Slot9FirepowerSE;
     }
 }
 
