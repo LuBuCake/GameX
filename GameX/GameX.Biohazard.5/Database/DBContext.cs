@@ -3,7 +3,6 @@ using System.IO;
 using GameX.Enum;
 using GameX.Database.Content;
 using GameX.Database.Type;
-using DevExpress.Office.Utils;
 
 namespace GameX.Database
 {

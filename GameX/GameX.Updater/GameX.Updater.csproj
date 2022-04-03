@@ -219,10 +219,10 @@
     <Compile Include="App.Designer.cs">
       <DependentUpon>App.cs</DependentUpon>
     </Compile>
-    <Compile Include="Base\Helpers\Serializer.cs" />
-    <Compile Include="Base\Helpers\Utility.cs" />
-    <Compile Include="Base\Modules\Terminal.cs" />
-    <Compile Include="Base\Types\AppVersion.cs" />
+    <Compile Include="Helpers\Serializer.cs" />
+    <Compile Include="Helpers\Utility.cs" />
+    <Compile Include="Modules\Terminal.cs" />
+    <Compile Include="Database\Type\AppVersion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="App.resx">

@@ -29,6 +29,7 @@ namespace GameX
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(App));
             this.P1CosComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P1FreezeCharCosButton = new DevExpress.XtraEditors.CheckButton();
@@ -492,6 +493,7 @@ namespace GameX
             this.TabPageInventoryButton = new DevExpress.XtraEditors.SimpleButton();
             this.TabPageSettingsButton = new DevExpress.XtraEditors.SimpleButton();
             this.TabPageConsoleButton = new DevExpress.XtraEditors.SimpleButton();
+            this.MainLoop = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -8401,8 +8403,8 @@ namespace GameX
             this.UpdateModeComboBoxEdit.Size = new System.Drawing.Size(111, 20);
             this.UpdateModeComboBoxEdit.TabIndex = 0;
             this.UpdateModeComboBoxEdit.TabStop = false;
-            this.UpdateModeComboBoxEdit.ToolTip = "Sets the update rate for the main loop system. Aways leave the Update Rate greate" +
-    "r or equal to your game\'s FPS.";
+            this.UpdateModeComboBoxEdit.ToolTip = "Sets the update rate for the main loop system. 10 times per second is an ideal va" +
+    "lue.";
             this.UpdateModeComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.UpdateModeComboBoxEdit.ToolTipTitle = "Update Rate";
             // 
@@ -9525,6 +9527,7 @@ namespace GameX
         public DevExpress.XtraEditors.SpinEdit P2Slot9FirepowerSE;
         public DevExpress.XtraEditors.SimpleButton TabPageConsoleButton;
         public DevExpress.XtraTab.XtraTabControl MasterTabControl;
+        private System.Windows.Forms.Timer MainLoop;
     }
 }
 

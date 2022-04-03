@@ -207,12 +207,14 @@
     <Compile Include="App.Designer.cs">
       <DependentUpon>App.cs</DependentUpon>
     </Compile>
-    <Compile Include="Base\Content\GameXInfos.cs" />
-    <Compile Include="Base\Helpers\Serializer.cs" />
-    <Compile Include="Base\Helpers\Threading.cs" />
-    <Compile Include="Base\Helpers\Utility.cs" />
-    <Compile Include="Base\Types\AppVersion.cs" />
-    <Compile Include="Base\Types\GameXInfo.cs" />
+    <Compile Include="Database\Content\AddonContent.cs" />
+    <Compile Include="Database\DBContext.cs" />
+    <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="Helpers\Serializer.cs" />
+    <Compile Include="Helpers\Threading.cs" />
+    <Compile Include="Helpers\Utility.cs" />
+    <Compile Include="Database\Type\AppVersion.cs" />
+    <Compile Include="Database\Type\Addon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="App.resx">

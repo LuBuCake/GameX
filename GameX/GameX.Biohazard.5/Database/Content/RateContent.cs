@@ -9,9 +9,9 @@ namespace GameX.Database.Content
         {
             return new List<Simple>()
             {
-                new Simple("30 FPS", 30),
-                new Simple("60 FPS", 60),
-                new Simple("120 FPS", 120)
+                new Simple("5 times per sec", 200),
+                new Simple("10 times per sec", 100),
+                new Simple("20 times per sec", 50)
             };
         }
     }

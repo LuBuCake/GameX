@@ -1,4 +1,6 @@
-﻿namespace GameX.Launcher.Base.Types
+﻿using System;
+
+namespace GameX.Updater.Database.Type
 {
     public class AppVersion
     {

@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using System.Windows.Forms;
 
-namespace GameX.Launcher.Base.Helpers
+namespace GameX.Launcher.Helpers
 {
     public static class Threading
     {

@@ -1,20 +1,25 @@
 ﻿using System.IO;
-using GameX.Updater.Base.Types;
 using Newtonsoft.Json;
 
-namespace GameX.Updater.Base.Helpers
+namespace GameX.Launcher.Helpers
 {
-    public class Serializer
+    public static class Serializer
     {
-        public static string SerializeAppVersion(AppVersion Data)
+        #region Serializer
+
+        public static string Serialize<T>(T Data)
         {
             return JsonConvert.SerializeObject(Data, Formatting.Indented);
         }
 
-        public static AppVersion DeserializeAppVersion(string Data)
+        public static T Deserialize<T>(string Data)
         {
-            return JsonConvert.DeserializeObject<AppVersion>(Data);
+            return JsonConvert.DeserializeObject<T>(Data);
         }
+
+        #endregion
+
+        #region File Writer
 
         public static void WriteDataFile(string Path, string Data)
         {
@@ -25,5 +30,7 @@ namespace GameX.Updater.Base.Helpers
         {
             return File.ReadAllText(Path);
         }
+
+        #endregion
     }
 }

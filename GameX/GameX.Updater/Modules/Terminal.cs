@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
-using GameX.Updater.Base.Helpers;
+using GameX.Updater.Helpers;
 
-namespace GameX.Updater.Base.Modules
+namespace GameX.Updater.Modules
 {
     public static class Terminal
     {

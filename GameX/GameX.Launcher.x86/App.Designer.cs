@@ -55,11 +55,12 @@ namespace GameX.Launcher
             // GameXButton
             // 
             this.GameXButton.AllowFocus = false;
+            this.GameXButton.Enabled = false;
             this.GameXButton.Location = new System.Drawing.Point(231, 105);
             this.GameXButton.Name = "GameXButton";
             this.GameXButton.Size = new System.Drawing.Size(72, 20);
             this.GameXButton.TabIndex = 3;
-            this.GameXButton.Text = "Launch";
+            this.GameXButton.Text = "Initializing";
             // 
             // GameXComboEdit
             // 

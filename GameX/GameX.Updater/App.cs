@@ -8,9 +8,9 @@ using System.Windows.Forms;
 using System.IO.Compression;
 using System.Net.NetworkInformation;
 using DevExpress.XtraEditors;
-using GameX.Updater.Base.Helpers;
-using GameX.Updater.Base.Modules;
-using GameX.Updater.Base.Types;
+using GameX.Updater.Helpers;
+using GameX.Updater.Modules;
+using GameX.Updater.Database.Type;
 
 namespace GameX.Updater
 {
@@ -50,7 +50,7 @@ namespace GameX.Updater
                 SaveLog();
             }
 
-            _Version = Serializer.DeserializeAppVersion(Serializer.ReadDataFile(UpdaterDirectory + "updateapp.json"));
+            _Version = Serializer.Deserialize<AppVersion>(Serializer.ReadDataFile(UpdaterDirectory + "updateapp.json"));
 
             WebClient Downloader = new WebClient();
             Downloader.DownloadProgressChanged += ReportDownloadProgress;

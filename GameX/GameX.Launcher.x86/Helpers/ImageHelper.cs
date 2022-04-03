@@ -1,30 +1,31 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
-using System.Net.NetworkInformation;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
 
-namespace GameX.Launcher.Base.Helpers
+namespace GameX.Launcher.Helpers
 {
-    public static class Utility
+    public static class ImageHelper
     {
-        public static int Clamp(int Value, int Min, int Max)
-        {
-            return Value > Max ? Max : Value < Min ? Min : Value;
-        }
+        private static Dictionary<string, Image> ImageCache;
 
-        public static bool TestConnection(string HostNameOrAddress, int Timeout = 1000)
+        public static Image GetImageFromFile(string File)
         {
             try
             {
-                Ping myPing = new Ping();
-                PingReply reply = myPing.Send(HostNameOrAddress, Timeout, new byte[32]);
-                return (reply.Status == IPStatus.Success);
+                if (ImageCache == null)
+                    ImageCache = new Dictionary<string, Image>();
+
+                if (ImageCache.TryGetValue(File, out Image CachedImage))
+                    return CachedImage;
+
+                Image img = Image.FromFile(File);
+                ImageCache.Add(File, img);
+
+                return img;
             }
             catch (Exception)
             {
-                return false;
+                return null;
             }
         }
 
@@ -66,7 +67,7 @@ namespace GameX.Launcher.Base.Helpers
                     {
                         Color CurrentColor = outputImage.GetPixel(x, y);
                         Color ColorToAdd = currentBitmap.GetPixel(x, y);
-                        Color NewColor = Color.FromArgb(Clamp(CurrentColor.A + ColorToAdd.A, 0, 255), Clamp(CurrentColor.R + ColorToAdd.R, 0, 255), Clamp(CurrentColor.G + ColorToAdd.G, 0, 255), Clamp(CurrentColor.B + ColorToAdd.B, 0, 255));
+                        Color NewColor = Color.FromArgb(Utility.Clamp(CurrentColor.A + ColorToAdd.A, 0, 255), Utility.Clamp(CurrentColor.R + ColorToAdd.R, 0, 255), Utility.Clamp(CurrentColor.G + ColorToAdd.G, 0, 255), Utility.Clamp(CurrentColor.B + ColorToAdd.B, 0, 255));
 
                         outputImage.SetPixel(x, y, NewColor);
                     }
@@ -74,21 +75,6 @@ namespace GameX.Launcher.Base.Helpers
             }
 
             return outputImage;
-        }
-
-        public static DialogResult MessageBox_Information(string Message, MessageBoxButtons Button = MessageBoxButtons.OK)
-        {
-            return XtraMessageBox.Show(Message, "Information", Button, MessageBoxIcon.Information);
-        }
-
-        public static DialogResult MessageBox_Error(string Message, MessageBoxButtons Button = MessageBoxButtons.OK)
-        {
-            return XtraMessageBox.Show(Message, "Error", Button, MessageBoxIcon.Error);
-        }
-
-        public static DialogResult MessageBox_Warning(string Message, MessageBoxButtons Button = MessageBoxButtons.OK)
-        {
-            return XtraMessageBox.Show(Message, "Warning", Button, MessageBoxIcon.Warning);
         }
     }
 }

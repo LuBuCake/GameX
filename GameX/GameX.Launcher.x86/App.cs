@@ -9,18 +9,15 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using GameX.Launcher.Base.Content;
-using GameX.Launcher.Base.Helpers;
-using GameX.Launcher.Base.Types;
+using GameX.Launcher.Helpers;
+using GameX.Launcher.Database;
+using GameX.Launcher.Database.Type;
 
 namespace GameX.Launcher
 {
     public partial class App : XtraForm
     {
-        // App Init //
-
-        private GameXInfo[] Games { get; set; }
-        private GameXInfo Downloading { get; set; }
+        private Addon Downloading { get; set; }
 
         public App()
         {
@@ -39,7 +36,7 @@ namespace GameX.Launcher
 
         private void SetupControls()
         {
-            Games = GameXInfos.Available();
+            DB db = DBContext.GetDatabase();
 
             string AppDirectory = Directory.GetCurrentDirectory();
             string AddonsDirectory = AppDirectory + "/addons/";
@@ -47,11 +44,11 @@ namespace GameX.Launcher
             if (!Directory.Exists(AddonsDirectory))
                 Directory.CreateDirectory(AddonsDirectory);
 
-            foreach (GameXInfo Game in Games)
+            foreach (Addon Game in db.Addons)
             {
-                string AddonDir = AddonsDirectory + Game.GameXFile.Replace(".dll", "") + "/";
+                string AddonDir = AddonsDirectory + Game.File.Replace(".dll", "") + "/";
 
-                if (!Directory.Exists(AddonDir) || !File.Exists(AddonDir + Game.GameXFile))
+                if (!Directory.Exists(AddonDir) || !File.Exists(AddonDir + Game.File))
                 {
                     Game.Downloaded = false;
                     continue;
@@ -60,7 +57,7 @@ namespace GameX.Launcher
                 Game.Downloaded = true;
             }
 
-            GameXComboEdit.Properties.Items.AddRange(Games);
+            GameXComboEdit.Properties.Items.AddRange(db.Addons);
             GameXComboEdit.SelectedIndexChanged += GameX_IndexChanged;
             GameXComboEdit.SelectedIndex = 0;
 
@@ -72,13 +69,13 @@ namespace GameX.Launcher
         private async void GameX_IndexChanged(object sender, EventArgs e)
         {
             ComboBoxEdit CBE = sender as ComboBoxEdit;
-            GameXInfo Info = CBE.SelectedItem as GameXInfo;
+            Addon Info = CBE.SelectedItem as Addon;
 
             try
             {
                 string AppDirectory = Directory.GetCurrentDirectory();
                 string AddonsDirectory = AppDirectory + "/addons/";
-                string AddonDir = AddonsDirectory + Info.GameXFile.Replace(".dll", "") + "/";
+                string AddonDir = AddonsDirectory + Info.File.Replace(".dll", "") + "/";
 
                 if (!Info.Downloaded)
                 {
@@ -90,7 +87,7 @@ namespace GameX.Launcher
 
                 if (Info.Downloaded && !Info.Updated)
                 {
-                    Info.Current = AssemblyName.GetAssemblyName(AddonDir + Info.GameXFile).Version;
+                    Info.Current = AssemblyName.GetAssemblyName(AddonDir + Info.File).Version;
 
                     GameXButton.Text = "Checking";
                     GameXButton.Enabled = false;
@@ -106,18 +103,18 @@ namespace GameX.Launcher
 
                 if (Info.Logo == null)
                 {
-                    string ImagesDir = "addons/" + Info.GameXFile.Replace(".dll", "") + "/images/application/";
+                    string ImagesDir = "addons/" + Info.File.Replace(".dll", "") + "/images/application/";
 
-                    Image LogoA = Image.FromFile(ImagesDir + Info.GameXLogo[0]);
-                    Image LogoB = Image.FromFile(ImagesDir + Info.GameXLogo[1]);
+                    Image LogoA = Image.FromFile(ImagesDir + Info.Images[0]);
+                    Image LogoB = Image.FromFile(ImagesDir + Info.Images[1]);
 
                     if (LogoA == null || LogoB == null)
                         return;
 
-                    LogoA = await Task.Run(() => LogoA.ColorReplace(Info.GameXLogoColors[0], true));
-                    LogoB = await Task.Run(() => LogoB.ColorReplace(Info.GameXLogoColors[1], true));
+                    LogoA = await Task.Run(() => LogoA.ColorReplace(Info.ImageColors[0], true));
+                    LogoB = await Task.Run(() => LogoB.ColorReplace(Info.ImageColors[1], true));
 
-                    Info.Logo = await Task.Run(() => Utility.MergeImage(LogoA, LogoB));
+                    Info.Logo = await Task.Run(() => ImageHelper.MergeImage(LogoA, LogoB));
                 }
 
                 GameXPictureEdit.Image = Info.Logo;
@@ -131,7 +128,7 @@ namespace GameX.Launcher
         private async void GameX_Click(object sender, EventArgs e)
         {
             SimpleButton SB = sender as SimpleButton;
-            GameXInfo Game = GameXComboEdit.SelectedItem as GameXInfo;
+            Addon Game = GameXComboEdit.SelectedItem as Addon;
 
             string AppDirectory = Directory.GetCurrentDirectory();
 
@@ -162,13 +159,13 @@ namespace GameX.Launcher
                     Downloading = Game;
                     break;
                 case "Launch":
-                    Program.RuntimeDll = "addons/" + Game.GameXFile.Replace(".dll", "") + "/" + Game.GameXFile;
+                    Program.RuntimeDll = "addons/" + Game.File.Replace(".dll", "") + "/" + Game.File;
                     DialogResult = DialogResult.OK;
                     break;
             }
         }
 
-        private async Task<bool> CheckForAddonUpdate(GameXInfo Game)
+        private async Task<bool> CheckForAddonUpdate(Addon Game)
         {
             bool HasConnection = await Task.Run(() => Utility.TestConnection("8.8.8.8"));
 
@@ -243,7 +240,7 @@ namespace GameX.Launcher
                         if (!Directory.Exists(UpdaterDirectory))
                             Directory.CreateDirectory(UpdaterDirectory);
 
-                        Serializer.WriteDataFile(UpdaterDirectory + "updateapp.json", Serializer.SerializeAppVersion(_version));
+                        Serializer.WriteDataFile(UpdaterDirectory + "updateapp.json", Serializer.Serialize(_version));
                         Process.Start(AppDirectory + "/Updater.exe");
                         Application.Exit();
                     }

@@ -44,9 +44,6 @@ namespace GameX.Modules
 
                 Environment.NewLine + "App commands:",
                 "Help - Shows all available commands.",
-                "FPS - Shows the current FPS.",
-                "FrameTime - Shows the last frametime.",
-                "CurTime - Shows the elapsed time in seconds since the program opened",
                 "Exit - Closes the App.",
 
                 Environment.NewLine + "Biohazard commands:",
@@ -169,15 +166,6 @@ namespace GameX.Modules
                 case "help":
                     ShowCommands();
                     break;
-                case "fps":
-                    WriteLine($"[App] {GUI.FramesPerSecond.ToString().Substring(0, 5)}");
-                    break;
-                case "frametime":
-                    WriteLine($"[App] {GUI.FrameTime.ToString().Substring(0, 5)}");
-                    break;
-                case "curtime":
-                    WriteLine($"[App] {(int) GUI.CurTime}");
-                    break;
                 case "exit":
                     Application.Exit();
                     break;
@@ -203,7 +191,7 @@ namespace GameX.Modules
 
         public static void WriteLine(Exception Ex)
         {
-            string Input = $"[Stack][{Ex.GetType().Name}] {new StackTrace(Ex).GetFrame(0).GetMethod().Name}: {Ex.Message}";
+            string Input = $"[App][{Ex.GetType().Name}] {new StackTrace(Ex).GetFrame(0).GetMethod().Name}: {Ex.Message}";
 
             string Current = DisplayedText;
 

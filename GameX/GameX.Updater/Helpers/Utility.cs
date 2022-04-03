@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GameX.Updater.Base.Helpers
+namespace GameX.Updater.Helpers
 {
     public class Utility
     {

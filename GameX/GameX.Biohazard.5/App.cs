@@ -23,12 +23,6 @@ namespace GameX
     {
         #region Base Props
 
-        private Stopwatch FrameElapser { get; set; }
-        private Stopwatch CurTimeElapser { get; set; }
-        public double FrameTime { get; private set; }
-        public double CurTime { get; private set; }
-        public double UpdateMode { get; set; }
-        public double FramesPerSecond { get; private set; }
         public bool Verified { get; private set; }
         public bool Initialized { get; private set; }
 
@@ -43,55 +37,6 @@ namespace GameX
         }
 
         private void App_Load(object sender, EventArgs e)
-        {
-            Application_Load();
-        }
-
-        private void Application_Idle(object sender, EventArgs e)
-        {
-            Application_Update();
-        }
-
-        private void Application_ApplicationExit(object sender, EventArgs e)
-        {
-            if (Target_Process != null)
-            {
-                if (Initialized)
-                    GameX_End();
-
-                Target_Process.Exited += null;
-                Target_Process.EnableRaisingEvents = false;
-            }
-
-            Application.Idle += null;
-
-            Memory.FinishModule();
-            Keyboard.RemoveHook();
-
-            Target_Process?.Dispose();
-            Target_Process = null;
-        }
-
-        private void Application_Init()
-        {
-            Target_Setup();
-
-            FrameElapser = new Stopwatch();
-            CurTimeElapser = new Stopwatch();
-
-            FrameElapser.Start();
-            CurTimeElapser.Start();
-
-            Keyboard.CreateHook(GameX_Keyboard);
-
-            Application.Idle += Application_Idle;
-            Application.ApplicationExit += Application_ApplicationExit;
-
-            Terminal.StartModule(this);
-            Biohazard.Setup(this);
-        }
-
-        private void Application_Load()
         {
             #region Controls
 
@@ -715,26 +660,46 @@ namespace GameX
             Configuration_Load(null, null);
         }
 
-        private void Application_Update()
+        private void Application_Init()
         {
-            if (!FrameElapser.IsRunning)
-                FrameElapser.Start();
+            Target_Setup();
 
-            CurTime = CurTimeElapser.Elapsed.TotalSeconds;
+            Keyboard.CreateHook(GameX_Keyboard);
+            Application.ApplicationExit += Application_ApplicationExit;
 
-            TimeSpan Elapsed = FrameElapser.Elapsed;
+            Terminal.StartModule(this);
+            Biohazard.Setup(this);
 
-            if (Elapsed.TotalSeconds < UpdateMode)
-                return;
+            MainLoop.Tick += Application_Update;
+            MainLoop.Enabled = true;
+            MainLoop.Start();
+        }
 
-            FrameElapser.Stop();
-            FrameElapser.Reset();
-
-            FramesPerSecond = 1.0 / Elapsed.TotalSeconds;
-            FrameTime = 1.0 / FramesPerSecond;
-
+        private void Application_Update(object sender, EventArgs e)
+        {
             if (Target_Handle() && Initialized)
                 GameX_Update();
+        }
+
+        private void Application_ApplicationExit(object sender, EventArgs e)
+        {
+            MainLoop.Enabled = false;
+            MainLoop.Stop();
+
+            if (Target_Process != null)
+            {
+                if (Initialized)
+                    GameX_End();
+
+                Target_Process.Exited += null;
+                Target_Process.EnableRaisingEvents = false;
+            }
+
+            Memory.FinishModule();
+            Keyboard.RemoveHook();
+
+            Target_Process?.Dispose();
+            Target_Process = null;
         }
 
         #endregion
@@ -1024,7 +989,7 @@ namespace GameX
 
         private void UpdateMode_IndexChanged(object sender, EventArgs e)
         {
-            UpdateMode = 1.0 / (UpdateModeComboBoxEdit.SelectedItem as Simple).Value;
+            MainLoop.Interval = (UpdateModeComboBoxEdit.SelectedItem as Simple).Value;
         }
 
         private void Palette_IndexChanged(object sender, EventArgs e)
@@ -1595,11 +1560,10 @@ namespace GameX
             try
             {
                 Biohazard.StartModule();
-
-                GameX_CheckControls();
-
                 Biohazard.NoFileChecking(true);
                 Biohazard.OnlineCharSwapFixes(true);
+
+                GameX_CheckControls();
             }
             catch (Exception Ex)
             {
@@ -1840,8 +1804,14 @@ namespace GameX
                     }
                     else
                     {
-                        Biohazard.Players[i].Character = (CharacterCombos[i].SelectedItem as Character).Value;
-                        Biohazard.Players[i].Costume = (CostumeCombos[i].SelectedItem as Costume).Value;
+                        int CharValue = (CharacterCombos[i].SelectedItem as Character).Value;
+                        int Cosvalue = (CostumeCombos[i].SelectedItem as Costume).Value;
+
+                        if (i < 2)
+                            Biohazard.SetStoryModeCharacter(i, CharValue, Cosvalue);
+
+                        Biohazard.Players[i].Character = CharValue;
+                        Biohazard.Players[i].Costume = Cosvalue;
                     }
                 }
 
