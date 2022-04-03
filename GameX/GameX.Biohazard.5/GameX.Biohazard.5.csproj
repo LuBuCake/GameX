@@ -243,6 +243,7 @@
   <ItemGroup>
     <Compile Include="Database\Content\HandnessContent.cs" />
     <Compile Include="Database\Content\ItemContent.cs" />
+    <Compile Include="Database\Content\LoadoutViewBagContent.cs" />
     <Compile Include="Database\Content\MoveContent.cs" />
     <Compile Include="Database\Content\PaletteContent.cs" />
     <Compile Include="Database\Content\RateContent.cs" />

@@ -16,6 +16,7 @@ using GameX.Enum;
 using GameX.Database.Type;
 using GameX.Database.ViewBag;
 using DevExpress.XtraEditors.Controls;
+using System.Security.Cryptography;
 
 namespace GameX
 {
@@ -204,7 +205,27 @@ namespace GameX
                 P2Slot7ItemCB,
                 P2Slot8ItemCB,
                 P2Slot9ItemCB,
-                P2SlotKnifeItemCB
+                P2SlotKnifeItemCB,
+                P3Slot1ItemCB,
+                P3Slot2ItemCB,
+                P3Slot3ItemCB,
+                P3Slot4ItemCB,
+                P3Slot5ItemCB,
+                P3Slot6ItemCB,
+                P3Slot7ItemCB,
+                P3Slot8ItemCB,
+                P3Slot9ItemCB,
+                P3SlotKnifeItemCB,
+                P4Slot1ItemCB,
+                P4Slot2ItemCB,
+                P4Slot3ItemCB,
+                P4Slot4ItemCB,
+                P4Slot5ItemCB,
+                P4Slot6ItemCB,
+                P4Slot7ItemCB,
+                P4Slot8ItemCB,
+                P4Slot9ItemCB,
+                P4SlotKnifeItemCB
             };
 
             TextEdit[] QuantityTextEdits =
@@ -228,7 +249,27 @@ namespace GameX
                 P2Slot7QuantityTE,
                 P2Slot8QuantityTE,
                 P2Slot9QuantityTE,
-                P2SlotKnifeQuantityTE
+                P2SlotKnifeQuantityTE,
+                P3Slot1QuantityTE,
+                P3Slot2QuantityTE,
+                P3Slot3QuantityTE,
+                P3Slot4QuantityTE,
+                P3Slot5QuantityTE,
+                P3Slot6QuantityTE,
+                P3Slot7QuantityTE,
+                P3Slot8QuantityTE,
+                P3Slot9QuantityTE,
+                P3SlotKnifeQuantityTE,
+                P4Slot1QuantityTE,
+                P4Slot2QuantityTE,
+                P4Slot3QuantityTE,
+                P4Slot4QuantityTE,
+                P4Slot5QuantityTE,
+                P4Slot6QuantityTE,
+                P4Slot7QuantityTE,
+                P4Slot8QuantityTE,
+                P4Slot9QuantityTE,
+                P4SlotKnifeQuantityTE
             };
 
             TextEdit[] MaxQuantityTextEdits =
@@ -252,7 +293,27 @@ namespace GameX
                 P2Slot7MaxQuantityTE,
                 P2Slot8MaxQuantityTE,
                 P2Slot9MaxQuantityTE,
-                P2SlotKnifeMaxQuantityTE
+                P2SlotKnifeMaxQuantityTE,
+                P3Slot1MaxQuantityTE,
+                P3Slot2MaxQuantityTE,
+                P3Slot3MaxQuantityTE,
+                P3Slot4MaxQuantityTE,
+                P3Slot5MaxQuantityTE,
+                P3Slot6MaxQuantityTE,
+                P3Slot7MaxQuantityTE,
+                P3Slot8MaxQuantityTE,
+                P3Slot9MaxQuantityTE,
+                P3SlotKnifeMaxQuantityTE,
+                P4Slot1MaxQuantityTE,
+                P4Slot2MaxQuantityTE,
+                P4Slot3MaxQuantityTE,
+                P4Slot4MaxQuantityTE,
+                P4Slot5MaxQuantityTE,
+                P4Slot6MaxQuantityTE,
+                P4Slot7MaxQuantityTE,
+                P4Slot8MaxQuantityTE,
+                P4Slot9MaxQuantityTE,
+                P4SlotKnifeMaxQuantityTE
             };
 
             SpinEdit[] FirepowerSpins =
@@ -276,7 +337,27 @@ namespace GameX
                 P2Slot7FirepowerSE,
                 P2Slot8FirepowerSE,
                 P2Slot9FirepowerSE,
-                P2SlotKnifeFirepowerSE
+                P2SlotKnifeFirepowerSE,
+                P3Slot1FirepowerSE,
+                P3Slot2FirepowerSE,
+                P3Slot3FirepowerSE,
+                P3Slot4FirepowerSE,
+                P3Slot5FirepowerSE,
+                P3Slot6FirepowerSE,
+                P3Slot7FirepowerSE,
+                P3Slot8FirepowerSE,
+                P3Slot9FirepowerSE,
+                P3SlotKnifeFirepowerSE,
+                P4Slot1FirepowerSE,
+                P4Slot2FirepowerSE,
+                P4Slot3FirepowerSE,
+                P4Slot4FirepowerSE,
+                P4Slot5FirepowerSE,
+                P4Slot6FirepowerSE,
+                P4Slot7FirepowerSE,
+                P4Slot8FirepowerSE,
+                P4Slot9FirepowerSE,
+                P4SlotKnifeFirepowerSE
             };
 
             SpinEdit[] ReloadSpeedSpins =
@@ -300,7 +381,27 @@ namespace GameX
                 P2Slot7ReloadSpeedSE,
                 P2Slot8ReloadSpeedSE,
                 P2Slot9ReloadSpeedSE,
-                P2SlotKnifeReloadSpeedSE
+                P2SlotKnifeReloadSpeedSE,
+                P3Slot1ReloadSpeedSE,
+                P3Slot2ReloadSpeedSE,
+                P3Slot3ReloadSpeedSE,
+                P3Slot4ReloadSpeedSE,
+                P3Slot5ReloadSpeedSE,
+                P3Slot6ReloadSpeedSE,
+                P3Slot7ReloadSpeedSE,
+                P3Slot8ReloadSpeedSE,
+                P3Slot9ReloadSpeedSE,
+                P3SlotKnifeReloadSpeedSE,
+                P4Slot1ReloadSpeedSE,
+                P4Slot2ReloadSpeedSE,
+                P4Slot3ReloadSpeedSE,
+                P4Slot4ReloadSpeedSE,
+                P4Slot5ReloadSpeedSE,
+                P4Slot6ReloadSpeedSE,
+                P4Slot7ReloadSpeedSE,
+                P4Slot8ReloadSpeedSE,
+                P4Slot9ReloadSpeedSE,
+                P4SlotKnifeReloadSpeedSE
             };
 
             SpinEdit[] CapacitySpins =
@@ -324,7 +425,27 @@ namespace GameX
                 P2Slot7CapacitySE,
                 P2Slot8CapacitySE,
                 P2Slot9CapacitySE,
-                P2SlotKnifeCapacitySE
+                P2SlotKnifeCapacitySE,
+                P3Slot1CapacitySE,
+                P3Slot2CapacitySE,
+                P3Slot3CapacitySE,
+                P3Slot4CapacitySE,
+                P3Slot5CapacitySE,
+                P3Slot6CapacitySE,
+                P3Slot7CapacitySE,
+                P3Slot8CapacitySE,
+                P3Slot9CapacitySE,
+                P3SlotKnifeCapacitySE,
+                P4Slot1CapacitySE,
+                P4Slot2CapacitySE,
+                P4Slot3CapacitySE,
+                P4Slot4CapacitySE,
+                P4Slot5CapacitySE,
+                P4Slot6CapacitySE,
+                P4Slot7CapacitySE,
+                P4Slot8CapacitySE,
+                P4Slot9CapacitySE,
+                P4SlotKnifeCapacitySE
             };
 
             SpinEdit[] CriticalSpins =
@@ -348,7 +469,27 @@ namespace GameX
                 P2Slot7CriticalSE,
                 P2Slot8CriticalSE,
                 P2Slot9CriticalSE,
-                P2SlotKnifeCriticalSE
+                P2SlotKnifeCriticalSE,
+                P3Slot1CriticalSE,
+                P3Slot2CriticalSE,
+                P3Slot3CriticalSE,
+                P3Slot4CriticalSE,
+                P3Slot5CriticalSE,
+                P3Slot6CriticalSE,
+                P3Slot7CriticalSE,
+                P3Slot8CriticalSE,
+                P3Slot9CriticalSE,
+                P3SlotKnifeCriticalSE,
+                P4Slot1CriticalSE,
+                P4Slot2CriticalSE,
+                P4Slot3CriticalSE,
+                P4Slot4CriticalSE,
+                P4Slot5CriticalSE,
+                P4Slot6CriticalSE,
+                P4Slot7CriticalSE,
+                P4Slot8CriticalSE,
+                P4Slot9CriticalSE,
+                P4SlotKnifeCriticalSE
             };
 
             SpinEdit[] PiercingSpins =
@@ -372,7 +513,27 @@ namespace GameX
                 P2Slot7PiercingSE,
                 P2Slot8PiercingSE,
                 P2Slot9PiercingSE,
-                P2SlotKnifePiercingSE
+                P2SlotKnifePiercingSE,
+                P3Slot1PiercingSE,
+                P3Slot2PiercingSE,
+                P3Slot3PiercingSE,
+                P3Slot4PiercingSE,
+                P3Slot5PiercingSE,
+                P3Slot6PiercingSE,
+                P3Slot7PiercingSE,
+                P3Slot8PiercingSE,
+                P3Slot9PiercingSE,
+                P3SlotKnifePiercingSE,
+                P4Slot1PiercingSE,
+                P4Slot2PiercingSE,
+                P4Slot3PiercingSE,
+                P4Slot4PiercingSE,
+                P4Slot5PiercingSE,
+                P4Slot6PiercingSE,
+                P4Slot7PiercingSE,
+                P4Slot8PiercingSE,
+                P4Slot9PiercingSE,
+                P4SlotKnifePiercingSE
             };
 
             SpinEdit[] RangeSpins =
@@ -396,7 +557,27 @@ namespace GameX
                 P2Slot7RangeSE,
                 P2Slot8RangeSE,
                 P2Slot9RangeSE,
-                P2SlotKnifeRangeSE
+                P2SlotKnifeRangeSE,
+                P3Slot1RangeSE,
+                P3Slot2RangeSE,
+                P3Slot3RangeSE,
+                P3Slot4RangeSE,
+                P3Slot5RangeSE,
+                P3Slot6RangeSE,
+                P3Slot7RangeSE,
+                P3Slot8RangeSE,
+                P3Slot9RangeSE,
+                P3SlotKnifeRangeSE,
+                P4Slot1RangeSE,
+                P4Slot2RangeSE,
+                P4Slot3RangeSE,
+                P4Slot4RangeSE,
+                P4Slot5RangeSE,
+                P4Slot6RangeSE,
+                P4Slot7RangeSE,
+                P4Slot8RangeSE,
+                P4Slot9RangeSE,
+                P4SlotKnifeRangeSE
             };
 
             SpinEdit[] ScopeSpins =
@@ -420,7 +601,27 @@ namespace GameX
                 P2Slot7ScopeSE,
                 P2Slot8ScopeSE,
                 P2Slot9ScopeSE,
-                P2SlotKnifeScopeSE
+                P2SlotKnifeScopeSE,
+                P3Slot1ScopeSE,
+                P3Slot2ScopeSE,
+                P3Slot3ScopeSE,
+                P3Slot4ScopeSE,
+                P3Slot5ScopeSE,
+                P3Slot6ScopeSE,
+                P3Slot7ScopeSE,
+                P3Slot8ScopeSE,
+                P3Slot9ScopeSE,
+                P3SlotKnifeScopeSE,
+                P4Slot1ScopeSE,
+                P4Slot2ScopeSE,
+                P4Slot3ScopeSE,
+                P4Slot4ScopeSE,
+                P4Slot5ScopeSE,
+                P4Slot6ScopeSE,
+                P4Slot7ScopeSE,
+                P4Slot8ScopeSE,
+                P4Slot9ScopeSE,
+                P4SlotKnifeScopeSE
             };
 
 
@@ -445,7 +646,27 @@ namespace GameX
                 P2Slot7InfiniteAmmoCheckEdit,
                 P2Slot8InfiniteAmmoCheckEdit,
                 P2Slot9InfiniteAmmoCheckEdit,
-                P2SlotKnifeInfiniteAmmoCheckEdit
+                P2SlotKnifeInfiniteAmmoCheckEdit,
+                P3Slot1InfiniteAmmoCheckEdit,
+                P3Slot2InfiniteAmmoCheckEdit,
+                P3Slot3InfiniteAmmoCheckEdit,
+                P3Slot4InfiniteAmmoCheckEdit,
+                P3Slot5InfiniteAmmoCheckEdit,
+                P3Slot6InfiniteAmmoCheckEdit,
+                P3Slot7InfiniteAmmoCheckEdit,
+                P3Slot8InfiniteAmmoCheckEdit,
+                P3Slot9InfiniteAmmoCheckEdit,
+                P3SlotKnifeInfiniteAmmoCheckEdit,
+                P4Slot1InfiniteAmmoCheckEdit,
+                P4Slot2InfiniteAmmoCheckEdit,
+                P4Slot3InfiniteAmmoCheckEdit,
+                P4Slot4InfiniteAmmoCheckEdit,
+                P4Slot5InfiniteAmmoCheckEdit,
+                P4Slot6InfiniteAmmoCheckEdit,
+                P4Slot7InfiniteAmmoCheckEdit,
+                P4Slot8InfiniteAmmoCheckEdit,
+                P4Slot9InfiniteAmmoCheckEdit,
+                P4SlotKnifeInfiniteAmmoCheckEdit
             };
 
             CheckEdit[] RapidfireChecks =
@@ -469,7 +690,27 @@ namespace GameX
                 P2Slot7RapidFireCheckEdit,
                 P2Slot8RapidFireCheckEdit,
                 P2Slot9RapidFireCheckEdit,
-                P2SlotKnifeRapidFireCheckEdit
+                P2SlotKnifeRapidFireCheckEdit,
+                P3Slot1RapidFireCheckEdit,
+                P3Slot2RapidFireCheckEdit,
+                P3Slot3RapidFireCheckEdit,
+                P3Slot4RapidFireCheckEdit,
+                P3Slot5RapidFireCheckEdit,
+                P3Slot6RapidFireCheckEdit,
+                P3Slot7RapidFireCheckEdit,
+                P3Slot8RapidFireCheckEdit,
+                P3Slot9RapidFireCheckEdit,
+                P3SlotKnifeRapidFireCheckEdit,
+                P4Slot1RapidFireCheckEdit,
+                P4Slot2RapidFireCheckEdit,
+                P4Slot3RapidFireCheckEdit,
+                P4Slot4RapidFireCheckEdit,
+                P4Slot5RapidFireCheckEdit,
+                P4Slot6RapidFireCheckEdit,
+                P4Slot7RapidFireCheckEdit,
+                P4Slot8RapidFireCheckEdit,
+                P4Slot9RapidFireCheckEdit,
+                P4SlotKnifeRapidFireCheckEdit
             };
 
             CheckEdit[] FrozenChecks =
@@ -493,7 +734,27 @@ namespace GameX
                 P2Slot7FrozenCheckEdit,
                 P2Slot8FrozenCheckEdit,
                 P2Slot9FrozenCheckEdit,
-                P2SlotKnifeFrozenCheckEdit
+                P2SlotKnifeFrozenCheckEdit,
+                P3Slot1FrozenCheckEdit,
+                P3Slot2FrozenCheckEdit,
+                P3Slot3FrozenCheckEdit,
+                P3Slot4FrozenCheckEdit,
+                P3Slot5FrozenCheckEdit,
+                P3Slot6FrozenCheckEdit,
+                P3Slot7FrozenCheckEdit,
+                P3Slot8FrozenCheckEdit,
+                P3Slot9FrozenCheckEdit,
+                P3SlotKnifeFrozenCheckEdit,
+                P4Slot1FrozenCheckEdit,
+                P4Slot2FrozenCheckEdit,
+                P4Slot3FrozenCheckEdit,
+                P4Slot4FrozenCheckEdit,
+                P4Slot5FrozenCheckEdit,
+                P4Slot6FrozenCheckEdit,
+                P4Slot7FrozenCheckEdit,
+                P4Slot8FrozenCheckEdit,
+                P4Slot9FrozenCheckEdit,
+                P4SlotKnifeFrozenCheckEdit
             };
 
             #endregion
@@ -589,7 +850,7 @@ namespace GameX
                 MeleeCombosB[i].Enabled = false;
             }
 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 40; i++)
             {
                 ItemCombos[i].Properties.Items.AddRange(db.ComboBoxItems);
                 ItemCombos[i].SelectedIndexChanged += InventoryComboBox_IndexChanged;
@@ -650,8 +911,12 @@ namespace GameX
 
             ControllerAimButton.Click += EnableDisable_StateChanged;
 
-            LoadoutExportButton.Click += SimpleButton_Click;
-            LoadoutImportButton.Click += SimpleButton_Click;
+            LoadoutSaveButton.Click += SimpleButton_Click;
+            LoadoutApplyButton.Click += SimpleButton_Click;
+            LoadoutComboBox.Properties.Items.AddRange(db.Loadouts);
+
+            if (db.Loadouts.Count > 0)
+                LoadoutComboBox.SelectedIndex = 0;
 
             ResetHealthBars();
             SetupImages();
@@ -1007,53 +1272,47 @@ namespace GameX
         {
             SimpleButton SB = sender as SimpleButton;
 
-            if (SB.Name.Equals("LoadoutExportButton"))
+            if (SB.Name.Equals("LoadoutSaveButton"))
             {
-                using (SaveFileDialog SFD = new SaveFileDialog())
-                {
-                    SFD.Filter = "Loadout Json (*.json)|*.json";
-                    SFD.Title = "Export Loadout";
-                    SFD.RestoreDirectory = true;
+                string SaveDialog = XtraInputBox.Show("Loadout Name", "Save Loadout", "Name").ToString();
 
-                    if (SFD.ShowDialog() == DialogResult.OK)
-                    {
-                        int SelectedPlayer = (int)InventoryPlayerSelectionRG.EditValue;
+                if (string.IsNullOrEmpty(SaveDialog))
+                    return;
 
-                        LoadoutViewBag Loadout = new LoadoutViewBag();
-                        Loadout.Name = Path.GetFileNameWithoutExtension(SFD.FileName);
-                        Loadout.Slots = new TemporaryItemViewBag[10];
+                int SelectedPlayer = (int)InventoryPlayerSelectionRG.EditValue;
 
-                        for (int i = 0; i < 10; i++)
-                            Loadout.Slots[i] = Biohazard.Players[SelectedPlayer].Inventory.LoadoutSlots[i].ToMemory;
+                LoadoutViewBag Loadout = new LoadoutViewBag();
+                Loadout.Name = SaveDialog;
+                Loadout.Slots = new TemporaryItemViewBag[10];
 
-                        Serializer.WriteDataFile(SFD.FileName, Serializer.Serialize(Loadout));
+                for (int i = 0; i < 10; i++)
+                    Loadout.Slots[i] = Biohazard.Players[SelectedPlayer].Inventory.LoadoutSlots[i].ToMemory;
 
-                        Terminal.WriteLine($"[App] Loadout \"{Loadout.Name}\" saved successfully at {SFD.FileName}.");
-                        Utility.MessageBox_Information($"Loadout \"{Loadout.Name}\" saved successfully!");
-                    }
-                }
+                Serializer.WriteDataFile(@"addons/GameX.Biohazard.5/prefabs/loadout/" + SaveDialog.Replace(" ", "").Trim() + ".json", Serializer.Serialize(Loadout));
+
+                DBContext.UpdateLoadouts();
+                DB db = DBContext.GetDatabase();
+
+                LoadoutComboBox.Properties.Items.Clear();
+                LoadoutComboBox.Properties.Items.AddRange(db.Loadouts);
+
+                if (db.Loadouts.Count > 0)
+                    LoadoutComboBox.SelectedIndex = 0;
+
+                Terminal.WriteLine($"[App] Loadout \"{Loadout.Name}\" saved successfully!");
+                Utility.MessageBox_Information($"Loadout \"{Loadout.Name}\" saved successfully!");
             }
-            else if (SB.Name.Equals("LoadoutImportButton"))
+            else if (SB.Name.Equals("LoadoutApplyButton"))
             {
-                using (OpenFileDialog OFD = new OpenFileDialog())
-                {
-                    OFD.Filter = "Loadout Json (*.json)|*.json";
-                    OFD.Title = "Import Loadout";
-                    OFD.RestoreDirectory = true;
+                int SelectedPlayer = (int)InventoryPlayerSelectionRG.EditValue;
 
-                    if (OFD.ShowDialog() == DialogResult.OK)
-                    {
-                        int SelectedPlayer = (int)InventoryPlayerSelectionRG.EditValue;
+                LoadoutViewBag Loadout = LoadoutComboBox.SelectedItem as LoadoutViewBag;
 
-                        LoadoutViewBag Loadout = Serializer.Deserialize<LoadoutViewBag>(Serializer.ReadDataFile(OFD.FileName));
+                for (int i = 0; i < 10; i++)
+                    Biohazard.Players[SelectedPlayer].Inventory.LoadoutSlots[i].SetFromLoadoutTemporaryItem(Loadout.Slots[i], Initialized);
 
-                        for (int i = 0; i < 10; i++)
-                            Biohazard.Players[SelectedPlayer].Inventory.LoadoutSlots[i].SetFromLoadoutTemporaryItem(Loadout.Slots[i], Initialized);
-
-                        Terminal.WriteLine($"[App] Loadout \"{Loadout.Name}\" applied successfully on P{SelectedPlayer + 1}'s inventory.");
-                        Utility.MessageBox_Information($"Loadout \"{Loadout.Name}\" applied successfully!");
-                    }
-                }
+                Terminal.WriteLine($"[App] Loadout \"{Loadout.Name}\" applied successfully on P{SelectedPlayer + 1}'s inventory.");
+                Utility.MessageBox_Information($"Loadout \"{Loadout.Name}\" applied successfully!");
             }
         }
 
@@ -1497,7 +1756,6 @@ namespace GameX
             CheckEdit[] CheckUncheck =
             {
                 WeskerGlassesCheckEdit,
-                WeskerNoDashCostCheckEdit,
                 MeleeCameraCheckEdit,
                 ReunionSpecialMovesCheckEdit,
                 HandTremorCheckEdit
@@ -1510,10 +1768,6 @@ namespace GameX
                     case "WeskerGlassesCheckEdit":
                         if (CE.Checked)
                             Biohazard.WeskerNoSunglassDrop(true);
-                        break;
-                    case "WeskerNoDashCostCheckEdit":
-                        if (CE.Checked)
-                            Biohazard.WeskerNoDashCost(true);
                         break;
                     case "MeleeCameraCheckEdit":
                         if (CE.Checked)
@@ -1606,7 +1860,7 @@ namespace GameX
                 if (!Biohazard.ModuleStarted)
                     return;
 
-                Character_Update();
+                TrainerUpdate();
             }
             catch (Exception Ex)
             {
@@ -1684,7 +1938,7 @@ namespace GameX
             }
         }
 
-        private void Character_Update()
+        private void TrainerUpdate()
         {
             #region Controls
 
@@ -1817,12 +2071,7 @@ namespace GameX
 
                 // Inventory //
                 for (int slot = 0; slot < 10; slot++)
-                {
-                    if (i > 1)
-                        continue;
-
                     Biohazard.Players[i].Inventory.LoadoutSlots[slot].Update();
-                }
 
                 // Health Bar //
                 double PlayerHealthPercent = PlayerPresent ? Utility.Clamp((double)Biohazard.Players[i].Health / Biohazard.Players[i].MaxHealth, 0.0, 1.0) : 1.0;
@@ -1852,6 +2101,9 @@ namespace GameX
                     if (Biohazard.Players[i].MeleeTarget != 0 && Biohazard.Players[i].DoingIdleMove())
                         Biohazard.Players[i].MeleeTarget = 0;
                 }
+
+                // Wesker Dash cost
+                Biohazard.WeskerNoDashCost(WeskerNoDashCostCheckEdit.Checked && Biohazard.GameMode != (int)GameModeEnum.Versus);
 
                 // If versus then end the current iteration //
                 if (Biohazard.GameMode == (int)GameModeEnum.Versus)

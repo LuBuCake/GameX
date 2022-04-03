@@ -1,0 +1,125 @@
+{
+  "Name": "Chris Warrior",
+  "Slots": [
+    {
+      "ID": 272,
+      "Quantity": 25,
+      "MaxQuantity": 0,
+      "Firepower": 7,
+      "ReloadSpeed": 4,
+      "Capacity": 7,
+      "Critical": 0,
+      "Piercing": 2,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 281,
+      "Quantity": 10,
+      "MaxQuantity": 0,
+      "Firepower": 6,
+      "ReloadSpeed": 1,
+      "Capacity": 6,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 2,
+      "Scope": 0
+    },
+    {
+      "ID": 284,
+      "Quantity": 15,
+      "MaxQuantity": 0,
+      "Firepower": 7,
+      "ReloadSpeed": 4,
+      "Capacity": 5,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 2
+    },
+    {
+      "ID": 513,
+      "Quantity": 30,
+      "MaxQuantity": 50,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 515,
+      "Quantity": 15,
+      "MaxQuantity": 30,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 0,
+      "Quantity": 0,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 0,
+      "Quantity": 0,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 0,
+      "Quantity": 0,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 0,
+      "Quantity": 0,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 257,
+      "Quantity": 1,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    }
+  ]
+}

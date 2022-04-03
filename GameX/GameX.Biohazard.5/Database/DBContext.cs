@@ -3,6 +3,7 @@ using System.IO;
 using GameX.Enum;
 using GameX.Database.Content;
 using GameX.Database.Type;
+using GameX.Database.ViewBag;
 
 namespace GameX.Database
 {
@@ -20,6 +21,7 @@ namespace GameX.Database
         public List<Simple> Handness { get; set; }
         public List<Simple> WeaponMode { get; set; }
         public List<Simple> WeaponPlacement { get; set; }
+        public List<LoadoutViewBag> Loadouts { get; set; }
     }
 
     public static class DBContext
@@ -68,6 +70,12 @@ namespace GameX.Database
             Database.Handness = HandnessContent.GetCollection();
             Database.WeaponMode = WeaponModeContent.GetCollection();
             Database.WeaponPlacement = WeaponPlacementContent.GetCollection();
+            Database.Loadouts = LoadoutViewBagContent.GetCollection();
+        }
+
+        public static void UpdateLoadouts()
+        {
+            Database.Loadouts = LoadoutViewBagContent.GetCollection();
         }
 
         public static DB GetDatabase()
