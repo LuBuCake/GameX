@@ -16,7 +16,6 @@ using GameX.Enum;
 using GameX.Database.Type;
 using GameX.Database.ViewBag;
 using DevExpress.XtraEditors.Controls;
-using System.Security.Cryptography;
 
 namespace GameX
 {
@@ -112,6 +111,22 @@ namespace GameX
                 P2InfiniteAmmoButton,
                 P3InfiniteAmmoButton,
                 P4InfiniteAmmoButton
+            };
+
+            CheckButton[] InfiniteResource =
+            {
+                P1InfiniteResourceButton,
+                P2InfiniteResourceButton,
+                P3InfiniteResourceButton,
+                P4InfiniteResourceButton
+            };
+
+            CheckButton[] InfiniteThrowable =
+            {
+                P1InfiniteThrowableButton,
+                P2InfiniteThrowableButton,
+                P3InfiniteThrowableButton,
+                P4InfiniteThrowableButton
             };
 
             CheckButton[] Rapidfire =
@@ -776,6 +791,8 @@ namespace GameX
                 InfiniteHP[i].CheckedChanged += EnableDisable_StateChanged;
                 Untargetable[i].CheckedChanged += EnableDisable_StateChanged;
                 InfiniteAmmo[i].CheckedChanged += EnableDisable_StateChanged;
+                InfiniteResource[i].CheckedChanged += EnableDisable_StateChanged;
+                InfiniteThrowable[i].CheckedChanged += EnableDisable_StateChanged;
                 Rapidfire[i].CheckedChanged += EnableDisable_StateChanged;
 
                 CharacterCombos[i].SelectedIndexChanged += CharComboBox_IndexChanged;
@@ -903,6 +920,7 @@ namespace GameX
             MeleeCameraCheckEdit.CheckedChanged += EnableDisable_StateChanged;
             ReunionSpecialMovesCheckEdit.CheckedChanged += EnableDisable_StateChanged;
             HandTremorCheckEdit.CheckedChanged += EnableDisable_StateChanged;
+            NoTimerDecreaseCE.CheckedChanged += EnableDisable_StateChanged;
 
             ConsoleInputTextEdit.Validating += Terminal.ValidateInput;
             ClearConsoleSimpleButton.Click += Terminal.ClearConsole_Click;
@@ -915,8 +933,14 @@ namespace GameX
             LoadoutApplyButton.Click += SimpleButton_Click;
             LoadoutComboBox.Properties.Items.AddRange(db.Loadouts);
 
+            AddMinuteButton.Click += SimpleButton_Click;
+            RemoveMinuteButton.Click += SimpleButton_Click;
+            ZeroTimeButton.Click += SimpleButton_Click;
+
             if (db.Loadouts.Count > 0)
                 LoadoutComboBox.SelectedIndex = 0;
+
+            MasterTabControl.SelectedTabPageIndex = 0;
 
             ResetHealthBars();
             SetupImages();
@@ -1312,7 +1336,28 @@ namespace GameX
                     Biohazard.Players[SelectedPlayer].Inventory.LoadoutSlots[i].SetFromLoadoutTemporaryItem(Loadout.Slots[i], Initialized);
 
                 Terminal.WriteLine($"[App] Loadout \"{Loadout.Name}\" applied successfully on P{SelectedPlayer + 1}'s inventory.");
-                Utility.MessageBox_Information($"Loadout \"{Loadout.Name}\" applied successfully!");
+                //Utility.MessageBox_Information($"Loadout \"{Loadout.Name}\" applied successfully!");
+            }
+            else if (SB.Name.Equals("AddMinuteButton"))
+            {
+                if (!Initialized)
+                    return;
+
+                Biohazard.Timer += 60f;
+            }
+            else if (SB.Name.Equals("RemoveMinuteButton"))
+            {
+                if (!Initialized)
+                    return;
+
+                Biohazard.Timer -= 60f;
+            }
+            else if (SB.Name.Equals("ZeroTimeButton"))
+            {
+                if (!Initialized)
+                    return;
+
+                Biohazard.Timer = 0f;
             }
         }
 
@@ -1611,6 +1656,13 @@ namespace GameX
 
                     Biohazard.DisableHandTremor(CE.Checked);
                 }
+                else if (CE.Name.Equals("NoTimerDecreaseCE"))
+                {
+                    if (!Initialized)
+                        return;
+
+                    Biohazard.NoTimerDecrease(CE.Checked);
+                }
             }
             else if (sender.GetType() == typeof(CheckButton))
             {
@@ -1637,6 +1689,22 @@ namespace GameX
 
                     int Player = int.Parse(CB.Name[1].ToString()) - 1;
                     Biohazard.Players[Player].SetInfiniteAmmo(false);
+                }
+                else if (CB.Name.Contains("InfiniteResource") && !CB.Checked)
+                {
+                    if (!Initialized)
+                        return;
+
+                    int Player = int.Parse(CB.Name[1].ToString()) - 1;
+                    Biohazard.Players[Player].SetInfiniteResource(false);
+                }
+                else if (CB.Name.Contains("InfiniteThrowable") && !CB.Checked)
+                {
+                    if (!Initialized)
+                        return;
+
+                    int Player = int.Parse(CB.Name[1].ToString()) - 1;
+                    Biohazard.Players[Player].SetInfiniteThrowable(false);
                 }
                 else if (CB.Name.Contains("Rapidfire") && !CB.Checked)
                 {
@@ -1758,7 +1826,8 @@ namespace GameX
                 WeskerGlassesCheckEdit,
                 MeleeCameraCheckEdit,
                 ReunionSpecialMovesCheckEdit,
-                HandTremorCheckEdit
+                HandTremorCheckEdit,
+                NoTimerDecreaseCE
             };
 
             foreach (CheckEdit CE in CheckUncheck)
@@ -1785,6 +1854,10 @@ namespace GameX
                         if (CE.Checked)
                             Biohazard.DisableHandTremor(true);
                         break;
+                    case "NoTimerDecreaseCE":
+                        if (CE.Checked)
+                            Biohazard.NoTimerDecrease(true);
+                        break;
                 }
             }
 
@@ -1807,6 +1880,7 @@ namespace GameX
 
             Melee_ApplyComboBox(null, true);
             WeaponPlacement_IndexChanged(WeaponPlacementComboBox, null);
+            RadioGroup_EditValueChanged(InventoryPlayerSelectionRG, null);
         }
 
         private void GameX_Start()
@@ -1829,6 +1903,11 @@ namespace GameX
         {
             try
             {
+                ScoreTE.Text = "0";
+                ComboTimerTE.Text = "00:00";
+                ComboBonusTimerTE.Text = "00:00";
+                CurrentTimerTE.Text = "00:00:00";
+
                 if (!Biohazard.ModuleStarted)
                     return;
 
@@ -1837,13 +1916,13 @@ namespace GameX
 
                 Biohazard.NoFileChecking(false);
                 Biohazard.OnlineCharSwapFixes(false);
-                Biohazard.EnableColorFilter(false);
-                Biohazard.WeskerNoSunglassDrop(false);
-                Biohazard.WeskerNoDashCost(false);
-                Biohazard.SetWeaponPlacement(0);
-                Biohazard.DisableMeleeCamera(false);
-                Biohazard.EnableReunionSpecialMoves(false);
-                Biohazard.EnableControllerAim(false);
+                //Biohazard.EnableColorFilter(false);
+                //Biohazard.WeskerNoSunglassDrop(false);
+                //Biohazard.WeskerNoDashCost(false);
+                //Biohazard.SetWeaponPlacement(0);
+                //Biohazard.DisableMeleeCamera(false);
+                //Biohazard.EnableReunionSpecialMoves(false);
+                //Biohazard.EnableControllerAim(false);
 
                 Biohazard.FinishModule();
             }
@@ -2022,6 +2101,22 @@ namespace GameX
                 P4InfiniteAmmoButton
             };
 
+            CheckButton[] InfiniteResource =
+            {
+                P1InfiniteResourceButton,
+                P2InfiniteResourceButton,
+                P3InfiniteResourceButton,
+                P4InfiniteResourceButton
+            };
+
+            CheckButton[] InfiniteThrowable =
+            {
+                P1InfiniteThrowableButton,
+                P2InfiniteThrowableButton,
+                P3InfiniteThrowableButton,
+                P4InfiniteThrowableButton
+            };
+
             CheckButton[] RapidFire =
             {
                 P1RapidfireButton,
@@ -2031,6 +2126,29 @@ namespace GameX
             };
 
             #endregion
+
+            #region Game Mode Update
+
+            ScoreTE.Text = Biohazard.Score.ToString();
+            ComboTimerTE.Text = TimeSpan.FromSeconds(Biohazard.ComboTimer).ToString("mm':'ss");
+            ComboBonusTimerTE.Text = TimeSpan.FromSeconds(Biohazard.ComboBonusTimer).ToString("mm':'ss");
+            CurrentTimerTE.Text = TimeSpan.FromSeconds(Biohazard.Timer).ToString("hh':'mm':'ss");
+
+            if (Biohazard.GameMode == (int)GameModeEnum.Mercenaries || Biohazard.GameMode == (int)GameModeEnum.Reunion)
+            {
+                if (ResetScoreCE.Checked && Biohazard.Timer == 0 && Biohazard.Score > 0)
+                    Biohazard.Score = 0;
+
+                if (ComboTimerMaxCE.Checked)
+                    Biohazard.ComboTimer = Biohazard.ComboTimerDuration;
+
+                if (ComboBonusTimerMaxCE.Checked)
+                    Biohazard.ComboBonusTimer = Biohazard.ComboBonusTimerDuration;
+            }
+
+            #endregion
+
+            #region Character Update
 
             for (int i = 0; i < 4; i++)
             {
@@ -2103,11 +2221,11 @@ namespace GameX
                 }
 
                 // Wesker Dash cost
-                Biohazard.WeskerNoDashCost(WeskerNoDashCostCheckEdit.Checked && Biohazard.GameMode != (int)GameModeEnum.Versus);
+                Biohazard.WeskerNoDashCost(WeskerNoDashCostCheckEdit.Checked); // && Biohazard.GameMode != (int)GameModeEnum.Versus
 
                 // If versus then end the current iteration //
-                if (Biohazard.GameMode == (int)GameModeEnum.Versus)
-                    continue;
+                // if (Biohazard.GameMode == (int)GameModeEnum.Versus)
+                //continue;
 
                 // Infinite HP //
                 if (InfiniteHP[i].Checked && PlayerPresent)
@@ -2121,6 +2239,14 @@ namespace GameX
                 if (InfiniteAmmo[i].Checked && PlayerPresent)
                     Biohazard.Players[i].SetInfiniteAmmo(true);
 
+                // Infinite Resource //
+                if (InfiniteResource[i].Checked && PlayerPresent)
+                    Biohazard.Players[i].SetInfiniteResource(true);
+
+                // Infinite Throwable //
+                if (InfiniteThrowable[i].Checked && PlayerPresent)
+                    Biohazard.Players[i].SetInfiniteThrowable(true);
+
                 // Rapidfire //
                 if (RapidFire[i].Checked && PlayerPresent)
                     Biohazard.Players[i].SetRapidFire(true);
@@ -2129,6 +2255,8 @@ namespace GameX
                 if (WeskerInfiniteDashCheckEdit.Checked && PlayerPresent && Biohazard.Players[i].Character == (int)CharacterEnum.Wesker)
                     Biohazard.Players[i].ResetDash();
             }
+
+            #endregion
         }
 
         #endregion

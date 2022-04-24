@@ -264,8 +264,67 @@ namespace GameX.Database.Type
                 if (dbItem.Group == ItemGroupEnum.Default ||
                     dbItem.Group == ItemGroupEnum.Melee ||
                     dbItem.Group == ItemGroupEnum.Explosive ||
+                    dbItem.Group == ItemGroupEnum.EggHeal ||
                     dbItem.Group == ItemGroupEnum.Ammunition ||
                     dbItem.Group == ItemGroupEnum.Heal)
+                    continue;
+
+                int CurrentCapacity = Inventory.RealTimeSlots[slot].Capacity;
+
+                if (CurrentCapacity > 13)
+                    CurrentCapacity -= 0x80;
+
+                CurrentCapacity = (byte)Utility.Clamp(CurrentCapacity, 0, dbItem.Capacity.Length - 1);
+
+                Inventory.RealTimeSlots[slot].Quantity = dbItem.Capacity[CurrentCapacity];
+                Inventory.RealTimeSlots[slot].MaxQuantity = dbItem.Capacity[CurrentCapacity];
+                Inventory.RealTimeSlots[slot].Capacity = (byte)(CurrentCapacity + (Enable ? 0x80 : 0x00));
+            }
+        }
+
+        public void SetInfiniteResource(bool Enable)
+        {
+            DB db = DBContext.GetDatabase();
+
+            for (int slot = 0; slot < 11; slot++)
+            {
+                Item dbItem = (from x in db.AllItems
+                               where x.ID == Inventory.RealTimeSlots[slot].ID
+                               select x).FirstOrDefault();
+
+                if (dbItem == null)
+                {
+                    dbItem = db.AllItems.Where(x => x.Name == "Nothing").FirstOrDefault();
+                    Inventory.RealTimeSlots[slot].SetItem(dbItem);
+                }
+
+                if (dbItem.Group != ItemGroupEnum.Ammunition &&
+                    dbItem.Group != ItemGroupEnum.Heal)
+                    continue;
+
+                Inventory.RealTimeSlots[slot].Quantity = dbItem.Capacity[dbItem.Capacity.Length - 1];
+                Inventory.RealTimeSlots[slot].MaxQuantity = dbItem.Capacity[dbItem.Capacity.Length - 1];
+            }
+        }
+
+        public void SetInfiniteThrowable(bool Enable)
+        {
+            DB db = DBContext.GetDatabase();
+
+            for (int slot = 0; slot < 11; slot++)
+            {
+                Item dbItem = (from x in db.AllItems
+                               where x.ID == Inventory.RealTimeSlots[slot].ID
+                               select x).FirstOrDefault();
+
+                if (dbItem == null)
+                {
+                    dbItem = db.AllItems.Where(x => x.Name == "Nothing").FirstOrDefault();
+                    Inventory.RealTimeSlots[slot].SetItem(dbItem);
+                }
+
+                if (dbItem.Group != ItemGroupEnum.EggHeal &&
+                    dbItem.Group != ItemGroupEnum.Explosive)
                     continue;
 
                 int CurrentCapacity = Inventory.RealTimeSlots[slot].Capacity;

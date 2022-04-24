@@ -13,6 +13,7 @@
         Explosive,
         Ammunition,
         Heal,
+        EggHeal,
         Utility,
         Special
     }

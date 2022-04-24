@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using GameX.Database.Type;
+using static DevExpress.Utils.Drawing.Helpers.NativeMethods;
 
 namespace GameX.Modules
 {
@@ -81,6 +82,18 @@ namespace GameX.Modules
             }
         }
 
+        public static int Score
+        {
+            get { return Memory.Read<int>("re5dx9.exe", 0x00DA383C, 0x954, 0x26E4); }
+            set { Memory.Write(value, "re5dx9.exe", 0x00DA383C, 0x954, 0x26E4); }
+        }
+
+        public static int KillCount
+        {
+            get { return Memory.Read<int>("re5dx9.exe", 0x00DA383C, 0x954, 0x25BC); }
+            set { Memory.Write(value, "re5dx9.exe", 0x00DA383C, 0x954, 0x25BC); }
+        }
+
         public static float Timer
         {
             get { return Memory.Read<float>("re5dx9.exe", 0x00DA2D6C, 0x614, 0x4DC); }
@@ -103,6 +116,18 @@ namespace GameX.Modules
         {
             get { return Memory.Read<byte>("re5dx9.exe", 0x329736); }
             set { Memory.Write(value, "re5dx9.exe", 0x329736); }
+        }
+
+        public static float ComboTimerDuration
+        {
+            get { return Memory.Read<float>("re5dx9.exe", 0xCCDB4C); }
+            set { Memory.Write(value, "re5dx9.exe", 0xCCDB4C); }
+        }
+
+        public static float ComboBonusTimerDuration
+        {
+            get { return Memory.Read<float>("re5dx9.exe", 0xCCDB50); }
+            set { Memory.Write(value, "re5dx9.exe", 0xCCDB50); }
         }
 
         #endregion
@@ -218,6 +243,11 @@ namespace GameX.Modules
             }
         }
 
+        public static void NoTimerDecrease(bool Enable)
+        {
+            Memory.WriteBytes(Enable ? new byte[] { 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90 } : new byte[] { 0xF3, 0x0F, 0x11, 0x87, 0xDC, 0x04, 0x00, 0x00 }, "re5dx9.exe", 0x31CF4F);
+        }
+
         public static void EnableControllerAim(bool Enable)
         {
             Memory.WriteRawAddress(0x00B66ACD, Enable ? new byte[] { 0xEB } : new byte[] { 0x75 });
@@ -296,7 +326,7 @@ namespace GameX.Modules
 
                 if (FunctionStartA != 69485707 || FunctionStartB != 539251851)
                 {
-                    Terminal.WriteLine("[App] Unsupported patch version for \"Reunion Special Moves\" functionality.");
+                    Terminal.WriteLine("[App] Unsupported version for \"Reunion Special Moves\" functionality.");
                     Terminal.WriteLine("[App] Follow the guide at https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
                     return false;
                 }

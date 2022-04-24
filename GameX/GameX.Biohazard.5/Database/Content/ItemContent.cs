@@ -950,7 +950,7 @@ namespace GameX.Database.Content
             Item Egg_R = new Item
             {
                 ID = 310,
-                Group = ItemGroupEnum.Heal,
+                Group = ItemGroupEnum.EggHeal,
                 GroupIndex = 5,
                 Name = "Egg (Rotten)",
                 Alias = "eggrotten",
@@ -966,7 +966,7 @@ namespace GameX.Database.Content
             Item Egg_W = new Item
             {
                 ID = 316,
-                Group = ItemGroupEnum.Heal,
+                Group = ItemGroupEnum.EggHeal,
                 GroupIndex = 6,
                 Name = "Egg (White)",
                 Alias = "eggwhite",
@@ -982,7 +982,7 @@ namespace GameX.Database.Content
             Item Egg_B = new Item
             {
                 ID = 317,
-                Group = ItemGroupEnum.Heal,
+                Group = ItemGroupEnum.EggHeal,
                 GroupIndex = 7,
                 Name = "Egg (Brown)",
                 Alias = "eggbrown",
@@ -998,7 +998,7 @@ namespace GameX.Database.Content
             Item Egg_G = new Item
             {
                 ID = 318,
-                Group = ItemGroupEnum.Heal,
+                Group = ItemGroupEnum.EggHeal,
                 GroupIndex = 8,
                 Name = "Egg (Golden)",
                 Alias = "egggolden",
