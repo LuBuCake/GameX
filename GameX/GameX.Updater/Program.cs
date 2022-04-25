@@ -69,7 +69,7 @@ namespace GameX.Updater
 
         static void Main(string[] args)
         {
-            CreateTestRequest();
+            //CreateTestRequest();
 
             AnsiConsole.Status().Start("FETCH", status =>
             {
