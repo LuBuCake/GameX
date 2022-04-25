@@ -2,6 +2,7 @@ GameX - Biohazard Games
 =======================
 
 A sofisticated group of trainers that provides a lot of cool functionalities with a fancy UI using [DevExpress](https://www.devexpress.com).
+
 Built mostly for my and some friends's personal needs.
 
 [Download Latest Version](https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Launcher.x86/latest.zip)
