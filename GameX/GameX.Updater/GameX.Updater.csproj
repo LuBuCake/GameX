@@ -205,7 +205,6 @@
   <ItemGroup>
     <Compile Include="Database\Type\AppVersion.cs" />
     <Compile Include="Helpers\Serializer.cs" />
-    <Compile Include="Helpers\Utility.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

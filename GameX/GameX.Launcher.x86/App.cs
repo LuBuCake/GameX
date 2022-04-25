@@ -18,6 +18,7 @@ namespace GameX.Launcher
     public partial class App : XtraForm
     {
         private Addon Downloading { get; set; }
+        private bool DOWNLOAD_UPDATER_IF_NOT_PRESENT = true;
 
         public App()
         {
@@ -268,20 +269,23 @@ namespace GameX.Launcher
                 try
                 {
                     string LatestVerion = await Task.Run(() => GitHubChecker.DownloadString("https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Updater/latest.txt"));
+
+                    int Latest = int.Parse(LatestVerion.Replace(".", ""));
+                    int Current = 0;
+
                     string FilePath = Directory.GetCurrentDirectory() + "/updater.exe";
 
-                    AssemblyName CurName = new AssemblyName();
-
-                    bool FileExists = File.Exists(FilePath);
-
-                    if (!FileExists)
-                        return false;
-
-                    Assembly CurApp = Assembly.LoadFile(FilePath);
-                    CurName = new AssemblyName(CurApp.FullName);
-
-                    int Current = int.Parse(FileExists ? CurName.Version.ToString().Replace(".", "") : "0");
-                    int Latest = int.Parse(LatestVerion.Replace(".", ""));
+                    if (!File.Exists(FilePath))
+                    {
+                        if (!DOWNLOAD_UPDATER_IF_NOT_PRESENT)
+                            return false;
+                    }
+                    else
+                    {
+                        Assembly CurApp = Assembly.LoadFile(FilePath);
+                        AssemblyName CurName = new AssemblyName(CurApp.FullName);
+                        Current = int.Parse(CurName.Version.ToString().Replace(".", ""));
+                    }
 
                     if (Current >= Latest)
                         return false;
