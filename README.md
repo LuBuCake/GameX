@@ -11,6 +11,10 @@ Built mostly for my and some friends's personal needs.
 
 * RESIDENT EVIL 5 UNTOLD STORIES BUNDLE (Gold Edition) - Steam only using [RE5 Unofficial Patch](https://steamcommunity.com/sharedfiles/filedetails/?id=864823595)
 
+## Prequisites
+
+* [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)
+
 ## Icon
 
 <div>Icons made by <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
