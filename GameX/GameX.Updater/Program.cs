@@ -21,7 +21,7 @@ namespace GameX.Updater
         static bool _isdownloading = false;
         static int _downloadprogresspercentage = 0;
 
-        static void CreateTestRequest()
+        static void CreateTestRequest(string Arch)
         {
             string AppDirectory = Directory.GetCurrentDirectory();
             string UpdaterDirectory = AppDirectory + "/updater/";
@@ -31,8 +31,8 @@ namespace GameX.Updater
 
             AppVersion _version = new AppVersion()
             {
-                FileRoute = "https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Launcher.x86/latest.zip",
-                StartLauncher = "x86"
+                FileRoute = "https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Launcher." + Arch + "/latest.zip",
+                StartLauncher = Arch
             };
 
             Serializer.WriteDataFile(UpdaterDirectory + "updateapp.json", Serializer.Serialize(_version));
@@ -44,7 +44,7 @@ namespace GameX.Updater
             {
                 Ping myPing = new Ping();
                 PingReply reply = myPing.Send(HostNameOrAddress, Timeout, new byte[32]);
-                return (reply.Status == IPStatus.Success);
+                return reply.Status == IPStatus.Success;
             }
             catch (Exception)
             {
@@ -69,7 +69,7 @@ namespace GameX.Updater
 
         static void Main(string[] args)
         {
-            //CreateTestRequest();
+            //CreateTestRequest("x86");
 
             AnsiConsole.Status().Start("FETCH", status =>
             {
@@ -77,12 +77,10 @@ namespace GameX.Updater
                 status.SpinnerStyle(Style.Parse("aqua"));
 
                 status.Status("Initializing");
-                Thread.Sleep(500);
 
                 WriteLine("Initialized");
 
                 status.Status("Testing connection");
-                Thread.Sleep(500);
 
                 bool HasConnection = TestConnection("8.8.8.8");
 
@@ -90,7 +88,6 @@ namespace GameX.Updater
                 {
                     WriteLine("Connection not found");
                     status.Status("Exiting");
-                    Thread.Sleep(500);
 
                     SaveLog();
                     Environment.Exit(0);
@@ -99,7 +96,6 @@ namespace GameX.Updater
                 WriteLine("Connection found");
 
                 status.Status("Searching for update requests");
-                Thread.Sleep(500);
 
                 string AppDirectory = Directory.GetCurrentDirectory();
                 string UpdaterDirectory = AppDirectory + "/updater/";
@@ -108,7 +104,6 @@ namespace GameX.Updater
                 {
                     WriteLine("No update request found");
                     status.Status("Exiting");
-                    Thread.Sleep(500);
 
                     SaveLog();
                     Environment.Exit(0);
@@ -117,14 +112,12 @@ namespace GameX.Updater
                 WriteLine("Update request found");
 
                 status.Status("Building route");
-                Thread.Sleep(500);
 
                 _version = Serializer.Deserialize<AppVersion>(Serializer.ReadDataFile(UpdaterDirectory + "updateapp.json"));
 
                 WriteLine("Route built");
 
                 status.Status("Fetching data");
-                Thread.Sleep(500);
 
                 WebClient Downloader = new WebClient();
                 Downloader.DownloadProgressChanged += DownloadProgressChanged;
@@ -163,14 +156,12 @@ namespace GameX.Updater
                 {
                     WriteLine("Download finished but the file has gone missing");
                     status.Status("Exiting");
-                    await Task.Delay(500);
 
                     SaveLog();
                     Environment.Exit(0);
                 }
 
                 status.Status("Extracting update");
-                await Task.Delay(500);
 
                 await ExtractLatestPackage();
 
@@ -178,7 +169,6 @@ namespace GameX.Updater
                 WriteLine("All files have been updated");
 
                 status.Status("Exiting");
-                await Task.Delay(500);
 
                 SaveLog();
 
