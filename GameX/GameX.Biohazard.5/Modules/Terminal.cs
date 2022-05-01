@@ -1,30 +1,33 @@
 ﻿using System;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using GameX.Helpers;
-using GameX.Modules;
-using GameX.Enum;
 using System.Diagnostics;
 using System.Linq;
+using System.Collections.Generic;
+using GameX.Helpers;
+using GameX.Enum;
+using DevExpress.XtraEditors;
 
 namespace GameX.Modules
 {
     public static class Terminal
     {
         private static App GUI { get; set; }
-        private static string DisplayedText { get; set; }
+        private static List<string> InputList { get; set; }
+        private static string[] InputText { get; set; }
 
         public static void StartModule(App Instance)
         {
             GUI = Instance;
-            DisplayedText = "";
+            InputList = new List<string>();
+            InputText = new string[0];
             WriteLine("[Console] Module started successfully.");
         }
 
         public static void ClearConsole_Click(object sender, EventArgs e)
         {
-            DisplayedText = "";
-            GUI.ConsoleOutputMemoEdit.Text = DisplayedText;
+            InputList.Clear();
+            InputText = InputList.ToArray();
+            GUI.ConsoleOutputMemoEdit.Lines = InputText;
         }
 
         public static void ScrollToEnd()
@@ -39,16 +42,9 @@ namespace GameX.Modules
             {
                 Environment.NewLine + "Commands must be written without spaces and " + "arguments must be separated from the command and others arguments with :: (double colons).",
 
-                Environment.NewLine + "Example: SetHealth::P1::1000",
-                "SetHealth is the command, P1 the first argument and 1000 the second argument.",
-
                 Environment.NewLine + "App commands:",
                 "Help - Shows all available commands.",
                 "Exit - Closes the App.",
-
-                Environment.NewLine + "Biohazard commands:",
-                "GetHealth::P1/P2/P3/P4 - Gets the current health for the respective player.",
-                "SetHealth::P1/P2/P3/P4::Ammount - Sets the health for the respective player, this needs to be set between 0 and 1000."
             };
 
             foreach (string Command in Commands)
@@ -64,77 +60,6 @@ namespace GameX.Modules
             }
 
             return false;
-        }
-
-        private static bool ProcessGameCommand(string[] Command)
-        {
-            if (Command[0] != "gethealth" || Command.Length != 2)
-            {
-                if (Command[0] != "sethealth" || Command.Length != 3)
-                    return false;
-
-                if (!GUI.Initialized || !Biohazard.ModuleStarted)
-                {
-                    WriteLine("[App] The game is not running.");
-                    return true;
-                }
-
-                if (!int.TryParse(Command[1][1].ToString(), out int Player))
-                    return false;
-
-                if (!int.TryParse(Command[2], out int HP))
-                    return false;
-
-                if (!(Player >= 1 && Player <= 4))
-                {
-                    WriteLine("[Console] Please specify a player index between 1 and 4");
-                    return true;
-                }
-
-                if (Biohazard.GameMode == (int)GameModeEnum.Versus)
-                {
-                    WriteLine("[Biohazard] Versus mode detected, operation ignored.");
-                    return true;
-                }
-
-                if (!Biohazard.Players[Player - 1].IsActive())
-                {
-                    WriteLine("[Biohazard] The selected player is not present.");
-                    return true;
-                }
-
-                short TargetHP = (short) Utility.Clamp(HP, 0, Biohazard.Players[Player - 1].MaxHealth);
-                Biohazard.Players[Player - 1].Health = TargetHP;
-                WriteLine($"Player {Player} health set to {TargetHP}.");
-
-                return true;
-            }
-            else
-            {
-                if (!GUI.Initialized || !Biohazard.ModuleStarted)
-                {
-                    WriteLine("[App] The game is not running.");
-                    return true;
-                }
-
-                if (!int.TryParse(Command[1][1].ToString(), out int Player))
-                    return false;
-
-                if (!(Player >= 1 && Player <= 4))
-                {
-                    WriteLine("[Console] Please specify a player index between 1 and 4");
-                    return true;
-                }
-
-                if (!Biohazard.Players[Player - 1].IsActive())
-                {
-                    WriteLine("[Biohazard] The selected player is not present.");
-                    return true;
-                }
-
-                WriteLine($"The player {Player} has {Biohazard.Players[Player - 1].Health} health points.");
-                return true;
-            }
         }
 
         private static void ProcessCommand(string RawCommand)
@@ -171,7 +96,7 @@ namespace GameX.Modules
                     break;
                 default:
                 {
-                    if (!ProcessDevCommand(Command) && !ProcessGameCommand(Command))
+                    if (!ProcessDevCommand(Command))
                         WriteLine("[Console] Unknown or incorrect use of command. Type Help to see all available commands and their syntax.");
 
                     break;
@@ -191,39 +116,8 @@ namespace GameX.Modules
 
         public static void WriteLine(Exception Ex)
         {
-            string Input = $"[App][{Ex.GetType().Name}] {new StackTrace(Ex).GetFrame(0).GetMethod().Name}: {Ex.Message}";
-
-            string Current = DisplayedText;
-
-            if (string.IsNullOrWhiteSpace(Current))
-                Current = Input;
-            else
-                Current += Environment.NewLine + Input;
-
-            DisplayedText = Current;
-
-            if (GUI.ConsoleOutputMemoEdit.InvokeRequired)
-            {
-                GUI.ConsoleOutputMemoEdit.Invoke((MethodInvoker)delegate
-                {
-                    GUI.ConsoleOutputMemoEdit.Text = DisplayedText;
-                    ScrollToEnd();
-                });
-
-                GUI.MasterTabControl.Invoke((MethodInvoker)delegate
-                {
-                    if (GUI.MasterTabControl.SelectedTabPage != GUI.MasterTabControl.TabPages.Where(x => x.Name == "TabPageConsole").FirstOrDefault())
-                        GUI.TabPageConsoleButton.ImageOptions.Image = Properties.Resources.consoleunread;
-                });
-
-                return;
-            }
-
-            GUI.ConsoleOutputMemoEdit.Text = DisplayedText;
-            ScrollToEnd();
-
-            if (GUI.MasterTabControl.SelectedTabPage != GUI.MasterTabControl.TabPages.Where(x => x.Name == "TabPageConsole").FirstOrDefault())
-                GUI.TabPageConsoleButton.ImageOptions.Image = Properties.Resources.consoleunread;
+            string Input = $"[{DateTime.Now:HH:mm}][App][{Ex.GetType().Name}] {new StackTrace(Ex).GetFrame(0).GetMethod().Name}: {Ex.Message}";
+            UpdateTextAndProcessEvents(Input);
         }
 
         public static void WriteLine(string Input, MessageBoxTypeEnum MessageBox = MessageBoxTypeEnum.None)
@@ -238,12 +132,6 @@ namespace GameX.Modules
                     Message = Message.Replace("[Memory] ", "");
                 else if (Message.Contains("[Biohazard] "))
                     Message = Message.Replace("[Biohazard] ", "");
-                else if (Message.Contains("[Network] "))
-                    Message = Message.Replace("[Network] ", "");
-                else if (Message.Contains("[Server] "))
-                    Message = Message.Replace("[Server] ", "");
-                else if (Message.Contains("[Client] "))
-                    Message = Message.Replace("[Client] ", "");
                 else if (Message.Contains("[Console] "))
                     Message = Message.Replace("[Console] ", "");
 
@@ -261,20 +149,20 @@ namespace GameX.Modules
                 }
             }
 
-            string Current = DisplayedText;
+            Input = $"[{DateTime.Now:HH:mm}]{Input}";
+            UpdateTextAndProcessEvents(Input);
+        }
 
-            if (string.IsNullOrWhiteSpace(Current))
-                Current = Input;
-            else
-                Current += Environment.NewLine + Input;
-
-            DisplayedText = Current;
+        private static void UpdateTextAndProcessEvents(string Input)
+        {
+            InputList.Add(Input);
+            InputText = InputList.ToArray();
 
             if (GUI.ConsoleOutputMemoEdit.InvokeRequired)
-            {
+{
                 GUI.ConsoleOutputMemoEdit.Invoke((MethodInvoker)delegate
                 {
-                    GUI.ConsoleOutputMemoEdit.Text = DisplayedText;
+                    GUI.ConsoleOutputMemoEdit.Lines = InputText;
                     ScrollToEnd();
                 });
 
@@ -287,7 +175,7 @@ namespace GameX.Modules
                 return;
             }
 
-            GUI.ConsoleOutputMemoEdit.Text = DisplayedText;
+            GUI.ConsoleOutputMemoEdit.Lines = InputText;
             ScrollToEnd();
 
             if (GUI.MasterTabControl.SelectedTabPage != GUI.MasterTabControl.TabPages.Where(x => x.Name == "TabPageConsole").FirstOrDefault())

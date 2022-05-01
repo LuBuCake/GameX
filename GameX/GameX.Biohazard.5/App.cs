@@ -948,6 +948,8 @@ namespace GameX
             ResetHealthBars();
             SetupImages();
 
+            RadioGroup_EditValueChanged(InventoryPlayerSelectionRG, null);
+
             Configuration_Load(null, null);
 
             Terminal.WriteLine("[App] App initialized.");
@@ -1985,7 +1987,6 @@ namespace GameX
 
             Melee_ApplyComboBox(null, true);
             WeaponPlacement_IndexChanged(WeaponPlacementComboBox, null);
-            RadioGroup_EditValueChanged(InventoryPlayerSelectionRG, null);
         }
 
         private void GameX_Start()
