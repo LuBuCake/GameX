@@ -249,10 +249,11 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>mkdir C:\Users\madne\Desktop\x86\
-
+    <PostBuildEvent>if $(ConfigurationName) == Release (
+mkdir C:\Users\madne\Desktop\x86\
 xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\x86 /y
-xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\x86 /y</PostBuildEvent>
+xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\x86 /y
+)</PostBuildEvent>
   </PropertyGroup>
   <Import Project="..\packages\Fody.6.5.5\build\Fody.targets" Condition="Exists('..\packages\Fody.6.5.5\build\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

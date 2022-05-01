@@ -36,6 +36,40 @@ namespace GameX
             this.P1CharComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.P1CharPictureBox = new DevExpress.XtraEditors.PictureEdit();
             this.MasterTabControl = new DevExpress.XtraTab.XtraTabControl();
+            this.TabPageSettings = new DevExpress.XtraTab.XtraTabPage();
+            this.TabPageSettingsGP = new DevExpress.XtraEditors.GroupControl();
+            this.GameModeGP = new DevExpress.XtraEditors.GroupControl();
+            this.ScoreTE = new DevExpress.XtraEditors.TextEdit();
+            this.ScoreLabel = new DevExpress.XtraEditors.LabelControl();
+            this.ComboBonusTimerMaxCE = new DevExpress.XtraEditors.CheckEdit();
+            this.ComboTimerMaxCE = new DevExpress.XtraEditors.CheckEdit();
+            this.ComboBonusTimerLabel = new DevExpress.XtraEditors.LabelControl();
+            this.ComboTimerLabel = new DevExpress.XtraEditors.LabelControl();
+            this.ComboBonusTimerTE = new DevExpress.XtraEditors.TextEdit();
+            this.ComboTimerTE = new DevExpress.XtraEditors.TextEdit();
+            this.ResetScoreCE = new DevExpress.XtraEditors.CheckEdit();
+            this.TimerGP = new DevExpress.XtraEditors.GroupControl();
+            this.ZeroTimeButton = new DevExpress.XtraEditors.SimpleButton();
+            this.RemoveMinuteButton = new DevExpress.XtraEditors.SimpleButton();
+            this.AddMinuteButton = new DevExpress.XtraEditors.SimpleButton();
+            this.NoTimerDecreaseCE = new DevExpress.XtraEditors.CheckEdit();
+            this.CurrentTimerTE = new DevExpress.XtraEditors.TextEdit();
+            this.MiscModsGP = new DevExpress.XtraEditors.GroupControl();
+            this.HandTremorCE = new DevExpress.XtraEditors.CheckEdit();
+            this.ControllerAimGP = new DevExpress.XtraEditors.GroupControl();
+            this.ControllerAimButton = new DevExpress.XtraEditors.SimpleButton();
+            this.ColorFilterGP = new DevExpress.XtraEditors.GroupControl();
+            this.ColorFilterButton = new DevExpress.XtraEditors.SimpleButton();
+            this.AboutPictureEdit = new DevExpress.XtraEditors.PictureEdit();
+            this.AppSettingsGP = new DevExpress.XtraEditors.GroupControl();
+            this.MiscSettingsGP = new DevExpress.XtraEditors.GroupControl();
+            this.UpdateModeComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.UpdateRateLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.PaletteLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.PaletteComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.LoadSaveGP = new DevExpress.XtraEditors.GroupControl();
+            this.LoadSettingsButton = new DevExpress.XtraEditors.SimpleButton();
+            this.SaveSettingsButton = new DevExpress.XtraEditors.SimpleButton();
             this.TabPageChar = new DevExpress.XtraTab.XtraTabPage();
             this.TabPageCharGPPlayer4 = new DevExpress.XtraEditors.GroupControl();
             this.P4MiscGP = new DevExpress.XtraEditors.GroupControl();
@@ -99,15 +133,15 @@ namespace GameX
             this.P1HealthBar = new DevExpress.XtraEditors.ProgressBarControl();
             this.TabPageMelee = new DevExpress.XtraTab.XtraTabPage();
             this.MiscMeleeGP = new DevExpress.XtraEditors.GroupControl();
-            this.ReunionSpecialMovesCheckEdit = new DevExpress.XtraEditors.CheckEdit();
-            this.MeleeCameraCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.ReunionSpecialMovesCE = new DevExpress.XtraEditors.CheckEdit();
+            this.MeleeCameraCE = new DevExpress.XtraEditors.CheckEdit();
             this.WeaponPlacementGP = new DevExpress.XtraEditors.GroupControl();
             this.WeaponPlacementComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.WeaponPlacementLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.WeskerGP = new DevExpress.XtraEditors.GroupControl();
-            this.WeskerNoDashCostCheckEdit = new DevExpress.XtraEditors.CheckEdit();
-            this.WeskerInfiniteDashCheckEdit = new DevExpress.XtraEditors.CheckEdit();
-            this.WeskerGlassesCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.WeskerNoDashCostCE = new DevExpress.XtraEditors.CheckEdit();
+            this.WeskerInfiniteDashCE = new DevExpress.XtraEditors.CheckEdit();
+            this.WeskerGlassesCE = new DevExpress.XtraEditors.CheckEdit();
             this.MeleeAnytimeGP = new DevExpress.XtraEditors.GroupControl();
             this.ReloadLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.MoveBackLabelControl = new DevExpress.XtraEditors.LabelControl();
@@ -769,25 +803,6 @@ namespace GameX
             this.LoadoutApplyButton = new DevExpress.XtraEditors.SimpleButton();
             this.LoadoutSaveButton = new DevExpress.XtraEditors.SimpleButton();
             this.InventoryBGPictureBox = new DevExpress.XtraEditors.PictureEdit();
-            this.TabPageSettings = new DevExpress.XtraTab.XtraTabPage();
-            this.TabPageSettingsGP = new DevExpress.XtraEditors.GroupControl();
-            this.GameModeGP = new DevExpress.XtraEditors.GroupControl();
-            this.MiscModsGP = new DevExpress.XtraEditors.GroupControl();
-            this.HandTremorCheckEdit = new DevExpress.XtraEditors.CheckEdit();
-            this.ControllerAimGP = new DevExpress.XtraEditors.GroupControl();
-            this.ControllerAimButton = new DevExpress.XtraEditors.SimpleButton();
-            this.ColorFilterGP = new DevExpress.XtraEditors.GroupControl();
-            this.ColorFilterButton = new DevExpress.XtraEditors.SimpleButton();
-            this.AboutPictureEdit = new DevExpress.XtraEditors.PictureEdit();
-            this.AppSettingsGP = new DevExpress.XtraEditors.GroupControl();
-            this.MiscSettingsGP = new DevExpress.XtraEditors.GroupControl();
-            this.UpdateModeComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.UpdateRateLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.PaletteLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.PaletteComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.LoadSaveGP = new DevExpress.XtraEditors.GroupControl();
-            this.LoadSettingsButton = new DevExpress.XtraEditors.SimpleButton();
-            this.SaveSettingsButton = new DevExpress.XtraEditors.SimpleButton();
             this.TabPageConsole = new DevExpress.XtraTab.XtraTabPage();
             this.ConsoleGP = new DevExpress.XtraEditors.GroupControl();
             this.ConsoleOutputMemoEdit = new DevExpress.XtraEditors.MemoEdit();
@@ -799,27 +814,47 @@ namespace GameX
             this.TabPageSettingsButton = new DevExpress.XtraEditors.SimpleButton();
             this.TabPageConsoleButton = new DevExpress.XtraEditors.SimpleButton();
             this.MainLoop = new System.Windows.Forms.Timer(this.components);
-            this.TimerGP = new DevExpress.XtraEditors.GroupControl();
-            this.CurrentTimerTE = new DevExpress.XtraEditors.TextEdit();
-            this.NoTimerDecreaseCE = new DevExpress.XtraEditors.CheckEdit();
-            this.AddMinuteButton = new DevExpress.XtraEditors.SimpleButton();
-            this.RemoveMinuteButton = new DevExpress.XtraEditors.SimpleButton();
-            this.ZeroTimeButton = new DevExpress.XtraEditors.SimpleButton();
-            this.ResetScoreCE = new DevExpress.XtraEditors.CheckEdit();
-            this.ComboTimerTE = new DevExpress.XtraEditors.TextEdit();
-            this.ComboBonusTimerTE = new DevExpress.XtraEditors.TextEdit();
-            this.ComboTimerLabel = new DevExpress.XtraEditors.LabelControl();
-            this.ComboBonusTimerLabel = new DevExpress.XtraEditors.LabelControl();
-            this.ComboTimerMaxCE = new DevExpress.XtraEditors.CheckEdit();
-            this.ComboBonusTimerMaxCE = new DevExpress.XtraEditors.CheckEdit();
-            this.ScoreLabel = new DevExpress.XtraEditors.LabelControl();
-            this.ScoreTE = new DevExpress.XtraEditors.TextEdit();
-            this.DefaultTimesGP = new DevExpress.XtraEditors.GroupControl();
+            this.WeskerNoWeaponOnChestCE = new DevExpress.XtraEditors.CheckEdit();
+            this.DefaultTimersGP = new DevExpress.XtraEditors.GroupControl();
+            this.MeleeKillCB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.ComboTimerCB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.ComboBonusTimerCB = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterTabControl)).BeginInit();
             this.MasterTabControl.SuspendLayout();
+            this.TabPageSettings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TabPageSettingsGP)).BeginInit();
+            this.TabPageSettingsGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GameModeGP)).BeginInit();
+            this.GameModeGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ScoreTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboBonusTimerMaxCE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboTimerMaxCE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboBonusTimerTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboTimerTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ResetScoreCE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TimerGP)).BeginInit();
+            this.TimerGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NoTimerDecreaseCE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CurrentTimerTE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscModsGP)).BeginInit();
+            this.MiscModsGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HandTremorCE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ControllerAimGP)).BeginInit();
+            this.ControllerAimGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ColorFilterGP)).BeginInit();
+            this.ColorFilterGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AboutPictureEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AppSettingsGP)).BeginInit();
+            this.AppSettingsGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscSettingsGP)).BeginInit();
+            this.MiscSettingsGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UpdateModeComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaletteComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadSaveGP)).BeginInit();
+            this.LoadSaveGP.SuspendLayout();
             this.TabPageChar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabPageCharGPPlayer4)).BeginInit();
             this.TabPageCharGPPlayer4.SuspendLayout();
@@ -869,16 +904,16 @@ namespace GameX
             this.TabPageMelee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MiscMeleeGP)).BeginInit();
             this.MiscMeleeGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ReunionSpecialMovesCheckEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MeleeCameraCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReunionSpecialMovesCE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MeleeCameraCE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeaponPlacementGP)).BeginInit();
             this.WeaponPlacementGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WeaponPlacementComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeskerGP)).BeginInit();
             this.WeskerGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.WeskerNoDashCostCheckEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WeskerInfiniteDashCheckEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WeskerGlassesCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeskerNoDashCostCE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeskerInfiniteDashCE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeskerGlassesCE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MeleeAnytimeGP)).BeginInit();
             this.MeleeAnytimeGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MeleeAnytimeSwitch.Properties)).BeginInit();
@@ -1531,43 +1566,17 @@ namespace GameX
             this.LoadoutControlGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LoadoutComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryBGPictureBox.Properties)).BeginInit();
-            this.TabPageSettings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TabPageSettingsGP)).BeginInit();
-            this.TabPageSettingsGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GameModeGP)).BeginInit();
-            this.GameModeGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MiscModsGP)).BeginInit();
-            this.MiscModsGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HandTremorCheckEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ControllerAimGP)).BeginInit();
-            this.ControllerAimGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ColorFilterGP)).BeginInit();
-            this.ColorFilterGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AboutPictureEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AppSettingsGP)).BeginInit();
-            this.AppSettingsGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MiscSettingsGP)).BeginInit();
-            this.MiscSettingsGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UpdateModeComboBoxEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PaletteComboBoxEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LoadSaveGP)).BeginInit();
-            this.LoadSaveGP.SuspendLayout();
             this.TabPageConsole.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleGP)).BeginInit();
             this.ConsoleGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TimerGP)).BeginInit();
-            this.TimerGP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CurrentTimerTE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NoTimerDecreaseCE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ResetScoreCE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ComboTimerTE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ComboBonusTimerTE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ComboTimerMaxCE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ComboBonusTimerMaxCE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ScoreTE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DefaultTimesGP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeskerNoWeaponOnChestCE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DefaultTimersGP)).BeginInit();
+            this.DefaultTimersGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MeleeKillCB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboTimerCB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboBonusTimerCB.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // P1CosComboBox
@@ -1628,7 +1637,7 @@ namespace GameX
             this.MasterTabControl.HeaderAutoFill = DevExpress.Utils.DefaultBoolean.True;
             this.MasterTabControl.Location = new System.Drawing.Point(12, 40);
             this.MasterTabControl.Name = "MasterTabControl";
-            this.MasterTabControl.SelectedTabPage = this.TabPageSettings;
+            this.MasterTabControl.SelectedTabPage = this.TabPageInventory;
             this.MasterTabControl.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
             this.MasterTabControl.Size = new System.Drawing.Size(1225, 439);
             this.MasterTabControl.TabIndex = 18;
@@ -1638,6 +1647,379 @@ namespace GameX
             this.TabPageInventory,
             this.TabPageSettings,
             this.TabPageConsole});
+            // 
+            // TabPageSettings
+            // 
+            this.TabPageSettings.Controls.Add(this.TabPageSettingsGP);
+            this.TabPageSettings.Name = "TabPageSettings";
+            this.TabPageSettings.Size = new System.Drawing.Size(1223, 437);
+            this.TabPageSettings.Text = "Settings";
+            // 
+            // TabPageSettingsGP
+            // 
+            this.TabPageSettingsGP.AppearanceCaption.Options.UseTextOptions = true;
+            this.TabPageSettingsGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.TabPageSettingsGP.Controls.Add(this.GameModeGP);
+            this.TabPageSettingsGP.Controls.Add(this.MiscModsGP);
+            this.TabPageSettingsGP.Controls.Add(this.AboutPictureEdit);
+            this.TabPageSettingsGP.Controls.Add(this.AppSettingsGP);
+            this.TabPageSettingsGP.Location = new System.Drawing.Point(8, 10);
+            this.TabPageSettingsGP.Name = "TabPageSettingsGP";
+            this.TabPageSettingsGP.Size = new System.Drawing.Size(622, 418);
+            this.TabPageSettingsGP.TabIndex = 0;
+            // 
+            // GameModeGP
+            // 
+            this.GameModeGP.Controls.Add(this.ScoreTE);
+            this.GameModeGP.Controls.Add(this.ScoreLabel);
+            this.GameModeGP.Controls.Add(this.ComboBonusTimerMaxCE);
+            this.GameModeGP.Controls.Add(this.ComboTimerMaxCE);
+            this.GameModeGP.Controls.Add(this.ComboBonusTimerLabel);
+            this.GameModeGP.Controls.Add(this.ComboTimerLabel);
+            this.GameModeGP.Controls.Add(this.ComboBonusTimerTE);
+            this.GameModeGP.Controls.Add(this.ComboTimerTE);
+            this.GameModeGP.Controls.Add(this.ResetScoreCE);
+            this.GameModeGP.Controls.Add(this.TimerGP);
+            this.GameModeGP.Location = new System.Drawing.Point(309, 30);
+            this.GameModeGP.Name = "GameModeGP";
+            this.GameModeGP.Size = new System.Drawing.Size(308, 383);
+            this.GameModeGP.TabIndex = 2;
+            this.GameModeGP.Text = "Game Mode";
+            // 
+            // ScoreTE
+            // 
+            this.ScoreTE.EditValue = "0";
+            this.ScoreTE.Location = new System.Drawing.Point(68, 39);
+            this.ScoreTE.Name = "ScoreTE";
+            this.ScoreTE.Properties.Appearance.Options.UseTextOptions = true;
+            this.ScoreTE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ScoreTE.Properties.ReadOnly = true;
+            this.ScoreTE.Size = new System.Drawing.Size(79, 20);
+            this.ScoreTE.TabIndex = 31;
+            // 
+            // ScoreLabel
+            // 
+            this.ScoreLabel.Location = new System.Drawing.Point(31, 42);
+            this.ScoreLabel.Name = "ScoreLabel";
+            this.ScoreLabel.Size = new System.Drawing.Size(31, 13);
+            this.ScoreLabel.TabIndex = 30;
+            this.ScoreLabel.Text = "Score:";
+            // 
+            // ComboBonusTimerMaxCE
+            // 
+            this.ComboBonusTimerMaxCE.Location = new System.Drawing.Point(222, 91);
+            this.ComboBonusTimerMaxCE.Name = "ComboBonusTimerMaxCE";
+            this.ComboBonusTimerMaxCE.Properties.AllowFocused = false;
+            this.ComboBonusTimerMaxCE.Properties.Caption = "At Max";
+            this.ComboBonusTimerMaxCE.Size = new System.Drawing.Size(62, 20);
+            this.ComboBonusTimerMaxCE.TabIndex = 29;
+            // 
+            // ComboTimerMaxCE
+            // 
+            this.ComboTimerMaxCE.Location = new System.Drawing.Point(222, 65);
+            this.ComboTimerMaxCE.Name = "ComboTimerMaxCE";
+            this.ComboTimerMaxCE.Properties.AllowFocused = false;
+            this.ComboTimerMaxCE.Properties.Caption = "At Max";
+            this.ComboTimerMaxCE.Size = new System.Drawing.Size(62, 20);
+            this.ComboTimerMaxCE.TabIndex = 28;
+            // 
+            // ComboBonusTimerLabel
+            // 
+            this.ComboBonusTimerLabel.Location = new System.Drawing.Point(31, 94);
+            this.ComboBonusTimerLabel.Name = "ComboBonusTimerLabel";
+            this.ComboBonusTimerLabel.Size = new System.Drawing.Size(106, 13);
+            this.ComboBonusTimerLabel.TabIndex = 27;
+            this.ComboBonusTimerLabel.Text = "Combo Bonus Timer:";
+            // 
+            // ComboTimerLabel
+            // 
+            this.ComboTimerLabel.Location = new System.Drawing.Point(31, 68);
+            this.ComboTimerLabel.Name = "ComboTimerLabel";
+            this.ComboTimerLabel.Size = new System.Drawing.Size(71, 13);
+            this.ComboTimerLabel.TabIndex = 26;
+            this.ComboTimerLabel.Text = "Combo Timer:";
+            // 
+            // ComboBonusTimerTE
+            // 
+            this.ComboBonusTimerTE.EditValue = "00:00";
+            this.ComboBonusTimerTE.Location = new System.Drawing.Point(153, 91);
+            this.ComboBonusTimerTE.Name = "ComboBonusTimerTE";
+            this.ComboBonusTimerTE.Properties.Appearance.Options.UseTextOptions = true;
+            this.ComboBonusTimerTE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ComboBonusTimerTE.Properties.ReadOnly = true;
+            this.ComboBonusTimerTE.Size = new System.Drawing.Size(63, 20);
+            this.ComboBonusTimerTE.TabIndex = 25;
+            // 
+            // ComboTimerTE
+            // 
+            this.ComboTimerTE.EditValue = "00:00";
+            this.ComboTimerTE.Location = new System.Drawing.Point(153, 65);
+            this.ComboTimerTE.Name = "ComboTimerTE";
+            this.ComboTimerTE.Properties.Appearance.Options.UseTextOptions = true;
+            this.ComboTimerTE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ComboTimerTE.Properties.ReadOnly = true;
+            this.ComboTimerTE.Size = new System.Drawing.Size(63, 20);
+            this.ComboTimerTE.TabIndex = 24;
+            // 
+            // ResetScoreCE
+            // 
+            this.ResetScoreCE.Location = new System.Drawing.Point(153, 39);
+            this.ResetScoreCE.Name = "ResetScoreCE";
+            this.ResetScoreCE.Properties.AllowFocused = false;
+            this.ResetScoreCE.Properties.Caption = "Reset At End (Merce)";
+            this.ResetScoreCE.Size = new System.Drawing.Size(131, 20);
+            this.ResetScoreCE.TabIndex = 23;
+            // 
+            // TimerGP
+            // 
+            this.TimerGP.Controls.Add(this.DefaultTimersGP);
+            this.TimerGP.Controls.Add(this.ZeroTimeButton);
+            this.TimerGP.Controls.Add(this.RemoveMinuteButton);
+            this.TimerGP.Controls.Add(this.AddMinuteButton);
+            this.TimerGP.Controls.Add(this.NoTimerDecreaseCE);
+            this.TimerGP.Controls.Add(this.CurrentTimerTE);
+            this.TimerGP.Location = new System.Drawing.Point(5, 124);
+            this.TimerGP.Name = "TimerGP";
+            this.TimerGP.Size = new System.Drawing.Size(298, 122);
+            this.TimerGP.TabIndex = 3;
+            this.TimerGP.Text = "Timer";
+            // 
+            // ZeroTimeButton
+            // 
+            this.ZeroTimeButton.AllowFocus = false;
+            this.ZeroTimeButton.Location = new System.Drawing.Point(114, 60);
+            this.ZeroTimeButton.Name = "ZeroTimeButton";
+            this.ZeroTimeButton.Size = new System.Drawing.Size(71, 52);
+            this.ZeroTimeButton.TabIndex = 25;
+            this.ZeroTimeButton.TabStop = false;
+            this.ZeroTimeButton.Text = "Zero";
+            // 
+            // RemoveMinuteButton
+            // 
+            this.RemoveMinuteButton.AllowFocus = false;
+            this.RemoveMinuteButton.Location = new System.Drawing.Point(8, 89);
+            this.RemoveMinuteButton.Name = "RemoveMinuteButton";
+            this.RemoveMinuteButton.Size = new System.Drawing.Size(100, 23);
+            this.RemoveMinuteButton.TabIndex = 24;
+            this.RemoveMinuteButton.TabStop = false;
+            this.RemoveMinuteButton.Text = "-1 Minute";
+            // 
+            // AddMinuteButton
+            // 
+            this.AddMinuteButton.AllowFocus = false;
+            this.AddMinuteButton.Location = new System.Drawing.Point(8, 60);
+            this.AddMinuteButton.Name = "AddMinuteButton";
+            this.AddMinuteButton.Size = new System.Drawing.Size(100, 23);
+            this.AddMinuteButton.TabIndex = 23;
+            this.AddMinuteButton.TabStop = false;
+            this.AddMinuteButton.Text = "+1 Minute";
+            // 
+            // NoTimerDecreaseCE
+            // 
+            this.NoTimerDecreaseCE.Location = new System.Drawing.Point(77, 34);
+            this.NoTimerDecreaseCE.Name = "NoTimerDecreaseCE";
+            this.NoTimerDecreaseCE.Properties.AllowFocused = false;
+            this.NoTimerDecreaseCE.Properties.Caption = "Doesn\'t Decrease";
+            this.NoTimerDecreaseCE.Size = new System.Drawing.Size(124, 20);
+            this.NoTimerDecreaseCE.TabIndex = 22;
+            // 
+            // CurrentTimerTE
+            // 
+            this.CurrentTimerTE.EditValue = "00:00:00";
+            this.CurrentTimerTE.Location = new System.Drawing.Point(8, 34);
+            this.CurrentTimerTE.Name = "CurrentTimerTE";
+            this.CurrentTimerTE.Properties.Appearance.Options.UseTextOptions = true;
+            this.CurrentTimerTE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.CurrentTimerTE.Properties.ReadOnly = true;
+            this.CurrentTimerTE.Size = new System.Drawing.Size(63, 20);
+            this.CurrentTimerTE.TabIndex = 0;
+            // 
+            // MiscModsGP
+            // 
+            this.MiscModsGP.Controls.Add(this.HandTremorCE);
+            this.MiscModsGP.Controls.Add(this.ControllerAimGP);
+            this.MiscModsGP.Controls.Add(this.ColorFilterGP);
+            this.MiscModsGP.Location = new System.Drawing.Point(5, 105);
+            this.MiscModsGP.Name = "MiscModsGP";
+            this.MiscModsGP.Size = new System.Drawing.Size(298, 182);
+            this.MiscModsGP.TabIndex = 1;
+            this.MiscModsGP.Text = "Miscellaneous";
+            // 
+            // HandTremorCE
+            // 
+            this.HandTremorCE.Location = new System.Drawing.Point(138, 44);
+            this.HandTremorCE.Name = "HandTremorCE";
+            this.HandTremorCE.Properties.AllowFocused = false;
+            this.HandTremorCE.Properties.Caption = "No Hand Tremors";
+            this.HandTremorCE.Size = new System.Drawing.Size(141, 20);
+            this.HandTremorCE.TabIndex = 21;
+            // 
+            // ControllerAimGP
+            // 
+            this.ControllerAimGP.AppearanceCaption.Options.UseTextOptions = true;
+            this.ControllerAimGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ControllerAimGP.Controls.Add(this.ControllerAimButton);
+            this.ControllerAimGP.Location = new System.Drawing.Point(5, 29);
+            this.ControllerAimGP.Name = "ControllerAimGP";
+            this.ControllerAimGP.Size = new System.Drawing.Size(112, 71);
+            this.ControllerAimGP.TabIndex = 2;
+            this.ControllerAimGP.Text = "Controller Aim";
+            // 
+            // ControllerAimButton
+            // 
+            this.ControllerAimButton.AllowFocus = false;
+            this.ControllerAimButton.Location = new System.Drawing.Point(15, 36);
+            this.ControllerAimButton.Name = "ControllerAimButton";
+            this.ControllerAimButton.Size = new System.Drawing.Size(82, 23);
+            this.ControllerAimButton.TabIndex = 1;
+            this.ControllerAimButton.TabStop = false;
+            this.ControllerAimButton.Text = "Enable";
+            this.ControllerAimButton.ToolTip = "Enables controller aim style.";
+            this.ControllerAimButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.ControllerAimButton.ToolTipTitle = "Controller Aim";
+            // 
+            // ColorFilterGP
+            // 
+            this.ColorFilterGP.AppearanceCaption.Options.UseTextOptions = true;
+            this.ColorFilterGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ColorFilterGP.Controls.Add(this.ColorFilterButton);
+            this.ColorFilterGP.Location = new System.Drawing.Point(5, 106);
+            this.ColorFilterGP.Name = "ColorFilterGP";
+            this.ColorFilterGP.Size = new System.Drawing.Size(112, 71);
+            this.ColorFilterGP.TabIndex = 1;
+            this.ColorFilterGP.Text = "Filter Remover";
+            // 
+            // ColorFilterButton
+            // 
+            this.ColorFilterButton.AllowFocus = false;
+            this.ColorFilterButton.Location = new System.Drawing.Point(15, 36);
+            this.ColorFilterButton.Name = "ColorFilterButton";
+            this.ColorFilterButton.Size = new System.Drawing.Size(82, 23);
+            this.ColorFilterButton.TabIndex = 1;
+            this.ColorFilterButton.TabStop = false;
+            this.ColorFilterButton.Text = "Enable";
+            this.ColorFilterButton.ToolTip = "Enables the true color filter disabling the default ones.";
+            this.ColorFilterButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.ColorFilterButton.ToolTipTitle = "Color Filter";
+            // 
+            // AboutPictureEdit
+            // 
+            this.AboutPictureEdit.Location = new System.Drawing.Point(5, 30);
+            this.AboutPictureEdit.Name = "AboutPictureEdit";
+            this.AboutPictureEdit.Properties.AllowFocused = false;
+            this.AboutPictureEdit.Properties.PictureInterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            this.AboutPictureEdit.Properties.ReadOnly = true;
+            this.AboutPictureEdit.Properties.ShowMenu = false;
+            this.AboutPictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.AboutPictureEdit.Size = new System.Drawing.Size(298, 69);
+            this.AboutPictureEdit.TabIndex = 0;
+            this.AboutPictureEdit.UseDirectXPaint = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // AppSettingsGP
+            // 
+            this.AppSettingsGP.Controls.Add(this.MiscSettingsGP);
+            this.AppSettingsGP.Controls.Add(this.LoadSaveGP);
+            this.AppSettingsGP.Location = new System.Drawing.Point(5, 293);
+            this.AppSettingsGP.Name = "AppSettingsGP";
+            this.AppSettingsGP.Size = new System.Drawing.Size(298, 120);
+            this.AppSettingsGP.TabIndex = 0;
+            this.AppSettingsGP.Text = "App Settings";
+            // 
+            // MiscSettingsGP
+            // 
+            this.MiscSettingsGP.Controls.Add(this.UpdateModeComboBoxEdit);
+            this.MiscSettingsGP.Controls.Add(this.UpdateRateLabelControl);
+            this.MiscSettingsGP.Controls.Add(this.PaletteLabelControl);
+            this.MiscSettingsGP.Controls.Add(this.PaletteComboBoxEdit);
+            this.MiscSettingsGP.Location = new System.Drawing.Point(5, 30);
+            this.MiscSettingsGP.Name = "MiscSettingsGP";
+            this.MiscSettingsGP.Size = new System.Drawing.Size(170, 85);
+            this.MiscSettingsGP.TabIndex = 0;
+            // 
+            // UpdateModeComboBoxEdit
+            // 
+            this.UpdateModeComboBoxEdit.Location = new System.Drawing.Point(52, 33);
+            this.UpdateModeComboBoxEdit.Name = "UpdateModeComboBoxEdit";
+            this.UpdateModeComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.UpdateModeComboBoxEdit.Properties.AllowFocused = false;
+            this.UpdateModeComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.UpdateModeComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.UpdateModeComboBoxEdit.Size = new System.Drawing.Size(111, 20);
+            this.UpdateModeComboBoxEdit.TabIndex = 0;
+            this.UpdateModeComboBoxEdit.TabStop = false;
+            this.UpdateModeComboBoxEdit.ToolTip = "Sets the update rate for the main loop system. 10 times per second is an ideal va" +
+    "lue.";
+            this.UpdateModeComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.UpdateModeComboBoxEdit.ToolTipTitle = "Update Rate";
+            // 
+            // UpdateRateLabelControl
+            // 
+            this.UpdateRateLabelControl.Location = new System.Drawing.Point(15, 36);
+            this.UpdateRateLabelControl.Name = "UpdateRateLabelControl";
+            this.UpdateRateLabelControl.Size = new System.Drawing.Size(26, 13);
+            this.UpdateRateLabelControl.TabIndex = 0;
+            this.UpdateRateLabelControl.Text = "Rate:";
+            // 
+            // PaletteLabelControl
+            // 
+            this.PaletteLabelControl.Location = new System.Drawing.Point(15, 62);
+            this.PaletteLabelControl.Name = "PaletteLabelControl";
+            this.PaletteLabelControl.Size = new System.Drawing.Size(25, 13);
+            this.PaletteLabelControl.TabIndex = 0;
+            this.PaletteLabelControl.Text = "Skin:";
+            // 
+            // PaletteComboBoxEdit
+            // 
+            this.PaletteComboBoxEdit.Location = new System.Drawing.Point(52, 59);
+            this.PaletteComboBoxEdit.Name = "PaletteComboBoxEdit";
+            this.PaletteComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.PaletteComboBoxEdit.Properties.AllowFocused = false;
+            this.PaletteComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.PaletteComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.PaletteComboBoxEdit.Size = new System.Drawing.Size(111, 20);
+            this.PaletteComboBoxEdit.TabIndex = 0;
+            this.PaletteComboBoxEdit.TabStop = false;
+            this.PaletteComboBoxEdit.ToolTip = "Changes the skin scheme for the application.";
+            this.PaletteComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.PaletteComboBoxEdit.ToolTipTitle = "Skin";
+            // 
+            // LoadSaveGP
+            // 
+            this.LoadSaveGP.Controls.Add(this.LoadSettingsButton);
+            this.LoadSaveGP.Controls.Add(this.SaveSettingsButton);
+            this.LoadSaveGP.Location = new System.Drawing.Point(181, 30);
+            this.LoadSaveGP.Name = "LoadSaveGP";
+            this.LoadSaveGP.Size = new System.Drawing.Size(112, 85);
+            this.LoadSaveGP.TabIndex = 0;
+            // 
+            // LoadSettingsButton
+            // 
+            this.LoadSettingsButton.AllowFocus = false;
+            this.LoadSettingsButton.Location = new System.Drawing.Point(5, 58);
+            this.LoadSettingsButton.Name = "LoadSettingsButton";
+            this.LoadSettingsButton.Size = new System.Drawing.Size(102, 23);
+            this.LoadSettingsButton.TabIndex = 1;
+            this.LoadSettingsButton.TabStop = false;
+            this.LoadSettingsButton.Text = "Load";
+            this.LoadSettingsButton.ToolTip = "Loads the last saved configuration or the default ones.";
+            this.LoadSettingsButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.LoadSettingsButton.ToolTipTitle = "Load";
+            // 
+            // SaveSettingsButton
+            // 
+            this.SaveSettingsButton.AllowFocus = false;
+            this.SaveSettingsButton.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.SaveSettingsButton.Location = new System.Drawing.Point(5, 31);
+            this.SaveSettingsButton.Name = "SaveSettingsButton";
+            this.SaveSettingsButton.Size = new System.Drawing.Size(102, 23);
+            this.SaveSettingsButton.TabIndex = 0;
+            this.SaveSettingsButton.TabStop = false;
+            this.SaveSettingsButton.Text = "Save";
+            this.SaveSettingsButton.ToolTip = "Saves the current configuration.";
+            this.SaveSettingsButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.SaveSettingsButton.ToolTipTitle = "Save";
             // 
             // TabPageChar
             // 
@@ -2540,8 +2922,8 @@ namespace GameX
             // 
             // MiscMeleeGP
             // 
-            this.MiscMeleeGP.Controls.Add(this.ReunionSpecialMovesCheckEdit);
-            this.MiscMeleeGP.Controls.Add(this.MeleeCameraCheckEdit);
+            this.MiscMeleeGP.Controls.Add(this.ReunionSpecialMovesCE);
+            this.MiscMeleeGP.Controls.Add(this.MeleeCameraCE);
             this.MiscMeleeGP.Controls.Add(this.WeaponPlacementGP);
             this.MiscMeleeGP.Location = new System.Drawing.Point(317, 206);
             this.MiscMeleeGP.Name = "MiscMeleeGP";
@@ -2549,30 +2931,30 @@ namespace GameX
             this.MiscMeleeGP.TabIndex = 4;
             this.MiscMeleeGP.Text = "Miscellaneous";
             // 
-            // ReunionSpecialMovesCheckEdit
+            // ReunionSpecialMovesCE
             // 
-            this.ReunionSpecialMovesCheckEdit.Location = new System.Drawing.Point(12, 63);
-            this.ReunionSpecialMovesCheckEdit.Name = "ReunionSpecialMovesCheckEdit";
-            this.ReunionSpecialMovesCheckEdit.Properties.AllowFocused = false;
-            this.ReunionSpecialMovesCheckEdit.Properties.Caption = "Reunion Special Moves";
-            this.ReunionSpecialMovesCheckEdit.Size = new System.Drawing.Size(141, 20);
-            this.ReunionSpecialMovesCheckEdit.TabIndex = 21;
-            this.ReunionSpecialMovesCheckEdit.ToolTip = "This will enable Maluc\'s \"Reunion Melee Overall\" mod and remove the HP check from" +
+            this.ReunionSpecialMovesCE.Location = new System.Drawing.Point(12, 63);
+            this.ReunionSpecialMovesCE.Name = "ReunionSpecialMovesCE";
+            this.ReunionSpecialMovesCE.Properties.AllowFocused = false;
+            this.ReunionSpecialMovesCE.Properties.Caption = "Reunion Special Moves";
+            this.ReunionSpecialMovesCE.Size = new System.Drawing.Size(141, 20);
+            this.ReunionSpecialMovesCE.TabIndex = 21;
+            this.ReunionSpecialMovesCE.ToolTip = "This will enable Maluc\'s \"Reunion Melee Overall\" mod and remove the HP check from" +
     " it.";
-            this.ReunionSpecialMovesCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.ReunionSpecialMovesCheckEdit.ToolTipTitle = "Reunion Melee Overall";
+            this.ReunionSpecialMovesCE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.ReunionSpecialMovesCE.ToolTipTitle = "Reunion Melee Overall";
             // 
-            // MeleeCameraCheckEdit
+            // MeleeCameraCE
             // 
-            this.MeleeCameraCheckEdit.Location = new System.Drawing.Point(12, 37);
-            this.MeleeCameraCheckEdit.Name = "MeleeCameraCheckEdit";
-            this.MeleeCameraCheckEdit.Properties.AllowFocused = false;
-            this.MeleeCameraCheckEdit.Properties.Caption = "Disable Melee Camera";
-            this.MeleeCameraCheckEdit.Size = new System.Drawing.Size(141, 20);
-            this.MeleeCameraCheckEdit.TabIndex = 20;
-            this.MeleeCameraCheckEdit.ToolTip = "Removes all camera animation from melee moves.";
-            this.MeleeCameraCheckEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.MeleeCameraCheckEdit.ToolTipTitle = "No Melee Camera";
+            this.MeleeCameraCE.Location = new System.Drawing.Point(12, 37);
+            this.MeleeCameraCE.Name = "MeleeCameraCE";
+            this.MeleeCameraCE.Properties.AllowFocused = false;
+            this.MeleeCameraCE.Properties.Caption = "Disable Melee Camera";
+            this.MeleeCameraCE.Size = new System.Drawing.Size(141, 20);
+            this.MeleeCameraCE.TabIndex = 20;
+            this.MeleeCameraCE.ToolTip = "Removes all camera animation from melee moves.";
+            this.MeleeCameraCE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.MeleeCameraCE.ToolTipTitle = "No Melee Camera";
             // 
             // WeaponPlacementGP
             // 
@@ -2611,41 +2993,42 @@ namespace GameX
             // 
             // WeskerGP
             // 
-            this.WeskerGP.Controls.Add(this.WeskerNoDashCostCheckEdit);
-            this.WeskerGP.Controls.Add(this.WeskerInfiniteDashCheckEdit);
-            this.WeskerGP.Controls.Add(this.WeskerGlassesCheckEdit);
+            this.WeskerGP.Controls.Add(this.WeskerNoWeaponOnChestCE);
+            this.WeskerGP.Controls.Add(this.WeskerNoDashCostCE);
+            this.WeskerGP.Controls.Add(this.WeskerInfiniteDashCE);
+            this.WeskerGP.Controls.Add(this.WeskerGlassesCE);
             this.WeskerGP.Location = new System.Drawing.Point(317, 312);
             this.WeskerGP.Name = "WeskerGP";
             this.WeskerGP.Size = new System.Drawing.Size(313, 116);
             this.WeskerGP.TabIndex = 3;
             this.WeskerGP.Text = "Wesker";
             // 
-            // WeskerNoDashCostCheckEdit
+            // WeskerNoDashCostCE
             // 
-            this.WeskerNoDashCostCheckEdit.Location = new System.Drawing.Point(12, 61);
-            this.WeskerNoDashCostCheckEdit.Name = "WeskerNoDashCostCheckEdit";
-            this.WeskerNoDashCostCheckEdit.Properties.AllowFocused = false;
-            this.WeskerNoDashCostCheckEdit.Properties.Caption = "No Dash HP Cost";
-            this.WeskerNoDashCostCheckEdit.Size = new System.Drawing.Size(118, 20);
-            this.WeskerNoDashCostCheckEdit.TabIndex = 7;
+            this.WeskerNoDashCostCE.Location = new System.Drawing.Point(12, 61);
+            this.WeskerNoDashCostCE.Name = "WeskerNoDashCostCE";
+            this.WeskerNoDashCostCE.Properties.AllowFocused = false;
+            this.WeskerNoDashCostCE.Properties.Caption = "No Dash HP Cost";
+            this.WeskerNoDashCostCE.Size = new System.Drawing.Size(118, 20);
+            this.WeskerNoDashCostCE.TabIndex = 7;
             // 
-            // WeskerInfiniteDashCheckEdit
+            // WeskerInfiniteDashCE
             // 
-            this.WeskerInfiniteDashCheckEdit.Location = new System.Drawing.Point(12, 87);
-            this.WeskerInfiniteDashCheckEdit.Name = "WeskerInfiniteDashCheckEdit";
-            this.WeskerInfiniteDashCheckEdit.Properties.AllowFocused = false;
-            this.WeskerInfiniteDashCheckEdit.Properties.Caption = "Infinite Dash";
-            this.WeskerInfiniteDashCheckEdit.Size = new System.Drawing.Size(118, 20);
-            this.WeskerInfiniteDashCheckEdit.TabIndex = 6;
+            this.WeskerInfiniteDashCE.Location = new System.Drawing.Point(12, 87);
+            this.WeskerInfiniteDashCE.Name = "WeskerInfiniteDashCE";
+            this.WeskerInfiniteDashCE.Properties.AllowFocused = false;
+            this.WeskerInfiniteDashCE.Properties.Caption = "Infinite Dash";
+            this.WeskerInfiniteDashCE.Size = new System.Drawing.Size(118, 20);
+            this.WeskerInfiniteDashCE.TabIndex = 6;
             // 
-            // WeskerGlassesCheckEdit
+            // WeskerGlassesCE
             // 
-            this.WeskerGlassesCheckEdit.Location = new System.Drawing.Point(12, 35);
-            this.WeskerGlassesCheckEdit.Name = "WeskerGlassesCheckEdit";
-            this.WeskerGlassesCheckEdit.Properties.AllowFocused = false;
-            this.WeskerGlassesCheckEdit.Properties.Caption = "No Sunglass Drop";
-            this.WeskerGlassesCheckEdit.Size = new System.Drawing.Size(118, 20);
-            this.WeskerGlassesCheckEdit.TabIndex = 5;
+            this.WeskerGlassesCE.Location = new System.Drawing.Point(12, 35);
+            this.WeskerGlassesCE.Name = "WeskerGlassesCE";
+            this.WeskerGlassesCE.Properties.AllowFocused = false;
+            this.WeskerGlassesCE.Properties.Caption = "No Sunglass Drop";
+            this.WeskerGlassesCE.Size = new System.Drawing.Size(118, 20);
+            this.WeskerGlassesCE.TabIndex = 5;
             // 
             // MeleeAnytimeGP
             // 
@@ -14508,232 +14891,6 @@ namespace GameX
             this.InventoryBGPictureBox.Size = new System.Drawing.Size(205, 270);
             this.InventoryBGPictureBox.TabIndex = 0;
             // 
-            // TabPageSettings
-            // 
-            this.TabPageSettings.Controls.Add(this.TabPageSettingsGP);
-            this.TabPageSettings.Name = "TabPageSettings";
-            this.TabPageSettings.Size = new System.Drawing.Size(1223, 437);
-            this.TabPageSettings.Text = "Settings";
-            // 
-            // TabPageSettingsGP
-            // 
-            this.TabPageSettingsGP.AppearanceCaption.Options.UseTextOptions = true;
-            this.TabPageSettingsGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.TabPageSettingsGP.Controls.Add(this.GameModeGP);
-            this.TabPageSettingsGP.Controls.Add(this.MiscModsGP);
-            this.TabPageSettingsGP.Controls.Add(this.AboutPictureEdit);
-            this.TabPageSettingsGP.Controls.Add(this.AppSettingsGP);
-            this.TabPageSettingsGP.Location = new System.Drawing.Point(8, 10);
-            this.TabPageSettingsGP.Name = "TabPageSettingsGP";
-            this.TabPageSettingsGP.Size = new System.Drawing.Size(622, 418);
-            this.TabPageSettingsGP.TabIndex = 0;
-            // 
-            // GameModeGP
-            // 
-            this.GameModeGP.Controls.Add(this.DefaultTimesGP);
-            this.GameModeGP.Controls.Add(this.ScoreTE);
-            this.GameModeGP.Controls.Add(this.ScoreLabel);
-            this.GameModeGP.Controls.Add(this.ComboBonusTimerMaxCE);
-            this.GameModeGP.Controls.Add(this.ComboTimerMaxCE);
-            this.GameModeGP.Controls.Add(this.ComboBonusTimerLabel);
-            this.GameModeGP.Controls.Add(this.ComboTimerLabel);
-            this.GameModeGP.Controls.Add(this.ComboBonusTimerTE);
-            this.GameModeGP.Controls.Add(this.ComboTimerTE);
-            this.GameModeGP.Controls.Add(this.ResetScoreCE);
-            this.GameModeGP.Controls.Add(this.TimerGP);
-            this.GameModeGP.Location = new System.Drawing.Point(309, 30);
-            this.GameModeGP.Name = "GameModeGP";
-            this.GameModeGP.Size = new System.Drawing.Size(308, 383);
-            this.GameModeGP.TabIndex = 2;
-            this.GameModeGP.Text = "Game Mode";
-            // 
-            // MiscModsGP
-            // 
-            this.MiscModsGP.Controls.Add(this.HandTremorCheckEdit);
-            this.MiscModsGP.Controls.Add(this.ControllerAimGP);
-            this.MiscModsGP.Controls.Add(this.ColorFilterGP);
-            this.MiscModsGP.Location = new System.Drawing.Point(5, 105);
-            this.MiscModsGP.Name = "MiscModsGP";
-            this.MiscModsGP.Size = new System.Drawing.Size(298, 182);
-            this.MiscModsGP.TabIndex = 1;
-            this.MiscModsGP.Text = "Miscellaneous";
-            // 
-            // HandTremorCheckEdit
-            // 
-            this.HandTremorCheckEdit.Location = new System.Drawing.Point(138, 44);
-            this.HandTremorCheckEdit.Name = "HandTremorCheckEdit";
-            this.HandTremorCheckEdit.Properties.AllowFocused = false;
-            this.HandTremorCheckEdit.Properties.Caption = "No Hand Tremors";
-            this.HandTremorCheckEdit.Size = new System.Drawing.Size(141, 20);
-            this.HandTremorCheckEdit.TabIndex = 21;
-            // 
-            // ControllerAimGP
-            // 
-            this.ControllerAimGP.AppearanceCaption.Options.UseTextOptions = true;
-            this.ControllerAimGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.ControllerAimGP.Controls.Add(this.ControllerAimButton);
-            this.ControllerAimGP.Location = new System.Drawing.Point(5, 29);
-            this.ControllerAimGP.Name = "ControllerAimGP";
-            this.ControllerAimGP.Size = new System.Drawing.Size(112, 71);
-            this.ControllerAimGP.TabIndex = 2;
-            this.ControllerAimGP.Text = "Controller Aim";
-            // 
-            // ControllerAimButton
-            // 
-            this.ControllerAimButton.AllowFocus = false;
-            this.ControllerAimButton.Location = new System.Drawing.Point(15, 36);
-            this.ControllerAimButton.Name = "ControllerAimButton";
-            this.ControllerAimButton.Size = new System.Drawing.Size(82, 23);
-            this.ControllerAimButton.TabIndex = 1;
-            this.ControllerAimButton.TabStop = false;
-            this.ControllerAimButton.Text = "Enable";
-            this.ControllerAimButton.ToolTip = "Enables controller aim style.";
-            this.ControllerAimButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.ControllerAimButton.ToolTipTitle = "Controller Aim";
-            // 
-            // ColorFilterGP
-            // 
-            this.ColorFilterGP.AppearanceCaption.Options.UseTextOptions = true;
-            this.ColorFilterGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.ColorFilterGP.Controls.Add(this.ColorFilterButton);
-            this.ColorFilterGP.Location = new System.Drawing.Point(5, 106);
-            this.ColorFilterGP.Name = "ColorFilterGP";
-            this.ColorFilterGP.Size = new System.Drawing.Size(112, 71);
-            this.ColorFilterGP.TabIndex = 1;
-            this.ColorFilterGP.Text = "Filter Remover";
-            // 
-            // ColorFilterButton
-            // 
-            this.ColorFilterButton.AllowFocus = false;
-            this.ColorFilterButton.Location = new System.Drawing.Point(15, 36);
-            this.ColorFilterButton.Name = "ColorFilterButton";
-            this.ColorFilterButton.Size = new System.Drawing.Size(82, 23);
-            this.ColorFilterButton.TabIndex = 1;
-            this.ColorFilterButton.TabStop = false;
-            this.ColorFilterButton.Text = "Enable";
-            this.ColorFilterButton.ToolTip = "Enables the true color filter disabling the default ones.";
-            this.ColorFilterButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.ColorFilterButton.ToolTipTitle = "Color Filter";
-            // 
-            // AboutPictureEdit
-            // 
-            this.AboutPictureEdit.Location = new System.Drawing.Point(5, 30);
-            this.AboutPictureEdit.Name = "AboutPictureEdit";
-            this.AboutPictureEdit.Properties.AllowFocused = false;
-            this.AboutPictureEdit.Properties.PictureInterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            this.AboutPictureEdit.Properties.ReadOnly = true;
-            this.AboutPictureEdit.Properties.ShowMenu = false;
-            this.AboutPictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.AboutPictureEdit.Size = new System.Drawing.Size(298, 69);
-            this.AboutPictureEdit.TabIndex = 0;
-            this.AboutPictureEdit.UseDirectXPaint = DevExpress.Utils.DefaultBoolean.True;
-            // 
-            // AppSettingsGP
-            // 
-            this.AppSettingsGP.Controls.Add(this.MiscSettingsGP);
-            this.AppSettingsGP.Controls.Add(this.LoadSaveGP);
-            this.AppSettingsGP.Location = new System.Drawing.Point(5, 293);
-            this.AppSettingsGP.Name = "AppSettingsGP";
-            this.AppSettingsGP.Size = new System.Drawing.Size(298, 120);
-            this.AppSettingsGP.TabIndex = 0;
-            this.AppSettingsGP.Text = "App Settings";
-            // 
-            // MiscSettingsGP
-            // 
-            this.MiscSettingsGP.Controls.Add(this.UpdateModeComboBoxEdit);
-            this.MiscSettingsGP.Controls.Add(this.UpdateRateLabelControl);
-            this.MiscSettingsGP.Controls.Add(this.PaletteLabelControl);
-            this.MiscSettingsGP.Controls.Add(this.PaletteComboBoxEdit);
-            this.MiscSettingsGP.Location = new System.Drawing.Point(5, 30);
-            this.MiscSettingsGP.Name = "MiscSettingsGP";
-            this.MiscSettingsGP.Size = new System.Drawing.Size(170, 85);
-            this.MiscSettingsGP.TabIndex = 0;
-            // 
-            // UpdateModeComboBoxEdit
-            // 
-            this.UpdateModeComboBoxEdit.Location = new System.Drawing.Point(52, 33);
-            this.UpdateModeComboBoxEdit.Name = "UpdateModeComboBoxEdit";
-            this.UpdateModeComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.UpdateModeComboBoxEdit.Properties.AllowFocused = false;
-            this.UpdateModeComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.UpdateModeComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.UpdateModeComboBoxEdit.Size = new System.Drawing.Size(111, 20);
-            this.UpdateModeComboBoxEdit.TabIndex = 0;
-            this.UpdateModeComboBoxEdit.TabStop = false;
-            this.UpdateModeComboBoxEdit.ToolTip = "Sets the update rate for the main loop system. 10 times per second is an ideal va" +
-    "lue.";
-            this.UpdateModeComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.UpdateModeComboBoxEdit.ToolTipTitle = "Update Rate";
-            // 
-            // UpdateRateLabelControl
-            // 
-            this.UpdateRateLabelControl.Location = new System.Drawing.Point(15, 36);
-            this.UpdateRateLabelControl.Name = "UpdateRateLabelControl";
-            this.UpdateRateLabelControl.Size = new System.Drawing.Size(26, 13);
-            this.UpdateRateLabelControl.TabIndex = 0;
-            this.UpdateRateLabelControl.Text = "Rate:";
-            // 
-            // PaletteLabelControl
-            // 
-            this.PaletteLabelControl.Location = new System.Drawing.Point(15, 62);
-            this.PaletteLabelControl.Name = "PaletteLabelControl";
-            this.PaletteLabelControl.Size = new System.Drawing.Size(25, 13);
-            this.PaletteLabelControl.TabIndex = 0;
-            this.PaletteLabelControl.Text = "Skin:";
-            // 
-            // PaletteComboBoxEdit
-            // 
-            this.PaletteComboBoxEdit.Location = new System.Drawing.Point(52, 59);
-            this.PaletteComboBoxEdit.Name = "PaletteComboBoxEdit";
-            this.PaletteComboBoxEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.PaletteComboBoxEdit.Properties.AllowFocused = false;
-            this.PaletteComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.PaletteComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.PaletteComboBoxEdit.Size = new System.Drawing.Size(111, 20);
-            this.PaletteComboBoxEdit.TabIndex = 0;
-            this.PaletteComboBoxEdit.TabStop = false;
-            this.PaletteComboBoxEdit.ToolTip = "Changes the skin scheme for the application.";
-            this.PaletteComboBoxEdit.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.PaletteComboBoxEdit.ToolTipTitle = "Skin";
-            // 
-            // LoadSaveGP
-            // 
-            this.LoadSaveGP.Controls.Add(this.LoadSettingsButton);
-            this.LoadSaveGP.Controls.Add(this.SaveSettingsButton);
-            this.LoadSaveGP.Location = new System.Drawing.Point(181, 30);
-            this.LoadSaveGP.Name = "LoadSaveGP";
-            this.LoadSaveGP.Size = new System.Drawing.Size(112, 85);
-            this.LoadSaveGP.TabIndex = 0;
-            // 
-            // LoadSettingsButton
-            // 
-            this.LoadSettingsButton.AllowFocus = false;
-            this.LoadSettingsButton.Location = new System.Drawing.Point(5, 58);
-            this.LoadSettingsButton.Name = "LoadSettingsButton";
-            this.LoadSettingsButton.Size = new System.Drawing.Size(102, 23);
-            this.LoadSettingsButton.TabIndex = 1;
-            this.LoadSettingsButton.TabStop = false;
-            this.LoadSettingsButton.Text = "Load";
-            this.LoadSettingsButton.ToolTip = "Loads the last saved configuration or the default ones.";
-            this.LoadSettingsButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.LoadSettingsButton.ToolTipTitle = "Load";
-            // 
-            // SaveSettingsButton
-            // 
-            this.SaveSettingsButton.AllowFocus = false;
-            this.SaveSettingsButton.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.SaveSettingsButton.Location = new System.Drawing.Point(5, 31);
-            this.SaveSettingsButton.Name = "SaveSettingsButton";
-            this.SaveSettingsButton.Size = new System.Drawing.Size(102, 23);
-            this.SaveSettingsButton.TabIndex = 0;
-            this.SaveSettingsButton.TabStop = false;
-            this.SaveSettingsButton.Text = "Save";
-            this.SaveSettingsButton.ToolTip = "Saves the current configuration.";
-            this.SaveSettingsButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.SaveSettingsButton.ToolTipTitle = "Save";
-            // 
             // TabPageConsole
             // 
             this.TabPageConsole.Controls.Add(this.ConsoleGP);
@@ -14849,161 +15006,75 @@ namespace GameX
             this.TabPageConsoleButton.TabStop = false;
             this.TabPageConsoleButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
-            // TimerGP
+            // WeskerNoWeaponOnChestCE
             // 
-            this.TimerGP.Controls.Add(this.ZeroTimeButton);
-            this.TimerGP.Controls.Add(this.RemoveMinuteButton);
-            this.TimerGP.Controls.Add(this.AddMinuteButton);
-            this.TimerGP.Controls.Add(this.NoTimerDecreaseCE);
-            this.TimerGP.Controls.Add(this.CurrentTimerTE);
-            this.TimerGP.Location = new System.Drawing.Point(5, 124);
-            this.TimerGP.Name = "TimerGP";
-            this.TimerGP.Size = new System.Drawing.Size(298, 122);
-            this.TimerGP.TabIndex = 3;
-            this.TimerGP.Text = "Timer";
+            this.WeskerNoWeaponOnChestCE.Location = new System.Drawing.Point(147, 35);
+            this.WeskerNoWeaponOnChestCE.Name = "WeskerNoWeaponOnChestCE";
+            this.WeskerNoWeaponOnChestCE.Properties.AllowFocused = false;
+            this.WeskerNoWeaponOnChestCE.Properties.Caption = "No Weapon On Chest";
+            this.WeskerNoWeaponOnChestCE.Size = new System.Drawing.Size(142, 20);
+            this.WeskerNoWeaponOnChestCE.TabIndex = 8;
             // 
-            // CurrentTimerTE
+            // DefaultTimersGP
             // 
-            this.CurrentTimerTE.EditValue = "00:00:00";
-            this.CurrentTimerTE.Location = new System.Drawing.Point(60, 34);
-            this.CurrentTimerTE.Name = "CurrentTimerTE";
-            this.CurrentTimerTE.Properties.Appearance.Options.UseTextOptions = true;
-            this.CurrentTimerTE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.CurrentTimerTE.Properties.ReadOnly = true;
-            this.CurrentTimerTE.Properties.UseMaskAsDisplayFormat = false;
-            this.CurrentTimerTE.Size = new System.Drawing.Size(63, 20);
-            this.CurrentTimerTE.TabIndex = 0;
+            this.DefaultTimersGP.Controls.Add(this.ComboBonusTimerCB);
+            this.DefaultTimersGP.Controls.Add(this.ComboTimerCB);
+            this.DefaultTimersGP.Controls.Add(this.MeleeKillCB);
+            this.DefaultTimersGP.Location = new System.Drawing.Point(191, 30);
+            this.DefaultTimersGP.Name = "DefaultTimersGP";
+            this.DefaultTimersGP.ShowCaption = false;
+            this.DefaultTimersGP.Size = new System.Drawing.Size(102, 87);
+            this.DefaultTimersGP.TabIndex = 26;
             // 
-            // NoTimerDecreaseCE
+            // MeleeKillCB
             // 
-            this.NoTimerDecreaseCE.Location = new System.Drawing.Point(129, 34);
-            this.NoTimerDecreaseCE.Name = "NoTimerDecreaseCE";
-            this.NoTimerDecreaseCE.Properties.AllowFocused = false;
-            this.NoTimerDecreaseCE.Properties.Caption = "Doesn\'t Decrease";
-            this.NoTimerDecreaseCE.Size = new System.Drawing.Size(124, 20);
-            this.NoTimerDecreaseCE.TabIndex = 22;
+            this.MeleeKillCB.EditValue = "";
+            this.MeleeKillCB.Location = new System.Drawing.Point(5, 8);
+            this.MeleeKillCB.Name = "MeleeKillCB";
+            this.MeleeKillCB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.MeleeKillCB.Properties.AllowFocused = false;
+            this.MeleeKillCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.MeleeKillCB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.MeleeKillCB.Size = new System.Drawing.Size(92, 20);
+            this.MeleeKillCB.TabIndex = 1;
+            this.MeleeKillCB.TabStop = false;
+            this.MeleeKillCB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.MeleeKillCB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.MeleeKillCB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // AddMinuteButton
+            // ComboTimerCB
             // 
-            this.AddMinuteButton.AllowFocus = false;
-            this.AddMinuteButton.Location = new System.Drawing.Point(60, 60);
-            this.AddMinuteButton.Name = "AddMinuteButton";
-            this.AddMinuteButton.Size = new System.Drawing.Size(100, 23);
-            this.AddMinuteButton.TabIndex = 23;
-            this.AddMinuteButton.TabStop = false;
-            this.AddMinuteButton.Text = "+1 Minute";
+            this.ComboTimerCB.Location = new System.Drawing.Point(5, 34);
+            this.ComboTimerCB.Name = "ComboTimerCB";
+            this.ComboTimerCB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.ComboTimerCB.Properties.AllowFocused = false;
+            this.ComboTimerCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.ComboTimerCB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.ComboTimerCB.Size = new System.Drawing.Size(92, 20);
+            this.ComboTimerCB.TabIndex = 2;
+            this.ComboTimerCB.TabStop = false;
+            this.ComboTimerCB.ToolTip = "Sets the time in seconds for the duration of a combo chain.";
+            this.ComboTimerCB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.ComboTimerCB.ToolTipTitle = "Combo Timer";
             // 
-            // RemoveMinuteButton
+            // ComboBonusTimerCB
             // 
-            this.RemoveMinuteButton.AllowFocus = false;
-            this.RemoveMinuteButton.Location = new System.Drawing.Point(60, 89);
-            this.RemoveMinuteButton.Name = "RemoveMinuteButton";
-            this.RemoveMinuteButton.Size = new System.Drawing.Size(100, 23);
-            this.RemoveMinuteButton.TabIndex = 24;
-            this.RemoveMinuteButton.TabStop = false;
-            this.RemoveMinuteButton.Text = "-1 Minute";
-            // 
-            // ZeroTimeButton
-            // 
-            this.ZeroTimeButton.AllowFocus = false;
-            this.ZeroTimeButton.Location = new System.Drawing.Point(166, 60);
-            this.ZeroTimeButton.Name = "ZeroTimeButton";
-            this.ZeroTimeButton.Size = new System.Drawing.Size(71, 52);
-            this.ZeroTimeButton.TabIndex = 25;
-            this.ZeroTimeButton.TabStop = false;
-            this.ZeroTimeButton.Text = "Zero";
-            // 
-            // ResetScoreCE
-            // 
-            this.ResetScoreCE.Location = new System.Drawing.Point(153, 39);
-            this.ResetScoreCE.Name = "ResetScoreCE";
-            this.ResetScoreCE.Properties.AllowFocused = false;
-            this.ResetScoreCE.Properties.Caption = "Reset At End (Merce)";
-            this.ResetScoreCE.Size = new System.Drawing.Size(131, 20);
-            this.ResetScoreCE.TabIndex = 23;
-            // 
-            // ComboTimerTE
-            // 
-            this.ComboTimerTE.EditValue = "00:00";
-            this.ComboTimerTE.Location = new System.Drawing.Point(153, 65);
-            this.ComboTimerTE.Name = "ComboTimerTE";
-            this.ComboTimerTE.Properties.Appearance.Options.UseTextOptions = true;
-            this.ComboTimerTE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.ComboTimerTE.Properties.ReadOnly = true;
-            this.ComboTimerTE.Size = new System.Drawing.Size(63, 20);
-            this.ComboTimerTE.TabIndex = 24;
-            // 
-            // ComboBonusTimerTE
-            // 
-            this.ComboBonusTimerTE.EditValue = "00:00";
-            this.ComboBonusTimerTE.Location = new System.Drawing.Point(153, 91);
-            this.ComboBonusTimerTE.Name = "ComboBonusTimerTE";
-            this.ComboBonusTimerTE.Properties.Appearance.Options.UseTextOptions = true;
-            this.ComboBonusTimerTE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.ComboBonusTimerTE.Properties.ReadOnly = true;
-            this.ComboBonusTimerTE.Size = new System.Drawing.Size(63, 20);
-            this.ComboBonusTimerTE.TabIndex = 25;
-            // 
-            // ComboTimerLabel
-            // 
-            this.ComboTimerLabel.Location = new System.Drawing.Point(31, 68);
-            this.ComboTimerLabel.Name = "ComboTimerLabel";
-            this.ComboTimerLabel.Size = new System.Drawing.Size(71, 13);
-            this.ComboTimerLabel.TabIndex = 26;
-            this.ComboTimerLabel.Text = "Combo Timer:";
-            // 
-            // ComboBonusTimerLabel
-            // 
-            this.ComboBonusTimerLabel.Location = new System.Drawing.Point(31, 94);
-            this.ComboBonusTimerLabel.Name = "ComboBonusTimerLabel";
-            this.ComboBonusTimerLabel.Size = new System.Drawing.Size(106, 13);
-            this.ComboBonusTimerLabel.TabIndex = 27;
-            this.ComboBonusTimerLabel.Text = "Combo Bonus Timer:";
-            // 
-            // ComboTimerMaxCE
-            // 
-            this.ComboTimerMaxCE.Location = new System.Drawing.Point(222, 65);
-            this.ComboTimerMaxCE.Name = "ComboTimerMaxCE";
-            this.ComboTimerMaxCE.Properties.AllowFocused = false;
-            this.ComboTimerMaxCE.Properties.Caption = "At Max";
-            this.ComboTimerMaxCE.Size = new System.Drawing.Size(62, 20);
-            this.ComboTimerMaxCE.TabIndex = 28;
-            // 
-            // ComboBonusTimerMaxCE
-            // 
-            this.ComboBonusTimerMaxCE.Location = new System.Drawing.Point(222, 91);
-            this.ComboBonusTimerMaxCE.Name = "ComboBonusTimerMaxCE";
-            this.ComboBonusTimerMaxCE.Properties.AllowFocused = false;
-            this.ComboBonusTimerMaxCE.Properties.Caption = "At Max";
-            this.ComboBonusTimerMaxCE.Size = new System.Drawing.Size(62, 20);
-            this.ComboBonusTimerMaxCE.TabIndex = 29;
-            // 
-            // ScoreLabel
-            // 
-            this.ScoreLabel.Location = new System.Drawing.Point(31, 42);
-            this.ScoreLabel.Name = "ScoreLabel";
-            this.ScoreLabel.Size = new System.Drawing.Size(31, 13);
-            this.ScoreLabel.TabIndex = 30;
-            this.ScoreLabel.Text = "Score:";
-            // 
-            // ScoreTE
-            // 
-            this.ScoreTE.EditValue = "0";
-            this.ScoreTE.Location = new System.Drawing.Point(68, 39);
-            this.ScoreTE.Name = "ScoreTE";
-            this.ScoreTE.Properties.Appearance.Options.UseTextOptions = true;
-            this.ScoreTE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.ScoreTE.Properties.ReadOnly = true;
-            this.ScoreTE.Size = new System.Drawing.Size(79, 20);
-            this.ScoreTE.TabIndex = 31;
-            // 
-            // DefaultTimesGP
-            // 
-            this.DefaultTimesGP.Location = new System.Drawing.Point(5, 252);
-            this.DefaultTimesGP.Name = "DefaultTimesGP";
-            this.DefaultTimesGP.Size = new System.Drawing.Size(298, 126);
-            this.DefaultTimesGP.TabIndex = 32;
-            this.DefaultTimesGP.Text = "Default Times";
+            this.ComboBonusTimerCB.Location = new System.Drawing.Point(5, 60);
+            this.ComboBonusTimerCB.Name = "ComboBonusTimerCB";
+            this.ComboBonusTimerCB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.ComboBonusTimerCB.Properties.AllowFocused = false;
+            this.ComboBonusTimerCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.ComboBonusTimerCB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.ComboBonusTimerCB.Size = new System.Drawing.Size(92, 20);
+            this.ComboBonusTimerCB.TabIndex = 3;
+            this.ComboBonusTimerCB.TabStop = false;
+            this.ComboBonusTimerCB.ToolTip = "Sets the time in seconds for the duration of a combo bonus pick up.";
+            this.ComboBonusTimerCB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.ComboBonusTimerCB.ToolTipTitle = "Combo Bonus Timer";
             // 
             // App
             // 
@@ -15028,6 +15099,39 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterTabControl)).EndInit();
             this.MasterTabControl.ResumeLayout(false);
+            this.TabPageSettings.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TabPageSettingsGP)).EndInit();
+            this.TabPageSettingsGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GameModeGP)).EndInit();
+            this.GameModeGP.ResumeLayout(false);
+            this.GameModeGP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ScoreTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboBonusTimerMaxCE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboTimerMaxCE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboBonusTimerTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboTimerTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ResetScoreCE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TimerGP)).EndInit();
+            this.TimerGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.NoTimerDecreaseCE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CurrentTimerTE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MiscModsGP)).EndInit();
+            this.MiscModsGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.HandTremorCE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ControllerAimGP)).EndInit();
+            this.ControllerAimGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ColorFilterGP)).EndInit();
+            this.ColorFilterGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.AboutPictureEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AppSettingsGP)).EndInit();
+            this.AppSettingsGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MiscSettingsGP)).EndInit();
+            this.MiscSettingsGP.ResumeLayout(false);
+            this.MiscSettingsGP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UpdateModeComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaletteComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadSaveGP)).EndInit();
+            this.LoadSaveGP.ResumeLayout(false);
             this.TabPageChar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TabPageCharGPPlayer4)).EndInit();
             this.TabPageCharGPPlayer4.ResumeLayout(false);
@@ -15077,17 +15181,17 @@ namespace GameX
             this.TabPageMelee.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MiscMeleeGP)).EndInit();
             this.MiscMeleeGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ReunionSpecialMovesCheckEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MeleeCameraCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReunionSpecialMovesCE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MeleeCameraCE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeaponPlacementGP)).EndInit();
             this.WeaponPlacementGP.ResumeLayout(false);
             this.WeaponPlacementGP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WeaponPlacementComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeskerGP)).EndInit();
             this.WeskerGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.WeskerNoDashCostCheckEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WeskerInfiniteDashCheckEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WeskerGlassesCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeskerNoDashCostCE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeskerInfiniteDashCE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeskerGlassesCE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MeleeAnytimeGP)).EndInit();
             this.MeleeAnytimeGP.ResumeLayout(false);
             this.MeleeAnytimeGP.PerformLayout();
@@ -15746,45 +15850,17 @@ namespace GameX
             this.LoadoutControlGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LoadoutComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryBGPictureBox.Properties)).EndInit();
-            this.TabPageSettings.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TabPageSettingsGP)).EndInit();
-            this.TabPageSettingsGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GameModeGP)).EndInit();
-            this.GameModeGP.ResumeLayout(false);
-            this.GameModeGP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MiscModsGP)).EndInit();
-            this.MiscModsGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.HandTremorCheckEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ControllerAimGP)).EndInit();
-            this.ControllerAimGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ColorFilterGP)).EndInit();
-            this.ColorFilterGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.AboutPictureEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AppSettingsGP)).EndInit();
-            this.AppSettingsGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.MiscSettingsGP)).EndInit();
-            this.MiscSettingsGP.ResumeLayout(false);
-            this.MiscSettingsGP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UpdateModeComboBoxEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PaletteComboBoxEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LoadSaveGP)).EndInit();
-            this.LoadSaveGP.ResumeLayout(false);
             this.TabPageConsole.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleGP)).EndInit();
             this.ConsoleGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TimerGP)).EndInit();
-            this.TimerGP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.CurrentTimerTE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NoTimerDecreaseCE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ResetScoreCE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ComboTimerTE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ComboBonusTimerTE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ComboTimerMaxCE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ComboBonusTimerMaxCE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ScoreTE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DefaultTimesGP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeskerNoWeaponOnChestCE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DefaultTimersGP)).EndInit();
+            this.DefaultTimersGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MeleeKillCB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboTimerCB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboBonusTimerCB.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -15868,9 +15944,9 @@ namespace GameX
         private DevExpress.XtraEditors.ComboBoxEdit LegBackComboBox;
         private DevExpress.XtraEditors.GroupControl WeskerGP;
         private DevExpress.XtraEditors.GroupControl MeleeAnytimeGP;
-        private DevExpress.XtraEditors.CheckEdit WeskerNoDashCostCheckEdit;
-        private DevExpress.XtraEditors.CheckEdit WeskerInfiniteDashCheckEdit;
-        private DevExpress.XtraEditors.CheckEdit WeskerGlassesCheckEdit;
+        private DevExpress.XtraEditors.CheckEdit WeskerNoDashCostCE;
+        private DevExpress.XtraEditors.CheckEdit WeskerInfiniteDashCE;
+        private DevExpress.XtraEditors.CheckEdit WeskerGlassesCE;
         private DevExpress.XtraEditors.LabelControl ReloadLabelControl;
         private DevExpress.XtraEditors.ComboBoxEdit ReloadComboBox;
         private DevExpress.XtraEditors.LabelControl MoveRightLabelControl;
@@ -15890,8 +15966,8 @@ namespace GameX
         private DevExpress.XtraEditors.ComboBoxEdit WeaponPlacementComboBox;
         private DevExpress.XtraEditors.LabelControl WeaponPlacementLabelControl;
         private DevExpress.XtraEditors.GroupControl WeaponPlacementGP;
-        private DevExpress.XtraEditors.CheckEdit MeleeCameraCheckEdit;
-        private DevExpress.XtraEditors.CheckEdit ReunionSpecialMovesCheckEdit;
+        private DevExpress.XtraEditors.CheckEdit MeleeCameraCE;
+        private DevExpress.XtraEditors.CheckEdit ReunionSpecialMovesCE;
         private DevExpress.XtraEditors.GroupControl TabInventoryGP;
         private DevExpress.XtraEditors.GroupControl SlotsGP;
         private DevExpress.XtraEditors.PictureEdit InventoryBGPictureBox;
@@ -16066,7 +16142,7 @@ namespace GameX
         public DevExpress.XtraEditors.CheckEdit P1FreezeAllCheckEdit;
         private DevExpress.XtraEditors.GroupControl ControllerAimGP;
         private DevExpress.XtraEditors.SimpleButton ControllerAimButton;
-        private DevExpress.XtraEditors.CheckEdit HandTremorCheckEdit;
+        private DevExpress.XtraEditors.CheckEdit HandTremorCE;
         private DevExpress.XtraEditors.SimpleButton TabPageCharButton;
         private DevExpress.XtraEditors.SimpleButton TabPageMeleeButton;
         private DevExpress.XtraEditors.SimpleButton TabPageInventoryButton;
@@ -16573,7 +16649,11 @@ namespace GameX
         private DevExpress.XtraEditors.TextEdit ComboBonusTimerTE;
         private DevExpress.XtraEditors.TextEdit ComboTimerTE;
         private DevExpress.XtraEditors.CheckEdit ResetScoreCE;
-        private DevExpress.XtraEditors.GroupControl DefaultTimesGP;
+        private DevExpress.XtraEditors.CheckEdit WeskerNoWeaponOnChestCE;
+        private DevExpress.XtraEditors.GroupControl DefaultTimersGP;
+        private DevExpress.XtraEditors.ComboBoxEdit ComboBonusTimerCB;
+        private DevExpress.XtraEditors.ComboBoxEdit ComboTimerCB;
+        private DevExpress.XtraEditors.ComboBoxEdit MeleeKillCB;
     }
 }
 

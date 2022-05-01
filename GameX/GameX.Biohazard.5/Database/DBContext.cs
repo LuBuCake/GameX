@@ -18,6 +18,9 @@ namespace GameX.Database
         public List<Move> DashMoves { get; set; }
         public List<Simple> Palettes { get; set; }
         public List<Simple> Rates { get; set; }
+        public List<Simple> MeleeKillSeconds { get; set; }
+        public List<Simple> ComboTimerSeconds { get; set; }
+        public List<Simple> ComboBonusTimerSeconds { get; set; }
         public List<Simple> Handness { get; set; }
         public List<Simple> WeaponMode { get; set; }
         public List<Simple> WeaponPlacement { get; set; }
@@ -67,6 +70,9 @@ namespace GameX.Database
             Database.DashMoves = MoveContent.GetCollection(MoveTypeEnum.Dash);
             Database.Palettes = PaletteContent.GetCollection("The Bezier");
             Database.Rates = RateContent.GetCollection();
+            Database.MeleeKillSeconds = MeleeKillSecondsContent.GetCollection();
+            Database.ComboTimerSeconds = ComboTimerSecondsContent.GetCollection();
+            Database.ComboBonusTimerSeconds = ComboBonusTimerSecondsContent.GetCollection();
             Database.Handness = HandnessContent.GetCollection();
             Database.WeaponMode = WeaponModeContent.GetCollection();
             Database.WeaponPlacement = WeaponPlacementContent.GetCollection();

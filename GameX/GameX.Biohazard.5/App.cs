@@ -137,16 +137,12 @@ namespace GameX
                 P4RapidfireButton
             };
 
-            SimpleButton[] EnableDisable =
-            {
-                ColorFilterButton
-            };
-
             CheckEdit[] CheckUncheck =
             {
-                WeskerGlassesCheckEdit,
-                WeskerInfiniteDashCheckEdit,
-                WeskerNoDashCostCheckEdit
+                WeskerNoWeaponOnChestCE,
+                WeskerGlassesCE,
+                WeskerInfiniteDashCE,
+                WeskerNoDashCostCE
             };
 
             ComboBoxEdit[] MeleeCombosA =
@@ -639,7 +635,6 @@ namespace GameX
                 P4SlotKnifeScopeSE
             };
 
-
             CheckEdit[] InfiniteAmmoChecks =
             {
                 P1Slot1InfiniteAmmoCheckEdit,
@@ -804,14 +799,6 @@ namespace GameX
                 WeaponMode[i].SelectedIndex = 0;
                 Handness[i].SelectedIndex = 0;
 
-                if (i < EnableDisable.Length)
-                {
-                    EnableDisable[i].Click += EnableDisable_StateChanged;
-                }
-
-                if (i == 3)
-                    continue;
-
                 CheckUncheck[i].CheckedChanged += EnableDisable_StateChanged;
             }
 
@@ -893,6 +880,8 @@ namespace GameX
 
             P1FreezeAllCheckEdit.CheckedChanged += EnableDisable_StateChanged;
             P2FreezeAllCheckEdit.CheckedChanged += EnableDisable_StateChanged;
+            P3FreezeAllCheckEdit.CheckedChanged += EnableDisable_StateChanged;
+            P4FreezeAllCheckEdit.CheckedChanged += EnableDisable_StateChanged;
 
             MeleeAnytimeSwitch.Toggled += ToggleSwitch_Toggled;
 
@@ -917,9 +906,9 @@ namespace GameX
             WeaponPlacementComboBox.SelectedIndexChanged += WeaponPlacement_IndexChanged;
             WeaponPlacementComboBox.SelectedIndex = 0;
 
-            MeleeCameraCheckEdit.CheckedChanged += EnableDisable_StateChanged;
-            ReunionSpecialMovesCheckEdit.CheckedChanged += EnableDisable_StateChanged;
-            HandTremorCheckEdit.CheckedChanged += EnableDisable_StateChanged;
+            MeleeCameraCE.CheckedChanged += EnableDisable_StateChanged;
+            ReunionSpecialMovesCE.CheckedChanged += EnableDisable_StateChanged;
+            HandTremorCE.CheckedChanged += EnableDisable_StateChanged;
             NoTimerDecreaseCE.CheckedChanged += EnableDisable_StateChanged;
 
             ConsoleInputTextEdit.Validating += Terminal.ValidateInput;
@@ -928,6 +917,7 @@ namespace GameX
             InventoryPlayerSelectionRG.EditValueChanged += RadioGroup_EditValueChanged;
 
             ControllerAimButton.Click += EnableDisable_StateChanged;
+            ColorFilterButton.Click += EnableDisable_StateChanged;
 
             LoadoutSaveButton.Click += SimpleButton_Click;
             LoadoutApplyButton.Click += SimpleButton_Click;
@@ -937,6 +927,19 @@ namespace GameX
             RemoveMinuteButton.Click += SimpleButton_Click;
             ZeroTimeButton.Click += SimpleButton_Click;
 
+            MeleeKillCB.Properties.Items.AddRange(db.MeleeKillSeconds);
+            MeleeKillCB.SelectedIndexChanged += TimerCombos_SelectedIndexChanged;
+            MeleeKillCB.SelectedIndex = 0;
+
+            ComboTimerCB.Properties.Items.AddRange(db.ComboTimerSeconds);
+            ComboTimerCB.SelectedIndexChanged += TimerCombos_SelectedIndexChanged;
+            ComboTimerCB.SelectedIndex = 0;
+
+            ComboBonusTimerCB.Properties.Items.AddRange(db.ComboBonusTimerSeconds);
+            ComboBonusTimerCB.SelectedIndexChanged += TimerCombos_SelectedIndexChanged;
+            ComboBonusTimerCB.SelectedIndex = 0;
+
+
             if (db.Loadouts.Count > 0)
                 LoadoutComboBox.SelectedIndex = 0;
 
@@ -945,8 +948,9 @@ namespace GameX
             ResetHealthBars();
             SetupImages();
 
-            Terminal.WriteLine("[App] App initialized.");
             Configuration_Load(null, null);
+
+            Terminal.WriteLine("[App] App initialized.");
         }
 
         private void Application_Init()
@@ -1096,6 +1100,11 @@ namespace GameX
             Verified = false;
             Initialized = false;
 
+            ScoreTE.Text = "0";
+            ComboTimerTE.Text = "00:00";
+            ComboBonusTimerTE.Text = "00:00";
+            CurrentTimerTE.Text = "00:00:00";
+
             Terminal.WriteLine("[App] Runtime cleared successfully.");
         }
 
@@ -1187,7 +1196,7 @@ namespace GameX
                 Width = 1250;
                 Height = 523;
                 MasterTabControl.Width = 1225;
-                MasterTabControl.Height = 439; //467
+                MasterTabControl.Height = 439;
                 TabInventoryGP.Width = 1206;
                 TabInventoryGP.Height = 418;
             }
@@ -1196,7 +1205,7 @@ namespace GameX
                 Width = 664;
                 Height = 523;
                 MasterTabControl.Width = 640;
-                MasterTabControl.Height = 439; //467
+                MasterTabControl.Height = 439;
                 TabInventoryGP.Width = 622;
                 TabInventoryGP.Height = 418;
             }
@@ -1225,7 +1234,24 @@ namespace GameX
             Settings Setts = new Settings()
             {
                 UpdateRate = UpdateModeComboBoxEdit.SelectedIndex,
-                SkinName = UserLookAndFeel.Default.ActiveSvgPaletteName
+                SkinName = UserLookAndFeel.Default.ActiveSvgPaletteName,
+                DisableMeleeCamera = MeleeCameraCE.Checked,
+                ReunionSpecialMoves = ReunionSpecialMovesCE.Checked,
+                WeaponPlacement = WeaponPlacementComboBox.SelectedIndex,
+                WeskerNoSunglassDrop = WeskerGlassesCE.Checked,
+                WeskerNoDashHPCost = WeskerNoDashCostCE.Checked,
+                WeskerInfiniteDash = WeskerInfiniteDashCE.Checked,
+                WeskerNoWeaponOnChest = WeskerNoWeaponOnChestCE.Checked,
+                ControllerAim = ControllerAimButton.Text == "Disable",
+                FilterRemover = ColorFilterButton.Text == "Disable",
+                NoHandTremors = HandTremorCE.Checked,
+                ResetScore = ResetScoreCE.Checked,
+                MaxComboTimer = ComboTimerMaxCE.Checked,
+                MaxComboBonusTimer = ComboBonusTimerMaxCE.Checked,
+                NoTimerDecrease = NoTimerDecreaseCE.Checked,
+                MeleeKillSeconds = MeleeKillCB.SelectedIndex,
+                ComboTimerDuration = ComboTimerCB.SelectedIndex,
+                ComboBonusTimerDuration = ComboBonusTimerCB.SelectedIndex
             };
 
             try
@@ -1235,7 +1261,6 @@ namespace GameX
             catch (Exception Ex)
             {
                 Terminal.WriteLine(Ex);
-                throw;
             }
 
             Utility.MessageBox_Information("Settings saved.");
@@ -1259,7 +1284,6 @@ namespace GameX
             catch (Exception Ex)
             {
                 Terminal.WriteLine(Ex);
-                throw;
             }
 
             UpdateModeComboBoxEdit.SelectedIndex = Utility.Clamp(Setts.UpdateRate, 0, 2);
@@ -1269,6 +1293,34 @@ namespace GameX
                 if (Pallete.Text == Setts.SkinName)
                     PaletteComboBoxEdit.SelectedItem = Pallete;
             }
+
+            MeleeCameraCE.Checked = Setts.DisableMeleeCamera;
+            ReunionSpecialMovesCE.Checked = Setts.ReunionSpecialMoves;
+            WeskerGlassesCE.Checked = Setts.WeskerNoSunglassDrop;
+            WeskerNoDashCostCE.Checked = Setts.WeskerNoDashHPCost;
+            WeskerInfiniteDashCE.Checked = Setts.WeskerInfiniteDash;
+            WeskerNoWeaponOnChestCE.Checked = Setts.WeskerNoWeaponOnChest;
+            HandTremorCE.Checked = Setts.NoHandTremors;
+            ResetScoreCE.Checked = Setts.ResetScore;
+            ComboTimerMaxCE.Checked = Setts.MaxComboTimer;
+            ComboBonusTimerMaxCE.Checked = Setts.MaxComboBonusTimer;
+            NoTimerDecreaseCE.Checked = Setts.NoTimerDecrease;
+
+            WeaponPlacementComboBox.SelectedIndex = Setts.WeaponPlacement;
+            WeaponPlacement_IndexChanged(WeaponPlacementComboBox, null);
+
+            MeleeKillCB.SelectedIndex = Setts.MeleeKillSeconds;
+            TimerCombos_SelectedIndexChanged(MeleeKillCB, null);
+            ComboTimerCB.SelectedIndex = Setts.ComboTimerDuration;
+            TimerCombos_SelectedIndexChanged(ComboTimerCB, null);
+            ComboBonusTimerCB.SelectedIndex = Setts.ComboBonusTimerDuration;
+            TimerCombos_SelectedIndexChanged(ComboBonusTimerCB, null);
+
+            if ((Setts.ControllerAim && ControllerAimButton.Text == "Enable") || (!Setts.ControllerAim && ControllerAimButton.Text == "Disable"))
+                EnableDisable_StateChanged(ControllerAimButton, null);
+
+            if ((Setts.FilterRemover && ColorFilterButton.Text == "Enable") || (!Setts.FilterRemover && ColorFilterButton.Text == "Disable"))
+                EnableDisable_StateChanged(ColorFilterButton, null);
 
             if (sender != null)
                 Utility.MessageBox_Information("Settings loaded.");
@@ -1603,34 +1655,48 @@ namespace GameX
             {
                 CheckEdit CE = sender as CheckEdit;
 
-                if (CE.Name.Equals("WeskerGlassesCheckEdit"))
+                if (CE.Name.Equals("WeskerNoWeaponOnChestCE"))
+                {
+                    if (!Initialized)
+                        return;
+
+                    Biohazard.WeskerNoWeaponOnChest(CE.Checked);
+                }
+                else if (CE.Name.Equals("WeskerGlassesCE"))
                 {
                     if (!Initialized)
                         return;
 
                     Biohazard.WeskerNoSunglassDrop(CE.Checked);
                 }
-                else if (CE.Name.Equals("WeskerNoDashCostCheckEdit"))
+                else if (CE.Name.Equals("WeskerNoDashCostCE"))
                 {
                     if (!Initialized)
                         return;
 
                     Biohazard.WeskerNoDashCost(CE.Checked);
                 }
-                else if (CE.Name.Equals("MeleeCameraCheckEdit"))
+                else if (CE.Name.Equals("MeleeCameraCE"))
                 {
                     if (!Initialized)
                         return;
 
                     Biohazard.DisableMeleeCamera(CE.Checked);
                 }
-                else if (CE.Name.Equals("ReunionSpecialMovesCheckEdit"))
+                else if (CE.Name.Equals("ReunionSpecialMovesCE"))
                 {
                     if (!Initialized)
                         return;
 
+                    bool Enabled = Biohazard.EnableReunionSpecialMoves(CE.Checked);
+
                     CE.CheckedChanged -= EnableDisable_StateChanged;
-                    CE.Checked = Biohazard.EnableReunionSpecialMoves(CE.Checked);
+
+                    if (Enabled)
+                        CE.Checked = CE.Checked;
+                    else
+                        CE.Checked = false;
+
                     CE.CheckedChanged += EnableDisable_StateChanged;
                 }
                 else if (CE.Name.Contains("FreezeAllCheckEdit"))
@@ -1649,7 +1715,7 @@ namespace GameX
                     int SelectedPlayer = int.Parse(CE.Name[1].ToString()) - 1;
                     Biohazard.Players[SelectedPlayer].Inventory.LoadoutSlots[Index].UpdateItemToMemory(Initialized);
                 }
-                else if (CE.Name.Equals("HandTremorCheckEdit"))
+                else if (CE.Name.Equals("HandTremorCE"))
                 {
                     if (!Initialized)
                         return;
@@ -1809,6 +1875,28 @@ namespace GameX
             }
         }
 
+        private void TimerCombos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!Initialized)
+                return;
+
+            ComboBoxEdit CBE = sender as ComboBoxEdit;
+            Simple CBEItem = CBE.SelectedItem as Simple;
+
+            switch (CBE.Name)
+            {
+                case "MeleeKillCB":
+                    Biohazard.MeleeKillSeconds = (byte)CBEItem.Value;
+                    break;
+                case "ComboTimerCB":
+                    Biohazard.ComboTimerDuration = (byte)CBEItem.Value;
+                    break;
+                case "ComboBonusTimerCB":
+                    Biohazard.ComboBonusTimerDuration = (byte)CBEItem.Value;
+                    break;
+            }
+        }
+
         #endregion
 
         #region GameX Calls
@@ -1823,26 +1911,38 @@ namespace GameX
 
             CheckEdit[] CheckUncheck =
             {
-                WeskerGlassesCheckEdit,
-                MeleeCameraCheckEdit,
-                ReunionSpecialMovesCheckEdit,
-                HandTremorCheckEdit,
+                WeskerNoWeaponOnChestCE,
+                WeskerGlassesCE,
+                MeleeCameraCE,
+                ReunionSpecialMovesCE,
+                HandTremorCE,
                 NoTimerDecreaseCE
+            };
+
+            ComboBoxEdit[] Combos =
+            {
+                MeleeKillCB,
+                ComboTimerCB,
+                ComboBonusTimerCB
             };
 
             foreach (CheckEdit CE in CheckUncheck)
             {
                 switch (CE.Name)
                 {
-                    case "WeskerGlassesCheckEdit":
+                    case "WeskerNoWeaponOnCE":
+                        if (CE.Checked)
+                            Biohazard.WeskerNoWeaponOnChest(true);
+                        break;
+                    case "WeskerGlassesCE":
                         if (CE.Checked)
                             Biohazard.WeskerNoSunglassDrop(true);
                         break;
-                    case "MeleeCameraCheckEdit":
+                    case "MeleeCameraCE":
                         if (CE.Checked)
                             Biohazard.DisableMeleeCamera(true);
                         break;
-                    case "ReunionSpecialMovesCheckEdit":
+                    case "ReunionSpecialMovesCE":
                         if (CE.Checked)
                         {
                             CE.CheckedChanged -= EnableDisable_StateChanged;
@@ -1850,7 +1950,7 @@ namespace GameX
                             CE.CheckedChanged += EnableDisable_StateChanged;
                         }
                         break;
-                    case "HandTremorCheckEdit":
+                    case "HandTremorCE":
                         if (CE.Checked)
                             Biohazard.DisableHandTremor(true);
                         break;
@@ -1878,6 +1978,11 @@ namespace GameX
                 }
             }
 
+            foreach (ComboBoxEdit CBE in Combos)
+            {
+                TimerCombos_SelectedIndexChanged(CBE, null);
+            }
+
             Melee_ApplyComboBox(null, true);
             WeaponPlacement_IndexChanged(WeaponPlacementComboBox, null);
             RadioGroup_EditValueChanged(InventoryPlayerSelectionRG, null);
@@ -1903,26 +2008,25 @@ namespace GameX
         {
             try
             {
-                ScoreTE.Text = "0";
-                ComboTimerTE.Text = "00:00";
-                ComboBonusTimerTE.Text = "00:00";
-                CurrentTimerTE.Text = "00:00:00";
-
                 if (!Biohazard.ModuleStarted)
                     return;
 
                 if (MeleeAnytimeSwitch.IsOn)
                     MeleeAnytimeSwitch.Toggle();
 
+                Biohazard.EnableColorFilter(false);
                 Biohazard.NoFileChecking(false);
-                Biohazard.OnlineCharSwapFixes(false);
-                //Biohazard.EnableColorFilter(false);
-                //Biohazard.WeskerNoSunglassDrop(false);
-                //Biohazard.WeskerNoDashCost(false);
-                //Biohazard.SetWeaponPlacement(0);
-                //Biohazard.DisableMeleeCamera(false);
-                //Biohazard.EnableReunionSpecialMoves(false);
-                //Biohazard.EnableControllerAim(false);
+                Biohazard.OnlineCharSwapFixes(false);           
+                Biohazard.WeskerNoWeaponOnChest(false);
+                Biohazard.WeskerNoSunglassDrop(false);
+                Biohazard.WeskerNoDashCost(false);
+                Biohazard.NoTimerDecrease(false);
+                Biohazard.EnableControllerAim(false);
+                Biohazard.SetWeaponPlacement(0);
+                Biohazard.DisableMeleeCamera(false);
+                Biohazard.DisableHandTremor(false);
+                Biohazard.EnableStunRodMeleeKill(false);
+                Biohazard.EnableReunionSpecialMoves(false);
 
                 Biohazard.FinishModule();
             }
@@ -2129,10 +2233,14 @@ namespace GameX
 
             #region Game Mode Update
 
+            double combotimer = Utility.Clamp(Biohazard.ComboTimer, 0, TimeSpan.MaxValue.TotalSeconds - 1d);
+            double combobonustimer = Utility.Clamp(Biohazard.ComboBonusTimer, 0, TimeSpan.MaxValue.TotalSeconds - 1d);
+            double timer = Utility.Clamp(Biohazard.Timer, 0, TimeSpan.MaxValue.TotalSeconds - 1d);
+
             ScoreTE.Text = Biohazard.Score.ToString();
-            ComboTimerTE.Text = TimeSpan.FromSeconds(Biohazard.ComboTimer).ToString("mm':'ss");
-            ComboBonusTimerTE.Text = TimeSpan.FromSeconds(Biohazard.ComboBonusTimer).ToString("mm':'ss");
-            CurrentTimerTE.Text = TimeSpan.FromSeconds(Biohazard.Timer).ToString("hh':'mm':'ss");
+            ComboTimerTE.Text = TimeSpan.FromSeconds(double.IsNaN(combotimer) ? 0f : combotimer).ToString("mm':'ss");
+            ComboBonusTimerTE.Text = TimeSpan.FromSeconds(double.IsNaN(combobonustimer) ? 0f : combobonustimer).ToString("mm':'ss");
+            CurrentTimerTE.Text = TimeSpan.FromSeconds(double.IsNaN(timer) ? 0f : timer).ToString("hh':'mm':'ss");
 
             if (Biohazard.GameMode == (int)GameModeEnum.Mercenaries || Biohazard.GameMode == (int)GameModeEnum.Reunion)
             {
@@ -2221,7 +2329,7 @@ namespace GameX
                 }
 
                 // Wesker Dash cost
-                Biohazard.WeskerNoDashCost(WeskerNoDashCostCheckEdit.Checked); // && Biohazard.GameMode != (int)GameModeEnum.Versus
+                Biohazard.WeskerNoDashCost(WeskerNoDashCostCE.Checked); // && Biohazard.GameMode != (int)GameModeEnum.Versus
 
                 // If versus then end the current iteration //
                 // if (Biohazard.GameMode == (int)GameModeEnum.Versus)
@@ -2252,7 +2360,7 @@ namespace GameX
                     Biohazard.Players[i].SetRapidFire(true);
 
                 // Infinite Dash //
-                if (WeskerInfiniteDashCheckEdit.Checked && PlayerPresent && Biohazard.Players[i].Character == (int)CharacterEnum.Wesker)
+                if (WeskerInfiniteDashCE.Checked && PlayerPresent && Biohazard.Players[i].Character == (int)CharacterEnum.Wesker)
                     Biohazard.Players[i].ResetDash();
             }
 

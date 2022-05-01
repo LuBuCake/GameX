@@ -228,10 +228,11 @@
   </Target>
   <Import Project="..\packages\Costura.Fody.5.7.0\build\Costura.Fody.targets" Condition="Exists('..\packages\Costura.Fody.5.7.0\build\Costura.Fody.targets')" />
   <PropertyGroup>
-    <PostBuildEvent>mkdir C:\Users\madne\Desktop\x86\
-
+    <PostBuildEvent>if $(ConfigurationName) == Release (
+mkdir C:\Users\madne\Desktop\x86\
 xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\x86 /y
 xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\x86 /y
+)
 
 xcopy $(TargetDir)\$(TargetFileName) $(SolutionDir)\GameX.Launcher.x86\$(OutDir) /y
 xcopy $(TargetDir)\$(TargetFileName).config $(SolutionDir)\GameX.Launcher.x86\$(OutDir) /y</PostBuildEvent>

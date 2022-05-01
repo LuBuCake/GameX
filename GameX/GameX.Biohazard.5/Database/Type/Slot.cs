@@ -265,7 +265,7 @@ namespace GameX.Database.Type
             Piercing = 0;
             Range = 0;
             Scope = 0;
-            RapidFire = Mode == SlotType.Loadout ? RapidFireCheckEdit.Checked : false;
+            RapidFire = Mode == SlotType.Loadout && RapidFireCheckEdit.Checked;
 
             DB db = DBContext.GetDatabase();
 
@@ -453,7 +453,7 @@ namespace GameX.Database.Type
             ToMemory.Range = (byte)Array.IndexOf(ToMemoryItem.Range, int.Parse(RangeSE.Text));
             ToMemory.Scope = (byte)Array.IndexOf(ToMemoryItem.Scope, int.Parse(ScopeSE.Text));
 
-            if (!WriteOnMemory || FrozenCheckEdit.Checked)
+            if (!WriteOnMemory)
                 return;
 
             SetItem(ToMemory);
@@ -463,7 +463,7 @@ namespace GameX.Database.Type
         {
             if (!FrozenCheckEdit.Checked)
             {
-                UpdateItemFromMemory(!FrozenCheckEdit.Checked);
+                UpdateItemFromMemory(true);
                 return;
             }
 

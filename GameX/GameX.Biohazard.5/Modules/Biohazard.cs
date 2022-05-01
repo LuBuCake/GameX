@@ -134,25 +134,6 @@ namespace GameX.Modules
 
         #region Methods
 
-        public static void EnableColorFilter(bool Enable)
-        {
-            Memory.WriteBytes(Enable ? new byte[] { 0xE9, 0x51, 0x04, 0x00, 0x00, 0x90 } : new byte[] { 0x0F, 0x84, 0x50, 0x04, 0x00, 0x00 }, "re5dx9.exe", 0x3C7113);
-            Memory.WriteBytes(Enable ? new byte[] { 0xE9, 0x88, 0x66, 0x00, 0x00, 0x90 } : new byte[] { 0x0F, 0x87, 0x87, 0x66, 0x00, 0x00 }, "re5dx9.exe", 0x945D8);
-        }
-
-        public static void NoFileChecking(bool Enable)
-        {
-            Memory.WriteBytes(!Enable ? new byte[] {0xC3, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90} : new byte[] {83, 0x3D, 0x0C, 0xAD, 0x23, 0x01, 0x00}, "re5dx9.exe", 0xE340);
-        }
-
-        public static void OnlineCharSwapFixes(bool Enable)
-        {
-            Memory.WriteBytes(Enable ? new byte[] {0xEB} : new byte[] {0x75}, "re5dx9.exe", 0x223E17);
-            Memory.WriteBytes(Enable ? new byte[] {0xEB} : new byte[] {0x75}, "re5dx9.exe", 0x2240EF);
-            Memory.WriteBytes(Enable ? new byte[] {0x90, 0x90, 0x90} : new byte[] {0x89, 0x57, 0x0C}, "re5dx9.exe", 0x32FB3B);
-            Memory.WriteBytes(Enable ? new byte[] {0x00} : new byte[] {0x14}, "re5dx9.exe", 0x89186C);
-        }
-
         public static void SetStoryModeCharacter(int Index, int Character, int Costume)
         {
             if (Index > 1)
@@ -162,21 +143,11 @@ namespace GameX.Modules
             Memory.Write(Costume, "re5dx9.exe", 0xDA383C, 0x7139C + (0x50 * Index));
         }
 
-        public static void WeskerNoSunglassDrop(bool Enable)
-        {
-            Memory.WriteBytes(Enable ? new byte[] { 0xEB } : new byte[] { 0x75 }, "re5dx9.exe", 0x77B1C1);
-        }
-
-        public static void WeskerNoDashCost(bool Enable)
-        {
-            Memory.Write(Enable ? 0 : 100, "re5dx9.exe", 0xDA3814, 0x80);
-        }
-
         public static void SetMelee(string Name, byte Value)
         {
             int Address;
 
-            switch(Name)
+            switch (Name)
             {
                 case "Reunion Head / Flash":
                     Address = 0x00B5D583;
@@ -241,6 +212,44 @@ namespace GameX.Modules
             {
                 Memory.WriteBytes(new[] { Value }, "", Address);
             }
+        }
+
+        #endregion
+
+        #region Patches
+
+        public static void EnableColorFilter(bool Enable)
+        {
+            Memory.WriteBytes(Enable ? new byte[] { 0xE9, 0x51, 0x04, 0x00, 0x00, 0x90 } : new byte[] { 0x0F, 0x84, 0x50, 0x04, 0x00, 0x00 }, "re5dx9.exe", 0x3C7113);
+            Memory.WriteBytes(Enable ? new byte[] { 0xE9, 0x88, 0x66, 0x00, 0x00, 0x90 } : new byte[] { 0x0F, 0x87, 0x87, 0x66, 0x00, 0x00 }, "re5dx9.exe", 0x945D8);
+        }
+
+        public static void NoFileChecking(bool Enable)
+        {
+            Memory.WriteBytes(!Enable ? new byte[] {0xC3, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90} : new byte[] {83, 0x3D, 0x0C, 0xAD, 0x23, 0x01, 0x00}, "re5dx9.exe", 0xE340);
+        }
+
+        public static void OnlineCharSwapFixes(bool Enable)
+        {
+            Memory.WriteBytes(Enable ? new byte[] {0xEB} : new byte[] {0x75}, "re5dx9.exe", 0x223E17);
+            Memory.WriteBytes(Enable ? new byte[] {0xEB} : new byte[] {0x75}, "re5dx9.exe", 0x2240EF);
+            Memory.WriteBytes(Enable ? new byte[] {0x90, 0x90, 0x90} : new byte[] {0x89, 0x57, 0x0C}, "re5dx9.exe", 0x32FB3B);
+            Memory.WriteBytes(Enable ? new byte[] {0x00} : new byte[] {0x14}, "re5dx9.exe", 0x89186C);
+        }
+
+        public static void WeskerNoWeaponOnChest(bool Enable)
+        {
+            Memory.WriteBytes(Enable ? new byte[] { 0x90, 0x90, 0x90, 0x90, 0x90, 0x90 } : new byte[] { 0x89, 0x85, 0x1C, 0x1E, 0x00, 0x00 }, "re5dx9.exe", 0x76F83A);
+        }
+
+        public static void WeskerNoSunglassDrop(bool Enable)
+        {
+            Memory.WriteBytes(Enable ? new byte[] { 0xEB } : new byte[] { 0x75 }, "re5dx9.exe", 0x77B1C1);
+        }
+
+        public static void WeskerNoDashCost(bool Enable)
+        {
+            Memory.Write(Enable ? 0 : 100, "re5dx9.exe", 0xDA3814, 0x80);
         }
 
         public static void NoTimerDecrease(bool Enable)

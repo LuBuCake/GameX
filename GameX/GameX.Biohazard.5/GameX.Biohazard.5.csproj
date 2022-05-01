@@ -247,6 +247,7 @@
     <Compile Include="Database\Content\MoveContent.cs" />
     <Compile Include="Database\Content\PaletteContent.cs" />
     <Compile Include="Database\Content\RateContent.cs" />
+    <Compile Include="Database\Content\TimerContent.cs" />
     <Compile Include="Database\Content\WeaponModeContent.cs" />
     <Compile Include="Database\Content\WeaponPlacementContent.cs" />
     <Compile Include="Database\ViewBag\LoadoutViewBag.cs" />
@@ -453,7 +454,11 @@ xcopy $(TargetDir)\$(TargetFileName) C:\Users\madne\Desktop\x86\addons\GameX.Bio
 xcopy $(TargetDir)\$(TargetFileName).config C:\Users\madne\Desktop\x86\addons\GameX.Biohazard.5\ /y
 
 mkdir $(SolutionDir)\GameX.Launcher.x86\$(OutDir)\addons\
-xcopy C:\Users\madne\Desktop\x86\addons $(SolutionDir)\GameX.Launcher.x86\$(OutDir)\addons\ /e /y</PostBuildEvent>
+xcopy C:\Users\madne\Desktop\x86\addons $(SolutionDir)\GameX.Launcher.x86\$(OutDir)\addons\ /e /y
+
+if $(ConfigurationName) == Debug (
+RD /S /Q "C:\Users\madne\Desktop\x86\"
+)</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>
