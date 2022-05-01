@@ -1,0 +1,125 @@
+{
+  "Name": "Agent RE6",
+  "Slots": [
+    {
+      "ID": 513,
+      "Quantity": 50,
+      "MaxQuantity": 50,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 291,
+      "Quantity": 1,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 516,
+      "Quantity": 20,
+      "MaxQuantity": 30,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 273,
+      "Quantity": 16,
+      "MaxQuantity": 0,
+      "Firepower": 8,
+      "ReloadSpeed": 0,
+      "Capacity": 5,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 772,
+      "Quantity": 1,
+      "MaxQuantity": 1,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 288,
+      "Quantity": 7,
+      "MaxQuantity": 0,
+      "Firepower": 9,
+      "ReloadSpeed": 3,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 0,
+      "Quantity": 0,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 266,
+      "Quantity": 5,
+      "MaxQuantity": 5,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 0,
+      "Quantity": 0,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 0,
+      "Quantity": 0,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    }
+  ]
+}

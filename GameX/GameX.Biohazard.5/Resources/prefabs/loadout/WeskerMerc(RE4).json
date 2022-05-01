@@ -1,0 +1,125 @@
+{
+  "Name": "Wesker Merc (RE4)",
+  "Slots": [
+    {
+      "ID": 262,
+      "Quantity": 4,
+      "MaxQuantity": 5,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 288,
+      "Quantity": 18,
+      "MaxQuantity": 0,
+      "Firepower": 9,
+      "ReloadSpeed": 3,
+      "Capacity": 7,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 264,
+      "Quantity": 3,
+      "MaxQuantity": 5,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 258,
+      "Quantity": 25,
+      "MaxQuantity": 0,
+      "Firepower": 5,
+      "ReloadSpeed": 0,
+      "Capacity": 4,
+      "Critical": 2,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 263,
+      "Quantity": 1,
+      "MaxQuantity": 5,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 282,
+      "Quantity": 8,
+      "MaxQuantity": 0,
+      "Firepower": 6,
+      "ReloadSpeed": 0,
+      "Capacity": 3,
+      "Critical": 0,
+      "Piercing": 2,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 0,
+      "Quantity": 0,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 772,
+      "Quantity": 1,
+      "MaxQuantity": 1,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 0,
+      "Quantity": 0,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    },
+    {
+      "ID": 276,
+      "Quantity": 1,
+      "MaxQuantity": 0,
+      "Firepower": 0,
+      "ReloadSpeed": 0,
+      "Capacity": 0,
+      "Critical": 0,
+      "Piercing": 0,
+      "Range": 0,
+      "Scope": 0
+    }
+  ]
+}

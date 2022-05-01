@@ -130,6 +130,18 @@ namespace GameX.Modules
             set { Memory.Write(value, "re5dx9.exe", 0xCCDB50); }
         }
 
+        public static int Chapter
+        {
+            get { return Memory.Read<int>("re5dx9.exe", 0x00DA3078, 0x70168); }
+            set { Memory.Write(value, "re5dx9.exe", 0x00DA3078, 0x70168); }
+        }
+
+        public static short Stage
+        {
+            get { return Memory.Read<short>("re5dx9.exe", 0x00DA3078, 0x70160); }
+            set { Memory.Write(value, "re5dx9.exe", 0x00DA3078, 0x70160); }
+        }
+
         #endregion
 
         #region Methods

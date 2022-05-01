@@ -10,6 +10,7 @@ namespace GameX.Database
     public class DB
     {
         public List<Character> Characters { get; set; }
+        public List<Map> Maps { get; set; }
         public List<Item> AllItems { get; set; }
         public List<Item> ComboBoxItems { get; set; }
         public List<Move> MovementMoves { get; set; }
@@ -58,6 +59,7 @@ namespace GameX.Database
             }
 
             Database.Characters = CharacterContent.GetCollection(WriteChars);
+            Database.Maps = MapContent.GetCollection();
             Database.AllItems = ItemContent.GetCollection(WriteItems);
 
             List<Item> ComboBoxItems = new List<Item>(Database.AllItems);

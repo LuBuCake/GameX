@@ -13,6 +13,7 @@
         public bool WeskerNoWeaponOnChest { get; set; }
         public bool ControllerAim { get; set; }
         public bool FilterRemover { get; set; }
+        public bool StunRodMeleeKill { get; set; }
         public bool NoHandTremors { get; set; }
         public bool ResetScore { get; set; }
         public bool MaxComboTimer { get; set; }

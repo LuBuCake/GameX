@@ -1,0 +1,85 @@
+﻿using System.Collections.Generic;
+using GameX.Database.Type;
+
+namespace GameX.Database.Content
+{
+    public static class MapContent
+    {
+        public static List<Map> GetCollection()
+        {
+            return new List<Map>
+            {
+                new Map("1-1 Civilian Checkpoint", "1", 100, 0),
+                new Map("1-1 Back Alley 1", "2", 115, 0),
+                new Map("1-1 Back Alley 2", "3", 116, 0),
+                new Map("1-1 Public Assembly", "4", 114, 0),
+                new Map("1-2 Public Assembly", "4", 114, 1),
+                new Map("1-2 Public Urban District", "5", 102, 1),
+                new Map("1-2 Abandoned Building", "6", 117, 1),
+                new Map("1-2 Furnace Facility (Uroboros Fight)", "7", 103, 1),
+                new Map("2-1 Storage Facility", "8", 118, 2),
+                new Map("2-1 The Bridge", "9", 104, 2),
+                new Map("2-1 The Port", "10", 113, 2),
+                new Map("2-1 Shanty Town", "11", 105, 2),
+                new Map("2-1 Train Yard", "12", 106, 2),
+                new Map("2-2 Train Station", "13", 119, 3),
+                new Map("2-2 The Mines", "14", 107, 3),
+                new Map("2-2 Mining Area (Popokarimu Fight)", "15", 108, 3),
+                new Map("2-3 Savanna", "16", 109, 4),
+                new Map("2-3 The Port (Night) (Ndesu Fight)", "17", 111, 4),
+                new Map("3-1 Marshlands", "18", 200, 5),
+                new Map("3-1 Village", "19", 202, 5),
+                new Map("3-2 Execution Ground", "20", 201, 6),
+                new Map("3-2 Oil Field - Refinery", "21", 207, 6),
+                new Map("3-2 Oil Field - Control Facility", "22", 203, 6),
+                new Map("3-2 Oil Field - Dock", "23", 209, 6),
+                new Map("3-3 Oil Field - Drilling Facilities", "24", 204, 7),
+                new Map("3-3 Patrol Boat (Irving Fight)", "25", 205, 7),
+                new Map("4-1 Caves", "26", 313, 8),
+                new Map("4-1 Acient Village", "27", 300, 8),
+                new Map("4-1 Labyrinth (Popokarimu Fight)", "28", 301, 8),
+                new Map("4-2 Worship Area", "29", 302, 9),
+                new Map("4-2 Pyramid", "30", 303, 9),
+                new Map("4-2 Underground Garden", "31", 312, 9),
+                new Map("5-1 Underground Garden", "31", 312, 10),
+                new Map("5-1 Progenitor Virus House", "32", 305, 10),
+                new Map("5-1 Experimental Facility (U-8 Fight)", "33", 304, 10),
+                new Map("5-2 Experimental Facility", "33", 304, 11),
+                new Map("5-2 Power Station", "34", 310, 11),
+                new Map("5-2 Missile Area 1st Floor", "35", 307, 11),
+                new Map("5-2 Experimental Facility Passage", "36", 316, 11),
+                new Map("5-2 Uroboros Research Facility (Uroboros Fight)", "37", 308, 11),
+                new Map("5-3 Uroboros Research Facility", "37", 308, 12),
+                new Map("5-3 Missile Area 2nd Floor", "38", 314, 12),
+                new Map("5-3 Moving Platform", "39", 315, 12),
+                new Map("5-3 Monarch Room Entrance", "40", 311, 12),
+                new Map("5-3 Monarch Room (Wesker & Jill Fight)", "41", 309, 12),
+                new Map("6-1 Ship Deck", "42", 500, 13),
+                new Map("6-1 Ship Hold", "43", 501, 13),
+                new Map("6-2 Main Deck", "44", 503, 14),
+                new Map("6-2 Bridge", "45", 504, 14),
+                new Map("6-2 Bridge Deck (Uroboros Aheri Fight)", "46", 511, 14),
+                new Map("6-3 Bridge Deck", "46", 511, 15),
+                new Map("6-3 Bridge", "47", 512, 15),
+                new Map("6-3 Engine Room", "49", 505, 15),
+                new Map("6-3 Hangar (Wesker Fight)", "50", 506, 15),
+                new Map("6-3 Volcano (Uroboros Wesker Fight)", "51", 508, 15),
+                new Map("Mercenaries - Public Assembly", "52", 400, -1),
+                new Map("Mercenaries - The Mines", "53", 401, -1),
+                new Map("Mercenaries - Village", "54", 402, -1),
+                new Map("Mercenaries - Ancient Ruins", "55", 403, -1),
+                new Map("Mercenaries - Experimental Facility", "56", 404, -1),
+                new Map("Mercenaries - Missile Area", "57", 405, -1),
+                new Map("Mercenaries - Ship Deck", "58", 406, -1),
+                new Map("Mercenaries - Prison", "59", 407, -1),
+                new Map("Lost In Nightmares - The Spencer State", "60", 700, 0),
+                new Map("Lost In Nightmares - Underground Prision", "60", 701, 0),
+                new Map("Lost In Nightmares - Sewers", "60", 705, 0),
+                new Map("Lost In Nightmares - Spencer Room", "60", 706, 0),
+                new Map("Desesperate Escape - Dock Area - 1", "61", 702, 0),
+                new Map("Desesperate Escape - Dock Area - 2", "61", 703, 0),
+                new Map("Desesperate Escape - Helipad", "61", 704, 0)
+            };
+        }
+    }
+}

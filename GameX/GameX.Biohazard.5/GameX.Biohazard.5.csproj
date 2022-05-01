@@ -244,12 +244,14 @@
     <Compile Include="Database\Content\HandnessContent.cs" />
     <Compile Include="Database\Content\ItemContent.cs" />
     <Compile Include="Database\Content\LoadoutViewBagContent.cs" />
+    <Compile Include="Database\Content\MapContent.cs" />
     <Compile Include="Database\Content\MoveContent.cs" />
     <Compile Include="Database\Content\PaletteContent.cs" />
     <Compile Include="Database\Content\RateContent.cs" />
     <Compile Include="Database\Content\TimerContent.cs" />
     <Compile Include="Database\Content\WeaponModeContent.cs" />
     <Compile Include="Database\Content\WeaponPlacementContent.cs" />
+    <Compile Include="Database\Type\Map.cs" />
     <Compile Include="Database\ViewBag\LoadoutViewBag.cs" />
     <Compile Include="Enum\CharacterEnum.cs" />
     <Compile Include="Enum\GameModeEnum.cs" />

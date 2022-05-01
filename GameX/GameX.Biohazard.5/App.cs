@@ -908,6 +908,7 @@ namespace GameX
 
             MeleeCameraCE.CheckedChanged += EnableDisable_StateChanged;
             ReunionSpecialMovesCE.CheckedChanged += EnableDisable_StateChanged;
+            StunRodMeleeKillCE.CheckedChanged += EnableDisable_StateChanged;
             HandTremorCE.CheckedChanged += EnableDisable_StateChanged;
             NoTimerDecreaseCE.CheckedChanged += EnableDisable_StateChanged;
 
@@ -939,6 +940,9 @@ namespace GameX
             ComboBonusTimerCB.SelectedIndexChanged += TimerCombos_SelectedIndexChanged;
             ComboBonusTimerCB.SelectedIndex = 0;
 
+            MapsCB.Properties.Items.AddRange(db.Maps);
+            MapsCB.SelectedIndexChanged += MapsCombo_SelectedIndexChanged;
+            MapsCB.SelectedIndex = 0;
 
             if (db.Loadouts.Count > 0)
                 LoadoutComboBox.SelectedIndex = 0;
@@ -1246,6 +1250,7 @@ namespace GameX
                 WeskerNoWeaponOnChest = WeskerNoWeaponOnChestCE.Checked,
                 ControllerAim = ControllerAimButton.Text == "Disable",
                 FilterRemover = ColorFilterButton.Text == "Disable",
+                StunRodMeleeKill = StunRodMeleeKillCE.Checked,
                 NoHandTremors = HandTremorCE.Checked,
                 ResetScore = ResetScoreCE.Checked,
                 MaxComboTimer = ComboTimerMaxCE.Checked,
@@ -1302,6 +1307,7 @@ namespace GameX
             WeskerNoDashCostCE.Checked = Setts.WeskerNoDashHPCost;
             WeskerInfiniteDashCE.Checked = Setts.WeskerInfiniteDash;
             WeskerNoWeaponOnChestCE.Checked = Setts.WeskerNoWeaponOnChest;
+            StunRodMeleeKillCE.Checked = Setts.StunRodMeleeKill;
             HandTremorCE.Checked = Setts.NoHandTremors;
             ResetScoreCE.Checked = Setts.ResetScore;
             ComboTimerMaxCE.Checked = Setts.MaxComboTimer;
@@ -1717,6 +1723,13 @@ namespace GameX
                     int SelectedPlayer = int.Parse(CE.Name[1].ToString()) - 1;
                     Biohazard.Players[SelectedPlayer].Inventory.LoadoutSlots[Index].UpdateItemToMemory(Initialized);
                 }
+                else if (CE.Name.Equals("StunRodMeleeKillCE"))
+                {
+                    if (!Initialized)
+                        return;
+
+                    Biohazard.EnableStunRodMeleeKill(CE.Checked);
+                }
                 else if (CE.Name.Equals("HandTremorCE"))
                 {
                     if (!Initialized)
@@ -1899,6 +1912,21 @@ namespace GameX
             }
         }
 
+        private void MapsCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBoxEdit CBE = sender as ComboBoxEdit;
+            Map SelectedMap = CBE.SelectedItem as Map;
+
+            Image Final = ImageHelper.GetImageFromFile(@"addons/GameX.Biohazard.5/images/map/" + SelectedMap.Alias + ".png");
+            MapsPE.Image = Final;
+
+            if (!Initialized)
+                return;
+
+            Biohazard.Stage = SelectedMap.Stage;
+            Biohazard.Chapter = SelectedMap.Chapter;
+        }
+
         #endregion
 
         #region GameX Calls
@@ -1917,6 +1945,7 @@ namespace GameX
                 WeskerGlassesCE,
                 MeleeCameraCE,
                 ReunionSpecialMovesCE,
+                StunRodMeleeKillCE,
                 HandTremorCE,
                 NoTimerDecreaseCE
             };
@@ -1951,6 +1980,10 @@ namespace GameX
                             CE.Checked = Biohazard.EnableReunionSpecialMoves(true);
                             CE.CheckedChanged += EnableDisable_StateChanged;
                         }
+                        break;
+                    case "StunRodMeleeKillCE":
+                        if (CE.Checked)
+                            Biohazard.EnableStunRodMeleeKill(true);
                         break;
                     case "HandTremorCE":
                         if (CE.Checked)
@@ -2253,6 +2286,33 @@ namespace GameX
 
                 if (ComboBonusTimerMaxCE.Checked)
                     Biohazard.ComboBonusTimer = Biohazard.ComboBonusTimerDuration;
+            }
+
+            if (!MapsCB.IsPopupOpen)
+            {
+                Map SelectedMap = MapsCB.SelectedItem as Map;
+
+                int Chapter = Biohazard.Chapter;
+                short Stage = Biohazard.Stage;
+
+                if (!FreezeMapCE.Checked)
+                {
+                    if ((SelectedMap.Stage != -1 && SelectedMap.Stage != Stage) || SelectedMap.Chapter != Chapter)
+                    {
+                        foreach (object ComboObj in MapsCB.Properties.Items)
+                        {
+                            Map map = ComboObj as Map;
+
+                            if ((map.Stage == -1 || map.Stage == Biohazard.Stage) && map.Chapter == Biohazard.Chapter)
+                                MapsCB.SelectedItem = ComboObj;
+                        }
+                    }
+                }
+                else
+                {
+                    Biohazard.Stage = SelectedMap.Stage;
+                    Biohazard.Chapter = SelectedMap.Chapter;
+                }
             }
 
             #endregion
