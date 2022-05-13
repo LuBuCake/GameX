@@ -39,8 +39,10 @@ namespace GameX
             this.TabPageSettings = new DevExpress.XtraTab.XtraTabPage();
             this.TabPageSettingsGP = new DevExpress.XtraEditors.GroupControl();
             this.MapGP = new DevExpress.XtraEditors.GroupControl();
+            this.FreezeMapCE = new DevExpress.XtraEditors.CheckEdit();
+            this.MapsPE = new DevExpress.XtraEditors.PictureEdit();
             this.MapsCB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.MercenariesGP = new DevExpress.XtraEditors.GroupControl();
+            this.MercenariesVersusGP = new DevExpress.XtraEditors.GroupControl();
             this.ScoreTE = new DevExpress.XtraEditors.TextEdit();
             this.ScoreLabel = new DevExpress.XtraEditors.LabelControl();
             this.ComboBonusTimerMaxCE = new DevExpress.XtraEditors.CheckEdit();
@@ -822,8 +824,6 @@ namespace GameX
             this.TabPageSettingsButton = new DevExpress.XtraEditors.SimpleButton();
             this.TabPageConsoleButton = new DevExpress.XtraEditors.SimpleButton();
             this.MainLoop = new System.Windows.Forms.Timer(this.components);
-            this.MapsPE = new DevExpress.XtraEditors.PictureEdit();
-            this.FreezeMapCE = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -834,9 +834,11 @@ namespace GameX
             this.TabPageSettingsGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MapGP)).BeginInit();
             this.MapGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FreezeMapCE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MapsPE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MapsCB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MercenariesGP)).BeginInit();
-            this.MercenariesGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MercenariesVersusGP)).BeginInit();
+            this.MercenariesVersusGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ScoreTE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboBonusTimerMaxCE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboTimerMaxCE.Properties)).BeginInit();
@@ -1586,8 +1588,6 @@ namespace GameX
             this.ConsoleGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MapsPE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FreezeMapCE.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // P1CosComboBox
@@ -1671,7 +1671,7 @@ namespace GameX
             this.TabPageSettingsGP.AppearanceCaption.Options.UseTextOptions = true;
             this.TabPageSettingsGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.TabPageSettingsGP.Controls.Add(this.MapGP);
-            this.TabPageSettingsGP.Controls.Add(this.MercenariesGP);
+            this.TabPageSettingsGP.Controls.Add(this.MercenariesVersusGP);
             this.TabPageSettingsGP.Controls.Add(this.MiscModsGP);
             this.TabPageSettingsGP.Controls.Add(this.AboutPictureEdit);
             this.TabPageSettingsGP.Controls.Add(this.AppSettingsGP);
@@ -1691,6 +1691,28 @@ namespace GameX
             this.MapGP.Size = new System.Drawing.Size(308, 120);
             this.MapGP.TabIndex = 32;
             // 
+            // FreezeMapCE
+            // 
+            this.FreezeMapCE.Location = new System.Drawing.Point(246, 95);
+            this.FreezeMapCE.Name = "FreezeMapCE";
+            this.FreezeMapCE.Properties.AllowFocused = false;
+            this.FreezeMapCE.Properties.Caption = "Frozen";
+            this.FreezeMapCE.Size = new System.Drawing.Size(62, 20);
+            this.FreezeMapCE.TabIndex = 23;
+            // 
+            // MapsPE
+            // 
+            this.MapsPE.Location = new System.Drawing.Point(5, 5);
+            this.MapsPE.Name = "MapsPE";
+            this.MapsPE.Properties.AllowFocused = false;
+            this.MapsPE.Properties.PictureInterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            this.MapsPE.Properties.ReadOnly = true;
+            this.MapsPE.Properties.ShowMenu = false;
+            this.MapsPE.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.MapsPE.Size = new System.Drawing.Size(150, 84);
+            this.MapsPE.TabIndex = 2;
+            this.MapsPE.UseDirectXPaint = DevExpress.Utils.DefaultBoolean.True;
+            // 
             // MapsCB
             // 
             this.MapsCB.Location = new System.Drawing.Point(5, 95);
@@ -1704,28 +1726,28 @@ namespace GameX
             this.MapsCB.TabIndex = 1;
             this.MapsCB.TabStop = false;
             // 
-            // MercenariesGP
+            // MercenariesVersusGP
             // 
-            this.MercenariesGP.Controls.Add(this.ScoreTE);
-            this.MercenariesGP.Controls.Add(this.ScoreLabel);
-            this.MercenariesGP.Controls.Add(this.ComboBonusTimerMaxCE);
-            this.MercenariesGP.Controls.Add(this.ComboTimerMaxCE);
-            this.MercenariesGP.Controls.Add(this.ComboBonusTimerLabel);
-            this.MercenariesGP.Controls.Add(this.ComboTimerLabel);
-            this.MercenariesGP.Controls.Add(this.ComboBonusTimerTE);
-            this.MercenariesGP.Controls.Add(this.ComboTimerTE);
-            this.MercenariesGP.Controls.Add(this.ResetScoreCE);
-            this.MercenariesGP.Controls.Add(this.TimerGP);
-            this.MercenariesGP.Location = new System.Drawing.Point(309, 30);
-            this.MercenariesGP.Name = "MercenariesGP";
-            this.MercenariesGP.Size = new System.Drawing.Size(308, 257);
-            this.MercenariesGP.TabIndex = 2;
-            this.MercenariesGP.Text = "The Mercenaries";
+            this.MercenariesVersusGP.Controls.Add(this.ScoreTE);
+            this.MercenariesVersusGP.Controls.Add(this.ScoreLabel);
+            this.MercenariesVersusGP.Controls.Add(this.ComboBonusTimerMaxCE);
+            this.MercenariesVersusGP.Controls.Add(this.ComboTimerMaxCE);
+            this.MercenariesVersusGP.Controls.Add(this.ComboBonusTimerLabel);
+            this.MercenariesVersusGP.Controls.Add(this.ComboTimerLabel);
+            this.MercenariesVersusGP.Controls.Add(this.ComboBonusTimerTE);
+            this.MercenariesVersusGP.Controls.Add(this.ComboTimerTE);
+            this.MercenariesVersusGP.Controls.Add(this.ResetScoreCE);
+            this.MercenariesVersusGP.Controls.Add(this.TimerGP);
+            this.MercenariesVersusGP.Location = new System.Drawing.Point(309, 30);
+            this.MercenariesVersusGP.Name = "MercenariesVersusGP";
+            this.MercenariesVersusGP.Size = new System.Drawing.Size(308, 257);
+            this.MercenariesVersusGP.TabIndex = 2;
+            this.MercenariesVersusGP.Text = "The Mercenaries / Versus";
             // 
             // ScoreTE
             // 
             this.ScoreTE.EditValue = "0";
-            this.ScoreTE.Location = new System.Drawing.Point(68, 42);
+            this.ScoreTE.Location = new System.Drawing.Point(60, 42);
             this.ScoreTE.Name = "ScoreTE";
             this.ScoreTE.Properties.Appearance.Options.UseTextOptions = true;
             this.ScoreTE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -1735,7 +1757,7 @@ namespace GameX
             // 
             // ScoreLabel
             // 
-            this.ScoreLabel.Location = new System.Drawing.Point(31, 45);
+            this.ScoreLabel.Location = new System.Drawing.Point(23, 45);
             this.ScoreLabel.Name = "ScoreLabel";
             this.ScoreLabel.Size = new System.Drawing.Size(31, 13);
             this.ScoreLabel.TabIndex = 30;
@@ -1743,7 +1765,7 @@ namespace GameX
             // 
             // ComboBonusTimerMaxCE
             // 
-            this.ComboBonusTimerMaxCE.Location = new System.Drawing.Point(222, 91);
+            this.ComboBonusTimerMaxCE.Location = new System.Drawing.Point(228, 94);
             this.ComboBonusTimerMaxCE.Name = "ComboBonusTimerMaxCE";
             this.ComboBonusTimerMaxCE.Properties.AllowFocused = false;
             this.ComboBonusTimerMaxCE.Properties.Caption = "At Max";
@@ -1752,7 +1774,7 @@ namespace GameX
             // 
             // ComboTimerMaxCE
             // 
-            this.ComboTimerMaxCE.Location = new System.Drawing.Point(222, 65);
+            this.ComboTimerMaxCE.Location = new System.Drawing.Point(228, 68);
             this.ComboTimerMaxCE.Name = "ComboTimerMaxCE";
             this.ComboTimerMaxCE.Properties.AllowFocused = false;
             this.ComboTimerMaxCE.Properties.Caption = "At Max";
@@ -1761,7 +1783,7 @@ namespace GameX
             // 
             // ComboBonusTimerLabel
             // 
-            this.ComboBonusTimerLabel.Location = new System.Drawing.Point(31, 97);
+            this.ComboBonusTimerLabel.Location = new System.Drawing.Point(23, 97);
             this.ComboBonusTimerLabel.Name = "ComboBonusTimerLabel";
             this.ComboBonusTimerLabel.Size = new System.Drawing.Size(106, 13);
             this.ComboBonusTimerLabel.TabIndex = 27;
@@ -1769,7 +1791,7 @@ namespace GameX
             // 
             // ComboTimerLabel
             // 
-            this.ComboTimerLabel.Location = new System.Drawing.Point(31, 71);
+            this.ComboTimerLabel.Location = new System.Drawing.Point(23, 71);
             this.ComboTimerLabel.Name = "ComboTimerLabel";
             this.ComboTimerLabel.Size = new System.Drawing.Size(71, 13);
             this.ComboTimerLabel.TabIndex = 26;
@@ -1778,7 +1800,7 @@ namespace GameX
             // ComboBonusTimerTE
             // 
             this.ComboBonusTimerTE.EditValue = "00:00";
-            this.ComboBonusTimerTE.Location = new System.Drawing.Point(153, 94);
+            this.ComboBonusTimerTE.Location = new System.Drawing.Point(159, 94);
             this.ComboBonusTimerTE.Name = "ComboBonusTimerTE";
             this.ComboBonusTimerTE.Properties.Appearance.Options.UseTextOptions = true;
             this.ComboBonusTimerTE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -1789,7 +1811,7 @@ namespace GameX
             // ComboTimerTE
             // 
             this.ComboTimerTE.EditValue = "00:00";
-            this.ComboTimerTE.Location = new System.Drawing.Point(153, 68);
+            this.ComboTimerTE.Location = new System.Drawing.Point(159, 68);
             this.ComboTimerTE.Name = "ComboTimerTE";
             this.ComboTimerTE.Properties.Appearance.Options.UseTextOptions = true;
             this.ComboTimerTE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -1799,12 +1821,16 @@ namespace GameX
             // 
             // ResetScoreCE
             // 
-            this.ResetScoreCE.Location = new System.Drawing.Point(153, 42);
+            this.ResetScoreCE.Location = new System.Drawing.Point(145, 42);
             this.ResetScoreCE.Name = "ResetScoreCE";
             this.ResetScoreCE.Properties.AllowFocused = false;
-            this.ResetScoreCE.Properties.Caption = "Reset At End (Merce)";
-            this.ResetScoreCE.Size = new System.Drawing.Size(131, 20);
+            this.ResetScoreCE.Properties.Caption = "Reset When Calculated";
+            this.ResetScoreCE.Size = new System.Drawing.Size(145, 20);
             this.ResetScoreCE.TabIndex = 23;
+            this.ResetScoreCE.ToolTip = "Sets the score to zero whenever its used on a calculation. Useful when playing wi" +
+    "th cheats so you don\'t mess with previous legit scores.";
+            this.ResetScoreCE.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.ResetScoreCE.ToolTipTitle = "Reset Score";
             // 
             // TimerGP
             // 
@@ -15124,28 +15150,6 @@ namespace GameX
             this.TabPageConsoleButton.TabStop = false;
             this.TabPageConsoleButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
-            // MapsPE
-            // 
-            this.MapsPE.Location = new System.Drawing.Point(5, 5);
-            this.MapsPE.Name = "MapsPE";
-            this.MapsPE.Properties.AllowFocused = false;
-            this.MapsPE.Properties.PictureInterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            this.MapsPE.Properties.ReadOnly = true;
-            this.MapsPE.Properties.ShowMenu = false;
-            this.MapsPE.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.MapsPE.Size = new System.Drawing.Size(150, 84);
-            this.MapsPE.TabIndex = 2;
-            this.MapsPE.UseDirectXPaint = DevExpress.Utils.DefaultBoolean.True;
-            // 
-            // FreezeMapCE
-            // 
-            this.FreezeMapCE.Location = new System.Drawing.Point(246, 95);
-            this.FreezeMapCE.Name = "FreezeMapCE";
-            this.FreezeMapCE.Properties.AllowFocused = false;
-            this.FreezeMapCE.Properties.Caption = "Frozen";
-            this.FreezeMapCE.Size = new System.Drawing.Size(62, 20);
-            this.FreezeMapCE.TabIndex = 23;
-            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -15174,10 +15178,12 @@ namespace GameX
             this.TabPageSettingsGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MapGP)).EndInit();
             this.MapGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.FreezeMapCE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MapsPE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MapsCB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MercenariesGP)).EndInit();
-            this.MercenariesGP.ResumeLayout(false);
-            this.MercenariesGP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MercenariesVersusGP)).EndInit();
+            this.MercenariesVersusGP.ResumeLayout(false);
+            this.MercenariesVersusGP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ScoreTE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboBonusTimerMaxCE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboTimerMaxCE.Properties)).EndInit();
@@ -15935,8 +15941,6 @@ namespace GameX
             this.ConsoleGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MapsPE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FreezeMapCE.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -16677,7 +16681,7 @@ namespace GameX
         public DevExpress.XtraEditors.ComboBoxEdit P4Slot9ItemCB;
         public DevExpress.XtraEditors.SpinEdit P4Slot9FirepowerSE;
         public DevExpress.XtraEditors.ComboBoxEdit LoadoutComboBox;
-        private DevExpress.XtraEditors.GroupControl MercenariesGP;
+        private DevExpress.XtraEditors.GroupControl MercenariesVersusGP;
         private DevExpress.XtraEditors.CheckButton P1InfiniteThrowableButton;
         private DevExpress.XtraEditors.CheckButton P1InfiniteResourceButton;
         private DevExpress.XtraEditors.GroupControl P4MiscGP;

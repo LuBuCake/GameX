@@ -230,6 +230,12 @@ namespace GameX.Modules
 
         #region Patches
 
+        public static void ZeroScoreCalculation(bool Enable)
+        {
+            Memory.WriteBytes(Enable ? new byte[] { 0xBE, 0x00, 0x00, 0x00, 0x00, 0x90, 0x90 } : new byte[] { 0x8B, 0xB4, 0x08, 0xB0, 0x06, 0x00, 0x00 }, "re5dx9.exe", 0x31D2C2);
+            Memory.WriteBytes(Enable ? new byte[] { 0x89, 0xB4, 0x08 } : new byte[] { 0x01, 0xB4, 0x01 }, "re5dx9.exe", 0x31D2C9);
+        }
+
         public static void EnableColorFilter(bool Enable)
         {
             Memory.WriteBytes(Enable ? new byte[] { 0xE9, 0x51, 0x04, 0x00, 0x00, 0x90 } : new byte[] { 0x0F, 0x84, 0x50, 0x04, 0x00, 0x00 }, "re5dx9.exe", 0x3C7113);

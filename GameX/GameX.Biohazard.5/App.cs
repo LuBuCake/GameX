@@ -911,6 +911,7 @@ namespace GameX
             StunRodMeleeKillCE.CheckedChanged += EnableDisable_StateChanged;
             HandTremorCE.CheckedChanged += EnableDisable_StateChanged;
             NoTimerDecreaseCE.CheckedChanged += EnableDisable_StateChanged;
+            ResetScoreCE.CheckedChanged += EnableDisable_StateChanged;
 
             ConsoleInputTextEdit.Validating += Terminal.ValidateInput;
             ClearConsoleSimpleButton.Click += Terminal.ClearConsole_Click;
@@ -1744,6 +1745,13 @@ namespace GameX
 
                     Biohazard.NoTimerDecrease(CE.Checked);
                 }
+                else if (CE.Name.Equals("ResetScoreCE"))
+                {
+                    if (!Initialized)
+                        return;
+
+                    Biohazard.ZeroScoreCalculation(CE.Checked);
+                }
             }
             else if (sender.GetType() == typeof(CheckButton))
             {
@@ -1947,7 +1955,8 @@ namespace GameX
                 ReunionSpecialMovesCE,
                 StunRodMeleeKillCE,
                 HandTremorCE,
-                NoTimerDecreaseCE
+                NoTimerDecreaseCE,
+                ResetScoreCE
             };
 
             ComboBoxEdit[] Combos =
@@ -1992,6 +2001,10 @@ namespace GameX
                     case "NoTimerDecreaseCE":
                         if (CE.Checked)
                             Biohazard.NoTimerDecrease(true);
+                        break;
+                    case "ResetScoreCE":
+                        if (CE.Checked)
+                            Biohazard.ZeroScoreCalculation(true);
                         break;
                 }
             }
@@ -2048,6 +2061,7 @@ namespace GameX
                 if (MeleeAnytimeSwitch.IsOn)
                     MeleeAnytimeSwitch.Toggle();
 
+                Biohazard.ZeroScoreCalculation(false);
                 Biohazard.EnableColorFilter(false);
                 Biohazard.NoFileChecking(false);
                 Biohazard.OnlineCharSwapFixes(false);           
@@ -2278,9 +2292,6 @@ namespace GameX
 
             if (Biohazard.GameMode == (int)GameModeEnum.Mercenaries || Biohazard.GameMode == (int)GameModeEnum.Reunion)
             {
-                if (ResetScoreCE.Checked && Biohazard.Timer == 0 && Biohazard.Score > 0)
-                    Biohazard.Score = 0;
-
                 if (ComboTimerMaxCE.Checked)
                     Biohazard.ComboTimer = Biohazard.ComboTimerDuration;
 

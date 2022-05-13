@@ -132,6 +132,12 @@ namespace GameX.Database.Type
             }
         }
 
+        public float WeaponOverheat
+        {
+            get { return Memory.Read<float>("re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x18, 0x1C68); }
+            set { Memory.Write(value, "re5dx9.exe", 0x00DA383C, 0x24 + (0x04 * Index), 0x18, 0x1C68); }
+        }
+
         #endregion
 
         #region Methods
