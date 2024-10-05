@@ -354,7 +354,7 @@ namespace GameX.Modules
                 if (FunctionStartA != 69485707 || FunctionStartB != 539251851)
                 {
                     Terminal.WriteLine("[App] Unsupported version for \"Reunion Special Moves\" functionality.");
-                    Terminal.WriteLine("[App] Follow the guide at https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
+                    Terminal.WriteLine("[App] Follow the guide at https://steamcommunity.com/sharedfiles/filedetails/?id=1533171339 to learn how to download and install the latest patch available.");
                     return false;
                 }
 

@@ -352,3 +352,6 @@ MigrationBackup/
 # DevExpress license files
 *.licx
 *.licx.bak
+
+# Project build files
+GameX/build/
