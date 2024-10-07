@@ -116,7 +116,7 @@ namespace GameX.Modules
 
         public static void WriteLine(Exception Ex)
         {
-            string Input = $"[{DateTime.Now:HH:mm}][App][{Ex.GetType().Name}] {new StackTrace(Ex).GetFrame(0).GetMethod().Name}: {Ex.Message}";
+            string Input = $"[{DateTime.Now:HH:mm:ss}][App][{Ex.GetType().Name}] {new StackTrace(Ex).GetFrame(0).GetMethod().Name}: {Ex.Message}";
             UpdateTextAndProcessEvents(Input);
         }
 
@@ -149,7 +149,7 @@ namespace GameX.Modules
                 }
             }
 
-            Input = $"[{DateTime.Now:HH:mm}]{Input}";
+            Input = $"[{DateTime.Now:HH:mm:ss}]{Input}";
             UpdateTextAndProcessEvents(Input);
         }
 

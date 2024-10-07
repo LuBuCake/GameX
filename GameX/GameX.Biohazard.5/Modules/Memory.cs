@@ -49,8 +49,8 @@ namespace GameX.Modules
 
         public static bool ModuleStarted { get; set; }
         public static bool DebugMode { get; private set; }
-        private static Process _Process { get; set; }
-        private static IntPtr _Handle { get; set; }
+        public static Process _Process { get; set; }
+        public static IntPtr _Handle { get; set; }
 
         #endregion
 

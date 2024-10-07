@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Linq;
+using System.Numerics;
 using GameX.Database.Type;
-using static DevExpress.Utils.Drawing.Helpers.NativeMethods;
+using GameX.Enum;
 
 namespace GameX.Modules
 {
@@ -253,6 +253,12 @@ namespace GameX.Modules
             Memory.WriteBytes(Enable ? new byte[] {0xEB} : new byte[] {0x75}, "re5dx9.exe", 0x2240EF);
             Memory.WriteBytes(Enable ? new byte[] {0x90, 0x90, 0x90} : new byte[] {0x89, 0x57, 0x0C}, "re5dx9.exe", 0x32FB3B);
             Memory.WriteBytes(Enable ? new byte[] {0x00} : new byte[] {0x14}, "re5dx9.exe", 0x89186C);
+        }
+
+        public static void DisableReunionMeleeGameModeChecks(bool Enable)
+        {
+            Memory.WriteBytes(!Enable ? new byte[] { 0x75, 0x20 } : new byte[] { 0xEB, 0x00 }, "re5dx9.exe", 0x80B953);
+            Memory.WriteBytes(!Enable ? new byte[] { 0x75, 0x20 } : new byte[] { 0xEB, 0x00 }, "re5dx9.exe", 0x80B244);
         }
 
         public static void WeskerNoWeaponOnChest(bool Enable)

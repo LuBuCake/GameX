@@ -1063,6 +1063,7 @@ namespace GameX
 
             Terminal.WriteLine("[App] Failed validating, unsupported version.");
             Terminal.WriteLine("[App] Follow the guide at https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
+            Terminal.WriteLine("[App] Also you can use Rick's patch which is based on Maluc's & Syndeh's but with a few extra features and fixes, visit https://steamcommunity.com/sharedfiles/filedetails/?id=1533171339 to learn more.");
 
             Target_Process.EnableRaisingEvents = true;
             Target_Process.Exited += Target_Exited;
@@ -2042,6 +2043,7 @@ namespace GameX
                 Biohazard.StartModule();
                 Biohazard.NoFileChecking(true);
                 Biohazard.OnlineCharSwapFixes(true);
+                Biohazard.DisableReunionMeleeGameModeChecks(true);
 
                 GameX_CheckControls();
             }
@@ -2075,6 +2077,7 @@ namespace GameX
                 Biohazard.DisableHandTremor(false);
                 Biohazard.EnableStunRodMeleeKill(false);
                 Biohazard.EnableReunionSpecialMoves(false);
+                Biohazard.DisableReunionMeleeGameModeChecks(false);
 
                 Biohazard.FinishModule();
             }
@@ -2101,6 +2104,10 @@ namespace GameX
 
         private static void GameX_Keyboard(int input)
         {
+            //Terminal.WriteLine($"User pressed input: {input}");
+
+            if (!Biohazard.ModuleStarted)
+                return;
 
         }
 
