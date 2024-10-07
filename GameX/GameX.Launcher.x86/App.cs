@@ -283,9 +283,9 @@ namespace GameX.Launcher
                     }
                     else
                     {
-                        Assembly CurApp = Assembly.LoadFile(FilePath);
+                        Assembly CurApp = Assembly.Load(File.ReadAllBytes(FilePath));
                         AssemblyName CurName = new AssemblyName(CurApp.FullName);
-                        Current = int.Parse(CurName.Version.ToString().Replace(".", ""));
+                        Current = int.Parse(CurName.Version.ToString().Replace(".", ""));                   
                     }
 
                     if (Current >= Latest)
