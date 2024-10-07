@@ -274,8 +274,9 @@ namespace GameX.Launcher
                     int Current = 0;
 
                     string FilePath = Directory.GetCurrentDirectory() + "/updater.exe";
+                    string FilePathConfig = Directory.GetCurrentDirectory() + "/updater.exe.config";
 
-                    if (!File.Exists(FilePath))
+                    if (!File.Exists(FilePath) || !File.Exists(FilePathConfig))
                     {
                         if (!DOWNLOAD_UPDATER_IF_NOT_PRESENT)
                             return false;
@@ -289,6 +290,12 @@ namespace GameX.Launcher
 
                     if (Current >= Latest)
                         return false;
+
+                    if (File.Exists(FilePath))
+                        File.Delete(FilePath);
+
+                    if (File.Exists(FilePathConfig))
+                        File.Delete(FilePathConfig);
 
                     string AppDirectory = Directory.GetCurrentDirectory();
                     string UpdaterDirectory = AppDirectory + "/updater/";
