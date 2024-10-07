@@ -9,7 +9,7 @@ Built mostly for my and some friends's personal needs.
 
 ## Current Supported Games
 
-* RESIDENT EVIL 5 UNTOLD STORIES BUNDLE (Gold Edition) - Steam only using [RE5 Unofficial Patch](https://steamcommunity.com/sharedfiles/filedetails/?id=864823595)
+* RESIDENT EVIL 5 UNTOLD STORIES BUNDLE (Gold Edition) - Steam only using [RE5 Unofficial Patch](https://steamcommunity.com/sharedfiles/filedetails/?id=864823595) or [Resident Evil 5 Quality of Life Fixes](https://steamcommunity.com/sharedfiles/filedetails/?id=1533171339)
 
 ## Prequisites
 
