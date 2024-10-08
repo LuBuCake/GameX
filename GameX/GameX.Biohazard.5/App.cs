@@ -1063,7 +1063,7 @@ namespace GameX
 
             Terminal.WriteLine("[App] Failed validating, unsupported version.");
             Terminal.WriteLine("[App] Follow the guide at https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
-            Terminal.WriteLine("[App] Also you can use Rick's patch which is based on Maluc's & Syndeh's but with a few extra features and fixes, visit https://steamcommunity.com/sharedfiles/filedetails/?id=1533171339 to learn more.");
+            Terminal.WriteLine("[App] You can also use Rick's Quality of Life fixes which is based on Maluc's & Syndeh's patch with a few extra features and bug fixes, visit https://steamcommunity.com/sharedfiles/filedetails/?id=1533171339 to learn more.");
 
             Target_Process.EnableRaisingEvents = true;
             Target_Process.Exited += Target_Exited;
@@ -1942,6 +1942,8 @@ namespace GameX
 
         private void GameX_CheckControls()
         {
+            #region Controls
+
             SimpleButton[] EnableDisable =
             {
                 ColorFilterButton,
@@ -1966,6 +1968,8 @@ namespace GameX
                 ComboTimerCB,
                 ComboBonusTimerCB
             };
+
+            #endregion
 
             foreach (CheckEdit CE in CheckUncheck)
             {
@@ -2117,6 +2121,8 @@ namespace GameX
 
         private void Melee_ApplyComboBox(ComboBoxEdit CE, bool ApplyAll = false)
         {
+            #region Controls
+
             ComboBoxEdit[] MeleeCombos =
             {
                 ReunionHeadFlashComboBox,
@@ -2158,6 +2164,8 @@ namespace GameX
                 MoveBackLabelControl,
                 ReloadLabelControl
             };
+
+            #endregion
 
             if (!Initialized)
                 return;

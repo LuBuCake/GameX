@@ -257,6 +257,12 @@ namespace GameX.Modules
 
         public static void DisableReunionMeleeGameModeChecks(bool Enable)
         {
+            var OriginalInstructionA = Memory.ReadBytes(1, "re5dx9.exe", 0x80B953);
+            var OriginalInstructionB = Memory.ReadBytes(1, "re5dx9.exe", 0x80B953);
+
+            if ((Enable && (OriginalInstructionA[0] != 0x75 || OriginalInstructionB[0] != 0x75)) || (!Enable && (OriginalInstructionA[0] != 0xEB || OriginalInstructionB[0] != 0xEB)))
+                return;
+
             Memory.WriteBytes(!Enable ? new byte[] { 0x75, 0x20 } : new byte[] { 0xEB, 0x00 }, "re5dx9.exe", 0x80B953);
             Memory.WriteBytes(!Enable ? new byte[] { 0x75, 0x20 } : new byte[] { 0xEB, 0x00 }, "re5dx9.exe", 0x80B244);
         }
