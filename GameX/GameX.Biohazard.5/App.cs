@@ -1062,8 +1062,7 @@ namespace GameX
             }
 
             Terminal.WriteLine("[App] Failed validating, unsupported version.");
-            Terminal.WriteLine("[App] Follow the guide at https://steamcommunity.com/sharedfiles/filedetails/?id=864823595 to learn how to download and install the latest patch available.");
-            Terminal.WriteLine("[App] You can also use Rick's Quality of Life fixes which is based on Maluc's & Syndeh's patch with a few extra features and bug fixes, visit https://steamcommunity.com/sharedfiles/filedetails/?id=1533171339 to learn more.");
+            Terminal.WriteLine("[App] Read the instructions at https://github.com/LuBuCake/GameX/blob/main/README.md to learn how to download and install the latest patch available.");
 
             Target_Process.EnableRaisingEvents = true;
             Target_Process.Exited += Target_Exited;
@@ -2047,7 +2046,6 @@ namespace GameX
                 Biohazard.StartModule();
                 Biohazard.NoFileChecking(true);
                 Biohazard.OnlineCharSwapFixes(true);
-                Biohazard.DisableReunionMeleeGameModeChecks(true);
 
                 GameX_CheckControls();
             }
@@ -2081,7 +2079,6 @@ namespace GameX
                 Biohazard.DisableHandTremor(false);
                 Biohazard.EnableStunRodMeleeKill(false);
                 Biohazard.EnableReunionSpecialMoves(false);
-                Biohazard.DisableReunionMeleeGameModeChecks(false);
 
                 Biohazard.FinishModule();
             }

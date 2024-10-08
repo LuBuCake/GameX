@@ -255,18 +255,6 @@ namespace GameX.Modules
             Memory.WriteBytes(Enable ? new byte[] {0x00} : new byte[] {0x14}, "re5dx9.exe", 0x89186C);
         }
 
-        public static void DisableReunionMeleeGameModeChecks(bool Enable)
-        {
-            var OriginalInstructionA = Memory.ReadBytes(1, "re5dx9.exe", 0x80B953);
-            var OriginalInstructionB = Memory.ReadBytes(1, "re5dx9.exe", 0x80B953);
-
-            if ((Enable && (OriginalInstructionA[0] != 0x75 || OriginalInstructionB[0] != 0x75)) || (!Enable && (OriginalInstructionA[0] != 0xEB || OriginalInstructionB[0] != 0xEB)))
-                return;
-
-            Memory.WriteBytes(!Enable ? new byte[] { 0x75, 0x20 } : new byte[] { 0xEB, 0x00 }, "re5dx9.exe", 0x80B953);
-            Memory.WriteBytes(!Enable ? new byte[] { 0x75, 0x20 } : new byte[] { 0xEB, 0x00 }, "re5dx9.exe", 0x80B244);
-        }
-
         public static void WeskerNoWeaponOnChest(bool Enable)
         {
             Memory.WriteBytes(Enable ? new byte[] { 0x90, 0x90, 0x90, 0x90, 0x90, 0x90 } : new byte[] { 0x89, 0x85, 0x1C, 0x1E, 0x00, 0x00 }, "re5dx9.exe", 0x76F83A);
@@ -365,8 +353,7 @@ namespace GameX.Modules
 
                 if (FunctionStartA != 69485707 || FunctionStartB != 539251851)
                 {
-                    Terminal.WriteLine("[App] Unsupported version for \"Reunion Special Moves\" functionality.");
-                    Terminal.WriteLine("[App] Follow the guide at https://steamcommunity.com/sharedfiles/filedetails/?id=1533171339 to learn how to download and install the latest patch available.");
+                    Terminal.WriteLine("[App] Unsupported game version for \"Reunion Special Moves\" functionality.");
                     return false;
                 }
 
