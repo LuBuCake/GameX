@@ -10,9 +10,8 @@ Built mostly for my and some friends's personal needs.
 ## Current Supported Games
 
 * RESIDENT EVIL 5 UNTOLD STORIES BUNDLE (Gold Edition) STEAM ONLY:
-* Prequisites:
   - You should use either [Resident Evil 5 - Fixes](https://steamcommunity.com/sharedfiles/filedetails/?id=864823595) or [Resident Evil 5 Quality of Life Fixes](https://steamcommunity.com/sharedfiles/filedetails/?id=1533171339). Alternatively you can use this [Merged Patch](https://github.com/LuBuCake/GameX/raw/refs/heads/main/GameX/GameX.Prequisites/GameX.Biohazard.5/RE5%20Maluc's%20Fixes%20+%20Rick's%20QOL%20Fixes.zip) which contains the best of both patches together.
-  - A model swap patch. I'll have one for download soon, until then you can use the old [Gold Edition PC - Model Swap Patch](https://residentevilmodding.boards.net/thread/4203/gold-edition-model-swap-patch).
+  - You'll need a model swap patch. I'll have one for download soon, until then you can use the old [Gold Edition PC - Model Swap Patch](https://residentevilmodding.boards.net/thread/4203/gold-edition-model-swap-patch).
 
 ## Prequisites
 
