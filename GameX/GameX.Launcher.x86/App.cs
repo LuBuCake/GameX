@@ -27,9 +27,9 @@ namespace GameX.Launcher
 
         private async void App_Load(object sender, EventArgs e)
         {
-            bool UpdaterMustUpdate = await CheckForLauncherUpdate();
+            bool MustUpdate = await CheckForLauncherUpdate();
 
-            if (UpdaterMustUpdate)
+            if (MustUpdate)
                 return;
 
             SetupControls();
@@ -342,6 +342,13 @@ namespace GameX.Launcher
 
         private async void AddonDownloadFinished(object sender, AsyncCompletedEventArgs e)
         {
+            string AppDirectory = Directory.GetCurrentDirectory();
+            string AddonsDirectory = AppDirectory + "/addons/";
+            string AddonDir = AddonsDirectory + Downloading.File.Replace(".dll", "") + "/";
+
+            if (Directory.Exists(AddonDir))
+                Directory.Delete(AddonDir, true);
+
             GameXButton.Text = "Extracting";
             await ExtractLatestPackage();
             GameXButton.Enabled = true;

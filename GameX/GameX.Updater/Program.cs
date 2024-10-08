@@ -54,12 +54,11 @@ namespace GameX.Updater
 
         static void WriteLine(string Message)
         {
-            string newline = "[grey]LOG:[/] " + Message;
-            string newlogline = $"LOG: {Message}";
+            string newline = $"[{DateTime.Now:HH:mm:ss}][LOGGER]: {Message}";
+            string newrenderedline = $"[green]{DateTime.Now:HH:mm:ss}[/] [grey]LOGGER[/]: [white]{Message}[/]";
 
-            AnsiConsole.MarkupLine(newline);
-
-            _log = string.IsNullOrEmpty(_log) ? newlogline : _log + Environment.NewLine + newlogline;
+            AnsiConsole.MarkupLine(newrenderedline);
+            _log = string.IsNullOrEmpty(_log) ? newline : _log + Environment.NewLine + newline;
         }
 
         static void SaveLog()
