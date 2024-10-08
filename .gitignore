@@ -355,3 +355,4 @@ MigrationBackup/
 
 # Project build files
 GameX/build/
+GameX/.cr/
