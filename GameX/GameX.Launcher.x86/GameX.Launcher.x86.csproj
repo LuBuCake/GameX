@@ -262,11 +262,9 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>if $(ConfigurationName) == Release (
-mkdir $(SolutionDir)\build\x86\
+    <PostBuildEvent>mkdir $(SolutionDir)\build\x86\
 xcopy $(TargetDir)\$(TargetFileName) $(SolutionDir)\build\x86 /y
-xcopy $(TargetDir)\$(TargetFileName).config $(SolutionDir)\build\x86 /y
-)</PostBuildEvent>
+xcopy $(TargetDir)\$(TargetFileName).config $(SolutionDir)\build\x86 /y</PostBuildEvent>
   </PropertyGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -15,12 +15,11 @@ namespace GameX.Modules
         private static List<string> InputList { get; set; }
         private static string[] InputText { get; set; }
 
-        public static void StartModule(App Instance)
+        public static void Setup(App Instance)
         {
             GUI = Instance;
             InputList = new List<string>();
             InputText = new string[0];
-            WriteLine("[Console] Module started successfully.");
         }
 
         public static void ClearConsole_Click(object sender, EventArgs e)

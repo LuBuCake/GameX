@@ -460,8 +460,7 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>if $(ConfigurationName) == Release (
-mkdir $(SolutionDir)\build\
+    <PostBuildEvent>mkdir $(SolutionDir)\build\
 mkdir $(SolutionDir)\build\x86\
 mkdir $(SolutionDir)\build\x86\addons\
 mkdir $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\
@@ -471,7 +470,6 @@ xcopy $(ProjectDir)\Icons\inventory\items $(SolutionDir)\build\x86\addons\GameX.
 
 xcopy $(TargetDir)\$(TargetFileName) $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\ /y
 xcopy $(TargetDir)\$(TargetFileName).config $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\ /y
-)
 
 mkdir $(SolutionDir)\GameX.Launcher.x86\$(OutDir)\addons\
 xcopy $(SolutionDir)\build\x86\addons $(SolutionDir)\GameX.Launcher.x86\$(OutDir)\addons\ /e /y</PostBuildEvent>

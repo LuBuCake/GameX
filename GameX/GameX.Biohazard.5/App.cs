@@ -968,7 +968,7 @@ namespace GameX
             Keyboard.CreateHook(GameX_Keyboard);
             Application.ApplicationExit += Application_ApplicationExit;
 
-            Terminal.StartModule(this);
+            Terminal.Setup(this);
             Biohazard.Setup(this);
 
             MainLoop.Tick += Application_Update;
@@ -1099,8 +1099,7 @@ namespace GameX
 
         private void Target_Exited(object sender, EventArgs e)
         {
-            Memory.FinishModule();
-            Biohazard.FinishModule();
+            Memory.FinishModule();       
 
             Target_Process?.Dispose();
             Target_Process = null;
@@ -2040,7 +2039,7 @@ namespace GameX
         {
             try
             {
-                Biohazard.StartModule();
+                Biohazard.VocalizerEnabledFlag = 1;
                 Biohazard.NoFileChecking(true);
                 Biohazard.OnlineCharSwapFixes(true);
 
@@ -2056,12 +2055,13 @@ namespace GameX
         {
             try
             {
-                if (!Biohazard.ModuleStarted)
+                if (!Initialized)
                     return;
 
                 if (MeleeAnytimeSwitch.IsOn)
                     MeleeAnytimeSwitch.Toggle();
 
+                Biohazard.VocalizerEnabledFlag = 0;
                 Biohazard.ZeroScoreCalculation(false);
                 Biohazard.EnableColorFilter(false);
                 Biohazard.NoFileChecking(false);
@@ -2079,8 +2079,6 @@ namespace GameX
                 Biohazard.DisableHandTremor(false);
                 Biohazard.EnableStunRodMeleeKill(false);
                 Biohazard.EnableReunionSpecialMoves(false);
-
-                Biohazard.FinishModule();
             }
             catch (Exception Ex)
             {
@@ -2092,7 +2090,7 @@ namespace GameX
         {
             try
             {
-                if (!Biohazard.ModuleStarted)
+                if (!Initialized)
                     return;
 
                 TrainerUpdate();
@@ -2103,11 +2101,11 @@ namespace GameX
             }
         }
 
-        private static void GameX_Keyboard(int input)
+        private void GameX_Keyboard(int input)
         {
-            //Terminal.WriteLine($"User pressed input: {input}");
+            Terminal.WriteLine($"User pressed input: {input:X}");
 
-            if (!Biohazard.ModuleStarted)
+            if (!Initialized)
                 return;
 
         }

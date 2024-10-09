@@ -84,6 +84,15 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
     </Link>
+    <PostBuildEvent>
+      <Command>mkdir $(SolutionDir)\build\
+mkdir $(SolutionDir)\build\x86\
+mkdir $(SolutionDir)\build\x86\addons\
+mkdir $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\
+
+xcopy $(TargetDir)\$(TargetFileName) $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\ /y
+RD /S /Q $(TargetDir)</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -109,7 +118,8 @@ mkdir $(SolutionDir)\build\x86\
 mkdir $(SolutionDir)\build\x86\addons\
 mkdir $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\
 
-xcopy $(TargetDir)\$(TargetFileName) $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\ /y</Command>
+xcopy $(TargetDir)\$(TargetFileName) $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\ /y
+RD /S /Q $(TargetDir)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

@@ -108,9 +108,7 @@ namespace GameX.Modules
         public static byte[] ReadRawAddress(int Address, int Size = 4)
         {
             byte[] buffer = new byte[Size];
-
             ReadProcessMemory(_Handle, Address, buffer, buffer.Length, out _);
-
             return buffer;
         }
 
