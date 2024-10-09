@@ -7,7 +7,7 @@ Built mostly for my and some friends's personal needs.
 
 [Download Latest Version](https://raw.githubusercontent.com/LuBuCake/GameX/main/GameX/GameX.Versioning/GameX.Launcher.x86/latest.zip)
 
-## Current Supported Games
+## Currently supported games
 
 * RESIDENT EVIL 5 UNTOLD STORIES BUNDLE (Gold Edition) STEAM ONLY:
   - You should use either [Resident Evil 5 - Fixes](https://steamcommunity.com/sharedfiles/filedetails/?id=864823595) or [Resident Evil 5 Quality of Life Fixes](https://steamcommunity.com/sharedfiles/filedetails/?id=1533171339). Alternatively you can use this [Merged Patch](https://github.com/LuBuCake/GameX/raw/refs/heads/main/GameX/GameX.Prequisites/GameX.Biohazard.5/RE5%20Maluc's%20Fixes%20+%20Rick's%20QOL%20Fixes.zip) which contains the best of both patches together.
