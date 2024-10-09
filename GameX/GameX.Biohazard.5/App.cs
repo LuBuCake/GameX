@@ -2103,7 +2103,7 @@ namespace GameX
 
         private void GameX_Keyboard(int input)
         {
-            Terminal.WriteLine($"User pressed input: {input:X}");
+            //Terminal.WriteLine($"User pressed input: {input:X}");
 
             if (!Initialized)
                 return;
