@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Linq;
-using GameX.Modules;
 using GameX.Enum;
-using GameX.Database.ViewBag;
 using GameX.Helpers;
+using GameX.Database.ViewBag;
+using GameX.Database.Type;
+using GameX.Database;
 using DevExpress.XtraEditors;
 
-namespace GameX.Database.Type
+namespace GameX.Modules.Sub
 {
     public class Slot
     {

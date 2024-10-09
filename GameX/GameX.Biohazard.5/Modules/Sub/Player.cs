@@ -1,10 +1,11 @@
 ﻿using System.Linq;
 using System.Numerics;
-using GameX.Modules;
+using GameX.Database;
+using GameX.Database.Type;
 using GameX.Enum;
 using GameX.Helpers;
 
-namespace GameX.Database.Type
+namespace GameX.Modules.Sub
 {
     public class Player
     {

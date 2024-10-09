@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraTab;
 using GameX.Helpers;
 using GameX.Modules;
+using GameX.Modules.Sub;
 using GameX.Database;
 using GameX.Enum;
 using GameX.Database.Type;
@@ -2073,12 +2074,15 @@ namespace GameX
                 Biohazard.WeskerNoSunglassDrop(false);
                 Biohazard.WeskerNoDashCost(false);
                 Biohazard.NoTimerDecrease(false);
-                Biohazard.EnableControllerAim(false);
+                //Biohazard.EnableControllerAim(false);
                 Biohazard.SetWeaponPlacement(0);
                 Biohazard.DisableMeleeCamera(false);
                 Biohazard.DisableHandTremor(false);
                 Biohazard.EnableStunRodMeleeKill(false);
                 Biohazard.EnableReunionSpecialMoves(false);
+
+                Biohazard.VocalizerEnabledFlag = 0;
+                //Biohazard.InternalRunFlag = 0;
 
                 Biohazard.FinishModule();
             }

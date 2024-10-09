@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Numerics;
-using GameX.Database.Type;
-using GameX.Enum;
+using GameX.Modules.Sub;
 
 namespace GameX.Modules
 {
@@ -21,6 +19,8 @@ namespace GameX.Modules
             };
         }
 
+        #region Module
+
         public static void StartModule()
         {
             ModuleStarted = true;
@@ -32,6 +32,34 @@ namespace GameX.Modules
             ModuleStarted = false;
             Terminal.WriteLine("[Biohazard] Module finished successfully.");
         }
+
+        #endregion
+
+        #region Internal
+
+        public static byte InternalRunFlag
+        {
+            get { return Memory.Read<byte>("GameX.Biohazard.5.Internal.dll", 0x4060); }
+            set { Memory.Write(value, "GameX.Biohazard.5.Internal.dll", 0x4060); }
+        }
+
+        public static byte VocalizerEnabledFlag
+        {
+            get { return Memory.Read<byte>("GameX.Biohazard.5.Internal.dll", 0x4454); }
+            set { Memory.Write(value, "GameX.Biohazard.5.Internal.dll", 0x4454); }
+        }
+
+        public static void SetVocalizerHotkey(int Group, byte Hotkey)
+        {
+            Memory.Write(Hotkey, "GameX.Biohazard.5.Internal.dll", 0x4064 + (0x01 * Group));
+        }
+
+        public static void SetVocalizerSpeechGroup(int Group, int Slot, ushort Speech)
+        {
+            Memory.Write(Speech, "GameX.Biohazard.5.Internal.dll", 0x4448 - (0x0C * Group) + (0x02 * Slot));
+        }
+
+        #endregion
 
         #region Props
 

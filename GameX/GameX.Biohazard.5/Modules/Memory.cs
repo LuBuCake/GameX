@@ -5,7 +5,9 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using GameX.Helpers;
 using GameX.Enum;
-using GameX.Database.Type;
+using GameX.Modules.Sub;
+using System.Text;
+using System.IO;
 
 namespace GameX.Modules
 {
@@ -29,16 +31,19 @@ namespace GameX.Modules
         public static extern int VirtualFreeEx(IntPtr pHandle, int lpBaseAddress, int dwSize, int dwFreeType);
 
         [DllImport("kernel32.dll")]
-        public static extern bool ReadProcessMemory(IntPtr pHandle, int lpBaseAddress, [Out] byte[] lpBuffer, int dwSize, ref int lpNumberOfBytesRead);
+        public static extern bool ReadProcessMemory(IntPtr pHandle, int lpBaseAddress, [Out] byte[] lpBuffer, int dwSize, out int lpNumberOfBytesRead);
 
         [DllImport("kernel32.dll", SetLastError = true)]
-        public static extern bool WriteProcessMemory(IntPtr pHandle, int lpBaseAddress, byte[] lpBuffer, int dwSize, ref int lpNumberOfBytesWritten);
+        public static extern bool WriteProcessMemory(IntPtr pHandle, int lpBaseAddress, byte[] lpBuffer, int dwSize, out int lpNumberOfBytesWritten);
 
         [DllImport("kernel32")]
-        public static extern IntPtr CreateRemoteThread(IntPtr hProcess, IntPtr lpThreadAttributes, uint dwStackSize, IntPtr lpStartAddress, IntPtr lpParameter, uint dwCreationFlags, out IntPtr lpThreadId);
+        public static extern int CreateRemoteThread(IntPtr hProcess, int lpThreadAttributes, uint dwStackSize, int lpStartAddress, int lpParameter, uint dwCreationFlags, out int lpThreadId);
 
-        [DllImport("kernel32")]
-        public static extern bool IsWow64Process(IntPtr hProcess, out bool lpSystemInfo);
+        [DllImport("kernel32.dll", SetLastError = true)]
+        private static extern int GetProcAddress(IntPtr hModule, string lpProcName);
+
+        [DllImport("kernel32.dll", SetLastError = true)]
+        private static extern IntPtr GetModuleHandle(string lpModuleName);
 
         [DllImport("user32.dll")]
         public static extern bool SetForegroundWindow(IntPtr hWnd);
@@ -49,6 +54,7 @@ namespace GameX.Modules
 
         public static bool ModuleStarted { get; set; }
         public static bool DebugMode { get; private set; }
+        public static bool InternalInjected { get; private set; }
         public static Process _Process { get; set; }
         public static IntPtr _Handle { get; set; }
 
@@ -62,6 +68,7 @@ namespace GameX.Modules
             _Handle = OpenProcess((int)AccessLevel, false, _Process.Id);
             EnterDebugMode();
             SetForegroundWindow(_Process.MainWindowHandle);
+            InjectInternalLibrary();
             ModuleStarted = true;
             Terminal.WriteLine("[Memory] Module started successfully.");
         }
@@ -78,6 +85,17 @@ namespace GameX.Modules
             Terminal.WriteLine("[Memory] Module finished successfully.");
         }
 
+        public static void InjectInternalLibrary()
+        {
+            if (ProcessHelper.ProcessHasModule(_Process, "GameX.Biohazard.5.Internal.dll"))
+            {
+                Terminal.WriteLine("[Memory] Internal library already injected.");
+                InternalInjected = true;
+            }
+            else
+                InternalInjected = InjectDLL($"{Directory.GetCurrentDirectory()}\\addons\\GameX.Biohazard.5\\GameX.Biohazard.5.Internal.dll");
+        }
+
         #endregion
 
         #region Read / Write
@@ -85,18 +103,15 @@ namespace GameX.Modules
         public static byte[] ReadRawAddress(int Address, int Size = 4)
         {
             byte[] buffer = new byte[Size];
-            int bytesread = 0;
 
-            ReadProcessMemory(_Handle, Address, buffer, buffer.Length, ref bytesread);
+            ReadProcessMemory(_Handle, Address, buffer, buffer.Length, out _);
 
             return buffer;
         }
 
         public static bool WriteRawAddress(int Address, byte[] Value)
         {
-            int byteswritten = 0;
-            bool write = WriteProcessMemory(_Handle, Address, Value, Value.Length, ref byteswritten);
-
+            bool write = WriteProcessMemory(_Handle, Address, Value, Value.Length, out int byteswritten);
             return write && byteswritten > 0;
         }
 
@@ -183,6 +198,31 @@ namespace GameX.Modules
             Terminal.WriteLine("[Memory] Exited debug mode.");
         }
 
+        public static bool InjectDLL(string FilePath)
+        {
+            int allocatedMemory = VirtualAllocEx(_Handle, 0, FilePath.Length, (int)MEMORY_INFORMATION.MEM_COMMIT, (int)MEMORY_PROTECTION.PAGE_READWRITE);
+            if (allocatedMemory == 0)
+            {
+                Terminal.WriteLine("[Memory] WARNING: Memory allocation failed for Dll injection, aborting.");
+                return false;
+            }
+
+            byte[] dllBytes = Encoding.ASCII.GetBytes(FilePath);
+            WriteProcessMemory(_Handle, allocatedMemory, dllBytes, dllBytes.Length, out _);
+            int lpThreadId = CreateRemoteThread(_Handle, 0, 0, GetProcAddress(GetModuleHandle("kernel32.dll"), "LoadLibraryA"), allocatedMemory, 0, out _);
+
+            if (lpThreadId == 0)
+            {
+                Terminal.WriteLine("[Memory] WARNING: Remote thread creation failed for Dll injection, aborting.");
+                return false;
+            }
+
+            VirtualFreeEx(_Handle, allocatedMemory, dllBytes.Length, (int)MEMORY_INFORMATION.MEM_RELEASE);
+
+            Terminal.WriteLine($"[Memory] Dll \"{FilePath}\" injected successfully.");
+            return true;
+        }
+
         public static int ChangeProtection(int lpBaseAddress, int dwSize, int flNewProtect)
         {
             bool Changed = VirtualProtectEx(_Handle, lpBaseAddress, dwSize, flNewProtect, out int lpflOldProtect);
@@ -262,7 +302,7 @@ namespace GameX.Modules
 
             Terminal.WriteLine($"[Memory] Patching {CallAddress:X} for {DetourName}.");
 
-            int DetourAddress = VirtualAllocEx(_Handle, 0, DetourContent.Length, (int) MEMORY_INFORMATION.MEM_COMMIT | (int) MEMORY_INFORMATION.MEM_RESERVE, (int) MEMORY_PROTECTION.PAGE_EXECUTE_READ);
+            int DetourAddress = VirtualAllocEx(_Handle, 0, DetourContent.Length, (int)MEMORY_INFORMATION.MEM_COMMIT | (int)MEMORY_INFORMATION.MEM_RESERVE, (int)MEMORY_PROTECTION.PAGE_EXECUTE_READ);
 
             if (DetourAddress == 0)
             {
@@ -294,7 +334,7 @@ namespace GameX.Modules
 
             Detour Detour = GetDetour(DetourName);
             WriteRawAddress(Detour.CallAddress(), Detour.CallInstruction());
-            VirtualFreeEx(_Handle, Detour.Address(), 0, (int) MEMORY_INFORMATION.MEM_RELEASE);
+            VirtualFreeEx(_Handle, Detour.Address(), 0, (int)MEMORY_INFORMATION.MEM_RELEASE);
             Detours.Remove(DetourName);
             Terminal.WriteLine($"[Memory] {DetourName} removed sucessfully.");
             return true;

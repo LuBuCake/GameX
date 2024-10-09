@@ -1,6 +1,6 @@
 ﻿using GameX.Enum;
 
-namespace GameX.Database.Type
+namespace GameX.Modules.Sub
 {
     public class Inventory
     {
