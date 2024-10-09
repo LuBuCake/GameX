@@ -824,6 +824,7 @@ namespace GameX
             this.TabPageSettingsButton = new DevExpress.XtraEditors.SimpleButton();
             this.TabPageConsoleButton = new DevExpress.XtraEditors.SimpleButton();
             this.MainLoop = new System.Windows.Forms.Timer(this.components);
+            this.TabPageVocalizer = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -1648,7 +1649,7 @@ namespace GameX
             this.MasterTabControl.HeaderAutoFill = DevExpress.Utils.DefaultBoolean.True;
             this.MasterTabControl.Location = new System.Drawing.Point(12, 40);
             this.MasterTabControl.Name = "MasterTabControl";
-            this.MasterTabControl.SelectedTabPage = this.TabPageSettings;
+            this.MasterTabControl.SelectedTabPage = this.TabPageMelee;
             this.MasterTabControl.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
             this.MasterTabControl.Size = new System.Drawing.Size(1225, 439);
             this.MasterTabControl.TabIndex = 18;
@@ -1656,6 +1657,7 @@ namespace GameX
             this.TabPageChar,
             this.TabPageMelee,
             this.TabPageInventory,
+            this.TabPageVocalizer,
             this.TabPageSettings,
             this.TabPageConsole});
             // 
@@ -15150,6 +15152,12 @@ namespace GameX
             this.TabPageConsoleButton.TabStop = false;
             this.TabPageConsoleButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
+            // TabPageVocalizer
+            // 
+            this.TabPageVocalizer.Name = "TabPageVocalizer";
+            this.TabPageVocalizer.Size = new System.Drawing.Size(1223, 437);
+            this.TabPageVocalizer.Text = "Vocalizer";
+            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -16739,6 +16747,7 @@ namespace GameX
         private DevExpress.XtraEditors.ComboBoxEdit MapsCB;
         private DevExpress.XtraEditors.PictureEdit MapsPE;
         private DevExpress.XtraEditors.CheckEdit FreezeMapCE;
+        private DevExpress.XtraTab.XtraTabPage TabPageVocalizer;
     }
 }
 

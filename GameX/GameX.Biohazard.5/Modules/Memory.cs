@@ -8,6 +8,7 @@ using GameX.Enum;
 using GameX.Modules.Sub;
 using System.Text;
 using System.IO;
+using System.Reflection;
 
 namespace GameX.Modules
 {
@@ -54,6 +55,7 @@ namespace GameX.Modules
 
         public static bool ModuleStarted { get; set; }
         public static bool DebugMode { get; private set; }
+        public static bool QOLDllInjected { get; private set; }
         public static bool InternalInjected { get; private set; }
         public static Process _Process { get; set; }
         public static IntPtr _Handle { get; set; }
@@ -69,6 +71,7 @@ namespace GameX.Modules
             EnterDebugMode();
             SetForegroundWindow(_Process.MainWindowHandle);
             InjectInternalLibrary();
+            QOLDllInjected = ProcessHelper.ProcessHasModule(_Process, "QOL.dll");
             ModuleStarted = true;
             Terminal.WriteLine("[Memory] Module started successfully.");
         }
@@ -81,6 +84,8 @@ namespace GameX.Modules
             _Process = null;
             _Handle = IntPtr.Zero;
             SetForegroundWindow(Process.GetCurrentProcess().MainWindowHandle);
+            InternalInjected = false;
+            QOLDllInjected = false;
             ModuleStarted = false;
             Terminal.WriteLine("[Memory] Module finished successfully.");
         }
@@ -220,6 +225,21 @@ namespace GameX.Modules
             VirtualFreeEx(_Handle, allocatedMemory, dllBytes.Length, (int)MEMORY_INFORMATION.MEM_RELEASE);
 
             Terminal.WriteLine($"[Memory] Dll \"{FilePath}\" injected successfully.");
+            return true;
+        }
+
+        public static bool EjectDll(string DllName)
+        {
+            IntPtr ModuleAddress = ProcessHelper.GetBaseAddressFromModule(_Process, DllName);
+            int freeLibraryAddr = GetProcAddress(GetModuleHandle("kernel32.dll"), "FreeLibrary");
+
+            int hThread = CreateRemoteThread(_Handle, 0, 0, freeLibraryAddr, (int)ModuleAddress, 0, out _);
+            if (hThread == 0)
+            {
+                Terminal.WriteLine("[Memory] WARNING: Error calling remote thread for Dll ejection, aborting.");
+                return false;
+            }
+
             return true;
         }
 

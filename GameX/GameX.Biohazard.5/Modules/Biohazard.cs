@@ -5,6 +5,8 @@ namespace GameX.Modules
 {
     public static class Biohazard
     {
+        #region Module
+
         public static bool ModuleStarted { get; set; }
         public static Player[] Players { get; set; }
 
@@ -19,16 +21,16 @@ namespace GameX.Modules
             };
         }
 
-        #region Module
-
         public static void StartModule()
         {
+            VocalizerEnabledFlag = 1;
             ModuleStarted = true;
             Terminal.WriteLine("[Biohazard] Module started successfully.");
         }
 
         public static void FinishModule()
         {
+            VocalizerEnabledFlag = 0;
             ModuleStarted = false;
             Terminal.WriteLine("[Biohazard] Module finished successfully.");
         }

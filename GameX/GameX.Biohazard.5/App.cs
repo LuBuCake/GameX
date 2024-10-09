@@ -1050,7 +1050,6 @@ namespace GameX
                 Terminal.WriteLine("[App] Game validated.");
 
                 Memory.StartModule(Target_Process);
-                CheckDebugModeControls(Memory.DebugMode);
                 GameX_Start();
 
                 Target_Process.EnableRaisingEvents = true;
@@ -1165,12 +1164,6 @@ namespace GameX
                 Bar.Properties.StartColor = Color.FromArgb(0, 0, 0, 0);
                 Bar.Properties.EndColor = Color.FromArgb(0, 0, 0, 0);
             }
-        }
-
-        private void CheckDebugModeControls(bool DebugMode)
-        {
-            if (DebugMode)
-                return;
         }
 
         public object GetInventoryControl(int Player, int Slot, string ControlName)
@@ -1942,6 +1935,9 @@ namespace GameX
 
         private void GameX_CheckControls()
         {
+            ControllerAimButton.Enabled = !Memory.QOLDllInjected;
+            ControllerAimButton.Text = ControllerAimButton.Enabled ? ControllerAimButton.Text : "Enable";
+
             #region Controls
 
             SimpleButton[] EnableDisable =
@@ -2074,15 +2070,15 @@ namespace GameX
                 Biohazard.WeskerNoSunglassDrop(false);
                 Biohazard.WeskerNoDashCost(false);
                 Biohazard.NoTimerDecrease(false);
-                //Biohazard.EnableControllerAim(false);
+
+                if (ControllerAimButton.Enabled)
+                    Biohazard.EnableControllerAim(false);
+
                 Biohazard.SetWeaponPlacement(0);
                 Biohazard.DisableMeleeCamera(false);
                 Biohazard.DisableHandTremor(false);
                 Biohazard.EnableStunRodMeleeKill(false);
                 Biohazard.EnableReunionSpecialMoves(false);
-
-                Biohazard.VocalizerEnabledFlag = 0;
-                //Biohazard.InternalRunFlag = 0;
 
                 Biohazard.FinishModule();
             }
