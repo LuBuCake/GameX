@@ -264,7 +264,7 @@ namespace GameX.Database.Content
                 ID = 285,
                 Group = ItemGroupEnum.MachineGun,
                 GroupIndex = 1,
-                Name = "AK74  (MG)",
+                Name = "AK74 (MG)",
                 Alias = "ak74",
                 Firepower = new[] { 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 220, 250 },
                 ReloadSpeed = new[] { 2.83, 2.55 },
