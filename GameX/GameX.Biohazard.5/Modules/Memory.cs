@@ -9,6 +9,9 @@ using GameX.Modules.Sub;
 using System.Text;
 using System.IO;
 using System.Reflection;
+using System.Linq;
+using DevExpress.Data.ODataLinq.Helpers;
+using System.Threading;
 
 namespace GameX.Modules
 {
@@ -99,6 +102,16 @@ namespace GameX.Modules
             }
             else
                 InternalInjected = InjectDLL($"{Directory.GetCurrentDirectory()}\\addons\\GameX.Biohazard.5\\GameX.Biohazard.5.Internal.dll");
+
+            if (InternalInjected)
+            {
+                Thread.Sleep(1000);
+                _Process.Refresh();
+#if DEBUG
+                bool InternalModuleFound = ProcessHelper.ProcessHasModule(_Process, "GameX.Biohazard.5.Internal.dll");
+                Terminal.WriteLine($"[Memory][DEBUG] InternalModuleFound: {InternalModuleFound}");
+#endif
+            }
         }
 
         #endregion
