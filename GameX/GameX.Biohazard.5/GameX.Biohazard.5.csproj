@@ -469,12 +469,17 @@ mkdir $(SolutionDir)\build\x86\
 mkdir $(SolutionDir)\build\x86\addons\
 mkdir $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\
 
+RD /S /Q $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\images\
+RD /S /Q $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\prefabs\
+
 xcopy $(ProjectDir)\Resources $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\ /e /y
 xcopy $(ProjectDir)\Icons\hotkeys $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\images\hotkeys\ /e /y
 xcopy $(ProjectDir)\Icons\inventory\items $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\images\inventory\ /e /y
 
 xcopy $(TargetDir)\$(TargetFileName) $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\ /y
 xcopy $(TargetDir)\$(TargetFileName).config $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\ /y
+
+RD /S /Q $(SolutionDir)\GameX.Launcher.x86\$(OutDir)\addons\GameX.Biohazard.5\
 
 mkdir $(SolutionDir)\GameX.Launcher.x86\$(OutDir)\addons\
 xcopy $(SolutionDir)\build\x86\addons $(SolutionDir)\GameX.Launcher.x86\$(OutDir)\addons\ /e /y</PostBuildEvent>

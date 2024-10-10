@@ -782,6 +782,462 @@ namespace GameX
                 VocalizerHotkeyG9CB,
             };
 
+            ComboBoxEdit[] VocalizerSpeechChrisCombos =
+            {
+                VocalizerChrisG1S1CB,
+                VocalizerChrisG1S2CB,
+                VocalizerChrisG1S3CB,
+                VocalizerChrisG1S4CB,
+                VocalizerChrisG1S5CB,
+
+                VocalizerChrisG2S1CB,
+                VocalizerChrisG2S2CB,
+                VocalizerChrisG2S3CB,
+                VocalizerChrisG2S4CB,
+                VocalizerChrisG2S5CB,
+
+                VocalizerChrisG3S1CB,
+                VocalizerChrisG3S2CB,
+                VocalizerChrisG3S3CB,
+                VocalizerChrisG3S4CB,
+                VocalizerChrisG3S5CB,
+
+                VocalizerChrisG4S1CB,
+                VocalizerChrisG4S2CB,
+                VocalizerChrisG4S3CB,
+                VocalizerChrisG4S4CB,
+                VocalizerChrisG4S5CB,
+
+                VocalizerChrisG5S1CB,
+                VocalizerChrisG5S2CB,
+                VocalizerChrisG5S3CB,
+                VocalizerChrisG5S4CB,
+                VocalizerChrisG5S5CB,
+
+                VocalizerChrisG6S1CB,
+                VocalizerChrisG6S2CB,
+                VocalizerChrisG6S3CB,
+                VocalizerChrisG6S4CB,
+                VocalizerChrisG6S5CB,
+
+                VocalizerChrisG7S1CB,
+                VocalizerChrisG7S2CB,
+                VocalizerChrisG7S3CB,
+                VocalizerChrisG7S4CB,
+                VocalizerChrisG7S5CB,
+
+                VocalizerChrisG8S1CB,
+                VocalizerChrisG8S2CB,
+                VocalizerChrisG8S3CB,
+                VocalizerChrisG8S4CB,
+                VocalizerChrisG8S5CB,
+
+                VocalizerChrisG9S1CB,
+                VocalizerChrisG9S2CB,
+                VocalizerChrisG9S3CB,
+                VocalizerChrisG9S4CB,
+                VocalizerChrisG9S5CB,
+            };
+
+            ComboBoxEdit[] VocalizerSpeechShevaCombos =
+            {
+                VocalizerShevaG1S1CB,
+                VocalizerShevaG1S2CB,
+                VocalizerShevaG1S3CB,
+                VocalizerShevaG1S4CB,
+                VocalizerShevaG1S5CB,
+
+                VocalizerShevaG2S1CB,
+                VocalizerShevaG2S2CB,
+                VocalizerShevaG2S3CB,
+                VocalizerShevaG2S4CB,
+                VocalizerShevaG2S5CB,
+
+                VocalizerShevaG3S1CB,
+                VocalizerShevaG3S2CB,
+                VocalizerShevaG3S3CB,
+                VocalizerShevaG3S4CB,
+                VocalizerShevaG3S5CB,
+
+                VocalizerShevaG4S1CB,
+                VocalizerShevaG4S2CB,
+                VocalizerShevaG4S3CB,
+                VocalizerShevaG4S4CB,
+                VocalizerShevaG4S5CB,
+
+                VocalizerShevaG5S1CB,
+                VocalizerShevaG5S2CB,
+                VocalizerShevaG5S3CB,
+                VocalizerShevaG5S4CB,
+                VocalizerShevaG5S5CB,
+
+                VocalizerShevaG6S1CB,
+                VocalizerShevaG6S2CB,
+                VocalizerShevaG6S3CB,
+                VocalizerShevaG6S4CB,
+                VocalizerShevaG6S5CB,
+
+                VocalizerShevaG7S1CB,
+                VocalizerShevaG7S2CB,
+                VocalizerShevaG7S3CB,
+                VocalizerShevaG7S4CB,
+                VocalizerShevaG7S5CB,
+
+                VocalizerShevaG8S1CB,
+                VocalizerShevaG8S2CB,
+                VocalizerShevaG8S3CB,
+                VocalizerShevaG8S4CB,
+                VocalizerShevaG8S5CB,
+
+                VocalizerShevaG9S1CB,
+                VocalizerShevaG9S2CB,
+                VocalizerShevaG9S3CB,
+                VocalizerShevaG9S4CB,
+                VocalizerShevaG9S5CB,
+            };
+
+            ComboBoxEdit[] VocalizerSpeechJillCombos =
+            {
+                VocalizerJillG1S1CB,
+                VocalizerJillG1S2CB,
+                VocalizerJillG1S3CB,
+                VocalizerJillG1S4CB,
+                VocalizerJillG1S5CB,
+
+                VocalizerJillG2S1CB,
+                VocalizerJillG2S2CB,
+                VocalizerJillG2S3CB,
+                VocalizerJillG2S4CB,
+                VocalizerJillG2S5CB,
+
+                VocalizerJillG3S1CB,
+                VocalizerJillG3S2CB,
+                VocalizerJillG3S3CB,
+                VocalizerJillG3S4CB,
+                VocalizerJillG3S5CB,
+
+                VocalizerJillG4S1CB,
+                VocalizerJillG4S2CB,
+                VocalizerJillG4S3CB,
+                VocalizerJillG4S4CB,
+                VocalizerJillG4S5CB,
+
+                VocalizerJillG5S1CB,
+                VocalizerJillG5S2CB,
+                VocalizerJillG5S3CB,
+                VocalizerJillG5S4CB,
+                VocalizerJillG5S5CB,
+
+                VocalizerJillG6S1CB,
+                VocalizerJillG6S2CB,
+                VocalizerJillG6S3CB,
+                VocalizerJillG6S4CB,
+                VocalizerJillG6S5CB,
+
+                VocalizerJillG7S1CB,
+                VocalizerJillG7S2CB,
+                VocalizerJillG7S3CB,
+                VocalizerJillG7S4CB,
+                VocalizerJillG7S5CB,
+
+                VocalizerJillG8S1CB,
+                VocalizerJillG8S2CB,
+                VocalizerJillG8S3CB,
+                VocalizerJillG8S4CB,
+                VocalizerJillG8S5CB,
+
+                VocalizerJillG9S1CB,
+                VocalizerJillG9S2CB,
+                VocalizerJillG9S3CB,
+                VocalizerJillG9S4CB,
+                VocalizerJillG9S5CB,
+            };
+
+            ComboBoxEdit[] VocalizerSpeechWeskerCombos =
+            {
+                VocalizerWeskerG1S1CB,
+                VocalizerWeskerG1S2CB,
+                VocalizerWeskerG1S3CB,
+                VocalizerWeskerG1S4CB,
+                VocalizerWeskerG1S5CB,
+
+                VocalizerWeskerG2S1CB,
+                VocalizerWeskerG2S2CB,
+                VocalizerWeskerG2S3CB,
+                VocalizerWeskerG2S4CB,
+                VocalizerWeskerG2S5CB,
+
+                VocalizerWeskerG3S1CB,
+                VocalizerWeskerG3S2CB,
+                VocalizerWeskerG3S3CB,
+                VocalizerWeskerG3S4CB,
+                VocalizerWeskerG3S5CB,
+
+                VocalizerWeskerG4S1CB,
+                VocalizerWeskerG4S2CB,
+                VocalizerWeskerG4S3CB,
+                VocalizerWeskerG4S4CB,
+                VocalizerWeskerG4S5CB,
+
+                VocalizerWeskerG5S1CB,
+                VocalizerWeskerG5S2CB,
+                VocalizerWeskerG5S3CB,
+                VocalizerWeskerG5S4CB,
+                VocalizerWeskerG5S5CB,
+
+                VocalizerWeskerG6S1CB,
+                VocalizerWeskerG6S2CB,
+                VocalizerWeskerG6S3CB,
+                VocalizerWeskerG6S4CB,
+                VocalizerWeskerG6S5CB,
+
+                VocalizerWeskerG7S1CB,
+                VocalizerWeskerG7S2CB,
+                VocalizerWeskerG7S3CB,
+                VocalizerWeskerG7S4CB,
+                VocalizerWeskerG7S5CB,
+
+                VocalizerWeskerG8S1CB,
+                VocalizerWeskerG8S2CB,
+                VocalizerWeskerG8S3CB,
+                VocalizerWeskerG8S4CB,
+                VocalizerWeskerG8S5CB,
+
+                VocalizerWeskerG9S1CB,
+                VocalizerWeskerG9S2CB,
+                VocalizerWeskerG9S3CB,
+                VocalizerWeskerG9S4CB,
+                VocalizerWeskerG9S5CB,
+            };
+
+            ComboBoxEdit[] VocalizerSpeechJoshCombos =
+            {
+                VocalizerJoshG1S1CB,
+                VocalizerJoshG1S2CB,
+                VocalizerJoshG1S3CB,
+                VocalizerJoshG1S4CB,
+                VocalizerJoshG1S5CB,
+
+                VocalizerJoshG2S1CB,
+                VocalizerJoshG2S2CB,
+                VocalizerJoshG2S3CB,
+                VocalizerJoshG2S4CB,
+                VocalizerJoshG2S5CB,
+
+                VocalizerJoshG3S1CB,
+                VocalizerJoshG3S2CB,
+                VocalizerJoshG3S3CB,
+                VocalizerJoshG3S4CB,
+                VocalizerJoshG3S5CB,
+
+                VocalizerJoshG4S1CB,
+                VocalizerJoshG4S2CB,
+                VocalizerJoshG4S3CB,
+                VocalizerJoshG4S4CB,
+                VocalizerJoshG4S5CB,
+
+                VocalizerJoshG5S1CB,
+                VocalizerJoshG5S2CB,
+                VocalizerJoshG5S3CB,
+                VocalizerJoshG5S4CB,
+                VocalizerJoshG5S5CB,
+
+                VocalizerJoshG6S1CB,
+                VocalizerJoshG6S2CB,
+                VocalizerJoshG6S3CB,
+                VocalizerJoshG6S4CB,
+                VocalizerJoshG6S5CB,
+
+                VocalizerJoshG7S1CB,
+                VocalizerJoshG7S2CB,
+                VocalizerJoshG7S3CB,
+                VocalizerJoshG7S4CB,
+                VocalizerJoshG7S5CB,
+
+                VocalizerJoshG8S1CB,
+                VocalizerJoshG8S2CB,
+                VocalizerJoshG8S3CB,
+                VocalizerJoshG8S4CB,
+                VocalizerJoshG8S5CB,
+
+                VocalizerJoshG9S1CB,
+                VocalizerJoshG9S2CB,
+                VocalizerJoshG9S3CB,
+                VocalizerJoshG9S4CB,
+                VocalizerJoshG9S5CB,
+            };
+
+            ComboBoxEdit[] VocalizerSpeechExcellaCombos =
+            {
+                VocalizerExcellaG1S1CB,
+                VocalizerExcellaG1S2CB,
+                VocalizerExcellaG1S3CB,
+                VocalizerExcellaG1S4CB,
+                VocalizerExcellaG1S5CB,
+
+                VocalizerExcellaG2S1CB,
+                VocalizerExcellaG2S2CB,
+                VocalizerExcellaG2S3CB,
+                VocalizerExcellaG2S4CB,
+                VocalizerExcellaG2S5CB,
+
+                VocalizerExcellaG3S1CB,
+                VocalizerExcellaG3S2CB,
+                VocalizerExcellaG3S3CB,
+                VocalizerExcellaG3S4CB,
+                VocalizerExcellaG3S5CB,
+
+                VocalizerExcellaG4S1CB,
+                VocalizerExcellaG4S2CB,
+                VocalizerExcellaG4S3CB,
+                VocalizerExcellaG4S4CB,
+                VocalizerExcellaG4S5CB,
+
+                VocalizerExcellaG5S1CB,
+                VocalizerExcellaG5S2CB,
+                VocalizerExcellaG5S3CB,
+                VocalizerExcellaG5S4CB,
+                VocalizerExcellaG5S5CB,
+
+                VocalizerExcellaG6S1CB,
+                VocalizerExcellaG6S2CB,
+                VocalizerExcellaG6S3CB,
+                VocalizerExcellaG6S4CB,
+                VocalizerExcellaG6S5CB,
+
+                VocalizerExcellaG7S1CB,
+                VocalizerExcellaG7S2CB,
+                VocalizerExcellaG7S3CB,
+                VocalizerExcellaG7S4CB,
+                VocalizerExcellaG7S5CB,
+
+                VocalizerExcellaG8S1CB,
+                VocalizerExcellaG8S2CB,
+                VocalizerExcellaG8S3CB,
+                VocalizerExcellaG8S4CB,
+                VocalizerExcellaG8S5CB,
+
+                VocalizerExcellaG9S1CB,
+                VocalizerExcellaG9S2CB,
+                VocalizerExcellaG9S3CB,
+                VocalizerExcellaG9S4CB,
+                VocalizerExcellaG9S5CB,
+            };
+
+            ComboBoxEdit[] VocalizerSpeechBarryCombos =
+            {
+                VocalizerBarryG1S1CB,
+                VocalizerBarryG1S2CB,
+                VocalizerBarryG1S3CB,
+                VocalizerBarryG1S4CB,
+                VocalizerBarryG1S5CB,
+
+                VocalizerBarryG2S1CB,
+                VocalizerBarryG2S2CB,
+                VocalizerBarryG2S3CB,
+                VocalizerBarryG2S4CB,
+                VocalizerBarryG2S5CB,
+
+                VocalizerBarryG3S1CB,
+                VocalizerBarryG3S2CB,
+                VocalizerBarryG3S3CB,
+                VocalizerBarryG3S4CB,
+                VocalizerBarryG3S5CB,
+
+                VocalizerBarryG4S1CB,
+                VocalizerBarryG4S2CB,
+                VocalizerBarryG4S3CB,
+                VocalizerBarryG4S4CB,
+                VocalizerBarryG4S5CB,
+
+                VocalizerBarryG5S1CB,
+                VocalizerBarryG5S2CB,
+                VocalizerBarryG5S3CB,
+                VocalizerBarryG5S4CB,
+                VocalizerBarryG5S5CB,
+
+                VocalizerBarryG6S1CB,
+                VocalizerBarryG6S2CB,
+                VocalizerBarryG6S3CB,
+                VocalizerBarryG6S4CB,
+                VocalizerBarryG6S5CB,
+
+                VocalizerBarryG7S1CB,
+                VocalizerBarryG7S2CB,
+                VocalizerBarryG7S3CB,
+                VocalizerBarryG7S4CB,
+                VocalizerBarryG7S5CB,
+
+                VocalizerBarryG8S1CB,
+                VocalizerBarryG8S2CB,
+                VocalizerBarryG8S3CB,
+                VocalizerBarryG8S4CB,
+                VocalizerBarryG8S5CB,
+
+                VocalizerBarryG9S1CB,
+                VocalizerBarryG9S2CB,
+                VocalizerBarryG9S3CB,
+                VocalizerBarryG9S4CB,
+                VocalizerBarryG9S5CB,
+            };
+
+            ComboBoxEdit[] VocalizerSpeechRebeccaCombos =
+            {
+                VocalizerRebeccaG1S1CB,
+                VocalizerRebeccaG1S2CB,
+                VocalizerRebeccaG1S3CB,
+                VocalizerRebeccaG1S4CB,
+                VocalizerRebeccaG1S5CB,
+
+                VocalizerRebeccaG2S1CB,
+                VocalizerRebeccaG2S2CB,
+                VocalizerRebeccaG2S3CB,
+                VocalizerRebeccaG2S4CB,
+                VocalizerRebeccaG2S5CB,
+
+                VocalizerRebeccaG3S1CB,
+                VocalizerRebeccaG3S2CB,
+                VocalizerRebeccaG3S3CB,
+                VocalizerRebeccaG3S4CB,
+                VocalizerRebeccaG3S5CB,
+
+                VocalizerRebeccaG4S1CB,
+                VocalizerRebeccaG4S2CB,
+                VocalizerRebeccaG4S3CB,
+                VocalizerRebeccaG4S4CB,
+                VocalizerRebeccaG4S5CB,
+
+                VocalizerRebeccaG5S1CB,
+                VocalizerRebeccaG5S2CB,
+                VocalizerRebeccaG5S3CB,
+                VocalizerRebeccaG5S4CB,
+                VocalizerRebeccaG5S5CB,
+
+                VocalizerRebeccaG6S1CB,
+                VocalizerRebeccaG6S2CB,
+                VocalizerRebeccaG6S3CB,
+                VocalizerRebeccaG6S4CB,
+                VocalizerRebeccaG6S5CB,
+
+                VocalizerRebeccaG7S1CB,
+                VocalizerRebeccaG7S2CB,
+                VocalizerRebeccaG7S3CB,
+                VocalizerRebeccaG7S4CB,
+                VocalizerRebeccaG7S5CB,
+
+                VocalizerRebeccaG8S1CB,
+                VocalizerRebeccaG8S2CB,
+                VocalizerRebeccaG8S3CB,
+                VocalizerRebeccaG8S4CB,
+                VocalizerRebeccaG8S5CB,
+
+                VocalizerRebeccaG9S1CB,
+                VocalizerRebeccaG9S2CB,
+                VocalizerRebeccaG9S3CB,
+                VocalizerRebeccaG9S4CB,
+                VocalizerRebeccaG9S5CB,
+            };
+
             #endregion
 
             DB db = DBContext.GetDatabase();
@@ -913,6 +1369,33 @@ namespace GameX
                 HotkeyCombos[i].SelectedIndex = db.Hotkeys.IndexOf(db.Hotkeys.First(x => x.Name == DefaultHotkeys[i]));
             }
 
+            for (int i = 0; i < 45; i++)
+            {
+                VocalizerSpeechChrisCombos[i].Properties.Items.AddRange(db.AllSpeech.Where(x => x.Character == CharacterEnum.Chris).First().Lines);
+                VocalizerSpeechChrisCombos[i].SelectedIndex = 0;
+
+                VocalizerSpeechShevaCombos[i].Properties.Items.AddRange(db.AllSpeech.Where(x => x.Character == CharacterEnum.Sheva).First().Lines);
+                VocalizerSpeechShevaCombos[i].SelectedIndex = 0;
+
+                VocalizerSpeechJillCombos[i].Properties.Items.AddRange(db.AllSpeech.Where(x => x.Character == CharacterEnum.Jill).First().Lines);
+                VocalizerSpeechJillCombos[i].SelectedIndex = 0;
+
+                VocalizerSpeechWeskerCombos[i].Properties.Items.AddRange(db.AllSpeech.Where(x => x.Character == CharacterEnum.Wesker).First().Lines);
+                VocalizerSpeechWeskerCombos[i].SelectedIndex = 0;
+
+                VocalizerSpeechJoshCombos[i].Properties.Items.AddRange(db.AllSpeech.Where(x => x.Character == CharacterEnum.Josh).First().Lines);
+                VocalizerSpeechJoshCombos[i].SelectedIndex = 0;
+
+                VocalizerSpeechExcellaCombos[i].Properties.Items.AddRange(db.AllSpeech.Where(x => x.Character == CharacterEnum.Excella).First().Lines);
+                VocalizerSpeechExcellaCombos[i].SelectedIndex = 0;
+
+                VocalizerSpeechBarryCombos[i].Properties.Items.AddRange(db.AllSpeech.Where(x => x.Character == CharacterEnum.Barry).First().Lines);
+                VocalizerSpeechBarryCombos[i].SelectedIndex = 0;
+
+                VocalizerSpeechRebeccaCombos[i].Properties.Items.AddRange(db.AllSpeech.Where(x => x.Character == CharacterEnum.Rebecca).First().Lines);
+                VocalizerSpeechRebeccaCombos[i].SelectedIndex = 0;
+            }
+
             P1FreezeAllCheckEdit.CheckedChanged += EnableDisable_StateChanged;
             P2FreezeAllCheckEdit.CheckedChanged += EnableDisable_StateChanged;
             P3FreezeAllCheckEdit.CheckedChanged += EnableDisable_StateChanged;
@@ -985,6 +1468,11 @@ namespace GameX
 
             MasterTabControl.SelectedTabPageIndex = 0;
 
+            VocalizerCharSelectCB.Properties.Items.AddRange(db.Characters.Where(x => x.Name != "Irving").ToList());
+            VocalizerCharSelectCB.SelectedIndexChanged += VocalizerCharCombo_IndexChanged;
+            VocalizerCharSelectCB.SelectedIndex = 0;
+
+            VocalizerTabControl.SelectedTabPageIndex = 0;
             VocalizerEnableCE.Enabled = false;
 
             ResetHealthBars();
@@ -1218,6 +1706,775 @@ namespace GameX
             return null;
         }
 
+        private int ChooseVocalizerHotkey(int Group, bool SetHotkey = false, int Key = 0)
+        {
+            DB db = DBContext.GetDatabase();
+
+            #region Controls
+
+            ComboBoxEdit[] HotkeyCombos =
+            {
+                VocalizerHotkeyG1CB,
+                VocalizerHotkeyG2CB,
+                VocalizerHotkeyG3CB,
+                VocalizerHotkeyG4CB,
+                VocalizerHotkeyG5CB,
+                VocalizerHotkeyG6CB,
+                VocalizerHotkeyG7CB,
+                VocalizerHotkeyG8CB,
+                VocalizerHotkeyG9CB,
+            };
+
+            #endregion
+
+            if (SetHotkey)
+                HotkeyCombos[Group].SelectedIndex = db.Hotkeys.IndexOf(db.Hotkeys.First(x => x.Key == Key));
+
+            return (HotkeyCombos[Group].SelectedItem as Hotkey).Key;
+        }
+
+        private int ChooseVocalizerLine(int Character, int Group, int Slot, bool SetLine = false, int Line = 0)
+        {
+            DB db = DBContext.GetDatabase();
+
+            #region Controls
+
+            #region Chris
+
+            ComboBoxEdit[] ChrisGroup1Combos =
+            {
+                VocalizerChrisG1S1CB,
+                VocalizerChrisG1S2CB,
+                VocalizerChrisG1S3CB,
+                VocalizerChrisG1S4CB,
+                VocalizerChrisG1S5CB
+            };
+
+            ComboBoxEdit[] ChrisGroup2Combos =
+            {
+                VocalizerChrisG2S1CB,
+                VocalizerChrisG2S2CB,
+                VocalizerChrisG2S3CB,
+                VocalizerChrisG2S4CB,
+                VocalizerChrisG2S5CB
+            };
+
+            ComboBoxEdit[] ChrisGroup3Combos =
+            {
+                VocalizerChrisG3S1CB,
+                VocalizerChrisG3S2CB,
+                VocalizerChrisG3S3CB,
+                VocalizerChrisG3S4CB,
+                VocalizerChrisG3S5CB
+            };
+
+            ComboBoxEdit[] ChrisGroup4Combos =
+            {
+                VocalizerChrisG4S1CB,
+                VocalizerChrisG4S2CB,
+                VocalizerChrisG4S3CB,
+                VocalizerChrisG4S4CB,
+                VocalizerChrisG4S5CB
+            };
+
+            ComboBoxEdit[] ChrisGroup5Combos =
+            {
+                VocalizerChrisG5S1CB,
+                VocalizerChrisG5S2CB,
+                VocalizerChrisG5S3CB,
+                VocalizerChrisG5S4CB,
+                VocalizerChrisG5S5CB
+            };
+
+            ComboBoxEdit[] ChrisGroup6Combos =
+            {
+                VocalizerChrisG6S1CB,
+                VocalizerChrisG6S2CB,
+                VocalizerChrisG6S3CB,
+                VocalizerChrisG6S4CB,
+                VocalizerChrisG6S5CB
+            };
+
+            ComboBoxEdit[] ChrisGroup7Combos =
+            {
+                VocalizerChrisG7S1CB,
+                VocalizerChrisG7S2CB,
+                VocalizerChrisG7S3CB,
+                VocalizerChrisG7S4CB,
+                VocalizerChrisG7S5CB
+            };
+
+            ComboBoxEdit[] ChrisGroup8Combos =
+            {
+                VocalizerChrisG8S1CB,
+                VocalizerChrisG8S2CB,
+                VocalizerChrisG8S3CB,
+                VocalizerChrisG8S4CB,
+                VocalizerChrisG8S5CB
+            };
+
+            ComboBoxEdit[] ChrisGroup9Combos =
+            {
+                VocalizerChrisG9S1CB,
+                VocalizerChrisG9S2CB,
+                VocalizerChrisG9S3CB,
+                VocalizerChrisG9S4CB,
+                VocalizerChrisG9S5CB
+            };
+
+            List<ComboBoxEdit[]> ChrisGroups = new List<ComboBoxEdit[]>
+            {
+                ChrisGroup1Combos, ChrisGroup2Combos, ChrisGroup3Combos, ChrisGroup4Combos, ChrisGroup5Combos, ChrisGroup6Combos, ChrisGroup7Combos, ChrisGroup8Combos, ChrisGroup9Combos,
+            };
+
+            #endregion
+
+            #region Sheva
+
+            ComboBoxEdit[] ShevaGroup1Combos =
+            {
+                VocalizerShevaG1S1CB,
+                VocalizerShevaG1S2CB,
+                VocalizerShevaG1S3CB,
+                VocalizerShevaG1S4CB,
+                VocalizerShevaG1S5CB
+            };
+
+            ComboBoxEdit[] ShevaGroup2Combos =
+            {
+                VocalizerShevaG2S1CB,
+                VocalizerShevaG2S2CB,
+                VocalizerShevaG2S3CB,
+                VocalizerShevaG2S4CB,
+                VocalizerShevaG2S5CB
+            };
+
+            ComboBoxEdit[] ShevaGroup3Combos =
+            {
+                VocalizerShevaG3S1CB,
+                VocalizerShevaG3S2CB,
+                VocalizerShevaG3S3CB,
+                VocalizerShevaG3S4CB,
+                VocalizerShevaG3S5CB
+            };
+
+            ComboBoxEdit[] ShevaGroup4Combos =
+            {
+                VocalizerShevaG4S1CB,
+                VocalizerShevaG4S2CB,
+                VocalizerShevaG4S3CB,
+                VocalizerShevaG4S4CB,
+                VocalizerShevaG4S5CB
+            };
+
+            ComboBoxEdit[] ShevaGroup5Combos =
+            {
+                VocalizerShevaG5S1CB,
+                VocalizerShevaG5S2CB,
+                VocalizerShevaG5S3CB,
+                VocalizerShevaG5S4CB,
+                VocalizerShevaG5S5CB
+            };
+
+            ComboBoxEdit[] ShevaGroup6Combos =
+            {
+                VocalizerShevaG6S1CB,
+                VocalizerShevaG6S2CB,
+                VocalizerShevaG6S3CB,
+                VocalizerShevaG6S4CB,
+                VocalizerShevaG6S5CB
+            };
+
+            ComboBoxEdit[] ShevaGroup7Combos =
+            {
+                VocalizerShevaG7S1CB,
+                VocalizerShevaG7S2CB,
+                VocalizerShevaG7S3CB,
+                VocalizerShevaG7S4CB,
+                VocalizerShevaG7S5CB
+            };
+
+            ComboBoxEdit[] ShevaGroup8Combos =
+            {
+                VocalizerShevaG8S1CB,
+                VocalizerShevaG8S2CB,
+                VocalizerShevaG8S3CB,
+                VocalizerShevaG8S4CB,
+                VocalizerShevaG8S5CB
+            };
+
+            ComboBoxEdit[] ShevaGroup9Combos =
+            {
+                VocalizerShevaG9S1CB,
+                VocalizerShevaG9S2CB,
+                VocalizerShevaG9S3CB,
+                VocalizerShevaG9S4CB,
+                VocalizerShevaG9S5CB
+            };
+
+            List<ComboBoxEdit[]> ShevaGroups = new List<ComboBoxEdit[]>
+            {
+                ShevaGroup1Combos, ShevaGroup2Combos, ShevaGroup3Combos, ShevaGroup4Combos, ShevaGroup5Combos, ShevaGroup6Combos, ShevaGroup7Combos, ShevaGroup8Combos, ShevaGroup9Combos,
+            };
+
+            #endregion
+
+            #region Jill
+
+            ComboBoxEdit[] JillGroup1Combos =
+            {
+                VocalizerJillG1S1CB,
+                VocalizerJillG1S2CB,
+                VocalizerJillG1S3CB,
+                VocalizerJillG1S4CB,
+                VocalizerJillG1S5CB
+            };
+
+            ComboBoxEdit[] JillGroup2Combos =
+            {
+                VocalizerJillG2S1CB,
+                VocalizerJillG2S2CB,
+                VocalizerJillG2S3CB,
+                VocalizerJillG2S4CB,
+                VocalizerJillG2S5CB
+            };
+
+            ComboBoxEdit[] JillGroup3Combos =
+            {
+                VocalizerJillG3S1CB,
+                VocalizerJillG3S2CB,
+                VocalizerJillG3S3CB,
+                VocalizerJillG3S4CB,
+                VocalizerJillG3S5CB
+            };
+
+            ComboBoxEdit[] JillGroup4Combos =
+            {
+                VocalizerJillG4S1CB,
+                VocalizerJillG4S2CB,
+                VocalizerJillG4S3CB,
+                VocalizerJillG4S4CB,
+                VocalizerJillG4S5CB
+            };
+
+            ComboBoxEdit[] JillGroup5Combos =
+            {
+                VocalizerJillG5S1CB,
+                VocalizerJillG5S2CB,
+                VocalizerJillG5S3CB,
+                VocalizerJillG5S4CB,
+                VocalizerJillG5S5CB
+            };
+
+            ComboBoxEdit[] JillGroup6Combos =
+            {
+                VocalizerJillG6S1CB,
+                VocalizerJillG6S2CB,
+                VocalizerJillG6S3CB,
+                VocalizerJillG6S4CB,
+                VocalizerJillG6S5CB
+            };
+
+            ComboBoxEdit[] JillGroup7Combos =
+            {
+                VocalizerJillG7S1CB,
+                VocalizerJillG7S2CB,
+                VocalizerJillG7S3CB,
+                VocalizerJillG7S4CB,
+                VocalizerJillG7S5CB
+            };
+
+            ComboBoxEdit[] JillGroup8Combos =
+            {
+                VocalizerJillG8S1CB,
+                VocalizerJillG8S2CB,
+                VocalizerJillG8S3CB,
+                VocalizerJillG8S4CB,
+                VocalizerJillG8S5CB
+            };
+
+            ComboBoxEdit[] JillGroup9Combos =
+            {
+                VocalizerJillG9S1CB,
+                VocalizerJillG9S2CB,
+                VocalizerJillG9S3CB,
+                VocalizerJillG9S4CB,
+                VocalizerJillG9S5CB
+            };
+
+            List<ComboBoxEdit[]> JillGroups = new List<ComboBoxEdit[]>
+            {
+                JillGroup1Combos, JillGroup2Combos, JillGroup3Combos, JillGroup4Combos, JillGroup5Combos, JillGroup6Combos, JillGroup7Combos, JillGroup8Combos, JillGroup9Combos,
+            };
+
+            #endregion
+
+            #region Wesker
+
+            ComboBoxEdit[] WeskerGroup1Combos =
+            {
+                VocalizerWeskerG1S1CB,
+                VocalizerWeskerG1S2CB,
+                VocalizerWeskerG1S3CB,
+                VocalizerWeskerG1S4CB,
+                VocalizerWeskerG1S5CB
+            };
+
+            ComboBoxEdit[] WeskerGroup2Combos =
+            {
+                VocalizerWeskerG2S1CB,
+                VocalizerWeskerG2S2CB,
+                VocalizerWeskerG2S3CB,
+                VocalizerWeskerG2S4CB,
+                VocalizerWeskerG2S5CB
+            };
+
+            ComboBoxEdit[] WeskerGroup3Combos =
+            {
+                VocalizerWeskerG3S1CB,
+                VocalizerWeskerG3S2CB,
+                VocalizerWeskerG3S3CB,
+                VocalizerWeskerG3S4CB,
+                VocalizerWeskerG3S5CB
+            };
+
+            ComboBoxEdit[] WeskerGroup4Combos =
+            {
+                VocalizerWeskerG4S1CB,
+                VocalizerWeskerG4S2CB,
+                VocalizerWeskerG4S3CB,
+                VocalizerWeskerG4S4CB,
+                VocalizerWeskerG4S5CB
+            };
+
+            ComboBoxEdit[] WeskerGroup5Combos =
+            {
+                VocalizerWeskerG5S1CB,
+                VocalizerWeskerG5S2CB,
+                VocalizerWeskerG5S3CB,
+                VocalizerWeskerG5S4CB,
+                VocalizerWeskerG5S5CB
+            };
+
+            ComboBoxEdit[] WeskerGroup6Combos =
+            {
+                VocalizerWeskerG6S1CB,
+                VocalizerWeskerG6S2CB,
+                VocalizerWeskerG6S3CB,
+                VocalizerWeskerG6S4CB,
+                VocalizerWeskerG6S5CB
+            };
+
+            ComboBoxEdit[] WeskerGroup7Combos =
+            {
+                VocalizerWeskerG7S1CB,
+                VocalizerWeskerG7S2CB,
+                VocalizerWeskerG7S3CB,
+                VocalizerWeskerG7S4CB,
+                VocalizerWeskerG7S5CB
+            };
+
+            ComboBoxEdit[] WeskerGroup8Combos =
+            {
+                VocalizerWeskerG8S1CB,
+                VocalizerWeskerG8S2CB,
+                VocalizerWeskerG8S3CB,
+                VocalizerWeskerG8S4CB,
+                VocalizerWeskerG8S5CB
+            };
+
+            ComboBoxEdit[] WeskerGroup9Combos =
+            {
+                VocalizerWeskerG9S1CB,
+                VocalizerWeskerG9S2CB,
+                VocalizerWeskerG9S3CB,
+                VocalizerWeskerG9S4CB,
+                VocalizerWeskerG9S5CB
+            };
+
+            List<ComboBoxEdit[]> WeskerGroups = new List<ComboBoxEdit[]>
+            {
+                WeskerGroup1Combos, WeskerGroup2Combos, WeskerGroup3Combos, WeskerGroup4Combos, WeskerGroup5Combos, WeskerGroup6Combos, WeskerGroup7Combos, WeskerGroup8Combos, WeskerGroup9Combos,
+            };
+
+            #endregion
+
+            #region Josh
+
+            ComboBoxEdit[] JoshGroup1Combos =
+            {
+                VocalizerJoshG1S1CB,
+                VocalizerJoshG1S2CB,
+                VocalizerJoshG1S3CB,
+                VocalizerJoshG1S4CB,
+                VocalizerJoshG1S5CB
+            };
+
+            ComboBoxEdit[] JoshGroup2Combos =
+            {
+                VocalizerJoshG2S1CB,
+                VocalizerJoshG2S2CB,
+                VocalizerJoshG2S3CB,
+                VocalizerJoshG2S4CB,
+                VocalizerJoshG2S5CB
+            };
+
+            ComboBoxEdit[] JoshGroup3Combos =
+            {
+                VocalizerJoshG3S1CB,
+                VocalizerJoshG3S2CB,
+                VocalizerJoshG3S3CB,
+                VocalizerJoshG3S4CB,
+                VocalizerJoshG3S5CB
+            };
+
+            ComboBoxEdit[] JoshGroup4Combos =
+            {
+                VocalizerJoshG4S1CB,
+                VocalizerJoshG4S2CB,
+                VocalizerJoshG4S3CB,
+                VocalizerJoshG4S4CB,
+                VocalizerJoshG4S5CB
+            };
+
+            ComboBoxEdit[] JoshGroup5Combos =
+            {
+                VocalizerJoshG5S1CB,
+                VocalizerJoshG5S2CB,
+                VocalizerJoshG5S3CB,
+                VocalizerJoshG5S4CB,
+                VocalizerJoshG5S5CB
+            };
+
+            ComboBoxEdit[] JoshGroup6Combos =
+            {
+                VocalizerJoshG6S1CB,
+                VocalizerJoshG6S2CB,
+                VocalizerJoshG6S3CB,
+                VocalizerJoshG6S4CB,
+                VocalizerJoshG6S5CB
+            };
+
+            ComboBoxEdit[] JoshGroup7Combos =
+            {
+                VocalizerJoshG7S1CB,
+                VocalizerJoshG7S2CB,
+                VocalizerJoshG7S3CB,
+                VocalizerJoshG7S4CB,
+                VocalizerJoshG7S5CB
+            };
+
+            ComboBoxEdit[] JoshGroup8Combos =
+            {
+                VocalizerJoshG8S1CB,
+                VocalizerJoshG8S2CB,
+                VocalizerJoshG8S3CB,
+                VocalizerJoshG8S4CB,
+                VocalizerJoshG8S5CB
+            };
+
+            ComboBoxEdit[] JoshGroup9Combos =
+            {
+                VocalizerJoshG9S1CB,
+                VocalizerJoshG9S2CB,
+                VocalizerJoshG9S3CB,
+                VocalizerJoshG9S4CB,
+                VocalizerJoshG9S5CB
+            };
+
+            List<ComboBoxEdit[]> JoshGroups = new List<ComboBoxEdit[]>
+            {
+                JoshGroup1Combos, JoshGroup2Combos, JoshGroup3Combos, JoshGroup4Combos, JoshGroup5Combos, JoshGroup6Combos, JoshGroup7Combos, JoshGroup8Combos, JoshGroup9Combos,
+            };
+
+            #endregion
+
+            #region Excella
+
+            ComboBoxEdit[] ExcellaGroup1Combos =
+            {
+                VocalizerExcellaG1S1CB,
+                VocalizerExcellaG1S2CB,
+                VocalizerExcellaG1S3CB,
+                VocalizerExcellaG1S4CB,
+                VocalizerExcellaG1S5CB
+            };
+
+            ComboBoxEdit[] ExcellaGroup2Combos =
+            {
+                VocalizerExcellaG2S1CB,
+                VocalizerExcellaG2S2CB,
+                VocalizerExcellaG2S3CB,
+                VocalizerExcellaG2S4CB,
+                VocalizerExcellaG2S5CB
+            };
+
+            ComboBoxEdit[] ExcellaGroup3Combos =
+            {
+                VocalizerExcellaG3S1CB,
+                VocalizerExcellaG3S2CB,
+                VocalizerExcellaG3S3CB,
+                VocalizerExcellaG3S4CB,
+                VocalizerExcellaG3S5CB
+            };
+
+            ComboBoxEdit[] ExcellaGroup4Combos =
+            {
+                VocalizerExcellaG4S1CB,
+                VocalizerExcellaG4S2CB,
+                VocalizerExcellaG4S3CB,
+                VocalizerExcellaG4S4CB,
+                VocalizerExcellaG4S5CB
+            };
+
+            ComboBoxEdit[] ExcellaGroup5Combos =
+            {
+                VocalizerExcellaG5S1CB,
+                VocalizerExcellaG5S2CB,
+                VocalizerExcellaG5S3CB,
+                VocalizerExcellaG5S4CB,
+                VocalizerExcellaG5S5CB
+            };
+
+            ComboBoxEdit[] ExcellaGroup6Combos =
+            {
+                VocalizerExcellaG6S1CB,
+                VocalizerExcellaG6S2CB,
+                VocalizerExcellaG6S3CB,
+                VocalizerExcellaG6S4CB,
+                VocalizerExcellaG6S5CB
+            };
+
+            ComboBoxEdit[] ExcellaGroup7Combos =
+            {
+                VocalizerExcellaG7S1CB,
+                VocalizerExcellaG7S2CB,
+                VocalizerExcellaG7S3CB,
+                VocalizerExcellaG7S4CB,
+                VocalizerExcellaG7S5CB
+            };
+
+            ComboBoxEdit[] ExcellaGroup8Combos =
+            {
+                VocalizerExcellaG8S1CB,
+                VocalizerExcellaG8S2CB,
+                VocalizerExcellaG8S3CB,
+                VocalizerExcellaG8S4CB,
+                VocalizerExcellaG8S5CB
+            };
+
+            ComboBoxEdit[] ExcellaGroup9Combos =
+            {
+                VocalizerExcellaG9S1CB,
+                VocalizerExcellaG9S2CB,
+                VocalizerExcellaG9S3CB,
+                VocalizerExcellaG9S4CB,
+                VocalizerExcellaG9S5CB
+            };
+
+            List<ComboBoxEdit[]> ExcellaGroups = new List<ComboBoxEdit[]>
+            {
+                ExcellaGroup1Combos, ExcellaGroup2Combos, ExcellaGroup3Combos, ExcellaGroup4Combos, ExcellaGroup5Combos, ExcellaGroup6Combos, ExcellaGroup7Combos, ExcellaGroup8Combos, ExcellaGroup9Combos,
+            };
+
+            #endregion
+
+            #region Barry
+
+            ComboBoxEdit[] BarryGroup1Combos =
+            {
+                 VocalizerBarryG1S1CB,
+                 VocalizerBarryG1S2CB,
+                 VocalizerBarryG1S3CB,
+                 VocalizerBarryG1S4CB,
+                 VocalizerBarryG1S5CB
+             };
+
+            ComboBoxEdit[] BarryGroup2Combos =
+            {
+                 VocalizerBarryG2S1CB,
+                 VocalizerBarryG2S2CB,
+                 VocalizerBarryG2S3CB,
+                 VocalizerBarryG2S4CB,
+                 VocalizerBarryG2S5CB
+             };
+
+            ComboBoxEdit[] BarryGroup3Combos =
+            {
+                 VocalizerBarryG3S1CB,
+                 VocalizerBarryG3S2CB,
+                 VocalizerBarryG3S3CB,
+                 VocalizerBarryG3S4CB,
+                 VocalizerBarryG3S5CB
+             };
+
+            ComboBoxEdit[] BarryGroup4Combos =
+            {
+                 VocalizerBarryG4S1CB,
+                 VocalizerBarryG4S2CB,
+                 VocalizerBarryG4S3CB,
+                 VocalizerBarryG4S4CB,
+                 VocalizerBarryG4S5CB
+             };
+
+            ComboBoxEdit[] BarryGroup5Combos =
+            {
+                 VocalizerBarryG5S1CB,
+                 VocalizerBarryG5S2CB,
+                 VocalizerBarryG5S3CB,
+                 VocalizerBarryG5S4CB,
+                 VocalizerBarryG5S5CB
+             };
+
+            ComboBoxEdit[] BarryGroup6Combos =
+            {
+                 VocalizerBarryG6S1CB,
+                 VocalizerBarryG6S2CB,
+                 VocalizerBarryG6S3CB,
+                 VocalizerBarryG6S4CB,
+                 VocalizerBarryG6S5CB
+             };
+
+            ComboBoxEdit[] BarryGroup7Combos =
+            {
+                 VocalizerBarryG7S1CB,
+                 VocalizerBarryG7S2CB,
+                 VocalizerBarryG7S3CB,
+                 VocalizerBarryG7S4CB,
+                 VocalizerBarryG7S5CB
+             };
+
+            ComboBoxEdit[] BarryGroup8Combos =
+            {
+                 VocalizerBarryG8S1CB,
+                 VocalizerBarryG8S2CB,
+                 VocalizerBarryG8S3CB,
+                 VocalizerBarryG8S4CB,
+                 VocalizerBarryG8S5CB
+             };
+
+            ComboBoxEdit[] BarryGroup9Combos =
+            {
+                 VocalizerBarryG9S1CB,
+                 VocalizerBarryG9S2CB,
+                 VocalizerBarryG9S3CB,
+                 VocalizerBarryG9S4CB,
+                 VocalizerBarryG9S5CB
+             };
+
+            List<ComboBoxEdit[]> BarryGroups = new List<ComboBoxEdit[]>
+             {
+                 BarryGroup1Combos, BarryGroup2Combos, BarryGroup3Combos, BarryGroup4Combos, BarryGroup5Combos, BarryGroup6Combos, BarryGroup7Combos, BarryGroup8Combos, BarryGroup9Combos,
+             };
+
+            #endregion
+
+            #region Rebecca
+
+            ComboBoxEdit[] RebeccaGroup1Combos =
+            {
+                 VocalizerRebeccaG1S1CB,
+                 VocalizerRebeccaG1S2CB,
+                 VocalizerRebeccaG1S3CB,
+                 VocalizerRebeccaG1S4CB,
+                 VocalizerRebeccaG1S5CB
+             };
+
+            ComboBoxEdit[] RebeccaGroup2Combos =
+            {
+                 VocalizerRebeccaG2S1CB,
+                 VocalizerRebeccaG2S2CB,
+                 VocalizerRebeccaG2S3CB,
+                 VocalizerRebeccaG2S4CB,
+                 VocalizerRebeccaG2S5CB
+             };
+
+            ComboBoxEdit[] RebeccaGroup3Combos =
+            {
+                 VocalizerRebeccaG3S1CB,
+                 VocalizerRebeccaG3S2CB,
+                 VocalizerRebeccaG3S3CB,
+                 VocalizerRebeccaG3S4CB,
+                 VocalizerRebeccaG3S5CB
+             };
+
+            ComboBoxEdit[] RebeccaGroup4Combos =
+            {
+                 VocalizerRebeccaG4S1CB,
+                 VocalizerRebeccaG4S2CB,
+                 VocalizerRebeccaG4S3CB,
+                 VocalizerRebeccaG4S4CB,
+                 VocalizerRebeccaG4S5CB
+             };
+
+            ComboBoxEdit[] RebeccaGroup5Combos =
+            {
+                 VocalizerRebeccaG5S1CB,
+                 VocalizerRebeccaG5S2CB,
+                 VocalizerRebeccaG5S3CB,
+                 VocalizerRebeccaG5S4CB,
+                 VocalizerRebeccaG5S5CB
+             };
+
+            ComboBoxEdit[] RebeccaGroup6Combos =
+            {
+                 VocalizerRebeccaG6S1CB,
+                 VocalizerRebeccaG6S2CB,
+                 VocalizerRebeccaG6S3CB,
+                 VocalizerRebeccaG6S4CB,
+                 VocalizerRebeccaG6S5CB
+             };
+
+            ComboBoxEdit[] RebeccaGroup7Combos =
+            {
+                 VocalizerRebeccaG7S1CB,
+                 VocalizerRebeccaG7S2CB,
+                 VocalizerRebeccaG7S3CB,
+                 VocalizerRebeccaG7S4CB,
+                 VocalizerRebeccaG7S5CB
+             };
+
+            ComboBoxEdit[] RebeccaGroup8Combos =
+            {
+                 VocalizerRebeccaG8S1CB,
+                 VocalizerRebeccaG8S2CB,
+                 VocalizerRebeccaG8S3CB,
+                 VocalizerRebeccaG8S4CB,
+                 VocalizerRebeccaG8S5CB
+             };
+
+            ComboBoxEdit[] RebeccaGroup9Combos =
+            {
+                 VocalizerRebeccaG9S1CB,
+                 VocalizerRebeccaG9S2CB,
+                 VocalizerRebeccaG9S3CB,
+                 VocalizerRebeccaG9S4CB,
+                 VocalizerRebeccaG9S5CB
+             };
+
+            List<ComboBoxEdit[]> RebeccaGroups = new List<ComboBoxEdit[]>
+             {
+                 RebeccaGroup1Combos, RebeccaGroup2Combos, RebeccaGroup3Combos, RebeccaGroup4Combos, RebeccaGroup5Combos, RebeccaGroup6Combos, RebeccaGroup7Combos, RebeccaGroup8Combos, RebeccaGroup9Combos,
+             };
+
+            #endregion
+
+            #endregion
+
+            List<List<ComboBoxEdit[]>> Characters = new List<List<ComboBoxEdit[]>>
+            {
+                ChrisGroups, ShevaGroups, JillGroups, WeskerGroups, JoshGroups, ExcellaGroups, BarryGroups, RebeccaGroups
+            };
+
+            if (SetLine)
+            {
+                var Lines = db.AllSpeech.First(x => (int)x.Character == Character).Lines;
+                Characters[Character][Group][Slot].SelectedIndex = Lines.IndexOf(Lines.First(x => x.Value == Line));
+            }
+
+            return (Characters[Character][Group][Slot].SelectedItem as Simple).Value;
+        }
+
         #endregion
 
         #region Event Handlers
@@ -1235,6 +2492,13 @@ namespace GameX
                 MasterTabControl.Height = 439;
                 TabInventoryGP.Width = 1206;
                 TabInventoryGP.Height = 418;
+            }
+            else if (XTP.Name == "TabPageVocalizer")
+            {
+                Width = 768;
+                Height = 641;
+                MasterTabControl.Width = 744;
+                MasterTabControl.Height = 557;
             }
             else
             {
@@ -1267,18 +2531,28 @@ namespace GameX
 
         private void Configuration_Save(object sender, EventArgs e)
         {
-            ComboBoxEdit[] HotkeyCombos =
+            List<int> VocalizerHotkeys = new List<int>();
+            List<List<List<int>>> VocalizerLines = new List<List<List<int>>>();
+
+            for (int Group = 0; Group < 9; Group++)
             {
-                VocalizerHotkeyG1CB,
-                VocalizerHotkeyG2CB,
-                VocalizerHotkeyG3CB,
-                VocalizerHotkeyG4CB,
-                VocalizerHotkeyG5CB,
-                VocalizerHotkeyG6CB,
-                VocalizerHotkeyG7CB,
-                VocalizerHotkeyG8CB,
-                VocalizerHotkeyG9CB,
-            };
+                VocalizerHotkeys.Add(ChooseVocalizerHotkey(Group));
+            }
+
+            for (int Char = 0; Char < 8; Char++)
+            {
+                if (VocalizerLines[Char] == null)
+                    VocalizerLines[Char] = new List<List<int>>();
+
+                for (int Group = 0; Group < 9; Group++)
+                {
+                    if (VocalizerLines[Char][Group] == null)
+                        VocalizerLines[Char][Group] = new List<int>();
+
+                    for (int Slot = 0; Slot < 5; Slot++)
+                        VocalizerLines[Char][Group][Slot] = ChooseVocalizerLine(Char, Group, Slot);
+                }
+            }
 
             Settings Setts = new Settings()
             {
@@ -1302,7 +2576,8 @@ namespace GameX
                 MeleeKillSeconds = MeleeKillCB.SelectedIndex,
                 ComboTimerDuration = ComboTimerCB.SelectedIndex,
                 ComboBonusTimerDuration = ComboBonusTimerCB.SelectedIndex,
-                VocalizerHotkeys = HotkeyCombos.Select(x => x.SelectedIndex).ToList()
+                VocalizerHotkeys = VocalizerHotkeys,
+                VocalizerLines = VocalizerLines
             };
 
             try
@@ -1321,19 +2596,6 @@ namespace GameX
 
         private void Configuration_Load(object sender, EventArgs e)
         {
-            ComboBoxEdit[] HotkeyCombos =
-            {
-                VocalizerHotkeyG1CB,
-                VocalizerHotkeyG2CB,
-                VocalizerHotkeyG3CB,
-                VocalizerHotkeyG4CB,
-                VocalizerHotkeyG5CB,
-                VocalizerHotkeyG6CB,
-                VocalizerHotkeyG7CB,
-                VocalizerHotkeyG8CB,
-                VocalizerHotkeyG9CB,
-            };
-
             Settings Setts = new Settings()
             {
                 UpdateRate = 1,
@@ -1382,8 +2644,20 @@ namespace GameX
             TimerCombos_SelectedIndexChanged(ComboBonusTimerCB, null);
 
             if (Setts.VocalizerHotkeys != null)
-                for (int i = 0; i < HotkeyCombos.Length; i++)
-                    HotkeyCombos[i].SelectedIndex = Setts.VocalizerHotkeys[i];
+                for (int Group = 0; Group < 9; Group++)
+                    ChooseVocalizerHotkey(Group, true, Setts.VocalizerHotkeys[Group]);
+
+            if (Setts.VocalizerLines != null)
+            {
+                for (int Char = 0; Char < 8; Char++)
+                {
+                    for (int Group = 0; Group < 9; Group++)
+                    {
+                        for (int Slot = 0; Slot < 5; Slot++)
+                            ChooseVocalizerLine(Char, Group, Slot, true, Setts.VocalizerLines[Char][Group][Slot]);
+                    }
+                }
+            }
 
             if ((Setts.ControllerAim && ControllerAimButton.Text == "Enable") || (!Setts.ControllerAim && ControllerAimButton.Text == "Disable"))
                 EnableDisable_StateChanged(ControllerAimButton, null);
@@ -2018,6 +3292,12 @@ namespace GameX
             HotkeyPicBoxes[Index].Image = Image.FromFile($"{HotkeyImageDir}/{SelectedHotkey.Image}.png");
         }
 
+        private void VocalizerCharCombo_IndexChanged(object sender, EventArgs e)
+        {
+            ComboBoxEdit CBE = sender as ComboBoxEdit;
+            VocalizerTabControl.SelectedTabPageIndex = CBE.SelectedIndex;
+        }
+
         #endregion
 
         #region GameX Calls
@@ -2409,10 +3689,25 @@ namespace GameX
             if (Memory.InternalInjected)
             {
                 Biohazard.VocalizerEnabledFlag = VocalizerEnableCE.Checked;
-                
+
                 for (int i = 0; i < VocalizerHotkeyCombos.Length; i++)
-                {
                     Biohazard.SetVocalizerHotkey(i, (byte)(VocalizerHotkeyCombos[i].SelectedItem as Hotkey).Key);
+
+                Player LocalPlayer = Biohazard.Players[Biohazard.LocalPlayer];
+                if (LocalPlayer.IsActive())
+                {
+                    int CurrentChar = LocalPlayer.Character;
+                    if (CurrentChar > 0 && CurrentChar < 8)
+                    {
+                        for (int group = 0; group < 9; group++)
+                        {
+                            for (int slot = 0; slot < 5; slot++)
+                            {
+                                int SelectedLine = ChooseVocalizerLine(CurrentChar, group, slot);
+                                Biohazard.SetVocalizerSpeechGroup(group, slot, (ushort)SelectedLine);
+                            }
+                        }
+                    }
                 }
             }
 
