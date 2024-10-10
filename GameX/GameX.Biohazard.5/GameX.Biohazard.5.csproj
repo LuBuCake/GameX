@@ -257,16 +257,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\Content\HandnessContent.cs" />
+    <Compile Include="Database\Content\HotkeyContent.cs" />
     <Compile Include="Database\Content\ItemContent.cs" />
     <Compile Include="Database\Content\LoadoutViewBagContent.cs" />
     <Compile Include="Database\Content\MapContent.cs" />
     <Compile Include="Database\Content\MoveContent.cs" />
     <Compile Include="Database\Content\PaletteContent.cs" />
     <Compile Include="Database\Content\RateContent.cs" />
+    <Compile Include="Database\Content\SpeechContent.cs" />
     <Compile Include="Database\Content\TimerContent.cs" />
     <Compile Include="Database\Content\WeaponModeContent.cs" />
     <Compile Include="Database\Content\WeaponPlacementContent.cs" />
+    <Compile Include="Database\Type\Hotkey.cs" />
     <Compile Include="Database\Type\Map.cs" />
+    <Compile Include="Database\Type\Speech.cs" />
     <Compile Include="Database\ViewBag\LoadoutViewBag.cs" />
     <Compile Include="Enum\CharacterEnum.cs" />
     <Compile Include="Enum\GameModeEnum.cs" />
@@ -466,6 +470,7 @@ mkdir $(SolutionDir)\build\x86\addons\
 mkdir $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\
 
 xcopy $(ProjectDir)\Resources $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\ /e /y
+xcopy $(ProjectDir)\Icons\hotkeys $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\images\hotkeys\ /e /y
 xcopy $(ProjectDir)\Icons\inventory\items $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\images\inventory\ /e /y
 
 xcopy $(TargetDir)\$(TargetFileName) $(SolutionDir)\build\x86\addons\GameX.Biohazard.5\ /y

@@ -154,6 +154,9 @@ namespace GameX.Modules
 
         private static void UpdateTextAndProcessEvents(string Input)
         {
+            if (InputList.Count >= 100)
+                InputList.RemoveAt(0);
+
             InputList.Add(Input);
             InputText = InputList.ToArray();
 

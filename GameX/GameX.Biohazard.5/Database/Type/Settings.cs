@@ -1,4 +1,6 @@
-﻿namespace GameX.Database.Type
+﻿using System.Collections.Generic;
+
+namespace GameX.Database.Type
 {
     public class Settings
     {
@@ -22,5 +24,6 @@
         public int MeleeKillSeconds { get; set; }
         public int ComboTimerDuration { get; set; }
         public int ComboBonusTimerDuration { get; set; }
+        public List<int> VocalizerHotkeys { get; set; }
     }
 }

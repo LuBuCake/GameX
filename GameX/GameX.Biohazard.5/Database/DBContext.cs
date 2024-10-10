@@ -12,6 +12,7 @@ namespace GameX.Database
         public List<Character> Characters { get; set; }
         public List<Map> Maps { get; set; }
         public List<Item> AllItems { get; set; }
+        public List<Speech> AllSpeech { get; set; }
         public List<Item> ComboBoxItems { get; set; }
         public List<Move> MovementMoves { get; set; }
         public List<Move> DamageMoves { get; set; }
@@ -25,6 +26,7 @@ namespace GameX.Database
         public List<Simple> Handness { get; set; }
         public List<Simple> WeaponMode { get; set; }
         public List<Simple> WeaponPlacement { get; set; }
+        public List<Hotkey> Hotkeys { get; set; }
         public List<LoadoutViewBag> Loadouts { get; set; }
     }
 
@@ -38,10 +40,12 @@ namespace GameX.Database
 
             bool WriteChars = false;
             bool WriteItems = false;
+            bool WriteSpeech = false;
 
             string prefabDir = Directory.GetCurrentDirectory() + "/addons/GameX.Biohazard.5/prefabs/";
             string charDir = prefabDir + "character/";
             string itemDir = prefabDir + "item/";
+            string speechDir = prefabDir + "speech/";
 
             if (!Directory.Exists(prefabDir))
                 Directory.CreateDirectory(prefabDir);
@@ -58,9 +62,16 @@ namespace GameX.Database
                 WriteItems = true;
             }
 
+            if (!Directory.Exists(speechDir))
+            {
+                Directory.CreateDirectory(speechDir);
+                WriteSpeech = true;
+            }
+
             Database.Characters = CharacterContent.GetCollection(WriteChars);
             Database.Maps = MapContent.GetCollection();
             Database.AllItems = ItemContent.GetCollection(WriteItems);
+            Database.AllSpeech = SpeechContent.GetCollection(WriteSpeech);
 
             List<Item> ComboBoxItems = new List<Item>(Database.AllItems);
             ComboBoxItems.RemoveAll(x => x.Name == "Hand To Hand");
@@ -78,6 +89,7 @@ namespace GameX.Database
             Database.Handness = HandnessContent.GetCollection();
             Database.WeaponMode = WeaponModeContent.GetCollection();
             Database.WeaponPlacement = WeaponPlacementContent.GetCollection();
+            Database.Hotkeys = HotkeyContent.GetCollection();
             Database.Loadouts = LoadoutViewBagContent.GetCollection();
         }
 

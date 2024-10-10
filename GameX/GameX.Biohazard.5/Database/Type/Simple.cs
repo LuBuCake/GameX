@@ -11,6 +11,11 @@ namespace GameX.Database.Type
         public string Text { get; set; }
         public int Value { get; set; }
 
+        public Simple()
+        {
+
+        }
+
         public Simple(string Text)
         {
             this.Text = Text;

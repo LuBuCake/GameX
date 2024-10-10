@@ -46,6 +46,7 @@ namespace GameX
                 TabPageCharButton,
                 TabPageMeleeButton,
                 TabPageInventoryButton,
+                TabPageVocalizerButton,
                 TabPageSettingsButton,
                 TabPageConsoleButton
             };
@@ -768,6 +769,19 @@ namespace GameX
                 P4SlotKnifeFrozenCheckEdit
             };
 
+            ComboBoxEdit[] HotkeyCombos =
+            {
+                VocalizerHotkeyG1CB,
+                VocalizerHotkeyG2CB,
+                VocalizerHotkeyG3CB,
+                VocalizerHotkeyG4CB,
+                VocalizerHotkeyG5CB,
+                VocalizerHotkeyG6CB,
+                VocalizerHotkeyG7CB,
+                VocalizerHotkeyG8CB,
+                VocalizerHotkeyG9CB,
+            };
+
             #endregion
 
             DB db = DBContext.GetDatabase();
@@ -879,6 +893,26 @@ namespace GameX
                 FrozenChecks[i].CheckedChanged += EnableDisable_StateChanged;
             }
 
+            string[] DefaultHotkeys =
+            {
+                "F1",
+                "F2",
+                "F3",
+                "F4",
+                "F5",
+                "F6",
+                "F7",
+                "F8",
+                "F9"
+            };
+
+            for (int i = 0; i < HotkeyCombos.Length; i++)
+            {
+                HotkeyCombos[i].Properties.Items.AddRange(db.Hotkeys);
+                HotkeyCombos[i].SelectedIndexChanged += HotkeysCombo_SelectedIndexChanged;
+                HotkeyCombos[i].SelectedIndex = db.Hotkeys.IndexOf(db.Hotkeys.First(x => x.Name == DefaultHotkeys[i]));
+            }
+
             P1FreezeAllCheckEdit.CheckedChanged += EnableDisable_StateChanged;
             P2FreezeAllCheckEdit.CheckedChanged += EnableDisable_StateChanged;
             P3FreezeAllCheckEdit.CheckedChanged += EnableDisable_StateChanged;
@@ -950,6 +984,8 @@ namespace GameX
                 LoadoutComboBox.SelectedIndex = 0;
 
             MasterTabControl.SelectedTabPageIndex = 0;
+
+            VocalizerEnableCE.Enabled = false;
 
             ResetHealthBars();
             SetupImages();
@@ -1231,6 +1267,19 @@ namespace GameX
 
         private void Configuration_Save(object sender, EventArgs e)
         {
+            ComboBoxEdit[] HotkeyCombos =
+            {
+                VocalizerHotkeyG1CB,
+                VocalizerHotkeyG2CB,
+                VocalizerHotkeyG3CB,
+                VocalizerHotkeyG4CB,
+                VocalizerHotkeyG5CB,
+                VocalizerHotkeyG6CB,
+                VocalizerHotkeyG7CB,
+                VocalizerHotkeyG8CB,
+                VocalizerHotkeyG9CB,
+            };
+
             Settings Setts = new Settings()
             {
                 UpdateRate = UpdateModeComboBoxEdit.SelectedIndex,
@@ -1252,7 +1301,8 @@ namespace GameX
                 NoTimerDecrease = NoTimerDecreaseCE.Checked,
                 MeleeKillSeconds = MeleeKillCB.SelectedIndex,
                 ComboTimerDuration = ComboTimerCB.SelectedIndex,
-                ComboBonusTimerDuration = ComboBonusTimerCB.SelectedIndex
+                ComboBonusTimerDuration = ComboBonusTimerCB.SelectedIndex,
+                VocalizerHotkeys = HotkeyCombos.Select(x => x.SelectedIndex).ToList()
             };
 
             try
@@ -1271,6 +1321,19 @@ namespace GameX
 
         private void Configuration_Load(object sender, EventArgs e)
         {
+            ComboBoxEdit[] HotkeyCombos =
+            {
+                VocalizerHotkeyG1CB,
+                VocalizerHotkeyG2CB,
+                VocalizerHotkeyG3CB,
+                VocalizerHotkeyG4CB,
+                VocalizerHotkeyG5CB,
+                VocalizerHotkeyG6CB,
+                VocalizerHotkeyG7CB,
+                VocalizerHotkeyG8CB,
+                VocalizerHotkeyG9CB,
+            };
+
             Settings Setts = new Settings()
             {
                 UpdateRate = 1,
@@ -1317,6 +1380,10 @@ namespace GameX
             TimerCombos_SelectedIndexChanged(ComboTimerCB, null);
             ComboBonusTimerCB.SelectedIndex = Setts.ComboBonusTimerDuration;
             TimerCombos_SelectedIndexChanged(ComboBonusTimerCB, null);
+
+            if (Setts.VocalizerHotkeys != null)
+                for (int i = 0; i < HotkeyCombos.Length; i++)
+                    HotkeyCombos[i].SelectedIndex = Setts.VocalizerHotkeys[i];
 
             if ((Setts.ControllerAim && ControllerAimButton.Text == "Enable") || (!Setts.ControllerAim && ControllerAimButton.Text == "Disable"))
                 EnableDisable_StateChanged(ControllerAimButton, null);
@@ -1928,14 +1995,40 @@ namespace GameX
             Biohazard.Chapter = SelectedMap.Chapter;
         }
 
+        private void HotkeysCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PictureEdit[] HotkeyPicBoxes =
+            {
+                VocalizerHotkeyG1PE,
+                VocalizerHotkeyG2PE,
+                VocalizerHotkeyG3PE,
+                VocalizerHotkeyG4PE,
+                VocalizerHotkeyG5PE,
+                VocalizerHotkeyG6PE,
+                VocalizerHotkeyG7PE,
+                VocalizerHotkeyG8PE,
+                VocalizerHotkeyG9PE
+            };
+
+            ComboBoxEdit CBE = sender as ComboBoxEdit;
+            Hotkey SelectedHotkey = CBE.SelectedItem as Hotkey;
+            int Index = int.Parse(CBE.Name[16].ToString()) - 1;
+
+            string HotkeyImageDir = Directory.GetCurrentDirectory() + "/addons/GameX.Biohazard.5/images/hotkeys";
+            HotkeyPicBoxes[Index].Image = Image.FromFile($"{HotkeyImageDir}/{SelectedHotkey.Image}.png");
+        }
+
         #endregion
 
         #region GameX Calls
 
-        private void GameX_CheckControls()
+        private void GameX_StartControls()
         {
             ControllerAimButton.Enabled = !Memory.QOLDllInjected;
             ControllerAimButton.Text = ControllerAimButton.Enabled ? ControllerAimButton.Text : "Enable";
+
+            VocalizerEnableCE.Enabled = Memory.InternalInjected;
+            VocalizerEnableCE.Checked = Memory.InternalInjected && VocalizerEnableCE.Checked;
 
             #region Controls
 
@@ -2035,15 +2128,19 @@ namespace GameX
             WeaponPlacement_IndexChanged(WeaponPlacementComboBox, null);
         }
 
+        private void GameX_EndControls()
+        {
+
+        }
+
         private void GameX_Start()
         {
             try
             {
-                Biohazard.VocalizerEnabledFlag = 1;
                 Biohazard.NoFileChecking(true);
                 Biohazard.OnlineCharSwapFixes(true);
 
-                GameX_CheckControls();
+                GameX_StartControls();
             }
             catch (Exception Ex)
             {
@@ -2061,7 +2158,7 @@ namespace GameX
                 if (MeleeAnytimeSwitch.IsOn)
                     MeleeAnytimeSwitch.Toggle();
 
-                Biohazard.VocalizerEnabledFlag = 0;
+                Biohazard.VocalizerEnabledFlag = false;
                 Biohazard.ZeroScoreCalculation(false);
                 Biohazard.EnableColorFilter(false);
                 Biohazard.NoFileChecking(false);
@@ -2079,6 +2176,8 @@ namespace GameX
                 Biohazard.DisableHandTremor(false);
                 Biohazard.EnableStunRodMeleeKill(false);
                 Biohazard.EnableReunionSpecialMoves(false);
+
+                GameX_EndControls();
             }
             catch (Exception Ex)
             {
@@ -2103,7 +2202,10 @@ namespace GameX
 
         private void GameX_Keyboard(int input)
         {
-            //Terminal.WriteLine($"User pressed input: {input:X}");
+#if DEBUG
+            if (ActiveForm != null)
+                Terminal.WriteLine($"User pressed input: {input:X}");
+#endif
 
             if (!Initialized)
                 return;
@@ -2286,6 +2388,33 @@ namespace GameX
                 P3RapidfireButton,
                 P4RapidfireButton
             };
+
+            ComboBoxEdit[] VocalizerHotkeyCombos =
+            {
+                VocalizerHotkeyG1CB,
+                VocalizerHotkeyG2CB,
+                VocalizerHotkeyG3CB,
+                VocalizerHotkeyG4CB,
+                VocalizerHotkeyG5CB,
+                VocalizerHotkeyG6CB,
+                VocalizerHotkeyG7CB,
+                VocalizerHotkeyG8CB,
+                VocalizerHotkeyG9CB,
+            };
+
+            #endregion
+
+            #region Internal Update
+
+            if (Memory.InternalInjected)
+            {
+                Biohazard.VocalizerEnabledFlag = VocalizerEnableCE.Checked;
+                
+                for (int i = 0; i < VocalizerHotkeyCombos.Length; i++)
+                {
+                    Biohazard.SetVocalizerHotkey(i, (byte)(VocalizerHotkeyCombos[i].SelectedItem as Hotkey).Key);
+                }
+            }
 
             #endregion
 

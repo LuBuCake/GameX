@@ -24,15 +24,15 @@ namespace GameX.Modules
 
         #region Internal
 
-        public static byte InternalRunFlag
+        public static bool InternalRunFlag
         {
-            get { return Memory.Read<byte>("GameX.Biohazard.5.Internal.dll", 0x4060); }
+            get { return Memory.Read<byte>("GameX.Biohazard.5.Internal.dll", 0x4060) == 1; }
             set { Memory.Write(value, "GameX.Biohazard.5.Internal.dll", 0x4060); }
         }
 
-        public static byte VocalizerEnabledFlag
+        public static bool VocalizerEnabledFlag
         {
-            get { return Memory.Read<byte>("GameX.Biohazard.5.Internal.dll", 0x4454); }
+            get { return Memory.Read<byte>("GameX.Biohazard.5.Internal.dll", 0x4454) == 1; }
             set { Memory.Write(value, "GameX.Biohazard.5.Internal.dll", 0x4454); }
         }
 
