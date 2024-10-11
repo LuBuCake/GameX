@@ -2669,7 +2669,7 @@ namespace GameX
             this.MasterTabControl.HeaderAutoFill = DevExpress.Utils.DefaultBoolean.True;
             this.MasterTabControl.Location = new System.Drawing.Point(12, 40);
             this.MasterTabControl.Name = "MasterTabControl";
-            this.MasterTabControl.SelectedTabPage = this.TabPageSettings;
+            this.MasterTabControl.SelectedTabPage = this.TabPageVocalizer;
             this.MasterTabControl.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
             this.MasterTabControl.Size = new System.Drawing.Size(1225, 557);
             this.MasterTabControl.TabIndex = 18;
@@ -10284,10 +10284,6 @@ namespace GameX
             this.VocalizerCharSelectCB.Size = new System.Drawing.Size(148, 20);
             this.VocalizerCharSelectCB.TabIndex = 2;
             this.VocalizerCharSelectCB.TabStop = false;
-            this.VocalizerCharSelectCB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerCharSelectCB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerCharSelectCB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerEnableCE
             // 
