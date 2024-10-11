@@ -1429,6 +1429,7 @@ namespace GameX
             StunRodMeleeKillCE.CheckedChanged += EnableDisable_StateChanged;
             HandTremorCE.CheckedChanged += EnableDisable_StateChanged;
             NoTimerDecreaseCE.CheckedChanged += EnableDisable_StateChanged;
+            NoFPSCapCE.CheckedChanged += EnableDisable_StateChanged;
             ResetScoreCE.CheckedChanged += EnableDisable_StateChanged;
 
             ConsoleInputTextEdit.Validating += Terminal.ValidateInput;
@@ -1686,6 +1687,71 @@ namespace GameX
                 Bar.BackColor = CommonSkins.GetSkin(UserLookAndFeel.Default).TranslateColor(SystemColors.Window);
                 Bar.Properties.StartColor = Color.FromArgb(0, 0, 0, 0);
                 Bar.Properties.EndColor = Color.FromArgb(0, 0, 0, 0);
+            }
+        }
+
+        private void Melee_ApplyComboBox(ComboBoxEdit CE, bool ApplyAll = false)
+        {
+            #region Controls
+
+            ComboBoxEdit[] MeleeCombos =
+            {
+                ReunionHeadFlashComboBox,
+                ReunionLegFrontComboBox,
+                FinisherFrontComboBox,
+                FinisherBackComboBox,
+                HeadFlashComboBox,
+                ArmFrontComboBox,
+                ArmBackComboBox,
+                LegFrontComboBox,
+                LegBackComboBox,
+                HelpComboBox,
+                TauntComboBox,
+                KnifeComboBox,
+                QuickTurnComboBox,
+                MoveLeftComboBox,
+                MoveRightComboBox,
+                MoveBackComboBox,
+                ReloadComboBox
+            };
+
+            LabelControl[] MeleeLabels =
+            {
+                ReunionHeadFlashLabelControl,
+                ReunionLegFrontLabelControl,
+                FinisherFrontLabelControl,
+                FinisherBackLabelControl,
+                HeadFlashLabelControl,
+                ArmFrontLabelControl,
+                ArmBackLabelControl,
+                LegFrontLabelControl,
+                LegBackLabelControl,
+                HelpLabelControl,
+                TauntLabelControl,
+                KnifeLabelControl,
+                QuickTurnLabelControl,
+                MoveLeftLabelControl,
+                MoveRightLabelControl,
+                MoveBackLabelControl,
+                ReloadLabelControl
+            };
+
+            #endregion
+
+            if (!Initialized)
+                return;
+
+            if (!ApplyAll)
+            {
+                int index = Array.IndexOf(MeleeCombos, CE);
+                Biohazard.SetMelee(MeleeLabels[index].Text.Replace(":", ""), (byte)(CE.SelectedItem as Move).Value);
+            }
+            else
+            {
+                for (int i = 0; i < MeleeCombos.Length; i++)
+                {
+                    Biohazard.SetMelee(MeleeLabels[i].Text.Replace(":", ""), (byte)(MeleeCombos[i].SelectedItem as Move).Value);
+                }
             }
         }
 
@@ -3072,6 +3138,13 @@ namespace GameX
 
                     Biohazard.DisableHandTremor(CE.Checked);
                 }
+                else if (CE.Name.Equals("NoFPSCapCE"))
+                {
+                    if (!Initialized)
+                        return;
+
+                    Biohazard.FPSCap = CE.Checked ? 360.0f : 120.0f;
+                }
                 else if (CE.Name.Equals("NoTimerDecreaseCE"))
                 {
                     if (!Initialized)
@@ -3371,6 +3444,10 @@ namespace GameX
                         if (CE.Checked)
                             Biohazard.DisableHandTremor(true);
                         break;
+                    case "NoFPSCapCE":
+                        if (CE.Checked)
+                            Biohazard.FPSCap = 360.0f;
+                        break;
                     case "NoTimerDecreaseCE":
                         if (CE.Checked)
                             Biohazard.NoTimerDecrease(true);
@@ -3457,6 +3534,8 @@ namespace GameX
                 Biohazard.EnableStunRodMeleeKill(false);
                 Biohazard.EnableReunionSpecialMoves(false);
 
+                Biohazard.FPSCap = 120.0f;
+
                 GameX_EndControls();
             }
             catch (Exception Ex)
@@ -3472,7 +3551,315 @@ namespace GameX
                 if (!Initialized)
                     return;
 
-                TrainerUpdate();
+                #region Controls
+
+                ProgressBarControl[] HealthBars =
+                {
+                    P1HealthBar,
+                    P2HealthBar,
+                    P3HealthBar,
+                    P4HealthBar
+                };
+
+                GroupControl[] PlayerGroupBoxes =
+                {
+                    TabPageCharGPPlayer1,
+                    TabPageCharGPPlayer2,
+                    TabPageCharGPPlayer3,
+                    TabPageCharGPPlayer4
+                };
+
+                ComboBoxEdit[] CharacterCombos =
+                {
+                    P1CharComboBox,
+                    P2CharComboBox,
+                    P3CharComboBox,
+                    P4CharComboBox
+                };
+
+                ComboBoxEdit[] CostumeCombos =
+                {
+                    P1CosComboBox,
+                    P2CosComboBox,
+                    P3CosComboBox,
+                    P4CosComboBox
+                };
+
+                ComboBoxEdit[] Handness =
+                {
+                    P1HandnessComboBox,
+                    P2HandnessComboBox,
+                    P3HandnessComboBox,
+                    P4HandnessComboBox
+                };
+
+                ComboBoxEdit[] WeaponMode =
+                {
+                    P1WeaponModeComboBox,
+                    P2WeaponModeComboBox,
+                    P3WeaponModeComboBox,
+                    P4WeaponModeComboBox
+                };
+
+                CheckButton[] CheckButtons =
+                {
+                    P1FreezeCharCosButton,
+                    P2FreezeCharCosButton,
+                    P3FreezeCharCosButton,
+                    P4FreezeCharCosButton
+                };
+
+                CheckButton[] InfiniteHP =
+                {
+                    P1InfiniteHPButton,
+                    P2InfiniteHPButton,
+                    P3InfiniteHPButton,
+                    P4InfiniteHPButton
+                };
+
+                CheckButton[] Untargetable =
+                {
+                    P1UntargetableButton,
+                    P2UntargetableButton,
+                    P3UntargetableButton,
+                    P4UntargetableButton
+                };
+
+                CheckButton[] InfiniteAmmo =
+                {
+                    P1InfiniteAmmoButton,
+                    P2InfiniteAmmoButton,
+                    P3InfiniteAmmoButton,
+                    P4InfiniteAmmoButton
+                };
+
+                CheckButton[] InfiniteResource =
+                {
+                    P1InfiniteResourceButton,
+                    P2InfiniteResourceButton,
+                    P3InfiniteResourceButton,
+                    P4InfiniteResourceButton
+                };
+
+                CheckButton[] InfiniteThrowable =
+                {
+                    P1InfiniteThrowableButton,
+                    P2InfiniteThrowableButton,
+                    P3InfiniteThrowableButton,
+                    P4InfiniteThrowableButton
+                };
+
+                CheckButton[] RapidFire =
+                {
+                    P1RapidfireButton,
+                    P2RapidfireButton,
+                    P3RapidfireButton,
+                    P4RapidfireButton
+                };
+
+                ComboBoxEdit[] VocalizerHotkeyCombos =
+                {
+                    VocalizerHotkeyG1CB,
+                    VocalizerHotkeyG2CB,
+                    VocalizerHotkeyG3CB,
+                    VocalizerHotkeyG4CB,
+                    VocalizerHotkeyG5CB,
+                    VocalizerHotkeyG6CB,
+                    VocalizerHotkeyG7CB,
+                    VocalizerHotkeyG8CB,
+                    VocalizerHotkeyG9CB,
+                };
+
+                #endregion
+
+                #region Internal Update
+
+                if (Memory.InternalInjected)
+                {
+                    Biohazard.VocalizerEnabledFlag = VocalizerEnableCE.Checked;
+
+                    for (int i = 0; i < VocalizerHotkeyCombos.Length; i++)
+                        Biohazard.SetVocalizerHotkey(i, (byte)(VocalizerHotkeyCombos[i].SelectedItem as Hotkey).Key);
+
+                    Player LocalPlayer = Biohazard.Players[Biohazard.LocalPlayer];
+
+                    if (LocalPlayer.IsActive())
+                    {
+                        int CurrentChar = LocalPlayer.Character;
+                        if (CurrentChar > -1 && CurrentChar < 8)
+                        {
+                            for (int group = 0; group < 9; group++)
+                            {
+                                for (int slot = 0; slot < 5; slot++)
+                                {
+                                    int SelectedLine = ChooseVocalizerLine(CurrentChar, group, slot);
+                                    Biohazard.SetVocalizerSpeechGroup(group, slot, (ushort)SelectedLine);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                #endregion
+
+                #region Game Mode Update
+
+                double combotimer = Utility.Clamp(Biohazard.ComboTimer, 0, TimeSpan.MaxValue.TotalSeconds - 1d);
+                double combobonustimer = Utility.Clamp(Biohazard.ComboBonusTimer, 0, TimeSpan.MaxValue.TotalSeconds - 1d);
+                double timer = Utility.Clamp(Biohazard.Timer, 0, TimeSpan.MaxValue.TotalSeconds - 1d);
+
+                ScoreTE.Text = Biohazard.Score.ToString();
+                ComboTimerTE.Text = TimeSpan.FromSeconds(double.IsNaN(combotimer) ? 0f : combotimer).ToString("mm':'ss");
+                ComboBonusTimerTE.Text = TimeSpan.FromSeconds(double.IsNaN(combobonustimer) ? 0f : combobonustimer).ToString("mm':'ss");
+                CurrentTimerTE.Text = TimeSpan.FromSeconds(double.IsNaN(timer) ? 0f : timer).ToString("hh':'mm':'ss");
+
+                if (Biohazard.GameMode == (int)GameModeEnum.Mercenaries || Biohazard.GameMode == (int)GameModeEnum.Reunion)
+                {
+                    if (ComboTimerMaxCE.Checked)
+                        Biohazard.ComboTimer = Biohazard.ComboTimerDuration;
+
+                    if (ComboBonusTimerMaxCE.Checked)
+                        Biohazard.ComboBonusTimer = Biohazard.ComboBonusTimerDuration;
+                }
+
+                if (!MapsCB.IsPopupOpen)
+                {
+                    Map SelectedMap = MapsCB.SelectedItem as Map;
+
+                    int Chapter = Biohazard.Chapter;
+                    short Stage = Biohazard.Stage;
+
+                    if (!FreezeMapCE.Checked)
+                    {
+                        if ((SelectedMap.Stage != -1 && SelectedMap.Stage != Stage) || SelectedMap.Chapter != Chapter)
+                        {
+                            foreach (object ComboObj in MapsCB.Properties.Items)
+                            {
+                                Map map = ComboObj as Map;
+
+                                if ((map.Stage == -1 || map.Stage == Biohazard.Stage) && map.Chapter == Biohazard.Chapter)
+                                    MapsCB.SelectedItem = ComboObj;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Biohazard.Stage = SelectedMap.Stage;
+                        Biohazard.Chapter = SelectedMap.Chapter;
+                    }
+                }
+
+                #endregion
+
+                #region Character Update
+
+                for (int i = 0; i < 4; i++)
+                {
+                    bool PlayerPresent = Biohazard.Players[i].IsActive();
+
+                    // Characters & Costumes //
+                    if (!CharacterCombos[i].IsPopupOpen && !CostumeCombos[i].IsPopupOpen)
+                    {
+                        if (!CheckButtons[i].Checked)
+                        {
+                            int CurrentChar = Biohazard.Players[i].Character;
+                            int CurrentCostume = Biohazard.Players[i].Costume;
+
+                            foreach (object Char in CharacterCombos[i].Properties.Items)
+                            {
+                                if ((Char as Character).Value == CurrentChar)
+                                    CharacterCombos[i].SelectedItem = Char;
+                            }
+
+                            foreach (object Cos in CostumeCombos[i].Properties.Items)
+                            {
+                                if ((Cos as Costume).Value == CurrentCostume)
+                                    CostumeCombos[i].SelectedItem = Cos;
+                            }
+                        }
+                        else
+                        {
+                            int CharValue = (CharacterCombos[i].SelectedItem as Character).Value;
+                            int Cosvalue = (CostumeCombos[i].SelectedItem as Costume).Value;
+
+                            if (i < 2)
+                                Biohazard.SetStoryModeCharacter(i, CharValue, Cosvalue);
+
+                            Biohazard.Players[i].Character = CharValue;
+                            Biohazard.Players[i].Costume = Cosvalue;
+                        }
+                    }
+
+                    // Inventory //
+                    for (int slot = 0; slot < 10; slot++)
+                        Biohazard.Players[i].Inventory.LoadoutSlots[slot].Update();
+
+                    // Health Bar //
+                    double PlayerHealthPercent = PlayerPresent ? Utility.Clamp((double)Biohazard.Players[i].Health / Biohazard.Players[i].MaxHealth, 0.0, 1.0) : 1.0;
+                    PlayerHealthPercent = double.IsNaN(PlayerHealthPercent) ? 0.0 : PlayerHealthPercent;
+
+                    HealthBars[i].Properties.Maximum = PlayerPresent ? Biohazard.Players[i].MaxHealth : 1;
+                    HealthBars[i].EditValue = PlayerPresent ? Biohazard.Players[i].Health : 1;
+                    HealthBars[i].Properties.StartColor = PlayerPresent ? Color.FromArgb((int)(255.0 - (155.0 * PlayerHealthPercent)), (int)(0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(0, 0, 0, 0);
+                    HealthBars[i].Properties.EndColor = PlayerPresent ? Color.FromArgb((int)(255.0 - (155.0 * PlayerHealthPercent)), (int)(0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(0, 0, 0, 0);
+
+                    // Player Name //
+                    PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (Biohazard.InGame ? i == Biohazard.LocalPlayer ? Biohazard.LocalPlayerName : PlayerPresent ? Biohazard.Players[i].AI ? "CPU AI" : "Connected" : "Disconnected" : "Disconnected");
+
+                    // Handness //
+                    if (Handness[i].SelectedIndex > 0 && PlayerPresent)
+                        Biohazard.Players[i].Handness = (byte)(Handness[i].SelectedItem as Simple).Value;
+
+                    // Weapon Mode //
+                    if (WeaponMode[i].SelectedIndex > 0 && PlayerPresent)
+                        Biohazard.Players[i].WeaponMode = (byte)(WeaponMode[i].SelectedItem as Simple).Value;
+
+                    // Melee Anytime Cords //
+                    if (MeleeAnytimeSwitch.IsOn && PlayerPresent)
+                    {
+                        Biohazard.Players[i].MeleePosition = Biohazard.Players[i].Position;
+
+                        if (Biohazard.Players[i].MeleeTarget != 0 && Biohazard.Players[i].DoingIdleMove())
+                            Biohazard.Players[i].MeleeTarget = 0;
+                    }
+
+                    // Wesker Dash cost
+                    Biohazard.WeskerNoDashCost(WeskerNoDashCostCE.Checked); // && Biohazard.GameMode != (int)GameModeEnum.Versus
+
+                    // If versus then end the current iteration //
+                    // if (Biohazard.GameMode == (int)GameModeEnum.Versus)
+                    //continue;
+
+                    // Infinite HP //
+                    if (InfiniteHP[i].Checked && PlayerPresent)
+                        Biohazard.Players[i].Health = Biohazard.Players[i].MaxHealth;
+
+                    // Untergetable //
+                    if (Untargetable[i].Checked && PlayerPresent)
+                        Biohazard.Players[i].Invulnerable = true;
+
+                    // Infinite Ammo //
+                    if (InfiniteAmmo[i].Checked && PlayerPresent)
+                        Biohazard.Players[i].SetInfiniteAmmo(true);
+
+                    // Infinite Resource //
+                    if (InfiniteResource[i].Checked && PlayerPresent)
+                        Biohazard.Players[i].SetInfiniteResource(true);
+
+                    // Infinite Throwable //
+                    if (InfiniteThrowable[i].Checked && PlayerPresent)
+                        Biohazard.Players[i].SetInfiniteThrowable(true);
+
+                    // Rapidfire //
+                    if (RapidFire[i].Checked && PlayerPresent)
+                        Biohazard.Players[i].SetRapidFire(true);
+
+                    // Infinite Dash //
+                    if (WeskerInfiniteDashCE.Checked && PlayerPresent && Biohazard.Players[i].Character == (int)CharacterEnum.Wesker)
+                        Biohazard.Players[i].ResetDash();
+                }
+
+                #endregion
             }
             catch (Exception Ex)
             {
@@ -3490,387 +3877,6 @@ namespace GameX
             if (!Initialized)
                 return;
 
-        }
-
-        #endregion
-
-        #region Methods
-
-        private void Melee_ApplyComboBox(ComboBoxEdit CE, bool ApplyAll = false)
-        {
-            #region Controls
-
-            ComboBoxEdit[] MeleeCombos =
-            {
-                ReunionHeadFlashComboBox,
-                ReunionLegFrontComboBox,
-                FinisherFrontComboBox,
-                FinisherBackComboBox,
-                HeadFlashComboBox,
-                ArmFrontComboBox,
-                ArmBackComboBox,
-                LegFrontComboBox,
-                LegBackComboBox,
-                HelpComboBox,
-                TauntComboBox,
-                KnifeComboBox,
-                QuickTurnComboBox,
-                MoveLeftComboBox,
-                MoveRightComboBox,
-                MoveBackComboBox,
-                ReloadComboBox
-            };
-
-            LabelControl[] MeleeLabels =
-            {
-                ReunionHeadFlashLabelControl,
-                ReunionLegFrontLabelControl,
-                FinisherFrontLabelControl,
-                FinisherBackLabelControl,
-                HeadFlashLabelControl,
-                ArmFrontLabelControl,
-                ArmBackLabelControl,
-                LegFrontLabelControl,
-                LegBackLabelControl,
-                HelpLabelControl,
-                TauntLabelControl,
-                KnifeLabelControl,
-                QuickTurnLabelControl,
-                MoveLeftLabelControl,
-                MoveRightLabelControl,
-                MoveBackLabelControl,
-                ReloadLabelControl
-            };
-
-            #endregion
-
-            if (!Initialized)
-                return;
-
-            if (!ApplyAll)
-            {
-                int index = Array.IndexOf(MeleeCombos, CE);
-                Biohazard.SetMelee(MeleeLabels[index].Text.Replace(":", ""), (byte)(CE.SelectedItem as Move).Value);
-            }
-            else
-            {
-                for (int i = 0; i < MeleeCombos.Length; i++)
-                {
-                    Biohazard.SetMelee(MeleeLabels[i].Text.Replace(":", ""), (byte)(MeleeCombos[i].SelectedItem as Move).Value);
-                }
-            }
-        }
-
-        private void TrainerUpdate()
-        {
-            #region Controls
-
-            ProgressBarControl[] HealthBars =
-            {
-                P1HealthBar,
-                P2HealthBar,
-                P3HealthBar,
-                P4HealthBar
-            };
-
-            GroupControl[] PlayerGroupBoxes =
-            {
-                TabPageCharGPPlayer1,
-                TabPageCharGPPlayer2,
-                TabPageCharGPPlayer3,
-                TabPageCharGPPlayer4
-            };
-
-            ComboBoxEdit[] CharacterCombos =
-            {
-                P1CharComboBox,
-                P2CharComboBox,
-                P3CharComboBox,
-                P4CharComboBox
-            };
-
-            ComboBoxEdit[] CostumeCombos =
-            {
-                P1CosComboBox,
-                P2CosComboBox,
-                P3CosComboBox,
-                P4CosComboBox
-            };
-
-            ComboBoxEdit[] Handness =
-            {
-                P1HandnessComboBox,
-                P2HandnessComboBox,
-                P3HandnessComboBox,
-                P4HandnessComboBox
-            };
-
-            ComboBoxEdit[] WeaponMode =
-            {
-                P1WeaponModeComboBox,
-                P2WeaponModeComboBox,
-                P3WeaponModeComboBox,
-                P4WeaponModeComboBox
-            };
-
-            CheckButton[] CheckButtons =
-            {
-                P1FreezeCharCosButton,
-                P2FreezeCharCosButton,
-                P3FreezeCharCosButton,
-                P4FreezeCharCosButton
-            };
-
-            CheckButton[] InfiniteHP =
-            {
-                P1InfiniteHPButton,
-                P2InfiniteHPButton,
-                P3InfiniteHPButton,
-                P4InfiniteHPButton
-            };
-
-            CheckButton[] Untargetable =
-            {
-                P1UntargetableButton,
-                P2UntargetableButton,
-                P3UntargetableButton,
-                P4UntargetableButton
-            };
-
-            CheckButton[] InfiniteAmmo =
-            {
-                P1InfiniteAmmoButton,
-                P2InfiniteAmmoButton,
-                P3InfiniteAmmoButton,
-                P4InfiniteAmmoButton
-            };
-
-            CheckButton[] InfiniteResource =
-            {
-                P1InfiniteResourceButton,
-                P2InfiniteResourceButton,
-                P3InfiniteResourceButton,
-                P4InfiniteResourceButton
-            };
-
-            CheckButton[] InfiniteThrowable =
-            {
-                P1InfiniteThrowableButton,
-                P2InfiniteThrowableButton,
-                P3InfiniteThrowableButton,
-                P4InfiniteThrowableButton
-            };
-
-            CheckButton[] RapidFire =
-            {
-                P1RapidfireButton,
-                P2RapidfireButton,
-                P3RapidfireButton,
-                P4RapidfireButton
-            };
-
-            ComboBoxEdit[] VocalizerHotkeyCombos =
-            {
-                VocalizerHotkeyG1CB,
-                VocalizerHotkeyG2CB,
-                VocalizerHotkeyG3CB,
-                VocalizerHotkeyG4CB,
-                VocalizerHotkeyG5CB,
-                VocalizerHotkeyG6CB,
-                VocalizerHotkeyG7CB,
-                VocalizerHotkeyG8CB,
-                VocalizerHotkeyG9CB,
-            };
-
-            #endregion
-
-            #region Internal Update
-
-            if (Memory.InternalInjected)
-            {
-                Biohazard.VocalizerEnabledFlag = VocalizerEnableCE.Checked;
-
-                for (int i = 0; i < VocalizerHotkeyCombos.Length; i++)
-                    Biohazard.SetVocalizerHotkey(i, (byte)(VocalizerHotkeyCombos[i].SelectedItem as Hotkey).Key);
-
-                Player LocalPlayer = Biohazard.Players[Biohazard.LocalPlayer];
-                if (LocalPlayer.IsActive())
-                {
-                    int CurrentChar = LocalPlayer.Character;
-                    if (CurrentChar > 0 && CurrentChar < 8)
-                    {
-                        for (int group = 0; group < 9; group++)
-                        {
-                            for (int slot = 0; slot < 5; slot++)
-                            {
-                                int SelectedLine = ChooseVocalizerLine(CurrentChar, group, slot);
-                                Biohazard.SetVocalizerSpeechGroup(group, slot, (ushort)SelectedLine);
-                            }
-                        }
-                    }
-                }
-            }
-
-            #endregion
-
-            #region Game Mode Update
-
-            double combotimer = Utility.Clamp(Biohazard.ComboTimer, 0, TimeSpan.MaxValue.TotalSeconds - 1d);
-            double combobonustimer = Utility.Clamp(Biohazard.ComboBonusTimer, 0, TimeSpan.MaxValue.TotalSeconds - 1d);
-            double timer = Utility.Clamp(Biohazard.Timer, 0, TimeSpan.MaxValue.TotalSeconds - 1d);
-
-            ScoreTE.Text = Biohazard.Score.ToString();
-            ComboTimerTE.Text = TimeSpan.FromSeconds(double.IsNaN(combotimer) ? 0f : combotimer).ToString("mm':'ss");
-            ComboBonusTimerTE.Text = TimeSpan.FromSeconds(double.IsNaN(combobonustimer) ? 0f : combobonustimer).ToString("mm':'ss");
-            CurrentTimerTE.Text = TimeSpan.FromSeconds(double.IsNaN(timer) ? 0f : timer).ToString("hh':'mm':'ss");
-
-            if (Biohazard.GameMode == (int)GameModeEnum.Mercenaries || Biohazard.GameMode == (int)GameModeEnum.Reunion)
-            {
-                if (ComboTimerMaxCE.Checked)
-                    Biohazard.ComboTimer = Biohazard.ComboTimerDuration;
-
-                if (ComboBonusTimerMaxCE.Checked)
-                    Biohazard.ComboBonusTimer = Biohazard.ComboBonusTimerDuration;
-            }
-
-            if (!MapsCB.IsPopupOpen)
-            {
-                Map SelectedMap = MapsCB.SelectedItem as Map;
-
-                int Chapter = Biohazard.Chapter;
-                short Stage = Biohazard.Stage;
-
-                if (!FreezeMapCE.Checked)
-                {
-                    if ((SelectedMap.Stage != -1 && SelectedMap.Stage != Stage) || SelectedMap.Chapter != Chapter)
-                    {
-                        foreach (object ComboObj in MapsCB.Properties.Items)
-                        {
-                            Map map = ComboObj as Map;
-
-                            if ((map.Stage == -1 || map.Stage == Biohazard.Stage) && map.Chapter == Biohazard.Chapter)
-                                MapsCB.SelectedItem = ComboObj;
-                        }
-                    }
-                }
-                else
-                {
-                    Biohazard.Stage = SelectedMap.Stage;
-                    Biohazard.Chapter = SelectedMap.Chapter;
-                }
-            }
-
-            #endregion
-
-            #region Character Update
-
-            for (int i = 0; i < 4; i++)
-            {
-                bool PlayerPresent = Biohazard.Players[i].IsActive();
-
-                // Characters & Costumes //
-                if (!CharacterCombos[i].IsPopupOpen && !CostumeCombos[i].IsPopupOpen)
-                {
-                    if (!CheckButtons[i].Checked)
-                    {
-                        int CurrentChar = Biohazard.Players[i].Character;
-                        int CurrentCostume = Biohazard.Players[i].Costume;
-
-                        foreach (object Char in CharacterCombos[i].Properties.Items)
-                        {
-                            if ((Char as Character).Value == CurrentChar)
-                                CharacterCombos[i].SelectedItem = Char;
-                        }
-
-                        foreach (object Cos in CostumeCombos[i].Properties.Items)
-                        {
-                            if ((Cos as Costume).Value == CurrentCostume)
-                                CostumeCombos[i].SelectedItem = Cos;
-                        }
-                    }
-                    else
-                    {
-                        int CharValue = (CharacterCombos[i].SelectedItem as Character).Value;
-                        int Cosvalue = (CostumeCombos[i].SelectedItem as Costume).Value;
-
-                        if (i < 2)
-                            Biohazard.SetStoryModeCharacter(i, CharValue, Cosvalue);
-
-                        Biohazard.Players[i].Character = CharValue;
-                        Biohazard.Players[i].Costume = Cosvalue;
-                    }
-                }
-
-                // Inventory //
-                for (int slot = 0; slot < 10; slot++)
-                    Biohazard.Players[i].Inventory.LoadoutSlots[slot].Update();
-
-                // Health Bar //
-                double PlayerHealthPercent = PlayerPresent ? Utility.Clamp((double)Biohazard.Players[i].Health / Biohazard.Players[i].MaxHealth, 0.0, 1.0) : 1.0;
-                PlayerHealthPercent = double.IsNaN(PlayerHealthPercent) ? 0.0 : PlayerHealthPercent;
-
-                HealthBars[i].Properties.Maximum = PlayerPresent ? Biohazard.Players[i].MaxHealth : 1;
-                HealthBars[i].EditValue = PlayerPresent ? Biohazard.Players[i].Health : 1;
-                HealthBars[i].Properties.StartColor = PlayerPresent ? Color.FromArgb((int)(255.0 - (155.0 * PlayerHealthPercent)), (int)(0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(0, 0, 0, 0);
-                HealthBars[i].Properties.EndColor = PlayerPresent ? Color.FromArgb((int)(255.0 - (155.0 * PlayerHealthPercent)), (int)(0.0 + (255.0 * PlayerHealthPercent)), 0) : Color.FromArgb(0, 0, 0, 0);
-
-                // Player Name //
-                PlayerGroupBoxes[i].Text = $"Player {i + 1} - " + (Biohazard.InGame ? i == Biohazard.LocalPlayer ? Biohazard.LocalPlayerName : PlayerPresent ? Biohazard.Players[i].AI ? "CPU AI" : "Connected" : "Disconnected" : "Disconnected");
-
-                // Handness //
-                if (Handness[i].SelectedIndex > 0 && PlayerPresent)
-                    Biohazard.Players[i].Handness = (byte)(Handness[i].SelectedItem as Simple).Value;
-
-                // Weapon Mode //
-                if (WeaponMode[i].SelectedIndex > 0 && PlayerPresent)
-                    Biohazard.Players[i].WeaponMode = (byte)(WeaponMode[i].SelectedItem as Simple).Value;
-
-                // Melee Anytime Cords //
-                if (MeleeAnytimeSwitch.IsOn && PlayerPresent)
-                {
-                    Biohazard.Players[i].MeleePosition = Biohazard.Players[i].Position;
-
-                    if (Biohazard.Players[i].MeleeTarget != 0 && Biohazard.Players[i].DoingIdleMove())
-                        Biohazard.Players[i].MeleeTarget = 0;
-                }
-
-                // Wesker Dash cost
-                Biohazard.WeskerNoDashCost(WeskerNoDashCostCE.Checked); // && Biohazard.GameMode != (int)GameModeEnum.Versus
-
-                // If versus then end the current iteration //
-                // if (Biohazard.GameMode == (int)GameModeEnum.Versus)
-                //continue;
-
-                // Infinite HP //
-                if (InfiniteHP[i].Checked && PlayerPresent)
-                    Biohazard.Players[i].Health = Biohazard.Players[i].MaxHealth;
-
-                // Untergetable //
-                if (Untargetable[i].Checked && PlayerPresent)
-                    Biohazard.Players[i].Invulnerable = true;
-
-                // Infinite Ammo //
-                if (InfiniteAmmo[i].Checked && PlayerPresent)
-                    Biohazard.Players[i].SetInfiniteAmmo(true);
-
-                // Infinite Resource //
-                if (InfiniteResource[i].Checked && PlayerPresent)
-                    Biohazard.Players[i].SetInfiniteResource(true);
-
-                // Infinite Throwable //
-                if (InfiniteThrowable[i].Checked && PlayerPresent)
-                    Biohazard.Players[i].SetInfiniteThrowable(true);
-
-                // Rapidfire //
-                if (RapidFire[i].Checked && PlayerPresent)
-                    Biohazard.Players[i].SetRapidFire(true);
-
-                // Infinite Dash //
-                if (WeskerInfiniteDashCE.Checked && PlayerPresent && Biohazard.Players[i].Character == (int)CharacterEnum.Wesker)
-                    Biohazard.Players[i].ResetDash();
-            }
-
-            #endregion
         }
 
         #endregion

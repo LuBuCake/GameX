@@ -39,61 +39,61 @@ namespace GameX
             this.TabPageVocalizer = new DevExpress.XtraTab.XtraTabPage();
             this.VocalizerGP = new DevExpress.XtraEditors.GroupControl();
             this.VocalizerTabControl = new DevExpress.XtraTab.XtraTabControl();
-            this.VocalizerWeskerTab = new DevExpress.XtraTab.XtraTabPage();
-            this.VocalizerWeskerG9GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerWeskerG9S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG9S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG9S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG9S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG9S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG8GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerWeskerG8S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG8S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG8S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG8S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG8S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG7GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerWeskerG7S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG7S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG7S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG7S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG7S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG6GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerWeskerG6S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG6S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG6S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG6S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG6S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG5GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerWeskerG5S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG5S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG5S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG5S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG5S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG4GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerWeskerG4S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG4S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG4S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG4S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG4S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG3GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerWeskerG3S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG3S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG3S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG3S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG3S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG2GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerWeskerG2S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG2S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG2S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG2S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG2S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG1GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerWeskerG1S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG1S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG1S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG1S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerWeskerG1S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaTab = new DevExpress.XtraTab.XtraTabPage();
+            this.VocalizerRebeccaG9GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerRebeccaG9S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG9S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG9S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG9S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG9S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG8GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerRebeccaG8S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG8S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG8S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG8S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG8S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG7GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerRebeccaG7S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG7S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG7S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG7S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG7S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG6GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerRebeccaG6S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG6S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG6S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG6S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG6S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG5GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerRebeccaG5S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG5S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG5S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG5S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG5S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG4GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerRebeccaG4S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG4S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG4S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG4S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG4S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG3GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerRebeccaG3S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG3S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG3S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG3S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG3S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG2GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerRebeccaG2S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG2S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG2S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG2S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG2S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG1GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerRebeccaG1S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG1S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG1S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG1S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG1S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
             this.VocalizerChrisTab = new DevExpress.XtraTab.XtraTabPage();
             this.VocalizerChrisG9GP = new DevExpress.XtraEditors.GroupControl();
             this.VocalizerChrisG9S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -259,10 +259,226 @@ namespace GameX
             this.VocalizerJillG1S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
             this.VocalizerJillG1S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
             this.VocalizerJillG1S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerTab = new DevExpress.XtraTab.XtraTabPage();
+            this.VocalizerWeskerG9GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerWeskerG9S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG9S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG9S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG9S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG9S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG8GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerWeskerG8S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG8S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG8S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG8S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG8S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG7GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerWeskerG7S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG7S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG7S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG7S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG7S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG6GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerWeskerG6S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG6S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG6S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG6S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG6S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG5GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerWeskerG5S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG5S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG5S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG5S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG5S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG4GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerWeskerG4S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG4S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG4S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG4S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG4S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG3GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerWeskerG3S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG3S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG3S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG3S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG3S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG2GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerWeskerG2S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG2S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG2S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG2S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG2S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG1GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerWeskerG1S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG1S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG1S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG1S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerWeskerG1S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
             this.VocalizerJoshTab = new DevExpress.XtraTab.XtraTabPage();
+            this.VocalizerJoshG9GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerJoshG9S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG9S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG9S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG9S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG9S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG8GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerJoshG8S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG8S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG8S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG8S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG8S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG7GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerJoshG7S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG7S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG7S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG7S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG7S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG6GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerJoshG6S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG6S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG6S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG6S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG6S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG5GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerJoshG5S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG5S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG5S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG5S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG5S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG4GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerJoshG4S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG4S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG4S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG4S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG4S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG3GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerJoshG3S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG3S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG3S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG3S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG3S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG2GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerJoshG2S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG2S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG2S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG2S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG2S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG1GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerJoshG1S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG1S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG1S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG1S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerJoshG1S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
             this.VocalizerExcellaTab = new DevExpress.XtraTab.XtraTabPage();
+            this.VocalizerExcellaG9GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerExcellaG9S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG9S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG9S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG9S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG9S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG8GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerExcellaG8S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG8S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG8S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG8S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG8S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG7GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerExcellaG7S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG7S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG7S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG7S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG7S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG6GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerExcellaG6S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG6S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG6S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG6S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG6S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG5GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerExcellaG5S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG5S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG5S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG5S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG5S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG4GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerExcellaG4S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG4S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG4S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG4S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG4S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG3GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerExcellaG3S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG3S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG3S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG3S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG3S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG2GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerExcellaG2S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG2S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG2S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG2S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG2S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG1GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerExcellaG1S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG1S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG1S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG1S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerExcellaG1S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
             this.VocalizerBarryTab = new DevExpress.XtraTab.XtraTabPage();
-            this.VocalizerRebeccaTab = new DevExpress.XtraTab.XtraTabPage();
+            this.VocalizerBarryG9GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerBarryG9S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG9S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG9S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG9S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG9S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG8GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerBarryG8S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG8S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG8S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG8S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG8S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG7GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerBarryG7S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG7S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG7S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG7S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG7S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG6GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerBarryG6S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG6S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG6S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG6S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG6S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG5GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerBarryG5S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG5S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG5S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG5S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG5S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG4GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerBarryG4S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG4S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG4S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG4S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG4S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG3GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerBarryG3S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG3S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG3S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG3S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG3S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG2GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerBarryG2S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG2S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG2S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG2S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG2S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG1GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerBarryG1S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG1S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG1S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG1S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerBarryG1S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
             this.VocalizerSettingsGP = new DevExpress.XtraEditors.GroupControl();
             this.VocalizerStatusGP = new DevExpress.XtraEditors.GroupControl();
             this.VocalizerCharSelectCB = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -1084,222 +1300,7 @@ namespace GameX
             this.TabPageConsoleButton = new DevExpress.XtraEditors.SimpleButton();
             this.MainLoop = new System.Windows.Forms.Timer(this.components);
             this.TabPageVocalizerButton = new DevExpress.XtraEditors.SimpleButton();
-            this.VocalizerJoshG9GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerJoshG9S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG9S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG9S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG9S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG9S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG8GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerJoshG8S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG8S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG8S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG8S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG8S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG7GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerJoshG7S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG7S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG7S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG7S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG7S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG6GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerJoshG6S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG6S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG6S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG6S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG6S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG5GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerJoshG5S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG5S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG5S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG5S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG5S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG4GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerJoshG4S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG4S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG4S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG4S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG4S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG3GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerJoshG3S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG3S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG3S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG3S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG3S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG2GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerJoshG2S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG2S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG2S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG2S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG2S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG1GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerJoshG1S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG1S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG1S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG1S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerJoshG1S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG9GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerExcellaG9S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG9S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG9S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG9S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG9S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG8GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerExcellaG8S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG8S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG8S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG8S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG8S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG7GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerExcellaG7S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG7S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG7S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG7S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG7S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG6GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerExcellaG6S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG6S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG6S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG6S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG6S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG5GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerExcellaG5S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG5S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG5S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG5S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG5S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG4GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerExcellaG4S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG4S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG4S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG4S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG4S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG3GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerExcellaG3S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG3S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG3S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG3S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG3S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG2GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerExcellaG2S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG2S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG2S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG2S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG2S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG1GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerExcellaG1S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG1S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG1S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG1S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerExcellaG1S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG9GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerBarryG9S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG9S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG9S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG9S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG9S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG8GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerBarryG8S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG8S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG8S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG8S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG8S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG7GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerBarryG7S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG7S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG7S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG7S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG7S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG6GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerBarryG6S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG6S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG6S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG6S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG6S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG5GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerBarryG5S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG5S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG5S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG5S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG5S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG4GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerBarryG4S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG4S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG4S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG4S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG4S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG3GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerBarryG3S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG3S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG3S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG3S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG3S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG2GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerBarryG2S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG2S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG2S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG2S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG2S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG1GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerBarryG1S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG1S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG1S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG1S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerBarryG1S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG9GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerRebeccaG9S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG9S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG9S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG9S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG9S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG8GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerRebeccaG8S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG8S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG8S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG8S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG8S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG7GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerRebeccaG7S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG7S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG7S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG7S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG7S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG6GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerRebeccaG6S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG6S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG6S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG6S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG6S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG5GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerRebeccaG5S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG5S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG5S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG5S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG5S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG4GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerRebeccaG4S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG4S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG4S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG4S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG4S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG3GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerRebeccaG3S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG3S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG3S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG3S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG3S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG2GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerRebeccaG2S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG2S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG2S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG2S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG2S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG1GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerRebeccaG1S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG1S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG1S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG1S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG1S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.NoFPSCapCE = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -1310,70 +1311,70 @@ namespace GameX
             this.VocalizerGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerTabControl)).BeginInit();
             this.VocalizerTabControl.SuspendLayout();
-            this.VocalizerWeskerTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9GP)).BeginInit();
-            this.VocalizerWeskerG9GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8GP)).BeginInit();
-            this.VocalizerWeskerG8GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7GP)).BeginInit();
-            this.VocalizerWeskerG7GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6GP)).BeginInit();
-            this.VocalizerWeskerG6GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5GP)).BeginInit();
-            this.VocalizerWeskerG5GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4GP)).BeginInit();
-            this.VocalizerWeskerG4GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3GP)).BeginInit();
-            this.VocalizerWeskerG3GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2GP)).BeginInit();
-            this.VocalizerWeskerG2GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1GP)).BeginInit();
-            this.VocalizerWeskerG1GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1S1CB.Properties)).BeginInit();
+            this.VocalizerRebeccaTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9GP)).BeginInit();
+            this.VocalizerRebeccaG9GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8GP)).BeginInit();
+            this.VocalizerRebeccaG8GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7GP)).BeginInit();
+            this.VocalizerRebeccaG7GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6GP)).BeginInit();
+            this.VocalizerRebeccaG6GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5GP)).BeginInit();
+            this.VocalizerRebeccaG5GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4GP)).BeginInit();
+            this.VocalizerRebeccaG4GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3GP)).BeginInit();
+            this.VocalizerRebeccaG3GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2GP)).BeginInit();
+            this.VocalizerRebeccaG2GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1GP)).BeginInit();
+            this.VocalizerRebeccaG1GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S1CB.Properties)).BeginInit();
             this.VocalizerChrisTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerChrisG9GP)).BeginInit();
             this.VocalizerChrisG9GP.SuspendLayout();
@@ -1566,10 +1567,262 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerJillG1S3CB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerJillG1S2CB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerJillG1S1CB.Properties)).BeginInit();
+            this.VocalizerWeskerTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9GP)).BeginInit();
+            this.VocalizerWeskerG9GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8GP)).BeginInit();
+            this.VocalizerWeskerG8GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7GP)).BeginInit();
+            this.VocalizerWeskerG7GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6GP)).BeginInit();
+            this.VocalizerWeskerG6GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5GP)).BeginInit();
+            this.VocalizerWeskerG5GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4GP)).BeginInit();
+            this.VocalizerWeskerG4GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3GP)).BeginInit();
+            this.VocalizerWeskerG3GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2GP)).BeginInit();
+            this.VocalizerWeskerG2GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1GP)).BeginInit();
+            this.VocalizerWeskerG1GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1S1CB.Properties)).BeginInit();
             this.VocalizerJoshTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9GP)).BeginInit();
+            this.VocalizerJoshG9GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8GP)).BeginInit();
+            this.VocalizerJoshG8GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7GP)).BeginInit();
+            this.VocalizerJoshG7GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6GP)).BeginInit();
+            this.VocalizerJoshG6GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5GP)).BeginInit();
+            this.VocalizerJoshG5GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4GP)).BeginInit();
+            this.VocalizerJoshG4GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3GP)).BeginInit();
+            this.VocalizerJoshG3GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2GP)).BeginInit();
+            this.VocalizerJoshG2GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1GP)).BeginInit();
+            this.VocalizerJoshG1GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1S1CB.Properties)).BeginInit();
             this.VocalizerExcellaTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9GP)).BeginInit();
+            this.VocalizerExcellaG9GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8GP)).BeginInit();
+            this.VocalizerExcellaG8GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7GP)).BeginInit();
+            this.VocalizerExcellaG7GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6GP)).BeginInit();
+            this.VocalizerExcellaG6GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5GP)).BeginInit();
+            this.VocalizerExcellaG5GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4GP)).BeginInit();
+            this.VocalizerExcellaG4GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3GP)).BeginInit();
+            this.VocalizerExcellaG3GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2GP)).BeginInit();
+            this.VocalizerExcellaG2GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1GP)).BeginInit();
+            this.VocalizerExcellaG1GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1S1CB.Properties)).BeginInit();
             this.VocalizerBarryTab.SuspendLayout();
-            this.VocalizerRebeccaTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9GP)).BeginInit();
+            this.VocalizerBarryG9GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8GP)).BeginInit();
+            this.VocalizerBarryG8GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7GP)).BeginInit();
+            this.VocalizerBarryG7GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6GP)).BeginInit();
+            this.VocalizerBarryG6GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5GP)).BeginInit();
+            this.VocalizerBarryG5GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4GP)).BeginInit();
+            this.VocalizerBarryG4GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3GP)).BeginInit();
+            this.VocalizerBarryG3GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2GP)).BeginInit();
+            this.VocalizerBarryG2GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1GP)).BeginInit();
+            this.VocalizerBarryG1GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S1CB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerSettingsGP)).BeginInit();
             this.VocalizerSettingsGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerStatusGP)).BeginInit();
@@ -2355,258 +2608,7 @@ namespace GameX
             this.ConsoleGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9GP)).BeginInit();
-            this.VocalizerJoshG9GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8GP)).BeginInit();
-            this.VocalizerJoshG8GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7GP)).BeginInit();
-            this.VocalizerJoshG7GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6GP)).BeginInit();
-            this.VocalizerJoshG6GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5GP)).BeginInit();
-            this.VocalizerJoshG5GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4GP)).BeginInit();
-            this.VocalizerJoshG4GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3GP)).BeginInit();
-            this.VocalizerJoshG3GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2GP)).BeginInit();
-            this.VocalizerJoshG2GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1GP)).BeginInit();
-            this.VocalizerJoshG1GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9GP)).BeginInit();
-            this.VocalizerExcellaG9GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8GP)).BeginInit();
-            this.VocalizerExcellaG8GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7GP)).BeginInit();
-            this.VocalizerExcellaG7GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6GP)).BeginInit();
-            this.VocalizerExcellaG6GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5GP)).BeginInit();
-            this.VocalizerExcellaG5GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4GP)).BeginInit();
-            this.VocalizerExcellaG4GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3GP)).BeginInit();
-            this.VocalizerExcellaG3GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2GP)).BeginInit();
-            this.VocalizerExcellaG2GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1GP)).BeginInit();
-            this.VocalizerExcellaG1GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9GP)).BeginInit();
-            this.VocalizerBarryG9GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8GP)).BeginInit();
-            this.VocalizerBarryG8GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7GP)).BeginInit();
-            this.VocalizerBarryG7GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6GP)).BeginInit();
-            this.VocalizerBarryG6GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5GP)).BeginInit();
-            this.VocalizerBarryG5GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4GP)).BeginInit();
-            this.VocalizerBarryG4GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3GP)).BeginInit();
-            this.VocalizerBarryG3GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2GP)).BeginInit();
-            this.VocalizerBarryG2GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1GP)).BeginInit();
-            this.VocalizerBarryG1GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9GP)).BeginInit();
-            this.VocalizerRebeccaG9GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8GP)).BeginInit();
-            this.VocalizerRebeccaG8GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7GP)).BeginInit();
-            this.VocalizerRebeccaG7GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6GP)).BeginInit();
-            this.VocalizerRebeccaG6GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5GP)).BeginInit();
-            this.VocalizerRebeccaG5GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4GP)).BeginInit();
-            this.VocalizerRebeccaG4GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3GP)).BeginInit();
-            this.VocalizerRebeccaG3GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2GP)).BeginInit();
-            this.VocalizerRebeccaG2GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1GP)).BeginInit();
-            this.VocalizerRebeccaG1GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NoFPSCapCE.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // P1CosComboBox
@@ -2667,7 +2669,7 @@ namespace GameX
             this.MasterTabControl.HeaderAutoFill = DevExpress.Utils.DefaultBoolean.True;
             this.MasterTabControl.Location = new System.Drawing.Point(12, 40);
             this.MasterTabControl.Name = "MasterTabControl";
-            this.MasterTabControl.SelectedTabPage = this.TabPageVocalizer;
+            this.MasterTabControl.SelectedTabPage = this.TabPageSettings;
             this.MasterTabControl.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
             this.MasterTabControl.Size = new System.Drawing.Size(1225, 557);
             this.MasterTabControl.TabIndex = 18;
@@ -2714,947 +2716,947 @@ namespace GameX
             this.VocalizerBarryTab,
             this.VocalizerRebeccaTab});
             // 
-            // VocalizerWeskerTab
+            // VocalizerRebeccaTab
             // 
-            this.VocalizerWeskerTab.Controls.Add(this.VocalizerWeskerG9GP);
-            this.VocalizerWeskerTab.Controls.Add(this.VocalizerWeskerG8GP);
-            this.VocalizerWeskerTab.Controls.Add(this.VocalizerWeskerG7GP);
-            this.VocalizerWeskerTab.Controls.Add(this.VocalizerWeskerG6GP);
-            this.VocalizerWeskerTab.Controls.Add(this.VocalizerWeskerG5GP);
-            this.VocalizerWeskerTab.Controls.Add(this.VocalizerWeskerG4GP);
-            this.VocalizerWeskerTab.Controls.Add(this.VocalizerWeskerG3GP);
-            this.VocalizerWeskerTab.Controls.Add(this.VocalizerWeskerG2GP);
-            this.VocalizerWeskerTab.Controls.Add(this.VocalizerWeskerG1GP);
-            this.VocalizerWeskerTab.Name = "VocalizerWeskerTab";
-            this.VocalizerWeskerTab.Size = new System.Drawing.Size(528, 498);
-            this.VocalizerWeskerTab.Text = "xtraTabPage3";
+            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG9GP);
+            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG8GP);
+            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG7GP);
+            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG6GP);
+            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG5GP);
+            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG4GP);
+            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG3GP);
+            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG2GP);
+            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG1GP);
+            this.VocalizerRebeccaTab.Name = "VocalizerRebeccaTab";
+            this.VocalizerRebeccaTab.Size = new System.Drawing.Size(528, 498);
+            this.VocalizerRebeccaTab.Text = "xtraTabPage7";
             // 
-            // VocalizerWeskerG9GP
+            // VocalizerRebeccaG9GP
             // 
-            this.VocalizerWeskerG9GP.Controls.Add(this.VocalizerWeskerG9S5CB);
-            this.VocalizerWeskerG9GP.Controls.Add(this.VocalizerWeskerG9S4CB);
-            this.VocalizerWeskerG9GP.Controls.Add(this.VocalizerWeskerG9S3CB);
-            this.VocalizerWeskerG9GP.Controls.Add(this.VocalizerWeskerG9S2CB);
-            this.VocalizerWeskerG9GP.Controls.Add(this.VocalizerWeskerG9S1CB);
-            this.VocalizerWeskerG9GP.Location = new System.Drawing.Point(355, 335);
-            this.VocalizerWeskerG9GP.Name = "VocalizerWeskerG9GP";
-            this.VocalizerWeskerG9GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerWeskerG9GP.TabIndex = 35;
-            this.VocalizerWeskerG9GP.Text = "Group 9";
+            this.VocalizerRebeccaG9GP.Controls.Add(this.VocalizerRebeccaG9S5CB);
+            this.VocalizerRebeccaG9GP.Controls.Add(this.VocalizerRebeccaG9S4CB);
+            this.VocalizerRebeccaG9GP.Controls.Add(this.VocalizerRebeccaG9S3CB);
+            this.VocalizerRebeccaG9GP.Controls.Add(this.VocalizerRebeccaG9S2CB);
+            this.VocalizerRebeccaG9GP.Controls.Add(this.VocalizerRebeccaG9S1CB);
+            this.VocalizerRebeccaG9GP.Location = new System.Drawing.Point(355, 335);
+            this.VocalizerRebeccaG9GP.Name = "VocalizerRebeccaG9GP";
+            this.VocalizerRebeccaG9GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerRebeccaG9GP.TabIndex = 71;
+            this.VocalizerRebeccaG9GP.Text = "Group 9";
             // 
-            // VocalizerWeskerG9S5CB
+            // VocalizerRebeccaG9S5CB
             // 
-            this.VocalizerWeskerG9S5CB.EditValue = "";
-            this.VocalizerWeskerG9S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerWeskerG9S5CB.Name = "VocalizerWeskerG9S5CB";
-            this.VocalizerWeskerG9S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG9S5CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG9S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG9S5CB.EditValue = "";
+            this.VocalizerRebeccaG9S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerRebeccaG9S5CB.Name = "VocalizerRebeccaG9S5CB";
+            this.VocalizerRebeccaG9S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG9S5CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG9S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG9S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG9S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG9S5CB.TabIndex = 7;
-            this.VocalizerWeskerG9S5CB.TabStop = false;
-            this.VocalizerWeskerG9S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG9S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG9S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG9S5CB.TabIndex = 7;
+            this.VocalizerRebeccaG9S5CB.TabStop = false;
+            this.VocalizerRebeccaG9S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG9S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG9S5CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG9S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG9S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG9S4CB
+            // VocalizerRebeccaG9S4CB
             // 
-            this.VocalizerWeskerG9S4CB.EditValue = "";
-            this.VocalizerWeskerG9S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerWeskerG9S4CB.Name = "VocalizerWeskerG9S4CB";
-            this.VocalizerWeskerG9S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG9S4CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG9S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG9S4CB.EditValue = "";
+            this.VocalizerRebeccaG9S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerRebeccaG9S4CB.Name = "VocalizerRebeccaG9S4CB";
+            this.VocalizerRebeccaG9S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG9S4CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG9S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG9S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG9S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG9S4CB.TabIndex = 6;
-            this.VocalizerWeskerG9S4CB.TabStop = false;
-            this.VocalizerWeskerG9S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG9S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG9S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG9S4CB.TabIndex = 6;
+            this.VocalizerRebeccaG9S4CB.TabStop = false;
+            this.VocalizerRebeccaG9S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG9S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG9S4CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG9S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG9S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG9S3CB
+            // VocalizerRebeccaG9S3CB
             // 
-            this.VocalizerWeskerG9S3CB.EditValue = "";
-            this.VocalizerWeskerG9S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerWeskerG9S3CB.Name = "VocalizerWeskerG9S3CB";
-            this.VocalizerWeskerG9S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG9S3CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG9S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG9S3CB.EditValue = "";
+            this.VocalizerRebeccaG9S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerRebeccaG9S3CB.Name = "VocalizerRebeccaG9S3CB";
+            this.VocalizerRebeccaG9S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG9S3CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG9S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG9S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG9S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG9S3CB.TabIndex = 5;
-            this.VocalizerWeskerG9S3CB.TabStop = false;
-            this.VocalizerWeskerG9S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG9S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG9S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG9S3CB.TabIndex = 5;
+            this.VocalizerRebeccaG9S3CB.TabStop = false;
+            this.VocalizerRebeccaG9S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG9S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG9S3CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG9S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG9S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG9S2CB
+            // VocalizerRebeccaG9S2CB
             // 
-            this.VocalizerWeskerG9S2CB.EditValue = "";
-            this.VocalizerWeskerG9S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerWeskerG9S2CB.Name = "VocalizerWeskerG9S2CB";
-            this.VocalizerWeskerG9S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG9S2CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG9S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG9S2CB.EditValue = "";
+            this.VocalizerRebeccaG9S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerRebeccaG9S2CB.Name = "VocalizerRebeccaG9S2CB";
+            this.VocalizerRebeccaG9S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG9S2CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG9S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG9S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG9S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG9S2CB.TabIndex = 4;
-            this.VocalizerWeskerG9S2CB.TabStop = false;
-            this.VocalizerWeskerG9S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG9S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG9S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG9S2CB.TabIndex = 4;
+            this.VocalizerRebeccaG9S2CB.TabStop = false;
+            this.VocalizerRebeccaG9S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG9S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG9S2CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG9S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG9S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG9S1CB
+            // VocalizerRebeccaG9S1CB
             // 
-            this.VocalizerWeskerG9S1CB.EditValue = "";
-            this.VocalizerWeskerG9S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerWeskerG9S1CB.Name = "VocalizerWeskerG9S1CB";
-            this.VocalizerWeskerG9S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG9S1CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG9S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG9S1CB.EditValue = "";
+            this.VocalizerRebeccaG9S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerRebeccaG9S1CB.Name = "VocalizerRebeccaG9S1CB";
+            this.VocalizerRebeccaG9S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG9S1CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG9S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG9S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG9S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG9S1CB.TabIndex = 3;
-            this.VocalizerWeskerG9S1CB.TabStop = false;
-            this.VocalizerWeskerG9S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG9S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG9S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG9S1CB.TabIndex = 3;
+            this.VocalizerRebeccaG9S1CB.TabStop = false;
+            this.VocalizerRebeccaG9S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG9S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG9S1CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG9S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG9S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG8GP
+            // VocalizerRebeccaG8GP
             // 
-            this.VocalizerWeskerG8GP.Controls.Add(this.VocalizerWeskerG8S5CB);
-            this.VocalizerWeskerG8GP.Controls.Add(this.VocalizerWeskerG8S4CB);
-            this.VocalizerWeskerG8GP.Controls.Add(this.VocalizerWeskerG8S3CB);
-            this.VocalizerWeskerG8GP.Controls.Add(this.VocalizerWeskerG8S2CB);
-            this.VocalizerWeskerG8GP.Controls.Add(this.VocalizerWeskerG8S1CB);
-            this.VocalizerWeskerG8GP.Location = new System.Drawing.Point(179, 335);
-            this.VocalizerWeskerG8GP.Name = "VocalizerWeskerG8GP";
-            this.VocalizerWeskerG8GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerWeskerG8GP.TabIndex = 34;
-            this.VocalizerWeskerG8GP.Text = "Group 8";
+            this.VocalizerRebeccaG8GP.Controls.Add(this.VocalizerRebeccaG8S5CB);
+            this.VocalizerRebeccaG8GP.Controls.Add(this.VocalizerRebeccaG8S4CB);
+            this.VocalizerRebeccaG8GP.Controls.Add(this.VocalizerRebeccaG8S3CB);
+            this.VocalizerRebeccaG8GP.Controls.Add(this.VocalizerRebeccaG8S2CB);
+            this.VocalizerRebeccaG8GP.Controls.Add(this.VocalizerRebeccaG8S1CB);
+            this.VocalizerRebeccaG8GP.Location = new System.Drawing.Point(179, 335);
+            this.VocalizerRebeccaG8GP.Name = "VocalizerRebeccaG8GP";
+            this.VocalizerRebeccaG8GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerRebeccaG8GP.TabIndex = 70;
+            this.VocalizerRebeccaG8GP.Text = "Group 8";
             // 
-            // VocalizerWeskerG8S5CB
+            // VocalizerRebeccaG8S5CB
             // 
-            this.VocalizerWeskerG8S5CB.EditValue = "";
-            this.VocalizerWeskerG8S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerWeskerG8S5CB.Name = "VocalizerWeskerG8S5CB";
-            this.VocalizerWeskerG8S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG8S5CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG8S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG8S5CB.EditValue = "";
+            this.VocalizerRebeccaG8S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerRebeccaG8S5CB.Name = "VocalizerRebeccaG8S5CB";
+            this.VocalizerRebeccaG8S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG8S5CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG8S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG8S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG8S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG8S5CB.TabIndex = 7;
-            this.VocalizerWeskerG8S5CB.TabStop = false;
-            this.VocalizerWeskerG8S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG8S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG8S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG8S5CB.TabIndex = 7;
+            this.VocalizerRebeccaG8S5CB.TabStop = false;
+            this.VocalizerRebeccaG8S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG8S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG8S5CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG8S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG8S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG8S4CB
+            // VocalizerRebeccaG8S4CB
             // 
-            this.VocalizerWeskerG8S4CB.EditValue = "";
-            this.VocalizerWeskerG8S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerWeskerG8S4CB.Name = "VocalizerWeskerG8S4CB";
-            this.VocalizerWeskerG8S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG8S4CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG8S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG8S4CB.EditValue = "";
+            this.VocalizerRebeccaG8S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerRebeccaG8S4CB.Name = "VocalizerRebeccaG8S4CB";
+            this.VocalizerRebeccaG8S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG8S4CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG8S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG8S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG8S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG8S4CB.TabIndex = 6;
-            this.VocalizerWeskerG8S4CB.TabStop = false;
-            this.VocalizerWeskerG8S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG8S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG8S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG8S4CB.TabIndex = 6;
+            this.VocalizerRebeccaG8S4CB.TabStop = false;
+            this.VocalizerRebeccaG8S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG8S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG8S4CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG8S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG8S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG8S3CB
+            // VocalizerRebeccaG8S3CB
             // 
-            this.VocalizerWeskerG8S3CB.EditValue = "";
-            this.VocalizerWeskerG8S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerWeskerG8S3CB.Name = "VocalizerWeskerG8S3CB";
-            this.VocalizerWeskerG8S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG8S3CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG8S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG8S3CB.EditValue = "";
+            this.VocalizerRebeccaG8S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerRebeccaG8S3CB.Name = "VocalizerRebeccaG8S3CB";
+            this.VocalizerRebeccaG8S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG8S3CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG8S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG8S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG8S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG8S3CB.TabIndex = 5;
-            this.VocalizerWeskerG8S3CB.TabStop = false;
-            this.VocalizerWeskerG8S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG8S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG8S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG8S3CB.TabIndex = 5;
+            this.VocalizerRebeccaG8S3CB.TabStop = false;
+            this.VocalizerRebeccaG8S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG8S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG8S3CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG8S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG8S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG8S2CB
+            // VocalizerRebeccaG8S2CB
             // 
-            this.VocalizerWeskerG8S2CB.EditValue = "";
-            this.VocalizerWeskerG8S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerWeskerG8S2CB.Name = "VocalizerWeskerG8S2CB";
-            this.VocalizerWeskerG8S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG8S2CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG8S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG8S2CB.EditValue = "";
+            this.VocalizerRebeccaG8S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerRebeccaG8S2CB.Name = "VocalizerRebeccaG8S2CB";
+            this.VocalizerRebeccaG8S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG8S2CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG8S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG8S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG8S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG8S2CB.TabIndex = 4;
-            this.VocalizerWeskerG8S2CB.TabStop = false;
-            this.VocalizerWeskerG8S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG8S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG8S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG8S2CB.TabIndex = 4;
+            this.VocalizerRebeccaG8S2CB.TabStop = false;
+            this.VocalizerRebeccaG8S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG8S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG8S2CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG8S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG8S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG8S1CB
+            // VocalizerRebeccaG8S1CB
             // 
-            this.VocalizerWeskerG8S1CB.EditValue = "";
-            this.VocalizerWeskerG8S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerWeskerG8S1CB.Name = "VocalizerWeskerG8S1CB";
-            this.VocalizerWeskerG8S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG8S1CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG8S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG8S1CB.EditValue = "";
+            this.VocalizerRebeccaG8S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerRebeccaG8S1CB.Name = "VocalizerRebeccaG8S1CB";
+            this.VocalizerRebeccaG8S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG8S1CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG8S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG8S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG8S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG8S1CB.TabIndex = 3;
-            this.VocalizerWeskerG8S1CB.TabStop = false;
-            this.VocalizerWeskerG8S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG8S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG8S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG8S1CB.TabIndex = 3;
+            this.VocalizerRebeccaG8S1CB.TabStop = false;
+            this.VocalizerRebeccaG8S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG8S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG8S1CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG8S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG8S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG7GP
+            // VocalizerRebeccaG7GP
             // 
-            this.VocalizerWeskerG7GP.Controls.Add(this.VocalizerWeskerG7S5CB);
-            this.VocalizerWeskerG7GP.Controls.Add(this.VocalizerWeskerG7S4CB);
-            this.VocalizerWeskerG7GP.Controls.Add(this.VocalizerWeskerG7S3CB);
-            this.VocalizerWeskerG7GP.Controls.Add(this.VocalizerWeskerG7S2CB);
-            this.VocalizerWeskerG7GP.Controls.Add(this.VocalizerWeskerG7S1CB);
-            this.VocalizerWeskerG7GP.Location = new System.Drawing.Point(3, 335);
-            this.VocalizerWeskerG7GP.Name = "VocalizerWeskerG7GP";
-            this.VocalizerWeskerG7GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerWeskerG7GP.TabIndex = 33;
-            this.VocalizerWeskerG7GP.Text = "Group 7";
+            this.VocalizerRebeccaG7GP.Controls.Add(this.VocalizerRebeccaG7S5CB);
+            this.VocalizerRebeccaG7GP.Controls.Add(this.VocalizerRebeccaG7S4CB);
+            this.VocalizerRebeccaG7GP.Controls.Add(this.VocalizerRebeccaG7S3CB);
+            this.VocalizerRebeccaG7GP.Controls.Add(this.VocalizerRebeccaG7S2CB);
+            this.VocalizerRebeccaG7GP.Controls.Add(this.VocalizerRebeccaG7S1CB);
+            this.VocalizerRebeccaG7GP.Location = new System.Drawing.Point(3, 335);
+            this.VocalizerRebeccaG7GP.Name = "VocalizerRebeccaG7GP";
+            this.VocalizerRebeccaG7GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerRebeccaG7GP.TabIndex = 69;
+            this.VocalizerRebeccaG7GP.Text = "Group 7";
             // 
-            // VocalizerWeskerG7S5CB
+            // VocalizerRebeccaG7S5CB
             // 
-            this.VocalizerWeskerG7S5CB.EditValue = "";
-            this.VocalizerWeskerG7S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerWeskerG7S5CB.Name = "VocalizerWeskerG7S5CB";
-            this.VocalizerWeskerG7S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG7S5CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG7S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG7S5CB.EditValue = "";
+            this.VocalizerRebeccaG7S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerRebeccaG7S5CB.Name = "VocalizerRebeccaG7S5CB";
+            this.VocalizerRebeccaG7S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG7S5CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG7S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG7S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG7S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG7S5CB.TabIndex = 7;
-            this.VocalizerWeskerG7S5CB.TabStop = false;
-            this.VocalizerWeskerG7S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG7S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG7S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG7S5CB.TabIndex = 7;
+            this.VocalizerRebeccaG7S5CB.TabStop = false;
+            this.VocalizerRebeccaG7S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG7S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG7S5CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG7S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG7S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG7S4CB
+            // VocalizerRebeccaG7S4CB
             // 
-            this.VocalizerWeskerG7S4CB.EditValue = "";
-            this.VocalizerWeskerG7S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerWeskerG7S4CB.Name = "VocalizerWeskerG7S4CB";
-            this.VocalizerWeskerG7S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG7S4CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG7S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG7S4CB.EditValue = "";
+            this.VocalizerRebeccaG7S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerRebeccaG7S4CB.Name = "VocalizerRebeccaG7S4CB";
+            this.VocalizerRebeccaG7S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG7S4CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG7S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG7S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG7S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG7S4CB.TabIndex = 6;
-            this.VocalizerWeskerG7S4CB.TabStop = false;
-            this.VocalizerWeskerG7S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG7S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG7S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG7S4CB.TabIndex = 6;
+            this.VocalizerRebeccaG7S4CB.TabStop = false;
+            this.VocalizerRebeccaG7S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG7S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG7S4CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG7S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG7S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG7S3CB
+            // VocalizerRebeccaG7S3CB
             // 
-            this.VocalizerWeskerG7S3CB.EditValue = "";
-            this.VocalizerWeskerG7S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerWeskerG7S3CB.Name = "VocalizerWeskerG7S3CB";
-            this.VocalizerWeskerG7S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG7S3CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG7S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG7S3CB.EditValue = "";
+            this.VocalizerRebeccaG7S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerRebeccaG7S3CB.Name = "VocalizerRebeccaG7S3CB";
+            this.VocalizerRebeccaG7S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG7S3CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG7S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG7S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG7S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG7S3CB.TabIndex = 5;
-            this.VocalizerWeskerG7S3CB.TabStop = false;
-            this.VocalizerWeskerG7S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG7S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG7S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG7S3CB.TabIndex = 5;
+            this.VocalizerRebeccaG7S3CB.TabStop = false;
+            this.VocalizerRebeccaG7S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG7S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG7S3CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG7S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG7S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG7S2CB
+            // VocalizerRebeccaG7S2CB
             // 
-            this.VocalizerWeskerG7S2CB.EditValue = "";
-            this.VocalizerWeskerG7S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerWeskerG7S2CB.Name = "VocalizerWeskerG7S2CB";
-            this.VocalizerWeskerG7S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG7S2CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG7S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG7S2CB.EditValue = "";
+            this.VocalizerRebeccaG7S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerRebeccaG7S2CB.Name = "VocalizerRebeccaG7S2CB";
+            this.VocalizerRebeccaG7S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG7S2CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG7S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG7S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG7S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG7S2CB.TabIndex = 4;
-            this.VocalizerWeskerG7S2CB.TabStop = false;
-            this.VocalizerWeskerG7S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG7S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG7S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG7S2CB.TabIndex = 4;
+            this.VocalizerRebeccaG7S2CB.TabStop = false;
+            this.VocalizerRebeccaG7S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG7S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG7S2CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG7S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG7S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG7S1CB
+            // VocalizerRebeccaG7S1CB
             // 
-            this.VocalizerWeskerG7S1CB.EditValue = "";
-            this.VocalizerWeskerG7S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerWeskerG7S1CB.Name = "VocalizerWeskerG7S1CB";
-            this.VocalizerWeskerG7S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG7S1CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG7S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG7S1CB.EditValue = "";
+            this.VocalizerRebeccaG7S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerRebeccaG7S1CB.Name = "VocalizerRebeccaG7S1CB";
+            this.VocalizerRebeccaG7S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG7S1CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG7S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG7S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG7S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG7S1CB.TabIndex = 3;
-            this.VocalizerWeskerG7S1CB.TabStop = false;
-            this.VocalizerWeskerG7S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG7S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG7S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG7S1CB.TabIndex = 3;
+            this.VocalizerRebeccaG7S1CB.TabStop = false;
+            this.VocalizerRebeccaG7S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG7S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG7S1CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG7S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG7S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG6GP
+            // VocalizerRebeccaG6GP
             // 
-            this.VocalizerWeskerG6GP.Controls.Add(this.VocalizerWeskerG6S5CB);
-            this.VocalizerWeskerG6GP.Controls.Add(this.VocalizerWeskerG6S4CB);
-            this.VocalizerWeskerG6GP.Controls.Add(this.VocalizerWeskerG6S3CB);
-            this.VocalizerWeskerG6GP.Controls.Add(this.VocalizerWeskerG6S2CB);
-            this.VocalizerWeskerG6GP.Controls.Add(this.VocalizerWeskerG6S1CB);
-            this.VocalizerWeskerG6GP.Location = new System.Drawing.Point(355, 169);
-            this.VocalizerWeskerG6GP.Name = "VocalizerWeskerG6GP";
-            this.VocalizerWeskerG6GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerWeskerG6GP.TabIndex = 32;
-            this.VocalizerWeskerG6GP.Text = "Group 6";
+            this.VocalizerRebeccaG6GP.Controls.Add(this.VocalizerRebeccaG6S5CB);
+            this.VocalizerRebeccaG6GP.Controls.Add(this.VocalizerRebeccaG6S4CB);
+            this.VocalizerRebeccaG6GP.Controls.Add(this.VocalizerRebeccaG6S3CB);
+            this.VocalizerRebeccaG6GP.Controls.Add(this.VocalizerRebeccaG6S2CB);
+            this.VocalizerRebeccaG6GP.Controls.Add(this.VocalizerRebeccaG6S1CB);
+            this.VocalizerRebeccaG6GP.Location = new System.Drawing.Point(355, 169);
+            this.VocalizerRebeccaG6GP.Name = "VocalizerRebeccaG6GP";
+            this.VocalizerRebeccaG6GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerRebeccaG6GP.TabIndex = 68;
+            this.VocalizerRebeccaG6GP.Text = "Group 6";
             // 
-            // VocalizerWeskerG6S5CB
+            // VocalizerRebeccaG6S5CB
             // 
-            this.VocalizerWeskerG6S5CB.EditValue = "";
-            this.VocalizerWeskerG6S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerWeskerG6S5CB.Name = "VocalizerWeskerG6S5CB";
-            this.VocalizerWeskerG6S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG6S5CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG6S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG6S5CB.EditValue = "";
+            this.VocalizerRebeccaG6S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerRebeccaG6S5CB.Name = "VocalizerRebeccaG6S5CB";
+            this.VocalizerRebeccaG6S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG6S5CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG6S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG6S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG6S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG6S5CB.TabIndex = 7;
-            this.VocalizerWeskerG6S5CB.TabStop = false;
-            this.VocalizerWeskerG6S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG6S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG6S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG6S5CB.TabIndex = 7;
+            this.VocalizerRebeccaG6S5CB.TabStop = false;
+            this.VocalizerRebeccaG6S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG6S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG6S5CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG6S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG6S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG6S4CB
+            // VocalizerRebeccaG6S4CB
             // 
-            this.VocalizerWeskerG6S4CB.EditValue = "";
-            this.VocalizerWeskerG6S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerWeskerG6S4CB.Name = "VocalizerWeskerG6S4CB";
-            this.VocalizerWeskerG6S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG6S4CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG6S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG6S4CB.EditValue = "";
+            this.VocalizerRebeccaG6S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerRebeccaG6S4CB.Name = "VocalizerRebeccaG6S4CB";
+            this.VocalizerRebeccaG6S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG6S4CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG6S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG6S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG6S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG6S4CB.TabIndex = 6;
-            this.VocalizerWeskerG6S4CB.TabStop = false;
-            this.VocalizerWeskerG6S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG6S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG6S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG6S4CB.TabIndex = 6;
+            this.VocalizerRebeccaG6S4CB.TabStop = false;
+            this.VocalizerRebeccaG6S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG6S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG6S4CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG6S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG6S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG6S3CB
+            // VocalizerRebeccaG6S3CB
             // 
-            this.VocalizerWeskerG6S3CB.EditValue = "";
-            this.VocalizerWeskerG6S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerWeskerG6S3CB.Name = "VocalizerWeskerG6S3CB";
-            this.VocalizerWeskerG6S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG6S3CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG6S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG6S3CB.EditValue = "";
+            this.VocalizerRebeccaG6S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerRebeccaG6S3CB.Name = "VocalizerRebeccaG6S3CB";
+            this.VocalizerRebeccaG6S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG6S3CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG6S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG6S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG6S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG6S3CB.TabIndex = 5;
-            this.VocalizerWeskerG6S3CB.TabStop = false;
-            this.VocalizerWeskerG6S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG6S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG6S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG6S3CB.TabIndex = 5;
+            this.VocalizerRebeccaG6S3CB.TabStop = false;
+            this.VocalizerRebeccaG6S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG6S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG6S3CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG6S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG6S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG6S2CB
+            // VocalizerRebeccaG6S2CB
             // 
-            this.VocalizerWeskerG6S2CB.EditValue = "";
-            this.VocalizerWeskerG6S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerWeskerG6S2CB.Name = "VocalizerWeskerG6S2CB";
-            this.VocalizerWeskerG6S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG6S2CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG6S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG6S2CB.EditValue = "";
+            this.VocalizerRebeccaG6S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerRebeccaG6S2CB.Name = "VocalizerRebeccaG6S2CB";
+            this.VocalizerRebeccaG6S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG6S2CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG6S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG6S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG6S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG6S2CB.TabIndex = 4;
-            this.VocalizerWeskerG6S2CB.TabStop = false;
-            this.VocalizerWeskerG6S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG6S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG6S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG6S2CB.TabIndex = 4;
+            this.VocalizerRebeccaG6S2CB.TabStop = false;
+            this.VocalizerRebeccaG6S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG6S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG6S2CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG6S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG6S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG6S1CB
+            // VocalizerRebeccaG6S1CB
             // 
-            this.VocalizerWeskerG6S1CB.EditValue = "";
-            this.VocalizerWeskerG6S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerWeskerG6S1CB.Name = "VocalizerWeskerG6S1CB";
-            this.VocalizerWeskerG6S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG6S1CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG6S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG6S1CB.EditValue = "";
+            this.VocalizerRebeccaG6S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerRebeccaG6S1CB.Name = "VocalizerRebeccaG6S1CB";
+            this.VocalizerRebeccaG6S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG6S1CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG6S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG6S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG6S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG6S1CB.TabIndex = 3;
-            this.VocalizerWeskerG6S1CB.TabStop = false;
-            this.VocalizerWeskerG6S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG6S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG6S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG6S1CB.TabIndex = 3;
+            this.VocalizerRebeccaG6S1CB.TabStop = false;
+            this.VocalizerRebeccaG6S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG6S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG6S1CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG6S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG6S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG5GP
+            // VocalizerRebeccaG5GP
             // 
-            this.VocalizerWeskerG5GP.Controls.Add(this.VocalizerWeskerG5S5CB);
-            this.VocalizerWeskerG5GP.Controls.Add(this.VocalizerWeskerG5S4CB);
-            this.VocalizerWeskerG5GP.Controls.Add(this.VocalizerWeskerG5S3CB);
-            this.VocalizerWeskerG5GP.Controls.Add(this.VocalizerWeskerG5S2CB);
-            this.VocalizerWeskerG5GP.Controls.Add(this.VocalizerWeskerG5S1CB);
-            this.VocalizerWeskerG5GP.Location = new System.Drawing.Point(179, 169);
-            this.VocalizerWeskerG5GP.Name = "VocalizerWeskerG5GP";
-            this.VocalizerWeskerG5GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerWeskerG5GP.TabIndex = 31;
-            this.VocalizerWeskerG5GP.Text = "Group 5";
+            this.VocalizerRebeccaG5GP.Controls.Add(this.VocalizerRebeccaG5S5CB);
+            this.VocalizerRebeccaG5GP.Controls.Add(this.VocalizerRebeccaG5S4CB);
+            this.VocalizerRebeccaG5GP.Controls.Add(this.VocalizerRebeccaG5S3CB);
+            this.VocalizerRebeccaG5GP.Controls.Add(this.VocalizerRebeccaG5S2CB);
+            this.VocalizerRebeccaG5GP.Controls.Add(this.VocalizerRebeccaG5S1CB);
+            this.VocalizerRebeccaG5GP.Location = new System.Drawing.Point(179, 169);
+            this.VocalizerRebeccaG5GP.Name = "VocalizerRebeccaG5GP";
+            this.VocalizerRebeccaG5GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerRebeccaG5GP.TabIndex = 67;
+            this.VocalizerRebeccaG5GP.Text = "Group 5";
             // 
-            // VocalizerWeskerG5S5CB
+            // VocalizerRebeccaG5S5CB
             // 
-            this.VocalizerWeskerG5S5CB.EditValue = "";
-            this.VocalizerWeskerG5S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerWeskerG5S5CB.Name = "VocalizerWeskerG5S5CB";
-            this.VocalizerWeskerG5S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG5S5CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG5S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG5S5CB.EditValue = "";
+            this.VocalizerRebeccaG5S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerRebeccaG5S5CB.Name = "VocalizerRebeccaG5S5CB";
+            this.VocalizerRebeccaG5S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG5S5CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG5S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG5S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG5S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG5S5CB.TabIndex = 7;
-            this.VocalizerWeskerG5S5CB.TabStop = false;
-            this.VocalizerWeskerG5S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG5S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG5S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG5S5CB.TabIndex = 7;
+            this.VocalizerRebeccaG5S5CB.TabStop = false;
+            this.VocalizerRebeccaG5S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG5S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG5S5CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG5S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG5S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG5S4CB
+            // VocalizerRebeccaG5S4CB
             // 
-            this.VocalizerWeskerG5S4CB.EditValue = "";
-            this.VocalizerWeskerG5S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerWeskerG5S4CB.Name = "VocalizerWeskerG5S4CB";
-            this.VocalizerWeskerG5S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG5S4CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG5S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG5S4CB.EditValue = "";
+            this.VocalizerRebeccaG5S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerRebeccaG5S4CB.Name = "VocalizerRebeccaG5S4CB";
+            this.VocalizerRebeccaG5S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG5S4CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG5S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG5S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG5S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG5S4CB.TabIndex = 6;
-            this.VocalizerWeskerG5S4CB.TabStop = false;
-            this.VocalizerWeskerG5S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG5S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG5S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG5S4CB.TabIndex = 6;
+            this.VocalizerRebeccaG5S4CB.TabStop = false;
+            this.VocalizerRebeccaG5S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG5S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG5S4CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG5S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG5S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG5S3CB
+            // VocalizerRebeccaG5S3CB
             // 
-            this.VocalizerWeskerG5S3CB.EditValue = "";
-            this.VocalizerWeskerG5S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerWeskerG5S3CB.Name = "VocalizerWeskerG5S3CB";
-            this.VocalizerWeskerG5S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG5S3CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG5S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG5S3CB.EditValue = "";
+            this.VocalizerRebeccaG5S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerRebeccaG5S3CB.Name = "VocalizerRebeccaG5S3CB";
+            this.VocalizerRebeccaG5S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG5S3CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG5S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG5S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG5S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG5S3CB.TabIndex = 5;
-            this.VocalizerWeskerG5S3CB.TabStop = false;
-            this.VocalizerWeskerG5S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG5S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG5S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG5S3CB.TabIndex = 5;
+            this.VocalizerRebeccaG5S3CB.TabStop = false;
+            this.VocalizerRebeccaG5S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG5S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG5S3CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG5S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG5S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG5S2CB
+            // VocalizerRebeccaG5S2CB
             // 
-            this.VocalizerWeskerG5S2CB.EditValue = "";
-            this.VocalizerWeskerG5S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerWeskerG5S2CB.Name = "VocalizerWeskerG5S2CB";
-            this.VocalizerWeskerG5S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG5S2CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG5S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG5S2CB.EditValue = "";
+            this.VocalizerRebeccaG5S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerRebeccaG5S2CB.Name = "VocalizerRebeccaG5S2CB";
+            this.VocalizerRebeccaG5S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG5S2CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG5S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG5S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG5S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG5S2CB.TabIndex = 4;
-            this.VocalizerWeskerG5S2CB.TabStop = false;
-            this.VocalizerWeskerG5S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG5S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG5S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG5S2CB.TabIndex = 4;
+            this.VocalizerRebeccaG5S2CB.TabStop = false;
+            this.VocalizerRebeccaG5S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG5S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG5S2CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG5S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG5S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG5S1CB
+            // VocalizerRebeccaG5S1CB
             // 
-            this.VocalizerWeskerG5S1CB.EditValue = "";
-            this.VocalizerWeskerG5S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerWeskerG5S1CB.Name = "VocalizerWeskerG5S1CB";
-            this.VocalizerWeskerG5S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG5S1CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG5S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG5S1CB.EditValue = "";
+            this.VocalizerRebeccaG5S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerRebeccaG5S1CB.Name = "VocalizerRebeccaG5S1CB";
+            this.VocalizerRebeccaG5S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG5S1CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG5S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG5S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG5S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG5S1CB.TabIndex = 3;
-            this.VocalizerWeskerG5S1CB.TabStop = false;
-            this.VocalizerWeskerG5S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG5S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG5S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG5S1CB.TabIndex = 3;
+            this.VocalizerRebeccaG5S1CB.TabStop = false;
+            this.VocalizerRebeccaG5S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG5S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG5S1CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG5S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG5S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG4GP
+            // VocalizerRebeccaG4GP
             // 
-            this.VocalizerWeskerG4GP.Controls.Add(this.VocalizerWeskerG4S5CB);
-            this.VocalizerWeskerG4GP.Controls.Add(this.VocalizerWeskerG4S4CB);
-            this.VocalizerWeskerG4GP.Controls.Add(this.VocalizerWeskerG4S3CB);
-            this.VocalizerWeskerG4GP.Controls.Add(this.VocalizerWeskerG4S2CB);
-            this.VocalizerWeskerG4GP.Controls.Add(this.VocalizerWeskerG4S1CB);
-            this.VocalizerWeskerG4GP.Location = new System.Drawing.Point(3, 169);
-            this.VocalizerWeskerG4GP.Name = "VocalizerWeskerG4GP";
-            this.VocalizerWeskerG4GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerWeskerG4GP.TabIndex = 30;
-            this.VocalizerWeskerG4GP.Text = "Group 4";
+            this.VocalizerRebeccaG4GP.Controls.Add(this.VocalizerRebeccaG4S5CB);
+            this.VocalizerRebeccaG4GP.Controls.Add(this.VocalizerRebeccaG4S4CB);
+            this.VocalizerRebeccaG4GP.Controls.Add(this.VocalizerRebeccaG4S3CB);
+            this.VocalizerRebeccaG4GP.Controls.Add(this.VocalizerRebeccaG4S2CB);
+            this.VocalizerRebeccaG4GP.Controls.Add(this.VocalizerRebeccaG4S1CB);
+            this.VocalizerRebeccaG4GP.Location = new System.Drawing.Point(3, 169);
+            this.VocalizerRebeccaG4GP.Name = "VocalizerRebeccaG4GP";
+            this.VocalizerRebeccaG4GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerRebeccaG4GP.TabIndex = 66;
+            this.VocalizerRebeccaG4GP.Text = "Group 4";
             // 
-            // VocalizerWeskerG4S5CB
+            // VocalizerRebeccaG4S5CB
             // 
-            this.VocalizerWeskerG4S5CB.EditValue = "";
-            this.VocalizerWeskerG4S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerWeskerG4S5CB.Name = "VocalizerWeskerG4S5CB";
-            this.VocalizerWeskerG4S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG4S5CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG4S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG4S5CB.EditValue = "";
+            this.VocalizerRebeccaG4S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerRebeccaG4S5CB.Name = "VocalizerRebeccaG4S5CB";
+            this.VocalizerRebeccaG4S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG4S5CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG4S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG4S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG4S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG4S5CB.TabIndex = 7;
-            this.VocalizerWeskerG4S5CB.TabStop = false;
-            this.VocalizerWeskerG4S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG4S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG4S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG4S5CB.TabIndex = 7;
+            this.VocalizerRebeccaG4S5CB.TabStop = false;
+            this.VocalizerRebeccaG4S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG4S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG4S5CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG4S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG4S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG4S4CB
+            // VocalizerRebeccaG4S4CB
             // 
-            this.VocalizerWeskerG4S4CB.EditValue = "";
-            this.VocalizerWeskerG4S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerWeskerG4S4CB.Name = "VocalizerWeskerG4S4CB";
-            this.VocalizerWeskerG4S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG4S4CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG4S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG4S4CB.EditValue = "";
+            this.VocalizerRebeccaG4S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerRebeccaG4S4CB.Name = "VocalizerRebeccaG4S4CB";
+            this.VocalizerRebeccaG4S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG4S4CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG4S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG4S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG4S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG4S4CB.TabIndex = 6;
-            this.VocalizerWeskerG4S4CB.TabStop = false;
-            this.VocalizerWeskerG4S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG4S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG4S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG4S4CB.TabIndex = 6;
+            this.VocalizerRebeccaG4S4CB.TabStop = false;
+            this.VocalizerRebeccaG4S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG4S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG4S4CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG4S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG4S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG4S3CB
+            // VocalizerRebeccaG4S3CB
             // 
-            this.VocalizerWeskerG4S3CB.EditValue = "";
-            this.VocalizerWeskerG4S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerWeskerG4S3CB.Name = "VocalizerWeskerG4S3CB";
-            this.VocalizerWeskerG4S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG4S3CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG4S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG4S3CB.EditValue = "";
+            this.VocalizerRebeccaG4S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerRebeccaG4S3CB.Name = "VocalizerRebeccaG4S3CB";
+            this.VocalizerRebeccaG4S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG4S3CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG4S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG4S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG4S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG4S3CB.TabIndex = 5;
-            this.VocalizerWeskerG4S3CB.TabStop = false;
-            this.VocalizerWeskerG4S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG4S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG4S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG4S3CB.TabIndex = 5;
+            this.VocalizerRebeccaG4S3CB.TabStop = false;
+            this.VocalizerRebeccaG4S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG4S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG4S3CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG4S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG4S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG4S2CB
+            // VocalizerRebeccaG4S2CB
             // 
-            this.VocalizerWeskerG4S2CB.EditValue = "";
-            this.VocalizerWeskerG4S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerWeskerG4S2CB.Name = "VocalizerWeskerG4S2CB";
-            this.VocalizerWeskerG4S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG4S2CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG4S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG4S2CB.EditValue = "";
+            this.VocalizerRebeccaG4S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerRebeccaG4S2CB.Name = "VocalizerRebeccaG4S2CB";
+            this.VocalizerRebeccaG4S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG4S2CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG4S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG4S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG4S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG4S2CB.TabIndex = 4;
-            this.VocalizerWeskerG4S2CB.TabStop = false;
-            this.VocalizerWeskerG4S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG4S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG4S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG4S2CB.TabIndex = 4;
+            this.VocalizerRebeccaG4S2CB.TabStop = false;
+            this.VocalizerRebeccaG4S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG4S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG4S2CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG4S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG4S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG4S1CB
+            // VocalizerRebeccaG4S1CB
             // 
-            this.VocalizerWeskerG4S1CB.EditValue = "";
-            this.VocalizerWeskerG4S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerWeskerG4S1CB.Name = "VocalizerWeskerG4S1CB";
-            this.VocalizerWeskerG4S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG4S1CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG4S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG4S1CB.EditValue = "";
+            this.VocalizerRebeccaG4S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerRebeccaG4S1CB.Name = "VocalizerRebeccaG4S1CB";
+            this.VocalizerRebeccaG4S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG4S1CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG4S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG4S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG4S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG4S1CB.TabIndex = 3;
-            this.VocalizerWeskerG4S1CB.TabStop = false;
-            this.VocalizerWeskerG4S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG4S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG4S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG4S1CB.TabIndex = 3;
+            this.VocalizerRebeccaG4S1CB.TabStop = false;
+            this.VocalizerRebeccaG4S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG4S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG4S1CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG4S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG4S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG3GP
+            // VocalizerRebeccaG3GP
             // 
-            this.VocalizerWeskerG3GP.Controls.Add(this.VocalizerWeskerG3S5CB);
-            this.VocalizerWeskerG3GP.Controls.Add(this.VocalizerWeskerG3S4CB);
-            this.VocalizerWeskerG3GP.Controls.Add(this.VocalizerWeskerG3S3CB);
-            this.VocalizerWeskerG3GP.Controls.Add(this.VocalizerWeskerG3S2CB);
-            this.VocalizerWeskerG3GP.Controls.Add(this.VocalizerWeskerG3S1CB);
-            this.VocalizerWeskerG3GP.Location = new System.Drawing.Point(355, 3);
-            this.VocalizerWeskerG3GP.Name = "VocalizerWeskerG3GP";
-            this.VocalizerWeskerG3GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerWeskerG3GP.TabIndex = 29;
-            this.VocalizerWeskerG3GP.Text = "Group 3";
+            this.VocalizerRebeccaG3GP.Controls.Add(this.VocalizerRebeccaG3S5CB);
+            this.VocalizerRebeccaG3GP.Controls.Add(this.VocalizerRebeccaG3S4CB);
+            this.VocalizerRebeccaG3GP.Controls.Add(this.VocalizerRebeccaG3S3CB);
+            this.VocalizerRebeccaG3GP.Controls.Add(this.VocalizerRebeccaG3S2CB);
+            this.VocalizerRebeccaG3GP.Controls.Add(this.VocalizerRebeccaG3S1CB);
+            this.VocalizerRebeccaG3GP.Location = new System.Drawing.Point(355, 3);
+            this.VocalizerRebeccaG3GP.Name = "VocalizerRebeccaG3GP";
+            this.VocalizerRebeccaG3GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerRebeccaG3GP.TabIndex = 65;
+            this.VocalizerRebeccaG3GP.Text = "Group 3";
             // 
-            // VocalizerWeskerG3S5CB
+            // VocalizerRebeccaG3S5CB
             // 
-            this.VocalizerWeskerG3S5CB.EditValue = "";
-            this.VocalizerWeskerG3S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerWeskerG3S5CB.Name = "VocalizerWeskerG3S5CB";
-            this.VocalizerWeskerG3S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG3S5CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG3S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG3S5CB.EditValue = "";
+            this.VocalizerRebeccaG3S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerRebeccaG3S5CB.Name = "VocalizerRebeccaG3S5CB";
+            this.VocalizerRebeccaG3S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG3S5CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG3S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG3S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG3S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG3S5CB.TabIndex = 7;
-            this.VocalizerWeskerG3S5CB.TabStop = false;
-            this.VocalizerWeskerG3S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG3S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG3S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG3S5CB.TabIndex = 7;
+            this.VocalizerRebeccaG3S5CB.TabStop = false;
+            this.VocalizerRebeccaG3S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG3S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG3S5CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG3S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG3S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG3S4CB
+            // VocalizerRebeccaG3S4CB
             // 
-            this.VocalizerWeskerG3S4CB.EditValue = "";
-            this.VocalizerWeskerG3S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerWeskerG3S4CB.Name = "VocalizerWeskerG3S4CB";
-            this.VocalizerWeskerG3S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG3S4CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG3S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG3S4CB.EditValue = "";
+            this.VocalizerRebeccaG3S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerRebeccaG3S4CB.Name = "VocalizerRebeccaG3S4CB";
+            this.VocalizerRebeccaG3S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG3S4CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG3S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG3S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG3S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG3S4CB.TabIndex = 6;
-            this.VocalizerWeskerG3S4CB.TabStop = false;
-            this.VocalizerWeskerG3S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG3S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG3S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG3S4CB.TabIndex = 6;
+            this.VocalizerRebeccaG3S4CB.TabStop = false;
+            this.VocalizerRebeccaG3S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG3S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG3S4CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG3S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG3S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG3S3CB
+            // VocalizerRebeccaG3S3CB
             // 
-            this.VocalizerWeskerG3S3CB.EditValue = "";
-            this.VocalizerWeskerG3S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerWeskerG3S3CB.Name = "VocalizerWeskerG3S3CB";
-            this.VocalizerWeskerG3S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG3S3CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG3S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG3S3CB.EditValue = "";
+            this.VocalizerRebeccaG3S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerRebeccaG3S3CB.Name = "VocalizerRebeccaG3S3CB";
+            this.VocalizerRebeccaG3S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG3S3CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG3S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG3S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG3S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG3S3CB.TabIndex = 5;
-            this.VocalizerWeskerG3S3CB.TabStop = false;
-            this.VocalizerWeskerG3S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG3S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG3S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG3S3CB.TabIndex = 5;
+            this.VocalizerRebeccaG3S3CB.TabStop = false;
+            this.VocalizerRebeccaG3S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG3S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG3S3CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG3S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG3S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG3S2CB
+            // VocalizerRebeccaG3S2CB
             // 
-            this.VocalizerWeskerG3S2CB.EditValue = "";
-            this.VocalizerWeskerG3S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerWeskerG3S2CB.Name = "VocalizerWeskerG3S2CB";
-            this.VocalizerWeskerG3S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG3S2CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG3S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG3S2CB.EditValue = "";
+            this.VocalizerRebeccaG3S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerRebeccaG3S2CB.Name = "VocalizerRebeccaG3S2CB";
+            this.VocalizerRebeccaG3S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG3S2CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG3S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG3S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG3S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG3S2CB.TabIndex = 4;
-            this.VocalizerWeskerG3S2CB.TabStop = false;
-            this.VocalizerWeskerG3S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG3S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG3S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG3S2CB.TabIndex = 4;
+            this.VocalizerRebeccaG3S2CB.TabStop = false;
+            this.VocalizerRebeccaG3S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG3S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG3S2CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG3S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG3S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG3S1CB
+            // VocalizerRebeccaG3S1CB
             // 
-            this.VocalizerWeskerG3S1CB.EditValue = "";
-            this.VocalizerWeskerG3S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerWeskerG3S1CB.Name = "VocalizerWeskerG3S1CB";
-            this.VocalizerWeskerG3S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG3S1CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG3S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG3S1CB.EditValue = "";
+            this.VocalizerRebeccaG3S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerRebeccaG3S1CB.Name = "VocalizerRebeccaG3S1CB";
+            this.VocalizerRebeccaG3S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG3S1CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG3S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG3S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG3S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG3S1CB.TabIndex = 3;
-            this.VocalizerWeskerG3S1CB.TabStop = false;
-            this.VocalizerWeskerG3S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG3S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG3S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG3S1CB.TabIndex = 3;
+            this.VocalizerRebeccaG3S1CB.TabStop = false;
+            this.VocalizerRebeccaG3S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG3S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG3S1CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG3S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG3S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG2GP
+            // VocalizerRebeccaG2GP
             // 
-            this.VocalizerWeskerG2GP.Controls.Add(this.VocalizerWeskerG2S5CB);
-            this.VocalizerWeskerG2GP.Controls.Add(this.VocalizerWeskerG2S4CB);
-            this.VocalizerWeskerG2GP.Controls.Add(this.VocalizerWeskerG2S3CB);
-            this.VocalizerWeskerG2GP.Controls.Add(this.VocalizerWeskerG2S2CB);
-            this.VocalizerWeskerG2GP.Controls.Add(this.VocalizerWeskerG2S1CB);
-            this.VocalizerWeskerG2GP.Location = new System.Drawing.Point(179, 3);
-            this.VocalizerWeskerG2GP.Name = "VocalizerWeskerG2GP";
-            this.VocalizerWeskerG2GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerWeskerG2GP.TabIndex = 28;
-            this.VocalizerWeskerG2GP.Text = "Group 2";
+            this.VocalizerRebeccaG2GP.Controls.Add(this.VocalizerRebeccaG2S5CB);
+            this.VocalizerRebeccaG2GP.Controls.Add(this.VocalizerRebeccaG2S4CB);
+            this.VocalizerRebeccaG2GP.Controls.Add(this.VocalizerRebeccaG2S3CB);
+            this.VocalizerRebeccaG2GP.Controls.Add(this.VocalizerRebeccaG2S2CB);
+            this.VocalizerRebeccaG2GP.Controls.Add(this.VocalizerRebeccaG2S1CB);
+            this.VocalizerRebeccaG2GP.Location = new System.Drawing.Point(179, 3);
+            this.VocalizerRebeccaG2GP.Name = "VocalizerRebeccaG2GP";
+            this.VocalizerRebeccaG2GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerRebeccaG2GP.TabIndex = 64;
+            this.VocalizerRebeccaG2GP.Text = "Group 2";
             // 
-            // VocalizerWeskerG2S5CB
+            // VocalizerRebeccaG2S5CB
             // 
-            this.VocalizerWeskerG2S5CB.EditValue = "";
-            this.VocalizerWeskerG2S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerWeskerG2S5CB.Name = "VocalizerWeskerG2S5CB";
-            this.VocalizerWeskerG2S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG2S5CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG2S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG2S5CB.EditValue = "";
+            this.VocalizerRebeccaG2S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerRebeccaG2S5CB.Name = "VocalizerRebeccaG2S5CB";
+            this.VocalizerRebeccaG2S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG2S5CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG2S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG2S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG2S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG2S5CB.TabIndex = 7;
-            this.VocalizerWeskerG2S5CB.TabStop = false;
-            this.VocalizerWeskerG2S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG2S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG2S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG2S5CB.TabIndex = 7;
+            this.VocalizerRebeccaG2S5CB.TabStop = false;
+            this.VocalizerRebeccaG2S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG2S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG2S5CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG2S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG2S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG2S4CB
+            // VocalizerRebeccaG2S4CB
             // 
-            this.VocalizerWeskerG2S4CB.EditValue = "";
-            this.VocalizerWeskerG2S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerWeskerG2S4CB.Name = "VocalizerWeskerG2S4CB";
-            this.VocalizerWeskerG2S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG2S4CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG2S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG2S4CB.EditValue = "";
+            this.VocalizerRebeccaG2S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerRebeccaG2S4CB.Name = "VocalizerRebeccaG2S4CB";
+            this.VocalizerRebeccaG2S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG2S4CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG2S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG2S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG2S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG2S4CB.TabIndex = 6;
-            this.VocalizerWeskerG2S4CB.TabStop = false;
-            this.VocalizerWeskerG2S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG2S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG2S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG2S4CB.TabIndex = 6;
+            this.VocalizerRebeccaG2S4CB.TabStop = false;
+            this.VocalizerRebeccaG2S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG2S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG2S4CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG2S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG2S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG2S3CB
+            // VocalizerRebeccaG2S3CB
             // 
-            this.VocalizerWeskerG2S3CB.EditValue = "";
-            this.VocalizerWeskerG2S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerWeskerG2S3CB.Name = "VocalizerWeskerG2S3CB";
-            this.VocalizerWeskerG2S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG2S3CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG2S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG2S3CB.EditValue = "";
+            this.VocalizerRebeccaG2S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerRebeccaG2S3CB.Name = "VocalizerRebeccaG2S3CB";
+            this.VocalizerRebeccaG2S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG2S3CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG2S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG2S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG2S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG2S3CB.TabIndex = 5;
-            this.VocalizerWeskerG2S3CB.TabStop = false;
-            this.VocalizerWeskerG2S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG2S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG2S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG2S3CB.TabIndex = 5;
+            this.VocalizerRebeccaG2S3CB.TabStop = false;
+            this.VocalizerRebeccaG2S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG2S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG2S3CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG2S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG2S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG2S2CB
+            // VocalizerRebeccaG2S2CB
             // 
-            this.VocalizerWeskerG2S2CB.EditValue = "";
-            this.VocalizerWeskerG2S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerWeskerG2S2CB.Name = "VocalizerWeskerG2S2CB";
-            this.VocalizerWeskerG2S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG2S2CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG2S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG2S2CB.EditValue = "";
+            this.VocalizerRebeccaG2S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerRebeccaG2S2CB.Name = "VocalizerRebeccaG2S2CB";
+            this.VocalizerRebeccaG2S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG2S2CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG2S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG2S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG2S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG2S2CB.TabIndex = 4;
-            this.VocalizerWeskerG2S2CB.TabStop = false;
-            this.VocalizerWeskerG2S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG2S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG2S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG2S2CB.TabIndex = 4;
+            this.VocalizerRebeccaG2S2CB.TabStop = false;
+            this.VocalizerRebeccaG2S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG2S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG2S2CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG2S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG2S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG2S1CB
+            // VocalizerRebeccaG2S1CB
             // 
-            this.VocalizerWeskerG2S1CB.EditValue = "";
-            this.VocalizerWeskerG2S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerWeskerG2S1CB.Name = "VocalizerWeskerG2S1CB";
-            this.VocalizerWeskerG2S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG2S1CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG2S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG2S1CB.EditValue = "";
+            this.VocalizerRebeccaG2S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerRebeccaG2S1CB.Name = "VocalizerRebeccaG2S1CB";
+            this.VocalizerRebeccaG2S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG2S1CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG2S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG2S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG2S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG2S1CB.TabIndex = 3;
-            this.VocalizerWeskerG2S1CB.TabStop = false;
-            this.VocalizerWeskerG2S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG2S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG2S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG2S1CB.TabIndex = 3;
+            this.VocalizerRebeccaG2S1CB.TabStop = false;
+            this.VocalizerRebeccaG2S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG2S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG2S1CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG2S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG2S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG1GP
+            // VocalizerRebeccaG1GP
             // 
-            this.VocalizerWeskerG1GP.Controls.Add(this.VocalizerWeskerG1S5CB);
-            this.VocalizerWeskerG1GP.Controls.Add(this.VocalizerWeskerG1S4CB);
-            this.VocalizerWeskerG1GP.Controls.Add(this.VocalizerWeskerG1S3CB);
-            this.VocalizerWeskerG1GP.Controls.Add(this.VocalizerWeskerG1S2CB);
-            this.VocalizerWeskerG1GP.Controls.Add(this.VocalizerWeskerG1S1CB);
-            this.VocalizerWeskerG1GP.Location = new System.Drawing.Point(3, 3);
-            this.VocalizerWeskerG1GP.Name = "VocalizerWeskerG1GP";
-            this.VocalizerWeskerG1GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerWeskerG1GP.TabIndex = 27;
-            this.VocalizerWeskerG1GP.Text = "Group 1";
+            this.VocalizerRebeccaG1GP.Controls.Add(this.VocalizerRebeccaG1S5CB);
+            this.VocalizerRebeccaG1GP.Controls.Add(this.VocalizerRebeccaG1S4CB);
+            this.VocalizerRebeccaG1GP.Controls.Add(this.VocalizerRebeccaG1S3CB);
+            this.VocalizerRebeccaG1GP.Controls.Add(this.VocalizerRebeccaG1S2CB);
+            this.VocalizerRebeccaG1GP.Controls.Add(this.VocalizerRebeccaG1S1CB);
+            this.VocalizerRebeccaG1GP.Location = new System.Drawing.Point(3, 3);
+            this.VocalizerRebeccaG1GP.Name = "VocalizerRebeccaG1GP";
+            this.VocalizerRebeccaG1GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerRebeccaG1GP.TabIndex = 63;
+            this.VocalizerRebeccaG1GP.Text = "Group 1";
             // 
-            // VocalizerWeskerG1S5CB
+            // VocalizerRebeccaG1S5CB
             // 
-            this.VocalizerWeskerG1S5CB.EditValue = "";
-            this.VocalizerWeskerG1S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerWeskerG1S5CB.Name = "VocalizerWeskerG1S5CB";
-            this.VocalizerWeskerG1S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG1S5CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG1S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG1S5CB.EditValue = "";
+            this.VocalizerRebeccaG1S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerRebeccaG1S5CB.Name = "VocalizerRebeccaG1S5CB";
+            this.VocalizerRebeccaG1S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG1S5CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG1S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG1S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG1S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG1S5CB.TabIndex = 7;
-            this.VocalizerWeskerG1S5CB.TabStop = false;
-            this.VocalizerWeskerG1S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG1S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG1S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG1S5CB.TabIndex = 7;
+            this.VocalizerRebeccaG1S5CB.TabStop = false;
+            this.VocalizerRebeccaG1S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG1S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG1S5CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG1S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG1S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG1S4CB
+            // VocalizerRebeccaG1S4CB
             // 
-            this.VocalizerWeskerG1S4CB.EditValue = "";
-            this.VocalizerWeskerG1S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerWeskerG1S4CB.Name = "VocalizerWeskerG1S4CB";
-            this.VocalizerWeskerG1S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG1S4CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG1S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG1S4CB.EditValue = "";
+            this.VocalizerRebeccaG1S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerRebeccaG1S4CB.Name = "VocalizerRebeccaG1S4CB";
+            this.VocalizerRebeccaG1S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG1S4CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG1S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG1S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG1S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG1S4CB.TabIndex = 6;
-            this.VocalizerWeskerG1S4CB.TabStop = false;
-            this.VocalizerWeskerG1S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG1S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG1S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG1S4CB.TabIndex = 6;
+            this.VocalizerRebeccaG1S4CB.TabStop = false;
+            this.VocalizerRebeccaG1S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG1S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG1S4CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG1S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG1S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG1S3CB
+            // VocalizerRebeccaG1S3CB
             // 
-            this.VocalizerWeskerG1S3CB.EditValue = "";
-            this.VocalizerWeskerG1S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerWeskerG1S3CB.Name = "VocalizerWeskerG1S3CB";
-            this.VocalizerWeskerG1S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG1S3CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG1S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG1S3CB.EditValue = "";
+            this.VocalizerRebeccaG1S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerRebeccaG1S3CB.Name = "VocalizerRebeccaG1S3CB";
+            this.VocalizerRebeccaG1S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG1S3CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG1S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG1S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG1S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG1S3CB.TabIndex = 5;
-            this.VocalizerWeskerG1S3CB.TabStop = false;
-            this.VocalizerWeskerG1S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG1S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG1S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG1S3CB.TabIndex = 5;
+            this.VocalizerRebeccaG1S3CB.TabStop = false;
+            this.VocalizerRebeccaG1S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG1S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG1S3CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG1S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG1S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG1S2CB
+            // VocalizerRebeccaG1S2CB
             // 
-            this.VocalizerWeskerG1S2CB.EditValue = "";
-            this.VocalizerWeskerG1S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerWeskerG1S2CB.Name = "VocalizerWeskerG1S2CB";
-            this.VocalizerWeskerG1S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG1S2CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG1S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG1S2CB.EditValue = "";
+            this.VocalizerRebeccaG1S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerRebeccaG1S2CB.Name = "VocalizerRebeccaG1S2CB";
+            this.VocalizerRebeccaG1S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG1S2CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG1S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG1S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG1S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG1S2CB.TabIndex = 4;
-            this.VocalizerWeskerG1S2CB.TabStop = false;
-            this.VocalizerWeskerG1S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG1S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG1S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG1S2CB.TabIndex = 4;
+            this.VocalizerRebeccaG1S2CB.TabStop = false;
+            this.VocalizerRebeccaG1S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG1S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG1S2CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG1S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG1S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
-            // VocalizerWeskerG1S1CB
+            // VocalizerRebeccaG1S1CB
             // 
-            this.VocalizerWeskerG1S1CB.EditValue = "";
-            this.VocalizerWeskerG1S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerWeskerG1S1CB.Name = "VocalizerWeskerG1S1CB";
-            this.VocalizerWeskerG1S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerWeskerG1S1CB.Properties.AllowFocused = false;
-            this.VocalizerWeskerG1S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.VocalizerRebeccaG1S1CB.EditValue = "";
+            this.VocalizerRebeccaG1S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerRebeccaG1S1CB.Name = "VocalizerRebeccaG1S1CB";
+            this.VocalizerRebeccaG1S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG1S1CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG1S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerWeskerG1S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerWeskerG1S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerWeskerG1S1CB.TabIndex = 3;
-            this.VocalizerWeskerG1S1CB.TabStop = false;
-            this.VocalizerWeskerG1S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+            this.VocalizerRebeccaG1S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG1S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG1S1CB.TabIndex = 3;
+            this.VocalizerRebeccaG1S1CB.TabStop = false;
+            this.VocalizerRebeccaG1S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
     "kill.";
-            this.VocalizerWeskerG1S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG1S1CB.ToolTipTitle = "Melee Kill Seconds";
+            this.VocalizerRebeccaG1S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerRebeccaG1S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisTab
             // 
@@ -6481,6 +6483,948 @@ namespace GameX
             this.VocalizerJillG1S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.VocalizerJillG1S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
+            // VocalizerWeskerTab
+            // 
+            this.VocalizerWeskerTab.Controls.Add(this.VocalizerWeskerG9GP);
+            this.VocalizerWeskerTab.Controls.Add(this.VocalizerWeskerG8GP);
+            this.VocalizerWeskerTab.Controls.Add(this.VocalizerWeskerG7GP);
+            this.VocalizerWeskerTab.Controls.Add(this.VocalizerWeskerG6GP);
+            this.VocalizerWeskerTab.Controls.Add(this.VocalizerWeskerG5GP);
+            this.VocalizerWeskerTab.Controls.Add(this.VocalizerWeskerG4GP);
+            this.VocalizerWeskerTab.Controls.Add(this.VocalizerWeskerG3GP);
+            this.VocalizerWeskerTab.Controls.Add(this.VocalizerWeskerG2GP);
+            this.VocalizerWeskerTab.Controls.Add(this.VocalizerWeskerG1GP);
+            this.VocalizerWeskerTab.Name = "VocalizerWeskerTab";
+            this.VocalizerWeskerTab.Size = new System.Drawing.Size(528, 498);
+            this.VocalizerWeskerTab.Text = "xtraTabPage3";
+            // 
+            // VocalizerWeskerG9GP
+            // 
+            this.VocalizerWeskerG9GP.Controls.Add(this.VocalizerWeskerG9S5CB);
+            this.VocalizerWeskerG9GP.Controls.Add(this.VocalizerWeskerG9S4CB);
+            this.VocalizerWeskerG9GP.Controls.Add(this.VocalizerWeskerG9S3CB);
+            this.VocalizerWeskerG9GP.Controls.Add(this.VocalizerWeskerG9S2CB);
+            this.VocalizerWeskerG9GP.Controls.Add(this.VocalizerWeskerG9S1CB);
+            this.VocalizerWeskerG9GP.Location = new System.Drawing.Point(355, 335);
+            this.VocalizerWeskerG9GP.Name = "VocalizerWeskerG9GP";
+            this.VocalizerWeskerG9GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerWeskerG9GP.TabIndex = 35;
+            this.VocalizerWeskerG9GP.Text = "Group 9";
+            // 
+            // VocalizerWeskerG9S5CB
+            // 
+            this.VocalizerWeskerG9S5CB.EditValue = "";
+            this.VocalizerWeskerG9S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerWeskerG9S5CB.Name = "VocalizerWeskerG9S5CB";
+            this.VocalizerWeskerG9S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG9S5CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG9S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG9S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG9S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG9S5CB.TabIndex = 7;
+            this.VocalizerWeskerG9S5CB.TabStop = false;
+            this.VocalizerWeskerG9S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG9S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG9S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG9S4CB
+            // 
+            this.VocalizerWeskerG9S4CB.EditValue = "";
+            this.VocalizerWeskerG9S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerWeskerG9S4CB.Name = "VocalizerWeskerG9S4CB";
+            this.VocalizerWeskerG9S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG9S4CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG9S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG9S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG9S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG9S4CB.TabIndex = 6;
+            this.VocalizerWeskerG9S4CB.TabStop = false;
+            this.VocalizerWeskerG9S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG9S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG9S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG9S3CB
+            // 
+            this.VocalizerWeskerG9S3CB.EditValue = "";
+            this.VocalizerWeskerG9S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerWeskerG9S3CB.Name = "VocalizerWeskerG9S3CB";
+            this.VocalizerWeskerG9S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG9S3CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG9S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG9S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG9S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG9S3CB.TabIndex = 5;
+            this.VocalizerWeskerG9S3CB.TabStop = false;
+            this.VocalizerWeskerG9S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG9S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG9S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG9S2CB
+            // 
+            this.VocalizerWeskerG9S2CB.EditValue = "";
+            this.VocalizerWeskerG9S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerWeskerG9S2CB.Name = "VocalizerWeskerG9S2CB";
+            this.VocalizerWeskerG9S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG9S2CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG9S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG9S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG9S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG9S2CB.TabIndex = 4;
+            this.VocalizerWeskerG9S2CB.TabStop = false;
+            this.VocalizerWeskerG9S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG9S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG9S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG9S1CB
+            // 
+            this.VocalizerWeskerG9S1CB.EditValue = "";
+            this.VocalizerWeskerG9S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerWeskerG9S1CB.Name = "VocalizerWeskerG9S1CB";
+            this.VocalizerWeskerG9S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG9S1CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG9S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG9S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG9S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG9S1CB.TabIndex = 3;
+            this.VocalizerWeskerG9S1CB.TabStop = false;
+            this.VocalizerWeskerG9S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG9S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG9S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG8GP
+            // 
+            this.VocalizerWeskerG8GP.Controls.Add(this.VocalizerWeskerG8S5CB);
+            this.VocalizerWeskerG8GP.Controls.Add(this.VocalizerWeskerG8S4CB);
+            this.VocalizerWeskerG8GP.Controls.Add(this.VocalizerWeskerG8S3CB);
+            this.VocalizerWeskerG8GP.Controls.Add(this.VocalizerWeskerG8S2CB);
+            this.VocalizerWeskerG8GP.Controls.Add(this.VocalizerWeskerG8S1CB);
+            this.VocalizerWeskerG8GP.Location = new System.Drawing.Point(179, 335);
+            this.VocalizerWeskerG8GP.Name = "VocalizerWeskerG8GP";
+            this.VocalizerWeskerG8GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerWeskerG8GP.TabIndex = 34;
+            this.VocalizerWeskerG8GP.Text = "Group 8";
+            // 
+            // VocalizerWeskerG8S5CB
+            // 
+            this.VocalizerWeskerG8S5CB.EditValue = "";
+            this.VocalizerWeskerG8S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerWeskerG8S5CB.Name = "VocalizerWeskerG8S5CB";
+            this.VocalizerWeskerG8S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG8S5CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG8S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG8S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG8S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG8S5CB.TabIndex = 7;
+            this.VocalizerWeskerG8S5CB.TabStop = false;
+            this.VocalizerWeskerG8S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG8S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG8S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG8S4CB
+            // 
+            this.VocalizerWeskerG8S4CB.EditValue = "";
+            this.VocalizerWeskerG8S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerWeskerG8S4CB.Name = "VocalizerWeskerG8S4CB";
+            this.VocalizerWeskerG8S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG8S4CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG8S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG8S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG8S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG8S4CB.TabIndex = 6;
+            this.VocalizerWeskerG8S4CB.TabStop = false;
+            this.VocalizerWeskerG8S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG8S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG8S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG8S3CB
+            // 
+            this.VocalizerWeskerG8S3CB.EditValue = "";
+            this.VocalizerWeskerG8S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerWeskerG8S3CB.Name = "VocalizerWeskerG8S3CB";
+            this.VocalizerWeskerG8S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG8S3CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG8S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG8S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG8S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG8S3CB.TabIndex = 5;
+            this.VocalizerWeskerG8S3CB.TabStop = false;
+            this.VocalizerWeskerG8S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG8S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG8S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG8S2CB
+            // 
+            this.VocalizerWeskerG8S2CB.EditValue = "";
+            this.VocalizerWeskerG8S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerWeskerG8S2CB.Name = "VocalizerWeskerG8S2CB";
+            this.VocalizerWeskerG8S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG8S2CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG8S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG8S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG8S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG8S2CB.TabIndex = 4;
+            this.VocalizerWeskerG8S2CB.TabStop = false;
+            this.VocalizerWeskerG8S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG8S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG8S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG8S1CB
+            // 
+            this.VocalizerWeskerG8S1CB.EditValue = "";
+            this.VocalizerWeskerG8S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerWeskerG8S1CB.Name = "VocalizerWeskerG8S1CB";
+            this.VocalizerWeskerG8S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG8S1CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG8S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG8S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG8S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG8S1CB.TabIndex = 3;
+            this.VocalizerWeskerG8S1CB.TabStop = false;
+            this.VocalizerWeskerG8S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG8S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG8S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG7GP
+            // 
+            this.VocalizerWeskerG7GP.Controls.Add(this.VocalizerWeskerG7S5CB);
+            this.VocalizerWeskerG7GP.Controls.Add(this.VocalizerWeskerG7S4CB);
+            this.VocalizerWeskerG7GP.Controls.Add(this.VocalizerWeskerG7S3CB);
+            this.VocalizerWeskerG7GP.Controls.Add(this.VocalizerWeskerG7S2CB);
+            this.VocalizerWeskerG7GP.Controls.Add(this.VocalizerWeskerG7S1CB);
+            this.VocalizerWeskerG7GP.Location = new System.Drawing.Point(3, 335);
+            this.VocalizerWeskerG7GP.Name = "VocalizerWeskerG7GP";
+            this.VocalizerWeskerG7GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerWeskerG7GP.TabIndex = 33;
+            this.VocalizerWeskerG7GP.Text = "Group 7";
+            // 
+            // VocalizerWeskerG7S5CB
+            // 
+            this.VocalizerWeskerG7S5CB.EditValue = "";
+            this.VocalizerWeskerG7S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerWeskerG7S5CB.Name = "VocalizerWeskerG7S5CB";
+            this.VocalizerWeskerG7S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG7S5CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG7S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG7S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG7S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG7S5CB.TabIndex = 7;
+            this.VocalizerWeskerG7S5CB.TabStop = false;
+            this.VocalizerWeskerG7S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG7S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG7S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG7S4CB
+            // 
+            this.VocalizerWeskerG7S4CB.EditValue = "";
+            this.VocalizerWeskerG7S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerWeskerG7S4CB.Name = "VocalizerWeskerG7S4CB";
+            this.VocalizerWeskerG7S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG7S4CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG7S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG7S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG7S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG7S4CB.TabIndex = 6;
+            this.VocalizerWeskerG7S4CB.TabStop = false;
+            this.VocalizerWeskerG7S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG7S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG7S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG7S3CB
+            // 
+            this.VocalizerWeskerG7S3CB.EditValue = "";
+            this.VocalizerWeskerG7S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerWeskerG7S3CB.Name = "VocalizerWeskerG7S3CB";
+            this.VocalizerWeskerG7S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG7S3CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG7S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG7S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG7S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG7S3CB.TabIndex = 5;
+            this.VocalizerWeskerG7S3CB.TabStop = false;
+            this.VocalizerWeskerG7S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG7S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG7S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG7S2CB
+            // 
+            this.VocalizerWeskerG7S2CB.EditValue = "";
+            this.VocalizerWeskerG7S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerWeskerG7S2CB.Name = "VocalizerWeskerG7S2CB";
+            this.VocalizerWeskerG7S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG7S2CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG7S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG7S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG7S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG7S2CB.TabIndex = 4;
+            this.VocalizerWeskerG7S2CB.TabStop = false;
+            this.VocalizerWeskerG7S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG7S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG7S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG7S1CB
+            // 
+            this.VocalizerWeskerG7S1CB.EditValue = "";
+            this.VocalizerWeskerG7S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerWeskerG7S1CB.Name = "VocalizerWeskerG7S1CB";
+            this.VocalizerWeskerG7S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG7S1CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG7S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG7S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG7S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG7S1CB.TabIndex = 3;
+            this.VocalizerWeskerG7S1CB.TabStop = false;
+            this.VocalizerWeskerG7S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG7S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG7S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG6GP
+            // 
+            this.VocalizerWeskerG6GP.Controls.Add(this.VocalizerWeskerG6S5CB);
+            this.VocalizerWeskerG6GP.Controls.Add(this.VocalizerWeskerG6S4CB);
+            this.VocalizerWeskerG6GP.Controls.Add(this.VocalizerWeskerG6S3CB);
+            this.VocalizerWeskerG6GP.Controls.Add(this.VocalizerWeskerG6S2CB);
+            this.VocalizerWeskerG6GP.Controls.Add(this.VocalizerWeskerG6S1CB);
+            this.VocalizerWeskerG6GP.Location = new System.Drawing.Point(355, 169);
+            this.VocalizerWeskerG6GP.Name = "VocalizerWeskerG6GP";
+            this.VocalizerWeskerG6GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerWeskerG6GP.TabIndex = 32;
+            this.VocalizerWeskerG6GP.Text = "Group 6";
+            // 
+            // VocalizerWeskerG6S5CB
+            // 
+            this.VocalizerWeskerG6S5CB.EditValue = "";
+            this.VocalizerWeskerG6S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerWeskerG6S5CB.Name = "VocalizerWeskerG6S5CB";
+            this.VocalizerWeskerG6S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG6S5CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG6S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG6S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG6S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG6S5CB.TabIndex = 7;
+            this.VocalizerWeskerG6S5CB.TabStop = false;
+            this.VocalizerWeskerG6S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG6S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG6S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG6S4CB
+            // 
+            this.VocalizerWeskerG6S4CB.EditValue = "";
+            this.VocalizerWeskerG6S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerWeskerG6S4CB.Name = "VocalizerWeskerG6S4CB";
+            this.VocalizerWeskerG6S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG6S4CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG6S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG6S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG6S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG6S4CB.TabIndex = 6;
+            this.VocalizerWeskerG6S4CB.TabStop = false;
+            this.VocalizerWeskerG6S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG6S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG6S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG6S3CB
+            // 
+            this.VocalizerWeskerG6S3CB.EditValue = "";
+            this.VocalizerWeskerG6S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerWeskerG6S3CB.Name = "VocalizerWeskerG6S3CB";
+            this.VocalizerWeskerG6S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG6S3CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG6S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG6S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG6S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG6S3CB.TabIndex = 5;
+            this.VocalizerWeskerG6S3CB.TabStop = false;
+            this.VocalizerWeskerG6S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG6S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG6S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG6S2CB
+            // 
+            this.VocalizerWeskerG6S2CB.EditValue = "";
+            this.VocalizerWeskerG6S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerWeskerG6S2CB.Name = "VocalizerWeskerG6S2CB";
+            this.VocalizerWeskerG6S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG6S2CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG6S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG6S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG6S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG6S2CB.TabIndex = 4;
+            this.VocalizerWeskerG6S2CB.TabStop = false;
+            this.VocalizerWeskerG6S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG6S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG6S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG6S1CB
+            // 
+            this.VocalizerWeskerG6S1CB.EditValue = "";
+            this.VocalizerWeskerG6S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerWeskerG6S1CB.Name = "VocalizerWeskerG6S1CB";
+            this.VocalizerWeskerG6S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG6S1CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG6S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG6S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG6S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG6S1CB.TabIndex = 3;
+            this.VocalizerWeskerG6S1CB.TabStop = false;
+            this.VocalizerWeskerG6S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG6S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG6S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG5GP
+            // 
+            this.VocalizerWeskerG5GP.Controls.Add(this.VocalizerWeskerG5S5CB);
+            this.VocalizerWeskerG5GP.Controls.Add(this.VocalizerWeskerG5S4CB);
+            this.VocalizerWeskerG5GP.Controls.Add(this.VocalizerWeskerG5S3CB);
+            this.VocalizerWeskerG5GP.Controls.Add(this.VocalizerWeskerG5S2CB);
+            this.VocalizerWeskerG5GP.Controls.Add(this.VocalizerWeskerG5S1CB);
+            this.VocalizerWeskerG5GP.Location = new System.Drawing.Point(179, 169);
+            this.VocalizerWeskerG5GP.Name = "VocalizerWeskerG5GP";
+            this.VocalizerWeskerG5GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerWeskerG5GP.TabIndex = 31;
+            this.VocalizerWeskerG5GP.Text = "Group 5";
+            // 
+            // VocalizerWeskerG5S5CB
+            // 
+            this.VocalizerWeskerG5S5CB.EditValue = "";
+            this.VocalizerWeskerG5S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerWeskerG5S5CB.Name = "VocalizerWeskerG5S5CB";
+            this.VocalizerWeskerG5S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG5S5CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG5S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG5S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG5S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG5S5CB.TabIndex = 7;
+            this.VocalizerWeskerG5S5CB.TabStop = false;
+            this.VocalizerWeskerG5S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG5S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG5S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG5S4CB
+            // 
+            this.VocalizerWeskerG5S4CB.EditValue = "";
+            this.VocalizerWeskerG5S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerWeskerG5S4CB.Name = "VocalizerWeskerG5S4CB";
+            this.VocalizerWeskerG5S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG5S4CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG5S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG5S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG5S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG5S4CB.TabIndex = 6;
+            this.VocalizerWeskerG5S4CB.TabStop = false;
+            this.VocalizerWeskerG5S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG5S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG5S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG5S3CB
+            // 
+            this.VocalizerWeskerG5S3CB.EditValue = "";
+            this.VocalizerWeskerG5S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerWeskerG5S3CB.Name = "VocalizerWeskerG5S3CB";
+            this.VocalizerWeskerG5S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG5S3CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG5S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG5S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG5S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG5S3CB.TabIndex = 5;
+            this.VocalizerWeskerG5S3CB.TabStop = false;
+            this.VocalizerWeskerG5S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG5S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG5S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG5S2CB
+            // 
+            this.VocalizerWeskerG5S2CB.EditValue = "";
+            this.VocalizerWeskerG5S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerWeskerG5S2CB.Name = "VocalizerWeskerG5S2CB";
+            this.VocalizerWeskerG5S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG5S2CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG5S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG5S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG5S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG5S2CB.TabIndex = 4;
+            this.VocalizerWeskerG5S2CB.TabStop = false;
+            this.VocalizerWeskerG5S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG5S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG5S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG5S1CB
+            // 
+            this.VocalizerWeskerG5S1CB.EditValue = "";
+            this.VocalizerWeskerG5S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerWeskerG5S1CB.Name = "VocalizerWeskerG5S1CB";
+            this.VocalizerWeskerG5S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG5S1CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG5S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG5S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG5S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG5S1CB.TabIndex = 3;
+            this.VocalizerWeskerG5S1CB.TabStop = false;
+            this.VocalizerWeskerG5S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG5S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG5S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG4GP
+            // 
+            this.VocalizerWeskerG4GP.Controls.Add(this.VocalizerWeskerG4S5CB);
+            this.VocalizerWeskerG4GP.Controls.Add(this.VocalizerWeskerG4S4CB);
+            this.VocalizerWeskerG4GP.Controls.Add(this.VocalizerWeskerG4S3CB);
+            this.VocalizerWeskerG4GP.Controls.Add(this.VocalizerWeskerG4S2CB);
+            this.VocalizerWeskerG4GP.Controls.Add(this.VocalizerWeskerG4S1CB);
+            this.VocalizerWeskerG4GP.Location = new System.Drawing.Point(3, 169);
+            this.VocalizerWeskerG4GP.Name = "VocalizerWeskerG4GP";
+            this.VocalizerWeskerG4GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerWeskerG4GP.TabIndex = 30;
+            this.VocalizerWeskerG4GP.Text = "Group 4";
+            // 
+            // VocalizerWeskerG4S5CB
+            // 
+            this.VocalizerWeskerG4S5CB.EditValue = "";
+            this.VocalizerWeskerG4S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerWeskerG4S5CB.Name = "VocalizerWeskerG4S5CB";
+            this.VocalizerWeskerG4S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG4S5CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG4S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG4S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG4S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG4S5CB.TabIndex = 7;
+            this.VocalizerWeskerG4S5CB.TabStop = false;
+            this.VocalizerWeskerG4S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG4S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG4S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG4S4CB
+            // 
+            this.VocalizerWeskerG4S4CB.EditValue = "";
+            this.VocalizerWeskerG4S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerWeskerG4S4CB.Name = "VocalizerWeskerG4S4CB";
+            this.VocalizerWeskerG4S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG4S4CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG4S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG4S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG4S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG4S4CB.TabIndex = 6;
+            this.VocalizerWeskerG4S4CB.TabStop = false;
+            this.VocalizerWeskerG4S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG4S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG4S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG4S3CB
+            // 
+            this.VocalizerWeskerG4S3CB.EditValue = "";
+            this.VocalizerWeskerG4S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerWeskerG4S3CB.Name = "VocalizerWeskerG4S3CB";
+            this.VocalizerWeskerG4S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG4S3CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG4S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG4S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG4S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG4S3CB.TabIndex = 5;
+            this.VocalizerWeskerG4S3CB.TabStop = false;
+            this.VocalizerWeskerG4S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG4S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG4S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG4S2CB
+            // 
+            this.VocalizerWeskerG4S2CB.EditValue = "";
+            this.VocalizerWeskerG4S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerWeskerG4S2CB.Name = "VocalizerWeskerG4S2CB";
+            this.VocalizerWeskerG4S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG4S2CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG4S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG4S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG4S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG4S2CB.TabIndex = 4;
+            this.VocalizerWeskerG4S2CB.TabStop = false;
+            this.VocalizerWeskerG4S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG4S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG4S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG4S1CB
+            // 
+            this.VocalizerWeskerG4S1CB.EditValue = "";
+            this.VocalizerWeskerG4S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerWeskerG4S1CB.Name = "VocalizerWeskerG4S1CB";
+            this.VocalizerWeskerG4S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG4S1CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG4S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG4S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG4S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG4S1CB.TabIndex = 3;
+            this.VocalizerWeskerG4S1CB.TabStop = false;
+            this.VocalizerWeskerG4S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG4S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG4S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG3GP
+            // 
+            this.VocalizerWeskerG3GP.Controls.Add(this.VocalizerWeskerG3S5CB);
+            this.VocalizerWeskerG3GP.Controls.Add(this.VocalizerWeskerG3S4CB);
+            this.VocalizerWeskerG3GP.Controls.Add(this.VocalizerWeskerG3S3CB);
+            this.VocalizerWeskerG3GP.Controls.Add(this.VocalizerWeskerG3S2CB);
+            this.VocalizerWeskerG3GP.Controls.Add(this.VocalizerWeskerG3S1CB);
+            this.VocalizerWeskerG3GP.Location = new System.Drawing.Point(355, 3);
+            this.VocalizerWeskerG3GP.Name = "VocalizerWeskerG3GP";
+            this.VocalizerWeskerG3GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerWeskerG3GP.TabIndex = 29;
+            this.VocalizerWeskerG3GP.Text = "Group 3";
+            // 
+            // VocalizerWeskerG3S5CB
+            // 
+            this.VocalizerWeskerG3S5CB.EditValue = "";
+            this.VocalizerWeskerG3S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerWeskerG3S5CB.Name = "VocalizerWeskerG3S5CB";
+            this.VocalizerWeskerG3S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG3S5CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG3S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG3S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG3S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG3S5CB.TabIndex = 7;
+            this.VocalizerWeskerG3S5CB.TabStop = false;
+            this.VocalizerWeskerG3S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG3S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG3S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG3S4CB
+            // 
+            this.VocalizerWeskerG3S4CB.EditValue = "";
+            this.VocalizerWeskerG3S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerWeskerG3S4CB.Name = "VocalizerWeskerG3S4CB";
+            this.VocalizerWeskerG3S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG3S4CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG3S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG3S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG3S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG3S4CB.TabIndex = 6;
+            this.VocalizerWeskerG3S4CB.TabStop = false;
+            this.VocalizerWeskerG3S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG3S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG3S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG3S3CB
+            // 
+            this.VocalizerWeskerG3S3CB.EditValue = "";
+            this.VocalizerWeskerG3S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerWeskerG3S3CB.Name = "VocalizerWeskerG3S3CB";
+            this.VocalizerWeskerG3S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG3S3CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG3S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG3S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG3S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG3S3CB.TabIndex = 5;
+            this.VocalizerWeskerG3S3CB.TabStop = false;
+            this.VocalizerWeskerG3S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG3S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG3S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG3S2CB
+            // 
+            this.VocalizerWeskerG3S2CB.EditValue = "";
+            this.VocalizerWeskerG3S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerWeskerG3S2CB.Name = "VocalizerWeskerG3S2CB";
+            this.VocalizerWeskerG3S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG3S2CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG3S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG3S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG3S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG3S2CB.TabIndex = 4;
+            this.VocalizerWeskerG3S2CB.TabStop = false;
+            this.VocalizerWeskerG3S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG3S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG3S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG3S1CB
+            // 
+            this.VocalizerWeskerG3S1CB.EditValue = "";
+            this.VocalizerWeskerG3S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerWeskerG3S1CB.Name = "VocalizerWeskerG3S1CB";
+            this.VocalizerWeskerG3S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG3S1CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG3S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG3S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG3S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG3S1CB.TabIndex = 3;
+            this.VocalizerWeskerG3S1CB.TabStop = false;
+            this.VocalizerWeskerG3S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG3S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG3S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG2GP
+            // 
+            this.VocalizerWeskerG2GP.Controls.Add(this.VocalizerWeskerG2S5CB);
+            this.VocalizerWeskerG2GP.Controls.Add(this.VocalizerWeskerG2S4CB);
+            this.VocalizerWeskerG2GP.Controls.Add(this.VocalizerWeskerG2S3CB);
+            this.VocalizerWeskerG2GP.Controls.Add(this.VocalizerWeskerG2S2CB);
+            this.VocalizerWeskerG2GP.Controls.Add(this.VocalizerWeskerG2S1CB);
+            this.VocalizerWeskerG2GP.Location = new System.Drawing.Point(179, 3);
+            this.VocalizerWeskerG2GP.Name = "VocalizerWeskerG2GP";
+            this.VocalizerWeskerG2GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerWeskerG2GP.TabIndex = 28;
+            this.VocalizerWeskerG2GP.Text = "Group 2";
+            // 
+            // VocalizerWeskerG2S5CB
+            // 
+            this.VocalizerWeskerG2S5CB.EditValue = "";
+            this.VocalizerWeskerG2S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerWeskerG2S5CB.Name = "VocalizerWeskerG2S5CB";
+            this.VocalizerWeskerG2S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG2S5CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG2S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG2S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG2S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG2S5CB.TabIndex = 7;
+            this.VocalizerWeskerG2S5CB.TabStop = false;
+            this.VocalizerWeskerG2S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG2S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG2S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG2S4CB
+            // 
+            this.VocalizerWeskerG2S4CB.EditValue = "";
+            this.VocalizerWeskerG2S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerWeskerG2S4CB.Name = "VocalizerWeskerG2S4CB";
+            this.VocalizerWeskerG2S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG2S4CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG2S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG2S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG2S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG2S4CB.TabIndex = 6;
+            this.VocalizerWeskerG2S4CB.TabStop = false;
+            this.VocalizerWeskerG2S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG2S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG2S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG2S3CB
+            // 
+            this.VocalizerWeskerG2S3CB.EditValue = "";
+            this.VocalizerWeskerG2S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerWeskerG2S3CB.Name = "VocalizerWeskerG2S3CB";
+            this.VocalizerWeskerG2S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG2S3CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG2S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG2S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG2S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG2S3CB.TabIndex = 5;
+            this.VocalizerWeskerG2S3CB.TabStop = false;
+            this.VocalizerWeskerG2S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG2S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG2S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG2S2CB
+            // 
+            this.VocalizerWeskerG2S2CB.EditValue = "";
+            this.VocalizerWeskerG2S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerWeskerG2S2CB.Name = "VocalizerWeskerG2S2CB";
+            this.VocalizerWeskerG2S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG2S2CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG2S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG2S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG2S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG2S2CB.TabIndex = 4;
+            this.VocalizerWeskerG2S2CB.TabStop = false;
+            this.VocalizerWeskerG2S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG2S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG2S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG2S1CB
+            // 
+            this.VocalizerWeskerG2S1CB.EditValue = "";
+            this.VocalizerWeskerG2S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerWeskerG2S1CB.Name = "VocalizerWeskerG2S1CB";
+            this.VocalizerWeskerG2S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG2S1CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG2S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG2S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG2S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG2S1CB.TabIndex = 3;
+            this.VocalizerWeskerG2S1CB.TabStop = false;
+            this.VocalizerWeskerG2S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG2S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG2S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG1GP
+            // 
+            this.VocalizerWeskerG1GP.Controls.Add(this.VocalizerWeskerG1S5CB);
+            this.VocalizerWeskerG1GP.Controls.Add(this.VocalizerWeskerG1S4CB);
+            this.VocalizerWeskerG1GP.Controls.Add(this.VocalizerWeskerG1S3CB);
+            this.VocalizerWeskerG1GP.Controls.Add(this.VocalizerWeskerG1S2CB);
+            this.VocalizerWeskerG1GP.Controls.Add(this.VocalizerWeskerG1S1CB);
+            this.VocalizerWeskerG1GP.Location = new System.Drawing.Point(3, 3);
+            this.VocalizerWeskerG1GP.Name = "VocalizerWeskerG1GP";
+            this.VocalizerWeskerG1GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerWeskerG1GP.TabIndex = 27;
+            this.VocalizerWeskerG1GP.Text = "Group 1";
+            // 
+            // VocalizerWeskerG1S5CB
+            // 
+            this.VocalizerWeskerG1S5CB.EditValue = "";
+            this.VocalizerWeskerG1S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerWeskerG1S5CB.Name = "VocalizerWeskerG1S5CB";
+            this.VocalizerWeskerG1S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG1S5CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG1S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG1S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG1S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG1S5CB.TabIndex = 7;
+            this.VocalizerWeskerG1S5CB.TabStop = false;
+            this.VocalizerWeskerG1S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG1S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG1S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG1S4CB
+            // 
+            this.VocalizerWeskerG1S4CB.EditValue = "";
+            this.VocalizerWeskerG1S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerWeskerG1S4CB.Name = "VocalizerWeskerG1S4CB";
+            this.VocalizerWeskerG1S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG1S4CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG1S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG1S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG1S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG1S4CB.TabIndex = 6;
+            this.VocalizerWeskerG1S4CB.TabStop = false;
+            this.VocalizerWeskerG1S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG1S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG1S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG1S3CB
+            // 
+            this.VocalizerWeskerG1S3CB.EditValue = "";
+            this.VocalizerWeskerG1S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerWeskerG1S3CB.Name = "VocalizerWeskerG1S3CB";
+            this.VocalizerWeskerG1S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG1S3CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG1S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG1S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG1S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG1S3CB.TabIndex = 5;
+            this.VocalizerWeskerG1S3CB.TabStop = false;
+            this.VocalizerWeskerG1S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG1S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG1S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG1S2CB
+            // 
+            this.VocalizerWeskerG1S2CB.EditValue = "";
+            this.VocalizerWeskerG1S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerWeskerG1S2CB.Name = "VocalizerWeskerG1S2CB";
+            this.VocalizerWeskerG1S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG1S2CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG1S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG1S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG1S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG1S2CB.TabIndex = 4;
+            this.VocalizerWeskerG1S2CB.TabStop = false;
+            this.VocalizerWeskerG1S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG1S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG1S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerWeskerG1S1CB
+            // 
+            this.VocalizerWeskerG1S1CB.EditValue = "";
+            this.VocalizerWeskerG1S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerWeskerG1S1CB.Name = "VocalizerWeskerG1S1CB";
+            this.VocalizerWeskerG1S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerWeskerG1S1CB.Properties.AllowFocused = false;
+            this.VocalizerWeskerG1S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerWeskerG1S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerWeskerG1S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerWeskerG1S1CB.TabIndex = 3;
+            this.VocalizerWeskerG1S1CB.TabStop = false;
+            this.VocalizerWeskerG1S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerWeskerG1S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerWeskerG1S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
             // VocalizerJoshTab
             // 
             this.VocalizerJoshTab.Controls.Add(this.VocalizerJoshG9GP);
@@ -6495,6 +7439,933 @@ namespace GameX
             this.VocalizerJoshTab.Name = "VocalizerJoshTab";
             this.VocalizerJoshTab.Size = new System.Drawing.Size(528, 498);
             this.VocalizerJoshTab.Text = "xtraTabPage4";
+            // 
+            // VocalizerJoshG9GP
+            // 
+            this.VocalizerJoshG9GP.Controls.Add(this.VocalizerJoshG9S5CB);
+            this.VocalizerJoshG9GP.Controls.Add(this.VocalizerJoshG9S4CB);
+            this.VocalizerJoshG9GP.Controls.Add(this.VocalizerJoshG9S3CB);
+            this.VocalizerJoshG9GP.Controls.Add(this.VocalizerJoshG9S2CB);
+            this.VocalizerJoshG9GP.Controls.Add(this.VocalizerJoshG9S1CB);
+            this.VocalizerJoshG9GP.Location = new System.Drawing.Point(355, 335);
+            this.VocalizerJoshG9GP.Name = "VocalizerJoshG9GP";
+            this.VocalizerJoshG9GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerJoshG9GP.TabIndex = 44;
+            this.VocalizerJoshG9GP.Text = "Group 9";
+            // 
+            // VocalizerJoshG9S5CB
+            // 
+            this.VocalizerJoshG9S5CB.EditValue = "";
+            this.VocalizerJoshG9S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerJoshG9S5CB.Name = "VocalizerJoshG9S5CB";
+            this.VocalizerJoshG9S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG9S5CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG9S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG9S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG9S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG9S5CB.TabIndex = 7;
+            this.VocalizerJoshG9S5CB.TabStop = false;
+            this.VocalizerJoshG9S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG9S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG9S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG9S4CB
+            // 
+            this.VocalizerJoshG9S4CB.EditValue = "";
+            this.VocalizerJoshG9S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerJoshG9S4CB.Name = "VocalizerJoshG9S4CB";
+            this.VocalizerJoshG9S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG9S4CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG9S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG9S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG9S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG9S4CB.TabIndex = 6;
+            this.VocalizerJoshG9S4CB.TabStop = false;
+            this.VocalizerJoshG9S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG9S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG9S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG9S3CB
+            // 
+            this.VocalizerJoshG9S3CB.EditValue = "";
+            this.VocalizerJoshG9S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerJoshG9S3CB.Name = "VocalizerJoshG9S3CB";
+            this.VocalizerJoshG9S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG9S3CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG9S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG9S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG9S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG9S3CB.TabIndex = 5;
+            this.VocalizerJoshG9S3CB.TabStop = false;
+            this.VocalizerJoshG9S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG9S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG9S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG9S2CB
+            // 
+            this.VocalizerJoshG9S2CB.EditValue = "";
+            this.VocalizerJoshG9S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerJoshG9S2CB.Name = "VocalizerJoshG9S2CB";
+            this.VocalizerJoshG9S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG9S2CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG9S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG9S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG9S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG9S2CB.TabIndex = 4;
+            this.VocalizerJoshG9S2CB.TabStop = false;
+            this.VocalizerJoshG9S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG9S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG9S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG9S1CB
+            // 
+            this.VocalizerJoshG9S1CB.EditValue = "";
+            this.VocalizerJoshG9S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerJoshG9S1CB.Name = "VocalizerJoshG9S1CB";
+            this.VocalizerJoshG9S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG9S1CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG9S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG9S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG9S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG9S1CB.TabIndex = 3;
+            this.VocalizerJoshG9S1CB.TabStop = false;
+            this.VocalizerJoshG9S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG9S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG9S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG8GP
+            // 
+            this.VocalizerJoshG8GP.Controls.Add(this.VocalizerJoshG8S5CB);
+            this.VocalizerJoshG8GP.Controls.Add(this.VocalizerJoshG8S4CB);
+            this.VocalizerJoshG8GP.Controls.Add(this.VocalizerJoshG8S3CB);
+            this.VocalizerJoshG8GP.Controls.Add(this.VocalizerJoshG8S2CB);
+            this.VocalizerJoshG8GP.Controls.Add(this.VocalizerJoshG8S1CB);
+            this.VocalizerJoshG8GP.Location = new System.Drawing.Point(179, 335);
+            this.VocalizerJoshG8GP.Name = "VocalizerJoshG8GP";
+            this.VocalizerJoshG8GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerJoshG8GP.TabIndex = 43;
+            this.VocalizerJoshG8GP.Text = "Group 8";
+            // 
+            // VocalizerJoshG8S5CB
+            // 
+            this.VocalizerJoshG8S5CB.EditValue = "";
+            this.VocalizerJoshG8S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerJoshG8S5CB.Name = "VocalizerJoshG8S5CB";
+            this.VocalizerJoshG8S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG8S5CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG8S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG8S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG8S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG8S5CB.TabIndex = 7;
+            this.VocalizerJoshG8S5CB.TabStop = false;
+            this.VocalizerJoshG8S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG8S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG8S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG8S4CB
+            // 
+            this.VocalizerJoshG8S4CB.EditValue = "";
+            this.VocalizerJoshG8S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerJoshG8S4CB.Name = "VocalizerJoshG8S4CB";
+            this.VocalizerJoshG8S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG8S4CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG8S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG8S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG8S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG8S4CB.TabIndex = 6;
+            this.VocalizerJoshG8S4CB.TabStop = false;
+            this.VocalizerJoshG8S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG8S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG8S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG8S3CB
+            // 
+            this.VocalizerJoshG8S3CB.EditValue = "";
+            this.VocalizerJoshG8S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerJoshG8S3CB.Name = "VocalizerJoshG8S3CB";
+            this.VocalizerJoshG8S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG8S3CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG8S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG8S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG8S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG8S3CB.TabIndex = 5;
+            this.VocalizerJoshG8S3CB.TabStop = false;
+            this.VocalizerJoshG8S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG8S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG8S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG8S2CB
+            // 
+            this.VocalizerJoshG8S2CB.EditValue = "";
+            this.VocalizerJoshG8S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerJoshG8S2CB.Name = "VocalizerJoshG8S2CB";
+            this.VocalizerJoshG8S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG8S2CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG8S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG8S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG8S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG8S2CB.TabIndex = 4;
+            this.VocalizerJoshG8S2CB.TabStop = false;
+            this.VocalizerJoshG8S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG8S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG8S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG8S1CB
+            // 
+            this.VocalizerJoshG8S1CB.EditValue = "";
+            this.VocalizerJoshG8S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerJoshG8S1CB.Name = "VocalizerJoshG8S1CB";
+            this.VocalizerJoshG8S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG8S1CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG8S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG8S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG8S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG8S1CB.TabIndex = 3;
+            this.VocalizerJoshG8S1CB.TabStop = false;
+            this.VocalizerJoshG8S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG8S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG8S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG7GP
+            // 
+            this.VocalizerJoshG7GP.Controls.Add(this.VocalizerJoshG7S5CB);
+            this.VocalizerJoshG7GP.Controls.Add(this.VocalizerJoshG7S4CB);
+            this.VocalizerJoshG7GP.Controls.Add(this.VocalizerJoshG7S3CB);
+            this.VocalizerJoshG7GP.Controls.Add(this.VocalizerJoshG7S2CB);
+            this.VocalizerJoshG7GP.Controls.Add(this.VocalizerJoshG7S1CB);
+            this.VocalizerJoshG7GP.Location = new System.Drawing.Point(3, 335);
+            this.VocalizerJoshG7GP.Name = "VocalizerJoshG7GP";
+            this.VocalizerJoshG7GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerJoshG7GP.TabIndex = 42;
+            this.VocalizerJoshG7GP.Text = "Group 7";
+            // 
+            // VocalizerJoshG7S5CB
+            // 
+            this.VocalizerJoshG7S5CB.EditValue = "";
+            this.VocalizerJoshG7S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerJoshG7S5CB.Name = "VocalizerJoshG7S5CB";
+            this.VocalizerJoshG7S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG7S5CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG7S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG7S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG7S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG7S5CB.TabIndex = 7;
+            this.VocalizerJoshG7S5CB.TabStop = false;
+            this.VocalizerJoshG7S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG7S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG7S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG7S4CB
+            // 
+            this.VocalizerJoshG7S4CB.EditValue = "";
+            this.VocalizerJoshG7S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerJoshG7S4CB.Name = "VocalizerJoshG7S4CB";
+            this.VocalizerJoshG7S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG7S4CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG7S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG7S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG7S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG7S4CB.TabIndex = 6;
+            this.VocalizerJoshG7S4CB.TabStop = false;
+            this.VocalizerJoshG7S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG7S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG7S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG7S3CB
+            // 
+            this.VocalizerJoshG7S3CB.EditValue = "";
+            this.VocalizerJoshG7S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerJoshG7S3CB.Name = "VocalizerJoshG7S3CB";
+            this.VocalizerJoshG7S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG7S3CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG7S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG7S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG7S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG7S3CB.TabIndex = 5;
+            this.VocalizerJoshG7S3CB.TabStop = false;
+            this.VocalizerJoshG7S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG7S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG7S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG7S2CB
+            // 
+            this.VocalizerJoshG7S2CB.EditValue = "";
+            this.VocalizerJoshG7S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerJoshG7S2CB.Name = "VocalizerJoshG7S2CB";
+            this.VocalizerJoshG7S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG7S2CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG7S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG7S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG7S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG7S2CB.TabIndex = 4;
+            this.VocalizerJoshG7S2CB.TabStop = false;
+            this.VocalizerJoshG7S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG7S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG7S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG7S1CB
+            // 
+            this.VocalizerJoshG7S1CB.EditValue = "";
+            this.VocalizerJoshG7S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerJoshG7S1CB.Name = "VocalizerJoshG7S1CB";
+            this.VocalizerJoshG7S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG7S1CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG7S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG7S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG7S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG7S1CB.TabIndex = 3;
+            this.VocalizerJoshG7S1CB.TabStop = false;
+            this.VocalizerJoshG7S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG7S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG7S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG6GP
+            // 
+            this.VocalizerJoshG6GP.Controls.Add(this.VocalizerJoshG6S5CB);
+            this.VocalizerJoshG6GP.Controls.Add(this.VocalizerJoshG6S4CB);
+            this.VocalizerJoshG6GP.Controls.Add(this.VocalizerJoshG6S3CB);
+            this.VocalizerJoshG6GP.Controls.Add(this.VocalizerJoshG6S2CB);
+            this.VocalizerJoshG6GP.Controls.Add(this.VocalizerJoshG6S1CB);
+            this.VocalizerJoshG6GP.Location = new System.Drawing.Point(355, 169);
+            this.VocalizerJoshG6GP.Name = "VocalizerJoshG6GP";
+            this.VocalizerJoshG6GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerJoshG6GP.TabIndex = 41;
+            this.VocalizerJoshG6GP.Text = "Group 6";
+            // 
+            // VocalizerJoshG6S5CB
+            // 
+            this.VocalizerJoshG6S5CB.EditValue = "";
+            this.VocalizerJoshG6S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerJoshG6S5CB.Name = "VocalizerJoshG6S5CB";
+            this.VocalizerJoshG6S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG6S5CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG6S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG6S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG6S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG6S5CB.TabIndex = 7;
+            this.VocalizerJoshG6S5CB.TabStop = false;
+            this.VocalizerJoshG6S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG6S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG6S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG6S4CB
+            // 
+            this.VocalizerJoshG6S4CB.EditValue = "";
+            this.VocalizerJoshG6S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerJoshG6S4CB.Name = "VocalizerJoshG6S4CB";
+            this.VocalizerJoshG6S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG6S4CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG6S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG6S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG6S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG6S4CB.TabIndex = 6;
+            this.VocalizerJoshG6S4CB.TabStop = false;
+            this.VocalizerJoshG6S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG6S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG6S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG6S3CB
+            // 
+            this.VocalizerJoshG6S3CB.EditValue = "";
+            this.VocalizerJoshG6S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerJoshG6S3CB.Name = "VocalizerJoshG6S3CB";
+            this.VocalizerJoshG6S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG6S3CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG6S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG6S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG6S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG6S3CB.TabIndex = 5;
+            this.VocalizerJoshG6S3CB.TabStop = false;
+            this.VocalizerJoshG6S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG6S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG6S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG6S2CB
+            // 
+            this.VocalizerJoshG6S2CB.EditValue = "";
+            this.VocalizerJoshG6S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerJoshG6S2CB.Name = "VocalizerJoshG6S2CB";
+            this.VocalizerJoshG6S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG6S2CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG6S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG6S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG6S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG6S2CB.TabIndex = 4;
+            this.VocalizerJoshG6S2CB.TabStop = false;
+            this.VocalizerJoshG6S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG6S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG6S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG6S1CB
+            // 
+            this.VocalizerJoshG6S1CB.EditValue = "";
+            this.VocalizerJoshG6S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerJoshG6S1CB.Name = "VocalizerJoshG6S1CB";
+            this.VocalizerJoshG6S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG6S1CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG6S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG6S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG6S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG6S1CB.TabIndex = 3;
+            this.VocalizerJoshG6S1CB.TabStop = false;
+            this.VocalizerJoshG6S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG6S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG6S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG5GP
+            // 
+            this.VocalizerJoshG5GP.Controls.Add(this.VocalizerJoshG5S5CB);
+            this.VocalizerJoshG5GP.Controls.Add(this.VocalizerJoshG5S4CB);
+            this.VocalizerJoshG5GP.Controls.Add(this.VocalizerJoshG5S3CB);
+            this.VocalizerJoshG5GP.Controls.Add(this.VocalizerJoshG5S2CB);
+            this.VocalizerJoshG5GP.Controls.Add(this.VocalizerJoshG5S1CB);
+            this.VocalizerJoshG5GP.Location = new System.Drawing.Point(179, 169);
+            this.VocalizerJoshG5GP.Name = "VocalizerJoshG5GP";
+            this.VocalizerJoshG5GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerJoshG5GP.TabIndex = 40;
+            this.VocalizerJoshG5GP.Text = "Group 5";
+            // 
+            // VocalizerJoshG5S5CB
+            // 
+            this.VocalizerJoshG5S5CB.EditValue = "";
+            this.VocalizerJoshG5S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerJoshG5S5CB.Name = "VocalizerJoshG5S5CB";
+            this.VocalizerJoshG5S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG5S5CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG5S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG5S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG5S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG5S5CB.TabIndex = 7;
+            this.VocalizerJoshG5S5CB.TabStop = false;
+            this.VocalizerJoshG5S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG5S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG5S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG5S4CB
+            // 
+            this.VocalizerJoshG5S4CB.EditValue = "";
+            this.VocalizerJoshG5S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerJoshG5S4CB.Name = "VocalizerJoshG5S4CB";
+            this.VocalizerJoshG5S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG5S4CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG5S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG5S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG5S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG5S4CB.TabIndex = 6;
+            this.VocalizerJoshG5S4CB.TabStop = false;
+            this.VocalizerJoshG5S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG5S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG5S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG5S3CB
+            // 
+            this.VocalizerJoshG5S3CB.EditValue = "";
+            this.VocalizerJoshG5S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerJoshG5S3CB.Name = "VocalizerJoshG5S3CB";
+            this.VocalizerJoshG5S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG5S3CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG5S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG5S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG5S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG5S3CB.TabIndex = 5;
+            this.VocalizerJoshG5S3CB.TabStop = false;
+            this.VocalizerJoshG5S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG5S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG5S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG5S2CB
+            // 
+            this.VocalizerJoshG5S2CB.EditValue = "";
+            this.VocalizerJoshG5S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerJoshG5S2CB.Name = "VocalizerJoshG5S2CB";
+            this.VocalizerJoshG5S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG5S2CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG5S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG5S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG5S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG5S2CB.TabIndex = 4;
+            this.VocalizerJoshG5S2CB.TabStop = false;
+            this.VocalizerJoshG5S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG5S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG5S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG5S1CB
+            // 
+            this.VocalizerJoshG5S1CB.EditValue = "";
+            this.VocalizerJoshG5S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerJoshG5S1CB.Name = "VocalizerJoshG5S1CB";
+            this.VocalizerJoshG5S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG5S1CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG5S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG5S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG5S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG5S1CB.TabIndex = 3;
+            this.VocalizerJoshG5S1CB.TabStop = false;
+            this.VocalizerJoshG5S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG5S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG5S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG4GP
+            // 
+            this.VocalizerJoshG4GP.Controls.Add(this.VocalizerJoshG4S5CB);
+            this.VocalizerJoshG4GP.Controls.Add(this.VocalizerJoshG4S4CB);
+            this.VocalizerJoshG4GP.Controls.Add(this.VocalizerJoshG4S3CB);
+            this.VocalizerJoshG4GP.Controls.Add(this.VocalizerJoshG4S2CB);
+            this.VocalizerJoshG4GP.Controls.Add(this.VocalizerJoshG4S1CB);
+            this.VocalizerJoshG4GP.Location = new System.Drawing.Point(3, 169);
+            this.VocalizerJoshG4GP.Name = "VocalizerJoshG4GP";
+            this.VocalizerJoshG4GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerJoshG4GP.TabIndex = 39;
+            this.VocalizerJoshG4GP.Text = "Group 4";
+            // 
+            // VocalizerJoshG4S5CB
+            // 
+            this.VocalizerJoshG4S5CB.EditValue = "";
+            this.VocalizerJoshG4S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerJoshG4S5CB.Name = "VocalizerJoshG4S5CB";
+            this.VocalizerJoshG4S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG4S5CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG4S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG4S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG4S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG4S5CB.TabIndex = 7;
+            this.VocalizerJoshG4S5CB.TabStop = false;
+            this.VocalizerJoshG4S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG4S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG4S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG4S4CB
+            // 
+            this.VocalizerJoshG4S4CB.EditValue = "";
+            this.VocalizerJoshG4S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerJoshG4S4CB.Name = "VocalizerJoshG4S4CB";
+            this.VocalizerJoshG4S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG4S4CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG4S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG4S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG4S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG4S4CB.TabIndex = 6;
+            this.VocalizerJoshG4S4CB.TabStop = false;
+            this.VocalizerJoshG4S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG4S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG4S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG4S3CB
+            // 
+            this.VocalizerJoshG4S3CB.EditValue = "";
+            this.VocalizerJoshG4S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerJoshG4S3CB.Name = "VocalizerJoshG4S3CB";
+            this.VocalizerJoshG4S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG4S3CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG4S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG4S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG4S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG4S3CB.TabIndex = 5;
+            this.VocalizerJoshG4S3CB.TabStop = false;
+            this.VocalizerJoshG4S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG4S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG4S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG4S2CB
+            // 
+            this.VocalizerJoshG4S2CB.EditValue = "";
+            this.VocalizerJoshG4S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerJoshG4S2CB.Name = "VocalizerJoshG4S2CB";
+            this.VocalizerJoshG4S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG4S2CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG4S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG4S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG4S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG4S2CB.TabIndex = 4;
+            this.VocalizerJoshG4S2CB.TabStop = false;
+            this.VocalizerJoshG4S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG4S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG4S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG4S1CB
+            // 
+            this.VocalizerJoshG4S1CB.EditValue = "";
+            this.VocalizerJoshG4S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerJoshG4S1CB.Name = "VocalizerJoshG4S1CB";
+            this.VocalizerJoshG4S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG4S1CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG4S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG4S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG4S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG4S1CB.TabIndex = 3;
+            this.VocalizerJoshG4S1CB.TabStop = false;
+            this.VocalizerJoshG4S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG4S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG4S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG3GP
+            // 
+            this.VocalizerJoshG3GP.Controls.Add(this.VocalizerJoshG3S5CB);
+            this.VocalizerJoshG3GP.Controls.Add(this.VocalizerJoshG3S4CB);
+            this.VocalizerJoshG3GP.Controls.Add(this.VocalizerJoshG3S3CB);
+            this.VocalizerJoshG3GP.Controls.Add(this.VocalizerJoshG3S2CB);
+            this.VocalizerJoshG3GP.Controls.Add(this.VocalizerJoshG3S1CB);
+            this.VocalizerJoshG3GP.Location = new System.Drawing.Point(355, 3);
+            this.VocalizerJoshG3GP.Name = "VocalizerJoshG3GP";
+            this.VocalizerJoshG3GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerJoshG3GP.TabIndex = 38;
+            this.VocalizerJoshG3GP.Text = "Group 3";
+            // 
+            // VocalizerJoshG3S5CB
+            // 
+            this.VocalizerJoshG3S5CB.EditValue = "";
+            this.VocalizerJoshG3S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerJoshG3S5CB.Name = "VocalizerJoshG3S5CB";
+            this.VocalizerJoshG3S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG3S5CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG3S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG3S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG3S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG3S5CB.TabIndex = 7;
+            this.VocalizerJoshG3S5CB.TabStop = false;
+            this.VocalizerJoshG3S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG3S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG3S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG3S4CB
+            // 
+            this.VocalizerJoshG3S4CB.EditValue = "";
+            this.VocalizerJoshG3S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerJoshG3S4CB.Name = "VocalizerJoshG3S4CB";
+            this.VocalizerJoshG3S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG3S4CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG3S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG3S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG3S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG3S4CB.TabIndex = 6;
+            this.VocalizerJoshG3S4CB.TabStop = false;
+            this.VocalizerJoshG3S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG3S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG3S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG3S3CB
+            // 
+            this.VocalizerJoshG3S3CB.EditValue = "";
+            this.VocalizerJoshG3S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerJoshG3S3CB.Name = "VocalizerJoshG3S3CB";
+            this.VocalizerJoshG3S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG3S3CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG3S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG3S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG3S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG3S3CB.TabIndex = 5;
+            this.VocalizerJoshG3S3CB.TabStop = false;
+            this.VocalizerJoshG3S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG3S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG3S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG3S2CB
+            // 
+            this.VocalizerJoshG3S2CB.EditValue = "";
+            this.VocalizerJoshG3S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerJoshG3S2CB.Name = "VocalizerJoshG3S2CB";
+            this.VocalizerJoshG3S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG3S2CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG3S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG3S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG3S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG3S2CB.TabIndex = 4;
+            this.VocalizerJoshG3S2CB.TabStop = false;
+            this.VocalizerJoshG3S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG3S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG3S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG3S1CB
+            // 
+            this.VocalizerJoshG3S1CB.EditValue = "";
+            this.VocalizerJoshG3S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerJoshG3S1CB.Name = "VocalizerJoshG3S1CB";
+            this.VocalizerJoshG3S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG3S1CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG3S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG3S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG3S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG3S1CB.TabIndex = 3;
+            this.VocalizerJoshG3S1CB.TabStop = false;
+            this.VocalizerJoshG3S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG3S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG3S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG2GP
+            // 
+            this.VocalizerJoshG2GP.Controls.Add(this.VocalizerJoshG2S5CB);
+            this.VocalizerJoshG2GP.Controls.Add(this.VocalizerJoshG2S4CB);
+            this.VocalizerJoshG2GP.Controls.Add(this.VocalizerJoshG2S3CB);
+            this.VocalizerJoshG2GP.Controls.Add(this.VocalizerJoshG2S2CB);
+            this.VocalizerJoshG2GP.Controls.Add(this.VocalizerJoshG2S1CB);
+            this.VocalizerJoshG2GP.Location = new System.Drawing.Point(179, 3);
+            this.VocalizerJoshG2GP.Name = "VocalizerJoshG2GP";
+            this.VocalizerJoshG2GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerJoshG2GP.TabIndex = 37;
+            this.VocalizerJoshG2GP.Text = "Group 2";
+            // 
+            // VocalizerJoshG2S5CB
+            // 
+            this.VocalizerJoshG2S5CB.EditValue = "";
+            this.VocalizerJoshG2S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerJoshG2S5CB.Name = "VocalizerJoshG2S5CB";
+            this.VocalizerJoshG2S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG2S5CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG2S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG2S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG2S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG2S5CB.TabIndex = 7;
+            this.VocalizerJoshG2S5CB.TabStop = false;
+            this.VocalizerJoshG2S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG2S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG2S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG2S4CB
+            // 
+            this.VocalizerJoshG2S4CB.EditValue = "";
+            this.VocalizerJoshG2S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerJoshG2S4CB.Name = "VocalizerJoshG2S4CB";
+            this.VocalizerJoshG2S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG2S4CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG2S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG2S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG2S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG2S4CB.TabIndex = 6;
+            this.VocalizerJoshG2S4CB.TabStop = false;
+            this.VocalizerJoshG2S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG2S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG2S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG2S3CB
+            // 
+            this.VocalizerJoshG2S3CB.EditValue = "";
+            this.VocalizerJoshG2S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerJoshG2S3CB.Name = "VocalizerJoshG2S3CB";
+            this.VocalizerJoshG2S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG2S3CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG2S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG2S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG2S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG2S3CB.TabIndex = 5;
+            this.VocalizerJoshG2S3CB.TabStop = false;
+            this.VocalizerJoshG2S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG2S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG2S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG2S2CB
+            // 
+            this.VocalizerJoshG2S2CB.EditValue = "";
+            this.VocalizerJoshG2S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerJoshG2S2CB.Name = "VocalizerJoshG2S2CB";
+            this.VocalizerJoshG2S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG2S2CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG2S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG2S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG2S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG2S2CB.TabIndex = 4;
+            this.VocalizerJoshG2S2CB.TabStop = false;
+            this.VocalizerJoshG2S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG2S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG2S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG2S1CB
+            // 
+            this.VocalizerJoshG2S1CB.EditValue = "";
+            this.VocalizerJoshG2S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerJoshG2S1CB.Name = "VocalizerJoshG2S1CB";
+            this.VocalizerJoshG2S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG2S1CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG2S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG2S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG2S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG2S1CB.TabIndex = 3;
+            this.VocalizerJoshG2S1CB.TabStop = false;
+            this.VocalizerJoshG2S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG2S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG2S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG1GP
+            // 
+            this.VocalizerJoshG1GP.Controls.Add(this.VocalizerJoshG1S5CB);
+            this.VocalizerJoshG1GP.Controls.Add(this.VocalizerJoshG1S4CB);
+            this.VocalizerJoshG1GP.Controls.Add(this.VocalizerJoshG1S3CB);
+            this.VocalizerJoshG1GP.Controls.Add(this.VocalizerJoshG1S2CB);
+            this.VocalizerJoshG1GP.Controls.Add(this.VocalizerJoshG1S1CB);
+            this.VocalizerJoshG1GP.Location = new System.Drawing.Point(3, 3);
+            this.VocalizerJoshG1GP.Name = "VocalizerJoshG1GP";
+            this.VocalizerJoshG1GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerJoshG1GP.TabIndex = 36;
+            this.VocalizerJoshG1GP.Text = "Group 1";
+            // 
+            // VocalizerJoshG1S5CB
+            // 
+            this.VocalizerJoshG1S5CB.EditValue = "";
+            this.VocalizerJoshG1S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerJoshG1S5CB.Name = "VocalizerJoshG1S5CB";
+            this.VocalizerJoshG1S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG1S5CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG1S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG1S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG1S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG1S5CB.TabIndex = 7;
+            this.VocalizerJoshG1S5CB.TabStop = false;
+            this.VocalizerJoshG1S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG1S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG1S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG1S4CB
+            // 
+            this.VocalizerJoshG1S4CB.EditValue = "";
+            this.VocalizerJoshG1S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerJoshG1S4CB.Name = "VocalizerJoshG1S4CB";
+            this.VocalizerJoshG1S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG1S4CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG1S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG1S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG1S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG1S4CB.TabIndex = 6;
+            this.VocalizerJoshG1S4CB.TabStop = false;
+            this.VocalizerJoshG1S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG1S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG1S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG1S3CB
+            // 
+            this.VocalizerJoshG1S3CB.EditValue = "";
+            this.VocalizerJoshG1S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerJoshG1S3CB.Name = "VocalizerJoshG1S3CB";
+            this.VocalizerJoshG1S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG1S3CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG1S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG1S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG1S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG1S3CB.TabIndex = 5;
+            this.VocalizerJoshG1S3CB.TabStop = false;
+            this.VocalizerJoshG1S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG1S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG1S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG1S2CB
+            // 
+            this.VocalizerJoshG1S2CB.EditValue = "";
+            this.VocalizerJoshG1S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerJoshG1S2CB.Name = "VocalizerJoshG1S2CB";
+            this.VocalizerJoshG1S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG1S2CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG1S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG1S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG1S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG1S2CB.TabIndex = 4;
+            this.VocalizerJoshG1S2CB.TabStop = false;
+            this.VocalizerJoshG1S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG1S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG1S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerJoshG1S1CB
+            // 
+            this.VocalizerJoshG1S1CB.EditValue = "";
+            this.VocalizerJoshG1S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerJoshG1S1CB.Name = "VocalizerJoshG1S1CB";
+            this.VocalizerJoshG1S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerJoshG1S1CB.Properties.AllowFocused = false;
+            this.VocalizerJoshG1S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerJoshG1S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerJoshG1S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerJoshG1S1CB.TabIndex = 3;
+            this.VocalizerJoshG1S1CB.TabStop = false;
+            this.VocalizerJoshG1S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerJoshG1S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerJoshG1S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaTab
             // 
@@ -6511,6 +8382,933 @@ namespace GameX
             this.VocalizerExcellaTab.Size = new System.Drawing.Size(528, 498);
             this.VocalizerExcellaTab.Text = "xtraTabPage5";
             // 
+            // VocalizerExcellaG9GP
+            // 
+            this.VocalizerExcellaG9GP.Controls.Add(this.VocalizerExcellaG9S5CB);
+            this.VocalizerExcellaG9GP.Controls.Add(this.VocalizerExcellaG9S4CB);
+            this.VocalizerExcellaG9GP.Controls.Add(this.VocalizerExcellaG9S3CB);
+            this.VocalizerExcellaG9GP.Controls.Add(this.VocalizerExcellaG9S2CB);
+            this.VocalizerExcellaG9GP.Controls.Add(this.VocalizerExcellaG9S1CB);
+            this.VocalizerExcellaG9GP.Location = new System.Drawing.Point(355, 335);
+            this.VocalizerExcellaG9GP.Name = "VocalizerExcellaG9GP";
+            this.VocalizerExcellaG9GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerExcellaG9GP.TabIndex = 53;
+            this.VocalizerExcellaG9GP.Text = "Group 9";
+            // 
+            // VocalizerExcellaG9S5CB
+            // 
+            this.VocalizerExcellaG9S5CB.EditValue = "";
+            this.VocalizerExcellaG9S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerExcellaG9S5CB.Name = "VocalizerExcellaG9S5CB";
+            this.VocalizerExcellaG9S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG9S5CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG9S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG9S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG9S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG9S5CB.TabIndex = 7;
+            this.VocalizerExcellaG9S5CB.TabStop = false;
+            this.VocalizerExcellaG9S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG9S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG9S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG9S4CB
+            // 
+            this.VocalizerExcellaG9S4CB.EditValue = "";
+            this.VocalizerExcellaG9S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerExcellaG9S4CB.Name = "VocalizerExcellaG9S4CB";
+            this.VocalizerExcellaG9S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG9S4CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG9S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG9S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG9S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG9S4CB.TabIndex = 6;
+            this.VocalizerExcellaG9S4CB.TabStop = false;
+            this.VocalizerExcellaG9S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG9S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG9S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG9S3CB
+            // 
+            this.VocalizerExcellaG9S3CB.EditValue = "";
+            this.VocalizerExcellaG9S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerExcellaG9S3CB.Name = "VocalizerExcellaG9S3CB";
+            this.VocalizerExcellaG9S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG9S3CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG9S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG9S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG9S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG9S3CB.TabIndex = 5;
+            this.VocalizerExcellaG9S3CB.TabStop = false;
+            this.VocalizerExcellaG9S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG9S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG9S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG9S2CB
+            // 
+            this.VocalizerExcellaG9S2CB.EditValue = "";
+            this.VocalizerExcellaG9S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerExcellaG9S2CB.Name = "VocalizerExcellaG9S2CB";
+            this.VocalizerExcellaG9S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG9S2CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG9S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG9S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG9S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG9S2CB.TabIndex = 4;
+            this.VocalizerExcellaG9S2CB.TabStop = false;
+            this.VocalizerExcellaG9S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG9S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG9S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG9S1CB
+            // 
+            this.VocalizerExcellaG9S1CB.EditValue = "";
+            this.VocalizerExcellaG9S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerExcellaG9S1CB.Name = "VocalizerExcellaG9S1CB";
+            this.VocalizerExcellaG9S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG9S1CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG9S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG9S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG9S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG9S1CB.TabIndex = 3;
+            this.VocalizerExcellaG9S1CB.TabStop = false;
+            this.VocalizerExcellaG9S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG9S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG9S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG8GP
+            // 
+            this.VocalizerExcellaG8GP.Controls.Add(this.VocalizerExcellaG8S5CB);
+            this.VocalizerExcellaG8GP.Controls.Add(this.VocalizerExcellaG8S4CB);
+            this.VocalizerExcellaG8GP.Controls.Add(this.VocalizerExcellaG8S3CB);
+            this.VocalizerExcellaG8GP.Controls.Add(this.VocalizerExcellaG8S2CB);
+            this.VocalizerExcellaG8GP.Controls.Add(this.VocalizerExcellaG8S1CB);
+            this.VocalizerExcellaG8GP.Location = new System.Drawing.Point(179, 335);
+            this.VocalizerExcellaG8GP.Name = "VocalizerExcellaG8GP";
+            this.VocalizerExcellaG8GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerExcellaG8GP.TabIndex = 52;
+            this.VocalizerExcellaG8GP.Text = "Group 8";
+            // 
+            // VocalizerExcellaG8S5CB
+            // 
+            this.VocalizerExcellaG8S5CB.EditValue = "";
+            this.VocalizerExcellaG8S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerExcellaG8S5CB.Name = "VocalizerExcellaG8S5CB";
+            this.VocalizerExcellaG8S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG8S5CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG8S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG8S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG8S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG8S5CB.TabIndex = 7;
+            this.VocalizerExcellaG8S5CB.TabStop = false;
+            this.VocalizerExcellaG8S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG8S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG8S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG8S4CB
+            // 
+            this.VocalizerExcellaG8S4CB.EditValue = "";
+            this.VocalizerExcellaG8S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerExcellaG8S4CB.Name = "VocalizerExcellaG8S4CB";
+            this.VocalizerExcellaG8S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG8S4CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG8S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG8S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG8S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG8S4CB.TabIndex = 6;
+            this.VocalizerExcellaG8S4CB.TabStop = false;
+            this.VocalizerExcellaG8S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG8S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG8S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG8S3CB
+            // 
+            this.VocalizerExcellaG8S3CB.EditValue = "";
+            this.VocalizerExcellaG8S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerExcellaG8S3CB.Name = "VocalizerExcellaG8S3CB";
+            this.VocalizerExcellaG8S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG8S3CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG8S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG8S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG8S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG8S3CB.TabIndex = 5;
+            this.VocalizerExcellaG8S3CB.TabStop = false;
+            this.VocalizerExcellaG8S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG8S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG8S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG8S2CB
+            // 
+            this.VocalizerExcellaG8S2CB.EditValue = "";
+            this.VocalizerExcellaG8S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerExcellaG8S2CB.Name = "VocalizerExcellaG8S2CB";
+            this.VocalizerExcellaG8S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG8S2CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG8S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG8S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG8S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG8S2CB.TabIndex = 4;
+            this.VocalizerExcellaG8S2CB.TabStop = false;
+            this.VocalizerExcellaG8S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG8S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG8S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG8S1CB
+            // 
+            this.VocalizerExcellaG8S1CB.EditValue = "";
+            this.VocalizerExcellaG8S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerExcellaG8S1CB.Name = "VocalizerExcellaG8S1CB";
+            this.VocalizerExcellaG8S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG8S1CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG8S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG8S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG8S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG8S1CB.TabIndex = 3;
+            this.VocalizerExcellaG8S1CB.TabStop = false;
+            this.VocalizerExcellaG8S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG8S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG8S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG7GP
+            // 
+            this.VocalizerExcellaG7GP.Controls.Add(this.VocalizerExcellaG7S5CB);
+            this.VocalizerExcellaG7GP.Controls.Add(this.VocalizerExcellaG7S4CB);
+            this.VocalizerExcellaG7GP.Controls.Add(this.VocalizerExcellaG7S3CB);
+            this.VocalizerExcellaG7GP.Controls.Add(this.VocalizerExcellaG7S2CB);
+            this.VocalizerExcellaG7GP.Controls.Add(this.VocalizerExcellaG7S1CB);
+            this.VocalizerExcellaG7GP.Location = new System.Drawing.Point(3, 335);
+            this.VocalizerExcellaG7GP.Name = "VocalizerExcellaG7GP";
+            this.VocalizerExcellaG7GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerExcellaG7GP.TabIndex = 51;
+            this.VocalizerExcellaG7GP.Text = "Group 7";
+            // 
+            // VocalizerExcellaG7S5CB
+            // 
+            this.VocalizerExcellaG7S5CB.EditValue = "";
+            this.VocalizerExcellaG7S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerExcellaG7S5CB.Name = "VocalizerExcellaG7S5CB";
+            this.VocalizerExcellaG7S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG7S5CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG7S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG7S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG7S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG7S5CB.TabIndex = 7;
+            this.VocalizerExcellaG7S5CB.TabStop = false;
+            this.VocalizerExcellaG7S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG7S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG7S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG7S4CB
+            // 
+            this.VocalizerExcellaG7S4CB.EditValue = "";
+            this.VocalizerExcellaG7S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerExcellaG7S4CB.Name = "VocalizerExcellaG7S4CB";
+            this.VocalizerExcellaG7S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG7S4CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG7S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG7S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG7S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG7S4CB.TabIndex = 6;
+            this.VocalizerExcellaG7S4CB.TabStop = false;
+            this.VocalizerExcellaG7S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG7S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG7S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG7S3CB
+            // 
+            this.VocalizerExcellaG7S3CB.EditValue = "";
+            this.VocalizerExcellaG7S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerExcellaG7S3CB.Name = "VocalizerExcellaG7S3CB";
+            this.VocalizerExcellaG7S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG7S3CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG7S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG7S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG7S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG7S3CB.TabIndex = 5;
+            this.VocalizerExcellaG7S3CB.TabStop = false;
+            this.VocalizerExcellaG7S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG7S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG7S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG7S2CB
+            // 
+            this.VocalizerExcellaG7S2CB.EditValue = "";
+            this.VocalizerExcellaG7S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerExcellaG7S2CB.Name = "VocalizerExcellaG7S2CB";
+            this.VocalizerExcellaG7S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG7S2CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG7S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG7S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG7S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG7S2CB.TabIndex = 4;
+            this.VocalizerExcellaG7S2CB.TabStop = false;
+            this.VocalizerExcellaG7S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG7S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG7S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG7S1CB
+            // 
+            this.VocalizerExcellaG7S1CB.EditValue = "";
+            this.VocalizerExcellaG7S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerExcellaG7S1CB.Name = "VocalizerExcellaG7S1CB";
+            this.VocalizerExcellaG7S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG7S1CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG7S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG7S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG7S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG7S1CB.TabIndex = 3;
+            this.VocalizerExcellaG7S1CB.TabStop = false;
+            this.VocalizerExcellaG7S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG7S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG7S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG6GP
+            // 
+            this.VocalizerExcellaG6GP.Controls.Add(this.VocalizerExcellaG6S5CB);
+            this.VocalizerExcellaG6GP.Controls.Add(this.VocalizerExcellaG6S4CB);
+            this.VocalizerExcellaG6GP.Controls.Add(this.VocalizerExcellaG6S3CB);
+            this.VocalizerExcellaG6GP.Controls.Add(this.VocalizerExcellaG6S2CB);
+            this.VocalizerExcellaG6GP.Controls.Add(this.VocalizerExcellaG6S1CB);
+            this.VocalizerExcellaG6GP.Location = new System.Drawing.Point(355, 169);
+            this.VocalizerExcellaG6GP.Name = "VocalizerExcellaG6GP";
+            this.VocalizerExcellaG6GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerExcellaG6GP.TabIndex = 50;
+            this.VocalizerExcellaG6GP.Text = "Group 6";
+            // 
+            // VocalizerExcellaG6S5CB
+            // 
+            this.VocalizerExcellaG6S5CB.EditValue = "";
+            this.VocalizerExcellaG6S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerExcellaG6S5CB.Name = "VocalizerExcellaG6S5CB";
+            this.VocalizerExcellaG6S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG6S5CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG6S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG6S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG6S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG6S5CB.TabIndex = 7;
+            this.VocalizerExcellaG6S5CB.TabStop = false;
+            this.VocalizerExcellaG6S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG6S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG6S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG6S4CB
+            // 
+            this.VocalizerExcellaG6S4CB.EditValue = "";
+            this.VocalizerExcellaG6S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerExcellaG6S4CB.Name = "VocalizerExcellaG6S4CB";
+            this.VocalizerExcellaG6S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG6S4CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG6S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG6S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG6S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG6S4CB.TabIndex = 6;
+            this.VocalizerExcellaG6S4CB.TabStop = false;
+            this.VocalizerExcellaG6S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG6S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG6S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG6S3CB
+            // 
+            this.VocalizerExcellaG6S3CB.EditValue = "";
+            this.VocalizerExcellaG6S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerExcellaG6S3CB.Name = "VocalizerExcellaG6S3CB";
+            this.VocalizerExcellaG6S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG6S3CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG6S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG6S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG6S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG6S3CB.TabIndex = 5;
+            this.VocalizerExcellaG6S3CB.TabStop = false;
+            this.VocalizerExcellaG6S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG6S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG6S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG6S2CB
+            // 
+            this.VocalizerExcellaG6S2CB.EditValue = "";
+            this.VocalizerExcellaG6S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerExcellaG6S2CB.Name = "VocalizerExcellaG6S2CB";
+            this.VocalizerExcellaG6S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG6S2CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG6S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG6S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG6S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG6S2CB.TabIndex = 4;
+            this.VocalizerExcellaG6S2CB.TabStop = false;
+            this.VocalizerExcellaG6S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG6S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG6S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG6S1CB
+            // 
+            this.VocalizerExcellaG6S1CB.EditValue = "";
+            this.VocalizerExcellaG6S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerExcellaG6S1CB.Name = "VocalizerExcellaG6S1CB";
+            this.VocalizerExcellaG6S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG6S1CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG6S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG6S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG6S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG6S1CB.TabIndex = 3;
+            this.VocalizerExcellaG6S1CB.TabStop = false;
+            this.VocalizerExcellaG6S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG6S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG6S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG5GP
+            // 
+            this.VocalizerExcellaG5GP.Controls.Add(this.VocalizerExcellaG5S5CB);
+            this.VocalizerExcellaG5GP.Controls.Add(this.VocalizerExcellaG5S4CB);
+            this.VocalizerExcellaG5GP.Controls.Add(this.VocalizerExcellaG5S3CB);
+            this.VocalizerExcellaG5GP.Controls.Add(this.VocalizerExcellaG5S2CB);
+            this.VocalizerExcellaG5GP.Controls.Add(this.VocalizerExcellaG5S1CB);
+            this.VocalizerExcellaG5GP.Location = new System.Drawing.Point(179, 169);
+            this.VocalizerExcellaG5GP.Name = "VocalizerExcellaG5GP";
+            this.VocalizerExcellaG5GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerExcellaG5GP.TabIndex = 49;
+            this.VocalizerExcellaG5GP.Text = "Group 5";
+            // 
+            // VocalizerExcellaG5S5CB
+            // 
+            this.VocalizerExcellaG5S5CB.EditValue = "";
+            this.VocalizerExcellaG5S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerExcellaG5S5CB.Name = "VocalizerExcellaG5S5CB";
+            this.VocalizerExcellaG5S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG5S5CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG5S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG5S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG5S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG5S5CB.TabIndex = 7;
+            this.VocalizerExcellaG5S5CB.TabStop = false;
+            this.VocalizerExcellaG5S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG5S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG5S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG5S4CB
+            // 
+            this.VocalizerExcellaG5S4CB.EditValue = "";
+            this.VocalizerExcellaG5S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerExcellaG5S4CB.Name = "VocalizerExcellaG5S4CB";
+            this.VocalizerExcellaG5S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG5S4CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG5S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG5S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG5S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG5S4CB.TabIndex = 6;
+            this.VocalizerExcellaG5S4CB.TabStop = false;
+            this.VocalizerExcellaG5S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG5S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG5S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG5S3CB
+            // 
+            this.VocalizerExcellaG5S3CB.EditValue = "";
+            this.VocalizerExcellaG5S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerExcellaG5S3CB.Name = "VocalizerExcellaG5S3CB";
+            this.VocalizerExcellaG5S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG5S3CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG5S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG5S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG5S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG5S3CB.TabIndex = 5;
+            this.VocalizerExcellaG5S3CB.TabStop = false;
+            this.VocalizerExcellaG5S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG5S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG5S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG5S2CB
+            // 
+            this.VocalizerExcellaG5S2CB.EditValue = "";
+            this.VocalizerExcellaG5S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerExcellaG5S2CB.Name = "VocalizerExcellaG5S2CB";
+            this.VocalizerExcellaG5S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG5S2CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG5S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG5S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG5S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG5S2CB.TabIndex = 4;
+            this.VocalizerExcellaG5S2CB.TabStop = false;
+            this.VocalizerExcellaG5S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG5S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG5S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG5S1CB
+            // 
+            this.VocalizerExcellaG5S1CB.EditValue = "";
+            this.VocalizerExcellaG5S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerExcellaG5S1CB.Name = "VocalizerExcellaG5S1CB";
+            this.VocalizerExcellaG5S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG5S1CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG5S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG5S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG5S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG5S1CB.TabIndex = 3;
+            this.VocalizerExcellaG5S1CB.TabStop = false;
+            this.VocalizerExcellaG5S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG5S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG5S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG4GP
+            // 
+            this.VocalizerExcellaG4GP.Controls.Add(this.VocalizerExcellaG4S5CB);
+            this.VocalizerExcellaG4GP.Controls.Add(this.VocalizerExcellaG4S4CB);
+            this.VocalizerExcellaG4GP.Controls.Add(this.VocalizerExcellaG4S3CB);
+            this.VocalizerExcellaG4GP.Controls.Add(this.VocalizerExcellaG4S2CB);
+            this.VocalizerExcellaG4GP.Controls.Add(this.VocalizerExcellaG4S1CB);
+            this.VocalizerExcellaG4GP.Location = new System.Drawing.Point(3, 169);
+            this.VocalizerExcellaG4GP.Name = "VocalizerExcellaG4GP";
+            this.VocalizerExcellaG4GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerExcellaG4GP.TabIndex = 48;
+            this.VocalizerExcellaG4GP.Text = "Group 4";
+            // 
+            // VocalizerExcellaG4S5CB
+            // 
+            this.VocalizerExcellaG4S5CB.EditValue = "";
+            this.VocalizerExcellaG4S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerExcellaG4S5CB.Name = "VocalizerExcellaG4S5CB";
+            this.VocalizerExcellaG4S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG4S5CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG4S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG4S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG4S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG4S5CB.TabIndex = 7;
+            this.VocalizerExcellaG4S5CB.TabStop = false;
+            this.VocalizerExcellaG4S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG4S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG4S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG4S4CB
+            // 
+            this.VocalizerExcellaG4S4CB.EditValue = "";
+            this.VocalizerExcellaG4S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerExcellaG4S4CB.Name = "VocalizerExcellaG4S4CB";
+            this.VocalizerExcellaG4S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG4S4CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG4S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG4S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG4S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG4S4CB.TabIndex = 6;
+            this.VocalizerExcellaG4S4CB.TabStop = false;
+            this.VocalizerExcellaG4S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG4S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG4S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG4S3CB
+            // 
+            this.VocalizerExcellaG4S3CB.EditValue = "";
+            this.VocalizerExcellaG4S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerExcellaG4S3CB.Name = "VocalizerExcellaG4S3CB";
+            this.VocalizerExcellaG4S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG4S3CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG4S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG4S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG4S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG4S3CB.TabIndex = 5;
+            this.VocalizerExcellaG4S3CB.TabStop = false;
+            this.VocalizerExcellaG4S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG4S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG4S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG4S2CB
+            // 
+            this.VocalizerExcellaG4S2CB.EditValue = "";
+            this.VocalizerExcellaG4S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerExcellaG4S2CB.Name = "VocalizerExcellaG4S2CB";
+            this.VocalizerExcellaG4S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG4S2CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG4S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG4S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG4S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG4S2CB.TabIndex = 4;
+            this.VocalizerExcellaG4S2CB.TabStop = false;
+            this.VocalizerExcellaG4S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG4S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG4S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG4S1CB
+            // 
+            this.VocalizerExcellaG4S1CB.EditValue = "";
+            this.VocalizerExcellaG4S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerExcellaG4S1CB.Name = "VocalizerExcellaG4S1CB";
+            this.VocalizerExcellaG4S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG4S1CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG4S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG4S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG4S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG4S1CB.TabIndex = 3;
+            this.VocalizerExcellaG4S1CB.TabStop = false;
+            this.VocalizerExcellaG4S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG4S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG4S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG3GP
+            // 
+            this.VocalizerExcellaG3GP.Controls.Add(this.VocalizerExcellaG3S5CB);
+            this.VocalizerExcellaG3GP.Controls.Add(this.VocalizerExcellaG3S4CB);
+            this.VocalizerExcellaG3GP.Controls.Add(this.VocalizerExcellaG3S3CB);
+            this.VocalizerExcellaG3GP.Controls.Add(this.VocalizerExcellaG3S2CB);
+            this.VocalizerExcellaG3GP.Controls.Add(this.VocalizerExcellaG3S1CB);
+            this.VocalizerExcellaG3GP.Location = new System.Drawing.Point(355, 3);
+            this.VocalizerExcellaG3GP.Name = "VocalizerExcellaG3GP";
+            this.VocalizerExcellaG3GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerExcellaG3GP.TabIndex = 47;
+            this.VocalizerExcellaG3GP.Text = "Group 3";
+            // 
+            // VocalizerExcellaG3S5CB
+            // 
+            this.VocalizerExcellaG3S5CB.EditValue = "";
+            this.VocalizerExcellaG3S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerExcellaG3S5CB.Name = "VocalizerExcellaG3S5CB";
+            this.VocalizerExcellaG3S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG3S5CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG3S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG3S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG3S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG3S5CB.TabIndex = 7;
+            this.VocalizerExcellaG3S5CB.TabStop = false;
+            this.VocalizerExcellaG3S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG3S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG3S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG3S4CB
+            // 
+            this.VocalizerExcellaG3S4CB.EditValue = "";
+            this.VocalizerExcellaG3S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerExcellaG3S4CB.Name = "VocalizerExcellaG3S4CB";
+            this.VocalizerExcellaG3S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG3S4CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG3S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG3S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG3S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG3S4CB.TabIndex = 6;
+            this.VocalizerExcellaG3S4CB.TabStop = false;
+            this.VocalizerExcellaG3S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG3S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG3S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG3S3CB
+            // 
+            this.VocalizerExcellaG3S3CB.EditValue = "";
+            this.VocalizerExcellaG3S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerExcellaG3S3CB.Name = "VocalizerExcellaG3S3CB";
+            this.VocalizerExcellaG3S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG3S3CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG3S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG3S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG3S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG3S3CB.TabIndex = 5;
+            this.VocalizerExcellaG3S3CB.TabStop = false;
+            this.VocalizerExcellaG3S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG3S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG3S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG3S2CB
+            // 
+            this.VocalizerExcellaG3S2CB.EditValue = "";
+            this.VocalizerExcellaG3S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerExcellaG3S2CB.Name = "VocalizerExcellaG3S2CB";
+            this.VocalizerExcellaG3S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG3S2CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG3S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG3S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG3S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG3S2CB.TabIndex = 4;
+            this.VocalizerExcellaG3S2CB.TabStop = false;
+            this.VocalizerExcellaG3S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG3S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG3S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG3S1CB
+            // 
+            this.VocalizerExcellaG3S1CB.EditValue = "";
+            this.VocalizerExcellaG3S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerExcellaG3S1CB.Name = "VocalizerExcellaG3S1CB";
+            this.VocalizerExcellaG3S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG3S1CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG3S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG3S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG3S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG3S1CB.TabIndex = 3;
+            this.VocalizerExcellaG3S1CB.TabStop = false;
+            this.VocalizerExcellaG3S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG3S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG3S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG2GP
+            // 
+            this.VocalizerExcellaG2GP.Controls.Add(this.VocalizerExcellaG2S5CB);
+            this.VocalizerExcellaG2GP.Controls.Add(this.VocalizerExcellaG2S4CB);
+            this.VocalizerExcellaG2GP.Controls.Add(this.VocalizerExcellaG2S3CB);
+            this.VocalizerExcellaG2GP.Controls.Add(this.VocalizerExcellaG2S2CB);
+            this.VocalizerExcellaG2GP.Controls.Add(this.VocalizerExcellaG2S1CB);
+            this.VocalizerExcellaG2GP.Location = new System.Drawing.Point(179, 3);
+            this.VocalizerExcellaG2GP.Name = "VocalizerExcellaG2GP";
+            this.VocalizerExcellaG2GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerExcellaG2GP.TabIndex = 46;
+            this.VocalizerExcellaG2GP.Text = "Group 2";
+            // 
+            // VocalizerExcellaG2S5CB
+            // 
+            this.VocalizerExcellaG2S5CB.EditValue = "";
+            this.VocalizerExcellaG2S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerExcellaG2S5CB.Name = "VocalizerExcellaG2S5CB";
+            this.VocalizerExcellaG2S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG2S5CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG2S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG2S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG2S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG2S5CB.TabIndex = 7;
+            this.VocalizerExcellaG2S5CB.TabStop = false;
+            this.VocalizerExcellaG2S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG2S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG2S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG2S4CB
+            // 
+            this.VocalizerExcellaG2S4CB.EditValue = "";
+            this.VocalizerExcellaG2S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerExcellaG2S4CB.Name = "VocalizerExcellaG2S4CB";
+            this.VocalizerExcellaG2S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG2S4CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG2S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG2S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG2S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG2S4CB.TabIndex = 6;
+            this.VocalizerExcellaG2S4CB.TabStop = false;
+            this.VocalizerExcellaG2S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG2S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG2S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG2S3CB
+            // 
+            this.VocalizerExcellaG2S3CB.EditValue = "";
+            this.VocalizerExcellaG2S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerExcellaG2S3CB.Name = "VocalizerExcellaG2S3CB";
+            this.VocalizerExcellaG2S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG2S3CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG2S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG2S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG2S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG2S3CB.TabIndex = 5;
+            this.VocalizerExcellaG2S3CB.TabStop = false;
+            this.VocalizerExcellaG2S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG2S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG2S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG2S2CB
+            // 
+            this.VocalizerExcellaG2S2CB.EditValue = "";
+            this.VocalizerExcellaG2S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerExcellaG2S2CB.Name = "VocalizerExcellaG2S2CB";
+            this.VocalizerExcellaG2S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG2S2CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG2S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG2S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG2S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG2S2CB.TabIndex = 4;
+            this.VocalizerExcellaG2S2CB.TabStop = false;
+            this.VocalizerExcellaG2S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG2S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG2S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG2S1CB
+            // 
+            this.VocalizerExcellaG2S1CB.EditValue = "";
+            this.VocalizerExcellaG2S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerExcellaG2S1CB.Name = "VocalizerExcellaG2S1CB";
+            this.VocalizerExcellaG2S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG2S1CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG2S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG2S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG2S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG2S1CB.TabIndex = 3;
+            this.VocalizerExcellaG2S1CB.TabStop = false;
+            this.VocalizerExcellaG2S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG2S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG2S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG1GP
+            // 
+            this.VocalizerExcellaG1GP.Controls.Add(this.VocalizerExcellaG1S5CB);
+            this.VocalizerExcellaG1GP.Controls.Add(this.VocalizerExcellaG1S4CB);
+            this.VocalizerExcellaG1GP.Controls.Add(this.VocalizerExcellaG1S3CB);
+            this.VocalizerExcellaG1GP.Controls.Add(this.VocalizerExcellaG1S2CB);
+            this.VocalizerExcellaG1GP.Controls.Add(this.VocalizerExcellaG1S1CB);
+            this.VocalizerExcellaG1GP.Location = new System.Drawing.Point(3, 3);
+            this.VocalizerExcellaG1GP.Name = "VocalizerExcellaG1GP";
+            this.VocalizerExcellaG1GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerExcellaG1GP.TabIndex = 45;
+            this.VocalizerExcellaG1GP.Text = "Group 1";
+            // 
+            // VocalizerExcellaG1S5CB
+            // 
+            this.VocalizerExcellaG1S5CB.EditValue = "";
+            this.VocalizerExcellaG1S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerExcellaG1S5CB.Name = "VocalizerExcellaG1S5CB";
+            this.VocalizerExcellaG1S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG1S5CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG1S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG1S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG1S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG1S5CB.TabIndex = 7;
+            this.VocalizerExcellaG1S5CB.TabStop = false;
+            this.VocalizerExcellaG1S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG1S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG1S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG1S4CB
+            // 
+            this.VocalizerExcellaG1S4CB.EditValue = "";
+            this.VocalizerExcellaG1S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerExcellaG1S4CB.Name = "VocalizerExcellaG1S4CB";
+            this.VocalizerExcellaG1S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG1S4CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG1S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG1S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG1S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG1S4CB.TabIndex = 6;
+            this.VocalizerExcellaG1S4CB.TabStop = false;
+            this.VocalizerExcellaG1S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG1S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG1S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG1S3CB
+            // 
+            this.VocalizerExcellaG1S3CB.EditValue = "";
+            this.VocalizerExcellaG1S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerExcellaG1S3CB.Name = "VocalizerExcellaG1S3CB";
+            this.VocalizerExcellaG1S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG1S3CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG1S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG1S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG1S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG1S3CB.TabIndex = 5;
+            this.VocalizerExcellaG1S3CB.TabStop = false;
+            this.VocalizerExcellaG1S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG1S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG1S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG1S2CB
+            // 
+            this.VocalizerExcellaG1S2CB.EditValue = "";
+            this.VocalizerExcellaG1S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerExcellaG1S2CB.Name = "VocalizerExcellaG1S2CB";
+            this.VocalizerExcellaG1S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG1S2CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG1S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG1S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG1S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG1S2CB.TabIndex = 4;
+            this.VocalizerExcellaG1S2CB.TabStop = false;
+            this.VocalizerExcellaG1S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG1S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG1S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerExcellaG1S1CB
+            // 
+            this.VocalizerExcellaG1S1CB.EditValue = "";
+            this.VocalizerExcellaG1S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerExcellaG1S1CB.Name = "VocalizerExcellaG1S1CB";
+            this.VocalizerExcellaG1S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerExcellaG1S1CB.Properties.AllowFocused = false;
+            this.VocalizerExcellaG1S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerExcellaG1S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerExcellaG1S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerExcellaG1S1CB.TabIndex = 3;
+            this.VocalizerExcellaG1S1CB.TabStop = false;
+            this.VocalizerExcellaG1S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerExcellaG1S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerExcellaG1S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
             // VocalizerBarryTab
             // 
             this.VocalizerBarryTab.Controls.Add(this.VocalizerBarryG9GP);
@@ -6526,20 +9324,932 @@ namespace GameX
             this.VocalizerBarryTab.Size = new System.Drawing.Size(528, 498);
             this.VocalizerBarryTab.Text = "xtraTabPage6";
             // 
-            // VocalizerRebeccaTab
+            // VocalizerBarryG9GP
             // 
-            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG9GP);
-            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG8GP);
-            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG7GP);
-            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG6GP);
-            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG5GP);
-            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG4GP);
-            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG3GP);
-            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG2GP);
-            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG1GP);
-            this.VocalizerRebeccaTab.Name = "VocalizerRebeccaTab";
-            this.VocalizerRebeccaTab.Size = new System.Drawing.Size(528, 498);
-            this.VocalizerRebeccaTab.Text = "xtraTabPage7";
+            this.VocalizerBarryG9GP.Controls.Add(this.VocalizerBarryG9S5CB);
+            this.VocalizerBarryG9GP.Controls.Add(this.VocalizerBarryG9S4CB);
+            this.VocalizerBarryG9GP.Controls.Add(this.VocalizerBarryG9S3CB);
+            this.VocalizerBarryG9GP.Controls.Add(this.VocalizerBarryG9S2CB);
+            this.VocalizerBarryG9GP.Controls.Add(this.VocalizerBarryG9S1CB);
+            this.VocalizerBarryG9GP.Location = new System.Drawing.Point(355, 335);
+            this.VocalizerBarryG9GP.Name = "VocalizerBarryG9GP";
+            this.VocalizerBarryG9GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerBarryG9GP.TabIndex = 62;
+            this.VocalizerBarryG9GP.Text = "Group 9";
+            // 
+            // VocalizerBarryG9S5CB
+            // 
+            this.VocalizerBarryG9S5CB.EditValue = "";
+            this.VocalizerBarryG9S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerBarryG9S5CB.Name = "VocalizerBarryG9S5CB";
+            this.VocalizerBarryG9S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG9S5CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG9S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG9S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG9S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG9S5CB.TabIndex = 7;
+            this.VocalizerBarryG9S5CB.TabStop = false;
+            this.VocalizerBarryG9S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG9S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG9S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG9S4CB
+            // 
+            this.VocalizerBarryG9S4CB.EditValue = "";
+            this.VocalizerBarryG9S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerBarryG9S4CB.Name = "VocalizerBarryG9S4CB";
+            this.VocalizerBarryG9S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG9S4CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG9S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG9S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG9S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG9S4CB.TabIndex = 6;
+            this.VocalizerBarryG9S4CB.TabStop = false;
+            this.VocalizerBarryG9S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG9S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG9S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG9S3CB
+            // 
+            this.VocalizerBarryG9S3CB.EditValue = "";
+            this.VocalizerBarryG9S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerBarryG9S3CB.Name = "VocalizerBarryG9S3CB";
+            this.VocalizerBarryG9S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG9S3CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG9S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG9S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG9S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG9S3CB.TabIndex = 5;
+            this.VocalizerBarryG9S3CB.TabStop = false;
+            this.VocalizerBarryG9S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG9S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG9S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG9S2CB
+            // 
+            this.VocalizerBarryG9S2CB.EditValue = "";
+            this.VocalizerBarryG9S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerBarryG9S2CB.Name = "VocalizerBarryG9S2CB";
+            this.VocalizerBarryG9S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG9S2CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG9S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG9S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG9S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG9S2CB.TabIndex = 4;
+            this.VocalizerBarryG9S2CB.TabStop = false;
+            this.VocalizerBarryG9S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG9S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG9S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG9S1CB
+            // 
+            this.VocalizerBarryG9S1CB.EditValue = "";
+            this.VocalizerBarryG9S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerBarryG9S1CB.Name = "VocalizerBarryG9S1CB";
+            this.VocalizerBarryG9S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG9S1CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG9S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG9S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG9S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG9S1CB.TabIndex = 3;
+            this.VocalizerBarryG9S1CB.TabStop = false;
+            this.VocalizerBarryG9S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG9S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG9S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG8GP
+            // 
+            this.VocalizerBarryG8GP.Controls.Add(this.VocalizerBarryG8S5CB);
+            this.VocalizerBarryG8GP.Controls.Add(this.VocalizerBarryG8S4CB);
+            this.VocalizerBarryG8GP.Controls.Add(this.VocalizerBarryG8S3CB);
+            this.VocalizerBarryG8GP.Controls.Add(this.VocalizerBarryG8S2CB);
+            this.VocalizerBarryG8GP.Controls.Add(this.VocalizerBarryG8S1CB);
+            this.VocalizerBarryG8GP.Location = new System.Drawing.Point(179, 335);
+            this.VocalizerBarryG8GP.Name = "VocalizerBarryG8GP";
+            this.VocalizerBarryG8GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerBarryG8GP.TabIndex = 61;
+            this.VocalizerBarryG8GP.Text = "Group 8";
+            // 
+            // VocalizerBarryG8S5CB
+            // 
+            this.VocalizerBarryG8S5CB.EditValue = "";
+            this.VocalizerBarryG8S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerBarryG8S5CB.Name = "VocalizerBarryG8S5CB";
+            this.VocalizerBarryG8S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG8S5CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG8S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG8S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG8S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG8S5CB.TabIndex = 7;
+            this.VocalizerBarryG8S5CB.TabStop = false;
+            this.VocalizerBarryG8S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG8S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG8S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG8S4CB
+            // 
+            this.VocalizerBarryG8S4CB.EditValue = "";
+            this.VocalizerBarryG8S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerBarryG8S4CB.Name = "VocalizerBarryG8S4CB";
+            this.VocalizerBarryG8S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG8S4CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG8S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG8S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG8S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG8S4CB.TabIndex = 6;
+            this.VocalizerBarryG8S4CB.TabStop = false;
+            this.VocalizerBarryG8S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG8S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG8S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG8S3CB
+            // 
+            this.VocalizerBarryG8S3CB.EditValue = "";
+            this.VocalizerBarryG8S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerBarryG8S3CB.Name = "VocalizerBarryG8S3CB";
+            this.VocalizerBarryG8S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG8S3CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG8S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG8S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG8S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG8S3CB.TabIndex = 5;
+            this.VocalizerBarryG8S3CB.TabStop = false;
+            this.VocalizerBarryG8S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG8S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG8S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG8S2CB
+            // 
+            this.VocalizerBarryG8S2CB.EditValue = "";
+            this.VocalizerBarryG8S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerBarryG8S2CB.Name = "VocalizerBarryG8S2CB";
+            this.VocalizerBarryG8S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG8S2CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG8S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG8S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG8S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG8S2CB.TabIndex = 4;
+            this.VocalizerBarryG8S2CB.TabStop = false;
+            this.VocalizerBarryG8S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG8S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG8S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG8S1CB
+            // 
+            this.VocalizerBarryG8S1CB.EditValue = "";
+            this.VocalizerBarryG8S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerBarryG8S1CB.Name = "VocalizerBarryG8S1CB";
+            this.VocalizerBarryG8S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG8S1CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG8S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG8S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG8S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG8S1CB.TabIndex = 3;
+            this.VocalizerBarryG8S1CB.TabStop = false;
+            this.VocalizerBarryG8S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG8S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG8S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG7GP
+            // 
+            this.VocalizerBarryG7GP.Controls.Add(this.VocalizerBarryG7S5CB);
+            this.VocalizerBarryG7GP.Controls.Add(this.VocalizerBarryG7S4CB);
+            this.VocalizerBarryG7GP.Controls.Add(this.VocalizerBarryG7S3CB);
+            this.VocalizerBarryG7GP.Controls.Add(this.VocalizerBarryG7S2CB);
+            this.VocalizerBarryG7GP.Controls.Add(this.VocalizerBarryG7S1CB);
+            this.VocalizerBarryG7GP.Location = new System.Drawing.Point(3, 335);
+            this.VocalizerBarryG7GP.Name = "VocalizerBarryG7GP";
+            this.VocalizerBarryG7GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerBarryG7GP.TabIndex = 60;
+            this.VocalizerBarryG7GP.Text = "Group 7";
+            // 
+            // VocalizerBarryG7S5CB
+            // 
+            this.VocalizerBarryG7S5CB.EditValue = "";
+            this.VocalizerBarryG7S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerBarryG7S5CB.Name = "VocalizerBarryG7S5CB";
+            this.VocalizerBarryG7S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG7S5CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG7S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG7S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG7S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG7S5CB.TabIndex = 7;
+            this.VocalizerBarryG7S5CB.TabStop = false;
+            this.VocalizerBarryG7S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG7S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG7S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG7S4CB
+            // 
+            this.VocalizerBarryG7S4CB.EditValue = "";
+            this.VocalizerBarryG7S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerBarryG7S4CB.Name = "VocalizerBarryG7S4CB";
+            this.VocalizerBarryG7S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG7S4CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG7S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG7S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG7S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG7S4CB.TabIndex = 6;
+            this.VocalizerBarryG7S4CB.TabStop = false;
+            this.VocalizerBarryG7S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG7S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG7S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG7S3CB
+            // 
+            this.VocalizerBarryG7S3CB.EditValue = "";
+            this.VocalizerBarryG7S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerBarryG7S3CB.Name = "VocalizerBarryG7S3CB";
+            this.VocalizerBarryG7S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG7S3CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG7S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG7S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG7S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG7S3CB.TabIndex = 5;
+            this.VocalizerBarryG7S3CB.TabStop = false;
+            this.VocalizerBarryG7S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG7S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG7S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG7S2CB
+            // 
+            this.VocalizerBarryG7S2CB.EditValue = "";
+            this.VocalizerBarryG7S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerBarryG7S2CB.Name = "VocalizerBarryG7S2CB";
+            this.VocalizerBarryG7S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG7S2CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG7S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG7S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG7S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG7S2CB.TabIndex = 4;
+            this.VocalizerBarryG7S2CB.TabStop = false;
+            this.VocalizerBarryG7S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG7S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG7S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG7S1CB
+            // 
+            this.VocalizerBarryG7S1CB.EditValue = "";
+            this.VocalizerBarryG7S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerBarryG7S1CB.Name = "VocalizerBarryG7S1CB";
+            this.VocalizerBarryG7S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG7S1CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG7S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG7S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG7S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG7S1CB.TabIndex = 3;
+            this.VocalizerBarryG7S1CB.TabStop = false;
+            this.VocalizerBarryG7S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG7S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG7S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG6GP
+            // 
+            this.VocalizerBarryG6GP.Controls.Add(this.VocalizerBarryG6S5CB);
+            this.VocalizerBarryG6GP.Controls.Add(this.VocalizerBarryG6S4CB);
+            this.VocalizerBarryG6GP.Controls.Add(this.VocalizerBarryG6S3CB);
+            this.VocalizerBarryG6GP.Controls.Add(this.VocalizerBarryG6S2CB);
+            this.VocalizerBarryG6GP.Controls.Add(this.VocalizerBarryG6S1CB);
+            this.VocalizerBarryG6GP.Location = new System.Drawing.Point(355, 169);
+            this.VocalizerBarryG6GP.Name = "VocalizerBarryG6GP";
+            this.VocalizerBarryG6GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerBarryG6GP.TabIndex = 59;
+            this.VocalizerBarryG6GP.Text = "Group 6";
+            // 
+            // VocalizerBarryG6S5CB
+            // 
+            this.VocalizerBarryG6S5CB.EditValue = "";
+            this.VocalizerBarryG6S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerBarryG6S5CB.Name = "VocalizerBarryG6S5CB";
+            this.VocalizerBarryG6S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG6S5CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG6S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG6S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG6S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG6S5CB.TabIndex = 7;
+            this.VocalizerBarryG6S5CB.TabStop = false;
+            this.VocalizerBarryG6S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG6S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG6S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG6S4CB
+            // 
+            this.VocalizerBarryG6S4CB.EditValue = "";
+            this.VocalizerBarryG6S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerBarryG6S4CB.Name = "VocalizerBarryG6S4CB";
+            this.VocalizerBarryG6S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG6S4CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG6S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG6S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG6S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG6S4CB.TabIndex = 6;
+            this.VocalizerBarryG6S4CB.TabStop = false;
+            this.VocalizerBarryG6S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG6S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG6S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG6S3CB
+            // 
+            this.VocalizerBarryG6S3CB.EditValue = "";
+            this.VocalizerBarryG6S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerBarryG6S3CB.Name = "VocalizerBarryG6S3CB";
+            this.VocalizerBarryG6S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG6S3CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG6S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG6S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG6S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG6S3CB.TabIndex = 5;
+            this.VocalizerBarryG6S3CB.TabStop = false;
+            this.VocalizerBarryG6S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG6S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG6S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG6S2CB
+            // 
+            this.VocalizerBarryG6S2CB.EditValue = "";
+            this.VocalizerBarryG6S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerBarryG6S2CB.Name = "VocalizerBarryG6S2CB";
+            this.VocalizerBarryG6S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG6S2CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG6S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG6S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG6S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG6S2CB.TabIndex = 4;
+            this.VocalizerBarryG6S2CB.TabStop = false;
+            this.VocalizerBarryG6S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG6S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG6S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG6S1CB
+            // 
+            this.VocalizerBarryG6S1CB.EditValue = "";
+            this.VocalizerBarryG6S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerBarryG6S1CB.Name = "VocalizerBarryG6S1CB";
+            this.VocalizerBarryG6S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG6S1CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG6S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG6S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG6S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG6S1CB.TabIndex = 3;
+            this.VocalizerBarryG6S1CB.TabStop = false;
+            this.VocalizerBarryG6S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG6S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG6S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG5GP
+            // 
+            this.VocalizerBarryG5GP.Controls.Add(this.VocalizerBarryG5S5CB);
+            this.VocalizerBarryG5GP.Controls.Add(this.VocalizerBarryG5S4CB);
+            this.VocalizerBarryG5GP.Controls.Add(this.VocalizerBarryG5S3CB);
+            this.VocalizerBarryG5GP.Controls.Add(this.VocalizerBarryG5S2CB);
+            this.VocalizerBarryG5GP.Controls.Add(this.VocalizerBarryG5S1CB);
+            this.VocalizerBarryG5GP.Location = new System.Drawing.Point(179, 169);
+            this.VocalizerBarryG5GP.Name = "VocalizerBarryG5GP";
+            this.VocalizerBarryG5GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerBarryG5GP.TabIndex = 58;
+            this.VocalizerBarryG5GP.Text = "Group 5";
+            // 
+            // VocalizerBarryG5S5CB
+            // 
+            this.VocalizerBarryG5S5CB.EditValue = "";
+            this.VocalizerBarryG5S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerBarryG5S5CB.Name = "VocalizerBarryG5S5CB";
+            this.VocalizerBarryG5S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG5S5CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG5S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG5S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG5S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG5S5CB.TabIndex = 7;
+            this.VocalizerBarryG5S5CB.TabStop = false;
+            this.VocalizerBarryG5S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG5S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG5S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG5S4CB
+            // 
+            this.VocalizerBarryG5S4CB.EditValue = "";
+            this.VocalizerBarryG5S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerBarryG5S4CB.Name = "VocalizerBarryG5S4CB";
+            this.VocalizerBarryG5S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG5S4CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG5S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG5S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG5S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG5S4CB.TabIndex = 6;
+            this.VocalizerBarryG5S4CB.TabStop = false;
+            this.VocalizerBarryG5S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG5S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG5S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG5S3CB
+            // 
+            this.VocalizerBarryG5S3CB.EditValue = "";
+            this.VocalizerBarryG5S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerBarryG5S3CB.Name = "VocalizerBarryG5S3CB";
+            this.VocalizerBarryG5S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG5S3CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG5S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG5S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG5S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG5S3CB.TabIndex = 5;
+            this.VocalizerBarryG5S3CB.TabStop = false;
+            this.VocalizerBarryG5S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG5S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG5S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG5S2CB
+            // 
+            this.VocalizerBarryG5S2CB.EditValue = "";
+            this.VocalizerBarryG5S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerBarryG5S2CB.Name = "VocalizerBarryG5S2CB";
+            this.VocalizerBarryG5S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG5S2CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG5S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG5S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG5S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG5S2CB.TabIndex = 4;
+            this.VocalizerBarryG5S2CB.TabStop = false;
+            this.VocalizerBarryG5S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG5S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG5S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG5S1CB
+            // 
+            this.VocalizerBarryG5S1CB.EditValue = "";
+            this.VocalizerBarryG5S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerBarryG5S1CB.Name = "VocalizerBarryG5S1CB";
+            this.VocalizerBarryG5S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG5S1CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG5S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG5S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG5S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG5S1CB.TabIndex = 3;
+            this.VocalizerBarryG5S1CB.TabStop = false;
+            this.VocalizerBarryG5S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG5S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG5S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG4GP
+            // 
+            this.VocalizerBarryG4GP.Controls.Add(this.VocalizerBarryG4S5CB);
+            this.VocalizerBarryG4GP.Controls.Add(this.VocalizerBarryG4S4CB);
+            this.VocalizerBarryG4GP.Controls.Add(this.VocalizerBarryG4S3CB);
+            this.VocalizerBarryG4GP.Controls.Add(this.VocalizerBarryG4S2CB);
+            this.VocalizerBarryG4GP.Controls.Add(this.VocalizerBarryG4S1CB);
+            this.VocalizerBarryG4GP.Location = new System.Drawing.Point(3, 169);
+            this.VocalizerBarryG4GP.Name = "VocalizerBarryG4GP";
+            this.VocalizerBarryG4GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerBarryG4GP.TabIndex = 57;
+            this.VocalizerBarryG4GP.Text = "Group 4";
+            // 
+            // VocalizerBarryG4S5CB
+            // 
+            this.VocalizerBarryG4S5CB.EditValue = "";
+            this.VocalizerBarryG4S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerBarryG4S5CB.Name = "VocalizerBarryG4S5CB";
+            this.VocalizerBarryG4S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG4S5CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG4S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG4S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG4S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG4S5CB.TabIndex = 7;
+            this.VocalizerBarryG4S5CB.TabStop = false;
+            this.VocalizerBarryG4S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG4S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG4S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG4S4CB
+            // 
+            this.VocalizerBarryG4S4CB.EditValue = "";
+            this.VocalizerBarryG4S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerBarryG4S4CB.Name = "VocalizerBarryG4S4CB";
+            this.VocalizerBarryG4S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG4S4CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG4S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG4S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG4S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG4S4CB.TabIndex = 6;
+            this.VocalizerBarryG4S4CB.TabStop = false;
+            this.VocalizerBarryG4S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG4S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG4S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG4S3CB
+            // 
+            this.VocalizerBarryG4S3CB.EditValue = "";
+            this.VocalizerBarryG4S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerBarryG4S3CB.Name = "VocalizerBarryG4S3CB";
+            this.VocalizerBarryG4S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG4S3CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG4S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG4S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG4S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG4S3CB.TabIndex = 5;
+            this.VocalizerBarryG4S3CB.TabStop = false;
+            this.VocalizerBarryG4S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG4S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG4S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG4S2CB
+            // 
+            this.VocalizerBarryG4S2CB.EditValue = "";
+            this.VocalizerBarryG4S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerBarryG4S2CB.Name = "VocalizerBarryG4S2CB";
+            this.VocalizerBarryG4S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG4S2CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG4S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG4S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG4S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG4S2CB.TabIndex = 4;
+            this.VocalizerBarryG4S2CB.TabStop = false;
+            this.VocalizerBarryG4S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG4S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG4S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG4S1CB
+            // 
+            this.VocalizerBarryG4S1CB.EditValue = "";
+            this.VocalizerBarryG4S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerBarryG4S1CB.Name = "VocalizerBarryG4S1CB";
+            this.VocalizerBarryG4S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG4S1CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG4S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG4S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG4S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG4S1CB.TabIndex = 3;
+            this.VocalizerBarryG4S1CB.TabStop = false;
+            this.VocalizerBarryG4S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG4S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG4S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG3GP
+            // 
+            this.VocalizerBarryG3GP.Controls.Add(this.VocalizerBarryG3S5CB);
+            this.VocalizerBarryG3GP.Controls.Add(this.VocalizerBarryG3S4CB);
+            this.VocalizerBarryG3GP.Controls.Add(this.VocalizerBarryG3S3CB);
+            this.VocalizerBarryG3GP.Controls.Add(this.VocalizerBarryG3S2CB);
+            this.VocalizerBarryG3GP.Controls.Add(this.VocalizerBarryG3S1CB);
+            this.VocalizerBarryG3GP.Location = new System.Drawing.Point(355, 3);
+            this.VocalizerBarryG3GP.Name = "VocalizerBarryG3GP";
+            this.VocalizerBarryG3GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerBarryG3GP.TabIndex = 56;
+            this.VocalizerBarryG3GP.Text = "Group 3";
+            // 
+            // VocalizerBarryG3S5CB
+            // 
+            this.VocalizerBarryG3S5CB.EditValue = "";
+            this.VocalizerBarryG3S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerBarryG3S5CB.Name = "VocalizerBarryG3S5CB";
+            this.VocalizerBarryG3S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG3S5CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG3S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG3S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG3S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG3S5CB.TabIndex = 7;
+            this.VocalizerBarryG3S5CB.TabStop = false;
+            this.VocalizerBarryG3S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG3S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG3S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG3S4CB
+            // 
+            this.VocalizerBarryG3S4CB.EditValue = "";
+            this.VocalizerBarryG3S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerBarryG3S4CB.Name = "VocalizerBarryG3S4CB";
+            this.VocalizerBarryG3S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG3S4CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG3S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG3S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG3S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG3S4CB.TabIndex = 6;
+            this.VocalizerBarryG3S4CB.TabStop = false;
+            this.VocalizerBarryG3S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG3S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG3S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG3S3CB
+            // 
+            this.VocalizerBarryG3S3CB.EditValue = "";
+            this.VocalizerBarryG3S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerBarryG3S3CB.Name = "VocalizerBarryG3S3CB";
+            this.VocalizerBarryG3S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG3S3CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG3S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG3S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG3S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG3S3CB.TabIndex = 5;
+            this.VocalizerBarryG3S3CB.TabStop = false;
+            this.VocalizerBarryG3S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG3S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG3S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG3S2CB
+            // 
+            this.VocalizerBarryG3S2CB.EditValue = "";
+            this.VocalizerBarryG3S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerBarryG3S2CB.Name = "VocalizerBarryG3S2CB";
+            this.VocalizerBarryG3S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG3S2CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG3S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG3S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG3S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG3S2CB.TabIndex = 4;
+            this.VocalizerBarryG3S2CB.TabStop = false;
+            this.VocalizerBarryG3S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG3S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG3S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG3S1CB
+            // 
+            this.VocalizerBarryG3S1CB.EditValue = "";
+            this.VocalizerBarryG3S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerBarryG3S1CB.Name = "VocalizerBarryG3S1CB";
+            this.VocalizerBarryG3S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG3S1CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG3S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG3S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG3S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG3S1CB.TabIndex = 3;
+            this.VocalizerBarryG3S1CB.TabStop = false;
+            this.VocalizerBarryG3S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG3S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG3S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG2GP
+            // 
+            this.VocalizerBarryG2GP.Controls.Add(this.VocalizerBarryG2S5CB);
+            this.VocalizerBarryG2GP.Controls.Add(this.VocalizerBarryG2S4CB);
+            this.VocalizerBarryG2GP.Controls.Add(this.VocalizerBarryG2S3CB);
+            this.VocalizerBarryG2GP.Controls.Add(this.VocalizerBarryG2S2CB);
+            this.VocalizerBarryG2GP.Controls.Add(this.VocalizerBarryG2S1CB);
+            this.VocalizerBarryG2GP.Location = new System.Drawing.Point(179, 3);
+            this.VocalizerBarryG2GP.Name = "VocalizerBarryG2GP";
+            this.VocalizerBarryG2GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerBarryG2GP.TabIndex = 55;
+            this.VocalizerBarryG2GP.Text = "Group 2";
+            // 
+            // VocalizerBarryG2S5CB
+            // 
+            this.VocalizerBarryG2S5CB.EditValue = "";
+            this.VocalizerBarryG2S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerBarryG2S5CB.Name = "VocalizerBarryG2S5CB";
+            this.VocalizerBarryG2S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG2S5CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG2S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG2S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG2S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG2S5CB.TabIndex = 7;
+            this.VocalizerBarryG2S5CB.TabStop = false;
+            this.VocalizerBarryG2S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG2S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG2S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG2S4CB
+            // 
+            this.VocalizerBarryG2S4CB.EditValue = "";
+            this.VocalizerBarryG2S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerBarryG2S4CB.Name = "VocalizerBarryG2S4CB";
+            this.VocalizerBarryG2S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG2S4CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG2S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG2S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG2S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG2S4CB.TabIndex = 6;
+            this.VocalizerBarryG2S4CB.TabStop = false;
+            this.VocalizerBarryG2S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG2S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG2S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG2S3CB
+            // 
+            this.VocalizerBarryG2S3CB.EditValue = "";
+            this.VocalizerBarryG2S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerBarryG2S3CB.Name = "VocalizerBarryG2S3CB";
+            this.VocalizerBarryG2S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG2S3CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG2S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG2S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG2S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG2S3CB.TabIndex = 5;
+            this.VocalizerBarryG2S3CB.TabStop = false;
+            this.VocalizerBarryG2S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG2S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG2S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG2S2CB
+            // 
+            this.VocalizerBarryG2S2CB.EditValue = "";
+            this.VocalizerBarryG2S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerBarryG2S2CB.Name = "VocalizerBarryG2S2CB";
+            this.VocalizerBarryG2S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG2S2CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG2S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG2S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG2S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG2S2CB.TabIndex = 4;
+            this.VocalizerBarryG2S2CB.TabStop = false;
+            this.VocalizerBarryG2S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG2S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG2S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG2S1CB
+            // 
+            this.VocalizerBarryG2S1CB.EditValue = "";
+            this.VocalizerBarryG2S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerBarryG2S1CB.Name = "VocalizerBarryG2S1CB";
+            this.VocalizerBarryG2S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG2S1CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG2S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG2S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG2S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG2S1CB.TabIndex = 3;
+            this.VocalizerBarryG2S1CB.TabStop = false;
+            this.VocalizerBarryG2S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG2S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG2S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG1GP
+            // 
+            this.VocalizerBarryG1GP.Controls.Add(this.VocalizerBarryG1S5CB);
+            this.VocalizerBarryG1GP.Controls.Add(this.VocalizerBarryG1S4CB);
+            this.VocalizerBarryG1GP.Controls.Add(this.VocalizerBarryG1S3CB);
+            this.VocalizerBarryG1GP.Controls.Add(this.VocalizerBarryG1S2CB);
+            this.VocalizerBarryG1GP.Controls.Add(this.VocalizerBarryG1S1CB);
+            this.VocalizerBarryG1GP.Location = new System.Drawing.Point(3, 3);
+            this.VocalizerBarryG1GP.Name = "VocalizerBarryG1GP";
+            this.VocalizerBarryG1GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerBarryG1GP.TabIndex = 54;
+            this.VocalizerBarryG1GP.Text = "Group 1";
+            // 
+            // VocalizerBarryG1S5CB
+            // 
+            this.VocalizerBarryG1S5CB.EditValue = "";
+            this.VocalizerBarryG1S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerBarryG1S5CB.Name = "VocalizerBarryG1S5CB";
+            this.VocalizerBarryG1S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG1S5CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG1S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG1S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG1S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG1S5CB.TabIndex = 7;
+            this.VocalizerBarryG1S5CB.TabStop = false;
+            this.VocalizerBarryG1S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG1S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG1S5CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG1S4CB
+            // 
+            this.VocalizerBarryG1S4CB.EditValue = "";
+            this.VocalizerBarryG1S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerBarryG1S4CB.Name = "VocalizerBarryG1S4CB";
+            this.VocalizerBarryG1S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG1S4CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG1S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG1S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG1S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG1S4CB.TabIndex = 6;
+            this.VocalizerBarryG1S4CB.TabStop = false;
+            this.VocalizerBarryG1S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG1S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG1S4CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG1S3CB
+            // 
+            this.VocalizerBarryG1S3CB.EditValue = "";
+            this.VocalizerBarryG1S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerBarryG1S3CB.Name = "VocalizerBarryG1S3CB";
+            this.VocalizerBarryG1S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG1S3CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG1S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG1S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG1S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG1S3CB.TabIndex = 5;
+            this.VocalizerBarryG1S3CB.TabStop = false;
+            this.VocalizerBarryG1S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG1S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG1S3CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG1S2CB
+            // 
+            this.VocalizerBarryG1S2CB.EditValue = "";
+            this.VocalizerBarryG1S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerBarryG1S2CB.Name = "VocalizerBarryG1S2CB";
+            this.VocalizerBarryG1S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG1S2CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG1S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG1S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG1S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG1S2CB.TabIndex = 4;
+            this.VocalizerBarryG1S2CB.TabStop = false;
+            this.VocalizerBarryG1S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG1S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG1S2CB.ToolTipTitle = "Melee Kill Seconds";
+            // 
+            // VocalizerBarryG1S1CB
+            // 
+            this.VocalizerBarryG1S1CB.EditValue = "";
+            this.VocalizerBarryG1S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerBarryG1S1CB.Name = "VocalizerBarryG1S1CB";
+            this.VocalizerBarryG1S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerBarryG1S1CB.Properties.AllowFocused = false;
+            this.VocalizerBarryG1S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerBarryG1S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerBarryG1S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerBarryG1S1CB.TabIndex = 3;
+            this.VocalizerBarryG1S1CB.TabStop = false;
+            this.VocalizerBarryG1S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
+    "kill.";
+            this.VocalizerBarryG1S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerBarryG1S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerSettingsGP
             // 
@@ -20117,6 +23827,7 @@ namespace GameX
             // 
             // MiscModsGP
             // 
+            this.MiscModsGP.Controls.Add(this.NoFPSCapCE);
             this.MiscModsGP.Controls.Add(this.StunRodMeleeKillCE);
             this.MiscModsGP.Controls.Add(this.HandTremorCE);
             this.MiscModsGP.Controls.Add(this.ControllerAimGP);
@@ -20442,3713 +24153,14 @@ namespace GameX
             this.TabPageVocalizerButton.TabStop = false;
             this.TabPageVocalizerButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
-            // VocalizerJoshG9GP
-            // 
-            this.VocalizerJoshG9GP.Controls.Add(this.VocalizerJoshG9S5CB);
-            this.VocalizerJoshG9GP.Controls.Add(this.VocalizerJoshG9S4CB);
-            this.VocalizerJoshG9GP.Controls.Add(this.VocalizerJoshG9S3CB);
-            this.VocalizerJoshG9GP.Controls.Add(this.VocalizerJoshG9S2CB);
-            this.VocalizerJoshG9GP.Controls.Add(this.VocalizerJoshG9S1CB);
-            this.VocalizerJoshG9GP.Location = new System.Drawing.Point(355, 335);
-            this.VocalizerJoshG9GP.Name = "VocalizerJoshG9GP";
-            this.VocalizerJoshG9GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerJoshG9GP.TabIndex = 44;
-            this.VocalizerJoshG9GP.Text = "Group 9";
-            // 
-            // VocalizerJoshG9S5CB
-            // 
-            this.VocalizerJoshG9S5CB.EditValue = "";
-            this.VocalizerJoshG9S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerJoshG9S5CB.Name = "VocalizerJoshG9S5CB";
-            this.VocalizerJoshG9S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG9S5CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG9S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG9S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG9S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG9S5CB.TabIndex = 7;
-            this.VocalizerJoshG9S5CB.TabStop = false;
-            this.VocalizerJoshG9S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG9S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG9S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG9S4CB
-            // 
-            this.VocalizerJoshG9S4CB.EditValue = "";
-            this.VocalizerJoshG9S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerJoshG9S4CB.Name = "VocalizerJoshG9S4CB";
-            this.VocalizerJoshG9S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG9S4CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG9S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG9S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG9S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG9S4CB.TabIndex = 6;
-            this.VocalizerJoshG9S4CB.TabStop = false;
-            this.VocalizerJoshG9S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG9S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG9S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG9S3CB
-            // 
-            this.VocalizerJoshG9S3CB.EditValue = "";
-            this.VocalizerJoshG9S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerJoshG9S3CB.Name = "VocalizerJoshG9S3CB";
-            this.VocalizerJoshG9S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG9S3CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG9S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG9S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG9S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG9S3CB.TabIndex = 5;
-            this.VocalizerJoshG9S3CB.TabStop = false;
-            this.VocalizerJoshG9S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG9S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG9S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG9S2CB
-            // 
-            this.VocalizerJoshG9S2CB.EditValue = "";
-            this.VocalizerJoshG9S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerJoshG9S2CB.Name = "VocalizerJoshG9S2CB";
-            this.VocalizerJoshG9S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG9S2CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG9S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG9S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG9S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG9S2CB.TabIndex = 4;
-            this.VocalizerJoshG9S2CB.TabStop = false;
-            this.VocalizerJoshG9S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG9S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG9S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG9S1CB
-            // 
-            this.VocalizerJoshG9S1CB.EditValue = "";
-            this.VocalizerJoshG9S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerJoshG9S1CB.Name = "VocalizerJoshG9S1CB";
-            this.VocalizerJoshG9S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG9S1CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG9S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG9S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG9S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG9S1CB.TabIndex = 3;
-            this.VocalizerJoshG9S1CB.TabStop = false;
-            this.VocalizerJoshG9S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG9S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG9S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG8GP
-            // 
-            this.VocalizerJoshG8GP.Controls.Add(this.VocalizerJoshG8S5CB);
-            this.VocalizerJoshG8GP.Controls.Add(this.VocalizerJoshG8S4CB);
-            this.VocalizerJoshG8GP.Controls.Add(this.VocalizerJoshG8S3CB);
-            this.VocalizerJoshG8GP.Controls.Add(this.VocalizerJoshG8S2CB);
-            this.VocalizerJoshG8GP.Controls.Add(this.VocalizerJoshG8S1CB);
-            this.VocalizerJoshG8GP.Location = new System.Drawing.Point(179, 335);
-            this.VocalizerJoshG8GP.Name = "VocalizerJoshG8GP";
-            this.VocalizerJoshG8GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerJoshG8GP.TabIndex = 43;
-            this.VocalizerJoshG8GP.Text = "Group 8";
-            // 
-            // VocalizerJoshG8S5CB
-            // 
-            this.VocalizerJoshG8S5CB.EditValue = "";
-            this.VocalizerJoshG8S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerJoshG8S5CB.Name = "VocalizerJoshG8S5CB";
-            this.VocalizerJoshG8S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG8S5CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG8S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG8S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG8S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG8S5CB.TabIndex = 7;
-            this.VocalizerJoshG8S5CB.TabStop = false;
-            this.VocalizerJoshG8S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG8S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG8S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG8S4CB
-            // 
-            this.VocalizerJoshG8S4CB.EditValue = "";
-            this.VocalizerJoshG8S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerJoshG8S4CB.Name = "VocalizerJoshG8S4CB";
-            this.VocalizerJoshG8S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG8S4CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG8S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG8S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG8S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG8S4CB.TabIndex = 6;
-            this.VocalizerJoshG8S4CB.TabStop = false;
-            this.VocalizerJoshG8S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG8S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG8S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG8S3CB
-            // 
-            this.VocalizerJoshG8S3CB.EditValue = "";
-            this.VocalizerJoshG8S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerJoshG8S3CB.Name = "VocalizerJoshG8S3CB";
-            this.VocalizerJoshG8S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG8S3CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG8S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG8S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG8S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG8S3CB.TabIndex = 5;
-            this.VocalizerJoshG8S3CB.TabStop = false;
-            this.VocalizerJoshG8S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG8S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG8S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG8S2CB
-            // 
-            this.VocalizerJoshG8S2CB.EditValue = "";
-            this.VocalizerJoshG8S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerJoshG8S2CB.Name = "VocalizerJoshG8S2CB";
-            this.VocalizerJoshG8S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG8S2CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG8S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG8S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG8S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG8S2CB.TabIndex = 4;
-            this.VocalizerJoshG8S2CB.TabStop = false;
-            this.VocalizerJoshG8S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG8S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG8S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG8S1CB
-            // 
-            this.VocalizerJoshG8S1CB.EditValue = "";
-            this.VocalizerJoshG8S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerJoshG8S1CB.Name = "VocalizerJoshG8S1CB";
-            this.VocalizerJoshG8S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG8S1CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG8S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG8S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG8S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG8S1CB.TabIndex = 3;
-            this.VocalizerJoshG8S1CB.TabStop = false;
-            this.VocalizerJoshG8S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG8S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG8S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG7GP
-            // 
-            this.VocalizerJoshG7GP.Controls.Add(this.VocalizerJoshG7S5CB);
-            this.VocalizerJoshG7GP.Controls.Add(this.VocalizerJoshG7S4CB);
-            this.VocalizerJoshG7GP.Controls.Add(this.VocalizerJoshG7S3CB);
-            this.VocalizerJoshG7GP.Controls.Add(this.VocalizerJoshG7S2CB);
-            this.VocalizerJoshG7GP.Controls.Add(this.VocalizerJoshG7S1CB);
-            this.VocalizerJoshG7GP.Location = new System.Drawing.Point(3, 335);
-            this.VocalizerJoshG7GP.Name = "VocalizerJoshG7GP";
-            this.VocalizerJoshG7GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerJoshG7GP.TabIndex = 42;
-            this.VocalizerJoshG7GP.Text = "Group 7";
-            // 
-            // VocalizerJoshG7S5CB
-            // 
-            this.VocalizerJoshG7S5CB.EditValue = "";
-            this.VocalizerJoshG7S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerJoshG7S5CB.Name = "VocalizerJoshG7S5CB";
-            this.VocalizerJoshG7S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG7S5CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG7S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG7S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG7S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG7S5CB.TabIndex = 7;
-            this.VocalizerJoshG7S5CB.TabStop = false;
-            this.VocalizerJoshG7S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG7S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG7S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG7S4CB
-            // 
-            this.VocalizerJoshG7S4CB.EditValue = "";
-            this.VocalizerJoshG7S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerJoshG7S4CB.Name = "VocalizerJoshG7S4CB";
-            this.VocalizerJoshG7S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG7S4CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG7S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG7S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG7S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG7S4CB.TabIndex = 6;
-            this.VocalizerJoshG7S4CB.TabStop = false;
-            this.VocalizerJoshG7S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG7S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG7S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG7S3CB
-            // 
-            this.VocalizerJoshG7S3CB.EditValue = "";
-            this.VocalizerJoshG7S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerJoshG7S3CB.Name = "VocalizerJoshG7S3CB";
-            this.VocalizerJoshG7S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG7S3CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG7S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG7S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG7S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG7S3CB.TabIndex = 5;
-            this.VocalizerJoshG7S3CB.TabStop = false;
-            this.VocalizerJoshG7S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG7S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG7S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG7S2CB
-            // 
-            this.VocalizerJoshG7S2CB.EditValue = "";
-            this.VocalizerJoshG7S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerJoshG7S2CB.Name = "VocalizerJoshG7S2CB";
-            this.VocalizerJoshG7S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG7S2CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG7S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG7S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG7S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG7S2CB.TabIndex = 4;
-            this.VocalizerJoshG7S2CB.TabStop = false;
-            this.VocalizerJoshG7S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG7S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG7S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG7S1CB
-            // 
-            this.VocalizerJoshG7S1CB.EditValue = "";
-            this.VocalizerJoshG7S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerJoshG7S1CB.Name = "VocalizerJoshG7S1CB";
-            this.VocalizerJoshG7S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG7S1CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG7S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG7S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG7S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG7S1CB.TabIndex = 3;
-            this.VocalizerJoshG7S1CB.TabStop = false;
-            this.VocalizerJoshG7S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG7S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG7S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG6GP
-            // 
-            this.VocalizerJoshG6GP.Controls.Add(this.VocalizerJoshG6S5CB);
-            this.VocalizerJoshG6GP.Controls.Add(this.VocalizerJoshG6S4CB);
-            this.VocalizerJoshG6GP.Controls.Add(this.VocalizerJoshG6S3CB);
-            this.VocalizerJoshG6GP.Controls.Add(this.VocalizerJoshG6S2CB);
-            this.VocalizerJoshG6GP.Controls.Add(this.VocalizerJoshG6S1CB);
-            this.VocalizerJoshG6GP.Location = new System.Drawing.Point(355, 169);
-            this.VocalizerJoshG6GP.Name = "VocalizerJoshG6GP";
-            this.VocalizerJoshG6GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerJoshG6GP.TabIndex = 41;
-            this.VocalizerJoshG6GP.Text = "Group 6";
-            // 
-            // VocalizerJoshG6S5CB
-            // 
-            this.VocalizerJoshG6S5CB.EditValue = "";
-            this.VocalizerJoshG6S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerJoshG6S5CB.Name = "VocalizerJoshG6S5CB";
-            this.VocalizerJoshG6S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG6S5CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG6S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG6S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG6S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG6S5CB.TabIndex = 7;
-            this.VocalizerJoshG6S5CB.TabStop = false;
-            this.VocalizerJoshG6S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG6S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG6S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG6S4CB
-            // 
-            this.VocalizerJoshG6S4CB.EditValue = "";
-            this.VocalizerJoshG6S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerJoshG6S4CB.Name = "VocalizerJoshG6S4CB";
-            this.VocalizerJoshG6S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG6S4CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG6S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG6S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG6S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG6S4CB.TabIndex = 6;
-            this.VocalizerJoshG6S4CB.TabStop = false;
-            this.VocalizerJoshG6S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG6S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG6S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG6S3CB
-            // 
-            this.VocalizerJoshG6S3CB.EditValue = "";
-            this.VocalizerJoshG6S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerJoshG6S3CB.Name = "VocalizerJoshG6S3CB";
-            this.VocalizerJoshG6S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG6S3CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG6S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG6S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG6S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG6S3CB.TabIndex = 5;
-            this.VocalizerJoshG6S3CB.TabStop = false;
-            this.VocalizerJoshG6S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG6S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG6S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG6S2CB
-            // 
-            this.VocalizerJoshG6S2CB.EditValue = "";
-            this.VocalizerJoshG6S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerJoshG6S2CB.Name = "VocalizerJoshG6S2CB";
-            this.VocalizerJoshG6S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG6S2CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG6S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG6S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG6S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG6S2CB.TabIndex = 4;
-            this.VocalizerJoshG6S2CB.TabStop = false;
-            this.VocalizerJoshG6S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG6S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG6S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG6S1CB
-            // 
-            this.VocalizerJoshG6S1CB.EditValue = "";
-            this.VocalizerJoshG6S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerJoshG6S1CB.Name = "VocalizerJoshG6S1CB";
-            this.VocalizerJoshG6S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG6S1CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG6S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG6S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG6S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG6S1CB.TabIndex = 3;
-            this.VocalizerJoshG6S1CB.TabStop = false;
-            this.VocalizerJoshG6S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG6S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG6S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG5GP
-            // 
-            this.VocalizerJoshG5GP.Controls.Add(this.VocalizerJoshG5S5CB);
-            this.VocalizerJoshG5GP.Controls.Add(this.VocalizerJoshG5S4CB);
-            this.VocalizerJoshG5GP.Controls.Add(this.VocalizerJoshG5S3CB);
-            this.VocalizerJoshG5GP.Controls.Add(this.VocalizerJoshG5S2CB);
-            this.VocalizerJoshG5GP.Controls.Add(this.VocalizerJoshG5S1CB);
-            this.VocalizerJoshG5GP.Location = new System.Drawing.Point(179, 169);
-            this.VocalizerJoshG5GP.Name = "VocalizerJoshG5GP";
-            this.VocalizerJoshG5GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerJoshG5GP.TabIndex = 40;
-            this.VocalizerJoshG5GP.Text = "Group 5";
-            // 
-            // VocalizerJoshG5S5CB
-            // 
-            this.VocalizerJoshG5S5CB.EditValue = "";
-            this.VocalizerJoshG5S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerJoshG5S5CB.Name = "VocalizerJoshG5S5CB";
-            this.VocalizerJoshG5S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG5S5CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG5S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG5S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG5S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG5S5CB.TabIndex = 7;
-            this.VocalizerJoshG5S5CB.TabStop = false;
-            this.VocalizerJoshG5S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG5S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG5S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG5S4CB
-            // 
-            this.VocalizerJoshG5S4CB.EditValue = "";
-            this.VocalizerJoshG5S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerJoshG5S4CB.Name = "VocalizerJoshG5S4CB";
-            this.VocalizerJoshG5S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG5S4CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG5S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG5S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG5S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG5S4CB.TabIndex = 6;
-            this.VocalizerJoshG5S4CB.TabStop = false;
-            this.VocalizerJoshG5S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG5S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG5S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG5S3CB
-            // 
-            this.VocalizerJoshG5S3CB.EditValue = "";
-            this.VocalizerJoshG5S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerJoshG5S3CB.Name = "VocalizerJoshG5S3CB";
-            this.VocalizerJoshG5S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG5S3CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG5S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG5S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG5S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG5S3CB.TabIndex = 5;
-            this.VocalizerJoshG5S3CB.TabStop = false;
-            this.VocalizerJoshG5S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG5S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG5S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG5S2CB
-            // 
-            this.VocalizerJoshG5S2CB.EditValue = "";
-            this.VocalizerJoshG5S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerJoshG5S2CB.Name = "VocalizerJoshG5S2CB";
-            this.VocalizerJoshG5S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG5S2CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG5S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG5S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG5S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG5S2CB.TabIndex = 4;
-            this.VocalizerJoshG5S2CB.TabStop = false;
-            this.VocalizerJoshG5S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG5S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG5S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG5S1CB
-            // 
-            this.VocalizerJoshG5S1CB.EditValue = "";
-            this.VocalizerJoshG5S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerJoshG5S1CB.Name = "VocalizerJoshG5S1CB";
-            this.VocalizerJoshG5S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG5S1CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG5S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG5S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG5S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG5S1CB.TabIndex = 3;
-            this.VocalizerJoshG5S1CB.TabStop = false;
-            this.VocalizerJoshG5S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG5S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG5S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG4GP
-            // 
-            this.VocalizerJoshG4GP.Controls.Add(this.VocalizerJoshG4S5CB);
-            this.VocalizerJoshG4GP.Controls.Add(this.VocalizerJoshG4S4CB);
-            this.VocalizerJoshG4GP.Controls.Add(this.VocalizerJoshG4S3CB);
-            this.VocalizerJoshG4GP.Controls.Add(this.VocalizerJoshG4S2CB);
-            this.VocalizerJoshG4GP.Controls.Add(this.VocalizerJoshG4S1CB);
-            this.VocalizerJoshG4GP.Location = new System.Drawing.Point(3, 169);
-            this.VocalizerJoshG4GP.Name = "VocalizerJoshG4GP";
-            this.VocalizerJoshG4GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerJoshG4GP.TabIndex = 39;
-            this.VocalizerJoshG4GP.Text = "Group 4";
-            // 
-            // VocalizerJoshG4S5CB
-            // 
-            this.VocalizerJoshG4S5CB.EditValue = "";
-            this.VocalizerJoshG4S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerJoshG4S5CB.Name = "VocalizerJoshG4S5CB";
-            this.VocalizerJoshG4S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG4S5CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG4S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG4S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG4S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG4S5CB.TabIndex = 7;
-            this.VocalizerJoshG4S5CB.TabStop = false;
-            this.VocalizerJoshG4S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG4S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG4S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG4S4CB
-            // 
-            this.VocalizerJoshG4S4CB.EditValue = "";
-            this.VocalizerJoshG4S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerJoshG4S4CB.Name = "VocalizerJoshG4S4CB";
-            this.VocalizerJoshG4S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG4S4CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG4S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG4S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG4S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG4S4CB.TabIndex = 6;
-            this.VocalizerJoshG4S4CB.TabStop = false;
-            this.VocalizerJoshG4S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG4S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG4S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG4S3CB
-            // 
-            this.VocalizerJoshG4S3CB.EditValue = "";
-            this.VocalizerJoshG4S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerJoshG4S3CB.Name = "VocalizerJoshG4S3CB";
-            this.VocalizerJoshG4S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG4S3CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG4S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG4S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG4S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG4S3CB.TabIndex = 5;
-            this.VocalizerJoshG4S3CB.TabStop = false;
-            this.VocalizerJoshG4S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG4S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG4S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG4S2CB
-            // 
-            this.VocalizerJoshG4S2CB.EditValue = "";
-            this.VocalizerJoshG4S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerJoshG4S2CB.Name = "VocalizerJoshG4S2CB";
-            this.VocalizerJoshG4S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG4S2CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG4S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG4S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG4S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG4S2CB.TabIndex = 4;
-            this.VocalizerJoshG4S2CB.TabStop = false;
-            this.VocalizerJoshG4S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG4S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG4S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG4S1CB
-            // 
-            this.VocalizerJoshG4S1CB.EditValue = "";
-            this.VocalizerJoshG4S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerJoshG4S1CB.Name = "VocalizerJoshG4S1CB";
-            this.VocalizerJoshG4S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG4S1CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG4S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG4S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG4S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG4S1CB.TabIndex = 3;
-            this.VocalizerJoshG4S1CB.TabStop = false;
-            this.VocalizerJoshG4S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG4S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG4S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG3GP
-            // 
-            this.VocalizerJoshG3GP.Controls.Add(this.VocalizerJoshG3S5CB);
-            this.VocalizerJoshG3GP.Controls.Add(this.VocalizerJoshG3S4CB);
-            this.VocalizerJoshG3GP.Controls.Add(this.VocalizerJoshG3S3CB);
-            this.VocalizerJoshG3GP.Controls.Add(this.VocalizerJoshG3S2CB);
-            this.VocalizerJoshG3GP.Controls.Add(this.VocalizerJoshG3S1CB);
-            this.VocalizerJoshG3GP.Location = new System.Drawing.Point(355, 3);
-            this.VocalizerJoshG3GP.Name = "VocalizerJoshG3GP";
-            this.VocalizerJoshG3GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerJoshG3GP.TabIndex = 38;
-            this.VocalizerJoshG3GP.Text = "Group 3";
-            // 
-            // VocalizerJoshG3S5CB
-            // 
-            this.VocalizerJoshG3S5CB.EditValue = "";
-            this.VocalizerJoshG3S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerJoshG3S5CB.Name = "VocalizerJoshG3S5CB";
-            this.VocalizerJoshG3S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG3S5CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG3S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG3S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG3S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG3S5CB.TabIndex = 7;
-            this.VocalizerJoshG3S5CB.TabStop = false;
-            this.VocalizerJoshG3S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG3S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG3S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG3S4CB
-            // 
-            this.VocalizerJoshG3S4CB.EditValue = "";
-            this.VocalizerJoshG3S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerJoshG3S4CB.Name = "VocalizerJoshG3S4CB";
-            this.VocalizerJoshG3S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG3S4CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG3S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG3S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG3S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG3S4CB.TabIndex = 6;
-            this.VocalizerJoshG3S4CB.TabStop = false;
-            this.VocalizerJoshG3S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG3S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG3S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG3S3CB
-            // 
-            this.VocalizerJoshG3S3CB.EditValue = "";
-            this.VocalizerJoshG3S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerJoshG3S3CB.Name = "VocalizerJoshG3S3CB";
-            this.VocalizerJoshG3S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG3S3CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG3S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG3S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG3S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG3S3CB.TabIndex = 5;
-            this.VocalizerJoshG3S3CB.TabStop = false;
-            this.VocalizerJoshG3S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG3S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG3S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG3S2CB
-            // 
-            this.VocalizerJoshG3S2CB.EditValue = "";
-            this.VocalizerJoshG3S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerJoshG3S2CB.Name = "VocalizerJoshG3S2CB";
-            this.VocalizerJoshG3S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG3S2CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG3S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG3S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG3S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG3S2CB.TabIndex = 4;
-            this.VocalizerJoshG3S2CB.TabStop = false;
-            this.VocalizerJoshG3S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG3S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG3S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG3S1CB
-            // 
-            this.VocalizerJoshG3S1CB.EditValue = "";
-            this.VocalizerJoshG3S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerJoshG3S1CB.Name = "VocalizerJoshG3S1CB";
-            this.VocalizerJoshG3S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG3S1CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG3S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG3S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG3S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG3S1CB.TabIndex = 3;
-            this.VocalizerJoshG3S1CB.TabStop = false;
-            this.VocalizerJoshG3S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG3S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG3S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG2GP
-            // 
-            this.VocalizerJoshG2GP.Controls.Add(this.VocalizerJoshG2S5CB);
-            this.VocalizerJoshG2GP.Controls.Add(this.VocalizerJoshG2S4CB);
-            this.VocalizerJoshG2GP.Controls.Add(this.VocalizerJoshG2S3CB);
-            this.VocalizerJoshG2GP.Controls.Add(this.VocalizerJoshG2S2CB);
-            this.VocalizerJoshG2GP.Controls.Add(this.VocalizerJoshG2S1CB);
-            this.VocalizerJoshG2GP.Location = new System.Drawing.Point(179, 3);
-            this.VocalizerJoshG2GP.Name = "VocalizerJoshG2GP";
-            this.VocalizerJoshG2GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerJoshG2GP.TabIndex = 37;
-            this.VocalizerJoshG2GP.Text = "Group 2";
-            // 
-            // VocalizerJoshG2S5CB
-            // 
-            this.VocalizerJoshG2S5CB.EditValue = "";
-            this.VocalizerJoshG2S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerJoshG2S5CB.Name = "VocalizerJoshG2S5CB";
-            this.VocalizerJoshG2S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG2S5CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG2S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG2S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG2S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG2S5CB.TabIndex = 7;
-            this.VocalizerJoshG2S5CB.TabStop = false;
-            this.VocalizerJoshG2S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG2S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG2S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG2S4CB
-            // 
-            this.VocalizerJoshG2S4CB.EditValue = "";
-            this.VocalizerJoshG2S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerJoshG2S4CB.Name = "VocalizerJoshG2S4CB";
-            this.VocalizerJoshG2S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG2S4CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG2S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG2S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG2S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG2S4CB.TabIndex = 6;
-            this.VocalizerJoshG2S4CB.TabStop = false;
-            this.VocalizerJoshG2S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG2S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG2S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG2S3CB
-            // 
-            this.VocalizerJoshG2S3CB.EditValue = "";
-            this.VocalizerJoshG2S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerJoshG2S3CB.Name = "VocalizerJoshG2S3CB";
-            this.VocalizerJoshG2S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG2S3CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG2S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG2S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG2S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG2S3CB.TabIndex = 5;
-            this.VocalizerJoshG2S3CB.TabStop = false;
-            this.VocalizerJoshG2S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG2S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG2S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG2S2CB
-            // 
-            this.VocalizerJoshG2S2CB.EditValue = "";
-            this.VocalizerJoshG2S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerJoshG2S2CB.Name = "VocalizerJoshG2S2CB";
-            this.VocalizerJoshG2S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG2S2CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG2S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG2S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG2S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG2S2CB.TabIndex = 4;
-            this.VocalizerJoshG2S2CB.TabStop = false;
-            this.VocalizerJoshG2S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG2S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG2S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG2S1CB
-            // 
-            this.VocalizerJoshG2S1CB.EditValue = "";
-            this.VocalizerJoshG2S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerJoshG2S1CB.Name = "VocalizerJoshG2S1CB";
-            this.VocalizerJoshG2S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG2S1CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG2S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG2S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG2S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG2S1CB.TabIndex = 3;
-            this.VocalizerJoshG2S1CB.TabStop = false;
-            this.VocalizerJoshG2S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG2S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG2S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG1GP
-            // 
-            this.VocalizerJoshG1GP.Controls.Add(this.VocalizerJoshG1S5CB);
-            this.VocalizerJoshG1GP.Controls.Add(this.VocalizerJoshG1S4CB);
-            this.VocalizerJoshG1GP.Controls.Add(this.VocalizerJoshG1S3CB);
-            this.VocalizerJoshG1GP.Controls.Add(this.VocalizerJoshG1S2CB);
-            this.VocalizerJoshG1GP.Controls.Add(this.VocalizerJoshG1S1CB);
-            this.VocalizerJoshG1GP.Location = new System.Drawing.Point(3, 3);
-            this.VocalizerJoshG1GP.Name = "VocalizerJoshG1GP";
-            this.VocalizerJoshG1GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerJoshG1GP.TabIndex = 36;
-            this.VocalizerJoshG1GP.Text = "Group 1";
-            // 
-            // VocalizerJoshG1S5CB
-            // 
-            this.VocalizerJoshG1S5CB.EditValue = "";
-            this.VocalizerJoshG1S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerJoshG1S5CB.Name = "VocalizerJoshG1S5CB";
-            this.VocalizerJoshG1S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG1S5CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG1S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG1S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG1S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG1S5CB.TabIndex = 7;
-            this.VocalizerJoshG1S5CB.TabStop = false;
-            this.VocalizerJoshG1S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG1S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG1S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG1S4CB
-            // 
-            this.VocalizerJoshG1S4CB.EditValue = "";
-            this.VocalizerJoshG1S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerJoshG1S4CB.Name = "VocalizerJoshG1S4CB";
-            this.VocalizerJoshG1S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG1S4CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG1S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG1S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG1S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG1S4CB.TabIndex = 6;
-            this.VocalizerJoshG1S4CB.TabStop = false;
-            this.VocalizerJoshG1S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG1S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG1S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG1S3CB
-            // 
-            this.VocalizerJoshG1S3CB.EditValue = "";
-            this.VocalizerJoshG1S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerJoshG1S3CB.Name = "VocalizerJoshG1S3CB";
-            this.VocalizerJoshG1S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG1S3CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG1S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG1S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG1S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG1S3CB.TabIndex = 5;
-            this.VocalizerJoshG1S3CB.TabStop = false;
-            this.VocalizerJoshG1S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG1S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG1S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG1S2CB
-            // 
-            this.VocalizerJoshG1S2CB.EditValue = "";
-            this.VocalizerJoshG1S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerJoshG1S2CB.Name = "VocalizerJoshG1S2CB";
-            this.VocalizerJoshG1S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG1S2CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG1S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG1S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG1S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG1S2CB.TabIndex = 4;
-            this.VocalizerJoshG1S2CB.TabStop = false;
-            this.VocalizerJoshG1S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG1S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG1S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerJoshG1S1CB
-            // 
-            this.VocalizerJoshG1S1CB.EditValue = "";
-            this.VocalizerJoshG1S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerJoshG1S1CB.Name = "VocalizerJoshG1S1CB";
-            this.VocalizerJoshG1S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerJoshG1S1CB.Properties.AllowFocused = false;
-            this.VocalizerJoshG1S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerJoshG1S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerJoshG1S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerJoshG1S1CB.TabIndex = 3;
-            this.VocalizerJoshG1S1CB.TabStop = false;
-            this.VocalizerJoshG1S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG1S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG1S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG9GP
-            // 
-            this.VocalizerExcellaG9GP.Controls.Add(this.VocalizerExcellaG9S5CB);
-            this.VocalizerExcellaG9GP.Controls.Add(this.VocalizerExcellaG9S4CB);
-            this.VocalizerExcellaG9GP.Controls.Add(this.VocalizerExcellaG9S3CB);
-            this.VocalizerExcellaG9GP.Controls.Add(this.VocalizerExcellaG9S2CB);
-            this.VocalizerExcellaG9GP.Controls.Add(this.VocalizerExcellaG9S1CB);
-            this.VocalizerExcellaG9GP.Location = new System.Drawing.Point(355, 335);
-            this.VocalizerExcellaG9GP.Name = "VocalizerExcellaG9GP";
-            this.VocalizerExcellaG9GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerExcellaG9GP.TabIndex = 53;
-            this.VocalizerExcellaG9GP.Text = "Group 9";
-            // 
-            // VocalizerExcellaG9S5CB
-            // 
-            this.VocalizerExcellaG9S5CB.EditValue = "";
-            this.VocalizerExcellaG9S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerExcellaG9S5CB.Name = "VocalizerExcellaG9S5CB";
-            this.VocalizerExcellaG9S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG9S5CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG9S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG9S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG9S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG9S5CB.TabIndex = 7;
-            this.VocalizerExcellaG9S5CB.TabStop = false;
-            this.VocalizerExcellaG9S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG9S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG9S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG9S4CB
-            // 
-            this.VocalizerExcellaG9S4CB.EditValue = "";
-            this.VocalizerExcellaG9S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerExcellaG9S4CB.Name = "VocalizerExcellaG9S4CB";
-            this.VocalizerExcellaG9S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG9S4CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG9S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG9S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG9S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG9S4CB.TabIndex = 6;
-            this.VocalizerExcellaG9S4CB.TabStop = false;
-            this.VocalizerExcellaG9S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG9S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG9S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG9S3CB
-            // 
-            this.VocalizerExcellaG9S3CB.EditValue = "";
-            this.VocalizerExcellaG9S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerExcellaG9S3CB.Name = "VocalizerExcellaG9S3CB";
-            this.VocalizerExcellaG9S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG9S3CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG9S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG9S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG9S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG9S3CB.TabIndex = 5;
-            this.VocalizerExcellaG9S3CB.TabStop = false;
-            this.VocalizerExcellaG9S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG9S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG9S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG9S2CB
-            // 
-            this.VocalizerExcellaG9S2CB.EditValue = "";
-            this.VocalizerExcellaG9S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerExcellaG9S2CB.Name = "VocalizerExcellaG9S2CB";
-            this.VocalizerExcellaG9S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG9S2CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG9S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG9S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG9S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG9S2CB.TabIndex = 4;
-            this.VocalizerExcellaG9S2CB.TabStop = false;
-            this.VocalizerExcellaG9S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG9S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG9S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG9S1CB
-            // 
-            this.VocalizerExcellaG9S1CB.EditValue = "";
-            this.VocalizerExcellaG9S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerExcellaG9S1CB.Name = "VocalizerExcellaG9S1CB";
-            this.VocalizerExcellaG9S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG9S1CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG9S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG9S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG9S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG9S1CB.TabIndex = 3;
-            this.VocalizerExcellaG9S1CB.TabStop = false;
-            this.VocalizerExcellaG9S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG9S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG9S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG8GP
-            // 
-            this.VocalizerExcellaG8GP.Controls.Add(this.VocalizerExcellaG8S5CB);
-            this.VocalizerExcellaG8GP.Controls.Add(this.VocalizerExcellaG8S4CB);
-            this.VocalizerExcellaG8GP.Controls.Add(this.VocalizerExcellaG8S3CB);
-            this.VocalizerExcellaG8GP.Controls.Add(this.VocalizerExcellaG8S2CB);
-            this.VocalizerExcellaG8GP.Controls.Add(this.VocalizerExcellaG8S1CB);
-            this.VocalizerExcellaG8GP.Location = new System.Drawing.Point(179, 335);
-            this.VocalizerExcellaG8GP.Name = "VocalizerExcellaG8GP";
-            this.VocalizerExcellaG8GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerExcellaG8GP.TabIndex = 52;
-            this.VocalizerExcellaG8GP.Text = "Group 8";
-            // 
-            // VocalizerExcellaG8S5CB
-            // 
-            this.VocalizerExcellaG8S5CB.EditValue = "";
-            this.VocalizerExcellaG8S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerExcellaG8S5CB.Name = "VocalizerExcellaG8S5CB";
-            this.VocalizerExcellaG8S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG8S5CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG8S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG8S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG8S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG8S5CB.TabIndex = 7;
-            this.VocalizerExcellaG8S5CB.TabStop = false;
-            this.VocalizerExcellaG8S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG8S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG8S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG8S4CB
-            // 
-            this.VocalizerExcellaG8S4CB.EditValue = "";
-            this.VocalizerExcellaG8S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerExcellaG8S4CB.Name = "VocalizerExcellaG8S4CB";
-            this.VocalizerExcellaG8S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG8S4CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG8S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG8S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG8S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG8S4CB.TabIndex = 6;
-            this.VocalizerExcellaG8S4CB.TabStop = false;
-            this.VocalizerExcellaG8S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG8S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG8S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG8S3CB
-            // 
-            this.VocalizerExcellaG8S3CB.EditValue = "";
-            this.VocalizerExcellaG8S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerExcellaG8S3CB.Name = "VocalizerExcellaG8S3CB";
-            this.VocalizerExcellaG8S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG8S3CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG8S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG8S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG8S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG8S3CB.TabIndex = 5;
-            this.VocalizerExcellaG8S3CB.TabStop = false;
-            this.VocalizerExcellaG8S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG8S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG8S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG8S2CB
-            // 
-            this.VocalizerExcellaG8S2CB.EditValue = "";
-            this.VocalizerExcellaG8S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerExcellaG8S2CB.Name = "VocalizerExcellaG8S2CB";
-            this.VocalizerExcellaG8S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG8S2CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG8S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG8S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG8S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG8S2CB.TabIndex = 4;
-            this.VocalizerExcellaG8S2CB.TabStop = false;
-            this.VocalizerExcellaG8S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG8S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG8S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG8S1CB
-            // 
-            this.VocalizerExcellaG8S1CB.EditValue = "";
-            this.VocalizerExcellaG8S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerExcellaG8S1CB.Name = "VocalizerExcellaG8S1CB";
-            this.VocalizerExcellaG8S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG8S1CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG8S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG8S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG8S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG8S1CB.TabIndex = 3;
-            this.VocalizerExcellaG8S1CB.TabStop = false;
-            this.VocalizerExcellaG8S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG8S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG8S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG7GP
-            // 
-            this.VocalizerExcellaG7GP.Controls.Add(this.VocalizerExcellaG7S5CB);
-            this.VocalizerExcellaG7GP.Controls.Add(this.VocalizerExcellaG7S4CB);
-            this.VocalizerExcellaG7GP.Controls.Add(this.VocalizerExcellaG7S3CB);
-            this.VocalizerExcellaG7GP.Controls.Add(this.VocalizerExcellaG7S2CB);
-            this.VocalizerExcellaG7GP.Controls.Add(this.VocalizerExcellaG7S1CB);
-            this.VocalizerExcellaG7GP.Location = new System.Drawing.Point(3, 335);
-            this.VocalizerExcellaG7GP.Name = "VocalizerExcellaG7GP";
-            this.VocalizerExcellaG7GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerExcellaG7GP.TabIndex = 51;
-            this.VocalizerExcellaG7GP.Text = "Group 7";
-            // 
-            // VocalizerExcellaG7S5CB
-            // 
-            this.VocalizerExcellaG7S5CB.EditValue = "";
-            this.VocalizerExcellaG7S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerExcellaG7S5CB.Name = "VocalizerExcellaG7S5CB";
-            this.VocalizerExcellaG7S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG7S5CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG7S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG7S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG7S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG7S5CB.TabIndex = 7;
-            this.VocalizerExcellaG7S5CB.TabStop = false;
-            this.VocalizerExcellaG7S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG7S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG7S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG7S4CB
-            // 
-            this.VocalizerExcellaG7S4CB.EditValue = "";
-            this.VocalizerExcellaG7S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerExcellaG7S4CB.Name = "VocalizerExcellaG7S4CB";
-            this.VocalizerExcellaG7S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG7S4CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG7S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG7S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG7S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG7S4CB.TabIndex = 6;
-            this.VocalizerExcellaG7S4CB.TabStop = false;
-            this.VocalizerExcellaG7S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG7S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG7S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG7S3CB
-            // 
-            this.VocalizerExcellaG7S3CB.EditValue = "";
-            this.VocalizerExcellaG7S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerExcellaG7S3CB.Name = "VocalizerExcellaG7S3CB";
-            this.VocalizerExcellaG7S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG7S3CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG7S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG7S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG7S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG7S3CB.TabIndex = 5;
-            this.VocalizerExcellaG7S3CB.TabStop = false;
-            this.VocalizerExcellaG7S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG7S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG7S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG7S2CB
-            // 
-            this.VocalizerExcellaG7S2CB.EditValue = "";
-            this.VocalizerExcellaG7S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerExcellaG7S2CB.Name = "VocalizerExcellaG7S2CB";
-            this.VocalizerExcellaG7S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG7S2CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG7S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG7S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG7S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG7S2CB.TabIndex = 4;
-            this.VocalizerExcellaG7S2CB.TabStop = false;
-            this.VocalizerExcellaG7S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG7S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG7S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG7S1CB
-            // 
-            this.VocalizerExcellaG7S1CB.EditValue = "";
-            this.VocalizerExcellaG7S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerExcellaG7S1CB.Name = "VocalizerExcellaG7S1CB";
-            this.VocalizerExcellaG7S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG7S1CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG7S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG7S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG7S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG7S1CB.TabIndex = 3;
-            this.VocalizerExcellaG7S1CB.TabStop = false;
-            this.VocalizerExcellaG7S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG7S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG7S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG6GP
-            // 
-            this.VocalizerExcellaG6GP.Controls.Add(this.VocalizerExcellaG6S5CB);
-            this.VocalizerExcellaG6GP.Controls.Add(this.VocalizerExcellaG6S4CB);
-            this.VocalizerExcellaG6GP.Controls.Add(this.VocalizerExcellaG6S3CB);
-            this.VocalizerExcellaG6GP.Controls.Add(this.VocalizerExcellaG6S2CB);
-            this.VocalizerExcellaG6GP.Controls.Add(this.VocalizerExcellaG6S1CB);
-            this.VocalizerExcellaG6GP.Location = new System.Drawing.Point(355, 169);
-            this.VocalizerExcellaG6GP.Name = "VocalizerExcellaG6GP";
-            this.VocalizerExcellaG6GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerExcellaG6GP.TabIndex = 50;
-            this.VocalizerExcellaG6GP.Text = "Group 6";
-            // 
-            // VocalizerExcellaG6S5CB
-            // 
-            this.VocalizerExcellaG6S5CB.EditValue = "";
-            this.VocalizerExcellaG6S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerExcellaG6S5CB.Name = "VocalizerExcellaG6S5CB";
-            this.VocalizerExcellaG6S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG6S5CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG6S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG6S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG6S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG6S5CB.TabIndex = 7;
-            this.VocalizerExcellaG6S5CB.TabStop = false;
-            this.VocalizerExcellaG6S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG6S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG6S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG6S4CB
-            // 
-            this.VocalizerExcellaG6S4CB.EditValue = "";
-            this.VocalizerExcellaG6S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerExcellaG6S4CB.Name = "VocalizerExcellaG6S4CB";
-            this.VocalizerExcellaG6S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG6S4CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG6S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG6S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG6S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG6S4CB.TabIndex = 6;
-            this.VocalizerExcellaG6S4CB.TabStop = false;
-            this.VocalizerExcellaG6S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG6S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG6S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG6S3CB
-            // 
-            this.VocalizerExcellaG6S3CB.EditValue = "";
-            this.VocalizerExcellaG6S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerExcellaG6S3CB.Name = "VocalizerExcellaG6S3CB";
-            this.VocalizerExcellaG6S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG6S3CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG6S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG6S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG6S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG6S3CB.TabIndex = 5;
-            this.VocalizerExcellaG6S3CB.TabStop = false;
-            this.VocalizerExcellaG6S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG6S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG6S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG6S2CB
-            // 
-            this.VocalizerExcellaG6S2CB.EditValue = "";
-            this.VocalizerExcellaG6S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerExcellaG6S2CB.Name = "VocalizerExcellaG6S2CB";
-            this.VocalizerExcellaG6S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG6S2CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG6S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG6S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG6S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG6S2CB.TabIndex = 4;
-            this.VocalizerExcellaG6S2CB.TabStop = false;
-            this.VocalizerExcellaG6S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG6S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG6S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG6S1CB
-            // 
-            this.VocalizerExcellaG6S1CB.EditValue = "";
-            this.VocalizerExcellaG6S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerExcellaG6S1CB.Name = "VocalizerExcellaG6S1CB";
-            this.VocalizerExcellaG6S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG6S1CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG6S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG6S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG6S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG6S1CB.TabIndex = 3;
-            this.VocalizerExcellaG6S1CB.TabStop = false;
-            this.VocalizerExcellaG6S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG6S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG6S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG5GP
-            // 
-            this.VocalizerExcellaG5GP.Controls.Add(this.VocalizerExcellaG5S5CB);
-            this.VocalizerExcellaG5GP.Controls.Add(this.VocalizerExcellaG5S4CB);
-            this.VocalizerExcellaG5GP.Controls.Add(this.VocalizerExcellaG5S3CB);
-            this.VocalizerExcellaG5GP.Controls.Add(this.VocalizerExcellaG5S2CB);
-            this.VocalizerExcellaG5GP.Controls.Add(this.VocalizerExcellaG5S1CB);
-            this.VocalizerExcellaG5GP.Location = new System.Drawing.Point(179, 169);
-            this.VocalizerExcellaG5GP.Name = "VocalizerExcellaG5GP";
-            this.VocalizerExcellaG5GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerExcellaG5GP.TabIndex = 49;
-            this.VocalizerExcellaG5GP.Text = "Group 5";
-            // 
-            // VocalizerExcellaG5S5CB
-            // 
-            this.VocalizerExcellaG5S5CB.EditValue = "";
-            this.VocalizerExcellaG5S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerExcellaG5S5CB.Name = "VocalizerExcellaG5S5CB";
-            this.VocalizerExcellaG5S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG5S5CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG5S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG5S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG5S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG5S5CB.TabIndex = 7;
-            this.VocalizerExcellaG5S5CB.TabStop = false;
-            this.VocalizerExcellaG5S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG5S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG5S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG5S4CB
-            // 
-            this.VocalizerExcellaG5S4CB.EditValue = "";
-            this.VocalizerExcellaG5S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerExcellaG5S4CB.Name = "VocalizerExcellaG5S4CB";
-            this.VocalizerExcellaG5S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG5S4CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG5S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG5S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG5S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG5S4CB.TabIndex = 6;
-            this.VocalizerExcellaG5S4CB.TabStop = false;
-            this.VocalizerExcellaG5S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG5S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG5S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG5S3CB
-            // 
-            this.VocalizerExcellaG5S3CB.EditValue = "";
-            this.VocalizerExcellaG5S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerExcellaG5S3CB.Name = "VocalizerExcellaG5S3CB";
-            this.VocalizerExcellaG5S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG5S3CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG5S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG5S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG5S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG5S3CB.TabIndex = 5;
-            this.VocalizerExcellaG5S3CB.TabStop = false;
-            this.VocalizerExcellaG5S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG5S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG5S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG5S2CB
-            // 
-            this.VocalizerExcellaG5S2CB.EditValue = "";
-            this.VocalizerExcellaG5S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerExcellaG5S2CB.Name = "VocalizerExcellaG5S2CB";
-            this.VocalizerExcellaG5S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG5S2CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG5S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG5S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG5S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG5S2CB.TabIndex = 4;
-            this.VocalizerExcellaG5S2CB.TabStop = false;
-            this.VocalizerExcellaG5S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG5S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG5S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG5S1CB
-            // 
-            this.VocalizerExcellaG5S1CB.EditValue = "";
-            this.VocalizerExcellaG5S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerExcellaG5S1CB.Name = "VocalizerExcellaG5S1CB";
-            this.VocalizerExcellaG5S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG5S1CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG5S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG5S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG5S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG5S1CB.TabIndex = 3;
-            this.VocalizerExcellaG5S1CB.TabStop = false;
-            this.VocalizerExcellaG5S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG5S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG5S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG4GP
-            // 
-            this.VocalizerExcellaG4GP.Controls.Add(this.VocalizerExcellaG4S5CB);
-            this.VocalizerExcellaG4GP.Controls.Add(this.VocalizerExcellaG4S4CB);
-            this.VocalizerExcellaG4GP.Controls.Add(this.VocalizerExcellaG4S3CB);
-            this.VocalizerExcellaG4GP.Controls.Add(this.VocalizerExcellaG4S2CB);
-            this.VocalizerExcellaG4GP.Controls.Add(this.VocalizerExcellaG4S1CB);
-            this.VocalizerExcellaG4GP.Location = new System.Drawing.Point(3, 169);
-            this.VocalizerExcellaG4GP.Name = "VocalizerExcellaG4GP";
-            this.VocalizerExcellaG4GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerExcellaG4GP.TabIndex = 48;
-            this.VocalizerExcellaG4GP.Text = "Group 4";
-            // 
-            // VocalizerExcellaG4S5CB
-            // 
-            this.VocalizerExcellaG4S5CB.EditValue = "";
-            this.VocalizerExcellaG4S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerExcellaG4S5CB.Name = "VocalizerExcellaG4S5CB";
-            this.VocalizerExcellaG4S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG4S5CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG4S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG4S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG4S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG4S5CB.TabIndex = 7;
-            this.VocalizerExcellaG4S5CB.TabStop = false;
-            this.VocalizerExcellaG4S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG4S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG4S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG4S4CB
-            // 
-            this.VocalizerExcellaG4S4CB.EditValue = "";
-            this.VocalizerExcellaG4S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerExcellaG4S4CB.Name = "VocalizerExcellaG4S4CB";
-            this.VocalizerExcellaG4S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG4S4CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG4S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG4S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG4S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG4S4CB.TabIndex = 6;
-            this.VocalizerExcellaG4S4CB.TabStop = false;
-            this.VocalizerExcellaG4S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG4S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG4S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG4S3CB
-            // 
-            this.VocalizerExcellaG4S3CB.EditValue = "";
-            this.VocalizerExcellaG4S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerExcellaG4S3CB.Name = "VocalizerExcellaG4S3CB";
-            this.VocalizerExcellaG4S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG4S3CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG4S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG4S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG4S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG4S3CB.TabIndex = 5;
-            this.VocalizerExcellaG4S3CB.TabStop = false;
-            this.VocalizerExcellaG4S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG4S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG4S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG4S2CB
-            // 
-            this.VocalizerExcellaG4S2CB.EditValue = "";
-            this.VocalizerExcellaG4S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerExcellaG4S2CB.Name = "VocalizerExcellaG4S2CB";
-            this.VocalizerExcellaG4S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG4S2CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG4S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG4S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG4S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG4S2CB.TabIndex = 4;
-            this.VocalizerExcellaG4S2CB.TabStop = false;
-            this.VocalizerExcellaG4S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG4S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG4S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG4S1CB
-            // 
-            this.VocalizerExcellaG4S1CB.EditValue = "";
-            this.VocalizerExcellaG4S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerExcellaG4S1CB.Name = "VocalizerExcellaG4S1CB";
-            this.VocalizerExcellaG4S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG4S1CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG4S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG4S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG4S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG4S1CB.TabIndex = 3;
-            this.VocalizerExcellaG4S1CB.TabStop = false;
-            this.VocalizerExcellaG4S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG4S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG4S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG3GP
-            // 
-            this.VocalizerExcellaG3GP.Controls.Add(this.VocalizerExcellaG3S5CB);
-            this.VocalizerExcellaG3GP.Controls.Add(this.VocalizerExcellaG3S4CB);
-            this.VocalizerExcellaG3GP.Controls.Add(this.VocalizerExcellaG3S3CB);
-            this.VocalizerExcellaG3GP.Controls.Add(this.VocalizerExcellaG3S2CB);
-            this.VocalizerExcellaG3GP.Controls.Add(this.VocalizerExcellaG3S1CB);
-            this.VocalizerExcellaG3GP.Location = new System.Drawing.Point(355, 3);
-            this.VocalizerExcellaG3GP.Name = "VocalizerExcellaG3GP";
-            this.VocalizerExcellaG3GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerExcellaG3GP.TabIndex = 47;
-            this.VocalizerExcellaG3GP.Text = "Group 3";
-            // 
-            // VocalizerExcellaG3S5CB
-            // 
-            this.VocalizerExcellaG3S5CB.EditValue = "";
-            this.VocalizerExcellaG3S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerExcellaG3S5CB.Name = "VocalizerExcellaG3S5CB";
-            this.VocalizerExcellaG3S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG3S5CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG3S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG3S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG3S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG3S5CB.TabIndex = 7;
-            this.VocalizerExcellaG3S5CB.TabStop = false;
-            this.VocalizerExcellaG3S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG3S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG3S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG3S4CB
-            // 
-            this.VocalizerExcellaG3S4CB.EditValue = "";
-            this.VocalizerExcellaG3S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerExcellaG3S4CB.Name = "VocalizerExcellaG3S4CB";
-            this.VocalizerExcellaG3S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG3S4CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG3S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG3S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG3S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG3S4CB.TabIndex = 6;
-            this.VocalizerExcellaG3S4CB.TabStop = false;
-            this.VocalizerExcellaG3S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG3S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG3S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG3S3CB
-            // 
-            this.VocalizerExcellaG3S3CB.EditValue = "";
-            this.VocalizerExcellaG3S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerExcellaG3S3CB.Name = "VocalizerExcellaG3S3CB";
-            this.VocalizerExcellaG3S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG3S3CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG3S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG3S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG3S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG3S3CB.TabIndex = 5;
-            this.VocalizerExcellaG3S3CB.TabStop = false;
-            this.VocalizerExcellaG3S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG3S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG3S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG3S2CB
-            // 
-            this.VocalizerExcellaG3S2CB.EditValue = "";
-            this.VocalizerExcellaG3S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerExcellaG3S2CB.Name = "VocalizerExcellaG3S2CB";
-            this.VocalizerExcellaG3S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG3S2CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG3S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG3S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG3S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG3S2CB.TabIndex = 4;
-            this.VocalizerExcellaG3S2CB.TabStop = false;
-            this.VocalizerExcellaG3S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG3S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG3S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG3S1CB
-            // 
-            this.VocalizerExcellaG3S1CB.EditValue = "";
-            this.VocalizerExcellaG3S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerExcellaG3S1CB.Name = "VocalizerExcellaG3S1CB";
-            this.VocalizerExcellaG3S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG3S1CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG3S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG3S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG3S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG3S1CB.TabIndex = 3;
-            this.VocalizerExcellaG3S1CB.TabStop = false;
-            this.VocalizerExcellaG3S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG3S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG3S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG2GP
-            // 
-            this.VocalizerExcellaG2GP.Controls.Add(this.VocalizerExcellaG2S5CB);
-            this.VocalizerExcellaG2GP.Controls.Add(this.VocalizerExcellaG2S4CB);
-            this.VocalizerExcellaG2GP.Controls.Add(this.VocalizerExcellaG2S3CB);
-            this.VocalizerExcellaG2GP.Controls.Add(this.VocalizerExcellaG2S2CB);
-            this.VocalizerExcellaG2GP.Controls.Add(this.VocalizerExcellaG2S1CB);
-            this.VocalizerExcellaG2GP.Location = new System.Drawing.Point(179, 3);
-            this.VocalizerExcellaG2GP.Name = "VocalizerExcellaG2GP";
-            this.VocalizerExcellaG2GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerExcellaG2GP.TabIndex = 46;
-            this.VocalizerExcellaG2GP.Text = "Group 2";
-            // 
-            // VocalizerExcellaG2S5CB
-            // 
-            this.VocalizerExcellaG2S5CB.EditValue = "";
-            this.VocalizerExcellaG2S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerExcellaG2S5CB.Name = "VocalizerExcellaG2S5CB";
-            this.VocalizerExcellaG2S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG2S5CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG2S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG2S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG2S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG2S5CB.TabIndex = 7;
-            this.VocalizerExcellaG2S5CB.TabStop = false;
-            this.VocalizerExcellaG2S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG2S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG2S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG2S4CB
-            // 
-            this.VocalizerExcellaG2S4CB.EditValue = "";
-            this.VocalizerExcellaG2S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerExcellaG2S4CB.Name = "VocalizerExcellaG2S4CB";
-            this.VocalizerExcellaG2S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG2S4CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG2S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG2S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG2S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG2S4CB.TabIndex = 6;
-            this.VocalizerExcellaG2S4CB.TabStop = false;
-            this.VocalizerExcellaG2S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG2S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG2S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG2S3CB
-            // 
-            this.VocalizerExcellaG2S3CB.EditValue = "";
-            this.VocalizerExcellaG2S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerExcellaG2S3CB.Name = "VocalizerExcellaG2S3CB";
-            this.VocalizerExcellaG2S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG2S3CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG2S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG2S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG2S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG2S3CB.TabIndex = 5;
-            this.VocalizerExcellaG2S3CB.TabStop = false;
-            this.VocalizerExcellaG2S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG2S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG2S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG2S2CB
-            // 
-            this.VocalizerExcellaG2S2CB.EditValue = "";
-            this.VocalizerExcellaG2S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerExcellaG2S2CB.Name = "VocalizerExcellaG2S2CB";
-            this.VocalizerExcellaG2S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG2S2CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG2S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG2S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG2S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG2S2CB.TabIndex = 4;
-            this.VocalizerExcellaG2S2CB.TabStop = false;
-            this.VocalizerExcellaG2S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG2S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG2S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG2S1CB
-            // 
-            this.VocalizerExcellaG2S1CB.EditValue = "";
-            this.VocalizerExcellaG2S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerExcellaG2S1CB.Name = "VocalizerExcellaG2S1CB";
-            this.VocalizerExcellaG2S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG2S1CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG2S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG2S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG2S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG2S1CB.TabIndex = 3;
-            this.VocalizerExcellaG2S1CB.TabStop = false;
-            this.VocalizerExcellaG2S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG2S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG2S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG1GP
-            // 
-            this.VocalizerExcellaG1GP.Controls.Add(this.VocalizerExcellaG1S5CB);
-            this.VocalizerExcellaG1GP.Controls.Add(this.VocalizerExcellaG1S4CB);
-            this.VocalizerExcellaG1GP.Controls.Add(this.VocalizerExcellaG1S3CB);
-            this.VocalizerExcellaG1GP.Controls.Add(this.VocalizerExcellaG1S2CB);
-            this.VocalizerExcellaG1GP.Controls.Add(this.VocalizerExcellaG1S1CB);
-            this.VocalizerExcellaG1GP.Location = new System.Drawing.Point(3, 3);
-            this.VocalizerExcellaG1GP.Name = "VocalizerExcellaG1GP";
-            this.VocalizerExcellaG1GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerExcellaG1GP.TabIndex = 45;
-            this.VocalizerExcellaG1GP.Text = "Group 1";
-            // 
-            // VocalizerExcellaG1S5CB
-            // 
-            this.VocalizerExcellaG1S5CB.EditValue = "";
-            this.VocalizerExcellaG1S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerExcellaG1S5CB.Name = "VocalizerExcellaG1S5CB";
-            this.VocalizerExcellaG1S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG1S5CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG1S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG1S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG1S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG1S5CB.TabIndex = 7;
-            this.VocalizerExcellaG1S5CB.TabStop = false;
-            this.VocalizerExcellaG1S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG1S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG1S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG1S4CB
-            // 
-            this.VocalizerExcellaG1S4CB.EditValue = "";
-            this.VocalizerExcellaG1S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerExcellaG1S4CB.Name = "VocalizerExcellaG1S4CB";
-            this.VocalizerExcellaG1S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG1S4CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG1S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG1S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG1S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG1S4CB.TabIndex = 6;
-            this.VocalizerExcellaG1S4CB.TabStop = false;
-            this.VocalizerExcellaG1S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG1S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG1S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG1S3CB
-            // 
-            this.VocalizerExcellaG1S3CB.EditValue = "";
-            this.VocalizerExcellaG1S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerExcellaG1S3CB.Name = "VocalizerExcellaG1S3CB";
-            this.VocalizerExcellaG1S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG1S3CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG1S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG1S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG1S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG1S3CB.TabIndex = 5;
-            this.VocalizerExcellaG1S3CB.TabStop = false;
-            this.VocalizerExcellaG1S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG1S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG1S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG1S2CB
-            // 
-            this.VocalizerExcellaG1S2CB.EditValue = "";
-            this.VocalizerExcellaG1S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerExcellaG1S2CB.Name = "VocalizerExcellaG1S2CB";
-            this.VocalizerExcellaG1S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG1S2CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG1S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG1S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG1S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG1S2CB.TabIndex = 4;
-            this.VocalizerExcellaG1S2CB.TabStop = false;
-            this.VocalizerExcellaG1S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG1S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG1S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerExcellaG1S1CB
-            // 
-            this.VocalizerExcellaG1S1CB.EditValue = "";
-            this.VocalizerExcellaG1S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerExcellaG1S1CB.Name = "VocalizerExcellaG1S1CB";
-            this.VocalizerExcellaG1S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerExcellaG1S1CB.Properties.AllowFocused = false;
-            this.VocalizerExcellaG1S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerExcellaG1S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerExcellaG1S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerExcellaG1S1CB.TabIndex = 3;
-            this.VocalizerExcellaG1S1CB.TabStop = false;
-            this.VocalizerExcellaG1S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG1S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG1S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG9GP
-            // 
-            this.VocalizerBarryG9GP.Controls.Add(this.VocalizerBarryG9S5CB);
-            this.VocalizerBarryG9GP.Controls.Add(this.VocalizerBarryG9S4CB);
-            this.VocalizerBarryG9GP.Controls.Add(this.VocalizerBarryG9S3CB);
-            this.VocalizerBarryG9GP.Controls.Add(this.VocalizerBarryG9S2CB);
-            this.VocalizerBarryG9GP.Controls.Add(this.VocalizerBarryG9S1CB);
-            this.VocalizerBarryG9GP.Location = new System.Drawing.Point(355, 335);
-            this.VocalizerBarryG9GP.Name = "VocalizerBarryG9GP";
-            this.VocalizerBarryG9GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerBarryG9GP.TabIndex = 62;
-            this.VocalizerBarryG9GP.Text = "Group 9";
-            // 
-            // VocalizerBarryG9S5CB
-            // 
-            this.VocalizerBarryG9S5CB.EditValue = "";
-            this.VocalizerBarryG9S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerBarryG9S5CB.Name = "VocalizerBarryG9S5CB";
-            this.VocalizerBarryG9S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG9S5CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG9S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG9S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG9S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG9S5CB.TabIndex = 7;
-            this.VocalizerBarryG9S5CB.TabStop = false;
-            this.VocalizerBarryG9S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG9S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG9S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG9S4CB
-            // 
-            this.VocalizerBarryG9S4CB.EditValue = "";
-            this.VocalizerBarryG9S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerBarryG9S4CB.Name = "VocalizerBarryG9S4CB";
-            this.VocalizerBarryG9S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG9S4CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG9S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG9S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG9S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG9S4CB.TabIndex = 6;
-            this.VocalizerBarryG9S4CB.TabStop = false;
-            this.VocalizerBarryG9S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG9S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG9S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG9S3CB
-            // 
-            this.VocalizerBarryG9S3CB.EditValue = "";
-            this.VocalizerBarryG9S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerBarryG9S3CB.Name = "VocalizerBarryG9S3CB";
-            this.VocalizerBarryG9S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG9S3CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG9S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG9S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG9S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG9S3CB.TabIndex = 5;
-            this.VocalizerBarryG9S3CB.TabStop = false;
-            this.VocalizerBarryG9S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG9S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG9S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG9S2CB
-            // 
-            this.VocalizerBarryG9S2CB.EditValue = "";
-            this.VocalizerBarryG9S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerBarryG9S2CB.Name = "VocalizerBarryG9S2CB";
-            this.VocalizerBarryG9S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG9S2CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG9S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG9S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG9S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG9S2CB.TabIndex = 4;
-            this.VocalizerBarryG9S2CB.TabStop = false;
-            this.VocalizerBarryG9S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG9S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG9S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG9S1CB
-            // 
-            this.VocalizerBarryG9S1CB.EditValue = "";
-            this.VocalizerBarryG9S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerBarryG9S1CB.Name = "VocalizerBarryG9S1CB";
-            this.VocalizerBarryG9S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG9S1CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG9S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG9S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG9S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG9S1CB.TabIndex = 3;
-            this.VocalizerBarryG9S1CB.TabStop = false;
-            this.VocalizerBarryG9S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG9S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG9S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG8GP
-            // 
-            this.VocalizerBarryG8GP.Controls.Add(this.VocalizerBarryG8S5CB);
-            this.VocalizerBarryG8GP.Controls.Add(this.VocalizerBarryG8S4CB);
-            this.VocalizerBarryG8GP.Controls.Add(this.VocalizerBarryG8S3CB);
-            this.VocalizerBarryG8GP.Controls.Add(this.VocalizerBarryG8S2CB);
-            this.VocalizerBarryG8GP.Controls.Add(this.VocalizerBarryG8S1CB);
-            this.VocalizerBarryG8GP.Location = new System.Drawing.Point(179, 335);
-            this.VocalizerBarryG8GP.Name = "VocalizerBarryG8GP";
-            this.VocalizerBarryG8GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerBarryG8GP.TabIndex = 61;
-            this.VocalizerBarryG8GP.Text = "Group 8";
-            // 
-            // VocalizerBarryG8S5CB
-            // 
-            this.VocalizerBarryG8S5CB.EditValue = "";
-            this.VocalizerBarryG8S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerBarryG8S5CB.Name = "VocalizerBarryG8S5CB";
-            this.VocalizerBarryG8S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG8S5CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG8S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG8S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG8S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG8S5CB.TabIndex = 7;
-            this.VocalizerBarryG8S5CB.TabStop = false;
-            this.VocalizerBarryG8S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG8S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG8S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG8S4CB
-            // 
-            this.VocalizerBarryG8S4CB.EditValue = "";
-            this.VocalizerBarryG8S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerBarryG8S4CB.Name = "VocalizerBarryG8S4CB";
-            this.VocalizerBarryG8S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG8S4CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG8S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG8S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG8S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG8S4CB.TabIndex = 6;
-            this.VocalizerBarryG8S4CB.TabStop = false;
-            this.VocalizerBarryG8S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG8S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG8S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG8S3CB
-            // 
-            this.VocalizerBarryG8S3CB.EditValue = "";
-            this.VocalizerBarryG8S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerBarryG8S3CB.Name = "VocalizerBarryG8S3CB";
-            this.VocalizerBarryG8S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG8S3CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG8S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG8S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG8S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG8S3CB.TabIndex = 5;
-            this.VocalizerBarryG8S3CB.TabStop = false;
-            this.VocalizerBarryG8S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG8S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG8S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG8S2CB
-            // 
-            this.VocalizerBarryG8S2CB.EditValue = "";
-            this.VocalizerBarryG8S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerBarryG8S2CB.Name = "VocalizerBarryG8S2CB";
-            this.VocalizerBarryG8S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG8S2CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG8S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG8S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG8S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG8S2CB.TabIndex = 4;
-            this.VocalizerBarryG8S2CB.TabStop = false;
-            this.VocalizerBarryG8S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG8S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG8S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG8S1CB
-            // 
-            this.VocalizerBarryG8S1CB.EditValue = "";
-            this.VocalizerBarryG8S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerBarryG8S1CB.Name = "VocalizerBarryG8S1CB";
-            this.VocalizerBarryG8S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG8S1CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG8S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG8S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG8S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG8S1CB.TabIndex = 3;
-            this.VocalizerBarryG8S1CB.TabStop = false;
-            this.VocalizerBarryG8S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG8S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG8S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG7GP
-            // 
-            this.VocalizerBarryG7GP.Controls.Add(this.VocalizerBarryG7S5CB);
-            this.VocalizerBarryG7GP.Controls.Add(this.VocalizerBarryG7S4CB);
-            this.VocalizerBarryG7GP.Controls.Add(this.VocalizerBarryG7S3CB);
-            this.VocalizerBarryG7GP.Controls.Add(this.VocalizerBarryG7S2CB);
-            this.VocalizerBarryG7GP.Controls.Add(this.VocalizerBarryG7S1CB);
-            this.VocalizerBarryG7GP.Location = new System.Drawing.Point(3, 335);
-            this.VocalizerBarryG7GP.Name = "VocalizerBarryG7GP";
-            this.VocalizerBarryG7GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerBarryG7GP.TabIndex = 60;
-            this.VocalizerBarryG7GP.Text = "Group 7";
-            // 
-            // VocalizerBarryG7S5CB
-            // 
-            this.VocalizerBarryG7S5CB.EditValue = "";
-            this.VocalizerBarryG7S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerBarryG7S5CB.Name = "VocalizerBarryG7S5CB";
-            this.VocalizerBarryG7S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG7S5CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG7S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG7S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG7S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG7S5CB.TabIndex = 7;
-            this.VocalizerBarryG7S5CB.TabStop = false;
-            this.VocalizerBarryG7S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG7S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG7S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG7S4CB
-            // 
-            this.VocalizerBarryG7S4CB.EditValue = "";
-            this.VocalizerBarryG7S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerBarryG7S4CB.Name = "VocalizerBarryG7S4CB";
-            this.VocalizerBarryG7S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG7S4CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG7S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG7S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG7S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG7S4CB.TabIndex = 6;
-            this.VocalizerBarryG7S4CB.TabStop = false;
-            this.VocalizerBarryG7S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG7S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG7S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG7S3CB
-            // 
-            this.VocalizerBarryG7S3CB.EditValue = "";
-            this.VocalizerBarryG7S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerBarryG7S3CB.Name = "VocalizerBarryG7S3CB";
-            this.VocalizerBarryG7S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG7S3CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG7S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG7S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG7S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG7S3CB.TabIndex = 5;
-            this.VocalizerBarryG7S3CB.TabStop = false;
-            this.VocalizerBarryG7S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG7S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG7S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG7S2CB
-            // 
-            this.VocalizerBarryG7S2CB.EditValue = "";
-            this.VocalizerBarryG7S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerBarryG7S2CB.Name = "VocalizerBarryG7S2CB";
-            this.VocalizerBarryG7S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG7S2CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG7S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG7S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG7S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG7S2CB.TabIndex = 4;
-            this.VocalizerBarryG7S2CB.TabStop = false;
-            this.VocalizerBarryG7S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG7S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG7S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG7S1CB
-            // 
-            this.VocalizerBarryG7S1CB.EditValue = "";
-            this.VocalizerBarryG7S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerBarryG7S1CB.Name = "VocalizerBarryG7S1CB";
-            this.VocalizerBarryG7S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG7S1CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG7S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG7S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG7S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG7S1CB.TabIndex = 3;
-            this.VocalizerBarryG7S1CB.TabStop = false;
-            this.VocalizerBarryG7S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG7S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG7S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG6GP
-            // 
-            this.VocalizerBarryG6GP.Controls.Add(this.VocalizerBarryG6S5CB);
-            this.VocalizerBarryG6GP.Controls.Add(this.VocalizerBarryG6S4CB);
-            this.VocalizerBarryG6GP.Controls.Add(this.VocalizerBarryG6S3CB);
-            this.VocalizerBarryG6GP.Controls.Add(this.VocalizerBarryG6S2CB);
-            this.VocalizerBarryG6GP.Controls.Add(this.VocalizerBarryG6S1CB);
-            this.VocalizerBarryG6GP.Location = new System.Drawing.Point(355, 169);
-            this.VocalizerBarryG6GP.Name = "VocalizerBarryG6GP";
-            this.VocalizerBarryG6GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerBarryG6GP.TabIndex = 59;
-            this.VocalizerBarryG6GP.Text = "Group 6";
-            // 
-            // VocalizerBarryG6S5CB
-            // 
-            this.VocalizerBarryG6S5CB.EditValue = "";
-            this.VocalizerBarryG6S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerBarryG6S5CB.Name = "VocalizerBarryG6S5CB";
-            this.VocalizerBarryG6S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG6S5CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG6S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG6S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG6S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG6S5CB.TabIndex = 7;
-            this.VocalizerBarryG6S5CB.TabStop = false;
-            this.VocalizerBarryG6S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG6S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG6S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG6S4CB
-            // 
-            this.VocalizerBarryG6S4CB.EditValue = "";
-            this.VocalizerBarryG6S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerBarryG6S4CB.Name = "VocalizerBarryG6S4CB";
-            this.VocalizerBarryG6S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG6S4CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG6S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG6S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG6S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG6S4CB.TabIndex = 6;
-            this.VocalizerBarryG6S4CB.TabStop = false;
-            this.VocalizerBarryG6S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG6S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG6S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG6S3CB
-            // 
-            this.VocalizerBarryG6S3CB.EditValue = "";
-            this.VocalizerBarryG6S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerBarryG6S3CB.Name = "VocalizerBarryG6S3CB";
-            this.VocalizerBarryG6S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG6S3CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG6S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG6S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG6S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG6S3CB.TabIndex = 5;
-            this.VocalizerBarryG6S3CB.TabStop = false;
-            this.VocalizerBarryG6S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG6S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG6S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG6S2CB
-            // 
-            this.VocalizerBarryG6S2CB.EditValue = "";
-            this.VocalizerBarryG6S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerBarryG6S2CB.Name = "VocalizerBarryG6S2CB";
-            this.VocalizerBarryG6S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG6S2CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG6S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG6S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG6S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG6S2CB.TabIndex = 4;
-            this.VocalizerBarryG6S2CB.TabStop = false;
-            this.VocalizerBarryG6S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG6S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG6S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG6S1CB
-            // 
-            this.VocalizerBarryG6S1CB.EditValue = "";
-            this.VocalizerBarryG6S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerBarryG6S1CB.Name = "VocalizerBarryG6S1CB";
-            this.VocalizerBarryG6S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG6S1CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG6S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG6S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG6S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG6S1CB.TabIndex = 3;
-            this.VocalizerBarryG6S1CB.TabStop = false;
-            this.VocalizerBarryG6S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG6S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG6S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG5GP
-            // 
-            this.VocalizerBarryG5GP.Controls.Add(this.VocalizerBarryG5S5CB);
-            this.VocalizerBarryG5GP.Controls.Add(this.VocalizerBarryG5S4CB);
-            this.VocalizerBarryG5GP.Controls.Add(this.VocalizerBarryG5S3CB);
-            this.VocalizerBarryG5GP.Controls.Add(this.VocalizerBarryG5S2CB);
-            this.VocalizerBarryG5GP.Controls.Add(this.VocalizerBarryG5S1CB);
-            this.VocalizerBarryG5GP.Location = new System.Drawing.Point(179, 169);
-            this.VocalizerBarryG5GP.Name = "VocalizerBarryG5GP";
-            this.VocalizerBarryG5GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerBarryG5GP.TabIndex = 58;
-            this.VocalizerBarryG5GP.Text = "Group 5";
-            // 
-            // VocalizerBarryG5S5CB
-            // 
-            this.VocalizerBarryG5S5CB.EditValue = "";
-            this.VocalizerBarryG5S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerBarryG5S5CB.Name = "VocalizerBarryG5S5CB";
-            this.VocalizerBarryG5S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG5S5CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG5S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG5S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG5S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG5S5CB.TabIndex = 7;
-            this.VocalizerBarryG5S5CB.TabStop = false;
-            this.VocalizerBarryG5S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG5S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG5S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG5S4CB
-            // 
-            this.VocalizerBarryG5S4CB.EditValue = "";
-            this.VocalizerBarryG5S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerBarryG5S4CB.Name = "VocalizerBarryG5S4CB";
-            this.VocalizerBarryG5S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG5S4CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG5S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG5S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG5S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG5S4CB.TabIndex = 6;
-            this.VocalizerBarryG5S4CB.TabStop = false;
-            this.VocalizerBarryG5S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG5S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG5S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG5S3CB
-            // 
-            this.VocalizerBarryG5S3CB.EditValue = "";
-            this.VocalizerBarryG5S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerBarryG5S3CB.Name = "VocalizerBarryG5S3CB";
-            this.VocalizerBarryG5S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG5S3CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG5S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG5S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG5S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG5S3CB.TabIndex = 5;
-            this.VocalizerBarryG5S3CB.TabStop = false;
-            this.VocalizerBarryG5S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG5S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG5S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG5S2CB
-            // 
-            this.VocalizerBarryG5S2CB.EditValue = "";
-            this.VocalizerBarryG5S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerBarryG5S2CB.Name = "VocalizerBarryG5S2CB";
-            this.VocalizerBarryG5S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG5S2CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG5S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG5S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG5S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG5S2CB.TabIndex = 4;
-            this.VocalizerBarryG5S2CB.TabStop = false;
-            this.VocalizerBarryG5S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG5S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG5S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG5S1CB
-            // 
-            this.VocalizerBarryG5S1CB.EditValue = "";
-            this.VocalizerBarryG5S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerBarryG5S1CB.Name = "VocalizerBarryG5S1CB";
-            this.VocalizerBarryG5S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG5S1CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG5S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG5S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG5S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG5S1CB.TabIndex = 3;
-            this.VocalizerBarryG5S1CB.TabStop = false;
-            this.VocalizerBarryG5S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG5S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG5S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG4GP
-            // 
-            this.VocalizerBarryG4GP.Controls.Add(this.VocalizerBarryG4S5CB);
-            this.VocalizerBarryG4GP.Controls.Add(this.VocalizerBarryG4S4CB);
-            this.VocalizerBarryG4GP.Controls.Add(this.VocalizerBarryG4S3CB);
-            this.VocalizerBarryG4GP.Controls.Add(this.VocalizerBarryG4S2CB);
-            this.VocalizerBarryG4GP.Controls.Add(this.VocalizerBarryG4S1CB);
-            this.VocalizerBarryG4GP.Location = new System.Drawing.Point(3, 169);
-            this.VocalizerBarryG4GP.Name = "VocalizerBarryG4GP";
-            this.VocalizerBarryG4GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerBarryG4GP.TabIndex = 57;
-            this.VocalizerBarryG4GP.Text = "Group 4";
-            // 
-            // VocalizerBarryG4S5CB
-            // 
-            this.VocalizerBarryG4S5CB.EditValue = "";
-            this.VocalizerBarryG4S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerBarryG4S5CB.Name = "VocalizerBarryG4S5CB";
-            this.VocalizerBarryG4S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG4S5CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG4S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG4S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG4S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG4S5CB.TabIndex = 7;
-            this.VocalizerBarryG4S5CB.TabStop = false;
-            this.VocalizerBarryG4S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG4S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG4S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG4S4CB
-            // 
-            this.VocalizerBarryG4S4CB.EditValue = "";
-            this.VocalizerBarryG4S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerBarryG4S4CB.Name = "VocalizerBarryG4S4CB";
-            this.VocalizerBarryG4S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG4S4CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG4S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG4S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG4S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG4S4CB.TabIndex = 6;
-            this.VocalizerBarryG4S4CB.TabStop = false;
-            this.VocalizerBarryG4S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG4S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG4S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG4S3CB
-            // 
-            this.VocalizerBarryG4S3CB.EditValue = "";
-            this.VocalizerBarryG4S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerBarryG4S3CB.Name = "VocalizerBarryG4S3CB";
-            this.VocalizerBarryG4S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG4S3CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG4S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG4S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG4S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG4S3CB.TabIndex = 5;
-            this.VocalizerBarryG4S3CB.TabStop = false;
-            this.VocalizerBarryG4S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG4S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG4S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG4S2CB
-            // 
-            this.VocalizerBarryG4S2CB.EditValue = "";
-            this.VocalizerBarryG4S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerBarryG4S2CB.Name = "VocalizerBarryG4S2CB";
-            this.VocalizerBarryG4S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG4S2CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG4S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG4S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG4S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG4S2CB.TabIndex = 4;
-            this.VocalizerBarryG4S2CB.TabStop = false;
-            this.VocalizerBarryG4S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG4S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG4S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG4S1CB
-            // 
-            this.VocalizerBarryG4S1CB.EditValue = "";
-            this.VocalizerBarryG4S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerBarryG4S1CB.Name = "VocalizerBarryG4S1CB";
-            this.VocalizerBarryG4S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG4S1CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG4S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG4S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG4S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG4S1CB.TabIndex = 3;
-            this.VocalizerBarryG4S1CB.TabStop = false;
-            this.VocalizerBarryG4S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG4S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG4S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG3GP
-            // 
-            this.VocalizerBarryG3GP.Controls.Add(this.VocalizerBarryG3S5CB);
-            this.VocalizerBarryG3GP.Controls.Add(this.VocalizerBarryG3S4CB);
-            this.VocalizerBarryG3GP.Controls.Add(this.VocalizerBarryG3S3CB);
-            this.VocalizerBarryG3GP.Controls.Add(this.VocalizerBarryG3S2CB);
-            this.VocalizerBarryG3GP.Controls.Add(this.VocalizerBarryG3S1CB);
-            this.VocalizerBarryG3GP.Location = new System.Drawing.Point(355, 3);
-            this.VocalizerBarryG3GP.Name = "VocalizerBarryG3GP";
-            this.VocalizerBarryG3GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerBarryG3GP.TabIndex = 56;
-            this.VocalizerBarryG3GP.Text = "Group 3";
-            // 
-            // VocalizerBarryG3S5CB
-            // 
-            this.VocalizerBarryG3S5CB.EditValue = "";
-            this.VocalizerBarryG3S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerBarryG3S5CB.Name = "VocalizerBarryG3S5CB";
-            this.VocalizerBarryG3S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG3S5CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG3S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG3S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG3S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG3S5CB.TabIndex = 7;
-            this.VocalizerBarryG3S5CB.TabStop = false;
-            this.VocalizerBarryG3S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG3S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG3S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG3S4CB
-            // 
-            this.VocalizerBarryG3S4CB.EditValue = "";
-            this.VocalizerBarryG3S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerBarryG3S4CB.Name = "VocalizerBarryG3S4CB";
-            this.VocalizerBarryG3S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG3S4CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG3S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG3S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG3S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG3S4CB.TabIndex = 6;
-            this.VocalizerBarryG3S4CB.TabStop = false;
-            this.VocalizerBarryG3S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG3S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG3S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG3S3CB
-            // 
-            this.VocalizerBarryG3S3CB.EditValue = "";
-            this.VocalizerBarryG3S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerBarryG3S3CB.Name = "VocalizerBarryG3S3CB";
-            this.VocalizerBarryG3S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG3S3CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG3S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG3S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG3S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG3S3CB.TabIndex = 5;
-            this.VocalizerBarryG3S3CB.TabStop = false;
-            this.VocalizerBarryG3S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG3S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG3S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG3S2CB
-            // 
-            this.VocalizerBarryG3S2CB.EditValue = "";
-            this.VocalizerBarryG3S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerBarryG3S2CB.Name = "VocalizerBarryG3S2CB";
-            this.VocalizerBarryG3S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG3S2CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG3S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG3S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG3S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG3S2CB.TabIndex = 4;
-            this.VocalizerBarryG3S2CB.TabStop = false;
-            this.VocalizerBarryG3S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG3S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG3S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG3S1CB
-            // 
-            this.VocalizerBarryG3S1CB.EditValue = "";
-            this.VocalizerBarryG3S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerBarryG3S1CB.Name = "VocalizerBarryG3S1CB";
-            this.VocalizerBarryG3S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG3S1CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG3S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG3S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG3S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG3S1CB.TabIndex = 3;
-            this.VocalizerBarryG3S1CB.TabStop = false;
-            this.VocalizerBarryG3S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG3S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG3S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG2GP
-            // 
-            this.VocalizerBarryG2GP.Controls.Add(this.VocalizerBarryG2S5CB);
-            this.VocalizerBarryG2GP.Controls.Add(this.VocalizerBarryG2S4CB);
-            this.VocalizerBarryG2GP.Controls.Add(this.VocalizerBarryG2S3CB);
-            this.VocalizerBarryG2GP.Controls.Add(this.VocalizerBarryG2S2CB);
-            this.VocalizerBarryG2GP.Controls.Add(this.VocalizerBarryG2S1CB);
-            this.VocalizerBarryG2GP.Location = new System.Drawing.Point(179, 3);
-            this.VocalizerBarryG2GP.Name = "VocalizerBarryG2GP";
-            this.VocalizerBarryG2GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerBarryG2GP.TabIndex = 55;
-            this.VocalizerBarryG2GP.Text = "Group 2";
-            // 
-            // VocalizerBarryG2S5CB
-            // 
-            this.VocalizerBarryG2S5CB.EditValue = "";
-            this.VocalizerBarryG2S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerBarryG2S5CB.Name = "VocalizerBarryG2S5CB";
-            this.VocalizerBarryG2S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG2S5CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG2S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG2S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG2S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG2S5CB.TabIndex = 7;
-            this.VocalizerBarryG2S5CB.TabStop = false;
-            this.VocalizerBarryG2S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG2S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG2S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG2S4CB
-            // 
-            this.VocalizerBarryG2S4CB.EditValue = "";
-            this.VocalizerBarryG2S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerBarryG2S4CB.Name = "VocalizerBarryG2S4CB";
-            this.VocalizerBarryG2S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG2S4CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG2S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG2S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG2S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG2S4CB.TabIndex = 6;
-            this.VocalizerBarryG2S4CB.TabStop = false;
-            this.VocalizerBarryG2S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG2S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG2S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG2S3CB
-            // 
-            this.VocalizerBarryG2S3CB.EditValue = "";
-            this.VocalizerBarryG2S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerBarryG2S3CB.Name = "VocalizerBarryG2S3CB";
-            this.VocalizerBarryG2S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG2S3CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG2S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG2S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG2S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG2S3CB.TabIndex = 5;
-            this.VocalizerBarryG2S3CB.TabStop = false;
-            this.VocalizerBarryG2S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG2S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG2S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG2S2CB
-            // 
-            this.VocalizerBarryG2S2CB.EditValue = "";
-            this.VocalizerBarryG2S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerBarryG2S2CB.Name = "VocalizerBarryG2S2CB";
-            this.VocalizerBarryG2S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG2S2CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG2S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG2S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG2S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG2S2CB.TabIndex = 4;
-            this.VocalizerBarryG2S2CB.TabStop = false;
-            this.VocalizerBarryG2S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG2S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG2S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG2S1CB
-            // 
-            this.VocalizerBarryG2S1CB.EditValue = "";
-            this.VocalizerBarryG2S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerBarryG2S1CB.Name = "VocalizerBarryG2S1CB";
-            this.VocalizerBarryG2S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG2S1CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG2S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG2S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG2S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG2S1CB.TabIndex = 3;
-            this.VocalizerBarryG2S1CB.TabStop = false;
-            this.VocalizerBarryG2S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG2S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG2S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG1GP
-            // 
-            this.VocalizerBarryG1GP.Controls.Add(this.VocalizerBarryG1S5CB);
-            this.VocalizerBarryG1GP.Controls.Add(this.VocalizerBarryG1S4CB);
-            this.VocalizerBarryG1GP.Controls.Add(this.VocalizerBarryG1S3CB);
-            this.VocalizerBarryG1GP.Controls.Add(this.VocalizerBarryG1S2CB);
-            this.VocalizerBarryG1GP.Controls.Add(this.VocalizerBarryG1S1CB);
-            this.VocalizerBarryG1GP.Location = new System.Drawing.Point(3, 3);
-            this.VocalizerBarryG1GP.Name = "VocalizerBarryG1GP";
-            this.VocalizerBarryG1GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerBarryG1GP.TabIndex = 54;
-            this.VocalizerBarryG1GP.Text = "Group 1";
-            // 
-            // VocalizerBarryG1S5CB
-            // 
-            this.VocalizerBarryG1S5CB.EditValue = "";
-            this.VocalizerBarryG1S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerBarryG1S5CB.Name = "VocalizerBarryG1S5CB";
-            this.VocalizerBarryG1S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG1S5CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG1S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG1S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG1S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG1S5CB.TabIndex = 7;
-            this.VocalizerBarryG1S5CB.TabStop = false;
-            this.VocalizerBarryG1S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG1S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG1S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG1S4CB
-            // 
-            this.VocalizerBarryG1S4CB.EditValue = "";
-            this.VocalizerBarryG1S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerBarryG1S4CB.Name = "VocalizerBarryG1S4CB";
-            this.VocalizerBarryG1S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG1S4CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG1S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG1S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG1S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG1S4CB.TabIndex = 6;
-            this.VocalizerBarryG1S4CB.TabStop = false;
-            this.VocalizerBarryG1S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG1S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG1S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG1S3CB
-            // 
-            this.VocalizerBarryG1S3CB.EditValue = "";
-            this.VocalizerBarryG1S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerBarryG1S3CB.Name = "VocalizerBarryG1S3CB";
-            this.VocalizerBarryG1S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG1S3CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG1S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG1S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG1S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG1S3CB.TabIndex = 5;
-            this.VocalizerBarryG1S3CB.TabStop = false;
-            this.VocalizerBarryG1S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG1S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG1S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG1S2CB
-            // 
-            this.VocalizerBarryG1S2CB.EditValue = "";
-            this.VocalizerBarryG1S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerBarryG1S2CB.Name = "VocalizerBarryG1S2CB";
-            this.VocalizerBarryG1S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG1S2CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG1S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG1S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG1S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG1S2CB.TabIndex = 4;
-            this.VocalizerBarryG1S2CB.TabStop = false;
-            this.VocalizerBarryG1S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG1S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG1S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerBarryG1S1CB
-            // 
-            this.VocalizerBarryG1S1CB.EditValue = "";
-            this.VocalizerBarryG1S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerBarryG1S1CB.Name = "VocalizerBarryG1S1CB";
-            this.VocalizerBarryG1S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerBarryG1S1CB.Properties.AllowFocused = false;
-            this.VocalizerBarryG1S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerBarryG1S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerBarryG1S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerBarryG1S1CB.TabIndex = 3;
-            this.VocalizerBarryG1S1CB.TabStop = false;
-            this.VocalizerBarryG1S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG1S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG1S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG9GP
-            // 
-            this.VocalizerRebeccaG9GP.Controls.Add(this.VocalizerRebeccaG9S5CB);
-            this.VocalizerRebeccaG9GP.Controls.Add(this.VocalizerRebeccaG9S4CB);
-            this.VocalizerRebeccaG9GP.Controls.Add(this.VocalizerRebeccaG9S3CB);
-            this.VocalizerRebeccaG9GP.Controls.Add(this.VocalizerRebeccaG9S2CB);
-            this.VocalizerRebeccaG9GP.Controls.Add(this.VocalizerRebeccaG9S1CB);
-            this.VocalizerRebeccaG9GP.Location = new System.Drawing.Point(355, 335);
-            this.VocalizerRebeccaG9GP.Name = "VocalizerRebeccaG9GP";
-            this.VocalizerRebeccaG9GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerRebeccaG9GP.TabIndex = 71;
-            this.VocalizerRebeccaG9GP.Text = "Group 9";
-            // 
-            // VocalizerRebeccaG9S5CB
-            // 
-            this.VocalizerRebeccaG9S5CB.EditValue = "";
-            this.VocalizerRebeccaG9S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerRebeccaG9S5CB.Name = "VocalizerRebeccaG9S5CB";
-            this.VocalizerRebeccaG9S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG9S5CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG9S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG9S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG9S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG9S5CB.TabIndex = 7;
-            this.VocalizerRebeccaG9S5CB.TabStop = false;
-            this.VocalizerRebeccaG9S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG9S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG9S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG9S4CB
-            // 
-            this.VocalizerRebeccaG9S4CB.EditValue = "";
-            this.VocalizerRebeccaG9S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerRebeccaG9S4CB.Name = "VocalizerRebeccaG9S4CB";
-            this.VocalizerRebeccaG9S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG9S4CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG9S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG9S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG9S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG9S4CB.TabIndex = 6;
-            this.VocalizerRebeccaG9S4CB.TabStop = false;
-            this.VocalizerRebeccaG9S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG9S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG9S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG9S3CB
-            // 
-            this.VocalizerRebeccaG9S3CB.EditValue = "";
-            this.VocalizerRebeccaG9S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerRebeccaG9S3CB.Name = "VocalizerRebeccaG9S3CB";
-            this.VocalizerRebeccaG9S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG9S3CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG9S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG9S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG9S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG9S3CB.TabIndex = 5;
-            this.VocalizerRebeccaG9S3CB.TabStop = false;
-            this.VocalizerRebeccaG9S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG9S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG9S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG9S2CB
-            // 
-            this.VocalizerRebeccaG9S2CB.EditValue = "";
-            this.VocalizerRebeccaG9S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerRebeccaG9S2CB.Name = "VocalizerRebeccaG9S2CB";
-            this.VocalizerRebeccaG9S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG9S2CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG9S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG9S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG9S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG9S2CB.TabIndex = 4;
-            this.VocalizerRebeccaG9S2CB.TabStop = false;
-            this.VocalizerRebeccaG9S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG9S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG9S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG9S1CB
-            // 
-            this.VocalizerRebeccaG9S1CB.EditValue = "";
-            this.VocalizerRebeccaG9S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerRebeccaG9S1CB.Name = "VocalizerRebeccaG9S1CB";
-            this.VocalizerRebeccaG9S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG9S1CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG9S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG9S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG9S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG9S1CB.TabIndex = 3;
-            this.VocalizerRebeccaG9S1CB.TabStop = false;
-            this.VocalizerRebeccaG9S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG9S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG9S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG8GP
-            // 
-            this.VocalizerRebeccaG8GP.Controls.Add(this.VocalizerRebeccaG8S5CB);
-            this.VocalizerRebeccaG8GP.Controls.Add(this.VocalizerRebeccaG8S4CB);
-            this.VocalizerRebeccaG8GP.Controls.Add(this.VocalizerRebeccaG8S3CB);
-            this.VocalizerRebeccaG8GP.Controls.Add(this.VocalizerRebeccaG8S2CB);
-            this.VocalizerRebeccaG8GP.Controls.Add(this.VocalizerRebeccaG8S1CB);
-            this.VocalizerRebeccaG8GP.Location = new System.Drawing.Point(179, 335);
-            this.VocalizerRebeccaG8GP.Name = "VocalizerRebeccaG8GP";
-            this.VocalizerRebeccaG8GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerRebeccaG8GP.TabIndex = 70;
-            this.VocalizerRebeccaG8GP.Text = "Group 8";
-            // 
-            // VocalizerRebeccaG8S5CB
-            // 
-            this.VocalizerRebeccaG8S5CB.EditValue = "";
-            this.VocalizerRebeccaG8S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerRebeccaG8S5CB.Name = "VocalizerRebeccaG8S5CB";
-            this.VocalizerRebeccaG8S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG8S5CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG8S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG8S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG8S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG8S5CB.TabIndex = 7;
-            this.VocalizerRebeccaG8S5CB.TabStop = false;
-            this.VocalizerRebeccaG8S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG8S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG8S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG8S4CB
-            // 
-            this.VocalizerRebeccaG8S4CB.EditValue = "";
-            this.VocalizerRebeccaG8S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerRebeccaG8S4CB.Name = "VocalizerRebeccaG8S4CB";
-            this.VocalizerRebeccaG8S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG8S4CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG8S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG8S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG8S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG8S4CB.TabIndex = 6;
-            this.VocalizerRebeccaG8S4CB.TabStop = false;
-            this.VocalizerRebeccaG8S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG8S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG8S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG8S3CB
-            // 
-            this.VocalizerRebeccaG8S3CB.EditValue = "";
-            this.VocalizerRebeccaG8S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerRebeccaG8S3CB.Name = "VocalizerRebeccaG8S3CB";
-            this.VocalizerRebeccaG8S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG8S3CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG8S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG8S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG8S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG8S3CB.TabIndex = 5;
-            this.VocalizerRebeccaG8S3CB.TabStop = false;
-            this.VocalizerRebeccaG8S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG8S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG8S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG8S2CB
-            // 
-            this.VocalizerRebeccaG8S2CB.EditValue = "";
-            this.VocalizerRebeccaG8S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerRebeccaG8S2CB.Name = "VocalizerRebeccaG8S2CB";
-            this.VocalizerRebeccaG8S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG8S2CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG8S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG8S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG8S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG8S2CB.TabIndex = 4;
-            this.VocalizerRebeccaG8S2CB.TabStop = false;
-            this.VocalizerRebeccaG8S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG8S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG8S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG8S1CB
-            // 
-            this.VocalizerRebeccaG8S1CB.EditValue = "";
-            this.VocalizerRebeccaG8S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerRebeccaG8S1CB.Name = "VocalizerRebeccaG8S1CB";
-            this.VocalizerRebeccaG8S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG8S1CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG8S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG8S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG8S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG8S1CB.TabIndex = 3;
-            this.VocalizerRebeccaG8S1CB.TabStop = false;
-            this.VocalizerRebeccaG8S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG8S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG8S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG7GP
-            // 
-            this.VocalizerRebeccaG7GP.Controls.Add(this.VocalizerRebeccaG7S5CB);
-            this.VocalizerRebeccaG7GP.Controls.Add(this.VocalizerRebeccaG7S4CB);
-            this.VocalizerRebeccaG7GP.Controls.Add(this.VocalizerRebeccaG7S3CB);
-            this.VocalizerRebeccaG7GP.Controls.Add(this.VocalizerRebeccaG7S2CB);
-            this.VocalizerRebeccaG7GP.Controls.Add(this.VocalizerRebeccaG7S1CB);
-            this.VocalizerRebeccaG7GP.Location = new System.Drawing.Point(3, 335);
-            this.VocalizerRebeccaG7GP.Name = "VocalizerRebeccaG7GP";
-            this.VocalizerRebeccaG7GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerRebeccaG7GP.TabIndex = 69;
-            this.VocalizerRebeccaG7GP.Text = "Group 7";
-            // 
-            // VocalizerRebeccaG7S5CB
-            // 
-            this.VocalizerRebeccaG7S5CB.EditValue = "";
-            this.VocalizerRebeccaG7S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerRebeccaG7S5CB.Name = "VocalizerRebeccaG7S5CB";
-            this.VocalizerRebeccaG7S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG7S5CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG7S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG7S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG7S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG7S5CB.TabIndex = 7;
-            this.VocalizerRebeccaG7S5CB.TabStop = false;
-            this.VocalizerRebeccaG7S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG7S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG7S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG7S4CB
-            // 
-            this.VocalizerRebeccaG7S4CB.EditValue = "";
-            this.VocalizerRebeccaG7S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerRebeccaG7S4CB.Name = "VocalizerRebeccaG7S4CB";
-            this.VocalizerRebeccaG7S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG7S4CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG7S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG7S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG7S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG7S4CB.TabIndex = 6;
-            this.VocalizerRebeccaG7S4CB.TabStop = false;
-            this.VocalizerRebeccaG7S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG7S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG7S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG7S3CB
-            // 
-            this.VocalizerRebeccaG7S3CB.EditValue = "";
-            this.VocalizerRebeccaG7S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerRebeccaG7S3CB.Name = "VocalizerRebeccaG7S3CB";
-            this.VocalizerRebeccaG7S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG7S3CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG7S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG7S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG7S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG7S3CB.TabIndex = 5;
-            this.VocalizerRebeccaG7S3CB.TabStop = false;
-            this.VocalizerRebeccaG7S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG7S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG7S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG7S2CB
-            // 
-            this.VocalizerRebeccaG7S2CB.EditValue = "";
-            this.VocalizerRebeccaG7S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerRebeccaG7S2CB.Name = "VocalizerRebeccaG7S2CB";
-            this.VocalizerRebeccaG7S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG7S2CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG7S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG7S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG7S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG7S2CB.TabIndex = 4;
-            this.VocalizerRebeccaG7S2CB.TabStop = false;
-            this.VocalizerRebeccaG7S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG7S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG7S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG7S1CB
-            // 
-            this.VocalizerRebeccaG7S1CB.EditValue = "";
-            this.VocalizerRebeccaG7S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerRebeccaG7S1CB.Name = "VocalizerRebeccaG7S1CB";
-            this.VocalizerRebeccaG7S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG7S1CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG7S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG7S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG7S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG7S1CB.TabIndex = 3;
-            this.VocalizerRebeccaG7S1CB.TabStop = false;
-            this.VocalizerRebeccaG7S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG7S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG7S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG6GP
-            // 
-            this.VocalizerRebeccaG6GP.Controls.Add(this.VocalizerRebeccaG6S5CB);
-            this.VocalizerRebeccaG6GP.Controls.Add(this.VocalizerRebeccaG6S4CB);
-            this.VocalizerRebeccaG6GP.Controls.Add(this.VocalizerRebeccaG6S3CB);
-            this.VocalizerRebeccaG6GP.Controls.Add(this.VocalizerRebeccaG6S2CB);
-            this.VocalizerRebeccaG6GP.Controls.Add(this.VocalizerRebeccaG6S1CB);
-            this.VocalizerRebeccaG6GP.Location = new System.Drawing.Point(355, 169);
-            this.VocalizerRebeccaG6GP.Name = "VocalizerRebeccaG6GP";
-            this.VocalizerRebeccaG6GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerRebeccaG6GP.TabIndex = 68;
-            this.VocalizerRebeccaG6GP.Text = "Group 6";
-            // 
-            // VocalizerRebeccaG6S5CB
-            // 
-            this.VocalizerRebeccaG6S5CB.EditValue = "";
-            this.VocalizerRebeccaG6S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerRebeccaG6S5CB.Name = "VocalizerRebeccaG6S5CB";
-            this.VocalizerRebeccaG6S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG6S5CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG6S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG6S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG6S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG6S5CB.TabIndex = 7;
-            this.VocalizerRebeccaG6S5CB.TabStop = false;
-            this.VocalizerRebeccaG6S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG6S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG6S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG6S4CB
-            // 
-            this.VocalizerRebeccaG6S4CB.EditValue = "";
-            this.VocalizerRebeccaG6S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerRebeccaG6S4CB.Name = "VocalizerRebeccaG6S4CB";
-            this.VocalizerRebeccaG6S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG6S4CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG6S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG6S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG6S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG6S4CB.TabIndex = 6;
-            this.VocalizerRebeccaG6S4CB.TabStop = false;
-            this.VocalizerRebeccaG6S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG6S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG6S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG6S3CB
-            // 
-            this.VocalizerRebeccaG6S3CB.EditValue = "";
-            this.VocalizerRebeccaG6S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerRebeccaG6S3CB.Name = "VocalizerRebeccaG6S3CB";
-            this.VocalizerRebeccaG6S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG6S3CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG6S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG6S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG6S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG6S3CB.TabIndex = 5;
-            this.VocalizerRebeccaG6S3CB.TabStop = false;
-            this.VocalizerRebeccaG6S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG6S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG6S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG6S2CB
-            // 
-            this.VocalizerRebeccaG6S2CB.EditValue = "";
-            this.VocalizerRebeccaG6S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerRebeccaG6S2CB.Name = "VocalizerRebeccaG6S2CB";
-            this.VocalizerRebeccaG6S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG6S2CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG6S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG6S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG6S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG6S2CB.TabIndex = 4;
-            this.VocalizerRebeccaG6S2CB.TabStop = false;
-            this.VocalizerRebeccaG6S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG6S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG6S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG6S1CB
-            // 
-            this.VocalizerRebeccaG6S1CB.EditValue = "";
-            this.VocalizerRebeccaG6S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerRebeccaG6S1CB.Name = "VocalizerRebeccaG6S1CB";
-            this.VocalizerRebeccaG6S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG6S1CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG6S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG6S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG6S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG6S1CB.TabIndex = 3;
-            this.VocalizerRebeccaG6S1CB.TabStop = false;
-            this.VocalizerRebeccaG6S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG6S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG6S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG5GP
-            // 
-            this.VocalizerRebeccaG5GP.Controls.Add(this.VocalizerRebeccaG5S5CB);
-            this.VocalizerRebeccaG5GP.Controls.Add(this.VocalizerRebeccaG5S4CB);
-            this.VocalizerRebeccaG5GP.Controls.Add(this.VocalizerRebeccaG5S3CB);
-            this.VocalizerRebeccaG5GP.Controls.Add(this.VocalizerRebeccaG5S2CB);
-            this.VocalizerRebeccaG5GP.Controls.Add(this.VocalizerRebeccaG5S1CB);
-            this.VocalizerRebeccaG5GP.Location = new System.Drawing.Point(179, 169);
-            this.VocalizerRebeccaG5GP.Name = "VocalizerRebeccaG5GP";
-            this.VocalizerRebeccaG5GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerRebeccaG5GP.TabIndex = 67;
-            this.VocalizerRebeccaG5GP.Text = "Group 5";
-            // 
-            // VocalizerRebeccaG5S5CB
-            // 
-            this.VocalizerRebeccaG5S5CB.EditValue = "";
-            this.VocalizerRebeccaG5S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerRebeccaG5S5CB.Name = "VocalizerRebeccaG5S5CB";
-            this.VocalizerRebeccaG5S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG5S5CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG5S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG5S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG5S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG5S5CB.TabIndex = 7;
-            this.VocalizerRebeccaG5S5CB.TabStop = false;
-            this.VocalizerRebeccaG5S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG5S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG5S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG5S4CB
-            // 
-            this.VocalizerRebeccaG5S4CB.EditValue = "";
-            this.VocalizerRebeccaG5S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerRebeccaG5S4CB.Name = "VocalizerRebeccaG5S4CB";
-            this.VocalizerRebeccaG5S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG5S4CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG5S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG5S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG5S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG5S4CB.TabIndex = 6;
-            this.VocalizerRebeccaG5S4CB.TabStop = false;
-            this.VocalizerRebeccaG5S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG5S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG5S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG5S3CB
-            // 
-            this.VocalizerRebeccaG5S3CB.EditValue = "";
-            this.VocalizerRebeccaG5S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerRebeccaG5S3CB.Name = "VocalizerRebeccaG5S3CB";
-            this.VocalizerRebeccaG5S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG5S3CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG5S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG5S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG5S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG5S3CB.TabIndex = 5;
-            this.VocalizerRebeccaG5S3CB.TabStop = false;
-            this.VocalizerRebeccaG5S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG5S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG5S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG5S2CB
-            // 
-            this.VocalizerRebeccaG5S2CB.EditValue = "";
-            this.VocalizerRebeccaG5S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerRebeccaG5S2CB.Name = "VocalizerRebeccaG5S2CB";
-            this.VocalizerRebeccaG5S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG5S2CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG5S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG5S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG5S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG5S2CB.TabIndex = 4;
-            this.VocalizerRebeccaG5S2CB.TabStop = false;
-            this.VocalizerRebeccaG5S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG5S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG5S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG5S1CB
-            // 
-            this.VocalizerRebeccaG5S1CB.EditValue = "";
-            this.VocalizerRebeccaG5S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerRebeccaG5S1CB.Name = "VocalizerRebeccaG5S1CB";
-            this.VocalizerRebeccaG5S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG5S1CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG5S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG5S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG5S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG5S1CB.TabIndex = 3;
-            this.VocalizerRebeccaG5S1CB.TabStop = false;
-            this.VocalizerRebeccaG5S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG5S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG5S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG4GP
-            // 
-            this.VocalizerRebeccaG4GP.Controls.Add(this.VocalizerRebeccaG4S5CB);
-            this.VocalizerRebeccaG4GP.Controls.Add(this.VocalizerRebeccaG4S4CB);
-            this.VocalizerRebeccaG4GP.Controls.Add(this.VocalizerRebeccaG4S3CB);
-            this.VocalizerRebeccaG4GP.Controls.Add(this.VocalizerRebeccaG4S2CB);
-            this.VocalizerRebeccaG4GP.Controls.Add(this.VocalizerRebeccaG4S1CB);
-            this.VocalizerRebeccaG4GP.Location = new System.Drawing.Point(3, 169);
-            this.VocalizerRebeccaG4GP.Name = "VocalizerRebeccaG4GP";
-            this.VocalizerRebeccaG4GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerRebeccaG4GP.TabIndex = 66;
-            this.VocalizerRebeccaG4GP.Text = "Group 4";
-            // 
-            // VocalizerRebeccaG4S5CB
-            // 
-            this.VocalizerRebeccaG4S5CB.EditValue = "";
-            this.VocalizerRebeccaG4S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerRebeccaG4S5CB.Name = "VocalizerRebeccaG4S5CB";
-            this.VocalizerRebeccaG4S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG4S5CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG4S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG4S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG4S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG4S5CB.TabIndex = 7;
-            this.VocalizerRebeccaG4S5CB.TabStop = false;
-            this.VocalizerRebeccaG4S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG4S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG4S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG4S4CB
-            // 
-            this.VocalizerRebeccaG4S4CB.EditValue = "";
-            this.VocalizerRebeccaG4S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerRebeccaG4S4CB.Name = "VocalizerRebeccaG4S4CB";
-            this.VocalizerRebeccaG4S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG4S4CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG4S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG4S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG4S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG4S4CB.TabIndex = 6;
-            this.VocalizerRebeccaG4S4CB.TabStop = false;
-            this.VocalizerRebeccaG4S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG4S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG4S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG4S3CB
-            // 
-            this.VocalizerRebeccaG4S3CB.EditValue = "";
-            this.VocalizerRebeccaG4S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerRebeccaG4S3CB.Name = "VocalizerRebeccaG4S3CB";
-            this.VocalizerRebeccaG4S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG4S3CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG4S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG4S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG4S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG4S3CB.TabIndex = 5;
-            this.VocalizerRebeccaG4S3CB.TabStop = false;
-            this.VocalizerRebeccaG4S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG4S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG4S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG4S2CB
-            // 
-            this.VocalizerRebeccaG4S2CB.EditValue = "";
-            this.VocalizerRebeccaG4S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerRebeccaG4S2CB.Name = "VocalizerRebeccaG4S2CB";
-            this.VocalizerRebeccaG4S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG4S2CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG4S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG4S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG4S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG4S2CB.TabIndex = 4;
-            this.VocalizerRebeccaG4S2CB.TabStop = false;
-            this.VocalizerRebeccaG4S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG4S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG4S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG4S1CB
-            // 
-            this.VocalizerRebeccaG4S1CB.EditValue = "";
-            this.VocalizerRebeccaG4S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerRebeccaG4S1CB.Name = "VocalizerRebeccaG4S1CB";
-            this.VocalizerRebeccaG4S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG4S1CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG4S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG4S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG4S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG4S1CB.TabIndex = 3;
-            this.VocalizerRebeccaG4S1CB.TabStop = false;
-            this.VocalizerRebeccaG4S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG4S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG4S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG3GP
-            // 
-            this.VocalizerRebeccaG3GP.Controls.Add(this.VocalizerRebeccaG3S5CB);
-            this.VocalizerRebeccaG3GP.Controls.Add(this.VocalizerRebeccaG3S4CB);
-            this.VocalizerRebeccaG3GP.Controls.Add(this.VocalizerRebeccaG3S3CB);
-            this.VocalizerRebeccaG3GP.Controls.Add(this.VocalizerRebeccaG3S2CB);
-            this.VocalizerRebeccaG3GP.Controls.Add(this.VocalizerRebeccaG3S1CB);
-            this.VocalizerRebeccaG3GP.Location = new System.Drawing.Point(355, 3);
-            this.VocalizerRebeccaG3GP.Name = "VocalizerRebeccaG3GP";
-            this.VocalizerRebeccaG3GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerRebeccaG3GP.TabIndex = 65;
-            this.VocalizerRebeccaG3GP.Text = "Group 3";
-            // 
-            // VocalizerRebeccaG3S5CB
-            // 
-            this.VocalizerRebeccaG3S5CB.EditValue = "";
-            this.VocalizerRebeccaG3S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerRebeccaG3S5CB.Name = "VocalizerRebeccaG3S5CB";
-            this.VocalizerRebeccaG3S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG3S5CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG3S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG3S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG3S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG3S5CB.TabIndex = 7;
-            this.VocalizerRebeccaG3S5CB.TabStop = false;
-            this.VocalizerRebeccaG3S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG3S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG3S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG3S4CB
-            // 
-            this.VocalizerRebeccaG3S4CB.EditValue = "";
-            this.VocalizerRebeccaG3S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerRebeccaG3S4CB.Name = "VocalizerRebeccaG3S4CB";
-            this.VocalizerRebeccaG3S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG3S4CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG3S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG3S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG3S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG3S4CB.TabIndex = 6;
-            this.VocalizerRebeccaG3S4CB.TabStop = false;
-            this.VocalizerRebeccaG3S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG3S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG3S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG3S3CB
-            // 
-            this.VocalizerRebeccaG3S3CB.EditValue = "";
-            this.VocalizerRebeccaG3S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerRebeccaG3S3CB.Name = "VocalizerRebeccaG3S3CB";
-            this.VocalizerRebeccaG3S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG3S3CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG3S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG3S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG3S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG3S3CB.TabIndex = 5;
-            this.VocalizerRebeccaG3S3CB.TabStop = false;
-            this.VocalizerRebeccaG3S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG3S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG3S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG3S2CB
-            // 
-            this.VocalizerRebeccaG3S2CB.EditValue = "";
-            this.VocalizerRebeccaG3S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerRebeccaG3S2CB.Name = "VocalizerRebeccaG3S2CB";
-            this.VocalizerRebeccaG3S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG3S2CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG3S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG3S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG3S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG3S2CB.TabIndex = 4;
-            this.VocalizerRebeccaG3S2CB.TabStop = false;
-            this.VocalizerRebeccaG3S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG3S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG3S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG3S1CB
-            // 
-            this.VocalizerRebeccaG3S1CB.EditValue = "";
-            this.VocalizerRebeccaG3S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerRebeccaG3S1CB.Name = "VocalizerRebeccaG3S1CB";
-            this.VocalizerRebeccaG3S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG3S1CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG3S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG3S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG3S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG3S1CB.TabIndex = 3;
-            this.VocalizerRebeccaG3S1CB.TabStop = false;
-            this.VocalizerRebeccaG3S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG3S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG3S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG2GP
-            // 
-            this.VocalizerRebeccaG2GP.Controls.Add(this.VocalizerRebeccaG2S5CB);
-            this.VocalizerRebeccaG2GP.Controls.Add(this.VocalizerRebeccaG2S4CB);
-            this.VocalizerRebeccaG2GP.Controls.Add(this.VocalizerRebeccaG2S3CB);
-            this.VocalizerRebeccaG2GP.Controls.Add(this.VocalizerRebeccaG2S2CB);
-            this.VocalizerRebeccaG2GP.Controls.Add(this.VocalizerRebeccaG2S1CB);
-            this.VocalizerRebeccaG2GP.Location = new System.Drawing.Point(179, 3);
-            this.VocalizerRebeccaG2GP.Name = "VocalizerRebeccaG2GP";
-            this.VocalizerRebeccaG2GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerRebeccaG2GP.TabIndex = 64;
-            this.VocalizerRebeccaG2GP.Text = "Group 2";
-            // 
-            // VocalizerRebeccaG2S5CB
-            // 
-            this.VocalizerRebeccaG2S5CB.EditValue = "";
-            this.VocalizerRebeccaG2S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerRebeccaG2S5CB.Name = "VocalizerRebeccaG2S5CB";
-            this.VocalizerRebeccaG2S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG2S5CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG2S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG2S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG2S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG2S5CB.TabIndex = 7;
-            this.VocalizerRebeccaG2S5CB.TabStop = false;
-            this.VocalizerRebeccaG2S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG2S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG2S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG2S4CB
-            // 
-            this.VocalizerRebeccaG2S4CB.EditValue = "";
-            this.VocalizerRebeccaG2S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerRebeccaG2S4CB.Name = "VocalizerRebeccaG2S4CB";
-            this.VocalizerRebeccaG2S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG2S4CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG2S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG2S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG2S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG2S4CB.TabIndex = 6;
-            this.VocalizerRebeccaG2S4CB.TabStop = false;
-            this.VocalizerRebeccaG2S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG2S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG2S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG2S3CB
-            // 
-            this.VocalizerRebeccaG2S3CB.EditValue = "";
-            this.VocalizerRebeccaG2S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerRebeccaG2S3CB.Name = "VocalizerRebeccaG2S3CB";
-            this.VocalizerRebeccaG2S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG2S3CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG2S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG2S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG2S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG2S3CB.TabIndex = 5;
-            this.VocalizerRebeccaG2S3CB.TabStop = false;
-            this.VocalizerRebeccaG2S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG2S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG2S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG2S2CB
-            // 
-            this.VocalizerRebeccaG2S2CB.EditValue = "";
-            this.VocalizerRebeccaG2S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerRebeccaG2S2CB.Name = "VocalizerRebeccaG2S2CB";
-            this.VocalizerRebeccaG2S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG2S2CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG2S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG2S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG2S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG2S2CB.TabIndex = 4;
-            this.VocalizerRebeccaG2S2CB.TabStop = false;
-            this.VocalizerRebeccaG2S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG2S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG2S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG2S1CB
-            // 
-            this.VocalizerRebeccaG2S1CB.EditValue = "";
-            this.VocalizerRebeccaG2S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerRebeccaG2S1CB.Name = "VocalizerRebeccaG2S1CB";
-            this.VocalizerRebeccaG2S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG2S1CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG2S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG2S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG2S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG2S1CB.TabIndex = 3;
-            this.VocalizerRebeccaG2S1CB.TabStop = false;
-            this.VocalizerRebeccaG2S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG2S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG2S1CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG1GP
-            // 
-            this.VocalizerRebeccaG1GP.Controls.Add(this.VocalizerRebeccaG1S5CB);
-            this.VocalizerRebeccaG1GP.Controls.Add(this.VocalizerRebeccaG1S4CB);
-            this.VocalizerRebeccaG1GP.Controls.Add(this.VocalizerRebeccaG1S3CB);
-            this.VocalizerRebeccaG1GP.Controls.Add(this.VocalizerRebeccaG1S2CB);
-            this.VocalizerRebeccaG1GP.Controls.Add(this.VocalizerRebeccaG1S1CB);
-            this.VocalizerRebeccaG1GP.Location = new System.Drawing.Point(3, 3);
-            this.VocalizerRebeccaG1GP.Name = "VocalizerRebeccaG1GP";
-            this.VocalizerRebeccaG1GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerRebeccaG1GP.TabIndex = 63;
-            this.VocalizerRebeccaG1GP.Text = "Group 1";
-            // 
-            // VocalizerRebeccaG1S5CB
-            // 
-            this.VocalizerRebeccaG1S5CB.EditValue = "";
-            this.VocalizerRebeccaG1S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerRebeccaG1S5CB.Name = "VocalizerRebeccaG1S5CB";
-            this.VocalizerRebeccaG1S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG1S5CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG1S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG1S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG1S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG1S5CB.TabIndex = 7;
-            this.VocalizerRebeccaG1S5CB.TabStop = false;
-            this.VocalizerRebeccaG1S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG1S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG1S5CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG1S4CB
-            // 
-            this.VocalizerRebeccaG1S4CB.EditValue = "";
-            this.VocalizerRebeccaG1S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerRebeccaG1S4CB.Name = "VocalizerRebeccaG1S4CB";
-            this.VocalizerRebeccaG1S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG1S4CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG1S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG1S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG1S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG1S4CB.TabIndex = 6;
-            this.VocalizerRebeccaG1S4CB.TabStop = false;
-            this.VocalizerRebeccaG1S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG1S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG1S4CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG1S3CB
-            // 
-            this.VocalizerRebeccaG1S3CB.EditValue = "";
-            this.VocalizerRebeccaG1S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerRebeccaG1S3CB.Name = "VocalizerRebeccaG1S3CB";
-            this.VocalizerRebeccaG1S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG1S3CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG1S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG1S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG1S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG1S3CB.TabIndex = 5;
-            this.VocalizerRebeccaG1S3CB.TabStop = false;
-            this.VocalizerRebeccaG1S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG1S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG1S3CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG1S2CB
-            // 
-            this.VocalizerRebeccaG1S2CB.EditValue = "";
-            this.VocalizerRebeccaG1S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerRebeccaG1S2CB.Name = "VocalizerRebeccaG1S2CB";
-            this.VocalizerRebeccaG1S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG1S2CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG1S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG1S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG1S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG1S2CB.TabIndex = 4;
-            this.VocalizerRebeccaG1S2CB.TabStop = false;
-            this.VocalizerRebeccaG1S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG1S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG1S2CB.ToolTipTitle = "Melee Kill Seconds";
-            // 
-            // VocalizerRebeccaG1S1CB
-            // 
-            this.VocalizerRebeccaG1S1CB.EditValue = "";
-            this.VocalizerRebeccaG1S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerRebeccaG1S1CB.Name = "VocalizerRebeccaG1S1CB";
-            this.VocalizerRebeccaG1S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG1S1CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG1S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG1S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG1S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG1S1CB.TabIndex = 3;
-            this.VocalizerRebeccaG1S1CB.TabStop = false;
-            this.VocalizerRebeccaG1S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG1S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG1S1CB.ToolTipTitle = "Melee Kill Seconds";
+            // NoFPSCapCE
+            // 
+            this.NoFPSCapCE.Location = new System.Drawing.Point(138, 92);
+            this.NoFPSCapCE.Name = "NoFPSCapCE";
+            this.NoFPSCapCE.Properties.AllowFocused = false;
+            this.NoFPSCapCE.Properties.Caption = "Uncap FPS";
+            this.NoFPSCapCE.Size = new System.Drawing.Size(141, 20);
+            this.NoFPSCapCE.TabIndex = 23;
             // 
             // App
             // 
@@ -24179,70 +24191,70 @@ namespace GameX
             this.VocalizerGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerTabControl)).EndInit();
             this.VocalizerTabControl.ResumeLayout(false);
-            this.VocalizerWeskerTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9GP)).EndInit();
-            this.VocalizerWeskerG9GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8GP)).EndInit();
-            this.VocalizerWeskerG8GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7GP)).EndInit();
-            this.VocalizerWeskerG7GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6GP)).EndInit();
-            this.VocalizerWeskerG6GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5GP)).EndInit();
-            this.VocalizerWeskerG5GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4GP)).EndInit();
-            this.VocalizerWeskerG4GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3GP)).EndInit();
-            this.VocalizerWeskerG3GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2GP)).EndInit();
-            this.VocalizerWeskerG2GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1GP)).EndInit();
-            this.VocalizerWeskerG1GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1S1CB.Properties)).EndInit();
+            this.VocalizerRebeccaTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9GP)).EndInit();
+            this.VocalizerRebeccaG9GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8GP)).EndInit();
+            this.VocalizerRebeccaG8GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7GP)).EndInit();
+            this.VocalizerRebeccaG7GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6GP)).EndInit();
+            this.VocalizerRebeccaG6GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5GP)).EndInit();
+            this.VocalizerRebeccaG5GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4GP)).EndInit();
+            this.VocalizerRebeccaG4GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3GP)).EndInit();
+            this.VocalizerRebeccaG3GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2GP)).EndInit();
+            this.VocalizerRebeccaG2GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1GP)).EndInit();
+            this.VocalizerRebeccaG1GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S1CB.Properties)).EndInit();
             this.VocalizerChrisTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerChrisG9GP)).EndInit();
             this.VocalizerChrisG9GP.ResumeLayout(false);
@@ -24435,10 +24447,262 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerJillG1S3CB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerJillG1S2CB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerJillG1S1CB.Properties)).EndInit();
+            this.VocalizerWeskerTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9GP)).EndInit();
+            this.VocalizerWeskerG9GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG9S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8GP)).EndInit();
+            this.VocalizerWeskerG8GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG8S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7GP)).EndInit();
+            this.VocalizerWeskerG7GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG7S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6GP)).EndInit();
+            this.VocalizerWeskerG6GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG6S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5GP)).EndInit();
+            this.VocalizerWeskerG5GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG5S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4GP)).EndInit();
+            this.VocalizerWeskerG4GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG4S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3GP)).EndInit();
+            this.VocalizerWeskerG3GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG3S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2GP)).EndInit();
+            this.VocalizerWeskerG2GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG2S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1GP)).EndInit();
+            this.VocalizerWeskerG1GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerWeskerG1S1CB.Properties)).EndInit();
             this.VocalizerJoshTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9GP)).EndInit();
+            this.VocalizerJoshG9GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8GP)).EndInit();
+            this.VocalizerJoshG8GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7GP)).EndInit();
+            this.VocalizerJoshG7GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6GP)).EndInit();
+            this.VocalizerJoshG6GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5GP)).EndInit();
+            this.VocalizerJoshG5GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4GP)).EndInit();
+            this.VocalizerJoshG4GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3GP)).EndInit();
+            this.VocalizerJoshG3GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2GP)).EndInit();
+            this.VocalizerJoshG2GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1GP)).EndInit();
+            this.VocalizerJoshG1GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1S1CB.Properties)).EndInit();
             this.VocalizerExcellaTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9GP)).EndInit();
+            this.VocalizerExcellaG9GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8GP)).EndInit();
+            this.VocalizerExcellaG8GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7GP)).EndInit();
+            this.VocalizerExcellaG7GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6GP)).EndInit();
+            this.VocalizerExcellaG6GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5GP)).EndInit();
+            this.VocalizerExcellaG5GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4GP)).EndInit();
+            this.VocalizerExcellaG4GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3GP)).EndInit();
+            this.VocalizerExcellaG3GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2GP)).EndInit();
+            this.VocalizerExcellaG2GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1GP)).EndInit();
+            this.VocalizerExcellaG1GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1S1CB.Properties)).EndInit();
             this.VocalizerBarryTab.ResumeLayout(false);
-            this.VocalizerRebeccaTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9GP)).EndInit();
+            this.VocalizerBarryG9GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8GP)).EndInit();
+            this.VocalizerBarryG8GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7GP)).EndInit();
+            this.VocalizerBarryG7GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6GP)).EndInit();
+            this.VocalizerBarryG6GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5GP)).EndInit();
+            this.VocalizerBarryG5GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4GP)).EndInit();
+            this.VocalizerBarryG4GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3GP)).EndInit();
+            this.VocalizerBarryG3GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2GP)).EndInit();
+            this.VocalizerBarryG2GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1GP)).EndInit();
+            this.VocalizerBarryG1GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S1CB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerSettingsGP)).EndInit();
             this.VocalizerSettingsGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerStatusGP)).EndInit();
@@ -25234,258 +25498,7 @@ namespace GameX
             this.ConsoleGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9GP)).EndInit();
-            this.VocalizerJoshG9GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG9S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8GP)).EndInit();
-            this.VocalizerJoshG8GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG8S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7GP)).EndInit();
-            this.VocalizerJoshG7GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG7S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6GP)).EndInit();
-            this.VocalizerJoshG6GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG6S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5GP)).EndInit();
-            this.VocalizerJoshG5GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG5S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4GP)).EndInit();
-            this.VocalizerJoshG4GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG4S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3GP)).EndInit();
-            this.VocalizerJoshG3GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG3S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2GP)).EndInit();
-            this.VocalizerJoshG2GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG2S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1GP)).EndInit();
-            this.VocalizerJoshG1GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerJoshG1S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9GP)).EndInit();
-            this.VocalizerExcellaG9GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG9S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8GP)).EndInit();
-            this.VocalizerExcellaG8GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG8S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7GP)).EndInit();
-            this.VocalizerExcellaG7GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG7S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6GP)).EndInit();
-            this.VocalizerExcellaG6GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG6S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5GP)).EndInit();
-            this.VocalizerExcellaG5GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG5S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4GP)).EndInit();
-            this.VocalizerExcellaG4GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG4S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3GP)).EndInit();
-            this.VocalizerExcellaG3GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG3S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2GP)).EndInit();
-            this.VocalizerExcellaG2GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG2S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1GP)).EndInit();
-            this.VocalizerExcellaG1GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerExcellaG1S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9GP)).EndInit();
-            this.VocalizerBarryG9GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG9S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8GP)).EndInit();
-            this.VocalizerBarryG8GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG8S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7GP)).EndInit();
-            this.VocalizerBarryG7GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG7S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6GP)).EndInit();
-            this.VocalizerBarryG6GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG6S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5GP)).EndInit();
-            this.VocalizerBarryG5GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG5S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4GP)).EndInit();
-            this.VocalizerBarryG4GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG4S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3GP)).EndInit();
-            this.VocalizerBarryG3GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG3S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2GP)).EndInit();
-            this.VocalizerBarryG2GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG2S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1GP)).EndInit();
-            this.VocalizerBarryG1GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9GP)).EndInit();
-            this.VocalizerRebeccaG9GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8GP)).EndInit();
-            this.VocalizerRebeccaG8GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7GP)).EndInit();
-            this.VocalizerRebeccaG7GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6GP)).EndInit();
-            this.VocalizerRebeccaG6GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5GP)).EndInit();
-            this.VocalizerRebeccaG5GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4GP)).EndInit();
-            this.VocalizerRebeccaG4GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3GP)).EndInit();
-            this.VocalizerRebeccaG3GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2GP)).EndInit();
-            this.VocalizerRebeccaG2GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1GP)).EndInit();
-            this.VocalizerRebeccaG1GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NoFPSCapCE.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -26760,6 +26773,7 @@ namespace GameX
         private DevExpress.XtraEditors.ComboBoxEdit VocalizerRebeccaG1S3CB;
         private DevExpress.XtraEditors.ComboBoxEdit VocalizerRebeccaG1S2CB;
         private DevExpress.XtraEditors.ComboBoxEdit VocalizerRebeccaG1S1CB;
+        private DevExpress.XtraEditors.CheckEdit NoFPSCapCE;
     }
 }
 

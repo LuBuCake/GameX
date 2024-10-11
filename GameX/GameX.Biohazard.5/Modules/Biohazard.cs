@@ -50,6 +50,12 @@ namespace GameX.Modules
 
         #region Props
 
+        public static float FPSCap
+        {
+            get { return Memory.Read<float>("re5dx9.exe", 0x00E3986C, 0x3C); }
+            set { Memory.Write(value, "re5dx9.exe", 0x00E3986C, 0x3C); }
+        }
+
         public static int GameMode
         {
             get { return Memory.Read<int>("re5dx9.exe", 0x00DA383C, 0x954, 0x2088); }
@@ -90,7 +96,7 @@ namespace GameX.Modules
         {
             get
             {
-                byte[] bytes = Memory.ReadBytes(32, "re5dx9.exe", 0xDA383C, 0x86200);
+                byte[] bytes = Memory.ReadBytes(32, "re5dx9.exe", 0x00DA383C, 0x86200);
                 char[] chars = System.Text.Encoding.UTF8.GetString(bytes).ToCharArray();
 
                 return new string(chars).Trim();
@@ -237,7 +243,7 @@ namespace GameX.Modules
 
             if (Address > 0)
             {
-                Memory.WriteBytes(new[] { Value }, "", Address);
+                Memory.Write(Value, "", Address);
             }
         }
 
@@ -253,7 +259,7 @@ namespace GameX.Modules
 
         public static void EnableColorFilter(bool Enable)
         {
-            Memory.WriteBytes(Enable ? new byte[] { 0xE9, 0x51, 0x04, 0x00, 0x00, 0x90 } : new byte[] { 0x0F, 0x84, 0x50, 0x04, 0x00, 0x00 }, "re5dx9.exe", 0x3C7113);
+            //Memory.WriteBytes(Enable ? new byte[] { 0xE9, 0x51, 0x04, 0x00, 0x00, 0x90 } : new byte[] { 0x0F, 0x84, 0x50, 0x04, 0x00, 0x00 }, "re5dx9.exe", 0x3C7113);
             Memory.WriteBytes(Enable ? new byte[] { 0xE9, 0x88, 0x66, 0x00, 0x00, 0x90 } : new byte[] { 0x0F, 0x87, 0x87, 0x66, 0x00, 0x00 }, "re5dx9.exe", 0x945D8);
         }
 
