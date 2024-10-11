@@ -17,6 +17,7 @@ using GameX.Enum;
 using GameX.Database.Type;
 using GameX.Database.ViewBag;
 using DevExpress.XtraEditors.Controls;
+using DevExpress.Data.Helpers;
 
 namespace GameX
 {
@@ -1473,6 +1474,9 @@ namespace GameX
             VocalizerCharSelectCB.SelectedIndexChanged += VocalizerCharCombo_IndexChanged;
             VocalizerCharSelectCB.SelectedIndex = 0;
 
+            VocalizerSaveGroupsButton.Click += VocalizerGroups_Save;
+            VocalizerLoadGroupsButton.Click += VocalizerGroups_Load;
+
             VocalizerTabControl.SelectedTabPageIndex = 0;
             VocalizerEnableCE.Enabled = false;
 
@@ -1562,7 +1566,7 @@ namespace GameX
                     return Verified;
 
                 Terminal.WriteLine("[App] Game found, validating.");
-                Text = "GameX - Resident Evil 5 - Validanting";
+                Text = "GameX - Resident Evil 5 - Validating";
 
                 return Verified;
             }
@@ -2605,21 +2609,6 @@ namespace GameX
                 VocalizerHotkeys.Add(ChooseVocalizerHotkey(Group));
             }
 
-            for (int Char = 0; Char < 8; Char++)
-            {
-                if (VocalizerLines[Char] == null)
-                    VocalizerLines[Char] = new List<List<int>>();
-
-                for (int Group = 0; Group < 9; Group++)
-                {
-                    if (VocalizerLines[Char][Group] == null)
-                        VocalizerLines[Char][Group] = new List<int>();
-
-                    for (int Slot = 0; Slot < 5; Slot++)
-                        VocalizerLines[Char][Group][Slot] = ChooseVocalizerLine(Char, Group, Slot);
-                }
-            }
-
             Settings Setts = new Settings()
             {
                 UpdateRate = UpdateModeComboBoxEdit.SelectedIndex,
@@ -2642,8 +2631,7 @@ namespace GameX
                 MeleeKillSeconds = MeleeKillCB.SelectedIndex,
                 ComboTimerDuration = ComboTimerCB.SelectedIndex,
                 ComboBonusTimerDuration = ComboBonusTimerCB.SelectedIndex,
-                VocalizerHotkeys = VocalizerHotkeys,
-                VocalizerLines = VocalizerLines
+                VocalizerHotkeys = VocalizerHotkeys
             };
 
             try
@@ -2713,18 +2701,6 @@ namespace GameX
                 for (int Group = 0; Group < 9; Group++)
                     ChooseVocalizerHotkey(Group, true, Setts.VocalizerHotkeys[Group]);
 
-            if (Setts.VocalizerLines != null)
-            {
-                for (int Char = 0; Char < 8; Char++)
-                {
-                    for (int Group = 0; Group < 9; Group++)
-                    {
-                        for (int Slot = 0; Slot < 5; Slot++)
-                            ChooseVocalizerLine(Char, Group, Slot, true, Setts.VocalizerLines[Char][Group][Slot]);
-                    }
-                }
-            }
-
             if ((Setts.ControllerAim && ControllerAimButton.Text == "Enable") || (!Setts.ControllerAim && ControllerAimButton.Text == "Disable"))
                 EnableDisable_StateChanged(ControllerAimButton, null);
 
@@ -2735,6 +2711,57 @@ namespace GameX
                 Utility.MessageBox_Information("Settings loaded.");
 
             Terminal.WriteLine("[App] Settings loaded.");
+        }
+
+        private void VocalizerGroups_Save(object sender, EventArgs e)
+        {
+            using (SaveFileDialog SFD = new SaveFileDialog())
+            {
+                SFD.Filter = "JSON files (*.json)|*.json";
+                SFD.Title = "Save speech groups";
+                SFD.RestoreDirectory = true;
+
+                if (SFD.ShowDialog() == DialogResult.OK)
+                {
+                    int SelectedChar = VocalizerCharSelectCB.SelectedIndex;
+                    List<List<int>> SpeechGroups = new List<List<int>>();
+
+                    for (int Group = 0; Group < 9; Group++)
+                    {
+                        SpeechGroups.Add(new List<int>());
+
+                        for (int Slot = 0; Slot < 5; Slot++)
+                            SpeechGroups[Group].Add(ChooseVocalizerLine(SelectedChar, Group, Slot));
+                    }
+
+                    Serializer.WriteDataFile(SFD.FileName, Serializer.Serialize(SpeechGroups));
+                    Utility.MessageBox_Information("Speech groups succesfully save to JSON file!");
+                }
+            }
+        }
+
+        private void VocalizerGroups_Load(object sender, EventArgs e)
+        {
+            using (OpenFileDialog OFD = new OpenFileDialog())
+            {
+                OFD.Filter = "JSON files (*.json)|*.json";
+                OFD.Title = "Load speech groups";
+                OFD.RestoreDirectory = true;
+
+                if (OFD.ShowDialog() == DialogResult.OK)
+                {
+                    int SelectedChar = VocalizerCharSelectCB.SelectedIndex;
+                    List<List<int>> SpeechGroups = Serializer.Deserialize<List<List<int>>>(Serializer.ReadDataFile(OFD.FileName));
+
+                    for (int Group = 0; Group < 9; Group++)
+                    {
+                        for (int Slot = 0; Slot < 5; Slot++)
+                            ChooseVocalizerLine(SelectedChar, Group, Slot, true, SpeechGroups[Group][Slot]);
+                    }
+
+                    Utility.MessageBox_Information("Speech groups succesfully loaded and apllied from JSON file!");
+                }
+            }
         }
 
         private void UpdateMode_IndexChanged(object sender, EventArgs e)

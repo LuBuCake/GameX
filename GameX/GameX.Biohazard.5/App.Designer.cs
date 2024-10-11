@@ -1272,6 +1272,7 @@ namespace GameX
             this.NoTimerDecreaseCE = new DevExpress.XtraEditors.CheckEdit();
             this.CurrentTimerTE = new DevExpress.XtraEditors.TextEdit();
             this.MiscModsGP = new DevExpress.XtraEditors.GroupControl();
+            this.NoFPSCapCE = new DevExpress.XtraEditors.CheckEdit();
             this.StunRodMeleeKillCE = new DevExpress.XtraEditors.CheckEdit();
             this.HandTremorCE = new DevExpress.XtraEditors.CheckEdit();
             this.ControllerAimGP = new DevExpress.XtraEditors.GroupControl();
@@ -1300,7 +1301,9 @@ namespace GameX
             this.TabPageConsoleButton = new DevExpress.XtraEditors.SimpleButton();
             this.MainLoop = new System.Windows.Forms.Timer(this.components);
             this.TabPageVocalizerButton = new DevExpress.XtraEditors.SimpleButton();
-            this.NoFPSCapCE = new DevExpress.XtraEditors.CheckEdit();
+            this.VocalizerSaveLoadGP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerSaveGroupsButton = new DevExpress.XtraEditors.SimpleButton();
+            this.VocalizerLoadGroupsButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -2588,6 +2591,7 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.CurrentTimerTE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MiscModsGP)).BeginInit();
             this.MiscModsGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NoFPSCapCE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StunRodMeleeKillCE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HandTremorCE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ControllerAimGP)).BeginInit();
@@ -2608,7 +2612,8 @@ namespace GameX
             this.ConsoleGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NoFPSCapCE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerSaveLoadGP)).BeginInit();
+            this.VocalizerSaveLoadGP.SuspendLayout();
             this.SuspendLayout();
             // 
             // P1CosComboBox
@@ -10253,35 +10258,38 @@ namespace GameX
             // 
             // VocalizerSettingsGP
             // 
+            this.VocalizerSettingsGP.Controls.Add(this.VocalizerSaveLoadGP);
             this.VocalizerSettingsGP.Controls.Add(this.VocalizerStatusGP);
             this.VocalizerSettingsGP.Controls.Add(this.VocalizerEnableCE);
             this.VocalizerSettingsGP.Controls.Add(this.VocalizerHotkeysGP);
             this.VocalizerSettingsGP.Location = new System.Drawing.Point(541, 30);
             this.VocalizerSettingsGP.Name = "VocalizerSettingsGP";
-            this.VocalizerSettingsGP.Size = new System.Drawing.Size(179, 383);
+            this.VocalizerSettingsGP.Size = new System.Drawing.Size(179, 500);
             this.VocalizerSettingsGP.TabIndex = 1;
             this.VocalizerSettingsGP.Text = "Settings";
             // 
             // VocalizerStatusGP
             // 
+            this.VocalizerStatusGP.AppearanceCaption.Options.UseTextOptions = true;
+            this.VocalizerStatusGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.VocalizerStatusGP.Controls.Add(this.VocalizerCharSelectCB);
             this.VocalizerStatusGP.Location = new System.Drawing.Point(5, 56);
             this.VocalizerStatusGP.Name = "VocalizerStatusGP";
-            this.VocalizerStatusGP.ShowCaption = false;
-            this.VocalizerStatusGP.Size = new System.Drawing.Size(169, 53);
+            this.VocalizerStatusGP.Size = new System.Drawing.Size(169, 62);
             this.VocalizerStatusGP.TabIndex = 24;
+            this.VocalizerStatusGP.Text = "Character";
             // 
             // VocalizerCharSelectCB
             // 
             this.VocalizerCharSelectCB.EditValue = "";
-            this.VocalizerCharSelectCB.Location = new System.Drawing.Point(10, 17);
+            this.VocalizerCharSelectCB.Location = new System.Drawing.Point(10, 33);
             this.VocalizerCharSelectCB.Name = "VocalizerCharSelectCB";
             this.VocalizerCharSelectCB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
             this.VocalizerCharSelectCB.Properties.AllowFocused = false;
             this.VocalizerCharSelectCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.VocalizerCharSelectCB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerCharSelectCB.Size = new System.Drawing.Size(148, 20);
+            this.VocalizerCharSelectCB.Size = new System.Drawing.Size(149, 20);
             this.VocalizerCharSelectCB.TabIndex = 2;
             this.VocalizerCharSelectCB.TabStop = false;
             // 
@@ -10323,7 +10331,7 @@ namespace GameX
             this.VocalizerHotkeysGP.Controls.Add(this.VocalizerHotkeyG1LB);
             this.VocalizerHotkeysGP.Controls.Add(this.VocalizerHotkeyG1CB);
             this.VocalizerHotkeysGP.Controls.Add(this.VocalizerHotkeyG1PE);
-            this.VocalizerHotkeysGP.Location = new System.Drawing.Point(5, 115);
+            this.VocalizerHotkeysGP.Location = new System.Drawing.Point(5, 232);
             this.VocalizerHotkeysGP.Name = "VocalizerHotkeysGP";
             this.VocalizerHotkeysGP.Size = new System.Drawing.Size(169, 263);
             this.VocalizerHotkeysGP.TabIndex = 1;
@@ -23834,6 +23842,15 @@ namespace GameX
             this.MiscModsGP.TabIndex = 1;
             this.MiscModsGP.Text = "Miscellaneous";
             // 
+            // NoFPSCapCE
+            // 
+            this.NoFPSCapCE.Location = new System.Drawing.Point(138, 92);
+            this.NoFPSCapCE.Name = "NoFPSCapCE";
+            this.NoFPSCapCE.Properties.AllowFocused = false;
+            this.NoFPSCapCE.Properties.Caption = "Uncap FPS";
+            this.NoFPSCapCE.Size = new System.Drawing.Size(141, 20);
+            this.NoFPSCapCE.TabIndex = 23;
+            // 
             // StunRodMeleeKillCE
             // 
             this.StunRodMeleeKillCE.Location = new System.Drawing.Point(138, 68);
@@ -24149,14 +24166,45 @@ namespace GameX
             this.TabPageVocalizerButton.TabStop = false;
             this.TabPageVocalizerButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
-            // NoFPSCapCE
+            // VocalizerSaveLoadGP
             // 
-            this.NoFPSCapCE.Location = new System.Drawing.Point(138, 92);
-            this.NoFPSCapCE.Name = "NoFPSCapCE";
-            this.NoFPSCapCE.Properties.AllowFocused = false;
-            this.NoFPSCapCE.Properties.Caption = "Uncap FPS";
-            this.NoFPSCapCE.Size = new System.Drawing.Size(141, 20);
-            this.NoFPSCapCE.TabIndex = 23;
+            this.VocalizerSaveLoadGP.AppearanceCaption.Options.UseTextOptions = true;
+            this.VocalizerSaveLoadGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.VocalizerSaveLoadGP.Controls.Add(this.VocalizerLoadGroupsButton);
+            this.VocalizerSaveLoadGP.Controls.Add(this.VocalizerSaveGroupsButton);
+            this.VocalizerSaveLoadGP.Location = new System.Drawing.Point(5, 124);
+            this.VocalizerSaveLoadGP.Name = "VocalizerSaveLoadGP";
+            this.VocalizerSaveLoadGP.Size = new System.Drawing.Size(169, 102);
+            this.VocalizerSaveLoadGP.TabIndex = 25;
+            this.VocalizerSaveLoadGP.Text = "Current Character Groups";
+            // 
+            // VocalizerSaveGroupsButton
+            // 
+            this.VocalizerSaveGroupsButton.AllowFocus = false;
+            this.VocalizerSaveGroupsButton.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.VocalizerSaveGroupsButton.Location = new System.Drawing.Point(10, 38);
+            this.VocalizerSaveGroupsButton.Name = "VocalizerSaveGroupsButton";
+            this.VocalizerSaveGroupsButton.Size = new System.Drawing.Size(149, 23);
+            this.VocalizerSaveGroupsButton.TabIndex = 1;
+            this.VocalizerSaveGroupsButton.TabStop = false;
+            this.VocalizerSaveGroupsButton.Text = "Save";
+            this.VocalizerSaveGroupsButton.ToolTip = "Saves the current selected character\'s groups to a file.";
+            this.VocalizerSaveGroupsButton.ToolTipTitle = "Saving";
+            // 
+            // VocalizerLoadGroupsButton
+            // 
+            this.VocalizerLoadGroupsButton.AllowFocus = false;
+            this.VocalizerLoadGroupsButton.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.VocalizerLoadGroupsButton.Location = new System.Drawing.Point(10, 67);
+            this.VocalizerLoadGroupsButton.Name = "VocalizerLoadGroupsButton";
+            this.VocalizerLoadGroupsButton.Size = new System.Drawing.Size(149, 23);
+            this.VocalizerLoadGroupsButton.TabIndex = 2;
+            this.VocalizerLoadGroupsButton.TabStop = false;
+            this.VocalizerLoadGroupsButton.Text = "Load";
+            this.VocalizerLoadGroupsButton.ToolTip = "Loads and applies lines from a file to the current select character speech groups" +
+    ".";
+            this.VocalizerLoadGroupsButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerLoadGroupsButton.ToolTipTitle = "Loading";
             // 
             // App
             // 
@@ -25473,6 +25521,7 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.CurrentTimerTE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MiscModsGP)).EndInit();
             this.MiscModsGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.NoFPSCapCE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StunRodMeleeKillCE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HandTremorCE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ControllerAimGP)).EndInit();
@@ -25494,7 +25543,8 @@ namespace GameX
             this.ConsoleGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NoFPSCapCE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerSaveLoadGP)).EndInit();
+            this.VocalizerSaveLoadGP.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -26770,6 +26820,9 @@ namespace GameX
         private DevExpress.XtraEditors.ComboBoxEdit VocalizerRebeccaG1S2CB;
         private DevExpress.XtraEditors.ComboBoxEdit VocalizerRebeccaG1S1CB;
         private DevExpress.XtraEditors.CheckEdit NoFPSCapCE;
+        private DevExpress.XtraEditors.GroupControl VocalizerSaveLoadGP;
+        private DevExpress.XtraEditors.SimpleButton VocalizerLoadGroupsButton;
+        private DevExpress.XtraEditors.SimpleButton VocalizerSaveGroupsButton;
     }
 }
 

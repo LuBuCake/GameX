@@ -47,6 +47,17 @@ namespace GameX.Database
             string itemDir = prefabDir + "item/";
             string speechDir = prefabDir + "speech/";
 
+#if DEBUG
+            if (Directory.Exists(charDir))
+                Directory.Delete(charDir, true);
+
+            if (Directory.Exists(itemDir))
+                Directory.Delete(itemDir, true);
+
+            if (Directory.Exists(speechDir))
+                Directory.Delete(speechDir, true);
+#endif
+
             if (!Directory.Exists(prefabDir))
                 Directory.CreateDirectory(prefabDir);
 
