@@ -1,39 +1,12 @@
-﻿using System;
+﻿using GameX.Database.Type;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using GameX.Database.Type;
-using GameX.Helpers;
-using GameX.Modules;
 
 namespace GameX.Database.Content
 {
     public static class CharacterContent
     {
-        public static List<Character> GetCollection(bool WritePrefabs)
+        public static List<Character> GetCollection()
         {
-            if (!WritePrefabs)
-            {
-                try
-                {
-                    DirectoryInfo Folder = new DirectoryInfo(@"addons/GameX.Biohazard.5/prefabs/character/");
-                    FileInfo[] Files = Folder.GetFiles("*.json");
-                    List<Character> Available = new List<Character>();
-
-                    foreach (FileInfo file in Files)
-                    {
-                        Available.Add(Serializer.Deserialize<Character>(File.ReadAllText(@"addons/GameX.Biohazard.5/prefabs/character/" + file.Name)));
-                    }
-
-                    return Available.OrderBy(x => x.Value).ToList();
-                }
-                catch (Exception Ex)
-                {
-                    Terminal.WriteLine(Ex);
-                    return new List<Character>();
-                }
-            }
-
             Character Chris = new Character
             {
                 Name = "Chris",
@@ -282,18 +255,6 @@ namespace GameX.Database.Content
                 Rebecca,
                 Irving
             };
-
-            try
-            {
-                foreach (Character Char in obj)
-                    Serializer.WriteDataFile(@"addons/GameX.Biohazard.5/prefabs/character/" + $"{Char.Name.ToLower()}.json", Serializer.Serialize(Char));
-
-                Terminal.WriteLine("[App] Character prefabs written sucessfully.");
-            }
-            catch (Exception Ex)
-            {
-                Terminal.WriteLine(Ex);
-            }
 
             return obj;
         }

@@ -14,7 +14,7 @@ namespace GameX.Database.Content
         {
             try
             {
-                string Dir = @"addons/GameX.Biohazard.5/prefabs/loadout/";
+                string Dir = @"addons/GameX.Biohazard.5/loadouts/";
 
                 if (!Directory.Exists(Dir))
                     Directory.CreateDirectory(Dir);

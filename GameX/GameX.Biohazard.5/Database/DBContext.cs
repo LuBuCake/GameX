@@ -38,51 +38,10 @@ namespace GameX.Database
         {
             Database = new DB();
 
-            bool WriteChars = false;
-            bool WriteItems = false;
-            bool WriteSpeech = false;
-
-            string prefabDir = Directory.GetCurrentDirectory() + "/addons/GameX.Biohazard.5/prefabs/";
-            string charDir = prefabDir + "character/";
-            string itemDir = prefabDir + "item/";
-            string speechDir = prefabDir + "speech/";
-
-#if DEBUG
-            if (Directory.Exists(charDir))
-                Directory.Delete(charDir, true);
-
-            if (Directory.Exists(itemDir))
-                Directory.Delete(itemDir, true);
-
-            if (Directory.Exists(speechDir))
-                Directory.Delete(speechDir, true);
-#endif
-
-            if (!Directory.Exists(prefabDir))
-                Directory.CreateDirectory(prefabDir);
-
-            if (!Directory.Exists(charDir))
-            {
-                Directory.CreateDirectory(charDir);
-                WriteChars = true;
-            }
-
-            if (!Directory.Exists(itemDir))
-            {
-                Directory.CreateDirectory(itemDir);
-                WriteItems = true;
-            }
-
-            if (!Directory.Exists(speechDir))
-            {
-                Directory.CreateDirectory(speechDir);
-                WriteSpeech = true;
-            }
-
-            Database.Characters = CharacterContent.GetCollection(WriteChars);
+            Database.Characters = CharacterContent.GetCollection();
             Database.Maps = MapContent.GetCollection();
-            Database.AllItems = ItemContent.GetCollection(WriteItems);
-            Database.AllSpeech = SpeechContent.GetCollection(WriteSpeech);
+            Database.AllItems = ItemContent.GetCollection();
+            Database.AllSpeech = SpeechContent.GetCollection();
 
             List<Item> ComboBoxItems = new List<Item>(Database.AllItems);
             ComboBoxItems.RemoveAll(x => x.Name == "Hand To Hand");

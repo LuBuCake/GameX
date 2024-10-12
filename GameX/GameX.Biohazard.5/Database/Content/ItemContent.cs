@@ -1,40 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using GameX.Helpers;
-using GameX.Modules;
-using GameX.Enum;
+﻿using GameX.Enum;
 using GameX.Database.Type;
+using System.Collections.Generic;
 
 namespace GameX.Database.Content
 {
     public static class ItemContent
     {
-        public static List<Item> GetCollection(bool WritePrefabs)
+        public static List<Item> GetCollection()
         {
-            if (!WritePrefabs)
-            {
-                try
-                {
-                    DirectoryInfo Folder = new DirectoryInfo(@"addons/GameX.Biohazard.5/prefabs/item/");
-                    FileInfo[] Files = Folder.GetFiles("*.json");
-                    List<Item> Available = new List<Item>();
-
-                    foreach (FileInfo file in Files)
-                    {
-                        Available.Add(Serializer.Deserialize<Item>(File.ReadAllText(@"addons/GameX.Biohazard.5/prefabs/item/" + file.Name)));
-                    }
-
-                    return Available.OrderBy(x => x.Group).ThenBy(x => x.GroupIndex).ToList();
-                }
-                catch (Exception Ex)
-                {
-                    Terminal.WriteLine(Ex);
-                    return new List<Item>();
-                }
-            }
-
             Item Default = new Item
             {
                 ID = 0,
@@ -1194,18 +1167,6 @@ namespace GameX.Database.Content
                 LongBow,
                 Flametrower
             };
-
-            try
-            {
-                foreach (Item item in obj)
-                    Serializer.WriteDataFile(@"addons/GameX.Biohazard.5/prefabs/item/" + $"{item.Alias.ToLower()}.json", Serializer.Serialize(item));
-
-                Terminal.WriteLine("[App] Item prefabs written sucessfully.");
-            }
-            catch (Exception Ex)
-            {
-                Terminal.WriteLine(Ex);
-            }
 
             return obj;
         }

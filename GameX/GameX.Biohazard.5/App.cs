@@ -2786,7 +2786,7 @@ namespace GameX
 
             if (SB.Name.Equals("LoadoutSaveButton"))
             {
-                string SaveDialog = XtraInputBox.Show("Loadout Name", "Save Loadout", "Name").ToString();
+                string SaveDialog = XtraInputBox.Show("Loadout Name", "Save Loadout", "Name");
 
                 if (string.IsNullOrEmpty(SaveDialog))
                     return;
@@ -2800,7 +2800,7 @@ namespace GameX
                 for (int i = 0; i < 10; i++)
                     Loadout.Slots[i] = Biohazard.Players[SelectedPlayer].Inventory.LoadoutSlots[i].ToMemory;
 
-                Serializer.WriteDataFile(@"addons/GameX.Biohazard.5/prefabs/loadout/" + SaveDialog.Replace(" ", "").Trim() + ".json", Serializer.Serialize(Loadout));
+                Serializer.WriteDataFile(@"addons/GameX.Biohazard.5/loadouts/" + SaveDialog.Replace(" ", "").Trim() + ".json", Serializer.Serialize(Loadout));
 
                 DBContext.UpdateLoadouts();
                 DB db = DBContext.GetDatabase();
