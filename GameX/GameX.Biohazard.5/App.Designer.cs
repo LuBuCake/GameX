@@ -480,6 +480,9 @@ namespace GameX
             this.VocalizerBarryG1S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
             this.VocalizerBarryG1S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
             this.VocalizerSettingsGP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerSaveLoadGP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerLoadGroupsButton = new DevExpress.XtraEditors.SimpleButton();
+            this.VocalizerSaveGroupsButton = new DevExpress.XtraEditors.SimpleButton();
             this.VocalizerStatusGP = new DevExpress.XtraEditors.GroupControl();
             this.VocalizerCharSelectCB = new DevExpress.XtraEditors.ComboBoxEdit();
             this.VocalizerEnableCE = new DevExpress.XtraEditors.CheckEdit();
@@ -1301,9 +1304,6 @@ namespace GameX
             this.TabPageConsoleButton = new DevExpress.XtraEditors.SimpleButton();
             this.MainLoop = new System.Windows.Forms.Timer(this.components);
             this.TabPageVocalizerButton = new DevExpress.XtraEditors.SimpleButton();
-            this.VocalizerSaveLoadGP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerSaveGroupsButton = new DevExpress.XtraEditors.SimpleButton();
-            this.VocalizerLoadGroupsButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.P1CosComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P1CharPictureBox.Properties)).BeginInit();
@@ -1828,6 +1828,8 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S1CB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerSettingsGP)).BeginInit();
             this.VocalizerSettingsGP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerSaveLoadGP)).BeginInit();
+            this.VocalizerSaveLoadGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerStatusGP)).BeginInit();
             this.VocalizerStatusGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerCharSelectCB.Properties)).BeginInit();
@@ -2612,8 +2614,6 @@ namespace GameX
             this.ConsoleGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerSaveLoadGP)).BeginInit();
-            this.VocalizerSaveLoadGP.SuspendLayout();
             this.SuspendLayout();
             // 
             // P1CosComboBox
@@ -2707,7 +2707,7 @@ namespace GameX
             // 
             this.VocalizerTabControl.Location = new System.Drawing.Point(5, 30);
             this.VocalizerTabControl.Name = "VocalizerTabControl";
-            this.VocalizerTabControl.SelectedTabPage = this.VocalizerRebeccaTab;
+            this.VocalizerTabControl.SelectedTabPage = this.VocalizerChrisTab;
             this.VocalizerTabControl.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
             this.VocalizerTabControl.Size = new System.Drawing.Size(530, 500);
             this.VocalizerTabControl.TabIndex = 2;
@@ -2762,10 +2762,6 @@ namespace GameX
             this.VocalizerRebeccaG9S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG9S5CB.TabIndex = 7;
             this.VocalizerRebeccaG9S5CB.TabStop = false;
-            this.VocalizerRebeccaG9S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG9S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG9S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG9S4CB
             // 
@@ -2780,10 +2776,6 @@ namespace GameX
             this.VocalizerRebeccaG9S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG9S4CB.TabIndex = 6;
             this.VocalizerRebeccaG9S4CB.TabStop = false;
-            this.VocalizerRebeccaG9S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG9S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG9S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG9S3CB
             // 
@@ -2798,10 +2790,6 @@ namespace GameX
             this.VocalizerRebeccaG9S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG9S3CB.TabIndex = 5;
             this.VocalizerRebeccaG9S3CB.TabStop = false;
-            this.VocalizerRebeccaG9S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG9S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG9S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG9S2CB
             // 
@@ -2816,10 +2804,6 @@ namespace GameX
             this.VocalizerRebeccaG9S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG9S2CB.TabIndex = 4;
             this.VocalizerRebeccaG9S2CB.TabStop = false;
-            this.VocalizerRebeccaG9S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG9S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG9S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG9S1CB
             // 
@@ -2834,10 +2818,6 @@ namespace GameX
             this.VocalizerRebeccaG9S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG9S1CB.TabIndex = 3;
             this.VocalizerRebeccaG9S1CB.TabStop = false;
-            this.VocalizerRebeccaG9S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG9S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG9S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG8GP
             // 
@@ -2865,10 +2845,6 @@ namespace GameX
             this.VocalizerRebeccaG8S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG8S5CB.TabIndex = 7;
             this.VocalizerRebeccaG8S5CB.TabStop = false;
-            this.VocalizerRebeccaG8S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG8S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG8S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG8S4CB
             // 
@@ -2883,10 +2859,6 @@ namespace GameX
             this.VocalizerRebeccaG8S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG8S4CB.TabIndex = 6;
             this.VocalizerRebeccaG8S4CB.TabStop = false;
-            this.VocalizerRebeccaG8S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG8S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG8S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG8S3CB
             // 
@@ -2901,10 +2873,6 @@ namespace GameX
             this.VocalizerRebeccaG8S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG8S3CB.TabIndex = 5;
             this.VocalizerRebeccaG8S3CB.TabStop = false;
-            this.VocalizerRebeccaG8S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG8S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG8S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG8S2CB
             // 
@@ -2919,10 +2887,6 @@ namespace GameX
             this.VocalizerRebeccaG8S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG8S2CB.TabIndex = 4;
             this.VocalizerRebeccaG8S2CB.TabStop = false;
-            this.VocalizerRebeccaG8S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG8S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG8S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG8S1CB
             // 
@@ -2937,10 +2901,6 @@ namespace GameX
             this.VocalizerRebeccaG8S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG8S1CB.TabIndex = 3;
             this.VocalizerRebeccaG8S1CB.TabStop = false;
-            this.VocalizerRebeccaG8S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG8S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG8S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG7GP
             // 
@@ -2968,10 +2928,6 @@ namespace GameX
             this.VocalizerRebeccaG7S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG7S5CB.TabIndex = 7;
             this.VocalizerRebeccaG7S5CB.TabStop = false;
-            this.VocalizerRebeccaG7S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG7S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG7S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG7S4CB
             // 
@@ -2986,10 +2942,6 @@ namespace GameX
             this.VocalizerRebeccaG7S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG7S4CB.TabIndex = 6;
             this.VocalizerRebeccaG7S4CB.TabStop = false;
-            this.VocalizerRebeccaG7S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG7S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG7S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG7S3CB
             // 
@@ -3004,10 +2956,6 @@ namespace GameX
             this.VocalizerRebeccaG7S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG7S3CB.TabIndex = 5;
             this.VocalizerRebeccaG7S3CB.TabStop = false;
-            this.VocalizerRebeccaG7S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG7S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG7S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG7S2CB
             // 
@@ -3022,10 +2970,6 @@ namespace GameX
             this.VocalizerRebeccaG7S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG7S2CB.TabIndex = 4;
             this.VocalizerRebeccaG7S2CB.TabStop = false;
-            this.VocalizerRebeccaG7S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG7S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG7S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG7S1CB
             // 
@@ -3040,10 +2984,6 @@ namespace GameX
             this.VocalizerRebeccaG7S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG7S1CB.TabIndex = 3;
             this.VocalizerRebeccaG7S1CB.TabStop = false;
-            this.VocalizerRebeccaG7S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG7S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG7S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG6GP
             // 
@@ -3071,10 +3011,6 @@ namespace GameX
             this.VocalizerRebeccaG6S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG6S5CB.TabIndex = 7;
             this.VocalizerRebeccaG6S5CB.TabStop = false;
-            this.VocalizerRebeccaG6S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG6S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG6S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG6S4CB
             // 
@@ -3089,10 +3025,6 @@ namespace GameX
             this.VocalizerRebeccaG6S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG6S4CB.TabIndex = 6;
             this.VocalizerRebeccaG6S4CB.TabStop = false;
-            this.VocalizerRebeccaG6S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG6S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG6S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG6S3CB
             // 
@@ -3107,10 +3039,6 @@ namespace GameX
             this.VocalizerRebeccaG6S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG6S3CB.TabIndex = 5;
             this.VocalizerRebeccaG6S3CB.TabStop = false;
-            this.VocalizerRebeccaG6S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG6S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG6S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG6S2CB
             // 
@@ -3125,10 +3053,6 @@ namespace GameX
             this.VocalizerRebeccaG6S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG6S2CB.TabIndex = 4;
             this.VocalizerRebeccaG6S2CB.TabStop = false;
-            this.VocalizerRebeccaG6S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG6S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG6S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG6S1CB
             // 
@@ -3143,10 +3067,6 @@ namespace GameX
             this.VocalizerRebeccaG6S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG6S1CB.TabIndex = 3;
             this.VocalizerRebeccaG6S1CB.TabStop = false;
-            this.VocalizerRebeccaG6S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG6S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG6S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG5GP
             // 
@@ -3174,10 +3094,6 @@ namespace GameX
             this.VocalizerRebeccaG5S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG5S5CB.TabIndex = 7;
             this.VocalizerRebeccaG5S5CB.TabStop = false;
-            this.VocalizerRebeccaG5S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG5S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG5S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG5S4CB
             // 
@@ -3192,10 +3108,6 @@ namespace GameX
             this.VocalizerRebeccaG5S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG5S4CB.TabIndex = 6;
             this.VocalizerRebeccaG5S4CB.TabStop = false;
-            this.VocalizerRebeccaG5S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG5S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG5S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG5S3CB
             // 
@@ -3210,10 +3122,6 @@ namespace GameX
             this.VocalizerRebeccaG5S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG5S3CB.TabIndex = 5;
             this.VocalizerRebeccaG5S3CB.TabStop = false;
-            this.VocalizerRebeccaG5S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG5S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG5S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG5S2CB
             // 
@@ -3228,10 +3136,6 @@ namespace GameX
             this.VocalizerRebeccaG5S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG5S2CB.TabIndex = 4;
             this.VocalizerRebeccaG5S2CB.TabStop = false;
-            this.VocalizerRebeccaG5S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG5S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG5S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG5S1CB
             // 
@@ -3246,10 +3150,6 @@ namespace GameX
             this.VocalizerRebeccaG5S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG5S1CB.TabIndex = 3;
             this.VocalizerRebeccaG5S1CB.TabStop = false;
-            this.VocalizerRebeccaG5S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG5S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG5S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG4GP
             // 
@@ -3277,10 +3177,6 @@ namespace GameX
             this.VocalizerRebeccaG4S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG4S5CB.TabIndex = 7;
             this.VocalizerRebeccaG4S5CB.TabStop = false;
-            this.VocalizerRebeccaG4S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG4S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG4S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG4S4CB
             // 
@@ -3295,10 +3191,6 @@ namespace GameX
             this.VocalizerRebeccaG4S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG4S4CB.TabIndex = 6;
             this.VocalizerRebeccaG4S4CB.TabStop = false;
-            this.VocalizerRebeccaG4S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG4S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG4S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG4S3CB
             // 
@@ -3313,10 +3205,6 @@ namespace GameX
             this.VocalizerRebeccaG4S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG4S3CB.TabIndex = 5;
             this.VocalizerRebeccaG4S3CB.TabStop = false;
-            this.VocalizerRebeccaG4S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG4S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG4S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG4S2CB
             // 
@@ -3331,10 +3219,6 @@ namespace GameX
             this.VocalizerRebeccaG4S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG4S2CB.TabIndex = 4;
             this.VocalizerRebeccaG4S2CB.TabStop = false;
-            this.VocalizerRebeccaG4S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG4S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG4S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG4S1CB
             // 
@@ -3349,10 +3233,6 @@ namespace GameX
             this.VocalizerRebeccaG4S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG4S1CB.TabIndex = 3;
             this.VocalizerRebeccaG4S1CB.TabStop = false;
-            this.VocalizerRebeccaG4S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG4S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG4S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG3GP
             // 
@@ -3380,10 +3260,6 @@ namespace GameX
             this.VocalizerRebeccaG3S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG3S5CB.TabIndex = 7;
             this.VocalizerRebeccaG3S5CB.TabStop = false;
-            this.VocalizerRebeccaG3S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG3S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG3S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG3S4CB
             // 
@@ -3398,10 +3274,6 @@ namespace GameX
             this.VocalizerRebeccaG3S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG3S4CB.TabIndex = 6;
             this.VocalizerRebeccaG3S4CB.TabStop = false;
-            this.VocalizerRebeccaG3S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG3S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG3S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG3S3CB
             // 
@@ -3416,10 +3288,6 @@ namespace GameX
             this.VocalizerRebeccaG3S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG3S3CB.TabIndex = 5;
             this.VocalizerRebeccaG3S3CB.TabStop = false;
-            this.VocalizerRebeccaG3S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG3S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG3S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG3S2CB
             // 
@@ -3434,10 +3302,6 @@ namespace GameX
             this.VocalizerRebeccaG3S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG3S2CB.TabIndex = 4;
             this.VocalizerRebeccaG3S2CB.TabStop = false;
-            this.VocalizerRebeccaG3S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG3S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG3S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG3S1CB
             // 
@@ -3452,10 +3316,6 @@ namespace GameX
             this.VocalizerRebeccaG3S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG3S1CB.TabIndex = 3;
             this.VocalizerRebeccaG3S1CB.TabStop = false;
-            this.VocalizerRebeccaG3S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG3S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG3S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG2GP
             // 
@@ -3483,10 +3343,6 @@ namespace GameX
             this.VocalizerRebeccaG2S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG2S5CB.TabIndex = 7;
             this.VocalizerRebeccaG2S5CB.TabStop = false;
-            this.VocalizerRebeccaG2S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG2S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG2S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG2S4CB
             // 
@@ -3501,10 +3357,6 @@ namespace GameX
             this.VocalizerRebeccaG2S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG2S4CB.TabIndex = 6;
             this.VocalizerRebeccaG2S4CB.TabStop = false;
-            this.VocalizerRebeccaG2S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG2S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG2S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG2S3CB
             // 
@@ -3519,10 +3371,6 @@ namespace GameX
             this.VocalizerRebeccaG2S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG2S3CB.TabIndex = 5;
             this.VocalizerRebeccaG2S3CB.TabStop = false;
-            this.VocalizerRebeccaG2S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG2S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG2S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG2S2CB
             // 
@@ -3537,10 +3385,6 @@ namespace GameX
             this.VocalizerRebeccaG2S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG2S2CB.TabIndex = 4;
             this.VocalizerRebeccaG2S2CB.TabStop = false;
-            this.VocalizerRebeccaG2S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG2S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG2S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG2S1CB
             // 
@@ -3555,10 +3399,6 @@ namespace GameX
             this.VocalizerRebeccaG2S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG2S1CB.TabIndex = 3;
             this.VocalizerRebeccaG2S1CB.TabStop = false;
-            this.VocalizerRebeccaG2S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG2S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG2S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG1GP
             // 
@@ -3586,10 +3426,6 @@ namespace GameX
             this.VocalizerRebeccaG1S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG1S5CB.TabIndex = 7;
             this.VocalizerRebeccaG1S5CB.TabStop = false;
-            this.VocalizerRebeccaG1S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG1S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG1S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG1S4CB
             // 
@@ -3604,10 +3440,6 @@ namespace GameX
             this.VocalizerRebeccaG1S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG1S4CB.TabIndex = 6;
             this.VocalizerRebeccaG1S4CB.TabStop = false;
-            this.VocalizerRebeccaG1S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG1S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG1S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG1S3CB
             // 
@@ -3622,10 +3454,6 @@ namespace GameX
             this.VocalizerRebeccaG1S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG1S3CB.TabIndex = 5;
             this.VocalizerRebeccaG1S3CB.TabStop = false;
-            this.VocalizerRebeccaG1S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG1S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG1S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG1S2CB
             // 
@@ -3640,10 +3468,6 @@ namespace GameX
             this.VocalizerRebeccaG1S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG1S2CB.TabIndex = 4;
             this.VocalizerRebeccaG1S2CB.TabStop = false;
-            this.VocalizerRebeccaG1S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG1S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG1S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerRebeccaG1S1CB
             // 
@@ -3658,10 +3482,6 @@ namespace GameX
             this.VocalizerRebeccaG1S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerRebeccaG1S1CB.TabIndex = 3;
             this.VocalizerRebeccaG1S1CB.TabStop = false;
-            this.VocalizerRebeccaG1S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerRebeccaG1S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerRebeccaG1S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisTab
             // 
@@ -3703,10 +3523,6 @@ namespace GameX
             this.VocalizerChrisG9S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG9S5CB.TabIndex = 7;
             this.VocalizerChrisG9S5CB.TabStop = false;
-            this.VocalizerChrisG9S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG9S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG9S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG9S4CB
             // 
@@ -3721,10 +3537,6 @@ namespace GameX
             this.VocalizerChrisG9S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG9S4CB.TabIndex = 6;
             this.VocalizerChrisG9S4CB.TabStop = false;
-            this.VocalizerChrisG9S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG9S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG9S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG9S3CB
             // 
@@ -3739,10 +3551,6 @@ namespace GameX
             this.VocalizerChrisG9S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG9S3CB.TabIndex = 5;
             this.VocalizerChrisG9S3CB.TabStop = false;
-            this.VocalizerChrisG9S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG9S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG9S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG9S2CB
             // 
@@ -3757,10 +3565,6 @@ namespace GameX
             this.VocalizerChrisG9S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG9S2CB.TabIndex = 4;
             this.VocalizerChrisG9S2CB.TabStop = false;
-            this.VocalizerChrisG9S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG9S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG9S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG9S1CB
             // 
@@ -3775,10 +3579,6 @@ namespace GameX
             this.VocalizerChrisG9S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG9S1CB.TabIndex = 3;
             this.VocalizerChrisG9S1CB.TabStop = false;
-            this.VocalizerChrisG9S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG9S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG9S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG8GP
             // 
@@ -3806,10 +3606,6 @@ namespace GameX
             this.VocalizerChrisG8S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG8S5CB.TabIndex = 7;
             this.VocalizerChrisG8S5CB.TabStop = false;
-            this.VocalizerChrisG8S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG8S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG8S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG8S4CB
             // 
@@ -3824,10 +3620,6 @@ namespace GameX
             this.VocalizerChrisG8S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG8S4CB.TabIndex = 6;
             this.VocalizerChrisG8S4CB.TabStop = false;
-            this.VocalizerChrisG8S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG8S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG8S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG8S3CB
             // 
@@ -3842,10 +3634,6 @@ namespace GameX
             this.VocalizerChrisG8S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG8S3CB.TabIndex = 5;
             this.VocalizerChrisG8S3CB.TabStop = false;
-            this.VocalizerChrisG8S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG8S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG8S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG8S2CB
             // 
@@ -3860,10 +3648,6 @@ namespace GameX
             this.VocalizerChrisG8S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG8S2CB.TabIndex = 4;
             this.VocalizerChrisG8S2CB.TabStop = false;
-            this.VocalizerChrisG8S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG8S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG8S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG8S1CB
             // 
@@ -3878,10 +3662,6 @@ namespace GameX
             this.VocalizerChrisG8S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG8S1CB.TabIndex = 3;
             this.VocalizerChrisG8S1CB.TabStop = false;
-            this.VocalizerChrisG8S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG8S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG8S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG7GP
             // 
@@ -3909,10 +3689,6 @@ namespace GameX
             this.VocalizerChrisG7S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG7S5CB.TabIndex = 7;
             this.VocalizerChrisG7S5CB.TabStop = false;
-            this.VocalizerChrisG7S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG7S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG7S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG7S4CB
             // 
@@ -3927,10 +3703,6 @@ namespace GameX
             this.VocalizerChrisG7S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG7S4CB.TabIndex = 6;
             this.VocalizerChrisG7S4CB.TabStop = false;
-            this.VocalizerChrisG7S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG7S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG7S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG7S3CB
             // 
@@ -3945,10 +3717,6 @@ namespace GameX
             this.VocalizerChrisG7S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG7S3CB.TabIndex = 5;
             this.VocalizerChrisG7S3CB.TabStop = false;
-            this.VocalizerChrisG7S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG7S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG7S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG7S2CB
             // 
@@ -3963,10 +3731,6 @@ namespace GameX
             this.VocalizerChrisG7S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG7S2CB.TabIndex = 4;
             this.VocalizerChrisG7S2CB.TabStop = false;
-            this.VocalizerChrisG7S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG7S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG7S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG7S1CB
             // 
@@ -3981,10 +3745,6 @@ namespace GameX
             this.VocalizerChrisG7S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG7S1CB.TabIndex = 3;
             this.VocalizerChrisG7S1CB.TabStop = false;
-            this.VocalizerChrisG7S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG7S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG7S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG6GP
             // 
@@ -4012,10 +3772,6 @@ namespace GameX
             this.VocalizerChrisG6S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG6S5CB.TabIndex = 7;
             this.VocalizerChrisG6S5CB.TabStop = false;
-            this.VocalizerChrisG6S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG6S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG6S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG6S4CB
             // 
@@ -4030,10 +3786,6 @@ namespace GameX
             this.VocalizerChrisG6S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG6S4CB.TabIndex = 6;
             this.VocalizerChrisG6S4CB.TabStop = false;
-            this.VocalizerChrisG6S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG6S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG6S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG6S3CB
             // 
@@ -4048,10 +3800,6 @@ namespace GameX
             this.VocalizerChrisG6S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG6S3CB.TabIndex = 5;
             this.VocalizerChrisG6S3CB.TabStop = false;
-            this.VocalizerChrisG6S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG6S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG6S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG6S2CB
             // 
@@ -4066,10 +3814,6 @@ namespace GameX
             this.VocalizerChrisG6S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG6S2CB.TabIndex = 4;
             this.VocalizerChrisG6S2CB.TabStop = false;
-            this.VocalizerChrisG6S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG6S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG6S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG6S1CB
             // 
@@ -4084,10 +3828,6 @@ namespace GameX
             this.VocalizerChrisG6S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG6S1CB.TabIndex = 3;
             this.VocalizerChrisG6S1CB.TabStop = false;
-            this.VocalizerChrisG6S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG6S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG6S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG5GP
             // 
@@ -4115,10 +3855,6 @@ namespace GameX
             this.VocalizerChrisG5S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG5S5CB.TabIndex = 7;
             this.VocalizerChrisG5S5CB.TabStop = false;
-            this.VocalizerChrisG5S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG5S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG5S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG5S4CB
             // 
@@ -4133,10 +3869,6 @@ namespace GameX
             this.VocalizerChrisG5S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG5S4CB.TabIndex = 6;
             this.VocalizerChrisG5S4CB.TabStop = false;
-            this.VocalizerChrisG5S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG5S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG5S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG5S3CB
             // 
@@ -4151,10 +3883,6 @@ namespace GameX
             this.VocalizerChrisG5S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG5S3CB.TabIndex = 5;
             this.VocalizerChrisG5S3CB.TabStop = false;
-            this.VocalizerChrisG5S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG5S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG5S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG5S2CB
             // 
@@ -4169,10 +3897,6 @@ namespace GameX
             this.VocalizerChrisG5S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG5S2CB.TabIndex = 4;
             this.VocalizerChrisG5S2CB.TabStop = false;
-            this.VocalizerChrisG5S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG5S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG5S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG5S1CB
             // 
@@ -4187,10 +3911,6 @@ namespace GameX
             this.VocalizerChrisG5S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG5S1CB.TabIndex = 3;
             this.VocalizerChrisG5S1CB.TabStop = false;
-            this.VocalizerChrisG5S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG5S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG5S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG4GP
             // 
@@ -4218,10 +3938,6 @@ namespace GameX
             this.VocalizerChrisG4S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG4S5CB.TabIndex = 7;
             this.VocalizerChrisG4S5CB.TabStop = false;
-            this.VocalizerChrisG4S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG4S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG4S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG4S4CB
             // 
@@ -4236,10 +3952,6 @@ namespace GameX
             this.VocalizerChrisG4S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG4S4CB.TabIndex = 6;
             this.VocalizerChrisG4S4CB.TabStop = false;
-            this.VocalizerChrisG4S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG4S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG4S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG4S3CB
             // 
@@ -4254,10 +3966,6 @@ namespace GameX
             this.VocalizerChrisG4S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG4S3CB.TabIndex = 5;
             this.VocalizerChrisG4S3CB.TabStop = false;
-            this.VocalizerChrisG4S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG4S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG4S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG4S2CB
             // 
@@ -4272,10 +3980,6 @@ namespace GameX
             this.VocalizerChrisG4S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG4S2CB.TabIndex = 4;
             this.VocalizerChrisG4S2CB.TabStop = false;
-            this.VocalizerChrisG4S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG4S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG4S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG4S1CB
             // 
@@ -4290,10 +3994,6 @@ namespace GameX
             this.VocalizerChrisG4S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG4S1CB.TabIndex = 3;
             this.VocalizerChrisG4S1CB.TabStop = false;
-            this.VocalizerChrisG4S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG4S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG4S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG3GP
             // 
@@ -4321,10 +4021,6 @@ namespace GameX
             this.VocalizerChrisG3S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG3S5CB.TabIndex = 7;
             this.VocalizerChrisG3S5CB.TabStop = false;
-            this.VocalizerChrisG3S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG3S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG3S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG3S4CB
             // 
@@ -4339,10 +4035,6 @@ namespace GameX
             this.VocalizerChrisG3S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG3S4CB.TabIndex = 6;
             this.VocalizerChrisG3S4CB.TabStop = false;
-            this.VocalizerChrisG3S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG3S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG3S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG3S3CB
             // 
@@ -4357,10 +4049,6 @@ namespace GameX
             this.VocalizerChrisG3S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG3S3CB.TabIndex = 5;
             this.VocalizerChrisG3S3CB.TabStop = false;
-            this.VocalizerChrisG3S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG3S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG3S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG3S2CB
             // 
@@ -4375,10 +4063,6 @@ namespace GameX
             this.VocalizerChrisG3S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG3S2CB.TabIndex = 4;
             this.VocalizerChrisG3S2CB.TabStop = false;
-            this.VocalizerChrisG3S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG3S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG3S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG3S1CB
             // 
@@ -4393,10 +4077,6 @@ namespace GameX
             this.VocalizerChrisG3S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG3S1CB.TabIndex = 3;
             this.VocalizerChrisG3S1CB.TabStop = false;
-            this.VocalizerChrisG3S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG3S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG3S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG2GP
             // 
@@ -4424,10 +4104,6 @@ namespace GameX
             this.VocalizerChrisG2S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG2S5CB.TabIndex = 7;
             this.VocalizerChrisG2S5CB.TabStop = false;
-            this.VocalizerChrisG2S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG2S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG2S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG2S4CB
             // 
@@ -4442,10 +4118,6 @@ namespace GameX
             this.VocalizerChrisG2S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG2S4CB.TabIndex = 6;
             this.VocalizerChrisG2S4CB.TabStop = false;
-            this.VocalizerChrisG2S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG2S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG2S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG2S3CB
             // 
@@ -4460,10 +4132,6 @@ namespace GameX
             this.VocalizerChrisG2S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG2S3CB.TabIndex = 5;
             this.VocalizerChrisG2S3CB.TabStop = false;
-            this.VocalizerChrisG2S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG2S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG2S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG2S2CB
             // 
@@ -4478,10 +4146,6 @@ namespace GameX
             this.VocalizerChrisG2S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG2S2CB.TabIndex = 4;
             this.VocalizerChrisG2S2CB.TabStop = false;
-            this.VocalizerChrisG2S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG2S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG2S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG2S1CB
             // 
@@ -4496,10 +4160,6 @@ namespace GameX
             this.VocalizerChrisG2S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG2S1CB.TabIndex = 3;
             this.VocalizerChrisG2S1CB.TabStop = false;
-            this.VocalizerChrisG2S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG2S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG2S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG1GP
             // 
@@ -4527,10 +4187,6 @@ namespace GameX
             this.VocalizerChrisG1S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG1S5CB.TabIndex = 7;
             this.VocalizerChrisG1S5CB.TabStop = false;
-            this.VocalizerChrisG1S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG1S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG1S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG1S4CB
             // 
@@ -4545,10 +4201,6 @@ namespace GameX
             this.VocalizerChrisG1S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG1S4CB.TabIndex = 6;
             this.VocalizerChrisG1S4CB.TabStop = false;
-            this.VocalizerChrisG1S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG1S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG1S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG1S3CB
             // 
@@ -4563,10 +4215,6 @@ namespace GameX
             this.VocalizerChrisG1S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG1S3CB.TabIndex = 5;
             this.VocalizerChrisG1S3CB.TabStop = false;
-            this.VocalizerChrisG1S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG1S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG1S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG1S2CB
             // 
@@ -4581,10 +4229,6 @@ namespace GameX
             this.VocalizerChrisG1S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG1S2CB.TabIndex = 4;
             this.VocalizerChrisG1S2CB.TabStop = false;
-            this.VocalizerChrisG1S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG1S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG1S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerChrisG1S1CB
             // 
@@ -4599,10 +4243,6 @@ namespace GameX
             this.VocalizerChrisG1S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerChrisG1S1CB.TabIndex = 3;
             this.VocalizerChrisG1S1CB.TabStop = false;
-            this.VocalizerChrisG1S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerChrisG1S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerChrisG1S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaTab
             // 
@@ -4645,10 +4285,6 @@ namespace GameX
             this.VocalizerShevaG9S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG9S5CB.TabIndex = 7;
             this.VocalizerShevaG9S5CB.TabStop = false;
-            this.VocalizerShevaG9S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG9S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG9S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG9S4CB
             // 
@@ -4663,10 +4299,6 @@ namespace GameX
             this.VocalizerShevaG9S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG9S4CB.TabIndex = 6;
             this.VocalizerShevaG9S4CB.TabStop = false;
-            this.VocalizerShevaG9S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG9S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG9S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG9S3CB
             // 
@@ -4681,10 +4313,6 @@ namespace GameX
             this.VocalizerShevaG9S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG9S3CB.TabIndex = 5;
             this.VocalizerShevaG9S3CB.TabStop = false;
-            this.VocalizerShevaG9S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG9S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG9S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG9S2CB
             // 
@@ -4699,10 +4327,6 @@ namespace GameX
             this.VocalizerShevaG9S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG9S2CB.TabIndex = 4;
             this.VocalizerShevaG9S2CB.TabStop = false;
-            this.VocalizerShevaG9S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG9S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG9S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG9S1CB
             // 
@@ -4717,10 +4341,6 @@ namespace GameX
             this.VocalizerShevaG9S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG9S1CB.TabIndex = 3;
             this.VocalizerShevaG9S1CB.TabStop = false;
-            this.VocalizerShevaG9S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG9S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG9S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG8GP
             // 
@@ -4748,10 +4368,6 @@ namespace GameX
             this.VocalizerShevaG8S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG8S5CB.TabIndex = 7;
             this.VocalizerShevaG8S5CB.TabStop = false;
-            this.VocalizerShevaG8S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG8S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG8S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG8S4CB
             // 
@@ -4766,10 +4382,6 @@ namespace GameX
             this.VocalizerShevaG8S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG8S4CB.TabIndex = 6;
             this.VocalizerShevaG8S4CB.TabStop = false;
-            this.VocalizerShevaG8S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG8S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG8S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG8S3CB
             // 
@@ -4784,10 +4396,6 @@ namespace GameX
             this.VocalizerShevaG8S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG8S3CB.TabIndex = 5;
             this.VocalizerShevaG8S3CB.TabStop = false;
-            this.VocalizerShevaG8S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG8S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG8S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG8S2CB
             // 
@@ -4802,10 +4410,6 @@ namespace GameX
             this.VocalizerShevaG8S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG8S2CB.TabIndex = 4;
             this.VocalizerShevaG8S2CB.TabStop = false;
-            this.VocalizerShevaG8S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG8S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG8S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG8S1CB
             // 
@@ -4820,10 +4424,6 @@ namespace GameX
             this.VocalizerShevaG8S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG8S1CB.TabIndex = 3;
             this.VocalizerShevaG8S1CB.TabStop = false;
-            this.VocalizerShevaG8S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG8S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG8S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG7GP
             // 
@@ -4851,10 +4451,6 @@ namespace GameX
             this.VocalizerShevaG7S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG7S5CB.TabIndex = 7;
             this.VocalizerShevaG7S5CB.TabStop = false;
-            this.VocalizerShevaG7S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG7S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG7S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG7S4CB
             // 
@@ -4869,10 +4465,6 @@ namespace GameX
             this.VocalizerShevaG7S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG7S4CB.TabIndex = 6;
             this.VocalizerShevaG7S4CB.TabStop = false;
-            this.VocalizerShevaG7S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG7S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG7S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG7S3CB
             // 
@@ -4887,10 +4479,6 @@ namespace GameX
             this.VocalizerShevaG7S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG7S3CB.TabIndex = 5;
             this.VocalizerShevaG7S3CB.TabStop = false;
-            this.VocalizerShevaG7S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG7S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG7S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG7S2CB
             // 
@@ -4905,10 +4493,6 @@ namespace GameX
             this.VocalizerShevaG7S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG7S2CB.TabIndex = 4;
             this.VocalizerShevaG7S2CB.TabStop = false;
-            this.VocalizerShevaG7S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG7S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG7S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG7S1CB
             // 
@@ -4923,10 +4507,6 @@ namespace GameX
             this.VocalizerShevaG7S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG7S1CB.TabIndex = 3;
             this.VocalizerShevaG7S1CB.TabStop = false;
-            this.VocalizerShevaG7S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG7S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG7S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG6GP
             // 
@@ -4954,10 +4534,6 @@ namespace GameX
             this.VocalizerShevaG6S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG6S5CB.TabIndex = 7;
             this.VocalizerShevaG6S5CB.TabStop = false;
-            this.VocalizerShevaG6S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG6S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG6S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG6S4CB
             // 
@@ -4972,10 +4548,6 @@ namespace GameX
             this.VocalizerShevaG6S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG6S4CB.TabIndex = 6;
             this.VocalizerShevaG6S4CB.TabStop = false;
-            this.VocalizerShevaG6S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG6S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG6S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG6S3CB
             // 
@@ -4990,10 +4562,6 @@ namespace GameX
             this.VocalizerShevaG6S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG6S3CB.TabIndex = 5;
             this.VocalizerShevaG6S3CB.TabStop = false;
-            this.VocalizerShevaG6S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG6S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG6S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG6S2CB
             // 
@@ -5008,10 +4576,6 @@ namespace GameX
             this.VocalizerShevaG6S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG6S2CB.TabIndex = 4;
             this.VocalizerShevaG6S2CB.TabStop = false;
-            this.VocalizerShevaG6S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG6S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG6S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG6S1CB
             // 
@@ -5026,10 +4590,6 @@ namespace GameX
             this.VocalizerShevaG6S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG6S1CB.TabIndex = 3;
             this.VocalizerShevaG6S1CB.TabStop = false;
-            this.VocalizerShevaG6S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG6S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG6S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG5GP
             // 
@@ -5057,10 +4617,6 @@ namespace GameX
             this.VocalizerShevaG5S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG5S5CB.TabIndex = 7;
             this.VocalizerShevaG5S5CB.TabStop = false;
-            this.VocalizerShevaG5S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG5S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG5S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG5S4CB
             // 
@@ -5075,10 +4631,6 @@ namespace GameX
             this.VocalizerShevaG5S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG5S4CB.TabIndex = 6;
             this.VocalizerShevaG5S4CB.TabStop = false;
-            this.VocalizerShevaG5S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG5S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG5S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG5S3CB
             // 
@@ -5093,10 +4645,6 @@ namespace GameX
             this.VocalizerShevaG5S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG5S3CB.TabIndex = 5;
             this.VocalizerShevaG5S3CB.TabStop = false;
-            this.VocalizerShevaG5S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG5S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG5S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG5S2CB
             // 
@@ -5111,10 +4659,6 @@ namespace GameX
             this.VocalizerShevaG5S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG5S2CB.TabIndex = 4;
             this.VocalizerShevaG5S2CB.TabStop = false;
-            this.VocalizerShevaG5S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG5S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG5S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG5S1CB
             // 
@@ -5129,10 +4673,6 @@ namespace GameX
             this.VocalizerShevaG5S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG5S1CB.TabIndex = 3;
             this.VocalizerShevaG5S1CB.TabStop = false;
-            this.VocalizerShevaG5S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG5S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG5S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG4GP
             // 
@@ -5160,10 +4700,6 @@ namespace GameX
             this.VocalizerShevaG4S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG4S5CB.TabIndex = 7;
             this.VocalizerShevaG4S5CB.TabStop = false;
-            this.VocalizerShevaG4S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG4S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG4S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG4S4CB
             // 
@@ -5178,10 +4714,6 @@ namespace GameX
             this.VocalizerShevaG4S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG4S4CB.TabIndex = 6;
             this.VocalizerShevaG4S4CB.TabStop = false;
-            this.VocalizerShevaG4S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG4S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG4S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG4S3CB
             // 
@@ -5196,10 +4728,6 @@ namespace GameX
             this.VocalizerShevaG4S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG4S3CB.TabIndex = 5;
             this.VocalizerShevaG4S3CB.TabStop = false;
-            this.VocalizerShevaG4S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG4S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG4S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG4S2CB
             // 
@@ -5214,10 +4742,6 @@ namespace GameX
             this.VocalizerShevaG4S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG4S2CB.TabIndex = 4;
             this.VocalizerShevaG4S2CB.TabStop = false;
-            this.VocalizerShevaG4S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG4S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG4S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG4S1CB
             // 
@@ -5232,10 +4756,6 @@ namespace GameX
             this.VocalizerShevaG4S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG4S1CB.TabIndex = 3;
             this.VocalizerShevaG4S1CB.TabStop = false;
-            this.VocalizerShevaG4S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG4S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG4S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG3GP
             // 
@@ -5263,10 +4783,6 @@ namespace GameX
             this.VocalizerShevaG3S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG3S5CB.TabIndex = 7;
             this.VocalizerShevaG3S5CB.TabStop = false;
-            this.VocalizerShevaG3S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG3S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG3S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG3S4CB
             // 
@@ -5281,10 +4797,6 @@ namespace GameX
             this.VocalizerShevaG3S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG3S4CB.TabIndex = 6;
             this.VocalizerShevaG3S4CB.TabStop = false;
-            this.VocalizerShevaG3S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG3S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG3S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG3S3CB
             // 
@@ -5299,10 +4811,6 @@ namespace GameX
             this.VocalizerShevaG3S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG3S3CB.TabIndex = 5;
             this.VocalizerShevaG3S3CB.TabStop = false;
-            this.VocalizerShevaG3S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG3S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG3S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG3S2CB
             // 
@@ -5317,10 +4825,6 @@ namespace GameX
             this.VocalizerShevaG3S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG3S2CB.TabIndex = 4;
             this.VocalizerShevaG3S2CB.TabStop = false;
-            this.VocalizerShevaG3S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG3S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG3S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG3S1CB
             // 
@@ -5335,10 +4839,6 @@ namespace GameX
             this.VocalizerShevaG3S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG3S1CB.TabIndex = 3;
             this.VocalizerShevaG3S1CB.TabStop = false;
-            this.VocalizerShevaG3S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG3S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG3S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG2GP
             // 
@@ -5366,10 +4866,6 @@ namespace GameX
             this.VocalizerShevaG2S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG2S5CB.TabIndex = 7;
             this.VocalizerShevaG2S5CB.TabStop = false;
-            this.VocalizerShevaG2S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG2S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG2S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG2S4CB
             // 
@@ -5384,10 +4880,6 @@ namespace GameX
             this.VocalizerShevaG2S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG2S4CB.TabIndex = 6;
             this.VocalizerShevaG2S4CB.TabStop = false;
-            this.VocalizerShevaG2S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG2S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG2S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG2S3CB
             // 
@@ -5402,10 +4894,6 @@ namespace GameX
             this.VocalizerShevaG2S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG2S3CB.TabIndex = 5;
             this.VocalizerShevaG2S3CB.TabStop = false;
-            this.VocalizerShevaG2S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG2S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG2S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG2S2CB
             // 
@@ -5420,10 +4908,6 @@ namespace GameX
             this.VocalizerShevaG2S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG2S2CB.TabIndex = 4;
             this.VocalizerShevaG2S2CB.TabStop = false;
-            this.VocalizerShevaG2S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG2S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG2S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG2S1CB
             // 
@@ -5438,10 +4922,6 @@ namespace GameX
             this.VocalizerShevaG2S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG2S1CB.TabIndex = 3;
             this.VocalizerShevaG2S1CB.TabStop = false;
-            this.VocalizerShevaG2S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG2S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG2S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG1GP
             // 
@@ -5469,10 +4949,6 @@ namespace GameX
             this.VocalizerShevaG1S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG1S5CB.TabIndex = 7;
             this.VocalizerShevaG1S5CB.TabStop = false;
-            this.VocalizerShevaG1S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG1S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG1S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG1S4CB
             // 
@@ -5487,10 +4963,6 @@ namespace GameX
             this.VocalizerShevaG1S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG1S4CB.TabIndex = 6;
             this.VocalizerShevaG1S4CB.TabStop = false;
-            this.VocalizerShevaG1S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG1S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG1S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG1S3CB
             // 
@@ -5505,10 +4977,6 @@ namespace GameX
             this.VocalizerShevaG1S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG1S3CB.TabIndex = 5;
             this.VocalizerShevaG1S3CB.TabStop = false;
-            this.VocalizerShevaG1S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG1S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG1S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG1S2CB
             // 
@@ -5523,10 +4991,6 @@ namespace GameX
             this.VocalizerShevaG1S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG1S2CB.TabIndex = 4;
             this.VocalizerShevaG1S2CB.TabStop = false;
-            this.VocalizerShevaG1S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG1S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG1S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerShevaG1S1CB
             // 
@@ -5541,10 +5005,6 @@ namespace GameX
             this.VocalizerShevaG1S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerShevaG1S1CB.TabIndex = 3;
             this.VocalizerShevaG1S1CB.TabStop = false;
-            this.VocalizerShevaG1S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerShevaG1S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerShevaG1S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillTab
             // 
@@ -5587,10 +5047,6 @@ namespace GameX
             this.VocalizerJillG9S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG9S5CB.TabIndex = 7;
             this.VocalizerJillG9S5CB.TabStop = false;
-            this.VocalizerJillG9S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG9S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG9S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG9S4CB
             // 
@@ -5605,10 +5061,6 @@ namespace GameX
             this.VocalizerJillG9S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG9S4CB.TabIndex = 6;
             this.VocalizerJillG9S4CB.TabStop = false;
-            this.VocalizerJillG9S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG9S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG9S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG9S3CB
             // 
@@ -5623,10 +5075,6 @@ namespace GameX
             this.VocalizerJillG9S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG9S3CB.TabIndex = 5;
             this.VocalizerJillG9S3CB.TabStop = false;
-            this.VocalizerJillG9S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG9S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG9S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG9S2CB
             // 
@@ -5641,10 +5089,6 @@ namespace GameX
             this.VocalizerJillG9S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG9S2CB.TabIndex = 4;
             this.VocalizerJillG9S2CB.TabStop = false;
-            this.VocalizerJillG9S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG9S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG9S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG9S1CB
             // 
@@ -5659,10 +5103,6 @@ namespace GameX
             this.VocalizerJillG9S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG9S1CB.TabIndex = 3;
             this.VocalizerJillG9S1CB.TabStop = false;
-            this.VocalizerJillG9S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG9S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG9S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG8GP
             // 
@@ -5690,10 +5130,6 @@ namespace GameX
             this.VocalizerJillG8S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG8S5CB.TabIndex = 7;
             this.VocalizerJillG8S5CB.TabStop = false;
-            this.VocalizerJillG8S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG8S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG8S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG8S4CB
             // 
@@ -5708,10 +5144,6 @@ namespace GameX
             this.VocalizerJillG8S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG8S4CB.TabIndex = 6;
             this.VocalizerJillG8S4CB.TabStop = false;
-            this.VocalizerJillG8S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG8S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG8S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG8S3CB
             // 
@@ -5726,10 +5158,6 @@ namespace GameX
             this.VocalizerJillG8S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG8S3CB.TabIndex = 5;
             this.VocalizerJillG8S3CB.TabStop = false;
-            this.VocalizerJillG8S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG8S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG8S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG8S2CB
             // 
@@ -5744,10 +5172,6 @@ namespace GameX
             this.VocalizerJillG8S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG8S2CB.TabIndex = 4;
             this.VocalizerJillG8S2CB.TabStop = false;
-            this.VocalizerJillG8S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG8S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG8S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG8S1CB
             // 
@@ -5762,10 +5186,6 @@ namespace GameX
             this.VocalizerJillG8S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG8S1CB.TabIndex = 3;
             this.VocalizerJillG8S1CB.TabStop = false;
-            this.VocalizerJillG8S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG8S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG8S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG7GP
             // 
@@ -5793,10 +5213,6 @@ namespace GameX
             this.VocalizerJillG7S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG7S5CB.TabIndex = 7;
             this.VocalizerJillG7S5CB.TabStop = false;
-            this.VocalizerJillG7S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG7S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG7S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG7S4CB
             // 
@@ -5811,10 +5227,6 @@ namespace GameX
             this.VocalizerJillG7S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG7S4CB.TabIndex = 6;
             this.VocalizerJillG7S4CB.TabStop = false;
-            this.VocalizerJillG7S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG7S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG7S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG7S3CB
             // 
@@ -5829,10 +5241,6 @@ namespace GameX
             this.VocalizerJillG7S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG7S3CB.TabIndex = 5;
             this.VocalizerJillG7S3CB.TabStop = false;
-            this.VocalizerJillG7S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG7S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG7S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG7S2CB
             // 
@@ -5847,10 +5255,6 @@ namespace GameX
             this.VocalizerJillG7S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG7S2CB.TabIndex = 4;
             this.VocalizerJillG7S2CB.TabStop = false;
-            this.VocalizerJillG7S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG7S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG7S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG7S1CB
             // 
@@ -5865,10 +5269,6 @@ namespace GameX
             this.VocalizerJillG7S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG7S1CB.TabIndex = 3;
             this.VocalizerJillG7S1CB.TabStop = false;
-            this.VocalizerJillG7S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG7S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG7S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG6GP
             // 
@@ -5896,10 +5296,6 @@ namespace GameX
             this.VocalizerJillG6S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG6S5CB.TabIndex = 7;
             this.VocalizerJillG6S5CB.TabStop = false;
-            this.VocalizerJillG6S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG6S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG6S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG6S4CB
             // 
@@ -5914,10 +5310,6 @@ namespace GameX
             this.VocalizerJillG6S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG6S4CB.TabIndex = 6;
             this.VocalizerJillG6S4CB.TabStop = false;
-            this.VocalizerJillG6S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG6S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG6S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG6S3CB
             // 
@@ -5932,10 +5324,6 @@ namespace GameX
             this.VocalizerJillG6S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG6S3CB.TabIndex = 5;
             this.VocalizerJillG6S3CB.TabStop = false;
-            this.VocalizerJillG6S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG6S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG6S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG6S2CB
             // 
@@ -5950,10 +5338,6 @@ namespace GameX
             this.VocalizerJillG6S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG6S2CB.TabIndex = 4;
             this.VocalizerJillG6S2CB.TabStop = false;
-            this.VocalizerJillG6S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG6S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG6S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG6S1CB
             // 
@@ -5968,10 +5352,6 @@ namespace GameX
             this.VocalizerJillG6S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG6S1CB.TabIndex = 3;
             this.VocalizerJillG6S1CB.TabStop = false;
-            this.VocalizerJillG6S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG6S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG6S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG5GP
             // 
@@ -5999,10 +5379,6 @@ namespace GameX
             this.VocalizerJillG5S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG5S5CB.TabIndex = 7;
             this.VocalizerJillG5S5CB.TabStop = false;
-            this.VocalizerJillG5S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG5S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG5S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG5S4CB
             // 
@@ -6017,10 +5393,6 @@ namespace GameX
             this.VocalizerJillG5S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG5S4CB.TabIndex = 6;
             this.VocalizerJillG5S4CB.TabStop = false;
-            this.VocalizerJillG5S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG5S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG5S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG5S3CB
             // 
@@ -6035,10 +5407,6 @@ namespace GameX
             this.VocalizerJillG5S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG5S3CB.TabIndex = 5;
             this.VocalizerJillG5S3CB.TabStop = false;
-            this.VocalizerJillG5S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG5S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG5S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG5S2CB
             // 
@@ -6053,10 +5421,6 @@ namespace GameX
             this.VocalizerJillG5S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG5S2CB.TabIndex = 4;
             this.VocalizerJillG5S2CB.TabStop = false;
-            this.VocalizerJillG5S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG5S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG5S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG5S1CB
             // 
@@ -6071,10 +5435,6 @@ namespace GameX
             this.VocalizerJillG5S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG5S1CB.TabIndex = 3;
             this.VocalizerJillG5S1CB.TabStop = false;
-            this.VocalizerJillG5S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG5S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG5S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG4GP
             // 
@@ -6102,10 +5462,6 @@ namespace GameX
             this.VocalizerJillG4S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG4S5CB.TabIndex = 7;
             this.VocalizerJillG4S5CB.TabStop = false;
-            this.VocalizerJillG4S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG4S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG4S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG4S4CB
             // 
@@ -6120,10 +5476,6 @@ namespace GameX
             this.VocalizerJillG4S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG4S4CB.TabIndex = 6;
             this.VocalizerJillG4S4CB.TabStop = false;
-            this.VocalizerJillG4S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG4S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG4S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG4S3CB
             // 
@@ -6138,10 +5490,6 @@ namespace GameX
             this.VocalizerJillG4S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG4S3CB.TabIndex = 5;
             this.VocalizerJillG4S3CB.TabStop = false;
-            this.VocalizerJillG4S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG4S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG4S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG4S2CB
             // 
@@ -6156,10 +5504,6 @@ namespace GameX
             this.VocalizerJillG4S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG4S2CB.TabIndex = 4;
             this.VocalizerJillG4S2CB.TabStop = false;
-            this.VocalizerJillG4S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG4S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG4S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG4S1CB
             // 
@@ -6174,10 +5518,6 @@ namespace GameX
             this.VocalizerJillG4S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG4S1CB.TabIndex = 3;
             this.VocalizerJillG4S1CB.TabStop = false;
-            this.VocalizerJillG4S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG4S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG4S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG3GP
             // 
@@ -6205,10 +5545,6 @@ namespace GameX
             this.VocalizerJillG3S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG3S5CB.TabIndex = 7;
             this.VocalizerJillG3S5CB.TabStop = false;
-            this.VocalizerJillG3S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG3S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG3S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG3S4CB
             // 
@@ -6223,10 +5559,6 @@ namespace GameX
             this.VocalizerJillG3S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG3S4CB.TabIndex = 6;
             this.VocalizerJillG3S4CB.TabStop = false;
-            this.VocalizerJillG3S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG3S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG3S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG3S3CB
             // 
@@ -6241,10 +5573,6 @@ namespace GameX
             this.VocalizerJillG3S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG3S3CB.TabIndex = 5;
             this.VocalizerJillG3S3CB.TabStop = false;
-            this.VocalizerJillG3S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG3S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG3S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG3S2CB
             // 
@@ -6259,10 +5587,6 @@ namespace GameX
             this.VocalizerJillG3S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG3S2CB.TabIndex = 4;
             this.VocalizerJillG3S2CB.TabStop = false;
-            this.VocalizerJillG3S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG3S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG3S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG3S1CB
             // 
@@ -6277,10 +5601,6 @@ namespace GameX
             this.VocalizerJillG3S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG3S1CB.TabIndex = 3;
             this.VocalizerJillG3S1CB.TabStop = false;
-            this.VocalizerJillG3S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG3S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG3S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG2GP
             // 
@@ -6308,10 +5628,6 @@ namespace GameX
             this.VocalizerJillG2S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG2S5CB.TabIndex = 7;
             this.VocalizerJillG2S5CB.TabStop = false;
-            this.VocalizerJillG2S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG2S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG2S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG2S4CB
             // 
@@ -6326,10 +5642,6 @@ namespace GameX
             this.VocalizerJillG2S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG2S4CB.TabIndex = 6;
             this.VocalizerJillG2S4CB.TabStop = false;
-            this.VocalizerJillG2S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG2S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG2S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG2S3CB
             // 
@@ -6344,10 +5656,6 @@ namespace GameX
             this.VocalizerJillG2S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG2S3CB.TabIndex = 5;
             this.VocalizerJillG2S3CB.TabStop = false;
-            this.VocalizerJillG2S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG2S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG2S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG2S2CB
             // 
@@ -6362,10 +5670,6 @@ namespace GameX
             this.VocalizerJillG2S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG2S2CB.TabIndex = 4;
             this.VocalizerJillG2S2CB.TabStop = false;
-            this.VocalizerJillG2S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG2S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG2S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG2S1CB
             // 
@@ -6380,10 +5684,6 @@ namespace GameX
             this.VocalizerJillG2S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG2S1CB.TabIndex = 3;
             this.VocalizerJillG2S1CB.TabStop = false;
-            this.VocalizerJillG2S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG2S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG2S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG1GP
             // 
@@ -6411,10 +5711,6 @@ namespace GameX
             this.VocalizerJillG1S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG1S5CB.TabIndex = 7;
             this.VocalizerJillG1S5CB.TabStop = false;
-            this.VocalizerJillG1S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG1S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG1S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG1S4CB
             // 
@@ -6429,10 +5725,6 @@ namespace GameX
             this.VocalizerJillG1S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG1S4CB.TabIndex = 6;
             this.VocalizerJillG1S4CB.TabStop = false;
-            this.VocalizerJillG1S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG1S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG1S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG1S3CB
             // 
@@ -6447,10 +5739,6 @@ namespace GameX
             this.VocalizerJillG1S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG1S3CB.TabIndex = 5;
             this.VocalizerJillG1S3CB.TabStop = false;
-            this.VocalizerJillG1S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG1S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG1S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG1S2CB
             // 
@@ -6465,10 +5753,6 @@ namespace GameX
             this.VocalizerJillG1S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG1S2CB.TabIndex = 4;
             this.VocalizerJillG1S2CB.TabStop = false;
-            this.VocalizerJillG1S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG1S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG1S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJillG1S1CB
             // 
@@ -6483,10 +5767,6 @@ namespace GameX
             this.VocalizerJillG1S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJillG1S1CB.TabIndex = 3;
             this.VocalizerJillG1S1CB.TabStop = false;
-            this.VocalizerJillG1S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJillG1S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJillG1S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerTab
             // 
@@ -6529,10 +5809,6 @@ namespace GameX
             this.VocalizerWeskerG9S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG9S5CB.TabIndex = 7;
             this.VocalizerWeskerG9S5CB.TabStop = false;
-            this.VocalizerWeskerG9S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG9S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG9S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG9S4CB
             // 
@@ -6547,10 +5823,6 @@ namespace GameX
             this.VocalizerWeskerG9S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG9S4CB.TabIndex = 6;
             this.VocalizerWeskerG9S4CB.TabStop = false;
-            this.VocalizerWeskerG9S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG9S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG9S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG9S3CB
             // 
@@ -6565,10 +5837,6 @@ namespace GameX
             this.VocalizerWeskerG9S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG9S3CB.TabIndex = 5;
             this.VocalizerWeskerG9S3CB.TabStop = false;
-            this.VocalizerWeskerG9S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG9S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG9S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG9S2CB
             // 
@@ -6583,10 +5851,6 @@ namespace GameX
             this.VocalizerWeskerG9S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG9S2CB.TabIndex = 4;
             this.VocalizerWeskerG9S2CB.TabStop = false;
-            this.VocalizerWeskerG9S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG9S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG9S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG9S1CB
             // 
@@ -6601,10 +5865,6 @@ namespace GameX
             this.VocalizerWeskerG9S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG9S1CB.TabIndex = 3;
             this.VocalizerWeskerG9S1CB.TabStop = false;
-            this.VocalizerWeskerG9S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG9S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG9S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG8GP
             // 
@@ -6632,10 +5892,6 @@ namespace GameX
             this.VocalizerWeskerG8S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG8S5CB.TabIndex = 7;
             this.VocalizerWeskerG8S5CB.TabStop = false;
-            this.VocalizerWeskerG8S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG8S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG8S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG8S4CB
             // 
@@ -6650,10 +5906,6 @@ namespace GameX
             this.VocalizerWeskerG8S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG8S4CB.TabIndex = 6;
             this.VocalizerWeskerG8S4CB.TabStop = false;
-            this.VocalizerWeskerG8S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG8S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG8S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG8S3CB
             // 
@@ -6668,10 +5920,6 @@ namespace GameX
             this.VocalizerWeskerG8S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG8S3CB.TabIndex = 5;
             this.VocalizerWeskerG8S3CB.TabStop = false;
-            this.VocalizerWeskerG8S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG8S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG8S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG8S2CB
             // 
@@ -6686,10 +5934,6 @@ namespace GameX
             this.VocalizerWeskerG8S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG8S2CB.TabIndex = 4;
             this.VocalizerWeskerG8S2CB.TabStop = false;
-            this.VocalizerWeskerG8S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG8S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG8S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG8S1CB
             // 
@@ -6704,10 +5948,6 @@ namespace GameX
             this.VocalizerWeskerG8S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG8S1CB.TabIndex = 3;
             this.VocalizerWeskerG8S1CB.TabStop = false;
-            this.VocalizerWeskerG8S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG8S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG8S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG7GP
             // 
@@ -6735,10 +5975,6 @@ namespace GameX
             this.VocalizerWeskerG7S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG7S5CB.TabIndex = 7;
             this.VocalizerWeskerG7S5CB.TabStop = false;
-            this.VocalizerWeskerG7S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG7S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG7S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG7S4CB
             // 
@@ -6753,10 +5989,6 @@ namespace GameX
             this.VocalizerWeskerG7S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG7S4CB.TabIndex = 6;
             this.VocalizerWeskerG7S4CB.TabStop = false;
-            this.VocalizerWeskerG7S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG7S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG7S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG7S3CB
             // 
@@ -6771,10 +6003,6 @@ namespace GameX
             this.VocalizerWeskerG7S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG7S3CB.TabIndex = 5;
             this.VocalizerWeskerG7S3CB.TabStop = false;
-            this.VocalizerWeskerG7S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG7S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG7S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG7S2CB
             // 
@@ -6789,10 +6017,6 @@ namespace GameX
             this.VocalizerWeskerG7S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG7S2CB.TabIndex = 4;
             this.VocalizerWeskerG7S2CB.TabStop = false;
-            this.VocalizerWeskerG7S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG7S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG7S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG7S1CB
             // 
@@ -6807,10 +6031,6 @@ namespace GameX
             this.VocalizerWeskerG7S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG7S1CB.TabIndex = 3;
             this.VocalizerWeskerG7S1CB.TabStop = false;
-            this.VocalizerWeskerG7S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG7S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG7S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG6GP
             // 
@@ -6838,10 +6058,6 @@ namespace GameX
             this.VocalizerWeskerG6S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG6S5CB.TabIndex = 7;
             this.VocalizerWeskerG6S5CB.TabStop = false;
-            this.VocalizerWeskerG6S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG6S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG6S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG6S4CB
             // 
@@ -6856,10 +6072,6 @@ namespace GameX
             this.VocalizerWeskerG6S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG6S4CB.TabIndex = 6;
             this.VocalizerWeskerG6S4CB.TabStop = false;
-            this.VocalizerWeskerG6S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG6S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG6S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG6S3CB
             // 
@@ -6874,10 +6086,6 @@ namespace GameX
             this.VocalizerWeskerG6S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG6S3CB.TabIndex = 5;
             this.VocalizerWeskerG6S3CB.TabStop = false;
-            this.VocalizerWeskerG6S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG6S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG6S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG6S2CB
             // 
@@ -6892,10 +6100,6 @@ namespace GameX
             this.VocalizerWeskerG6S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG6S2CB.TabIndex = 4;
             this.VocalizerWeskerG6S2CB.TabStop = false;
-            this.VocalizerWeskerG6S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG6S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG6S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG6S1CB
             // 
@@ -6910,10 +6114,6 @@ namespace GameX
             this.VocalizerWeskerG6S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG6S1CB.TabIndex = 3;
             this.VocalizerWeskerG6S1CB.TabStop = false;
-            this.VocalizerWeskerG6S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG6S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG6S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG5GP
             // 
@@ -6941,10 +6141,6 @@ namespace GameX
             this.VocalizerWeskerG5S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG5S5CB.TabIndex = 7;
             this.VocalizerWeskerG5S5CB.TabStop = false;
-            this.VocalizerWeskerG5S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG5S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG5S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG5S4CB
             // 
@@ -6959,10 +6155,6 @@ namespace GameX
             this.VocalizerWeskerG5S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG5S4CB.TabIndex = 6;
             this.VocalizerWeskerG5S4CB.TabStop = false;
-            this.VocalizerWeskerG5S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG5S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG5S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG5S3CB
             // 
@@ -6977,10 +6169,6 @@ namespace GameX
             this.VocalizerWeskerG5S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG5S3CB.TabIndex = 5;
             this.VocalizerWeskerG5S3CB.TabStop = false;
-            this.VocalizerWeskerG5S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG5S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG5S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG5S2CB
             // 
@@ -6995,10 +6183,6 @@ namespace GameX
             this.VocalizerWeskerG5S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG5S2CB.TabIndex = 4;
             this.VocalizerWeskerG5S2CB.TabStop = false;
-            this.VocalizerWeskerG5S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG5S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG5S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG5S1CB
             // 
@@ -7013,10 +6197,6 @@ namespace GameX
             this.VocalizerWeskerG5S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG5S1CB.TabIndex = 3;
             this.VocalizerWeskerG5S1CB.TabStop = false;
-            this.VocalizerWeskerG5S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG5S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG5S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG4GP
             // 
@@ -7044,10 +6224,6 @@ namespace GameX
             this.VocalizerWeskerG4S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG4S5CB.TabIndex = 7;
             this.VocalizerWeskerG4S5CB.TabStop = false;
-            this.VocalizerWeskerG4S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG4S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG4S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG4S4CB
             // 
@@ -7062,10 +6238,6 @@ namespace GameX
             this.VocalizerWeskerG4S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG4S4CB.TabIndex = 6;
             this.VocalizerWeskerG4S4CB.TabStop = false;
-            this.VocalizerWeskerG4S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG4S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG4S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG4S3CB
             // 
@@ -7080,10 +6252,6 @@ namespace GameX
             this.VocalizerWeskerG4S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG4S3CB.TabIndex = 5;
             this.VocalizerWeskerG4S3CB.TabStop = false;
-            this.VocalizerWeskerG4S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG4S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG4S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG4S2CB
             // 
@@ -7098,10 +6266,6 @@ namespace GameX
             this.VocalizerWeskerG4S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG4S2CB.TabIndex = 4;
             this.VocalizerWeskerG4S2CB.TabStop = false;
-            this.VocalizerWeskerG4S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG4S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG4S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG4S1CB
             // 
@@ -7116,10 +6280,6 @@ namespace GameX
             this.VocalizerWeskerG4S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG4S1CB.TabIndex = 3;
             this.VocalizerWeskerG4S1CB.TabStop = false;
-            this.VocalizerWeskerG4S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG4S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG4S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG3GP
             // 
@@ -7147,10 +6307,6 @@ namespace GameX
             this.VocalizerWeskerG3S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG3S5CB.TabIndex = 7;
             this.VocalizerWeskerG3S5CB.TabStop = false;
-            this.VocalizerWeskerG3S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG3S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG3S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG3S4CB
             // 
@@ -7165,10 +6321,6 @@ namespace GameX
             this.VocalizerWeskerG3S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG3S4CB.TabIndex = 6;
             this.VocalizerWeskerG3S4CB.TabStop = false;
-            this.VocalizerWeskerG3S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG3S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG3S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG3S3CB
             // 
@@ -7183,10 +6335,6 @@ namespace GameX
             this.VocalizerWeskerG3S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG3S3CB.TabIndex = 5;
             this.VocalizerWeskerG3S3CB.TabStop = false;
-            this.VocalizerWeskerG3S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG3S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG3S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG3S2CB
             // 
@@ -7201,10 +6349,6 @@ namespace GameX
             this.VocalizerWeskerG3S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG3S2CB.TabIndex = 4;
             this.VocalizerWeskerG3S2CB.TabStop = false;
-            this.VocalizerWeskerG3S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG3S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG3S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG3S1CB
             // 
@@ -7219,10 +6363,6 @@ namespace GameX
             this.VocalizerWeskerG3S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG3S1CB.TabIndex = 3;
             this.VocalizerWeskerG3S1CB.TabStop = false;
-            this.VocalizerWeskerG3S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG3S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG3S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG2GP
             // 
@@ -7250,10 +6390,6 @@ namespace GameX
             this.VocalizerWeskerG2S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG2S5CB.TabIndex = 7;
             this.VocalizerWeskerG2S5CB.TabStop = false;
-            this.VocalizerWeskerG2S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG2S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG2S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG2S4CB
             // 
@@ -7268,10 +6404,6 @@ namespace GameX
             this.VocalizerWeskerG2S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG2S4CB.TabIndex = 6;
             this.VocalizerWeskerG2S4CB.TabStop = false;
-            this.VocalizerWeskerG2S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG2S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG2S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG2S3CB
             // 
@@ -7286,10 +6418,6 @@ namespace GameX
             this.VocalizerWeskerG2S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG2S3CB.TabIndex = 5;
             this.VocalizerWeskerG2S3CB.TabStop = false;
-            this.VocalizerWeskerG2S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG2S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG2S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG2S2CB
             // 
@@ -7304,10 +6432,6 @@ namespace GameX
             this.VocalizerWeskerG2S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG2S2CB.TabIndex = 4;
             this.VocalizerWeskerG2S2CB.TabStop = false;
-            this.VocalizerWeskerG2S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG2S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG2S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG2S1CB
             // 
@@ -7322,10 +6446,6 @@ namespace GameX
             this.VocalizerWeskerG2S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG2S1CB.TabIndex = 3;
             this.VocalizerWeskerG2S1CB.TabStop = false;
-            this.VocalizerWeskerG2S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG2S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG2S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG1GP
             // 
@@ -7353,10 +6473,6 @@ namespace GameX
             this.VocalizerWeskerG1S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG1S5CB.TabIndex = 7;
             this.VocalizerWeskerG1S5CB.TabStop = false;
-            this.VocalizerWeskerG1S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG1S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG1S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG1S4CB
             // 
@@ -7371,10 +6487,6 @@ namespace GameX
             this.VocalizerWeskerG1S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG1S4CB.TabIndex = 6;
             this.VocalizerWeskerG1S4CB.TabStop = false;
-            this.VocalizerWeskerG1S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG1S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG1S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG1S3CB
             // 
@@ -7389,10 +6501,6 @@ namespace GameX
             this.VocalizerWeskerG1S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG1S3CB.TabIndex = 5;
             this.VocalizerWeskerG1S3CB.TabStop = false;
-            this.VocalizerWeskerG1S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG1S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG1S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG1S2CB
             // 
@@ -7407,10 +6515,6 @@ namespace GameX
             this.VocalizerWeskerG1S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG1S2CB.TabIndex = 4;
             this.VocalizerWeskerG1S2CB.TabStop = false;
-            this.VocalizerWeskerG1S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG1S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG1S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerWeskerG1S1CB
             // 
@@ -7425,10 +6529,6 @@ namespace GameX
             this.VocalizerWeskerG1S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerWeskerG1S1CB.TabIndex = 3;
             this.VocalizerWeskerG1S1CB.TabStop = false;
-            this.VocalizerWeskerG1S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerWeskerG1S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerWeskerG1S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshTab
             // 
@@ -7471,10 +6571,6 @@ namespace GameX
             this.VocalizerJoshG9S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG9S5CB.TabIndex = 7;
             this.VocalizerJoshG9S5CB.TabStop = false;
-            this.VocalizerJoshG9S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG9S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG9S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG9S4CB
             // 
@@ -7489,10 +6585,6 @@ namespace GameX
             this.VocalizerJoshG9S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG9S4CB.TabIndex = 6;
             this.VocalizerJoshG9S4CB.TabStop = false;
-            this.VocalizerJoshG9S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG9S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG9S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG9S3CB
             // 
@@ -7507,10 +6599,6 @@ namespace GameX
             this.VocalizerJoshG9S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG9S3CB.TabIndex = 5;
             this.VocalizerJoshG9S3CB.TabStop = false;
-            this.VocalizerJoshG9S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG9S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG9S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG9S2CB
             // 
@@ -7525,10 +6613,6 @@ namespace GameX
             this.VocalizerJoshG9S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG9S2CB.TabIndex = 4;
             this.VocalizerJoshG9S2CB.TabStop = false;
-            this.VocalizerJoshG9S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG9S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG9S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG9S1CB
             // 
@@ -7543,10 +6627,6 @@ namespace GameX
             this.VocalizerJoshG9S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG9S1CB.TabIndex = 3;
             this.VocalizerJoshG9S1CB.TabStop = false;
-            this.VocalizerJoshG9S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG9S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG9S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG8GP
             // 
@@ -7574,10 +6654,6 @@ namespace GameX
             this.VocalizerJoshG8S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG8S5CB.TabIndex = 7;
             this.VocalizerJoshG8S5CB.TabStop = false;
-            this.VocalizerJoshG8S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG8S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG8S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG8S4CB
             // 
@@ -7592,10 +6668,6 @@ namespace GameX
             this.VocalizerJoshG8S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG8S4CB.TabIndex = 6;
             this.VocalizerJoshG8S4CB.TabStop = false;
-            this.VocalizerJoshG8S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG8S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG8S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG8S3CB
             // 
@@ -7610,10 +6682,6 @@ namespace GameX
             this.VocalizerJoshG8S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG8S3CB.TabIndex = 5;
             this.VocalizerJoshG8S3CB.TabStop = false;
-            this.VocalizerJoshG8S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG8S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG8S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG8S2CB
             // 
@@ -7628,10 +6696,6 @@ namespace GameX
             this.VocalizerJoshG8S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG8S2CB.TabIndex = 4;
             this.VocalizerJoshG8S2CB.TabStop = false;
-            this.VocalizerJoshG8S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG8S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG8S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG8S1CB
             // 
@@ -7646,10 +6710,6 @@ namespace GameX
             this.VocalizerJoshG8S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG8S1CB.TabIndex = 3;
             this.VocalizerJoshG8S1CB.TabStop = false;
-            this.VocalizerJoshG8S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG8S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG8S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG7GP
             // 
@@ -7677,10 +6737,6 @@ namespace GameX
             this.VocalizerJoshG7S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG7S5CB.TabIndex = 7;
             this.VocalizerJoshG7S5CB.TabStop = false;
-            this.VocalizerJoshG7S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG7S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG7S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG7S4CB
             // 
@@ -7695,10 +6751,6 @@ namespace GameX
             this.VocalizerJoshG7S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG7S4CB.TabIndex = 6;
             this.VocalizerJoshG7S4CB.TabStop = false;
-            this.VocalizerJoshG7S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG7S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG7S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG7S3CB
             // 
@@ -7713,10 +6765,6 @@ namespace GameX
             this.VocalizerJoshG7S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG7S3CB.TabIndex = 5;
             this.VocalizerJoshG7S3CB.TabStop = false;
-            this.VocalizerJoshG7S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG7S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG7S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG7S2CB
             // 
@@ -7731,10 +6779,6 @@ namespace GameX
             this.VocalizerJoshG7S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG7S2CB.TabIndex = 4;
             this.VocalizerJoshG7S2CB.TabStop = false;
-            this.VocalizerJoshG7S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG7S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG7S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG7S1CB
             // 
@@ -7749,10 +6793,6 @@ namespace GameX
             this.VocalizerJoshG7S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG7S1CB.TabIndex = 3;
             this.VocalizerJoshG7S1CB.TabStop = false;
-            this.VocalizerJoshG7S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG7S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG7S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG6GP
             // 
@@ -7780,10 +6820,6 @@ namespace GameX
             this.VocalizerJoshG6S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG6S5CB.TabIndex = 7;
             this.VocalizerJoshG6S5CB.TabStop = false;
-            this.VocalizerJoshG6S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG6S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG6S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG6S4CB
             // 
@@ -7798,10 +6834,6 @@ namespace GameX
             this.VocalizerJoshG6S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG6S4CB.TabIndex = 6;
             this.VocalizerJoshG6S4CB.TabStop = false;
-            this.VocalizerJoshG6S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG6S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG6S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG6S3CB
             // 
@@ -7816,10 +6848,6 @@ namespace GameX
             this.VocalizerJoshG6S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG6S3CB.TabIndex = 5;
             this.VocalizerJoshG6S3CB.TabStop = false;
-            this.VocalizerJoshG6S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG6S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG6S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG6S2CB
             // 
@@ -7834,10 +6862,6 @@ namespace GameX
             this.VocalizerJoshG6S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG6S2CB.TabIndex = 4;
             this.VocalizerJoshG6S2CB.TabStop = false;
-            this.VocalizerJoshG6S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG6S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG6S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG6S1CB
             // 
@@ -7852,10 +6876,6 @@ namespace GameX
             this.VocalizerJoshG6S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG6S1CB.TabIndex = 3;
             this.VocalizerJoshG6S1CB.TabStop = false;
-            this.VocalizerJoshG6S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG6S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG6S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG5GP
             // 
@@ -7883,10 +6903,6 @@ namespace GameX
             this.VocalizerJoshG5S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG5S5CB.TabIndex = 7;
             this.VocalizerJoshG5S5CB.TabStop = false;
-            this.VocalizerJoshG5S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG5S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG5S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG5S4CB
             // 
@@ -7901,10 +6917,6 @@ namespace GameX
             this.VocalizerJoshG5S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG5S4CB.TabIndex = 6;
             this.VocalizerJoshG5S4CB.TabStop = false;
-            this.VocalizerJoshG5S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG5S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG5S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG5S3CB
             // 
@@ -7919,10 +6931,6 @@ namespace GameX
             this.VocalizerJoshG5S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG5S3CB.TabIndex = 5;
             this.VocalizerJoshG5S3CB.TabStop = false;
-            this.VocalizerJoshG5S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG5S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG5S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG5S2CB
             // 
@@ -7937,10 +6945,6 @@ namespace GameX
             this.VocalizerJoshG5S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG5S2CB.TabIndex = 4;
             this.VocalizerJoshG5S2CB.TabStop = false;
-            this.VocalizerJoshG5S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG5S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG5S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG5S1CB
             // 
@@ -7955,10 +6959,6 @@ namespace GameX
             this.VocalizerJoshG5S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG5S1CB.TabIndex = 3;
             this.VocalizerJoshG5S1CB.TabStop = false;
-            this.VocalizerJoshG5S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG5S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG5S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG4GP
             // 
@@ -7986,10 +6986,6 @@ namespace GameX
             this.VocalizerJoshG4S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG4S5CB.TabIndex = 7;
             this.VocalizerJoshG4S5CB.TabStop = false;
-            this.VocalizerJoshG4S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG4S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG4S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG4S4CB
             // 
@@ -8004,10 +7000,6 @@ namespace GameX
             this.VocalizerJoshG4S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG4S4CB.TabIndex = 6;
             this.VocalizerJoshG4S4CB.TabStop = false;
-            this.VocalizerJoshG4S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG4S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG4S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG4S3CB
             // 
@@ -8022,10 +7014,6 @@ namespace GameX
             this.VocalizerJoshG4S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG4S3CB.TabIndex = 5;
             this.VocalizerJoshG4S3CB.TabStop = false;
-            this.VocalizerJoshG4S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG4S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG4S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG4S2CB
             // 
@@ -8040,10 +7028,6 @@ namespace GameX
             this.VocalizerJoshG4S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG4S2CB.TabIndex = 4;
             this.VocalizerJoshG4S2CB.TabStop = false;
-            this.VocalizerJoshG4S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG4S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG4S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG4S1CB
             // 
@@ -8058,10 +7042,6 @@ namespace GameX
             this.VocalizerJoshG4S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG4S1CB.TabIndex = 3;
             this.VocalizerJoshG4S1CB.TabStop = false;
-            this.VocalizerJoshG4S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG4S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG4S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG3GP
             // 
@@ -8089,10 +7069,6 @@ namespace GameX
             this.VocalizerJoshG3S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG3S5CB.TabIndex = 7;
             this.VocalizerJoshG3S5CB.TabStop = false;
-            this.VocalizerJoshG3S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG3S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG3S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG3S4CB
             // 
@@ -8107,10 +7083,6 @@ namespace GameX
             this.VocalizerJoshG3S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG3S4CB.TabIndex = 6;
             this.VocalizerJoshG3S4CB.TabStop = false;
-            this.VocalizerJoshG3S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG3S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG3S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG3S3CB
             // 
@@ -8125,10 +7097,6 @@ namespace GameX
             this.VocalizerJoshG3S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG3S3CB.TabIndex = 5;
             this.VocalizerJoshG3S3CB.TabStop = false;
-            this.VocalizerJoshG3S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG3S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG3S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG3S2CB
             // 
@@ -8143,10 +7111,6 @@ namespace GameX
             this.VocalizerJoshG3S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG3S2CB.TabIndex = 4;
             this.VocalizerJoshG3S2CB.TabStop = false;
-            this.VocalizerJoshG3S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG3S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG3S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG3S1CB
             // 
@@ -8161,10 +7125,6 @@ namespace GameX
             this.VocalizerJoshG3S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG3S1CB.TabIndex = 3;
             this.VocalizerJoshG3S1CB.TabStop = false;
-            this.VocalizerJoshG3S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG3S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG3S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG2GP
             // 
@@ -8192,10 +7152,6 @@ namespace GameX
             this.VocalizerJoshG2S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG2S5CB.TabIndex = 7;
             this.VocalizerJoshG2S5CB.TabStop = false;
-            this.VocalizerJoshG2S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG2S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG2S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG2S4CB
             // 
@@ -8210,10 +7166,6 @@ namespace GameX
             this.VocalizerJoshG2S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG2S4CB.TabIndex = 6;
             this.VocalizerJoshG2S4CB.TabStop = false;
-            this.VocalizerJoshG2S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG2S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG2S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG2S3CB
             // 
@@ -8228,10 +7180,6 @@ namespace GameX
             this.VocalizerJoshG2S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG2S3CB.TabIndex = 5;
             this.VocalizerJoshG2S3CB.TabStop = false;
-            this.VocalizerJoshG2S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG2S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG2S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG2S2CB
             // 
@@ -8246,10 +7194,6 @@ namespace GameX
             this.VocalizerJoshG2S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG2S2CB.TabIndex = 4;
             this.VocalizerJoshG2S2CB.TabStop = false;
-            this.VocalizerJoshG2S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG2S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG2S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG2S1CB
             // 
@@ -8264,10 +7208,6 @@ namespace GameX
             this.VocalizerJoshG2S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG2S1CB.TabIndex = 3;
             this.VocalizerJoshG2S1CB.TabStop = false;
-            this.VocalizerJoshG2S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG2S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG2S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG1GP
             // 
@@ -8295,10 +7235,6 @@ namespace GameX
             this.VocalizerJoshG1S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG1S5CB.TabIndex = 7;
             this.VocalizerJoshG1S5CB.TabStop = false;
-            this.VocalizerJoshG1S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG1S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG1S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG1S4CB
             // 
@@ -8313,10 +7249,6 @@ namespace GameX
             this.VocalizerJoshG1S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG1S4CB.TabIndex = 6;
             this.VocalizerJoshG1S4CB.TabStop = false;
-            this.VocalizerJoshG1S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG1S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG1S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG1S3CB
             // 
@@ -8331,10 +7263,6 @@ namespace GameX
             this.VocalizerJoshG1S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG1S3CB.TabIndex = 5;
             this.VocalizerJoshG1S3CB.TabStop = false;
-            this.VocalizerJoshG1S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG1S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG1S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG1S2CB
             // 
@@ -8349,10 +7277,6 @@ namespace GameX
             this.VocalizerJoshG1S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG1S2CB.TabIndex = 4;
             this.VocalizerJoshG1S2CB.TabStop = false;
-            this.VocalizerJoshG1S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG1S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG1S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerJoshG1S1CB
             // 
@@ -8367,10 +7291,6 @@ namespace GameX
             this.VocalizerJoshG1S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerJoshG1S1CB.TabIndex = 3;
             this.VocalizerJoshG1S1CB.TabStop = false;
-            this.VocalizerJoshG1S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerJoshG1S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerJoshG1S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaTab
             // 
@@ -8413,10 +7333,6 @@ namespace GameX
             this.VocalizerExcellaG9S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG9S5CB.TabIndex = 7;
             this.VocalizerExcellaG9S5CB.TabStop = false;
-            this.VocalizerExcellaG9S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG9S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG9S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG9S4CB
             // 
@@ -8431,10 +7347,6 @@ namespace GameX
             this.VocalizerExcellaG9S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG9S4CB.TabIndex = 6;
             this.VocalizerExcellaG9S4CB.TabStop = false;
-            this.VocalizerExcellaG9S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG9S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG9S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG9S3CB
             // 
@@ -8449,10 +7361,6 @@ namespace GameX
             this.VocalizerExcellaG9S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG9S3CB.TabIndex = 5;
             this.VocalizerExcellaG9S3CB.TabStop = false;
-            this.VocalizerExcellaG9S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG9S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG9S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG9S2CB
             // 
@@ -8467,10 +7375,6 @@ namespace GameX
             this.VocalizerExcellaG9S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG9S2CB.TabIndex = 4;
             this.VocalizerExcellaG9S2CB.TabStop = false;
-            this.VocalizerExcellaG9S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG9S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG9S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG9S1CB
             // 
@@ -8485,10 +7389,6 @@ namespace GameX
             this.VocalizerExcellaG9S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG9S1CB.TabIndex = 3;
             this.VocalizerExcellaG9S1CB.TabStop = false;
-            this.VocalizerExcellaG9S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG9S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG9S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG8GP
             // 
@@ -8516,10 +7416,6 @@ namespace GameX
             this.VocalizerExcellaG8S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG8S5CB.TabIndex = 7;
             this.VocalizerExcellaG8S5CB.TabStop = false;
-            this.VocalizerExcellaG8S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG8S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG8S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG8S4CB
             // 
@@ -8534,10 +7430,6 @@ namespace GameX
             this.VocalizerExcellaG8S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG8S4CB.TabIndex = 6;
             this.VocalizerExcellaG8S4CB.TabStop = false;
-            this.VocalizerExcellaG8S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG8S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG8S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG8S3CB
             // 
@@ -8552,10 +7444,6 @@ namespace GameX
             this.VocalizerExcellaG8S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG8S3CB.TabIndex = 5;
             this.VocalizerExcellaG8S3CB.TabStop = false;
-            this.VocalizerExcellaG8S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG8S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG8S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG8S2CB
             // 
@@ -8570,10 +7458,6 @@ namespace GameX
             this.VocalizerExcellaG8S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG8S2CB.TabIndex = 4;
             this.VocalizerExcellaG8S2CB.TabStop = false;
-            this.VocalizerExcellaG8S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG8S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG8S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG8S1CB
             // 
@@ -8588,10 +7472,6 @@ namespace GameX
             this.VocalizerExcellaG8S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG8S1CB.TabIndex = 3;
             this.VocalizerExcellaG8S1CB.TabStop = false;
-            this.VocalizerExcellaG8S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG8S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG8S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG7GP
             // 
@@ -8619,10 +7499,6 @@ namespace GameX
             this.VocalizerExcellaG7S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG7S5CB.TabIndex = 7;
             this.VocalizerExcellaG7S5CB.TabStop = false;
-            this.VocalizerExcellaG7S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG7S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG7S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG7S4CB
             // 
@@ -8637,10 +7513,6 @@ namespace GameX
             this.VocalizerExcellaG7S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG7S4CB.TabIndex = 6;
             this.VocalizerExcellaG7S4CB.TabStop = false;
-            this.VocalizerExcellaG7S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG7S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG7S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG7S3CB
             // 
@@ -8655,10 +7527,6 @@ namespace GameX
             this.VocalizerExcellaG7S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG7S3CB.TabIndex = 5;
             this.VocalizerExcellaG7S3CB.TabStop = false;
-            this.VocalizerExcellaG7S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG7S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG7S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG7S2CB
             // 
@@ -8673,10 +7541,6 @@ namespace GameX
             this.VocalizerExcellaG7S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG7S2CB.TabIndex = 4;
             this.VocalizerExcellaG7S2CB.TabStop = false;
-            this.VocalizerExcellaG7S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG7S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG7S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG7S1CB
             // 
@@ -8691,10 +7555,6 @@ namespace GameX
             this.VocalizerExcellaG7S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG7S1CB.TabIndex = 3;
             this.VocalizerExcellaG7S1CB.TabStop = false;
-            this.VocalizerExcellaG7S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG7S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG7S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG6GP
             // 
@@ -8722,10 +7582,6 @@ namespace GameX
             this.VocalizerExcellaG6S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG6S5CB.TabIndex = 7;
             this.VocalizerExcellaG6S5CB.TabStop = false;
-            this.VocalizerExcellaG6S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG6S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG6S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG6S4CB
             // 
@@ -8740,10 +7596,6 @@ namespace GameX
             this.VocalizerExcellaG6S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG6S4CB.TabIndex = 6;
             this.VocalizerExcellaG6S4CB.TabStop = false;
-            this.VocalizerExcellaG6S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG6S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG6S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG6S3CB
             // 
@@ -8758,10 +7610,6 @@ namespace GameX
             this.VocalizerExcellaG6S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG6S3CB.TabIndex = 5;
             this.VocalizerExcellaG6S3CB.TabStop = false;
-            this.VocalizerExcellaG6S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG6S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG6S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG6S2CB
             // 
@@ -8776,10 +7624,6 @@ namespace GameX
             this.VocalizerExcellaG6S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG6S2CB.TabIndex = 4;
             this.VocalizerExcellaG6S2CB.TabStop = false;
-            this.VocalizerExcellaG6S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG6S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG6S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG6S1CB
             // 
@@ -8794,10 +7638,6 @@ namespace GameX
             this.VocalizerExcellaG6S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG6S1CB.TabIndex = 3;
             this.VocalizerExcellaG6S1CB.TabStop = false;
-            this.VocalizerExcellaG6S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG6S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG6S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG5GP
             // 
@@ -8825,10 +7665,6 @@ namespace GameX
             this.VocalizerExcellaG5S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG5S5CB.TabIndex = 7;
             this.VocalizerExcellaG5S5CB.TabStop = false;
-            this.VocalizerExcellaG5S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG5S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG5S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG5S4CB
             // 
@@ -8843,10 +7679,6 @@ namespace GameX
             this.VocalizerExcellaG5S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG5S4CB.TabIndex = 6;
             this.VocalizerExcellaG5S4CB.TabStop = false;
-            this.VocalizerExcellaG5S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG5S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG5S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG5S3CB
             // 
@@ -8861,10 +7693,6 @@ namespace GameX
             this.VocalizerExcellaG5S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG5S3CB.TabIndex = 5;
             this.VocalizerExcellaG5S3CB.TabStop = false;
-            this.VocalizerExcellaG5S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG5S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG5S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG5S2CB
             // 
@@ -8879,10 +7707,6 @@ namespace GameX
             this.VocalizerExcellaG5S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG5S2CB.TabIndex = 4;
             this.VocalizerExcellaG5S2CB.TabStop = false;
-            this.VocalizerExcellaG5S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG5S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG5S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG5S1CB
             // 
@@ -8897,10 +7721,6 @@ namespace GameX
             this.VocalizerExcellaG5S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG5S1CB.TabIndex = 3;
             this.VocalizerExcellaG5S1CB.TabStop = false;
-            this.VocalizerExcellaG5S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG5S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG5S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG4GP
             // 
@@ -8928,10 +7748,6 @@ namespace GameX
             this.VocalizerExcellaG4S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG4S5CB.TabIndex = 7;
             this.VocalizerExcellaG4S5CB.TabStop = false;
-            this.VocalizerExcellaG4S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG4S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG4S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG4S4CB
             // 
@@ -8946,10 +7762,6 @@ namespace GameX
             this.VocalizerExcellaG4S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG4S4CB.TabIndex = 6;
             this.VocalizerExcellaG4S4CB.TabStop = false;
-            this.VocalizerExcellaG4S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG4S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG4S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG4S3CB
             // 
@@ -8964,10 +7776,6 @@ namespace GameX
             this.VocalizerExcellaG4S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG4S3CB.TabIndex = 5;
             this.VocalizerExcellaG4S3CB.TabStop = false;
-            this.VocalizerExcellaG4S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG4S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG4S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG4S2CB
             // 
@@ -8982,10 +7790,6 @@ namespace GameX
             this.VocalizerExcellaG4S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG4S2CB.TabIndex = 4;
             this.VocalizerExcellaG4S2CB.TabStop = false;
-            this.VocalizerExcellaG4S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG4S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG4S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG4S1CB
             // 
@@ -9000,10 +7804,6 @@ namespace GameX
             this.VocalizerExcellaG4S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG4S1CB.TabIndex = 3;
             this.VocalizerExcellaG4S1CB.TabStop = false;
-            this.VocalizerExcellaG4S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG4S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG4S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG3GP
             // 
@@ -9031,10 +7831,6 @@ namespace GameX
             this.VocalizerExcellaG3S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG3S5CB.TabIndex = 7;
             this.VocalizerExcellaG3S5CB.TabStop = false;
-            this.VocalizerExcellaG3S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG3S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG3S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG3S4CB
             // 
@@ -9049,10 +7845,6 @@ namespace GameX
             this.VocalizerExcellaG3S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG3S4CB.TabIndex = 6;
             this.VocalizerExcellaG3S4CB.TabStop = false;
-            this.VocalizerExcellaG3S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG3S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG3S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG3S3CB
             // 
@@ -9067,10 +7859,6 @@ namespace GameX
             this.VocalizerExcellaG3S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG3S3CB.TabIndex = 5;
             this.VocalizerExcellaG3S3CB.TabStop = false;
-            this.VocalizerExcellaG3S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG3S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG3S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG3S2CB
             // 
@@ -9085,10 +7873,6 @@ namespace GameX
             this.VocalizerExcellaG3S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG3S2CB.TabIndex = 4;
             this.VocalizerExcellaG3S2CB.TabStop = false;
-            this.VocalizerExcellaG3S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG3S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG3S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG3S1CB
             // 
@@ -9103,10 +7887,6 @@ namespace GameX
             this.VocalizerExcellaG3S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG3S1CB.TabIndex = 3;
             this.VocalizerExcellaG3S1CB.TabStop = false;
-            this.VocalizerExcellaG3S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG3S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG3S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG2GP
             // 
@@ -9134,10 +7914,6 @@ namespace GameX
             this.VocalizerExcellaG2S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG2S5CB.TabIndex = 7;
             this.VocalizerExcellaG2S5CB.TabStop = false;
-            this.VocalizerExcellaG2S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG2S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG2S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG2S4CB
             // 
@@ -9152,10 +7928,6 @@ namespace GameX
             this.VocalizerExcellaG2S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG2S4CB.TabIndex = 6;
             this.VocalizerExcellaG2S4CB.TabStop = false;
-            this.VocalizerExcellaG2S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG2S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG2S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG2S3CB
             // 
@@ -9170,10 +7942,6 @@ namespace GameX
             this.VocalizerExcellaG2S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG2S3CB.TabIndex = 5;
             this.VocalizerExcellaG2S3CB.TabStop = false;
-            this.VocalizerExcellaG2S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG2S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG2S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG2S2CB
             // 
@@ -9188,10 +7956,6 @@ namespace GameX
             this.VocalizerExcellaG2S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG2S2CB.TabIndex = 4;
             this.VocalizerExcellaG2S2CB.TabStop = false;
-            this.VocalizerExcellaG2S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG2S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG2S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG2S1CB
             // 
@@ -9206,10 +7970,6 @@ namespace GameX
             this.VocalizerExcellaG2S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG2S1CB.TabIndex = 3;
             this.VocalizerExcellaG2S1CB.TabStop = false;
-            this.VocalizerExcellaG2S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG2S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG2S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG1GP
             // 
@@ -9237,10 +7997,6 @@ namespace GameX
             this.VocalizerExcellaG1S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG1S5CB.TabIndex = 7;
             this.VocalizerExcellaG1S5CB.TabStop = false;
-            this.VocalizerExcellaG1S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG1S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG1S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG1S4CB
             // 
@@ -9255,10 +8011,6 @@ namespace GameX
             this.VocalizerExcellaG1S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG1S4CB.TabIndex = 6;
             this.VocalizerExcellaG1S4CB.TabStop = false;
-            this.VocalizerExcellaG1S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG1S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG1S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG1S3CB
             // 
@@ -9273,10 +8025,6 @@ namespace GameX
             this.VocalizerExcellaG1S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG1S3CB.TabIndex = 5;
             this.VocalizerExcellaG1S3CB.TabStop = false;
-            this.VocalizerExcellaG1S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG1S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG1S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG1S2CB
             // 
@@ -9291,10 +8039,6 @@ namespace GameX
             this.VocalizerExcellaG1S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG1S2CB.TabIndex = 4;
             this.VocalizerExcellaG1S2CB.TabStop = false;
-            this.VocalizerExcellaG1S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG1S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG1S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerExcellaG1S1CB
             // 
@@ -9309,10 +8053,6 @@ namespace GameX
             this.VocalizerExcellaG1S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerExcellaG1S1CB.TabIndex = 3;
             this.VocalizerExcellaG1S1CB.TabStop = false;
-            this.VocalizerExcellaG1S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerExcellaG1S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerExcellaG1S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryTab
             // 
@@ -9355,10 +8095,6 @@ namespace GameX
             this.VocalizerBarryG9S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG9S5CB.TabIndex = 7;
             this.VocalizerBarryG9S5CB.TabStop = false;
-            this.VocalizerBarryG9S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG9S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG9S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG9S4CB
             // 
@@ -9373,10 +8109,6 @@ namespace GameX
             this.VocalizerBarryG9S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG9S4CB.TabIndex = 6;
             this.VocalizerBarryG9S4CB.TabStop = false;
-            this.VocalizerBarryG9S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG9S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG9S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG9S3CB
             // 
@@ -9391,10 +8123,6 @@ namespace GameX
             this.VocalizerBarryG9S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG9S3CB.TabIndex = 5;
             this.VocalizerBarryG9S3CB.TabStop = false;
-            this.VocalizerBarryG9S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG9S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG9S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG9S2CB
             // 
@@ -9409,10 +8137,6 @@ namespace GameX
             this.VocalizerBarryG9S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG9S2CB.TabIndex = 4;
             this.VocalizerBarryG9S2CB.TabStop = false;
-            this.VocalizerBarryG9S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG9S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG9S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG9S1CB
             // 
@@ -9427,10 +8151,6 @@ namespace GameX
             this.VocalizerBarryG9S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG9S1CB.TabIndex = 3;
             this.VocalizerBarryG9S1CB.TabStop = false;
-            this.VocalizerBarryG9S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG9S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG9S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG8GP
             // 
@@ -9458,10 +8178,6 @@ namespace GameX
             this.VocalizerBarryG8S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG8S5CB.TabIndex = 7;
             this.VocalizerBarryG8S5CB.TabStop = false;
-            this.VocalizerBarryG8S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG8S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG8S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG8S4CB
             // 
@@ -9476,10 +8192,6 @@ namespace GameX
             this.VocalizerBarryG8S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG8S4CB.TabIndex = 6;
             this.VocalizerBarryG8S4CB.TabStop = false;
-            this.VocalizerBarryG8S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG8S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG8S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG8S3CB
             // 
@@ -9494,10 +8206,6 @@ namespace GameX
             this.VocalizerBarryG8S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG8S3CB.TabIndex = 5;
             this.VocalizerBarryG8S3CB.TabStop = false;
-            this.VocalizerBarryG8S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG8S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG8S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG8S2CB
             // 
@@ -9512,10 +8220,6 @@ namespace GameX
             this.VocalizerBarryG8S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG8S2CB.TabIndex = 4;
             this.VocalizerBarryG8S2CB.TabStop = false;
-            this.VocalizerBarryG8S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG8S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG8S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG8S1CB
             // 
@@ -9530,10 +8234,6 @@ namespace GameX
             this.VocalizerBarryG8S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG8S1CB.TabIndex = 3;
             this.VocalizerBarryG8S1CB.TabStop = false;
-            this.VocalizerBarryG8S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG8S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG8S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG7GP
             // 
@@ -9561,10 +8261,6 @@ namespace GameX
             this.VocalizerBarryG7S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG7S5CB.TabIndex = 7;
             this.VocalizerBarryG7S5CB.TabStop = false;
-            this.VocalizerBarryG7S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG7S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG7S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG7S4CB
             // 
@@ -9579,10 +8275,6 @@ namespace GameX
             this.VocalizerBarryG7S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG7S4CB.TabIndex = 6;
             this.VocalizerBarryG7S4CB.TabStop = false;
-            this.VocalizerBarryG7S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG7S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG7S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG7S3CB
             // 
@@ -9597,10 +8289,6 @@ namespace GameX
             this.VocalizerBarryG7S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG7S3CB.TabIndex = 5;
             this.VocalizerBarryG7S3CB.TabStop = false;
-            this.VocalizerBarryG7S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG7S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG7S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG7S2CB
             // 
@@ -9615,10 +8303,6 @@ namespace GameX
             this.VocalizerBarryG7S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG7S2CB.TabIndex = 4;
             this.VocalizerBarryG7S2CB.TabStop = false;
-            this.VocalizerBarryG7S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG7S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG7S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG7S1CB
             // 
@@ -9633,10 +8317,6 @@ namespace GameX
             this.VocalizerBarryG7S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG7S1CB.TabIndex = 3;
             this.VocalizerBarryG7S1CB.TabStop = false;
-            this.VocalizerBarryG7S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG7S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG7S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG6GP
             // 
@@ -9664,10 +8344,6 @@ namespace GameX
             this.VocalizerBarryG6S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG6S5CB.TabIndex = 7;
             this.VocalizerBarryG6S5CB.TabStop = false;
-            this.VocalizerBarryG6S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG6S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG6S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG6S4CB
             // 
@@ -9682,10 +8358,6 @@ namespace GameX
             this.VocalizerBarryG6S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG6S4CB.TabIndex = 6;
             this.VocalizerBarryG6S4CB.TabStop = false;
-            this.VocalizerBarryG6S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG6S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG6S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG6S3CB
             // 
@@ -9700,10 +8372,6 @@ namespace GameX
             this.VocalizerBarryG6S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG6S3CB.TabIndex = 5;
             this.VocalizerBarryG6S3CB.TabStop = false;
-            this.VocalizerBarryG6S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG6S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG6S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG6S2CB
             // 
@@ -9718,10 +8386,6 @@ namespace GameX
             this.VocalizerBarryG6S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG6S2CB.TabIndex = 4;
             this.VocalizerBarryG6S2CB.TabStop = false;
-            this.VocalizerBarryG6S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG6S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG6S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG6S1CB
             // 
@@ -9736,10 +8400,6 @@ namespace GameX
             this.VocalizerBarryG6S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG6S1CB.TabIndex = 3;
             this.VocalizerBarryG6S1CB.TabStop = false;
-            this.VocalizerBarryG6S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG6S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG6S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG5GP
             // 
@@ -9767,10 +8427,6 @@ namespace GameX
             this.VocalizerBarryG5S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG5S5CB.TabIndex = 7;
             this.VocalizerBarryG5S5CB.TabStop = false;
-            this.VocalizerBarryG5S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG5S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG5S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG5S4CB
             // 
@@ -9785,10 +8441,6 @@ namespace GameX
             this.VocalizerBarryG5S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG5S4CB.TabIndex = 6;
             this.VocalizerBarryG5S4CB.TabStop = false;
-            this.VocalizerBarryG5S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG5S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG5S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG5S3CB
             // 
@@ -9803,10 +8455,6 @@ namespace GameX
             this.VocalizerBarryG5S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG5S3CB.TabIndex = 5;
             this.VocalizerBarryG5S3CB.TabStop = false;
-            this.VocalizerBarryG5S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG5S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG5S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG5S2CB
             // 
@@ -9821,10 +8469,6 @@ namespace GameX
             this.VocalizerBarryG5S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG5S2CB.TabIndex = 4;
             this.VocalizerBarryG5S2CB.TabStop = false;
-            this.VocalizerBarryG5S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG5S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG5S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG5S1CB
             // 
@@ -9839,10 +8483,6 @@ namespace GameX
             this.VocalizerBarryG5S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG5S1CB.TabIndex = 3;
             this.VocalizerBarryG5S1CB.TabStop = false;
-            this.VocalizerBarryG5S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG5S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG5S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG4GP
             // 
@@ -9870,10 +8510,6 @@ namespace GameX
             this.VocalizerBarryG4S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG4S5CB.TabIndex = 7;
             this.VocalizerBarryG4S5CB.TabStop = false;
-            this.VocalizerBarryG4S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG4S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG4S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG4S4CB
             // 
@@ -9888,10 +8524,6 @@ namespace GameX
             this.VocalizerBarryG4S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG4S4CB.TabIndex = 6;
             this.VocalizerBarryG4S4CB.TabStop = false;
-            this.VocalizerBarryG4S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG4S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG4S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG4S3CB
             // 
@@ -9906,10 +8538,6 @@ namespace GameX
             this.VocalizerBarryG4S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG4S3CB.TabIndex = 5;
             this.VocalizerBarryG4S3CB.TabStop = false;
-            this.VocalizerBarryG4S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG4S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG4S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG4S2CB
             // 
@@ -9924,10 +8552,6 @@ namespace GameX
             this.VocalizerBarryG4S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG4S2CB.TabIndex = 4;
             this.VocalizerBarryG4S2CB.TabStop = false;
-            this.VocalizerBarryG4S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG4S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG4S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG4S1CB
             // 
@@ -9942,10 +8566,6 @@ namespace GameX
             this.VocalizerBarryG4S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG4S1CB.TabIndex = 3;
             this.VocalizerBarryG4S1CB.TabStop = false;
-            this.VocalizerBarryG4S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG4S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG4S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG3GP
             // 
@@ -9973,10 +8593,6 @@ namespace GameX
             this.VocalizerBarryG3S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG3S5CB.TabIndex = 7;
             this.VocalizerBarryG3S5CB.TabStop = false;
-            this.VocalizerBarryG3S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG3S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG3S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG3S4CB
             // 
@@ -9991,10 +8607,6 @@ namespace GameX
             this.VocalizerBarryG3S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG3S4CB.TabIndex = 6;
             this.VocalizerBarryG3S4CB.TabStop = false;
-            this.VocalizerBarryG3S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG3S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG3S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG3S3CB
             // 
@@ -10009,10 +8621,6 @@ namespace GameX
             this.VocalizerBarryG3S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG3S3CB.TabIndex = 5;
             this.VocalizerBarryG3S3CB.TabStop = false;
-            this.VocalizerBarryG3S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG3S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG3S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG3S2CB
             // 
@@ -10027,10 +8635,6 @@ namespace GameX
             this.VocalizerBarryG3S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG3S2CB.TabIndex = 4;
             this.VocalizerBarryG3S2CB.TabStop = false;
-            this.VocalizerBarryG3S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG3S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG3S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG3S1CB
             // 
@@ -10045,10 +8649,6 @@ namespace GameX
             this.VocalizerBarryG3S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG3S1CB.TabIndex = 3;
             this.VocalizerBarryG3S1CB.TabStop = false;
-            this.VocalizerBarryG3S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG3S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG3S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG2GP
             // 
@@ -10076,10 +8676,6 @@ namespace GameX
             this.VocalizerBarryG2S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG2S5CB.TabIndex = 7;
             this.VocalizerBarryG2S5CB.TabStop = false;
-            this.VocalizerBarryG2S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG2S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG2S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG2S4CB
             // 
@@ -10094,10 +8690,6 @@ namespace GameX
             this.VocalizerBarryG2S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG2S4CB.TabIndex = 6;
             this.VocalizerBarryG2S4CB.TabStop = false;
-            this.VocalizerBarryG2S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG2S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG2S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG2S3CB
             // 
@@ -10112,10 +8704,6 @@ namespace GameX
             this.VocalizerBarryG2S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG2S3CB.TabIndex = 5;
             this.VocalizerBarryG2S3CB.TabStop = false;
-            this.VocalizerBarryG2S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG2S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG2S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG2S2CB
             // 
@@ -10130,10 +8718,6 @@ namespace GameX
             this.VocalizerBarryG2S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG2S2CB.TabIndex = 4;
             this.VocalizerBarryG2S2CB.TabStop = false;
-            this.VocalizerBarryG2S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG2S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG2S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG2S1CB
             // 
@@ -10148,10 +8732,6 @@ namespace GameX
             this.VocalizerBarryG2S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG2S1CB.TabIndex = 3;
             this.VocalizerBarryG2S1CB.TabStop = false;
-            this.VocalizerBarryG2S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG2S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG2S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG1GP
             // 
@@ -10179,10 +8759,6 @@ namespace GameX
             this.VocalizerBarryG1S5CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG1S5CB.TabIndex = 7;
             this.VocalizerBarryG1S5CB.TabStop = false;
-            this.VocalizerBarryG1S5CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG1S5CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG1S5CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG1S4CB
             // 
@@ -10197,10 +8773,6 @@ namespace GameX
             this.VocalizerBarryG1S4CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG1S4CB.TabIndex = 6;
             this.VocalizerBarryG1S4CB.TabStop = false;
-            this.VocalizerBarryG1S4CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG1S4CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG1S4CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG1S3CB
             // 
@@ -10215,10 +8787,6 @@ namespace GameX
             this.VocalizerBarryG1S3CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG1S3CB.TabIndex = 5;
             this.VocalizerBarryG1S3CB.TabStop = false;
-            this.VocalizerBarryG1S3CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG1S3CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG1S3CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG1S2CB
             // 
@@ -10233,10 +8801,6 @@ namespace GameX
             this.VocalizerBarryG1S2CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG1S2CB.TabIndex = 4;
             this.VocalizerBarryG1S2CB.TabStop = false;
-            this.VocalizerBarryG1S2CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG1S2CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG1S2CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerBarryG1S1CB
             // 
@@ -10251,10 +8815,6 @@ namespace GameX
             this.VocalizerBarryG1S1CB.Size = new System.Drawing.Size(160, 20);
             this.VocalizerBarryG1S1CB.TabIndex = 3;
             this.VocalizerBarryG1S1CB.TabStop = false;
-            this.VocalizerBarryG1S1CB.ToolTip = "Sets the time in seconds which will be added to the timer when performed a melee " +
-    "kill.";
-            this.VocalizerBarryG1S1CB.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerBarryG1S1CB.ToolTipTitle = "Melee Kill Seconds";
             // 
             // VocalizerSettingsGP
             // 
@@ -10267,6 +8827,46 @@ namespace GameX
             this.VocalizerSettingsGP.Size = new System.Drawing.Size(179, 500);
             this.VocalizerSettingsGP.TabIndex = 1;
             this.VocalizerSettingsGP.Text = "Settings";
+            // 
+            // VocalizerSaveLoadGP
+            // 
+            this.VocalizerSaveLoadGP.AppearanceCaption.Options.UseTextOptions = true;
+            this.VocalizerSaveLoadGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.VocalizerSaveLoadGP.Controls.Add(this.VocalizerLoadGroupsButton);
+            this.VocalizerSaveLoadGP.Controls.Add(this.VocalizerSaveGroupsButton);
+            this.VocalizerSaveLoadGP.Location = new System.Drawing.Point(5, 124);
+            this.VocalizerSaveLoadGP.Name = "VocalizerSaveLoadGP";
+            this.VocalizerSaveLoadGP.Size = new System.Drawing.Size(169, 102);
+            this.VocalizerSaveLoadGP.TabIndex = 25;
+            this.VocalizerSaveLoadGP.Text = "Current Character Groups";
+            // 
+            // VocalizerLoadGroupsButton
+            // 
+            this.VocalizerLoadGroupsButton.AllowFocus = false;
+            this.VocalizerLoadGroupsButton.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.VocalizerLoadGroupsButton.Location = new System.Drawing.Point(10, 67);
+            this.VocalizerLoadGroupsButton.Name = "VocalizerLoadGroupsButton";
+            this.VocalizerLoadGroupsButton.Size = new System.Drawing.Size(149, 23);
+            this.VocalizerLoadGroupsButton.TabIndex = 2;
+            this.VocalizerLoadGroupsButton.TabStop = false;
+            this.VocalizerLoadGroupsButton.Text = "Load";
+            this.VocalizerLoadGroupsButton.ToolTip = "Loads and applies lines from a file to the current select character speech groups" +
+    ".";
+            this.VocalizerLoadGroupsButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.VocalizerLoadGroupsButton.ToolTipTitle = "Loading";
+            // 
+            // VocalizerSaveGroupsButton
+            // 
+            this.VocalizerSaveGroupsButton.AllowFocus = false;
+            this.VocalizerSaveGroupsButton.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.VocalizerSaveGroupsButton.Location = new System.Drawing.Point(10, 38);
+            this.VocalizerSaveGroupsButton.Name = "VocalizerSaveGroupsButton";
+            this.VocalizerSaveGroupsButton.Size = new System.Drawing.Size(149, 23);
+            this.VocalizerSaveGroupsButton.TabIndex = 1;
+            this.VocalizerSaveGroupsButton.TabStop = false;
+            this.VocalizerSaveGroupsButton.Text = "Save";
+            this.VocalizerSaveGroupsButton.ToolTip = "Saves the current selected character\'s groups to a file.";
+            this.VocalizerSaveGroupsButton.ToolTipTitle = "Saving";
             // 
             // VocalizerStatusGP
             // 
@@ -24166,46 +22766,6 @@ namespace GameX
             this.TabPageVocalizerButton.TabStop = false;
             this.TabPageVocalizerButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
-            // VocalizerSaveLoadGP
-            // 
-            this.VocalizerSaveLoadGP.AppearanceCaption.Options.UseTextOptions = true;
-            this.VocalizerSaveLoadGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.VocalizerSaveLoadGP.Controls.Add(this.VocalizerLoadGroupsButton);
-            this.VocalizerSaveLoadGP.Controls.Add(this.VocalizerSaveGroupsButton);
-            this.VocalizerSaveLoadGP.Location = new System.Drawing.Point(5, 124);
-            this.VocalizerSaveLoadGP.Name = "VocalizerSaveLoadGP";
-            this.VocalizerSaveLoadGP.Size = new System.Drawing.Size(169, 102);
-            this.VocalizerSaveLoadGP.TabIndex = 25;
-            this.VocalizerSaveLoadGP.Text = "Current Character Groups";
-            // 
-            // VocalizerSaveGroupsButton
-            // 
-            this.VocalizerSaveGroupsButton.AllowFocus = false;
-            this.VocalizerSaveGroupsButton.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.VocalizerSaveGroupsButton.Location = new System.Drawing.Point(10, 38);
-            this.VocalizerSaveGroupsButton.Name = "VocalizerSaveGroupsButton";
-            this.VocalizerSaveGroupsButton.Size = new System.Drawing.Size(149, 23);
-            this.VocalizerSaveGroupsButton.TabIndex = 1;
-            this.VocalizerSaveGroupsButton.TabStop = false;
-            this.VocalizerSaveGroupsButton.Text = "Save";
-            this.VocalizerSaveGroupsButton.ToolTip = "Saves the current selected character\'s groups to a file.";
-            this.VocalizerSaveGroupsButton.ToolTipTitle = "Saving";
-            // 
-            // VocalizerLoadGroupsButton
-            // 
-            this.VocalizerLoadGroupsButton.AllowFocus = false;
-            this.VocalizerLoadGroupsButton.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.VocalizerLoadGroupsButton.Location = new System.Drawing.Point(10, 67);
-            this.VocalizerLoadGroupsButton.Name = "VocalizerLoadGroupsButton";
-            this.VocalizerLoadGroupsButton.Size = new System.Drawing.Size(149, 23);
-            this.VocalizerLoadGroupsButton.TabIndex = 2;
-            this.VocalizerLoadGroupsButton.TabStop = false;
-            this.VocalizerLoadGroupsButton.Text = "Load";
-            this.VocalizerLoadGroupsButton.ToolTip = "Loads and applies lines from a file to the current select character speech groups" +
-    ".";
-            this.VocalizerLoadGroupsButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.VocalizerLoadGroupsButton.ToolTipTitle = "Loading";
-            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -24749,6 +23309,8 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S1CB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerSettingsGP)).EndInit();
             this.VocalizerSettingsGP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerSaveLoadGP)).EndInit();
+            this.VocalizerSaveLoadGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerStatusGP)).EndInit();
             this.VocalizerStatusGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerCharSelectCB.Properties)).EndInit();
@@ -25543,8 +24105,6 @@ namespace GameX
             this.ConsoleGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleOutputMemoEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConsoleInputTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerSaveLoadGP)).EndInit();
-            this.VocalizerSaveLoadGP.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

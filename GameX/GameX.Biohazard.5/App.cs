@@ -17,7 +17,6 @@ using GameX.Enum;
 using GameX.Database.Type;
 using GameX.Database.ViewBag;
 using DevExpress.XtraEditors.Controls;
-using DevExpress.Data.Helpers;
 
 namespace GameX
 {
