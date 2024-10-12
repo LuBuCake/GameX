@@ -25,7 +25,7 @@ namespace GameX.Database.Content
 
                 foreach (FileInfo file in Files)
                 {
-                    Available.Add(Serializer.Deserialize<LoadoutViewBag>(File.ReadAllText(Dir + file.Name)));
+                    Available.Add(Serializer.Deserialize<LoadoutViewBag>(Serializer.ReadDataFile(Dir + file.Name)));
                 }
 
                 return Available.OrderBy(x => x.Name).ToList();

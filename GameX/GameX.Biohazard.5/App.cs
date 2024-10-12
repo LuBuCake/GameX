@@ -2601,7 +2601,6 @@ namespace GameX
         private void Configuration_Save(object sender, EventArgs e)
         {
             List<int> VocalizerHotkeys = new List<int>();
-            List<List<List<int>>> VocalizerLines = new List<List<List<int>>>();
 
             for (int Group = 0; Group < 9; Group++)
             {
@@ -2734,7 +2733,7 @@ namespace GameX
                     }
 
                     Serializer.WriteDataFile(SFD.FileName, Serializer.Serialize(SpeechGroups));
-                    Utility.MessageBox_Information("Speech groups succesfully save to JSON file!");
+                    Utility.MessageBox_Information("Speech groups succesfully saved to JSON file!");
                 }
             }
         }
@@ -2758,7 +2757,7 @@ namespace GameX
                             ChooseVocalizerLine(SelectedChar, Group, Slot, true, SpeechGroups[Group][Slot]);
                     }
 
-                    Utility.MessageBox_Information("Speech groups succesfully loaded and apllied from JSON file!");
+                    Utility.MessageBox_Information("Speech groups succesfully loaded and applied from JSON file!");
                 }
             }
         }
@@ -3897,7 +3896,7 @@ namespace GameX
         {
 #if DEBUG
             if (ActiveForm != null)
-                Terminal.WriteLine($"User pressed input: {input:X}");
+                Terminal.WriteLine($"User pressed input: DEC: {input:X} HEX: {input:x}");
 #endif
 
             if (!Initialized)
