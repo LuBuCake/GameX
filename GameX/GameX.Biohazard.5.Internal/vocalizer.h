@@ -11,6 +11,8 @@ class Vocalizer
 public:
 	// Props
 	static bool Enabled;
+	static bool PerformingActionResponse;
+	static char Hotkeys[9];
 	static unsigned short Group1[6];
 	static unsigned short Group2[6];
 	static unsigned short Group3[6];
@@ -20,7 +22,8 @@ public:
 	static unsigned short Group7[6];
 	static unsigned short Group8[6];
 	static unsigned short Group9[6];
-	static char Hotkeys[9];
+	static unsigned short InternalGroup1[3];
+	static unsigned short InternalGroup2[4];
 
 	// Methods
 	static void CycleGroup(unsigned short* Group);
@@ -39,5 +42,7 @@ extern "C" {
 	DLL_API void UpdateGroup7(unsigned short values[5]);
 	DLL_API void UpdateGroup8(unsigned short values[5]);
 	DLL_API void UpdateGroup9(unsigned short values[5]);
+	DLL_API void UpdateInternalGroup1(unsigned short values[3]);
+	DLL_API void UpdateInternalGroup2(unsigned short values[4]);
 	DLL_API void UpdateHotkeys(char values[9]);
 }

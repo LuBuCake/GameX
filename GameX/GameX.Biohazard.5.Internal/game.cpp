@@ -40,6 +40,11 @@ bool Game::IsPlayerSpeaking(int PlayerBaseAddress)
     return *(int*)(PlayerBaseAddress + 0x2674) != 0;
 }
 
+int Game::GetRealTimeInventoryItemBaseAddress(int Player, int Slot)
+{
+    return Player + 0x21A8 + (Slot * 0x30);
+}
+
 void Game::PlaySpeech(int PlayerBaseAddress, unsigned short Speech)
 {
     if (Speech == 0)

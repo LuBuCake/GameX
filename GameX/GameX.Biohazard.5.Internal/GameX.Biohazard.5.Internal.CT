@@ -19,7 +19,7 @@
           <Description>"Enabled"</Description>
           <ShowAsSigned>0</ShowAsSigned>
           <VariableType>Byte</VariableType>
-          <Address>"GameX.Biohazard.5.Internal.dll"+4454</Address>
+          <Address>"GameX.Biohazard.5.Internal.dll"+446D</Address>
         </CheatEntry>
         <CheatEntry>
           <ID>13</ID>
@@ -34,7 +34,7 @@
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>Array of byte</VariableType>
               <ByteLength>9</ByteLength>
-              <Address>"GameX.Biohazard.5.Internal.dll"+4064</Address>
+              <Address>"GameX.Biohazard.5.Internal.dll"+4074</Address>
             </CheatEntry>
             <CheatEntry>
               <ID>14</ID>
@@ -42,7 +42,7 @@
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>Byte</VariableType>
-              <Address>"GameX.Biohazard.5.Internal.dll"+4064</Address>
+              <Address>"GameX.Biohazard.5.Internal.dll"+4074</Address>
             </CheatEntry>
             <CheatEntry>
               <ID>22</ID>
@@ -50,7 +50,7 @@
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>Byte</VariableType>
-              <Address>"GameX.Biohazard.5.Internal.dll"+4065</Address>
+              <Address>"GameX.Biohazard.5.Internal.dll"+4075</Address>
             </CheatEntry>
             <CheatEntry>
               <ID>21</ID>
@@ -58,7 +58,7 @@
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>Byte</VariableType>
-              <Address>"GameX.Biohazard.5.Internal.dll"+4066</Address>
+              <Address>"GameX.Biohazard.5.Internal.dll"+4076</Address>
             </CheatEntry>
             <CheatEntry>
               <ID>20</ID>
@@ -66,7 +66,7 @@
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>Byte</VariableType>
-              <Address>"GameX.Biohazard.5.Internal.dll"+4067</Address>
+              <Address>"GameX.Biohazard.5.Internal.dll"+4077</Address>
             </CheatEntry>
             <CheatEntry>
               <ID>19</ID>
@@ -74,7 +74,7 @@
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>Byte</VariableType>
-              <Address>"GameX.Biohazard.5.Internal.dll"+4068</Address>
+              <Address>"GameX.Biohazard.5.Internal.dll"+4078</Address>
             </CheatEntry>
             <CheatEntry>
               <ID>18</ID>
@@ -82,7 +82,7 @@
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>Byte</VariableType>
-              <Address>"GameX.Biohazard.5.Internal.dll"+4069</Address>
+              <Address>"GameX.Biohazard.5.Internal.dll"+4079</Address>
             </CheatEntry>
             <CheatEntry>
               <ID>17</ID>
@@ -90,7 +90,7 @@
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>Byte</VariableType>
-              <Address>"GameX.Biohazard.5.Internal.dll"+406A</Address>
+              <Address>"GameX.Biohazard.5.Internal.dll"+407A</Address>
             </CheatEntry>
             <CheatEntry>
               <ID>16</ID>
@@ -98,7 +98,7 @@
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>Byte</VariableType>
-              <Address>"GameX.Biohazard.5.Internal.dll"+406B</Address>
+              <Address>"GameX.Biohazard.5.Internal.dll"+407B</Address>
             </CheatEntry>
             <CheatEntry>
               <ID>15</ID>
@@ -106,7 +106,7 @@
               <ShowAsHex>1</ShowAsHex>
               <ShowAsSigned>0</ShowAsSigned>
               <VariableType>Byte</VariableType>
-              <Address>"GameX.Biohazard.5.Internal.dll"+406C</Address>
+              <Address>"GameX.Biohazard.5.Internal.dll"+407C</Address>
             </CheatEntry>
           </CheatEntries>
         </CheatEntry>
@@ -128,513 +128,49 @@
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>Array of byte</VariableType>
                   <ByteLength>12</ByteLength>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4448</Address>
+                  <Address>"GameX.Biohazard.5.Internal.dll"+4460</Address>
                 </CheatEntry>
                 <CheatEntry>
                   <ID>25</ID>
                   <Description>"Slot 1"</Description>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4448</Address>
+                  <Address>"GameX.Biohazard.5.Internal.dll"+4460</Address>
                 </CheatEntry>
                 <CheatEntry>
                   <ID>29</ID>
                   <Description>"Slot 2"</Description>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+444A</Address>
+                  <Address>"GameX.Biohazard.5.Internal.dll"+4462</Address>
                 </CheatEntry>
                 <CheatEntry>
                   <ID>28</ID>
                   <Description>"Slot 3"</Description>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+444C</Address>
+                  <Address>"GameX.Biohazard.5.Internal.dll"+4464</Address>
                 </CheatEntry>
                 <CheatEntry>
                   <ID>27</ID>
                   <Description>"Slot 4"</Description>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+444E</Address>
+                  <Address>"GameX.Biohazard.5.Internal.dll"+4466</Address>
                 </CheatEntry>
                 <CheatEntry>
                   <ID>26</ID>
                   <Description>"Slot 5"</Description>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4450</Address>
+                  <Address>"GameX.Biohazard.5.Internal.dll"+4468</Address>
                 </CheatEntry>
                 <CheatEntry>
                   <ID>30</ID>
                   <Description>"Cycler"</Description>
                   <ShowAsSigned>0</ShowAsSigned>
                   <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4452</Address>
-                </CheatEntry>
-              </CheatEntries>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>31</ID>
-              <Description>"Group 2"</Description>
-              <Options moHideChildren="1"/>
-              <GroupHeader>1</GroupHeader>
-              <CheatEntries>
-                <CheatEntry>
-                  <ID>32</ID>
-                  <Description>"Base"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>Array of byte</VariableType>
-                  <ByteLength>12</ByteLength>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+443C</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>33</ID>
-                  <Description>"Slot 1"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+443C</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>34</ID>
-                  <Description>"Slot 2"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+443E</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>35</ID>
-                  <Description>"Slot 3"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4440</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>36</ID>
-                  <Description>"Slot 4"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4442</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>37</ID>
-                  <Description>"Slot 5"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4444</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>38</ID>
-                  <Description>"Cycler"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4446</Address>
-                </CheatEntry>
-              </CheatEntries>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>39</ID>
-              <Description>"Group 3"</Description>
-              <Options moHideChildren="1"/>
-              <GroupHeader>1</GroupHeader>
-              <CheatEntries>
-                <CheatEntry>
-                  <ID>40</ID>
-                  <Description>"Base"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>Array of byte</VariableType>
-                  <ByteLength>12</ByteLength>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4430</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>41</ID>
-                  <Description>"Slot 1"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4430</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>42</ID>
-                  <Description>"Slot 2"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4432</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>43</ID>
-                  <Description>"Slot 3"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4434</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>44</ID>
-                  <Description>"Slot 4"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4436</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>45</ID>
-                  <Description>"Slot 5"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4438</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>46</ID>
-                  <Description>"Cycler"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+443A</Address>
-                </CheatEntry>
-              </CheatEntries>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>47</ID>
-              <Description>"Group 4"</Description>
-              <Options moHideChildren="1"/>
-              <GroupHeader>1</GroupHeader>
-              <CheatEntries>
-                <CheatEntry>
-                  <ID>48</ID>
-                  <Description>"Base"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>Array of byte</VariableType>
-                  <ByteLength>12</ByteLength>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4424</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>49</ID>
-                  <Description>"Slot 1"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4424</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>50</ID>
-                  <Description>"Slot 2"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4426</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>51</ID>
-                  <Description>"Slot 3"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4428</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>52</ID>
-                  <Description>"Slot 4"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+442A</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>53</ID>
-                  <Description>"Slot 5"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+442C</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>54</ID>
-                  <Description>"Cycler"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+442E</Address>
-                </CheatEntry>
-              </CheatEntries>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>55</ID>
-              <Description>"Group 5"</Description>
-              <Options moHideChildren="1"/>
-              <GroupHeader>1</GroupHeader>
-              <CheatEntries>
-                <CheatEntry>
-                  <ID>56</ID>
-                  <Description>"Base"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>Array of byte</VariableType>
-                  <ByteLength>12</ByteLength>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4418</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>57</ID>
-                  <Description>"Slot 1"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4418</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>58</ID>
-                  <Description>"Slot 2"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+441A</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>59</ID>
-                  <Description>"Slot 3"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+441C</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>60</ID>
-                  <Description>"Slot 4"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+441E</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>61</ID>
-                  <Description>"Slot 5"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4420</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>62</ID>
-                  <Description>"Cycler"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4422</Address>
-                </CheatEntry>
-              </CheatEntries>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>63</ID>
-              <Description>"Group 6"</Description>
-              <Options moHideChildren="1"/>
-              <GroupHeader>1</GroupHeader>
-              <CheatEntries>
-                <CheatEntry>
-                  <ID>64</ID>
-                  <Description>"Base"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>Array of byte</VariableType>
-                  <ByteLength>12</ByteLength>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+440C</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>65</ID>
-                  <Description>"Slot 1"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+440C</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>66</ID>
-                  <Description>"Slot 2"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+440E</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>67</ID>
-                  <Description>"Slot 3"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4410</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>68</ID>
-                  <Description>"Slot 4"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4412</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>69</ID>
-                  <Description>"Slot 5"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4414</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>70</ID>
-                  <Description>"Cycler"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4416</Address>
-                </CheatEntry>
-              </CheatEntries>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>71</ID>
-              <Description>"Group 7"</Description>
-              <Options moHideChildren="1"/>
-              <GroupHeader>1</GroupHeader>
-              <CheatEntries>
-                <CheatEntry>
-                  <ID>72</ID>
-                  <Description>"Base"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>Array of byte</VariableType>
-                  <ByteLength>12</ByteLength>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4400</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>73</ID>
-                  <Description>"Slot 1"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4400</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>74</ID>
-                  <Description>"Slot 2"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4402</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>75</ID>
-                  <Description>"Slot 3"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4404</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>76</ID>
-                  <Description>"Slot 4"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4406</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>77</ID>
-                  <Description>"Slot 5"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+4408</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>78</ID>
-                  <Description>"Cycler"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+440A</Address>
-                </CheatEntry>
-              </CheatEntries>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>79</ID>
-              <Description>"Group 8"</Description>
-              <Options moHideChildren="1"/>
-              <GroupHeader>1</GroupHeader>
-              <CheatEntries>
-                <CheatEntry>
-                  <ID>80</ID>
-                  <Description>"Base"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>Array of byte</VariableType>
-                  <ByteLength>12</ByteLength>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+43F4</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>81</ID>
-                  <Description>"Slot 1"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+43F4</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>82</ID>
-                  <Description>"Slot 2"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+43F6</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>83</ID>
-                  <Description>"Slot 3"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+43F8</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>84</ID>
-                  <Description>"Slot 4"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+43FA</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>85</ID>
-                  <Description>"Slot 5"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+43FC</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>86</ID>
-                  <Description>"Cycler"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+43FE</Address>
-                </CheatEntry>
-              </CheatEntries>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>87</ID>
-              <Description>"Group 9"</Description>
-              <Options moHideChildren="1"/>
-              <GroupHeader>1</GroupHeader>
-              <CheatEntries>
-                <CheatEntry>
-                  <ID>88</ID>
-                  <Description>"Base"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>Array of byte</VariableType>
-                  <ByteLength>12</ByteLength>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+43E8</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>89</ID>
-                  <Description>"Slot 1"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+43E8</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>90</ID>
-                  <Description>"Slot 2"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+43EA</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>91</ID>
-                  <Description>"Slot 3"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+43EC</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>92</ID>
-                  <Description>"Slot 4"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+43EE</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>93</ID>
-                  <Description>"Slot 5"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+43F0</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>94</ID>
-                  <Description>"Cycler"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>2 Bytes</VariableType>
-                  <Address>"GameX.Biohazard.5.Internal.dll"+43F2</Address>
+                  <Address>"GameX.Biohazard.5.Internal.dll"+446A</Address>
                 </CheatEntry>
               </CheatEntries>
             </CheatEntry>

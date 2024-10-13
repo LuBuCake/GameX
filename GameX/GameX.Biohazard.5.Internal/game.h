@@ -10,6 +10,7 @@ public:
     static int GetLocalPlayerIndex();
 
     static bool IsPlayerSpeaking(int PlayerBaseAddress);
+    static int GetRealTimeInventoryItemBaseAddress(int PlayerBaseAddress, int Slot);
 
     static void PlaySpeech(int PlayerBaseAddress, unsigned short Speech);
 };

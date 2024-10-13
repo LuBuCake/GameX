@@ -32,18 +32,18 @@ namespace GameX.Modules
 
         public static bool VocalizerEnabledFlag
         {
-            get { return Memory.Read<byte>("GameX.Biohazard.5.Internal.dll", 0x4454) == 1; }
-            set { Memory.Write(value, "GameX.Biohazard.5.Internal.dll", 0x4454); }
+            get { return Memory.Read<byte>("GameX.Biohazard.5.Internal.dll", 0x446D) == 1; }
+            set { Memory.Write(value, "GameX.Biohazard.5.Internal.dll", 0x446D); }
         }
 
         public static void SetVocalizerHotkey(int Group, byte Hotkey)
         {
-            Memory.Write(Hotkey, "GameX.Biohazard.5.Internal.dll", 0x4064 + (0x01 * Group));
+            Memory.Write(Hotkey, "GameX.Biohazard.5.Internal.dll", 0x4074 + (0x01 * Group));
         }
 
         public static void SetVocalizerSpeechGroup(int Group, int Slot, ushort Speech)
         {
-            Memory.Write(Speech, "GameX.Biohazard.5.Internal.dll", 0x4448 - (0x0C * Group) + (0x02 * Slot));
+            Memory.Write(Speech, "GameX.Biohazard.5.Internal.dll", 0x4460 - (0x0C * Group) + (0x02 * Slot));
         }
 
         #endregion
