@@ -25,5 +25,6 @@ namespace GameX.Database.Type
         public int ComboTimerDuration { get; set; }
         public int ComboBonusTimerDuration { get; set; }
         public List<int> VocalizerHotkeys { get; set; }
+        public List<List<List<int>>> VocalizerSpeechGroups { get; set; }
     }
 }

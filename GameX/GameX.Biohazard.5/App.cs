@@ -17,6 +17,7 @@ using GameX.Enum;
 using GameX.Database.Type;
 using GameX.Database.ViewBag;
 using DevExpress.XtraEditors.Controls;
+using DevExpress.Office.Utils;
 
 namespace GameX
 {
@@ -2601,10 +2602,26 @@ namespace GameX
         private void Configuration_Save(object sender, EventArgs e)
         {
             List<int> VocalizerHotkeys = new List<int>();
+            List<List<List<int>>> VocalizerSpeechGroups = new List<List<List<int>>>();
 
             for (int Group = 0; Group < 9; Group++)
             {
                 VocalizerHotkeys.Add(ChooseVocalizerHotkey(Group));
+            }
+
+            for (int Char = 0; Char < 8; Char++)
+            {
+                VocalizerSpeechGroups.Add(new List<List<int>>());
+
+                for (int Group = 0; Group < 9; Group++)
+                {
+                    VocalizerSpeechGroups[Char].Add(new List<int>());
+
+                    for (int Slot = 0; Slot < 5; Slot++)
+                    {
+                        VocalizerSpeechGroups[Char][Group].Add(ChooseVocalizerLine(Char, Group, Slot));
+                    }
+                }
             }
 
             Settings Setts = new Settings()
@@ -2629,7 +2646,8 @@ namespace GameX
                 MeleeKillSeconds = MeleeKillCB.SelectedIndex,
                 ComboTimerDuration = ComboTimerCB.SelectedIndex,
                 ComboBonusTimerDuration = ComboBonusTimerCB.SelectedIndex,
-                VocalizerHotkeys = VocalizerHotkeys
+                VocalizerHotkeys = VocalizerHotkeys,
+                VocalizerSpeechGroups = VocalizerSpeechGroups
             };
 
             try
@@ -2698,6 +2716,18 @@ namespace GameX
             if (Setts.VocalizerHotkeys != null)
                 for (int Group = 0; Group < 9; Group++)
                     ChooseVocalizerHotkey(Group, true, Setts.VocalizerHotkeys[Group]);
+
+            if (Setts.VocalizerSpeechGroups != null)
+            {
+                for (int Char = 0; Char < 8; Char++)
+                {
+                    for (int Group = 0; Group < 9; Group++)
+                    {
+                        for (int Slot = 0; Slot < 5; Slot++)
+                            ChooseVocalizerLine(Char, Group, Slot, true, Setts.VocalizerSpeechGroups[Char][Group][Slot]);
+                    }
+                }
+            }
 
             if ((Setts.ControllerAim && ControllerAimButton.Text == "Enable") || (!Setts.ControllerAim && ControllerAimButton.Text == "Disable"))
                 EnableDisable_StateChanged(ControllerAimButton, null);

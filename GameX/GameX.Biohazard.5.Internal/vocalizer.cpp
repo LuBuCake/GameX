@@ -126,7 +126,7 @@ void Vocalizer::Update()
 						int Ammount = *(int*)(ItemBaseAddress + 4);
 						int MaxAmmount = *(int*)(ItemBaseAddress + 8);
 
-						if (Ammount < (MaxAmmount * 0.33))
+						if (Ammount < (MaxAmmount * 0.5))
 							Game::PlaySpeech(LocalPlayer, 66);
 					}
 

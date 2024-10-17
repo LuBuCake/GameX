@@ -39,61 +39,6 @@ namespace GameX
             this.TabPageVocalizer = new DevExpress.XtraTab.XtraTabPage();
             this.VocalizerGP = new DevExpress.XtraEditors.GroupControl();
             this.VocalizerTabControl = new DevExpress.XtraTab.XtraTabControl();
-            this.VocalizerRebeccaTab = new DevExpress.XtraTab.XtraTabPage();
-            this.VocalizerRebeccaG9GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerRebeccaG9S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG9S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG9S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG9S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG9S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG8GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerRebeccaG8S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG8S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG8S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG8S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG8S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG7GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerRebeccaG7S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG7S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG7S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG7S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG7S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG6GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerRebeccaG6S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG6S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG6S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG6S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG6S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG5GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerRebeccaG5S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG5S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG5S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG5S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG5S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG4GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerRebeccaG4S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG4S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG4S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG4S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG4S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG3GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerRebeccaG3S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG3S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG3S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG3S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG3S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG2GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerRebeccaG2S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG2S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG2S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG2S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG2S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG1GP = new DevExpress.XtraEditors.GroupControl();
-            this.VocalizerRebeccaG1S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG1S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG1S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG1S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.VocalizerRebeccaG1S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
             this.VocalizerChrisTab = new DevExpress.XtraTab.XtraTabPage();
             this.VocalizerChrisG9GP = new DevExpress.XtraEditors.GroupControl();
             this.VocalizerChrisG9S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -479,6 +424,61 @@ namespace GameX
             this.VocalizerBarryG1S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
             this.VocalizerBarryG1S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
             this.VocalizerBarryG1S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaTab = new DevExpress.XtraTab.XtraTabPage();
+            this.VocalizerRebeccaG9GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerRebeccaG9S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG9S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG9S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG9S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG9S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG8GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerRebeccaG8S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG8S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG8S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG8S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG8S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG7GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerRebeccaG7S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG7S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG7S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG7S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG7S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG6GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerRebeccaG6S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG6S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG6S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG6S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG6S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG5GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerRebeccaG5S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG5S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG5S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG5S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG5S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG4GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerRebeccaG4S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG4S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG4S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG4S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG4S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG3GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerRebeccaG3S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG3S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG3S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG3S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG3S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG2GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerRebeccaG2S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG2S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG2S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG2S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG2S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG1GP = new DevExpress.XtraEditors.GroupControl();
+            this.VocalizerRebeccaG1S5CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG1S4CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG1S3CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG1S2CB = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.VocalizerRebeccaG1S1CB = new DevExpress.XtraEditors.ComboBoxEdit();
             this.VocalizerSettingsGP = new DevExpress.XtraEditors.GroupControl();
             this.VocalizerSaveLoadGP = new DevExpress.XtraEditors.GroupControl();
             this.VocalizerLoadGroupsButton = new DevExpress.XtraEditors.SimpleButton();
@@ -581,7 +581,6 @@ namespace GameX
             this.MeleeCameraCE = new DevExpress.XtraEditors.CheckEdit();
             this.WeaponPlacementGP = new DevExpress.XtraEditors.GroupControl();
             this.WeaponPlacementComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.WeaponPlacementLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.WeskerGP = new DevExpress.XtraEditors.GroupControl();
             this.WeskerNoWeaponOnChestCE = new DevExpress.XtraEditors.CheckEdit();
             this.WeskerNoDashCostCE = new DevExpress.XtraEditors.CheckEdit();
@@ -1314,70 +1313,6 @@ namespace GameX
             this.VocalizerGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerTabControl)).BeginInit();
             this.VocalizerTabControl.SuspendLayout();
-            this.VocalizerRebeccaTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9GP)).BeginInit();
-            this.VocalizerRebeccaG9GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8GP)).BeginInit();
-            this.VocalizerRebeccaG8GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7GP)).BeginInit();
-            this.VocalizerRebeccaG7GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6GP)).BeginInit();
-            this.VocalizerRebeccaG6GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5GP)).BeginInit();
-            this.VocalizerRebeccaG5GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4GP)).BeginInit();
-            this.VocalizerRebeccaG4GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3GP)).BeginInit();
-            this.VocalizerRebeccaG3GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2GP)).BeginInit();
-            this.VocalizerRebeccaG2GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S1CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1GP)).BeginInit();
-            this.VocalizerRebeccaG1GP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S5CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S4CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S3CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S2CB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S1CB.Properties)).BeginInit();
             this.VocalizerChrisTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerChrisG9GP)).BeginInit();
             this.VocalizerChrisG9GP.SuspendLayout();
@@ -1826,6 +1761,70 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S3CB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S2CB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S1CB.Properties)).BeginInit();
+            this.VocalizerRebeccaTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9GP)).BeginInit();
+            this.VocalizerRebeccaG9GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8GP)).BeginInit();
+            this.VocalizerRebeccaG8GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7GP)).BeginInit();
+            this.VocalizerRebeccaG7GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6GP)).BeginInit();
+            this.VocalizerRebeccaG6GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5GP)).BeginInit();
+            this.VocalizerRebeccaG5GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4GP)).BeginInit();
+            this.VocalizerRebeccaG4GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3GP)).BeginInit();
+            this.VocalizerRebeccaG3GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2GP)).BeginInit();
+            this.VocalizerRebeccaG2GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S1CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1GP)).BeginInit();
+            this.VocalizerRebeccaG1GP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S5CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S4CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S3CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S2CB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S1CB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerSettingsGP)).BeginInit();
             this.VocalizerSettingsGP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerSaveLoadGP)).BeginInit();
@@ -2674,7 +2673,7 @@ namespace GameX
             this.MasterTabControl.HeaderAutoFill = DevExpress.Utils.DefaultBoolean.True;
             this.MasterTabControl.Location = new System.Drawing.Point(12, 40);
             this.MasterTabControl.Name = "MasterTabControl";
-            this.MasterTabControl.SelectedTabPage = this.TabPageVocalizer;
+            this.MasterTabControl.SelectedTabPage = this.TabPageSettings;
             this.MasterTabControl.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
             this.MasterTabControl.Size = new System.Drawing.Size(1225, 557);
             this.MasterTabControl.TabIndex = 18;
@@ -2720,768 +2719,6 @@ namespace GameX
             this.VocalizerExcellaTab,
             this.VocalizerBarryTab,
             this.VocalizerRebeccaTab});
-            // 
-            // VocalizerRebeccaTab
-            // 
-            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG9GP);
-            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG8GP);
-            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG7GP);
-            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG6GP);
-            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG5GP);
-            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG4GP);
-            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG3GP);
-            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG2GP);
-            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG1GP);
-            this.VocalizerRebeccaTab.Name = "VocalizerRebeccaTab";
-            this.VocalizerRebeccaTab.Size = new System.Drawing.Size(528, 498);
-            this.VocalizerRebeccaTab.Text = "xtraTabPage7";
-            // 
-            // VocalizerRebeccaG9GP
-            // 
-            this.VocalizerRebeccaG9GP.Controls.Add(this.VocalizerRebeccaG9S5CB);
-            this.VocalizerRebeccaG9GP.Controls.Add(this.VocalizerRebeccaG9S4CB);
-            this.VocalizerRebeccaG9GP.Controls.Add(this.VocalizerRebeccaG9S3CB);
-            this.VocalizerRebeccaG9GP.Controls.Add(this.VocalizerRebeccaG9S2CB);
-            this.VocalizerRebeccaG9GP.Controls.Add(this.VocalizerRebeccaG9S1CB);
-            this.VocalizerRebeccaG9GP.Location = new System.Drawing.Point(355, 335);
-            this.VocalizerRebeccaG9GP.Name = "VocalizerRebeccaG9GP";
-            this.VocalizerRebeccaG9GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerRebeccaG9GP.TabIndex = 71;
-            this.VocalizerRebeccaG9GP.Text = "Group 9";
-            // 
-            // VocalizerRebeccaG9S5CB
-            // 
-            this.VocalizerRebeccaG9S5CB.EditValue = "";
-            this.VocalizerRebeccaG9S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerRebeccaG9S5CB.Name = "VocalizerRebeccaG9S5CB";
-            this.VocalizerRebeccaG9S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG9S5CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG9S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG9S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG9S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG9S5CB.TabIndex = 7;
-            this.VocalizerRebeccaG9S5CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG9S4CB
-            // 
-            this.VocalizerRebeccaG9S4CB.EditValue = "";
-            this.VocalizerRebeccaG9S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerRebeccaG9S4CB.Name = "VocalizerRebeccaG9S4CB";
-            this.VocalizerRebeccaG9S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG9S4CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG9S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG9S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG9S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG9S4CB.TabIndex = 6;
-            this.VocalizerRebeccaG9S4CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG9S3CB
-            // 
-            this.VocalizerRebeccaG9S3CB.EditValue = "";
-            this.VocalizerRebeccaG9S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerRebeccaG9S3CB.Name = "VocalizerRebeccaG9S3CB";
-            this.VocalizerRebeccaG9S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG9S3CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG9S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG9S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG9S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG9S3CB.TabIndex = 5;
-            this.VocalizerRebeccaG9S3CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG9S2CB
-            // 
-            this.VocalizerRebeccaG9S2CB.EditValue = "";
-            this.VocalizerRebeccaG9S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerRebeccaG9S2CB.Name = "VocalizerRebeccaG9S2CB";
-            this.VocalizerRebeccaG9S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG9S2CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG9S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG9S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG9S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG9S2CB.TabIndex = 4;
-            this.VocalizerRebeccaG9S2CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG9S1CB
-            // 
-            this.VocalizerRebeccaG9S1CB.EditValue = "";
-            this.VocalizerRebeccaG9S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerRebeccaG9S1CB.Name = "VocalizerRebeccaG9S1CB";
-            this.VocalizerRebeccaG9S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG9S1CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG9S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG9S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG9S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG9S1CB.TabIndex = 3;
-            this.VocalizerRebeccaG9S1CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG8GP
-            // 
-            this.VocalizerRebeccaG8GP.Controls.Add(this.VocalizerRebeccaG8S5CB);
-            this.VocalizerRebeccaG8GP.Controls.Add(this.VocalizerRebeccaG8S4CB);
-            this.VocalizerRebeccaG8GP.Controls.Add(this.VocalizerRebeccaG8S3CB);
-            this.VocalizerRebeccaG8GP.Controls.Add(this.VocalizerRebeccaG8S2CB);
-            this.VocalizerRebeccaG8GP.Controls.Add(this.VocalizerRebeccaG8S1CB);
-            this.VocalizerRebeccaG8GP.Location = new System.Drawing.Point(179, 335);
-            this.VocalizerRebeccaG8GP.Name = "VocalizerRebeccaG8GP";
-            this.VocalizerRebeccaG8GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerRebeccaG8GP.TabIndex = 70;
-            this.VocalizerRebeccaG8GP.Text = "Group 8";
-            // 
-            // VocalizerRebeccaG8S5CB
-            // 
-            this.VocalizerRebeccaG8S5CB.EditValue = "";
-            this.VocalizerRebeccaG8S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerRebeccaG8S5CB.Name = "VocalizerRebeccaG8S5CB";
-            this.VocalizerRebeccaG8S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG8S5CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG8S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG8S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG8S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG8S5CB.TabIndex = 7;
-            this.VocalizerRebeccaG8S5CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG8S4CB
-            // 
-            this.VocalizerRebeccaG8S4CB.EditValue = "";
-            this.VocalizerRebeccaG8S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerRebeccaG8S4CB.Name = "VocalizerRebeccaG8S4CB";
-            this.VocalizerRebeccaG8S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG8S4CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG8S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG8S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG8S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG8S4CB.TabIndex = 6;
-            this.VocalizerRebeccaG8S4CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG8S3CB
-            // 
-            this.VocalizerRebeccaG8S3CB.EditValue = "";
-            this.VocalizerRebeccaG8S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerRebeccaG8S3CB.Name = "VocalizerRebeccaG8S3CB";
-            this.VocalizerRebeccaG8S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG8S3CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG8S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG8S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG8S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG8S3CB.TabIndex = 5;
-            this.VocalizerRebeccaG8S3CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG8S2CB
-            // 
-            this.VocalizerRebeccaG8S2CB.EditValue = "";
-            this.VocalizerRebeccaG8S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerRebeccaG8S2CB.Name = "VocalizerRebeccaG8S2CB";
-            this.VocalizerRebeccaG8S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG8S2CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG8S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG8S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG8S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG8S2CB.TabIndex = 4;
-            this.VocalizerRebeccaG8S2CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG8S1CB
-            // 
-            this.VocalizerRebeccaG8S1CB.EditValue = "";
-            this.VocalizerRebeccaG8S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerRebeccaG8S1CB.Name = "VocalizerRebeccaG8S1CB";
-            this.VocalizerRebeccaG8S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG8S1CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG8S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG8S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG8S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG8S1CB.TabIndex = 3;
-            this.VocalizerRebeccaG8S1CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG7GP
-            // 
-            this.VocalizerRebeccaG7GP.Controls.Add(this.VocalizerRebeccaG7S5CB);
-            this.VocalizerRebeccaG7GP.Controls.Add(this.VocalizerRebeccaG7S4CB);
-            this.VocalizerRebeccaG7GP.Controls.Add(this.VocalizerRebeccaG7S3CB);
-            this.VocalizerRebeccaG7GP.Controls.Add(this.VocalizerRebeccaG7S2CB);
-            this.VocalizerRebeccaG7GP.Controls.Add(this.VocalizerRebeccaG7S1CB);
-            this.VocalizerRebeccaG7GP.Location = new System.Drawing.Point(3, 335);
-            this.VocalizerRebeccaG7GP.Name = "VocalizerRebeccaG7GP";
-            this.VocalizerRebeccaG7GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerRebeccaG7GP.TabIndex = 69;
-            this.VocalizerRebeccaG7GP.Text = "Group 7";
-            // 
-            // VocalizerRebeccaG7S5CB
-            // 
-            this.VocalizerRebeccaG7S5CB.EditValue = "";
-            this.VocalizerRebeccaG7S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerRebeccaG7S5CB.Name = "VocalizerRebeccaG7S5CB";
-            this.VocalizerRebeccaG7S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG7S5CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG7S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG7S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG7S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG7S5CB.TabIndex = 7;
-            this.VocalizerRebeccaG7S5CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG7S4CB
-            // 
-            this.VocalizerRebeccaG7S4CB.EditValue = "";
-            this.VocalizerRebeccaG7S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerRebeccaG7S4CB.Name = "VocalizerRebeccaG7S4CB";
-            this.VocalizerRebeccaG7S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG7S4CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG7S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG7S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG7S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG7S4CB.TabIndex = 6;
-            this.VocalizerRebeccaG7S4CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG7S3CB
-            // 
-            this.VocalizerRebeccaG7S3CB.EditValue = "";
-            this.VocalizerRebeccaG7S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerRebeccaG7S3CB.Name = "VocalizerRebeccaG7S3CB";
-            this.VocalizerRebeccaG7S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG7S3CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG7S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG7S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG7S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG7S3CB.TabIndex = 5;
-            this.VocalizerRebeccaG7S3CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG7S2CB
-            // 
-            this.VocalizerRebeccaG7S2CB.EditValue = "";
-            this.VocalizerRebeccaG7S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerRebeccaG7S2CB.Name = "VocalizerRebeccaG7S2CB";
-            this.VocalizerRebeccaG7S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG7S2CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG7S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG7S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG7S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG7S2CB.TabIndex = 4;
-            this.VocalizerRebeccaG7S2CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG7S1CB
-            // 
-            this.VocalizerRebeccaG7S1CB.EditValue = "";
-            this.VocalizerRebeccaG7S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerRebeccaG7S1CB.Name = "VocalizerRebeccaG7S1CB";
-            this.VocalizerRebeccaG7S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG7S1CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG7S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG7S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG7S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG7S1CB.TabIndex = 3;
-            this.VocalizerRebeccaG7S1CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG6GP
-            // 
-            this.VocalizerRebeccaG6GP.Controls.Add(this.VocalizerRebeccaG6S5CB);
-            this.VocalizerRebeccaG6GP.Controls.Add(this.VocalizerRebeccaG6S4CB);
-            this.VocalizerRebeccaG6GP.Controls.Add(this.VocalizerRebeccaG6S3CB);
-            this.VocalizerRebeccaG6GP.Controls.Add(this.VocalizerRebeccaG6S2CB);
-            this.VocalizerRebeccaG6GP.Controls.Add(this.VocalizerRebeccaG6S1CB);
-            this.VocalizerRebeccaG6GP.Location = new System.Drawing.Point(355, 169);
-            this.VocalizerRebeccaG6GP.Name = "VocalizerRebeccaG6GP";
-            this.VocalizerRebeccaG6GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerRebeccaG6GP.TabIndex = 68;
-            this.VocalizerRebeccaG6GP.Text = "Group 6";
-            // 
-            // VocalizerRebeccaG6S5CB
-            // 
-            this.VocalizerRebeccaG6S5CB.EditValue = "";
-            this.VocalizerRebeccaG6S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerRebeccaG6S5CB.Name = "VocalizerRebeccaG6S5CB";
-            this.VocalizerRebeccaG6S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG6S5CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG6S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG6S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG6S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG6S5CB.TabIndex = 7;
-            this.VocalizerRebeccaG6S5CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG6S4CB
-            // 
-            this.VocalizerRebeccaG6S4CB.EditValue = "";
-            this.VocalizerRebeccaG6S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerRebeccaG6S4CB.Name = "VocalizerRebeccaG6S4CB";
-            this.VocalizerRebeccaG6S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG6S4CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG6S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG6S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG6S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG6S4CB.TabIndex = 6;
-            this.VocalizerRebeccaG6S4CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG6S3CB
-            // 
-            this.VocalizerRebeccaG6S3CB.EditValue = "";
-            this.VocalizerRebeccaG6S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerRebeccaG6S3CB.Name = "VocalizerRebeccaG6S3CB";
-            this.VocalizerRebeccaG6S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG6S3CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG6S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG6S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG6S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG6S3CB.TabIndex = 5;
-            this.VocalizerRebeccaG6S3CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG6S2CB
-            // 
-            this.VocalizerRebeccaG6S2CB.EditValue = "";
-            this.VocalizerRebeccaG6S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerRebeccaG6S2CB.Name = "VocalizerRebeccaG6S2CB";
-            this.VocalizerRebeccaG6S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG6S2CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG6S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG6S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG6S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG6S2CB.TabIndex = 4;
-            this.VocalizerRebeccaG6S2CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG6S1CB
-            // 
-            this.VocalizerRebeccaG6S1CB.EditValue = "";
-            this.VocalizerRebeccaG6S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerRebeccaG6S1CB.Name = "VocalizerRebeccaG6S1CB";
-            this.VocalizerRebeccaG6S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG6S1CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG6S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG6S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG6S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG6S1CB.TabIndex = 3;
-            this.VocalizerRebeccaG6S1CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG5GP
-            // 
-            this.VocalizerRebeccaG5GP.Controls.Add(this.VocalizerRebeccaG5S5CB);
-            this.VocalizerRebeccaG5GP.Controls.Add(this.VocalizerRebeccaG5S4CB);
-            this.VocalizerRebeccaG5GP.Controls.Add(this.VocalizerRebeccaG5S3CB);
-            this.VocalizerRebeccaG5GP.Controls.Add(this.VocalizerRebeccaG5S2CB);
-            this.VocalizerRebeccaG5GP.Controls.Add(this.VocalizerRebeccaG5S1CB);
-            this.VocalizerRebeccaG5GP.Location = new System.Drawing.Point(179, 169);
-            this.VocalizerRebeccaG5GP.Name = "VocalizerRebeccaG5GP";
-            this.VocalizerRebeccaG5GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerRebeccaG5GP.TabIndex = 67;
-            this.VocalizerRebeccaG5GP.Text = "Group 5";
-            // 
-            // VocalizerRebeccaG5S5CB
-            // 
-            this.VocalizerRebeccaG5S5CB.EditValue = "";
-            this.VocalizerRebeccaG5S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerRebeccaG5S5CB.Name = "VocalizerRebeccaG5S5CB";
-            this.VocalizerRebeccaG5S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG5S5CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG5S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG5S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG5S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG5S5CB.TabIndex = 7;
-            this.VocalizerRebeccaG5S5CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG5S4CB
-            // 
-            this.VocalizerRebeccaG5S4CB.EditValue = "";
-            this.VocalizerRebeccaG5S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerRebeccaG5S4CB.Name = "VocalizerRebeccaG5S4CB";
-            this.VocalizerRebeccaG5S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG5S4CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG5S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG5S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG5S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG5S4CB.TabIndex = 6;
-            this.VocalizerRebeccaG5S4CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG5S3CB
-            // 
-            this.VocalizerRebeccaG5S3CB.EditValue = "";
-            this.VocalizerRebeccaG5S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerRebeccaG5S3CB.Name = "VocalizerRebeccaG5S3CB";
-            this.VocalizerRebeccaG5S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG5S3CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG5S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG5S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG5S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG5S3CB.TabIndex = 5;
-            this.VocalizerRebeccaG5S3CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG5S2CB
-            // 
-            this.VocalizerRebeccaG5S2CB.EditValue = "";
-            this.VocalizerRebeccaG5S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerRebeccaG5S2CB.Name = "VocalizerRebeccaG5S2CB";
-            this.VocalizerRebeccaG5S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG5S2CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG5S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG5S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG5S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG5S2CB.TabIndex = 4;
-            this.VocalizerRebeccaG5S2CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG5S1CB
-            // 
-            this.VocalizerRebeccaG5S1CB.EditValue = "";
-            this.VocalizerRebeccaG5S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerRebeccaG5S1CB.Name = "VocalizerRebeccaG5S1CB";
-            this.VocalizerRebeccaG5S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG5S1CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG5S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG5S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG5S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG5S1CB.TabIndex = 3;
-            this.VocalizerRebeccaG5S1CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG4GP
-            // 
-            this.VocalizerRebeccaG4GP.Controls.Add(this.VocalizerRebeccaG4S5CB);
-            this.VocalizerRebeccaG4GP.Controls.Add(this.VocalizerRebeccaG4S4CB);
-            this.VocalizerRebeccaG4GP.Controls.Add(this.VocalizerRebeccaG4S3CB);
-            this.VocalizerRebeccaG4GP.Controls.Add(this.VocalizerRebeccaG4S2CB);
-            this.VocalizerRebeccaG4GP.Controls.Add(this.VocalizerRebeccaG4S1CB);
-            this.VocalizerRebeccaG4GP.Location = new System.Drawing.Point(3, 169);
-            this.VocalizerRebeccaG4GP.Name = "VocalizerRebeccaG4GP";
-            this.VocalizerRebeccaG4GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerRebeccaG4GP.TabIndex = 66;
-            this.VocalizerRebeccaG4GP.Text = "Group 4";
-            // 
-            // VocalizerRebeccaG4S5CB
-            // 
-            this.VocalizerRebeccaG4S5CB.EditValue = "";
-            this.VocalizerRebeccaG4S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerRebeccaG4S5CB.Name = "VocalizerRebeccaG4S5CB";
-            this.VocalizerRebeccaG4S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG4S5CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG4S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG4S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG4S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG4S5CB.TabIndex = 7;
-            this.VocalizerRebeccaG4S5CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG4S4CB
-            // 
-            this.VocalizerRebeccaG4S4CB.EditValue = "";
-            this.VocalizerRebeccaG4S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerRebeccaG4S4CB.Name = "VocalizerRebeccaG4S4CB";
-            this.VocalizerRebeccaG4S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG4S4CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG4S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG4S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG4S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG4S4CB.TabIndex = 6;
-            this.VocalizerRebeccaG4S4CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG4S3CB
-            // 
-            this.VocalizerRebeccaG4S3CB.EditValue = "";
-            this.VocalizerRebeccaG4S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerRebeccaG4S3CB.Name = "VocalizerRebeccaG4S3CB";
-            this.VocalizerRebeccaG4S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG4S3CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG4S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG4S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG4S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG4S3CB.TabIndex = 5;
-            this.VocalizerRebeccaG4S3CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG4S2CB
-            // 
-            this.VocalizerRebeccaG4S2CB.EditValue = "";
-            this.VocalizerRebeccaG4S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerRebeccaG4S2CB.Name = "VocalizerRebeccaG4S2CB";
-            this.VocalizerRebeccaG4S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG4S2CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG4S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG4S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG4S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG4S2CB.TabIndex = 4;
-            this.VocalizerRebeccaG4S2CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG4S1CB
-            // 
-            this.VocalizerRebeccaG4S1CB.EditValue = "";
-            this.VocalizerRebeccaG4S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerRebeccaG4S1CB.Name = "VocalizerRebeccaG4S1CB";
-            this.VocalizerRebeccaG4S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG4S1CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG4S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG4S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG4S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG4S1CB.TabIndex = 3;
-            this.VocalizerRebeccaG4S1CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG3GP
-            // 
-            this.VocalizerRebeccaG3GP.Controls.Add(this.VocalizerRebeccaG3S5CB);
-            this.VocalizerRebeccaG3GP.Controls.Add(this.VocalizerRebeccaG3S4CB);
-            this.VocalizerRebeccaG3GP.Controls.Add(this.VocalizerRebeccaG3S3CB);
-            this.VocalizerRebeccaG3GP.Controls.Add(this.VocalizerRebeccaG3S2CB);
-            this.VocalizerRebeccaG3GP.Controls.Add(this.VocalizerRebeccaG3S1CB);
-            this.VocalizerRebeccaG3GP.Location = new System.Drawing.Point(355, 3);
-            this.VocalizerRebeccaG3GP.Name = "VocalizerRebeccaG3GP";
-            this.VocalizerRebeccaG3GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerRebeccaG3GP.TabIndex = 65;
-            this.VocalizerRebeccaG3GP.Text = "Group 3";
-            // 
-            // VocalizerRebeccaG3S5CB
-            // 
-            this.VocalizerRebeccaG3S5CB.EditValue = "";
-            this.VocalizerRebeccaG3S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerRebeccaG3S5CB.Name = "VocalizerRebeccaG3S5CB";
-            this.VocalizerRebeccaG3S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG3S5CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG3S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG3S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG3S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG3S5CB.TabIndex = 7;
-            this.VocalizerRebeccaG3S5CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG3S4CB
-            // 
-            this.VocalizerRebeccaG3S4CB.EditValue = "";
-            this.VocalizerRebeccaG3S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerRebeccaG3S4CB.Name = "VocalizerRebeccaG3S4CB";
-            this.VocalizerRebeccaG3S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG3S4CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG3S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG3S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG3S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG3S4CB.TabIndex = 6;
-            this.VocalizerRebeccaG3S4CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG3S3CB
-            // 
-            this.VocalizerRebeccaG3S3CB.EditValue = "";
-            this.VocalizerRebeccaG3S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerRebeccaG3S3CB.Name = "VocalizerRebeccaG3S3CB";
-            this.VocalizerRebeccaG3S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG3S3CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG3S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG3S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG3S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG3S3CB.TabIndex = 5;
-            this.VocalizerRebeccaG3S3CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG3S2CB
-            // 
-            this.VocalizerRebeccaG3S2CB.EditValue = "";
-            this.VocalizerRebeccaG3S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerRebeccaG3S2CB.Name = "VocalizerRebeccaG3S2CB";
-            this.VocalizerRebeccaG3S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG3S2CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG3S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG3S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG3S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG3S2CB.TabIndex = 4;
-            this.VocalizerRebeccaG3S2CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG3S1CB
-            // 
-            this.VocalizerRebeccaG3S1CB.EditValue = "";
-            this.VocalizerRebeccaG3S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerRebeccaG3S1CB.Name = "VocalizerRebeccaG3S1CB";
-            this.VocalizerRebeccaG3S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG3S1CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG3S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG3S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG3S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG3S1CB.TabIndex = 3;
-            this.VocalizerRebeccaG3S1CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG2GP
-            // 
-            this.VocalizerRebeccaG2GP.Controls.Add(this.VocalizerRebeccaG2S5CB);
-            this.VocalizerRebeccaG2GP.Controls.Add(this.VocalizerRebeccaG2S4CB);
-            this.VocalizerRebeccaG2GP.Controls.Add(this.VocalizerRebeccaG2S3CB);
-            this.VocalizerRebeccaG2GP.Controls.Add(this.VocalizerRebeccaG2S2CB);
-            this.VocalizerRebeccaG2GP.Controls.Add(this.VocalizerRebeccaG2S1CB);
-            this.VocalizerRebeccaG2GP.Location = new System.Drawing.Point(179, 3);
-            this.VocalizerRebeccaG2GP.Name = "VocalizerRebeccaG2GP";
-            this.VocalizerRebeccaG2GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerRebeccaG2GP.TabIndex = 64;
-            this.VocalizerRebeccaG2GP.Text = "Group 2";
-            // 
-            // VocalizerRebeccaG2S5CB
-            // 
-            this.VocalizerRebeccaG2S5CB.EditValue = "";
-            this.VocalizerRebeccaG2S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerRebeccaG2S5CB.Name = "VocalizerRebeccaG2S5CB";
-            this.VocalizerRebeccaG2S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG2S5CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG2S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG2S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG2S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG2S5CB.TabIndex = 7;
-            this.VocalizerRebeccaG2S5CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG2S4CB
-            // 
-            this.VocalizerRebeccaG2S4CB.EditValue = "";
-            this.VocalizerRebeccaG2S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerRebeccaG2S4CB.Name = "VocalizerRebeccaG2S4CB";
-            this.VocalizerRebeccaG2S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG2S4CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG2S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG2S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG2S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG2S4CB.TabIndex = 6;
-            this.VocalizerRebeccaG2S4CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG2S3CB
-            // 
-            this.VocalizerRebeccaG2S3CB.EditValue = "";
-            this.VocalizerRebeccaG2S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerRebeccaG2S3CB.Name = "VocalizerRebeccaG2S3CB";
-            this.VocalizerRebeccaG2S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG2S3CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG2S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG2S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG2S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG2S3CB.TabIndex = 5;
-            this.VocalizerRebeccaG2S3CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG2S2CB
-            // 
-            this.VocalizerRebeccaG2S2CB.EditValue = "";
-            this.VocalizerRebeccaG2S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerRebeccaG2S2CB.Name = "VocalizerRebeccaG2S2CB";
-            this.VocalizerRebeccaG2S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG2S2CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG2S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG2S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG2S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG2S2CB.TabIndex = 4;
-            this.VocalizerRebeccaG2S2CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG2S1CB
-            // 
-            this.VocalizerRebeccaG2S1CB.EditValue = "";
-            this.VocalizerRebeccaG2S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerRebeccaG2S1CB.Name = "VocalizerRebeccaG2S1CB";
-            this.VocalizerRebeccaG2S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG2S1CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG2S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG2S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG2S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG2S1CB.TabIndex = 3;
-            this.VocalizerRebeccaG2S1CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG1GP
-            // 
-            this.VocalizerRebeccaG1GP.Controls.Add(this.VocalizerRebeccaG1S5CB);
-            this.VocalizerRebeccaG1GP.Controls.Add(this.VocalizerRebeccaG1S4CB);
-            this.VocalizerRebeccaG1GP.Controls.Add(this.VocalizerRebeccaG1S3CB);
-            this.VocalizerRebeccaG1GP.Controls.Add(this.VocalizerRebeccaG1S2CB);
-            this.VocalizerRebeccaG1GP.Controls.Add(this.VocalizerRebeccaG1S1CB);
-            this.VocalizerRebeccaG1GP.Location = new System.Drawing.Point(3, 3);
-            this.VocalizerRebeccaG1GP.Name = "VocalizerRebeccaG1GP";
-            this.VocalizerRebeccaG1GP.Size = new System.Drawing.Size(170, 160);
-            this.VocalizerRebeccaG1GP.TabIndex = 63;
-            this.VocalizerRebeccaG1GP.Text = "Group 1";
-            // 
-            // VocalizerRebeccaG1S5CB
-            // 
-            this.VocalizerRebeccaG1S5CB.EditValue = "";
-            this.VocalizerRebeccaG1S5CB.Location = new System.Drawing.Point(5, 134);
-            this.VocalizerRebeccaG1S5CB.Name = "VocalizerRebeccaG1S5CB";
-            this.VocalizerRebeccaG1S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG1S5CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG1S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG1S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG1S5CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG1S5CB.TabIndex = 7;
-            this.VocalizerRebeccaG1S5CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG1S4CB
-            // 
-            this.VocalizerRebeccaG1S4CB.EditValue = "";
-            this.VocalizerRebeccaG1S4CB.Location = new System.Drawing.Point(5, 108);
-            this.VocalizerRebeccaG1S4CB.Name = "VocalizerRebeccaG1S4CB";
-            this.VocalizerRebeccaG1S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG1S4CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG1S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG1S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG1S4CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG1S4CB.TabIndex = 6;
-            this.VocalizerRebeccaG1S4CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG1S3CB
-            // 
-            this.VocalizerRebeccaG1S3CB.EditValue = "";
-            this.VocalizerRebeccaG1S3CB.Location = new System.Drawing.Point(5, 82);
-            this.VocalizerRebeccaG1S3CB.Name = "VocalizerRebeccaG1S3CB";
-            this.VocalizerRebeccaG1S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG1S3CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG1S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG1S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG1S3CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG1S3CB.TabIndex = 5;
-            this.VocalizerRebeccaG1S3CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG1S2CB
-            // 
-            this.VocalizerRebeccaG1S2CB.EditValue = "";
-            this.VocalizerRebeccaG1S2CB.Location = new System.Drawing.Point(5, 56);
-            this.VocalizerRebeccaG1S2CB.Name = "VocalizerRebeccaG1S2CB";
-            this.VocalizerRebeccaG1S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG1S2CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG1S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG1S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG1S2CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG1S2CB.TabIndex = 4;
-            this.VocalizerRebeccaG1S2CB.TabStop = false;
-            // 
-            // VocalizerRebeccaG1S1CB
-            // 
-            this.VocalizerRebeccaG1S1CB.EditValue = "";
-            this.VocalizerRebeccaG1S1CB.Location = new System.Drawing.Point(5, 30);
-            this.VocalizerRebeccaG1S1CB.Name = "VocalizerRebeccaG1S1CB";
-            this.VocalizerRebeccaG1S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            this.VocalizerRebeccaG1S1CB.Properties.AllowFocused = false;
-            this.VocalizerRebeccaG1S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.VocalizerRebeccaG1S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.VocalizerRebeccaG1S1CB.Size = new System.Drawing.Size(160, 20);
-            this.VocalizerRebeccaG1S1CB.TabIndex = 3;
-            this.VocalizerRebeccaG1S1CB.TabStop = false;
             // 
             // VocalizerChrisTab
             // 
@@ -8816,6 +8053,768 @@ namespace GameX
             this.VocalizerBarryG1S1CB.TabIndex = 3;
             this.VocalizerBarryG1S1CB.TabStop = false;
             // 
+            // VocalizerRebeccaTab
+            // 
+            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG9GP);
+            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG8GP);
+            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG7GP);
+            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG6GP);
+            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG5GP);
+            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG4GP);
+            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG3GP);
+            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG2GP);
+            this.VocalizerRebeccaTab.Controls.Add(this.VocalizerRebeccaG1GP);
+            this.VocalizerRebeccaTab.Name = "VocalizerRebeccaTab";
+            this.VocalizerRebeccaTab.Size = new System.Drawing.Size(528, 498);
+            this.VocalizerRebeccaTab.Text = "xtraTabPage7";
+            // 
+            // VocalizerRebeccaG9GP
+            // 
+            this.VocalizerRebeccaG9GP.Controls.Add(this.VocalizerRebeccaG9S5CB);
+            this.VocalizerRebeccaG9GP.Controls.Add(this.VocalizerRebeccaG9S4CB);
+            this.VocalizerRebeccaG9GP.Controls.Add(this.VocalizerRebeccaG9S3CB);
+            this.VocalizerRebeccaG9GP.Controls.Add(this.VocalizerRebeccaG9S2CB);
+            this.VocalizerRebeccaG9GP.Controls.Add(this.VocalizerRebeccaG9S1CB);
+            this.VocalizerRebeccaG9GP.Location = new System.Drawing.Point(355, 335);
+            this.VocalizerRebeccaG9GP.Name = "VocalizerRebeccaG9GP";
+            this.VocalizerRebeccaG9GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerRebeccaG9GP.TabIndex = 71;
+            this.VocalizerRebeccaG9GP.Text = "Group 9";
+            // 
+            // VocalizerRebeccaG9S5CB
+            // 
+            this.VocalizerRebeccaG9S5CB.EditValue = "";
+            this.VocalizerRebeccaG9S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerRebeccaG9S5CB.Name = "VocalizerRebeccaG9S5CB";
+            this.VocalizerRebeccaG9S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG9S5CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG9S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG9S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG9S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG9S5CB.TabIndex = 7;
+            this.VocalizerRebeccaG9S5CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG9S4CB
+            // 
+            this.VocalizerRebeccaG9S4CB.EditValue = "";
+            this.VocalizerRebeccaG9S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerRebeccaG9S4CB.Name = "VocalizerRebeccaG9S4CB";
+            this.VocalizerRebeccaG9S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG9S4CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG9S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG9S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG9S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG9S4CB.TabIndex = 6;
+            this.VocalizerRebeccaG9S4CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG9S3CB
+            // 
+            this.VocalizerRebeccaG9S3CB.EditValue = "";
+            this.VocalizerRebeccaG9S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerRebeccaG9S3CB.Name = "VocalizerRebeccaG9S3CB";
+            this.VocalizerRebeccaG9S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG9S3CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG9S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG9S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG9S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG9S3CB.TabIndex = 5;
+            this.VocalizerRebeccaG9S3CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG9S2CB
+            // 
+            this.VocalizerRebeccaG9S2CB.EditValue = "";
+            this.VocalizerRebeccaG9S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerRebeccaG9S2CB.Name = "VocalizerRebeccaG9S2CB";
+            this.VocalizerRebeccaG9S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG9S2CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG9S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG9S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG9S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG9S2CB.TabIndex = 4;
+            this.VocalizerRebeccaG9S2CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG9S1CB
+            // 
+            this.VocalizerRebeccaG9S1CB.EditValue = "";
+            this.VocalizerRebeccaG9S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerRebeccaG9S1CB.Name = "VocalizerRebeccaG9S1CB";
+            this.VocalizerRebeccaG9S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG9S1CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG9S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG9S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG9S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG9S1CB.TabIndex = 3;
+            this.VocalizerRebeccaG9S1CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG8GP
+            // 
+            this.VocalizerRebeccaG8GP.Controls.Add(this.VocalizerRebeccaG8S5CB);
+            this.VocalizerRebeccaG8GP.Controls.Add(this.VocalizerRebeccaG8S4CB);
+            this.VocalizerRebeccaG8GP.Controls.Add(this.VocalizerRebeccaG8S3CB);
+            this.VocalizerRebeccaG8GP.Controls.Add(this.VocalizerRebeccaG8S2CB);
+            this.VocalizerRebeccaG8GP.Controls.Add(this.VocalizerRebeccaG8S1CB);
+            this.VocalizerRebeccaG8GP.Location = new System.Drawing.Point(179, 335);
+            this.VocalizerRebeccaG8GP.Name = "VocalizerRebeccaG8GP";
+            this.VocalizerRebeccaG8GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerRebeccaG8GP.TabIndex = 70;
+            this.VocalizerRebeccaG8GP.Text = "Group 8";
+            // 
+            // VocalizerRebeccaG8S5CB
+            // 
+            this.VocalizerRebeccaG8S5CB.EditValue = "";
+            this.VocalizerRebeccaG8S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerRebeccaG8S5CB.Name = "VocalizerRebeccaG8S5CB";
+            this.VocalizerRebeccaG8S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG8S5CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG8S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG8S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG8S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG8S5CB.TabIndex = 7;
+            this.VocalizerRebeccaG8S5CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG8S4CB
+            // 
+            this.VocalizerRebeccaG8S4CB.EditValue = "";
+            this.VocalizerRebeccaG8S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerRebeccaG8S4CB.Name = "VocalizerRebeccaG8S4CB";
+            this.VocalizerRebeccaG8S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG8S4CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG8S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG8S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG8S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG8S4CB.TabIndex = 6;
+            this.VocalizerRebeccaG8S4CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG8S3CB
+            // 
+            this.VocalizerRebeccaG8S3CB.EditValue = "";
+            this.VocalizerRebeccaG8S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerRebeccaG8S3CB.Name = "VocalizerRebeccaG8S3CB";
+            this.VocalizerRebeccaG8S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG8S3CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG8S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG8S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG8S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG8S3CB.TabIndex = 5;
+            this.VocalizerRebeccaG8S3CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG8S2CB
+            // 
+            this.VocalizerRebeccaG8S2CB.EditValue = "";
+            this.VocalizerRebeccaG8S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerRebeccaG8S2CB.Name = "VocalizerRebeccaG8S2CB";
+            this.VocalizerRebeccaG8S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG8S2CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG8S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG8S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG8S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG8S2CB.TabIndex = 4;
+            this.VocalizerRebeccaG8S2CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG8S1CB
+            // 
+            this.VocalizerRebeccaG8S1CB.EditValue = "";
+            this.VocalizerRebeccaG8S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerRebeccaG8S1CB.Name = "VocalizerRebeccaG8S1CB";
+            this.VocalizerRebeccaG8S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG8S1CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG8S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG8S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG8S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG8S1CB.TabIndex = 3;
+            this.VocalizerRebeccaG8S1CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG7GP
+            // 
+            this.VocalizerRebeccaG7GP.Controls.Add(this.VocalizerRebeccaG7S5CB);
+            this.VocalizerRebeccaG7GP.Controls.Add(this.VocalizerRebeccaG7S4CB);
+            this.VocalizerRebeccaG7GP.Controls.Add(this.VocalizerRebeccaG7S3CB);
+            this.VocalizerRebeccaG7GP.Controls.Add(this.VocalizerRebeccaG7S2CB);
+            this.VocalizerRebeccaG7GP.Controls.Add(this.VocalizerRebeccaG7S1CB);
+            this.VocalizerRebeccaG7GP.Location = new System.Drawing.Point(3, 335);
+            this.VocalizerRebeccaG7GP.Name = "VocalizerRebeccaG7GP";
+            this.VocalizerRebeccaG7GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerRebeccaG7GP.TabIndex = 69;
+            this.VocalizerRebeccaG7GP.Text = "Group 7";
+            // 
+            // VocalizerRebeccaG7S5CB
+            // 
+            this.VocalizerRebeccaG7S5CB.EditValue = "";
+            this.VocalizerRebeccaG7S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerRebeccaG7S5CB.Name = "VocalizerRebeccaG7S5CB";
+            this.VocalizerRebeccaG7S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG7S5CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG7S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG7S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG7S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG7S5CB.TabIndex = 7;
+            this.VocalizerRebeccaG7S5CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG7S4CB
+            // 
+            this.VocalizerRebeccaG7S4CB.EditValue = "";
+            this.VocalizerRebeccaG7S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerRebeccaG7S4CB.Name = "VocalizerRebeccaG7S4CB";
+            this.VocalizerRebeccaG7S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG7S4CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG7S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG7S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG7S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG7S4CB.TabIndex = 6;
+            this.VocalizerRebeccaG7S4CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG7S3CB
+            // 
+            this.VocalizerRebeccaG7S3CB.EditValue = "";
+            this.VocalizerRebeccaG7S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerRebeccaG7S3CB.Name = "VocalizerRebeccaG7S3CB";
+            this.VocalizerRebeccaG7S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG7S3CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG7S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG7S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG7S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG7S3CB.TabIndex = 5;
+            this.VocalizerRebeccaG7S3CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG7S2CB
+            // 
+            this.VocalizerRebeccaG7S2CB.EditValue = "";
+            this.VocalizerRebeccaG7S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerRebeccaG7S2CB.Name = "VocalizerRebeccaG7S2CB";
+            this.VocalizerRebeccaG7S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG7S2CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG7S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG7S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG7S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG7S2CB.TabIndex = 4;
+            this.VocalizerRebeccaG7S2CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG7S1CB
+            // 
+            this.VocalizerRebeccaG7S1CB.EditValue = "";
+            this.VocalizerRebeccaG7S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerRebeccaG7S1CB.Name = "VocalizerRebeccaG7S1CB";
+            this.VocalizerRebeccaG7S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG7S1CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG7S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG7S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG7S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG7S1CB.TabIndex = 3;
+            this.VocalizerRebeccaG7S1CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG6GP
+            // 
+            this.VocalizerRebeccaG6GP.Controls.Add(this.VocalizerRebeccaG6S5CB);
+            this.VocalizerRebeccaG6GP.Controls.Add(this.VocalizerRebeccaG6S4CB);
+            this.VocalizerRebeccaG6GP.Controls.Add(this.VocalizerRebeccaG6S3CB);
+            this.VocalizerRebeccaG6GP.Controls.Add(this.VocalizerRebeccaG6S2CB);
+            this.VocalizerRebeccaG6GP.Controls.Add(this.VocalizerRebeccaG6S1CB);
+            this.VocalizerRebeccaG6GP.Location = new System.Drawing.Point(355, 169);
+            this.VocalizerRebeccaG6GP.Name = "VocalizerRebeccaG6GP";
+            this.VocalizerRebeccaG6GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerRebeccaG6GP.TabIndex = 68;
+            this.VocalizerRebeccaG6GP.Text = "Group 6";
+            // 
+            // VocalizerRebeccaG6S5CB
+            // 
+            this.VocalizerRebeccaG6S5CB.EditValue = "";
+            this.VocalizerRebeccaG6S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerRebeccaG6S5CB.Name = "VocalizerRebeccaG6S5CB";
+            this.VocalizerRebeccaG6S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG6S5CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG6S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG6S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG6S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG6S5CB.TabIndex = 7;
+            this.VocalizerRebeccaG6S5CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG6S4CB
+            // 
+            this.VocalizerRebeccaG6S4CB.EditValue = "";
+            this.VocalizerRebeccaG6S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerRebeccaG6S4CB.Name = "VocalizerRebeccaG6S4CB";
+            this.VocalizerRebeccaG6S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG6S4CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG6S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG6S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG6S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG6S4CB.TabIndex = 6;
+            this.VocalizerRebeccaG6S4CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG6S3CB
+            // 
+            this.VocalizerRebeccaG6S3CB.EditValue = "";
+            this.VocalizerRebeccaG6S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerRebeccaG6S3CB.Name = "VocalizerRebeccaG6S3CB";
+            this.VocalizerRebeccaG6S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG6S3CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG6S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG6S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG6S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG6S3CB.TabIndex = 5;
+            this.VocalizerRebeccaG6S3CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG6S2CB
+            // 
+            this.VocalizerRebeccaG6S2CB.EditValue = "";
+            this.VocalizerRebeccaG6S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerRebeccaG6S2CB.Name = "VocalizerRebeccaG6S2CB";
+            this.VocalizerRebeccaG6S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG6S2CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG6S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG6S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG6S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG6S2CB.TabIndex = 4;
+            this.VocalizerRebeccaG6S2CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG6S1CB
+            // 
+            this.VocalizerRebeccaG6S1CB.EditValue = "";
+            this.VocalizerRebeccaG6S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerRebeccaG6S1CB.Name = "VocalizerRebeccaG6S1CB";
+            this.VocalizerRebeccaG6S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG6S1CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG6S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG6S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG6S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG6S1CB.TabIndex = 3;
+            this.VocalizerRebeccaG6S1CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG5GP
+            // 
+            this.VocalizerRebeccaG5GP.Controls.Add(this.VocalizerRebeccaG5S5CB);
+            this.VocalizerRebeccaG5GP.Controls.Add(this.VocalizerRebeccaG5S4CB);
+            this.VocalizerRebeccaG5GP.Controls.Add(this.VocalizerRebeccaG5S3CB);
+            this.VocalizerRebeccaG5GP.Controls.Add(this.VocalizerRebeccaG5S2CB);
+            this.VocalizerRebeccaG5GP.Controls.Add(this.VocalizerRebeccaG5S1CB);
+            this.VocalizerRebeccaG5GP.Location = new System.Drawing.Point(179, 169);
+            this.VocalizerRebeccaG5GP.Name = "VocalizerRebeccaG5GP";
+            this.VocalizerRebeccaG5GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerRebeccaG5GP.TabIndex = 67;
+            this.VocalizerRebeccaG5GP.Text = "Group 5";
+            // 
+            // VocalizerRebeccaG5S5CB
+            // 
+            this.VocalizerRebeccaG5S5CB.EditValue = "";
+            this.VocalizerRebeccaG5S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerRebeccaG5S5CB.Name = "VocalizerRebeccaG5S5CB";
+            this.VocalizerRebeccaG5S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG5S5CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG5S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG5S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG5S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG5S5CB.TabIndex = 7;
+            this.VocalizerRebeccaG5S5CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG5S4CB
+            // 
+            this.VocalizerRebeccaG5S4CB.EditValue = "";
+            this.VocalizerRebeccaG5S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerRebeccaG5S4CB.Name = "VocalizerRebeccaG5S4CB";
+            this.VocalizerRebeccaG5S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG5S4CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG5S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG5S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG5S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG5S4CB.TabIndex = 6;
+            this.VocalizerRebeccaG5S4CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG5S3CB
+            // 
+            this.VocalizerRebeccaG5S3CB.EditValue = "";
+            this.VocalizerRebeccaG5S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerRebeccaG5S3CB.Name = "VocalizerRebeccaG5S3CB";
+            this.VocalizerRebeccaG5S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG5S3CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG5S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG5S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG5S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG5S3CB.TabIndex = 5;
+            this.VocalizerRebeccaG5S3CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG5S2CB
+            // 
+            this.VocalizerRebeccaG5S2CB.EditValue = "";
+            this.VocalizerRebeccaG5S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerRebeccaG5S2CB.Name = "VocalizerRebeccaG5S2CB";
+            this.VocalizerRebeccaG5S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG5S2CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG5S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG5S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG5S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG5S2CB.TabIndex = 4;
+            this.VocalizerRebeccaG5S2CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG5S1CB
+            // 
+            this.VocalizerRebeccaG5S1CB.EditValue = "";
+            this.VocalizerRebeccaG5S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerRebeccaG5S1CB.Name = "VocalizerRebeccaG5S1CB";
+            this.VocalizerRebeccaG5S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG5S1CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG5S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG5S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG5S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG5S1CB.TabIndex = 3;
+            this.VocalizerRebeccaG5S1CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG4GP
+            // 
+            this.VocalizerRebeccaG4GP.Controls.Add(this.VocalizerRebeccaG4S5CB);
+            this.VocalizerRebeccaG4GP.Controls.Add(this.VocalizerRebeccaG4S4CB);
+            this.VocalizerRebeccaG4GP.Controls.Add(this.VocalizerRebeccaG4S3CB);
+            this.VocalizerRebeccaG4GP.Controls.Add(this.VocalizerRebeccaG4S2CB);
+            this.VocalizerRebeccaG4GP.Controls.Add(this.VocalizerRebeccaG4S1CB);
+            this.VocalizerRebeccaG4GP.Location = new System.Drawing.Point(3, 169);
+            this.VocalizerRebeccaG4GP.Name = "VocalizerRebeccaG4GP";
+            this.VocalizerRebeccaG4GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerRebeccaG4GP.TabIndex = 66;
+            this.VocalizerRebeccaG4GP.Text = "Group 4";
+            // 
+            // VocalizerRebeccaG4S5CB
+            // 
+            this.VocalizerRebeccaG4S5CB.EditValue = "";
+            this.VocalizerRebeccaG4S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerRebeccaG4S5CB.Name = "VocalizerRebeccaG4S5CB";
+            this.VocalizerRebeccaG4S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG4S5CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG4S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG4S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG4S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG4S5CB.TabIndex = 7;
+            this.VocalizerRebeccaG4S5CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG4S4CB
+            // 
+            this.VocalizerRebeccaG4S4CB.EditValue = "";
+            this.VocalizerRebeccaG4S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerRebeccaG4S4CB.Name = "VocalizerRebeccaG4S4CB";
+            this.VocalizerRebeccaG4S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG4S4CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG4S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG4S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG4S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG4S4CB.TabIndex = 6;
+            this.VocalizerRebeccaG4S4CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG4S3CB
+            // 
+            this.VocalizerRebeccaG4S3CB.EditValue = "";
+            this.VocalizerRebeccaG4S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerRebeccaG4S3CB.Name = "VocalizerRebeccaG4S3CB";
+            this.VocalizerRebeccaG4S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG4S3CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG4S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG4S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG4S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG4S3CB.TabIndex = 5;
+            this.VocalizerRebeccaG4S3CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG4S2CB
+            // 
+            this.VocalizerRebeccaG4S2CB.EditValue = "";
+            this.VocalizerRebeccaG4S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerRebeccaG4S2CB.Name = "VocalizerRebeccaG4S2CB";
+            this.VocalizerRebeccaG4S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG4S2CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG4S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG4S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG4S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG4S2CB.TabIndex = 4;
+            this.VocalizerRebeccaG4S2CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG4S1CB
+            // 
+            this.VocalizerRebeccaG4S1CB.EditValue = "";
+            this.VocalizerRebeccaG4S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerRebeccaG4S1CB.Name = "VocalizerRebeccaG4S1CB";
+            this.VocalizerRebeccaG4S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG4S1CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG4S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG4S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG4S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG4S1CB.TabIndex = 3;
+            this.VocalizerRebeccaG4S1CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG3GP
+            // 
+            this.VocalizerRebeccaG3GP.Controls.Add(this.VocalizerRebeccaG3S5CB);
+            this.VocalizerRebeccaG3GP.Controls.Add(this.VocalizerRebeccaG3S4CB);
+            this.VocalizerRebeccaG3GP.Controls.Add(this.VocalizerRebeccaG3S3CB);
+            this.VocalizerRebeccaG3GP.Controls.Add(this.VocalizerRebeccaG3S2CB);
+            this.VocalizerRebeccaG3GP.Controls.Add(this.VocalizerRebeccaG3S1CB);
+            this.VocalizerRebeccaG3GP.Location = new System.Drawing.Point(355, 3);
+            this.VocalizerRebeccaG3GP.Name = "VocalizerRebeccaG3GP";
+            this.VocalizerRebeccaG3GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerRebeccaG3GP.TabIndex = 65;
+            this.VocalizerRebeccaG3GP.Text = "Group 3";
+            // 
+            // VocalizerRebeccaG3S5CB
+            // 
+            this.VocalizerRebeccaG3S5CB.EditValue = "";
+            this.VocalizerRebeccaG3S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerRebeccaG3S5CB.Name = "VocalizerRebeccaG3S5CB";
+            this.VocalizerRebeccaG3S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG3S5CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG3S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG3S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG3S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG3S5CB.TabIndex = 7;
+            this.VocalizerRebeccaG3S5CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG3S4CB
+            // 
+            this.VocalizerRebeccaG3S4CB.EditValue = "";
+            this.VocalizerRebeccaG3S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerRebeccaG3S4CB.Name = "VocalizerRebeccaG3S4CB";
+            this.VocalizerRebeccaG3S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG3S4CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG3S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG3S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG3S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG3S4CB.TabIndex = 6;
+            this.VocalizerRebeccaG3S4CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG3S3CB
+            // 
+            this.VocalizerRebeccaG3S3CB.EditValue = "";
+            this.VocalizerRebeccaG3S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerRebeccaG3S3CB.Name = "VocalizerRebeccaG3S3CB";
+            this.VocalizerRebeccaG3S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG3S3CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG3S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG3S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG3S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG3S3CB.TabIndex = 5;
+            this.VocalizerRebeccaG3S3CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG3S2CB
+            // 
+            this.VocalizerRebeccaG3S2CB.EditValue = "";
+            this.VocalizerRebeccaG3S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerRebeccaG3S2CB.Name = "VocalizerRebeccaG3S2CB";
+            this.VocalizerRebeccaG3S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG3S2CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG3S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG3S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG3S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG3S2CB.TabIndex = 4;
+            this.VocalizerRebeccaG3S2CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG3S1CB
+            // 
+            this.VocalizerRebeccaG3S1CB.EditValue = "";
+            this.VocalizerRebeccaG3S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerRebeccaG3S1CB.Name = "VocalizerRebeccaG3S1CB";
+            this.VocalizerRebeccaG3S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG3S1CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG3S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG3S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG3S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG3S1CB.TabIndex = 3;
+            this.VocalizerRebeccaG3S1CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG2GP
+            // 
+            this.VocalizerRebeccaG2GP.Controls.Add(this.VocalizerRebeccaG2S5CB);
+            this.VocalizerRebeccaG2GP.Controls.Add(this.VocalizerRebeccaG2S4CB);
+            this.VocalizerRebeccaG2GP.Controls.Add(this.VocalizerRebeccaG2S3CB);
+            this.VocalizerRebeccaG2GP.Controls.Add(this.VocalizerRebeccaG2S2CB);
+            this.VocalizerRebeccaG2GP.Controls.Add(this.VocalizerRebeccaG2S1CB);
+            this.VocalizerRebeccaG2GP.Location = new System.Drawing.Point(179, 3);
+            this.VocalizerRebeccaG2GP.Name = "VocalizerRebeccaG2GP";
+            this.VocalizerRebeccaG2GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerRebeccaG2GP.TabIndex = 64;
+            this.VocalizerRebeccaG2GP.Text = "Group 2";
+            // 
+            // VocalizerRebeccaG2S5CB
+            // 
+            this.VocalizerRebeccaG2S5CB.EditValue = "";
+            this.VocalizerRebeccaG2S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerRebeccaG2S5CB.Name = "VocalizerRebeccaG2S5CB";
+            this.VocalizerRebeccaG2S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG2S5CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG2S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG2S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG2S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG2S5CB.TabIndex = 7;
+            this.VocalizerRebeccaG2S5CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG2S4CB
+            // 
+            this.VocalizerRebeccaG2S4CB.EditValue = "";
+            this.VocalizerRebeccaG2S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerRebeccaG2S4CB.Name = "VocalizerRebeccaG2S4CB";
+            this.VocalizerRebeccaG2S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG2S4CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG2S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG2S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG2S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG2S4CB.TabIndex = 6;
+            this.VocalizerRebeccaG2S4CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG2S3CB
+            // 
+            this.VocalizerRebeccaG2S3CB.EditValue = "";
+            this.VocalizerRebeccaG2S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerRebeccaG2S3CB.Name = "VocalizerRebeccaG2S3CB";
+            this.VocalizerRebeccaG2S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG2S3CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG2S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG2S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG2S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG2S3CB.TabIndex = 5;
+            this.VocalizerRebeccaG2S3CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG2S2CB
+            // 
+            this.VocalizerRebeccaG2S2CB.EditValue = "";
+            this.VocalizerRebeccaG2S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerRebeccaG2S2CB.Name = "VocalizerRebeccaG2S2CB";
+            this.VocalizerRebeccaG2S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG2S2CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG2S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG2S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG2S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG2S2CB.TabIndex = 4;
+            this.VocalizerRebeccaG2S2CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG2S1CB
+            // 
+            this.VocalizerRebeccaG2S1CB.EditValue = "";
+            this.VocalizerRebeccaG2S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerRebeccaG2S1CB.Name = "VocalizerRebeccaG2S1CB";
+            this.VocalizerRebeccaG2S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG2S1CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG2S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG2S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG2S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG2S1CB.TabIndex = 3;
+            this.VocalizerRebeccaG2S1CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG1GP
+            // 
+            this.VocalizerRebeccaG1GP.Controls.Add(this.VocalizerRebeccaG1S5CB);
+            this.VocalizerRebeccaG1GP.Controls.Add(this.VocalizerRebeccaG1S4CB);
+            this.VocalizerRebeccaG1GP.Controls.Add(this.VocalizerRebeccaG1S3CB);
+            this.VocalizerRebeccaG1GP.Controls.Add(this.VocalizerRebeccaG1S2CB);
+            this.VocalizerRebeccaG1GP.Controls.Add(this.VocalizerRebeccaG1S1CB);
+            this.VocalizerRebeccaG1GP.Location = new System.Drawing.Point(3, 3);
+            this.VocalizerRebeccaG1GP.Name = "VocalizerRebeccaG1GP";
+            this.VocalizerRebeccaG1GP.Size = new System.Drawing.Size(170, 160);
+            this.VocalizerRebeccaG1GP.TabIndex = 63;
+            this.VocalizerRebeccaG1GP.Text = "Group 1";
+            // 
+            // VocalizerRebeccaG1S5CB
+            // 
+            this.VocalizerRebeccaG1S5CB.EditValue = "";
+            this.VocalizerRebeccaG1S5CB.Location = new System.Drawing.Point(5, 134);
+            this.VocalizerRebeccaG1S5CB.Name = "VocalizerRebeccaG1S5CB";
+            this.VocalizerRebeccaG1S5CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG1S5CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG1S5CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG1S5CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG1S5CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG1S5CB.TabIndex = 7;
+            this.VocalizerRebeccaG1S5CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG1S4CB
+            // 
+            this.VocalizerRebeccaG1S4CB.EditValue = "";
+            this.VocalizerRebeccaG1S4CB.Location = new System.Drawing.Point(5, 108);
+            this.VocalizerRebeccaG1S4CB.Name = "VocalizerRebeccaG1S4CB";
+            this.VocalizerRebeccaG1S4CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG1S4CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG1S4CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG1S4CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG1S4CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG1S4CB.TabIndex = 6;
+            this.VocalizerRebeccaG1S4CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG1S3CB
+            // 
+            this.VocalizerRebeccaG1S3CB.EditValue = "";
+            this.VocalizerRebeccaG1S3CB.Location = new System.Drawing.Point(5, 82);
+            this.VocalizerRebeccaG1S3CB.Name = "VocalizerRebeccaG1S3CB";
+            this.VocalizerRebeccaG1S3CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG1S3CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG1S3CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG1S3CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG1S3CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG1S3CB.TabIndex = 5;
+            this.VocalizerRebeccaG1S3CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG1S2CB
+            // 
+            this.VocalizerRebeccaG1S2CB.EditValue = "";
+            this.VocalizerRebeccaG1S2CB.Location = new System.Drawing.Point(5, 56);
+            this.VocalizerRebeccaG1S2CB.Name = "VocalizerRebeccaG1S2CB";
+            this.VocalizerRebeccaG1S2CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG1S2CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG1S2CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG1S2CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG1S2CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG1S2CB.TabIndex = 4;
+            this.VocalizerRebeccaG1S2CB.TabStop = false;
+            // 
+            // VocalizerRebeccaG1S1CB
+            // 
+            this.VocalizerRebeccaG1S1CB.EditValue = "";
+            this.VocalizerRebeccaG1S1CB.Location = new System.Drawing.Point(5, 30);
+            this.VocalizerRebeccaG1S1CB.Name = "VocalizerRebeccaG1S1CB";
+            this.VocalizerRebeccaG1S1CB.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+            this.VocalizerRebeccaG1S1CB.Properties.AllowFocused = false;
+            this.VocalizerRebeccaG1S1CB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VocalizerRebeccaG1S1CB.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VocalizerRebeccaG1S1CB.Size = new System.Drawing.Size(160, 20);
+            this.VocalizerRebeccaG1S1CB.TabIndex = 3;
+            this.VocalizerRebeccaG1S1CB.TabStop = false;
+            // 
             // VocalizerSettingsGP
             // 
             this.VocalizerSettingsGP.Controls.Add(this.VocalizerSaveLoadGP);
@@ -10189,13 +10188,14 @@ namespace GameX
             // 
             // WeaponPlacementGP
             // 
+            this.WeaponPlacementGP.AppearanceCaption.Options.UseTextOptions = true;
+            this.WeaponPlacementGP.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.WeaponPlacementGP.Controls.Add(this.WeaponPlacementComboBox);
-            this.WeaponPlacementGP.Controls.Add(this.WeaponPlacementLabelControl);
             this.WeaponPlacementGP.Location = new System.Drawing.Point(172, 30);
             this.WeaponPlacementGP.Name = "WeaponPlacementGP";
-            this.WeaponPlacementGP.ShowCaption = false;
             this.WeaponPlacementGP.Size = new System.Drawing.Size(136, 65);
             this.WeaponPlacementGP.TabIndex = 19;
+            this.WeaponPlacementGP.Text = "Weapon Placement";
             // 
             // WeaponPlacementComboBox
             // 
@@ -10213,14 +10213,6 @@ namespace GameX
             this.WeaponPlacementComboBox.ToolTip = "Changes the player\'s weapon placement position in the back.";
             this.WeaponPlacementComboBox.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.WeaponPlacementComboBox.ToolTipTitle = "Weapon Placement";
-            // 
-            // WeaponPlacementLabelControl
-            // 
-            this.WeaponPlacementLabelControl.Location = new System.Drawing.Point(18, 10);
-            this.WeaponPlacementLabelControl.Name = "WeaponPlacementLabelControl";
-            this.WeaponPlacementLabelControl.Size = new System.Drawing.Size(99, 13);
-            this.WeaponPlacementLabelControl.TabIndex = 18;
-            this.WeaponPlacementLabelControl.Text = "Weapon Placement";
             // 
             // WeskerGP
             // 
@@ -22513,7 +22505,8 @@ namespace GameX
             this.ColorFilterButton.TabIndex = 1;
             this.ColorFilterButton.TabStop = false;
             this.ColorFilterButton.Text = "Enable";
-            this.ColorFilterButton.ToolTip = "Enables the true color filter disabling the default ones.";
+            this.ColorFilterButton.ToolTip = "Disables the green filter. (Note: This also disables all the extra filters from t" +
+    "he game.)";
             this.ColorFilterButton.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.ColorFilterButton.ToolTipTitle = "Color Filter";
             // 
@@ -22795,70 +22788,6 @@ namespace GameX
             this.VocalizerGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerTabControl)).EndInit();
             this.VocalizerTabControl.ResumeLayout(false);
-            this.VocalizerRebeccaTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9GP)).EndInit();
-            this.VocalizerRebeccaG9GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8GP)).EndInit();
-            this.VocalizerRebeccaG8GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7GP)).EndInit();
-            this.VocalizerRebeccaG7GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6GP)).EndInit();
-            this.VocalizerRebeccaG6GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5GP)).EndInit();
-            this.VocalizerRebeccaG5GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4GP)).EndInit();
-            this.VocalizerRebeccaG4GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3GP)).EndInit();
-            this.VocalizerRebeccaG3GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2GP)).EndInit();
-            this.VocalizerRebeccaG2GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S1CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1GP)).EndInit();
-            this.VocalizerRebeccaG1GP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S5CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S4CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S3CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S2CB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S1CB.Properties)).EndInit();
             this.VocalizerChrisTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerChrisG9GP)).EndInit();
             this.VocalizerChrisG9GP.ResumeLayout(false);
@@ -23307,6 +23236,70 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S3CB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S2CB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerBarryG1S1CB.Properties)).EndInit();
+            this.VocalizerRebeccaTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9GP)).EndInit();
+            this.VocalizerRebeccaG9GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG9S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8GP)).EndInit();
+            this.VocalizerRebeccaG8GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG8S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7GP)).EndInit();
+            this.VocalizerRebeccaG7GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG7S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6GP)).EndInit();
+            this.VocalizerRebeccaG6GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG6S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5GP)).EndInit();
+            this.VocalizerRebeccaG5GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG5S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4GP)).EndInit();
+            this.VocalizerRebeccaG4GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG4S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3GP)).EndInit();
+            this.VocalizerRebeccaG3GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG3S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2GP)).EndInit();
+            this.VocalizerRebeccaG2GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG2S1CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1GP)).EndInit();
+            this.VocalizerRebeccaG1GP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S5CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S4CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S3CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S2CB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VocalizerRebeccaG1S1CB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerSettingsGP)).EndInit();
             this.VocalizerSettingsGP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.VocalizerSaveLoadGP)).EndInit();
@@ -23389,7 +23382,6 @@ namespace GameX
             ((System.ComponentModel.ISupportInitialize)(this.MeleeCameraCE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeaponPlacementGP)).EndInit();
             this.WeaponPlacementGP.ResumeLayout(false);
-            this.WeaponPlacementGP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WeaponPlacementComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeskerGP)).EndInit();
             this.WeskerGP.ResumeLayout(false);
@@ -24208,7 +24200,6 @@ namespace GameX
         private DevExpress.XtraEditors.ComboBoxEdit MoveBackComboBox;
         private DevExpress.XtraEditors.GroupControl MiscMeleeGP;
         private DevExpress.XtraEditors.ComboBoxEdit WeaponPlacementComboBox;
-        private DevExpress.XtraEditors.LabelControl WeaponPlacementLabelControl;
         private DevExpress.XtraEditors.GroupControl WeaponPlacementGP;
         private DevExpress.XtraEditors.CheckEdit MeleeCameraCE;
         private DevExpress.XtraEditors.CheckEdit ReunionSpecialMovesCE;
